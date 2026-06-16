@@ -1,0 +1,8 @@
+.DS_Store
+node_modules/
+*.log
+__pycache__/
+*.pyc
+*.xlsx
+/*.png
+src/supabaseConfig.local.js
