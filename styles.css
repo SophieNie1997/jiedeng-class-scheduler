@@ -1627,10 +1627,7 @@ fieldset {
 }
 
 .shift-lesson-chip {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 1px 6px;
-  align-items: center;
+  display: block;
   min-width: 0;
   border-top: 1px dashed rgba(220, 185, 192, 0.72);
   padding-top: 4px;
@@ -1639,9 +1636,7 @@ fieldset {
   line-height: 1.25;
 }
 
-.shift-lesson-time,
 .shift-lesson-title,
-.shift-lesson-campus,
 .shift-lesson-more {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1649,13 +1644,9 @@ fieldset {
 }
 
 .shift-lesson-title {
-  grid-column: 1 / -1;
-  color: #25313a;
+  display: block;
+  color: inherit;
   font-weight: 800;
-}
-
-.shift-lesson-campus {
-  justify-self: end;
 }
 
 .shift-lesson-more {
