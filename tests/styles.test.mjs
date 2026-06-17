@@ -118,6 +118,11 @@ test("shift editor shows the selected teacher avatar", () => {
   assert.ok(getRuleText(".shift-editor-avatar .teacher-avatar").includes("width"));
 });
 
+test("shift editor only saves when the explicit sync button is clicked", () => {
+  assert.equal(appSource.includes('data-shift-action="save"'), true);
+  assert.equal(appSource.includes('shiftEditorNode.addEventListener("change"'), false);
+});
+
 test("selected states use the cream planner palette instead of deep green fills", () => {
   assert.ok(getRuleText(":root").includes("--selected-fill"));
   for (const selector of [

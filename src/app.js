@@ -491,12 +491,6 @@ shiftEditorNode.addEventListener("click", (event) => {
   }
 });
 
-shiftEditorNode.addEventListener("change", (event) => {
-  if (event.target.matches("[data-shift-field]")) {
-    saveSelectedShiftFromEditor();
-  }
-});
-
 permissionGridNode.addEventListener("change", (event) => {
   const checkbox = event.target.closest("[data-permission-teacher-id]");
   if (!checkbox) {
