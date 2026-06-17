@@ -60,14 +60,16 @@ import {
 import {
   buildCourseOverview,
   buildStudentOverview,
-} from "./overview.js?v=20260617-series-start-date";
+  splitStudentNames,
+} from "./overview.js?v=20260617-student-search";
 import {
   buildStudentDirectoryRows,
+  filterStudentDirectoryRows,
   hideStudentDirectoryRecord,
   makeStudentDirectoryId,
   normalizeStudentDirectory,
   setStudentDirectoryRecord,
-} from "./studentDirectory.js?v=20260617-student-directory";
+} from "./studentDirectory.js?v=20260617-student-search";
 import {
   createRemoteStore,
   loadRemoteStoreConfig,
@@ -115,6 +117,7 @@ const state = {
   lessonEdits: loadLessonEdits(),
   selectedLessonId: null,
   selectedCourseKey: "",
+  studentSearchQuery: "",
   draftLesson: null,
   pendingConfirm: null,
   sync: {
@@ -458,6 +461,16 @@ studentOverviewNode.addEventListener("click", (event) => {
   openStudentDeleteConfirm(deleteButton.dataset.studentDelete);
 });
 
+studentOverviewNode.addEventListener("input", (event) => {
+  const searchInput = event.target.closest("[data-student-search]");
+  if (!searchInput) {
+    return;
+  }
+
+  state.studentSearchQuery = searchInput.value;
+  refreshStudentSearchResults();
+});
+
 studentDeleteDialogNode.addEventListener("click", (event) => {
   if (event.target.classList?.contains("student-delete-backdrop")) {
     closeStudentDeleteConfirm();
@@ -501,6 +514,13 @@ studentOverviewNode.addEventListener("focusout", (event) => {
 });
 
 calendarNode.addEventListener("click", (event) => {
+  const addStudentButton = event.target.closest("[data-lesson-student-add]");
+  if (addStudentButton) {
+    const detailForm = addStudentButton.closest("#lesson-detail-form");
+    appendLessonStudentName(detailForm);
+    return;
+  }
+
   const titleEditButton = event.target.closest("[data-course-title-edit]");
   if (titleEditButton) {
     const titleEditor = titleEditButton.closest(".lesson-title-editor");
@@ -920,7 +940,7 @@ function renderLessonDetail(detail) {
         data-selected-date="${escapeAttribute(detail.date)}"
       >
         <div class="lesson-detail-grid">
-          ${renderDetailField("学员姓名", "studentName", detail.studentName)}
+          ${renderStudentNameField(detail.studentName)}
           ${renderSelectField("年级", "grade", ["", ...grades], detail.grade === "未填写" ? "" : detail.grade)}
           ${renderSelectField("授课校区", "campus", ["", ...teachingSites], detail.campus === "未填写" ? "" : detail.campus)}
           ${renderDetailField("开始日期", "startDate", detail.recurrence.startDate, "date")}
@@ -951,6 +971,21 @@ function renderLessonDetail(detail) {
         </div>
       </form>
     </aside>
+  `;
+}
+
+function renderStudentNameField(value) {
+  return `
+    <div class="lesson-student-field">
+      <label>
+        <span>学员</span>
+        <input name="studentName" type="text" value="${escapeAttribute(value || "")}" />
+      </label>
+      <div class="lesson-student-add" aria-label="给这节课新增学员">
+        <input data-lesson-student-add-input type="text" placeholder="新增学员姓名" aria-label="新增学员姓名" />
+        <button data-lesson-student-add type="button">加入</button>
+      </div>
+    </div>
   `;
 }
 
@@ -1212,6 +1247,7 @@ function renderStudentOverviewView() {
   const today = getTodayIsoDate();
   const effectiveLessons = getEffectiveLessons();
   const students = getStudentDirectoryRows();
+  const filteredStudents = filterStudentDirectoryRows(students, state.studentSearchQuery);
   const courseOverview = buildCourseOverview(effectiveLessons, { today });
   const activeStudents = students.filter((student) => student.lessonCount > 0).length;
   studentOverviewLine.textContent = `当前学员数据库共有 ${students.length} 位学员，其中 ${activeStudents} 位从 ${formatDateForDisplay(today)} 起还有未来课程。`;
@@ -1230,11 +1266,10 @@ function renderStudentOverviewView() {
       </article>
     </div>
     ${renderStudentAddForm()}
-    ${
-      students.length
-        ? renderStudentLedgerTable(students)
-        : renderOverviewEmpty("目前没有未来课程学员")
-    }
+    ${renderStudentSearchBox(students.length, filteredStudents.length)}
+    <div data-student-results>
+      ${renderStudentResults(filteredStudents)}
+    </div>
   `;
 }
 
@@ -1260,6 +1295,56 @@ function renderStudentAddForm() {
       <button type="submit">新增学员</button>
     </form>
   `;
+}
+
+function renderStudentSearchBox(totalCount, filteredCount) {
+  return `
+    <div class="student-search-box">
+      <img src="./photo/♡.jpeg" alt="" loading="lazy" aria-hidden="true" />
+      <label>
+        <span>搜索学员小纸条</span>
+        <input
+          data-student-search
+          type="search"
+          value="${escapeAttribute(state.studentSearchQuery)}"
+          placeholder="搜姓名、电话、住址、课程、老师..."
+          autocomplete="off"
+        />
+      </label>
+      <p data-student-search-count>${escapeHtml(formatStudentSearchCount(totalCount, filteredCount))}</p>
+    </div>
+  `;
+}
+
+function renderStudentResults(students) {
+  if (students.length) {
+    return renderStudentLedgerTable(students);
+  }
+
+  return renderOverviewEmpty(
+    state.studentSearchQuery ? "没有搜到相关学员，小贴纸先帮你守着。" : "目前没有未来课程学员",
+  );
+}
+
+function formatStudentSearchCount(totalCount, filteredCount) {
+  const query = state.studentSearchQuery.trim();
+  if (!query) {
+    return `共 ${totalCount} 位学员`;
+  }
+  return `搜到 ${filteredCount} / ${totalCount} 位`;
+}
+
+function refreshStudentSearchResults() {
+  const students = getStudentDirectoryRows();
+  const filteredStudents = filterStudentDirectoryRows(students, state.studentSearchQuery);
+  const countNode = studentOverviewNode.querySelector("[data-student-search-count]");
+  const resultsNode = studentOverviewNode.querySelector("[data-student-results]");
+  if (countNode) {
+    countNode.textContent = formatStudentSearchCount(students.length, filteredStudents.length);
+  }
+  if (resultsNode) {
+    resultsNode.innerHTML = renderStudentResults(filteredStudents);
+  }
 }
 
 function renderStudentLedgerTable(students) {
@@ -1990,6 +2075,40 @@ function readLessonChangesFromDetailForm(detailForm) {
     notes: String(formData.get("notes") || ""),
     status: state.draftLesson?.id === state.selectedLessonId ? "手动新增" : "已编辑",
   };
+}
+
+function appendLessonStudentName(detailForm) {
+  if (!detailForm) {
+    return;
+  }
+
+  const studentInput = detailForm.querySelector("[name='studentName']");
+  const addInput = detailForm.querySelector("[data-lesson-student-add-input]");
+  if (!studentInput || !addInput) {
+    return;
+  }
+
+  const currentNames = splitStudentNames(studentInput.value);
+  const addedNames = splitStudentNames(addInput.value);
+  if (!addedNames.length) {
+    addInput.focus();
+    return;
+  }
+
+  const names = [];
+  const seenNames = new Set();
+  for (const name of [...currentNames, ...addedNames]) {
+    const key = name.toLocaleLowerCase("zh-Hans-CN");
+    if (seenNames.has(key)) {
+      continue;
+    }
+    seenNames.add(key);
+    names.push(name);
+  }
+
+  studentInput.value = names.join("、");
+  addInput.value = "";
+  addInput.focus();
 }
 
 function updateLessonEndDatePreview(detailForm) {

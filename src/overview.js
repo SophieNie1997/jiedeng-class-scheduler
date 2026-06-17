@@ -40,28 +40,21 @@ export function buildStudentOverview(lessons, options = {}) {
   const studentsByName = new Map();
 
   for (const lesson of scheduledLessons) {
-    const name = normalizeText(lesson.studentName) || "未填写";
-    const current = studentsByName.get(name) || {
-      name,
-      lessonCount: 0,
-      courses: new Set(),
-      teachers: new Set(),
-      campuses: new Set(),
-      statuses: new Set(),
-      lessonIds: new Set(),
-      firstDate: "",
-      lastDate: "",
-    };
+    const names = splitStudentNames(lesson.studentName);
+    const studentNames = names.length ? names : ["未填写"];
+    for (const name of studentNames) {
+      const current = studentsByName.get(name) || createStudentOverviewRecord(name);
 
-    current.lessonCount += 1;
-    addIfPresent(current.lessonIds, lesson.id);
-    addIfPresent(current.courses, lesson.course);
-    addIfPresent(current.teachers, lesson.teacherName);
-    addIfPresent(current.campuses, lesson.campus || lesson.deliveryType);
-    addIfPresent(current.statuses, lesson.status);
-    current.firstDate = pickEarlierDate(current.firstDate, lesson.date);
-    current.lastDate = pickLaterDate(current.lastDate, lesson.date);
-    studentsByName.set(name, current);
+      current.lessonCount += 1;
+      addIfPresent(current.lessonIds, lesson.id);
+      addIfPresent(current.courses, lesson.course);
+      addIfPresent(current.teachers, lesson.teacherName);
+      addIfPresent(current.campuses, lesson.campus || lesson.deliveryType);
+      addIfPresent(current.statuses, lesson.status);
+      current.firstDate = pickEarlierDate(current.firstDate, lesson.date);
+      current.lastDate = pickLaterDate(current.lastDate, lesson.date);
+      studentsByName.set(name, current);
+    }
   }
 
   for (const student of options.studentCatalog || []) {
@@ -70,17 +63,7 @@ export function buildStudentOverview(lessons, options = {}) {
       continue;
     }
 
-    const current = studentsByName.get(name) || {
-      name,
-      lessonCount: 0,
-      courses: new Set(),
-      teachers: new Set(),
-      campuses: new Set(),
-      statuses: new Set(),
-      lessonIds: new Set(),
-      firstDate: "",
-      lastDate: "",
-    };
+    const current = studentsByName.get(name) || createStudentOverviewRecord(name);
 
     current.gender = current.gender || normalizeText(student.gender);
     current.grade = current.grade || normalizeText(student.grade);
@@ -114,6 +97,32 @@ export function buildStudentOverview(lessons, options = {}) {
     totalStudents: students.length,
     activeStudents: students.filter((student) => student.lessonCount > 0).length,
     students,
+  };
+}
+
+export function splitStudentNames(value) {
+  const normalized = normalizeText(value);
+  if (!normalized || normalized === "未填写") {
+    return [];
+  }
+
+  return normalized
+    .split(/[、，,；;\n]+/)
+    .map(normalizeText)
+    .filter((name) => name && name !== "未填写");
+}
+
+function createStudentOverviewRecord(name) {
+  return {
+    name,
+    lessonCount: 0,
+    courses: new Set(),
+    teachers: new Set(),
+    campuses: new Set(),
+    statuses: new Set(),
+    lessonIds: new Set(),
+    firstDate: "",
+    lastDate: "",
   };
 }
 

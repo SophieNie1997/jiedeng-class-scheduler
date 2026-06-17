@@ -130,6 +130,15 @@ export function buildStudentDirectoryRows(overviewStudents, directory, options =
   return Array.from(rowsById.values()).sort(compareStudentRows);
 }
 
+export function filterStudentDirectoryRows(rows, query) {
+  const normalizedQuery = normalizeSearchText(query);
+  if (!normalizedQuery) {
+    return rows || [];
+  }
+
+  return (rows || []).filter((row) => buildStudentSearchText(row).includes(normalizedQuery));
+}
+
 function normalizeStudentDirectoryRecord(record, fallbackId = "") {
   if (!record || typeof record !== "object") {
     return null;
@@ -238,6 +247,34 @@ function compareStudentRows(left, right) {
     localeSort(left.grade || "", right.grade || "") ||
     localeSort(left.name || "", right.name || "")
   );
+}
+
+function buildStudentSearchText(student) {
+  const values = [
+    student?.name,
+    student?.gender,
+    student?.grade,
+    student?.school,
+    student?.businessType,
+    student?.frequency,
+    student?.phone,
+    student?.address,
+    student?.needs,
+    student?.source,
+    student?.coursesText,
+    student?.teachersText,
+    student?.timeText,
+    ...(Array.isArray(student?.courses) ? student.courses : []),
+    ...(Array.isArray(student?.teachers) ? student.teachers : []),
+    ...(Array.isArray(student?.campuses) ? student.campuses : []),
+    ...(Array.isArray(student?.statuses) ? student.statuses : []),
+  ];
+
+  return normalizeSearchText(values.filter(Boolean).join(" "));
+}
+
+function normalizeSearchText(value) {
+  return normalizeText(value).toLocaleLowerCase("zh-Hans-CN").replace(/\s+/g, "");
 }
 
 function normalizeText(value) {

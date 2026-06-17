@@ -54,6 +54,9 @@ test("course and student overview views are available as workspace tabs", () => 
   assert.equal(css.includes(".course-overview-card"), false);
   assert.equal(appSource.includes("renderStudentTableRow"), true);
   assert.equal(appSource.includes('id="student-add-form"'), true);
+  assert.equal(appSource.includes("renderStudentSearchBox"), true);
+  assert.equal(appSource.includes("data-student-search"), true);
+  assert.equal(appSource.includes("filterStudentDirectoryRows"), true);
   assert.equal(appSource.includes('contenteditable="true"'), true);
   assert.equal(appSource.includes("data-student-edit-field"), true);
   assert.equal(appSource.includes("deleteStudentOverviewCard"), true);
@@ -61,6 +64,7 @@ test("course and student overview views are available as workspace tabs", () => 
   assert.equal(appSource.includes('class="student-table-sticker'), true);
   assert.ok(css.includes(".student-table-planner"));
   assert.ok(css.includes(".student-add-form"));
+  assert.ok(css.includes(".student-search-box"));
   assert.ok(css.includes(".student-ledger-table"));
   assert.ok(css.includes(".student-table-sticker"));
 });
@@ -221,12 +225,17 @@ test("lesson detail panel has editable fields and color variants", () => {
   assert.equal(appSource.includes("data-lesson-end-date-preview"), true);
   assert.equal(appSource.includes("updateLessonEndDatePreview"), true);
   assert.equal(appSource.includes('data-course-title-edit'), true);
+  assert.equal(appSource.includes("renderStudentNameField"), true);
+  assert.equal(appSource.includes("data-lesson-student-add"), true);
+  assert.equal(appSource.includes("appendLessonStudentName"), true);
   assert.equal(appSource.includes('class="lesson-title-edit-button"'), true);
   assert.equal(appSource.includes('formData.get("startDate")'), true);
   assert.ok(css.includes(".lesson-detail-panel.blue"));
   assert.ok(css.includes(".lesson-detail-panel.gray"));
   assert.ok(css.includes(".lesson-title-editor"));
   assert.ok(css.includes(".lesson-title-edit-button"));
+  assert.ok(css.includes(".lesson-student-field"));
+  assert.ok(css.includes(".lesson-student-add"));
 });
 
 test("lesson detail close button uses a glass circular x control", () => {
@@ -267,9 +276,9 @@ test("lesson detail omits source and location fields", () => {
 
 test("lesson detail controls use tinted course colors without filling field wrappers", () => {
   assert.ok(
-    getRuleText(".lesson-detail-grid > label,\n.lesson-detail-grid > fieldset,\n.lesson-detail-wide").includes(
-      "background: transparent",
-    ),
+    getRuleText(
+      ".lesson-detail-grid > label,\n.lesson-detail-grid > .lesson-student-field,\n.lesson-detail-grid > fieldset,\n.lesson-detail-wide",
+    ).includes("background: transparent"),
   );
   assert.ok(
     getRuleText(".lesson-detail-form input,\n.lesson-detail-form select,\n.lesson-detail-form textarea").includes(

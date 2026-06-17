@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 
 import {
   buildStudentDirectoryRows,
+  filterStudentDirectoryRows,
   hideStudentDirectoryRecord,
   makeStudentDirectoryId,
   normalizeStudentDirectory,
@@ -111,4 +112,29 @@ test("student directory keeps hidden students out of the planner draft row", () 
   });
 
   assert.equal(rows.some((row) => row.name === "Ivan"), false);
+});
+
+test("student directory search matches names, contact details, and course fields", () => {
+  const directory = setStudentDirectoryRecord(normalizeStudentDirectory({}), {
+    id: makeStudentDirectoryId("Ivan"),
+    name: "Ivan",
+    phone: "13911112222",
+    address: "浦东新区测试地址",
+    needs: "需要周中下午",
+  });
+  const rows = buildStudentDirectoryRows(overviewStudents, directory);
+
+  assert.deepEqual(
+    filterStudentDirectoryRows(rows, "Ivan").map((row) => row.name),
+    ["Ivan"],
+  );
+  assert.deepEqual(
+    filterStudentDirectoryRows(rows, "1391111").map((row) => row.name),
+    ["Ivan"],
+  );
+  assert.deepEqual(
+    filterStudentDirectoryRows(rows, "WAICY").map((row) => row.name),
+    ["Ivan"],
+  );
+  assert.deepEqual(filterStudentDirectoryRows(rows, "不存在的小纸条"), []);
 });

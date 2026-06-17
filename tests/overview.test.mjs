@@ -169,6 +169,35 @@ test("student overview groups future scheduled lessons by student name with dele
   assert.deepEqual(ivan.courses, ["WAICY 集训"]);
 });
 
+test("student overview splits multi-student lesson names into separate ledger rows", () => {
+  const overview = buildStudentOverview(
+    [
+      {
+        id: "shared-lesson",
+        teacherName: "Sophie",
+        studentName: "Amy、Ben, Coco",
+        course: "WAICY 集训",
+        campus: "徐汇",
+        date: "2026-07-08",
+        startTime: "14:00",
+        endTime: "17:00",
+        status: "已编辑",
+      },
+    ],
+    { today: "2026-07-01" },
+  );
+
+  assert.deepEqual(
+    overview.students.map((student) => student.name),
+    ["Amy", "Ben", "Coco"],
+  );
+  for (const student of overview.students) {
+    assert.equal(student.lessonCount, 1);
+    assert.deepEqual(student.lessonIds, ["shared-lesson"]);
+    assert.deepEqual(student.courses, ["WAICY 集训"]);
+  }
+});
+
 test("student overview includes imported student catalog entries without future lessons", () => {
   const overview = buildStudentOverview(lessons, {
     today: "2026-06-30",
