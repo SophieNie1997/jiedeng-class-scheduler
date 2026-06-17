@@ -100,6 +100,40 @@ export function buildStudentOverview(lessons, options = {}) {
   };
 }
 
+export function buildTeacherDayLessonIndex(lessons) {
+  const index = new Map();
+
+  for (const lesson of lessons || []) {
+    if (!lesson || lesson.status === "不可用") {
+      continue;
+    }
+
+    const date = normalizeText(lesson.date);
+    if (!date) {
+      continue;
+    }
+
+    const teacherKeys = new Set([normalizeText(lesson.teacherId), normalizeText(lesson.teacherName)].filter(Boolean));
+    if (!teacherKeys.size) {
+      continue;
+    }
+
+    const summary = createTeacherDayLessonSummary(lesson);
+    for (const teacherKey of teacherKeys) {
+      const key = `${teacherKey}__${date}`;
+      const items = index.get(key) || [];
+      items.push(summary);
+      index.set(key, items);
+    }
+  }
+
+  for (const items of index.values()) {
+    items.sort(compareTeacherDayLessons);
+  }
+
+  return index;
+}
+
 export function splitStudentNames(value) {
   const normalized = normalizeText(value);
   if (!normalized || normalized === "未填写") {
@@ -110,6 +144,33 @@ export function splitStudentNames(value) {
     .split(/[、，,；;\n]+/)
     .map(normalizeText)
     .filter((name) => name && name !== "未填写");
+}
+
+function createTeacherDayLessonSummary(lesson) {
+  const startTime = normalizeText(lesson.startTime);
+  const endTime = normalizeText(lesson.endTime);
+
+  return {
+    id: normalizeText(lesson.id),
+    date: normalizeText(lesson.date),
+    teacherId: normalizeText(lesson.teacherId),
+    teacherName: normalizeText(lesson.teacherName),
+    studentName: normalizeText(lesson.studentName) || "未填写",
+    course: normalizeText(lesson.course) || "未填写",
+    campus: normalizeText(lesson.campus || lesson.deliveryType) || "未填写",
+    startTime,
+    endTime,
+    timeLabel: startTime && endTime ? `${startTime}-${endTime}` : startTime || endTime || "未填写",
+  };
+}
+
+function compareTeacherDayLessons(left, right) {
+  return (
+    String(left.startTime || "").localeCompare(String(right.startTime || "")) ||
+    String(left.endTime || "").localeCompare(String(right.endTime || "")) ||
+    localeSort(left.studentName, right.studentName) ||
+    localeSort(left.course, right.course)
+  );
 }
 
 function createStudentOverviewRecord(name) {

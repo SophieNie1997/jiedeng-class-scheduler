@@ -60,8 +60,9 @@ import {
 import {
   buildCourseOverview,
   buildStudentOverview,
+  buildTeacherDayLessonIndex,
   splitStudentNames,
-} from "./overview.js?v=20260617-student-search";
+} from "./overview.js?v=20260617-shift-courses";
 import {
   buildStudentDirectoryRows,
   filterStudentDirectoryRows,
@@ -1696,6 +1697,7 @@ function renderShiftView() {
   }
 
   const manualShiftCount = Object.keys(state.shiftOverrides).length;
+  const shiftLessonIndex = buildTeacherDayLessonIndex(filterCalendarLessons(getEffectiveLessons()));
   shiftWeekStartInput.value = state.weekStart;
   shiftSyncLine.textContent = `${manualShiftCount} 个排班已录入，会即时参与候选老师匹配和总课表。`;
 
@@ -1715,7 +1717,7 @@ function renderShiftView() {
       .map(
         (teacher) => `
           <div class="shift-teacher-name">${escapeHtml(teacher.name)}</div>
-          ${weekDates.map((day) => renderShiftCell(teacher, day.iso)).join("")}
+          ${weekDates.map((day) => renderShiftCell(teacher, day.iso, shiftLessonIndex)).join("")}
         `,
       )
       .join("")}
@@ -1724,9 +1726,10 @@ function renderShiftView() {
   renderShiftEditor();
 }
 
-function renderShiftCell(teacher, date) {
+function renderShiftCell(teacher, date, shiftLessonIndex) {
   const shift = getTeacherShiftForDate(teacher, date, state.shiftOverrides);
   const selected = state.selectedShift.teacherId === teacher.id && state.selectedShift.date === date;
+  const lessons = getShiftCellLessons(shiftLessonIndex, teacher, date);
   return `
     <button
       class="shift-cell ${shift.type} ${shift.source} ${selected ? "selected" : ""}"
@@ -1735,7 +1738,8 @@ function renderShiftCell(teacher, date) {
       type="button"
     >
       <strong>${escapeHtml(shift.label)}</strong>
-      ${renderShiftCellMeta(shift) ? `<span>${escapeHtml(renderShiftCellMeta(shift))}</span>` : ""}
+      ${renderShiftCampusMeta(shift)}
+      ${renderShiftLessonList(lessons, shift)}
     </button>
   `;
 }
@@ -2601,6 +2605,72 @@ function renderShiftCellMeta(shift) {
   }
 
   return "";
+}
+
+function getShiftCellLessons(shiftLessonIndex, teacher, date) {
+  const idKey = teacher.id ? `${teacher.id}__${date}` : "";
+  const nameKey = teacher.name ? `${teacher.name}__${date}` : "";
+  return shiftLessonIndex.get(idKey) || shiftLessonIndex.get(nameKey) || [];
+}
+
+function renderShiftCampusMeta(shift) {
+  const campus = renderShiftCellMeta(shift);
+  if (!campus) {
+    return "";
+  }
+
+  return `<span class="shift-campus-label ${getShiftCampusClass(campus)}">${escapeHtml(campus)}</span>`;
+}
+
+function renderShiftLessonList(lessons, shift) {
+  if (!lessons.length) {
+    return "";
+  }
+
+  const visibleLessons = lessons.slice(0, 3);
+  const overflowCount = lessons.length - visibleLessons.length;
+  return `
+    <span class="shift-lesson-list" aria-label="当天课程">
+      ${visibleLessons.map((lesson) => renderShiftLessonChip(lesson, shift.campus)).join("")}
+      ${overflowCount > 0 ? `<span class="shift-lesson-more">+ ${overflowCount} 节</span>` : ""}
+    </span>
+  `;
+}
+
+function renderShiftLessonChip(lesson, fallbackCampus) {
+  const campus = resolveShiftLessonCampus(lesson.campus, fallbackCampus);
+  return `
+    <span class="shift-lesson-chip ${getShiftCampusClass(campus)}">
+      <span class="shift-lesson-time">${escapeHtml(lesson.timeLabel)}</span>
+      <span class="shift-lesson-title">${escapeHtml(lesson.studentName)} · ${escapeHtml(lesson.course)}</span>
+      <span class="shift-lesson-campus">${escapeHtml(campus)}</span>
+    </span>
+  `;
+}
+
+function resolveShiftLessonCampus(campus, fallbackCampus) {
+  const value = String(campus || "").trim();
+  if (value.includes("徐汇") || value.includes("浦东")) {
+    return value;
+  }
+
+  const fallback = String(fallbackCampus || "").trim();
+  if (fallback.includes("徐汇") || fallback.includes("浦东")) {
+    return fallback;
+  }
+
+  return value || fallback || "未填写";
+}
+
+function getShiftCampusClass(campus) {
+  const value = String(campus || "");
+  if (value.includes("徐汇")) {
+    return "shift-campus-xuhui";
+  }
+  if (value.includes("浦东")) {
+    return "shift-campus-pudong";
+  }
+  return "shift-campus-neutral";
 }
 
 function readRequest() {

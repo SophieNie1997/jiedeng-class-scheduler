@@ -1574,14 +1574,17 @@ fieldset {
 
 .shift-cell {
   display: grid;
-  place-items: center;
-  gap: 3px;
-  min-height: 54px;
+  align-content: center;
+  justify-items: stretch;
+  gap: 4px;
+  min-height: 92px;
   border: 0;
   border-right: 1px solid rgba(220, 185, 192, 0.62);
   border-bottom: 1px solid rgba(220, 185, 192, 0.62);
   background: rgba(255, 255, 255, 0.62);
   color: #1f2933;
+  padding: 8px;
+  text-align: left;
   cursor: pointer;
   transition:
     background 160ms ease,
@@ -1593,6 +1596,7 @@ fieldset {
 }
 
 .shift-cell strong {
+  justify-self: center;
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1600,10 +1604,87 @@ fieldset {
   font-size: 14px;
 }
 
-.shift-cell span {
+.shift-cell > span {
+  justify-self: center;
   color: rgba(31, 41, 51, 0.66);
   font-size: 11px;
   font-weight: 800;
+}
+
+.shift-campus-label {
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.58);
+  padding: 2px 8px;
+}
+
+.shift-lesson-list {
+  display: grid;
+  justify-self: stretch;
+  width: 100%;
+  gap: 4px;
+  margin-top: 3px;
+  pointer-events: none;
+}
+
+.shift-lesson-chip {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1px 6px;
+  align-items: center;
+  min-width: 0;
+  border-top: 1px dashed rgba(220, 185, 192, 0.72);
+  padding-top: 4px;
+  font-size: 10px;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.shift-lesson-time,
+.shift-lesson-title,
+.shift-lesson-campus,
+.shift-lesson-more {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.shift-lesson-title {
+  grid-column: 1 / -1;
+  color: #25313a;
+  font-weight: 800;
+}
+
+.shift-lesson-campus {
+  justify-self: end;
+}
+
+.shift-lesson-more {
+  justify-self: center;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.shift-campus-xuhui {
+  color: #b44f7a;
+}
+
+.shift-campus-pudong {
+  color: #1f7f8b;
+}
+
+.shift-campus-label.shift-campus-xuhui,
+.shift-lesson-chip.shift-campus-xuhui {
+  color: #b44f7a;
+}
+
+.shift-campus-label.shift-campus-pudong,
+.shift-lesson-chip.shift-campus-pudong {
+  color: #1f7f8b;
+}
+
+.shift-campus-neutral {
+  color: rgba(31, 41, 51, 0.66);
 }
 
 .shift-cell.template {

@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
-import { buildCourseOverview, buildStudentOverview } from "../src/overview.js";
+import { buildCourseOverview, buildStudentOverview, buildTeacherDayLessonIndex } from "../src/overview.js";
 
 const lessons = [
   {
@@ -144,6 +144,66 @@ test("course overview keeps same edited course together when campus is missing o
   assert.equal(overview.courseCards[0].lessonCount, 2);
   assert.deepEqual(overview.courseCards[0].lessonIds, ["finance-single", "finance-series"]);
   assert.equal(overview.courseCards[0].nextDate, "2026-07-07");
+});
+
+test("teacher day lesson index groups visible same-day courses for shift cells", () => {
+  const index = buildTeacherDayLessonIndex([
+    {
+      id: "sophie-afternoon",
+      teacherId: "sophie",
+      teacherName: "Sophie",
+      studentName: "Ivan",
+      course: "WAICY 集训",
+      campus: "徐汇",
+      date: "2026-07-01",
+      startTime: "15:30",
+      endTime: "18:30",
+      status: "已排",
+    },
+    {
+      id: "sophie-morning",
+      teacherId: "sophie",
+      teacherName: "Sophie",
+      studentName: "Mia",
+      course: "AI 财商",
+      campus: "浦东",
+      date: "2026-07-01",
+      startTime: "10:00",
+      endTime: "12:00",
+      status: "已排",
+    },
+    {
+      id: "hidden-shift-block",
+      teacherId: "sophie",
+      teacherName: "Sophie",
+      studentName: "排班",
+      course: "休",
+      campus: "徐汇",
+      date: "2026-07-01",
+      startTime: "09:00",
+      endTime: "18:00",
+      status: "不可用",
+    },
+    {
+      id: "phebe-lesson",
+      teacherId: "phebe",
+      teacherName: "Phebe",
+      studentName: "Eric",
+      course: "托福",
+      campus: "浦东",
+      date: "2026-07-01",
+      startTime: "13:00",
+      endTime: "14:30",
+      status: "已排",
+    },
+  ]);
+
+  assert.deepEqual(
+    index.get("sophie__2026-07-01").map((lesson) => `${lesson.timeLabel} ${lesson.campus} ${lesson.studentName} ${lesson.course}`),
+    ["10:00-12:00 浦东 Mia AI 财商", "15:30-18:30 徐汇 Ivan WAICY 集训"],
+  );
+  assert.equal(index.get("sophie__2026-07-01").some((lesson) => lesson.id === "hidden-shift-block"), false);
+  assert.equal(index.get("phebe__2026-07-01")[0].studentName, "Eric");
 });
 
 test("student overview groups future scheduled lessons by student name with delete ids", () => {
