@@ -21,8 +21,9 @@ export function getScopedLessonIds(lessons, selectedLessonId, scope = "single") 
     .map((lesson) => String(lesson.id));
 }
 
-export function alignExplicitSeriesDates(lessons) {
+export function alignExplicitSeriesDates(lessons, options = {}) {
   const alignedLessons = (lessons || []).map((lesson) => ({ ...lesson }));
+  const deletedIds = new Set((options.deletedIds || []).map(String));
   const groups = new Map();
 
   alignedLessons.forEach((lesson, index) => {
@@ -39,11 +40,19 @@ export function alignExplicitSeriesDates(lessons) {
     }
 
     const seed = buildSeriesDateSeed(sortedGroup);
-    const count = Math.min(seed.sessionCount, sortedGroup.length);
-    const regeneratedDates = getRegeneratedDates(count, seed);
+    const regeneratedDates = getRegeneratedDates(seed.sessionCount, seed);
 
     regeneratedDates.forEach((date, index) => {
-      sortedGroup[index].lesson.date = date;
+      const existing = sortedGroup[index];
+      if (existing) {
+        existing.lesson.date = date;
+        return;
+      }
+
+      const generatedLesson = makeGeneratedSeriesLesson(seed, date, index);
+      if (!deletedIds.has(String(generatedLesson.id))) {
+        alignedLessons.push(generatedLesson);
+      }
     });
   }
 
@@ -154,6 +163,37 @@ function inferWeekdaysFromGroup(group) {
         .map((dateString) => getWeekdayValue(new Date(`${dateString}T00:00:00Z`))),
     ),
   ).sort((left, right) => left - right);
+}
+
+function makeGeneratedSeriesLesson(seed, date, index) {
+  const baseId = makeGeneratedSeriesBaseId(seed);
+  return {
+    ...seed,
+    id: `${baseId}-generated-${date}-${index + 1}`,
+    date,
+    status: seed.status || "已编辑",
+    source: seed.source || "系列课自动补齐",
+  };
+}
+
+function makeGeneratedSeriesBaseId(seed) {
+  const rawBase = [
+    seed.id,
+    seed.teacherId || seed.teacherName,
+    seed.studentName,
+    seed.course,
+    seed.startTime,
+  ]
+    .filter(Boolean)
+    .join("-");
+  const normalized = rawBase
+    .normalize("NFKD")
+    .replace(/[^a-zA-Z0-9_-]+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "")
+    .slice(0, 96);
+
+  return normalized || "series-lesson";
 }
 
 function getRegeneratedFollowingDates(scope, count, lessonChanges, shouldRegenerate) {

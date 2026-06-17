@@ -132,12 +132,42 @@ test("edited inferred series dates fill the missing weekday slot from the first 
   );
 });
 
-function makeEditedFinanceLesson(id, date) {
+test("edited series creates missing lesson instances up to the saved total count", () => {
+  const aligned = alignExplicitSeriesDates([
+    makeEditedFinanceLesson("a", "2026-07-07", { sessionCount: 8, recurrenceWeekdays: [2, 3, 4, 5] }),
+    makeEditedFinanceLesson("b", "2026-07-08", { sessionCount: 8, recurrenceWeekdays: [2, 3, 4, 5] }),
+    makeEditedFinanceLesson("c", "2026-07-10", { sessionCount: 8, recurrenceWeekdays: [2, 3, 4, 5] }),
+    makeEditedFinanceLesson("d", "2026-07-14", { sessionCount: 8, recurrenceWeekdays: [2, 3, 4, 5] }),
+    makeEditedFinanceLesson("e", "2026-07-15", { sessionCount: 8, recurrenceWeekdays: [2, 3, 4, 5] }),
+    makeEditedFinanceLesson("f", "2026-07-16", { sessionCount: 8, recurrenceWeekdays: [2, 3, 4, 5] }),
+    makeEditedFinanceLesson("g", "2026-07-17", { sessionCount: 8, recurrenceWeekdays: [2, 3, 4, 5] }),
+  ]);
+
+  assert.deepEqual(
+    aligned.map((lesson) => lesson.date),
+    [
+      "2026-07-07",
+      "2026-07-08",
+      "2026-07-09",
+      "2026-07-10",
+      "2026-07-14",
+      "2026-07-15",
+      "2026-07-16",
+      "2026-07-17",
+    ],
+  );
+  assert.equal(aligned[7].teacherName, "Phebe");
+  assert.equal(aligned[7].course, "财商徐汇班课");
+  assert.ok(String(aligned[7].id).includes("2026-07-17"));
+});
+
+function makeEditedFinanceLesson(id, date, overrides = {}) {
   return {
     ...makeLesson(id, date, "Phebe", "phebe", "15:30", "17:00"),
     studentName: "财商班课",
     course: "财商徐汇班课",
     status: "已编辑",
+    ...overrides,
   };
 }
 

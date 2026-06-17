@@ -56,7 +56,7 @@ import {
   deleteLessonsInScope,
   getScopedLessonCount,
   updateLessonsInScope,
-} from "./lessonSeries.js?v=20260617-finance-series-hole";
+} from "./lessonSeries.js?v=20260617-finance-series-8";
 import {
   buildCourseOverview,
   buildStudentOverview,
@@ -2450,7 +2450,7 @@ function getEffectiveLessons() {
   return alignExplicitSeriesDates(applyLessonEdits(
     [...existingLessons, ...buildUnavailableLessonsFromShifts(getShiftRoster(), state.shiftOverrides)],
     state.lessonEdits,
-  )).filter((lesson) => activeTeacherIds.has(lesson.teacherId));
+  ), { deletedIds: state.lessonEdits.deletedIds }).filter((lesson) => activeTeacherIds.has(lesson.teacherId));
 }
 
 function getCalendarActionLessons() {
