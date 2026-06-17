@@ -4,9 +4,16 @@ import { existsSync, readFileSync } from "node:fs";
 
 const css = readFileSync(new URL("../styles.css", import.meta.url), "utf8");
 const appSource = readFileSync(new URL("../src/app.js", import.meta.url), "utf8");
+const indexSource = readFileSync(new URL("../index.html", import.meta.url), "utf8");
 
 test("uses the same background for scheduled work cells and template work cells", () => {
   assert.equal(getRuleValue(".shift-cell.work", "background"), getRuleValue(".shift-cell.template", "background"));
+});
+
+test("site uses a real png favicon", () => {
+  assert.equal(indexSource.includes('href="data:,"'), false);
+  assert.match(indexSource, /<link rel="icon" type="image\/png" href="\.\/favicon\.png" \/>/);
+  assert.equal(existsSync(new URL("../favicon.png", import.meta.url)), true);
 });
 
 test("calendar week overview uses readable lesson rows", () => {
