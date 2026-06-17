@@ -69,6 +69,13 @@ test("course and student overview views are available as workspace tabs", () => 
   assert.ok(css.includes(".student-table-sticker"));
 });
 
+test("course overview uses stickers instead of covered student metrics", () => {
+  assert.equal(appSource.includes("覆盖学员"), false);
+  assert.equal(appSource.includes("renderCourseSummaryStickers"), true);
+  assert.ok(css.includes(".course-summary-stickers"));
+  assert.ok(css.includes(".course-summary-sticker"));
+});
+
 test("student ledger uses opaque sticky name cells", () => {
   assert.equal(getRuleValue(".student-ledger-table tbody th", "background"), "#fff7fa");
   assert.equal(getRuleValue(".student-ledger-table tbody tr:nth-child(even) th", "background-color"), "#fffafd");

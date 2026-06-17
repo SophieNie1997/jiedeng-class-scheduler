@@ -1125,7 +1125,6 @@ function renderCourseOverviewView() {
   const effectiveLessons = getEffectiveLessons();
   const today = getTodayIsoDate();
   const overview = buildCourseOverview(effectiveLessons, { today });
-  const studentOverview = buildStudentOverview(effectiveLessons, { today, studentCatalog: baseStudentCatalog });
   const selectedCard = overview.courseCards.find((card) => card.key === state.selectedCourseKey) || null;
   courseOverviewLine.textContent = `从 ${formatDateForDisplay(today)} 起，还有 ${overview.totalCourses} 组未来课程、${overview.totalLessons} 节未完成课节。`;
 
@@ -1133,7 +1132,7 @@ function renderCourseOverviewView() {
     <div class="course-summary-strip">
       ${renderCourseSummaryPill("未来课程", overview.totalCourses, "按学员与课程汇总")}
       ${renderCourseSummaryPill("未来课节", overview.totalLessons, "今日以前自动隐藏")}
-      ${renderCourseSummaryPill("覆盖学员", studentOverview.totalStudents, "来自学员信息与未来课程")}
+      ${renderCourseSummaryStickers()}
     </div>
     ${
       overview.courseCards.length
@@ -1167,6 +1166,16 @@ function renderCourseSummaryPill(label, value, caption) {
       <em>${escapeHtml(label)}</em>
       <small>${escapeHtml(caption)}</small>
     </span>
+  `;
+}
+
+function renderCourseSummaryStickers() {
+  return `
+    <div class="course-summary-stickers" aria-hidden="true">
+      <img class="course-summary-sticker" src="./background/my melody _3.jpeg" alt="" loading="lazy" />
+      <img class="course-summary-sticker" src="./photo/@mikkoillustrations on ig_.jpeg" alt="" loading="lazy" />
+      <img class="course-summary-sticker" src="./photo/♡.jpeg" alt="" loading="lazy" />
+    </div>
   `;
 }
 
