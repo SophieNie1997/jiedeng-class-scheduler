@@ -43,11 +43,22 @@ test("course and student overview views are available as workspace tabs", () => 
   assert.ok(css.includes(".course-overview-card"));
   assert.ok(css.includes(".overview-delete-button"));
   assert.equal(appSource.includes("renderStudentTableRow"), true);
+  assert.equal(appSource.includes('id="student-add-form"'), true);
+  assert.equal(appSource.includes('contenteditable="true"'), true);
+  assert.equal(appSource.includes("data-student-edit-field"), true);
+  assert.equal(appSource.includes("deleteStudentOverviewCard"), true);
   assert.equal(appSource.includes('class="student-table-planner"'), true);
   assert.equal(appSource.includes('class="student-table-sticker'), true);
   assert.ok(css.includes(".student-table-planner"));
+  assert.ok(css.includes(".student-add-form"));
   assert.ok(css.includes(".student-ledger-table"));
   assert.ok(css.includes(".student-table-sticker"));
+});
+
+test("student ledger uses opaque sticky name cells", () => {
+  assert.equal(getRuleValue(".student-ledger-table tbody th", "background"), "#fff7fa");
+  assert.equal(getRuleValue(".student-ledger-table tbody tr:nth-child(even) th", "background-color"), "#fffafd");
+  assert.equal(getRuleValue(".student-ledger-table tbody tr:hover th", "background-color"), "#edf8f3");
 });
 
 test("calendar and permission views expose manual creation actions", () => {

@@ -2109,6 +2109,56 @@ fieldset {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.82);
 }
 
+.student-add-form {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.1fr 0.7fr 1fr 1.3fr auto;
+  gap: 10px;
+  align-items: end;
+  margin-bottom: 14px;
+  border: 1px dashed rgba(220, 137, 166, 0.54);
+  border-radius: 18px;
+  background: rgba(255, 250, 253, 0.82);
+  padding: 12px;
+}
+
+.student-add-form label {
+  display: grid;
+  gap: 6px;
+  color: #45515a;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.student-add-form input {
+  min-width: 0;
+  border: 1px solid rgba(220, 185, 192, 0.86);
+  border-radius: 13px;
+  background: #fff;
+  color: #25313a;
+  padding: 10px 12px;
+  font: inherit;
+  outline: none;
+}
+
+.student-add-form input:focus {
+  border-color: var(--selected-ring);
+  box-shadow: 0 0 0 3px rgba(224, 132, 166, 0.16);
+}
+
+.student-add-form button {
+  border: 1px solid rgba(204, 100, 137, 0.25);
+  border-radius: 999px;
+  background: var(--selected-fill);
+  color: var(--accent);
+  padding: 10px 16px;
+  font: inherit;
+  font-weight: 900;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
 .student-ledger-table {
   width: 100%;
   min-width: 1480px;
@@ -2147,18 +2197,39 @@ fieldset {
   position: sticky;
   left: 0;
   z-index: 2;
-  background: rgba(255, 247, 250, 0.98);
+  background: #fff7fa;
   box-shadow: 8px 0 12px rgba(143, 84, 103, 0.05);
 }
 
-.student-ledger-table tbody tr:nth-child(even) td,
-.student-ledger-table tbody tr:nth-child(even) th {
+.student-ledger-table tbody tr:nth-child(even) td {
   background-color: rgba(255, 250, 253, 0.72);
 }
 
-.student-ledger-table tbody tr:hover td,
-.student-ledger-table tbody tr:hover th {
+.student-ledger-table tbody tr:nth-child(even) th {
+  background-color: #fffafd;
+}
+
+.student-ledger-table tbody tr:hover td {
   background-color: rgba(222, 245, 237, 0.44);
+}
+
+.student-ledger-table tbody tr:hover th {
+  background-color: #edf8f3;
+}
+
+.student-ledger-table [contenteditable="true"] {
+  cursor: text;
+  border-radius: 10px;
+  outline: none;
+  transition:
+    background-color 0.16s ease,
+    box-shadow 0.16s ease;
+}
+
+.student-ledger-table td[contenteditable="true"]:focus,
+.student-ledger-name[contenteditable="true"]:focus {
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 0 0 3px rgba(224, 132, 166, 0.2);
 }
 
 .student-ledger-table th:last-child,
@@ -2200,10 +2271,12 @@ fieldset {
 
 .student-ledger-name {
   display: block;
+  min-height: 20px;
   color: #1f2730;
   font-size: 14px;
   font-weight: 900;
   line-height: 1.25;
+  padding: 2px 4px;
 }
 
 .student-ledger-table em {
@@ -2350,6 +2423,7 @@ fieldset {
   .weekday-picker,
   .calendar-actions,
   .permission-add-form,
+  .student-add-form,
   .overview-stat-row,
   .course-card-grid,
   .student-summary-grid {
@@ -2357,7 +2431,8 @@ fieldset {
   }
 
   .calendar-actions,
-  .permission-add-form {
+  .permission-add-form,
+  .student-add-form {
     display: grid;
     margin-top: 12px;
   }

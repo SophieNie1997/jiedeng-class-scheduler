@@ -56,6 +56,13 @@ import {
   buildStudentOverview,
 } from "./overview.js?v=20260617-folder-refresh";
 import {
+  buildStudentDirectoryRows,
+  hideStudentDirectoryRecord,
+  makeStudentDirectoryId,
+  normalizeStudentDirectory,
+  setStudentDirectoryRecord,
+} from "./studentDirectory.js?v=20260617-student-directory";
+import {
   createRemoteStore,
   loadRemoteStoreConfig,
 } from "./remoteStore.js?v=20260616-supabase-sync";
@@ -66,11 +73,13 @@ const LESSON_EDIT_STORAGE_KEY = "jiedeng-lesson-edits-folder-20260617-shift";
 const LESSON_EDIT_RESTORE_RESULT_KEY = "jiedeng-lesson-edits-last-restore";
 const LESSON_EDIT_RESTORE_BACKUP_PREFIX = "jiedeng-lesson-edits-backup-before-restore";
 const CUSTOM_CATALOG_STORAGE_KEY = "jiedeng-custom-catalog-folder-20260617-shift";
+const STUDENT_DIRECTORY_STORAGE_KEY = "jiedeng-student-directory-20260617";
 const REMOTE_BUCKETS = {
   shiftOverrides: "shiftOverrides",
   coursePermissions: "coursePermissions",
   customCatalog: "customCatalog",
   lessonEdits: "lessonEdits",
+  studentDirectory: "studentDirectory",
 };
 const WEEKDAYS = [
   { value: 1, label: "周一" },
@@ -95,6 +104,7 @@ const state = {
   selectedShift: { teacherId: baseShiftRoster[0]?.id || "", date: "2026-06-29" },
   shiftOverrides: loadShiftOverrides(),
   customCatalog: loadCustomCatalog(),
+  studentDirectory: loadStudentDirectory(),
   coursePermissions: {},
   lessonEdits: loadLessonEdits(),
   selectedLessonId: null,
@@ -423,6 +433,25 @@ studentOverviewNode.addEventListener("click", (event) => {
   }
 
   deleteStudentOverviewCard(deleteButton.dataset.studentDelete);
+});
+
+studentOverviewNode.addEventListener("submit", (event) => {
+  const studentForm = event.target.closest("#student-add-form");
+  if (!studentForm) {
+    return;
+  }
+
+  event.preventDefault();
+  addStudentDirectoryRecordFromForm(studentForm);
+});
+
+studentOverviewNode.addEventListener("focusout", (event) => {
+  const editableCell = event.target.closest("[data-student-edit-field]");
+  if (!editableCell) {
+    return;
+  }
+
+  saveStudentDirectoryField(editableCell);
 });
 
 calendarNode.addEventListener("click", (event) => {
@@ -1016,17 +1045,18 @@ function renderCourseOverviewCard(card) {
 }
 
 function renderStudentOverviewView() {
-  const effectiveLessons = getEffectiveLessons();
   const today = getTodayIsoDate();
-  const overview = buildStudentOverview(effectiveLessons, { today, studentCatalog: baseStudentCatalog });
+  const effectiveLessons = getEffectiveLessons();
+  const students = getStudentDirectoryRows();
   const courseOverview = buildCourseOverview(effectiveLessons, { today });
-  studentOverviewLine.textContent = `当前学员数据库共有 ${overview.totalStudents} 位学员，其中 ${overview.activeStudents} 位从 ${formatDateForDisplay(today)} 起还有未来课程。`;
+  const activeStudents = students.filter((student) => student.lessonCount > 0).length;
+  studentOverviewLine.textContent = `当前学员数据库共有 ${students.length} 位学员，其中 ${activeStudents} 位从 ${formatDateForDisplay(today)} 起还有未来课程。`;
 
   studentOverviewNode.innerHTML = `
     <div class="overview-stat-row">
       <article class="overview-stat-card">
         <span>总学员</span>
-        <strong>${overview.totalStudents}</strong>
+        <strong>${students.length}</strong>
         <em>来自学员信息与排课表</em>
       </article>
       <article class="overview-stat-card lavender">
@@ -1035,11 +1065,36 @@ function renderStudentOverviewView() {
         <em>今日以前已自动隐藏</em>
       </article>
     </div>
+    ${renderStudentAddForm()}
     ${
-      overview.students.length
-        ? renderStudentLedgerTable(overview.students)
+      students.length
+        ? renderStudentLedgerTable(students)
         : renderOverviewEmpty("目前没有未来课程学员")
     }
+  `;
+}
+
+function renderStudentAddForm() {
+  return `
+    <form id="student-add-form" class="student-add-form">
+      <label>
+        <span>学员姓名</span>
+        <input name="name" placeholder="新学员姓名" required />
+      </label>
+      <label>
+        <span>年级</span>
+        <input name="grade" placeholder="如 Y6" />
+      </label>
+      <label>
+        <span>电话</span>
+        <input name="phone" placeholder="家长电话" />
+      </label>
+      <label>
+        <span>家庭住址</span>
+        <input name="address" placeholder="校区/住址备注" />
+      </label>
+      <button type="submit">新增学员</button>
+    </form>
   `;
 }
 
@@ -1080,35 +1135,120 @@ function renderStudentLedgerTable(students) {
 }
 
 function renderStudentTableRow(student) {
+  const studentId = escapeAttribute(student.id || makeStudentDirectoryId(student.name));
+  const coursesText = student.coursesText || student.courses.join("、") || "";
+  const teachersText = student.teachersText || student.teachers.join("、") || "";
+  const timeText =
+    student.timeText ||
+    (student.lessonCount ? `${student.firstDate || "未填写"} 至 ${student.lastDate || "未填写"}` : "未排未来课程");
+
   return `
     <tr>
       <th scope="row">
-        <span class="student-ledger-name">${escapeHtml(student.name)}</span>
+        <span
+          class="student-ledger-name"
+          contenteditable="true"
+          spellcheck="false"
+          data-student-id="${studentId}"
+          data-student-edit-field="name"
+        >${escapeHtml(student.name)}</span>
         <em>${escapeHtml(student.lessonCount ? `${student.lessonCount} 节课` : "未排未来课程")}</em>
       </th>
-      <td>${escapeHtml(student.gender || "未填写")}</td>
-      <td>${escapeHtml(student.grade || "未填写")}</td>
-      <td>${escapeHtml(student.school || "未填写")}</td>
-      <td>${escapeHtml(formatStudentBusiness(student))}</td>
-      <td class="student-ledger-phone">${escapeHtml(student.phone || "未填写")}</td>
-      <td class="student-ledger-address">${escapeHtml(student.address || "未填写")}</td>
-      <td>${escapeHtml(student.needs || "未填写")}</td>
-      <td>${escapeHtml(student.courses.join("、") || "未填写")}</td>
-      <td>${escapeHtml(student.teachers.join("、") || "未填写")}</td>
-      <td>${escapeHtml(student.lessonCount ? `${student.firstDate || "未填写"} 至 ${student.lastDate || "未填写"}` : "未排未来课程")}</td>
+      ${renderStudentEditableCell(student, "gender", student.gender)}
+      ${renderStudentEditableCell(student, "grade", student.grade)}
+      ${renderStudentEditableCell(student, "school", student.school)}
+      ${renderStudentEditableCell(student, "businessType", formatStudentBusiness(student))}
+      ${renderStudentEditableCell(student, "phone", student.phone, "student-ledger-phone")}
+      ${renderStudentEditableCell(student, "address", student.address, "student-ledger-address")}
+      ${renderStudentEditableCell(student, "needs", student.needs)}
+      ${renderStudentEditableCell(student, "coursesText", coursesText)}
+      ${renderStudentEditableCell(student, "teachersText", teachersText)}
+      ${renderStudentEditableCell(student, "timeText", timeText)}
       <td>
-        ${
-          student.lessonIds.length
-            ? `<button class="overview-delete-button" data-student-delete="${escapeAttribute(student.name)}" type="button" aria-label="删除这位学员的未来课程">${renderTrashIcon()}</button>`
-            : `<span class="student-ledger-empty">-</span>`
-        }
+        <button
+          class="overview-delete-button"
+          data-student-delete="${studentId}"
+          type="button"
+          aria-label="删除这位学员的未来课程"
+        >${renderTrashIcon()}</button>
       </td>
     </tr>
   `;
 }
 
+function renderStudentEditableCell(student, field, value, className = "") {
+  return `
+    <td
+      ${className ? `class="${escapeAttribute(className)}"` : ""}
+      contenteditable="true"
+      spellcheck="false"
+      data-student-id="${escapeAttribute(student.id || makeStudentDirectoryId(student.name))}"
+      data-student-edit-field="${escapeAttribute(field)}"
+    >${escapeHtml(value || "未填写")}</td>
+  `;
+}
+
 function formatStudentBusiness(student) {
   return [student.businessType, student.frequency].filter(Boolean).join(" / ") || "未填写";
+}
+
+function getStudentDirectoryRows() {
+  const overview = buildStudentOverview(getEffectiveLessons(), {
+    today: getTodayIsoDate(),
+    studentCatalog: baseStudentCatalog,
+  });
+  return buildStudentDirectoryRows(overview.students, state.studentDirectory, { draftStudent: readRequest() });
+}
+
+function addStudentDirectoryRecordFromForm(studentForm) {
+  const formData = new FormData(studentForm);
+  const name = String(formData.get("name") || "").trim();
+  if (!name) {
+    return;
+  }
+
+  const record = {
+    id: makeStudentDirectoryId(name),
+    name,
+    grade: String(formData.get("grade") || "").trim(),
+    phone: String(formData.get("phone") || "").trim(),
+    address: String(formData.get("address") || "").trim(),
+  };
+
+  state.studentDirectory = setStudentDirectoryRecord(state.studentDirectory, record);
+  saveStudentDirectory(state.studentDirectory);
+  studentForm.reset();
+  render();
+}
+
+function saveStudentDirectoryField(editableCell) {
+  const studentId = editableCell.dataset.studentId || "";
+  const field = editableCell.dataset.studentEditField || "";
+  if (!studentId || !field) {
+    return;
+  }
+
+  const rows = getStudentDirectoryRows();
+  const row = rows.find((student) => student.id === studentId);
+  const currentRecord = state.studentDirectory.records?.[studentId] || {};
+  const currentName = currentRecord.name || row?.name || "";
+  const nextValue = editableCell.textContent.trim();
+  if (field === "name" && !nextValue) {
+    editableCell.textContent = currentName || "未填写";
+    return;
+  }
+
+  const normalizedValue = nextValue === "未填写" ? "" : nextValue;
+  const nextRecord = {
+    ...currentRecord,
+    id: studentId,
+    name: field === "name" ? normalizedValue : currentName,
+    [field]: normalizedValue,
+  };
+
+  state.studentDirectory = setStudentDirectoryRecord(state.studentDirectory, nextRecord);
+  saveStudentDirectory(state.studentDirectory);
+  render();
 }
 
 function renderStudentDetail(label, value) {
@@ -1542,18 +1682,26 @@ function deleteCourseOverviewCard(courseKey) {
   deleteLessonsByIds(card.lessonIds);
 }
 
-function deleteStudentOverviewCard(studentName) {
-  const overview = buildStudentOverview(getEffectiveLessons(), { today: getTodayIsoDate() });
-  const student = overview.students.find((item) => item.name === studentName);
-  if (!student || !student.lessonIds.length) {
+function deleteStudentOverviewCard(studentId) {
+  const student = getStudentDirectoryRows().find((item) => item.id === studentId);
+  if (!student) {
     return;
   }
 
-  if (!window.confirm(`删除 ${student.name} 的 ${student.lessonIds.length} 节未来课程？`)) {
+  const lessonCountText = student.lessonIds.length ? `，并同步删除 ${student.lessonIds.length} 节未来课程` : "";
+  if (!window.confirm(`删除 ${student.name} 的学员记录${lessonCountText}？`)) {
     return;
   }
 
-  deleteLessonsByIds(student.lessonIds);
+  state.studentDirectory = hideStudentDirectoryRecord(state.studentDirectory, student.id);
+  saveStudentDirectory(state.studentDirectory);
+
+  if (student.lessonIds.length) {
+    deleteLessonsByIds(student.lessonIds);
+    return;
+  }
+
+  render();
 }
 
 function deleteLessonsByIds(lessonIds) {
@@ -1791,6 +1939,12 @@ function applyRemoteBuckets(buckets) {
     changed = true;
   }
 
+  if (REMOTE_BUCKETS.studentDirectory in buckets) {
+    state.studentDirectory = normalizeStudentDirectory(buckets[REMOTE_BUCKETS.studentDirectory]);
+    saveLocalStudentDirectory(state.studentDirectory);
+    changed = true;
+  }
+
   if (REMOTE_BUCKETS.coursePermissions in buckets || REMOTE_BUCKETS.customCatalog in buckets) {
     const nextPermissions =
       REMOTE_BUCKETS.coursePermissions in buckets
@@ -2023,6 +2177,15 @@ function loadLessonEdits() {
   }
 }
 
+function loadStudentDirectory() {
+  try {
+    const raw = localStorage.getItem(STUDENT_DIRECTORY_STORAGE_KEY);
+    return normalizeStudentDirectory(raw ? JSON.parse(raw) : {});
+  } catch {
+    return normalizeStudentDirectory({});
+  }
+}
+
 function restoreDeletedLessonsIfRequested(edits) {
   if (typeof window === "undefined") {
     return edits;
@@ -2081,6 +2244,12 @@ function saveLessonEdits(edits) {
   saveRemoteBucket(REMOTE_BUCKETS.lessonEdits, normalizedEdits);
 }
 
+function saveStudentDirectory(directory) {
+  const normalizedDirectory = normalizeStudentDirectory(directory);
+  saveLocalStudentDirectory(normalizedDirectory);
+  saveRemoteBucket(REMOTE_BUCKETS.studentDirectory, normalizedDirectory);
+}
+
 function saveLocalShiftOverrides(shifts) {
   localStorage.setItem(SHIFT_STORAGE_KEY, JSON.stringify(shifts));
 }
@@ -2095,6 +2264,10 @@ function saveLocalCustomCatalog(catalog) {
 
 function saveLocalLessonEdits(edits) {
   localStorage.setItem(LESSON_EDIT_STORAGE_KEY, JSON.stringify(normalizeLessonEdits(edits)));
+}
+
+function saveLocalStudentDirectory(directory) {
+  localStorage.setItem(STUDENT_DIRECTORY_STORAGE_KEY, JSON.stringify(normalizeStudentDirectory(directory)));
 }
 
 function hydrateShiftOverrides(shifts) {
