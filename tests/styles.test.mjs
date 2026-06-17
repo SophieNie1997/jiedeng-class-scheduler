@@ -208,13 +208,23 @@ test("shift editor auto-saves field changes and only shows the default restore a
   assert.equal(appSource.includes('class="primary-button" data-shift-action="clear"'), true);
 });
 
-test("shift cells show readonly same-day course times and names without student or campus clutter", () => {
+test("shift cells show clickable same-day course times and names without student or campus clutter", () => {
   const chipRenderer = /function renderShiftLessonChip[\s\S]*?function resolveShiftLessonCampus/.exec(appSource)?.[0] || "";
 
   assert.equal(appSource.includes("buildTeacherDayLessonIndex"), true);
   assert.equal(appSource.includes("renderShiftLessonList"), true);
   assert.equal(appSource.includes("resolveShiftLessonCampus"), true);
+  assert.equal(appSource.includes('id="shift-course-detail"'), true);
+  assert.equal(appSource.includes("renderShiftCourseDetail"), true);
+  assert.equal(appSource.includes("openShiftCourseDetail"), true);
+  assert.equal(appSource.includes("shiftCourseDetailNode.addEventListener"), true);
+  assert.equal(appSource.includes('shiftGridNode.addEventListener("keydown"'), true);
+  assert.equal(appSource.includes("selectShiftCell"), true);
+  assert.equal(appSource.includes("renderCourseDetailCard(selectedCard)"), true);
   assert.equal(appSource.includes('class="shift-lesson-list"'), true);
+  assert.equal(chipRenderer.includes("<button"), true);
+  assert.equal(chipRenderer.includes('type="button"'), true);
+  assert.equal(chipRenderer.includes("data-shift-lesson-select"), true);
   assert.equal(chipRenderer.includes('class="shift-lesson-time"'), true);
   assert.equal(chipRenderer.includes('class="shift-lesson-campus"'), false);
   assert.equal(chipRenderer.includes("lesson.studentName"), false);
@@ -228,6 +238,8 @@ test("shift cells show readonly same-day course times and names without student 
   assert.equal(getRuleValue(".shift-campus-pudong", "color"), "#1f7f8b");
   assert.equal(getRuleValue(".shift-campus-label.shift-campus-xuhui,\n.shift-lesson-chip.shift-campus-xuhui", "color"), "#b44f7a");
   assert.equal(getRuleValue(".shift-campus-label.shift-campus-pudong,\n.shift-lesson-chip.shift-campus-pudong", "color"), "#1f7f8b");
+  assert.ok(css.includes(".shift-side-stack"));
+  assert.ok(css.includes(".shift-lesson-chip.selected"));
 });
 
 test("selected states use the cream planner palette instead of deep green fills", () => {

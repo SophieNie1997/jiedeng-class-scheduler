@@ -111,6 +111,7 @@ const DURATION_OPTIONS = [
 const state = {
   selectedTeacherId: null,
   selectedShift: { teacherId: baseShiftRoster[0]?.id || "", date: "2026-06-29" },
+  selectedShiftCourseKey: "",
   shiftOverrides: loadShiftOverrides(),
   customCatalog: loadCustomCatalog(),
   studentDirectory: loadStudentDirectory(),
@@ -328,7 +329,10 @@ app.innerHTML = `
         </div>
         <div class="shift-layout">
           <div id="shift-grid" class="shift-grid"></div>
-          <aside id="shift-editor" class="shift-editor"></aside>
+          <div class="shift-side-stack">
+            <div id="shift-course-detail" class="shift-course-detail"></div>
+            <aside id="shift-editor" class="shift-editor"></aside>
+          </div>
         </div>
       </section>
     </section>
@@ -367,6 +371,7 @@ const calendarNode = document.querySelector("#calendar");
 const weekStartInput = document.querySelector("#week-start");
 const shiftWeekStartInput = document.querySelector("#shift-week-start");
 const shiftGridNode = document.querySelector("#shift-grid");
+const shiftCourseDetailNode = document.querySelector("#shift-course-detail");
 const shiftEditorNode = document.querySelector("#shift-editor");
 const shiftSyncLine = document.querySelector("#shift-sync-line");
 const plannerView = document.querySelector("#planner-view");
@@ -588,16 +593,55 @@ tabButtons.forEach((button) => {
 });
 
 shiftGridNode.addEventListener("click", (event) => {
+  const lessonButton = event.target.closest("[data-shift-lesson-select]");
+  if (lessonButton) {
+    event.stopPropagation();
+    openShiftCourseDetail(lessonButton.dataset.shiftLessonSelect);
+    return;
+  }
+
   const cell = event.target.closest("[data-shift-teacher-id]");
   if (!cell) {
     return;
   }
 
+  selectShiftCell(cell);
+});
+
+shiftGridNode.addEventListener("keydown", (event) => {
+  if (!["Enter", " "].includes(event.key) || event.target.closest("[data-shift-lesson-select]")) {
+    return;
+  }
+
+  const cell = event.target.closest("[data-shift-teacher-id]");
+  if (!cell) {
+    return;
+  }
+
+  event.preventDefault();
+  selectShiftCell(cell);
+});
+
+function selectShiftCell(cell) {
   state.selectedShift = {
     teacherId: cell.dataset.shiftTeacherId,
     date: cell.dataset.shiftDate,
   };
+  state.selectedShiftCourseKey = "";
   renderShiftView();
+}
+
+shiftCourseDetailNode.addEventListener("click", (event) => {
+  const deleteButton = event.target.closest("[data-course-delete]");
+  if (deleteButton) {
+    openCourseDeleteConfirm(deleteButton.dataset.courseDelete);
+    return;
+  }
+
+  const editButton = event.target.closest("[data-course-edit]");
+  if (editButton) {
+    openCourseInLessonEditor(editButton.dataset.courseEdit);
+  }
 });
 
 shiftEditorNode.addEventListener("click", (event) => {
@@ -1698,6 +1742,9 @@ function renderShiftView() {
 
   const manualShiftCount = Object.keys(state.shiftOverrides).length;
   const shiftLessonIndex = buildTeacherDayLessonIndex(filterCalendarLessons(getEffectiveLessons()));
+  const shiftCourseOverview = buildCourseOverview(getEffectiveLessons(), { today: getTodayIsoDate() });
+  const selectedShiftCard = shiftCourseOverview.courseCards.find((card) => card.key === state.selectedShiftCourseKey) || null;
+  const selectedShiftLessonIds = new Set((selectedShiftCard?.lessonIds || []).map((id) => String(id)));
   shiftWeekStartInput.value = state.weekStart;
   shiftSyncLine.textContent = `${manualShiftCount} 个排班已录入，会即时参与候选老师匹配和总课表。`;
 
@@ -1717,30 +1764,51 @@ function renderShiftView() {
       .map(
         (teacher) => `
           <div class="shift-teacher-name">${escapeHtml(teacher.name)}</div>
-          ${weekDates.map((day) => renderShiftCell(teacher, day.iso, shiftLessonIndex)).join("")}
+          ${weekDates.map((day) => renderShiftCell(teacher, day.iso, shiftLessonIndex, selectedShiftLessonIds)).join("")}
         `,
       )
       .join("")}
   `;
 
+  renderShiftCourseDetail(selectedShiftCard);
   renderShiftEditor();
 }
 
-function renderShiftCell(teacher, date, shiftLessonIndex) {
+function renderShiftCell(teacher, date, shiftLessonIndex, selectedLessonIds = new Set()) {
   const shift = getTeacherShiftForDate(teacher, date, state.shiftOverrides);
   const selected = state.selectedShift.teacherId === teacher.id && state.selectedShift.date === date;
   const lessons = getShiftCellLessons(shiftLessonIndex, teacher, date);
   return `
-    <button
+    <div
       class="shift-cell ${shift.type} ${shift.source} ${selected ? "selected" : ""}"
       data-shift-teacher-id="${escapeAttribute(teacher.id)}"
       data-shift-date="${date}"
-      type="button"
+      role="button"
+      tabindex="0"
     >
       <strong>${escapeHtml(shift.label)}</strong>
       ${renderShiftCampusMeta(shift)}
-      ${renderShiftLessonList(lessons, shift)}
-    </button>
+      ${renderShiftLessonList(lessons, shift, selectedLessonIds)}
+    </div>
+  `;
+}
+
+function renderShiftCourseDetail(selectedCard) {
+  shiftCourseDetailNode.innerHTML = selectedCard ? renderCourseDetailCard(selectedCard) : renderShiftCourseDetailPlaceholder();
+}
+
+function renderShiftCourseDetailPlaceholder() {
+  return `
+    <aside class="course-detail-card empty shift-course-placeholder" aria-label="课程详细信息">
+      <img class="course-detail-sticker" src="./photo/˗ˏˋ꒰🍥꒱.jpeg" alt="" loading="lazy" aria-hidden="true" />
+      <div class="course-detail-head">
+        <div>
+          <span>课程详情贴纸</span>
+          <h3>点排班里的课程</h3>
+          <p>这里会展开总课程同款详情贴纸，排班格子本身还是用来编辑老师当天状态。</p>
+        </div>
+      </div>
+    </aside>
   `;
 }
 
@@ -2215,6 +2283,19 @@ function deleteCourseOverviewCard(courseKey) {
   deleteLessonsByIds(card.lessonIds);
 }
 
+function openShiftCourseDetail(lessonId) {
+  const overview = buildCourseOverview(getEffectiveLessons(), { today: getTodayIsoDate() });
+  const card = overview.courseCards.find((item) => item.lessonIds.some((id) => String(id) === String(lessonId)));
+  if (!card) {
+    state.selectedShiftCourseKey = "";
+    renderShiftView();
+    return;
+  }
+
+  state.selectedShiftCourseKey = card.key;
+  renderShiftView();
+}
+
 function openCourseInLessonEditor(courseKey) {
   const lessons = getEffectiveLessons();
   const overview = buildCourseOverview(lessons, { today: getTodayIsoDate() });
@@ -2622,7 +2703,7 @@ function renderShiftCampusMeta(shift) {
   return `<span class="shift-campus-label ${getShiftCampusClass(campus)}">${escapeHtml(campus)}</span>`;
 }
 
-function renderShiftLessonList(lessons, shift) {
+function renderShiftLessonList(lessons, shift, selectedLessonIds = new Set()) {
   if (!lessons.length) {
     return "";
   }
@@ -2631,20 +2712,25 @@ function renderShiftLessonList(lessons, shift) {
   const overflowCount = lessons.length - visibleLessons.length;
   return `
     <span class="shift-lesson-list" aria-label="当天课程">
-      ${visibleLessons.map((lesson) => renderShiftLessonChip(lesson, shift.campus)).join("")}
+      ${visibleLessons.map((lesson) => renderShiftLessonChip(lesson, shift.campus, selectedLessonIds.has(String(lesson.id)))).join("")}
       ${overflowCount > 0 ? `<span class="shift-lesson-more">+ ${overflowCount} 节</span>` : ""}
     </span>
   `;
 }
 
-function renderShiftLessonChip(lesson, fallbackCampus) {
+function renderShiftLessonChip(lesson, fallbackCampus, isSelected = false) {
   const campus = resolveShiftLessonCampus(lesson.campus, fallbackCampus);
   const courseName = String(lesson.course || "").trim() || "未填写课程";
   return `
-    <span class="shift-lesson-chip ${getShiftCampusClass(campus)}">
+    <button
+      class="shift-lesson-chip ${getShiftCampusClass(campus)} ${isSelected ? "selected" : ""}"
+      data-shift-lesson-select="${escapeAttribute(lesson.id)}"
+      type="button"
+      aria-label="查看 ${escapeAttribute(lesson.timeLabel)} ${escapeAttribute(courseName)} 课程详情"
+    >
       <span class="shift-lesson-time">${escapeHtml(lesson.timeLabel)}</span>
       <span class="shift-lesson-title">${escapeHtml(courseName)}</span>
-    </span>
+    </button>
   `;
 }
 

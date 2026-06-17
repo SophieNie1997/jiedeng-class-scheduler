@@ -1521,6 +1521,12 @@ fieldset {
   align-items: start;
 }
 
+.shift-side-stack {
+  display: grid;
+  gap: 14px;
+  min-width: 0;
+}
+
 .shift-grid,
 .permission-table-wrap {
   border-radius: 22px;
@@ -1623,7 +1629,6 @@ fieldset {
   width: 100%;
   gap: 4px;
   margin-top: 3px;
-  pointer-events: none;
 }
 
 .shift-lesson-chip {
@@ -1632,11 +1637,22 @@ fieldset {
   gap: 5px;
   align-items: baseline;
   min-width: 0;
+  width: 100%;
+  border: 0;
   border-top: 1px dashed rgba(220, 185, 192, 0.72);
+  background: transparent;
   padding-top: 4px;
   font-size: 10px;
   font-weight: 900;
   line-height: 1.25;
+  text-align: left;
+  cursor: pointer;
+}
+
+.shift-lesson-chip:hover,
+.shift-lesson-chip:focus-visible {
+  background: rgba(255, 255, 255, 0.42);
+  outline: none;
 }
 
 .shift-lesson-time,
@@ -1662,6 +1678,13 @@ fieldset {
   color: var(--muted);
   font-size: 10px;
   font-weight: 900;
+}
+
+.shift-lesson-chip.selected {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.64);
+  box-shadow: inset 0 0 0 1px rgba(215, 125, 151, 0.22);
+  padding-inline: 4px;
 }
 
 .shift-campus-xuhui {
