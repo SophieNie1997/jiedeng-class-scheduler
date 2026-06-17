@@ -133,6 +133,72 @@ export function createShiftFromOption(option) {
   return normalizeShift(option, "override");
 }
 
+export function buildBulkShiftTargets(teachers, options, existingShifts = {}) {
+  const teacherId = String(options.teacherId || "__all");
+  const targetTeachers =
+    teacherId === "__all" ? teachers : teachers.filter((teacher) => teacher.id === teacherId);
+  const weekdays = new Set((options.weekdays || []).map(Number).filter((weekday) => weekday >= 1 && weekday <= 7));
+  const startDate = parseIsoDate(options.startDate);
+  const endDate = parseIsoDate(options.endDate);
+
+  if (!targetTeachers.length || !weekdays.size || !startDate || !endDate || startDate > endDate) {
+    return [];
+  }
+
+  const mode = options.mode || "fill-empty";
+  const targets = [];
+
+  for (const teacher of targetTeachers) {
+    for (const date of enumerateIsoDates(startDate, endDate)) {
+      const key = makeShiftKey(teacher.id, date);
+      if (mode !== "overwrite" && existingShifts[key]) {
+        continue;
+      }
+
+      if (!weekdays.has(getWeekday(date))) {
+        continue;
+      }
+
+      targets.push({ teacherId: teacher.id, date, key });
+    }
+  }
+
+  return targets;
+}
+
+export function buildBulkShiftOverride(options) {
+  const type = ["work", "off", "holiday"].includes(options.type) ? options.type : "work";
+  const note = String(options.note || "").trim();
+
+  if (type === "work") {
+    const startTime = options.startTime || "09:00";
+    const endTime = options.endTime || "18:00";
+    const campus = CAMPUS_OPTIONS.includes(options.campus) ? options.campus : "浦东";
+    return {
+      type: "work",
+      label: buildShiftLabel({ type: "work", campus, startTime, endTime }),
+      campus,
+      startTime,
+      endTime,
+      ...(note ? { note } : {}),
+    };
+  }
+
+  if (type === "holiday") {
+    return {
+      type: "holiday",
+      label: "法定",
+      ...(note ? { note } : {}),
+    };
+  }
+
+  return {
+    type: "off",
+    label: "休",
+    ...(note ? { note } : {}),
+  };
+}
+
 export function buildShiftLabel(shift) {
   if (shift.type === "holiday") {
     return "法定";
@@ -217,4 +283,18 @@ function formatDisplayHour(time) {
   }
 
   return String(displayHour);
+}
+
+function parseIsoDate(dateString) {
+  const date = new Date(`${dateString}T00:00:00Z`);
+  return Number.isNaN(date.getTime()) ? null : date;
+}
+
+function* enumerateIsoDates(startDate, endDate) {
+  const cursor = new Date(startDate);
+
+  while (cursor <= endDate) {
+    yield cursor.toISOString().slice(0, 10);
+    cursor.setUTCDate(cursor.getUTCDate() + 1);
+  }
 }

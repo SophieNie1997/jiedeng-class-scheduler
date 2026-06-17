@@ -242,6 +242,23 @@ test("shift cells show clickable same-day course times and names without student
   assert.ok(css.includes(".shift-lesson-chip.selected"));
 });
 
+test("shift view offers a compact bulk scheduling sticker with in-app confirmation", () => {
+  assert.equal(appSource.includes('id="shift-bulk-form"'), true);
+  assert.equal(appSource.includes("renderShiftBulkForm"), true);
+  assert.equal(appSource.includes("data-bulk-shift-field"), true);
+  assert.equal(appSource.includes("data-bulk-shift-weekday"), true);
+  assert.equal(appSource.includes("openBulkShiftConfirm"), true);
+  assert.equal(appSource.includes("applyBulkShift"), true);
+  assert.equal(appSource.includes('action: "bulk-shift"'), true);
+  assert.equal(appSource.includes("data-confirm-action"), true);
+  assert.equal(appSource.includes("只填空白格子"), true);
+  assert.equal(appSource.includes("覆盖已有排班"), true);
+  assert.ok(css.includes(".shift-bulk-form"));
+  assert.ok(css.includes(".shift-bulk-weekdays"));
+  assert.ok(css.includes(".shift-bulk-preview"));
+  assert.ok(css.includes(".shift-bulk-actions"));
+});
+
 test("selected states use the cream planner palette instead of deep green fills", () => {
   assert.ok(getRuleText(":root").includes("--selected-fill"));
   for (const selector of [

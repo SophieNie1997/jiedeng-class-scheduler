@@ -28,12 +28,14 @@ import {
 } from "./scheduler.js?v=20260616-course-catalog";
 import {
   CAMPUS_OPTIONS,
+  buildBulkShiftOverride,
+  buildBulkShiftTargets,
   buildShiftLabel,
   buildUnavailableLessonsFromShifts,
   getTeacherShiftForDate,
   makeShiftKey,
   mergeTeacherShiftOverrides,
-} from "./shifts.js?v=20260616-shift-labels";
+} from "./shifts.js?v=20260617-bulk-shifts";
 import {
   deriveDeliveryTypeFromCampus,
   teachingSites,
@@ -330,6 +332,7 @@ app.innerHTML = `
         <div class="shift-layout">
           <div id="shift-grid" class="shift-grid"></div>
           <div class="shift-side-stack">
+            <form id="shift-bulk-form" class="shift-bulk-form" aria-label="批量排班小纸条"></form>
             <div id="shift-course-detail" class="shift-course-detail"></div>
             <aside id="shift-editor" class="shift-editor"></aside>
           </div>
@@ -371,6 +374,7 @@ const calendarNode = document.querySelector("#calendar");
 const weekStartInput = document.querySelector("#week-start");
 const shiftWeekStartInput = document.querySelector("#shift-week-start");
 const shiftGridNode = document.querySelector("#shift-grid");
+const shiftBulkFormNode = document.querySelector("#shift-bulk-form");
 const shiftCourseDetailNode = document.querySelector("#shift-course-detail");
 const shiftEditorNode = document.querySelector("#shift-editor");
 const shiftSyncLine = document.querySelector("#shift-sync-line");
@@ -642,6 +646,32 @@ shiftCourseDetailNode.addEventListener("click", (event) => {
   if (editButton) {
     openCourseInLessonEditor(editButton.dataset.courseEdit);
   }
+});
+
+shiftBulkFormNode.addEventListener("input", () => {
+  refreshBulkShiftFormState(shiftBulkFormNode);
+});
+
+shiftBulkFormNode.addEventListener("change", () => {
+  refreshBulkShiftFormState(shiftBulkFormNode);
+});
+
+shiftBulkFormNode.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const payload = readBulkShiftPayload(shiftBulkFormNode);
+  if (payload.type === "work" && parseTimeToMinutes(payload.startTime) >= parseTimeToMinutes(payload.endTime)) {
+    showSaveFeedback("结束时间要晚于开始时间，先帮小纸条改一下哦。", "error");
+    return;
+  }
+
+  const targets = buildBulkShiftTargets(getShiftRoster(), payload, state.shiftOverrides);
+  if (!targets.length) {
+    showSaveFeedback("没有找到需要更新的排班格子，先检查日期和星期哦。", "local");
+    refreshBulkShiftFormState(shiftBulkFormNode);
+    return;
+  }
+
+  openBulkShiftConfirm(payload, targets.length);
 });
 
 shiftEditorNode.addEventListener("click", (event) => {
@@ -1582,6 +1612,15 @@ function openLessonScopeConfirm(action, lessonChanges = null) {
   renderStudentDeleteDialog();
 }
 
+function openBulkShiftConfirm(payload, targetCount) {
+  state.pendingConfirm = {
+    type: "bulk-shift",
+    payload,
+    targetCount,
+  };
+  renderStudentDeleteDialog();
+}
+
 function closeStudentDeleteConfirm() {
   state.pendingConfirm = null;
   renderStudentDeleteDialog();
@@ -1612,7 +1651,9 @@ function renderStudentDeleteDialog() {
         <h3 id="student-delete-title">${escapeHtml(dialog.title)}</h3>
         <p>${escapeHtml(dialog.message)}</p>
         <div class="student-delete-actions">
-          <button class="student-delete-cancel" data-student-delete-cancel type="button">先不删</button>
+          <button class="student-delete-cancel" data-student-delete-cancel type="button">${escapeHtml(
+            dialog.cancelLabel || "先不删",
+          )}</button>
           ${dialog.actions
             .map(
               (action) => `
@@ -1688,6 +1729,36 @@ function buildPendingConfirmDialog() {
     };
   }
 
+  if (pending.type === "bulk-shift") {
+    const payload = pending.payload || {};
+    const teacherLabel =
+      payload.teacherId === "__all"
+        ? "全部老师"
+        : getShiftRoster().find((teacher) => teacher.id === payload.teacherId)?.name || "选中的老师";
+    const weekdayText = (payload.weekdays || [])
+      .map(Number)
+      .sort((left, right) => left - right)
+      .map((weekday) => WEEKDAYS.find((day) => day.value === weekday)?.label)
+      .filter(Boolean)
+      .join("、");
+    const shift = buildBulkShiftOverride(payload);
+    const statusText =
+      shift.type === "work"
+        ? `${shift.label} · ${shift.campus}`
+        : shift.type === "holiday"
+          ? "法定假"
+          : "休息";
+    return {
+      kicker: "批量排班小纸条",
+      title: `要一次更新 ${pending.targetCount} 个排班格子吗？`,
+      message: `会把 ${teacherLabel} 在 ${formatDateForDisplay(payload.startDate)} 至 ${formatDateForDisplay(
+        payload.endDate,
+      )} 的 ${weekdayText || "所选星期"} 设置为 ${statusText}。确认后会立即同步到网站上。`,
+      cancelLabel: "再检查一下",
+      actions: [{ label: "确认批量应用", action: "bulk-shift", className: "student-delete-confirm" }],
+    };
+  }
+
   return null;
 }
 
@@ -1711,6 +1782,10 @@ function runPendingConfirmAction(action, scope) {
 
   if (action === "lesson-delete") {
     deleteSelectedLessonFromDetail(scope);
+  }
+
+  if (action === "bulk-shift") {
+    applyBulkShift(pending.payload);
   }
 }
 
@@ -1770,6 +1845,7 @@ function renderShiftView() {
       .join("")}
   `;
 
+  renderShiftBulkForm(weekDates);
   renderShiftCourseDetail(selectedShiftCard);
   renderShiftEditor();
 }
@@ -1809,6 +1885,116 @@ function renderShiftCourseDetailPlaceholder() {
         </div>
       </div>
     </aside>
+  `;
+}
+
+function renderShiftBulkForm(weekDates = getWeekDates(state.weekStart)) {
+  const roster = getShiftRoster();
+  const selectedTeacherId = roster.some((teacher) => teacher.id === state.selectedShift.teacherId)
+    ? state.selectedShift.teacherId
+    : "__all";
+  const startDate = weekDates[0]?.iso || state.weekStart;
+  const endDate = weekDates[6]?.iso || startDate;
+  const defaultPayload = {
+    teacherId: selectedTeacherId,
+    startDate,
+    endDate,
+    weekdays: WEEKDAYS.map((day) => day.value),
+    type: "work",
+    campus: "浦东",
+    startTime: "09:00",
+    endTime: "18:00",
+    note: "",
+    mode: "fill-empty",
+  };
+  const targetCount = buildBulkShiftTargets(roster, defaultPayload, state.shiftOverrides).length;
+
+  shiftBulkFormNode.innerHTML = `
+    <div class="shift-bulk-title">
+      <span>批量排班小纸条</span>
+      <strong>一次改一串格子</strong>
+    </div>
+    <label>
+      <span>老师</span>
+      <select data-bulk-shift-field name="bulkTeacherId">
+        <option value="__all" ${selectedTeacherId === "__all" ? "selected" : ""}>全部老师</option>
+        ${roster
+          .map(
+            (teacher) =>
+              `<option value="${escapeAttribute(teacher.id)}" ${
+                teacher.id === selectedTeacherId ? "selected" : ""
+              }>${escapeHtml(teacher.name)}</option>`,
+          )
+          .join("")}
+      </select>
+    </label>
+    <div class="editor-time-grid">
+      <label>
+        <span>开始日期</span>
+        <input data-bulk-shift-field name="bulkStartDate" type="date" value="${startDate}" />
+      </label>
+      <label>
+        <span>结束日期</span>
+        <input data-bulk-shift-field name="bulkEndDate" type="date" value="${endDate}" />
+      </label>
+    </div>
+    <fieldset class="shift-bulk-weekdays">
+      <legend>应用星期</legend>
+      ${WEEKDAYS.map(
+        (day) => `
+          <label>
+            <input data-bulk-shift-weekday name="bulkWeekdays" type="checkbox" value="${day.value}" checked />
+            <span>${escapeHtml(day.label)}</span>
+          </label>
+        `,
+      ).join("")}
+    </fieldset>
+    <div class="editor-time-grid">
+      <label>
+        <span>状态</span>
+        <select data-bulk-shift-field name="bulkType">
+          <option value="work" selected>上班</option>
+          <option value="off">休息</option>
+          <option value="holiday">法定假</option>
+        </select>
+      </label>
+      <label>
+        <span>校区</span>
+        <select data-bulk-shift-field name="bulkCampus">
+          ${CAMPUS_OPTIONS.map((option) => `<option value="${escapeAttribute(option)}">${escapeHtml(option)}</option>`).join("")}
+        </select>
+      </label>
+    </div>
+    <div class="editor-time-grid">
+      <label>
+        <span>开始</span>
+        <input data-bulk-shift-field name="bulkStartTime" type="time" value="09:00" step="900" />
+      </label>
+      <label>
+        <span>结束</span>
+        <input data-bulk-shift-field name="bulkEndTime" type="time" value="18:00" step="900" />
+      </label>
+    </div>
+    <label>
+      <span>备注</span>
+      <input data-bulk-shift-field name="bulkNote" placeholder="例如：暑期集中排班" />
+    </label>
+    <div class="shift-bulk-mode" aria-label="应用方式">
+      <label>
+        <input data-bulk-shift-field name="bulkMode" type="radio" value="fill-empty" checked />
+        <span>只填空白格子</span>
+      </label>
+      <label>
+        <input data-bulk-shift-field name="bulkMode" type="radio" value="overwrite" />
+        <span>覆盖已有排班</span>
+      </label>
+    </div>
+    <p class="shift-bulk-preview" data-bulk-shift-preview>${renderBulkShiftPreviewText(targetCount)}</p>
+    <div class="shift-bulk-actions">
+      <button class="primary-button" data-bulk-shift-action="apply" type="submit" ${targetCount ? "" : "disabled"}>
+        批量应用
+      </button>
+    </div>
   `;
 }
 
@@ -2027,6 +2213,80 @@ function addDefaultPermissionsForNewCourses(rawPermissions, teacherIds, courseLi
       return [teacherId, courseList.filter((course) => allowed.has(course))];
     }),
   );
+}
+
+function readBulkShiftPayload(formNode) {
+  const formData = new FormData(formNode);
+  const weekdays = formData
+    .getAll("bulkWeekdays")
+    .map(Number)
+    .filter((weekday) => weekday >= 1 && weekday <= 7);
+
+  return {
+    teacherId: String(formData.get("bulkTeacherId") || "__all"),
+    startDate: String(formData.get("bulkStartDate") || state.weekStart),
+    endDate: String(formData.get("bulkEndDate") || state.weekStart),
+    weekdays,
+    type: String(formData.get("bulkType") || "work"),
+    campus: String(formData.get("bulkCampus") || "浦东"),
+    startTime: String(formData.get("bulkStartTime") || "09:00"),
+    endTime: String(formData.get("bulkEndTime") || "18:00"),
+    note: String(formData.get("bulkNote") || "").trim(),
+    mode: String(formData.get("bulkMode") || "fill-empty"),
+  };
+}
+
+function refreshBulkShiftFormState(formNode) {
+  if (!formNode) {
+    return;
+  }
+
+  const payload = readBulkShiftPayload(formNode);
+  const isWork = payload.type === "work";
+  for (const fieldName of ["bulkCampus", "bulkStartTime", "bulkEndTime"]) {
+    const field = formNode.querySelector(`[name="${fieldName}"]`);
+    if (field) {
+      field.disabled = !isWork;
+    }
+  }
+
+  const targetCount = buildBulkShiftTargets(getShiftRoster(), payload, state.shiftOverrides).length;
+  const preview = formNode.querySelector("[data-bulk-shift-preview]");
+  if (preview) {
+    preview.textContent = renderBulkShiftPreviewText(targetCount);
+  }
+
+  const submitButton = formNode.querySelector("[data-bulk-shift-action='apply']");
+  if (submitButton) {
+    submitButton.disabled = targetCount === 0;
+  }
+}
+
+function renderBulkShiftPreviewText(targetCount) {
+  return targetCount
+    ? `准备更新 ${targetCount} 个排班格子，点确认后才会同步。`
+    : "当前筛选没有可更新的格子，可以换日期、星期或选择覆盖已有排班。";
+}
+
+function applyBulkShift(payload) {
+  const targets = buildBulkShiftTargets(getShiftRoster(), payload, state.shiftOverrides);
+  if (!targets.length) {
+    showSaveFeedback("没有找到需要更新的排班格子，先检查日期和星期哦。", "local");
+    return;
+  }
+
+  const shift = buildBulkShiftOverride(payload);
+  state.shiftOverrides = {
+    ...state.shiftOverrides,
+    ...Object.fromEntries(targets.map((target) => [target.key, { ...shift }])),
+  };
+  state.selectedShift = {
+    teacherId: targets[0].teacherId,
+    date: targets[0].date,
+  };
+  state.selectedShiftCourseKey = "";
+  saveShiftOverrides(state.shiftOverrides);
+  render();
 }
 
 function setSelectedShift(shift) {

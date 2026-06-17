@@ -6,6 +6,8 @@ import {
   shiftRoster,
 } from "../src/data.js";
 import {
+  buildBulkShiftOverride,
+  buildBulkShiftTargets,
   buildShiftLabel,
   buildAvailabilityOverrides,
   buildUnavailableLessonsFromShifts,
@@ -25,6 +27,61 @@ const teachers = [
     weeklyAvailability: [],
   },
 ];
+
+test("builds bulk shift targets across a date range and skips existing shift records by default", () => {
+  const shifts = {
+    [makeShiftKey("lynn", "2026-06-30")]: {
+      type: "off",
+      label: "休",
+    },
+  };
+
+  assert.deepEqual(
+    buildBulkShiftTargets(teachers, {
+      teacherId: "__all",
+      startDate: "2026-06-29",
+      endDate: "2026-07-03",
+      weekdays: [1, 2, 3, 4, 5],
+      mode: "fill-empty",
+    }, shifts),
+    [
+      { teacherId: "lynn", date: "2026-06-29", key: "lynn__2026-06-29" },
+      { teacherId: "lynn", date: "2026-07-01", key: "lynn__2026-07-01" },
+      { teacherId: "lynn", date: "2026-07-02", key: "lynn__2026-07-02" },
+      { teacherId: "lynn", date: "2026-07-03", key: "lynn__2026-07-03" },
+      { teacherId: "reece", date: "2026-06-29", key: "reece__2026-06-29" },
+      { teacherId: "reece", date: "2026-06-30", key: "reece__2026-06-30" },
+      { teacherId: "reece", date: "2026-07-01", key: "reece__2026-07-01" },
+      { teacherId: "reece", date: "2026-07-02", key: "reece__2026-07-02" },
+      { teacherId: "reece", date: "2026-07-03", key: "reece__2026-07-03" },
+    ],
+  );
+});
+
+test("builds compact bulk shift overrides for work and rest days", () => {
+  assert.deepEqual(
+    buildBulkShiftOverride({
+      type: "work",
+      campus: "徐汇",
+      startTime: "10:00",
+      endTime: "19:00",
+      note: "暑期集中排班",
+    }),
+    {
+      type: "work",
+      label: "早10-7",
+      campus: "徐汇",
+      startTime: "10:00",
+      endTime: "19:00",
+      note: "暑期集中排班",
+    },
+  );
+
+  assert.deepEqual(buildBulkShiftOverride({ type: "off", note: "" }), {
+    type: "off",
+    label: "休",
+  });
+});
 
 test("derives editable cells from explicit shifts before weekly templates", () => {
   const shifts = {
