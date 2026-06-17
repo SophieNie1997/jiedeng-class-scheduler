@@ -118,9 +118,10 @@ test("shift editor shows the selected teacher avatar", () => {
   assert.ok(getRuleText(".shift-editor-avatar .teacher-avatar").includes("width"));
 });
 
-test("shift editor only saves when the explicit sync button is clicked", () => {
-  assert.equal(appSource.includes('data-shift-action="save"'), true);
-  assert.equal(appSource.includes('shiftEditorNode.addEventListener("change"'), false);
+test("shift editor auto-saves field changes and only shows the default restore action", () => {
+  assert.equal(appSource.includes('data-shift-action="save"'), false);
+  assert.equal(appSource.includes('shiftEditorNode.addEventListener("change"'), true);
+  assert.equal(appSource.includes('class="primary-button" data-shift-action="clear"'), true);
 });
 
 test("selected states use the cream planner palette instead of deep green fills", () => {

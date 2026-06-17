@@ -482,12 +482,14 @@ shiftEditorNode.addEventListener("click", (event) => {
     return;
   }
 
-  if (actionButton.dataset.shiftAction === "save") {
-    saveSelectedShiftFromEditor();
-  }
-
   if (actionButton.dataset.shiftAction === "clear") {
     clearSelectedShift();
+  }
+});
+
+shiftEditorNode.addEventListener("change", (event) => {
+  if (event.target.matches("[data-shift-field]")) {
+    saveSelectedShiftFromEditor();
   }
 });
 
@@ -1207,8 +1209,7 @@ function renderShiftEditor() {
     </label>
 
     <div class="editor-actions">
-      <button class="primary-button" data-shift-action="save" type="button">保存并同步</button>
-      <button class="ghost-button" data-shift-action="clear" type="button">恢复默认</button>
+      <button class="primary-button" data-shift-action="clear" type="button">恢复默认</button>
     </div>
   `;
 }
