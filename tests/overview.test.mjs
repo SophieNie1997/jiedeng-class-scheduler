@@ -115,3 +115,35 @@ test("student overview groups future scheduled lessons by student name with dele
   assert.deepEqual(ivan.lessonIds, ["lesson-2"]);
   assert.deepEqual(ivan.courses, ["WAICY 集训"]);
 });
+
+test("student overview includes imported student catalog entries without future lessons", () => {
+  const overview = buildStudentOverview(lessons, {
+    today: "2026-06-30",
+    studentCatalog: [
+      {
+        name: "Eric",
+        grade: "G2",
+        school: "上实验国际部",
+        frequency: "周一-周五",
+        needs: "樱桃",
+      },
+      {
+        name: "Ivan",
+        grade: "Y6",
+        school: "YCIS",
+      },
+    ],
+  });
+
+  assert.equal(overview.totalStudents, 3);
+  assert.equal(overview.activeStudents, 2);
+
+  const eric = overview.students.find((student) => student.name === "Eric");
+  assert.equal(eric.lessonCount, 0);
+  assert.equal(eric.grade, "G2");
+  assert.equal(eric.school, "上实验国际部");
+
+  const ivan = overview.students.find((student) => student.name === "Ivan");
+  assert.equal(ivan.lessonCount, 1);
+  assert.equal(ivan.grade, "Y6");
+});

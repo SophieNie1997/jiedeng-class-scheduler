@@ -11,6 +11,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from extract_excel_lessons import (  # noqa: E402
     build_merged_lookup,
     dedupe_lessons,
+    discover_lesson_sources,
     find_schedule_blocks,
     infer_status,
     iter_block_items,
@@ -84,6 +85,23 @@ class ExtractExcelLessonsTest(unittest.TestCase):
     def test_holiday_labels_are_imported_as_unavailable(self):
         self.assertEqual(infer_status("端午假期"), "不可用")
         self.assertEqual(infer_status("法定假期"), "不可用")
+
+    def test_lesson_sources_are_discovered_from_schedule_folder_only(self):
+        folder = ROOT / "tmp-test-schedule-folder"
+        folder.mkdir(exist_ok=True)
+        try:
+            (folder / ".DS_Store").write_text("", encoding="utf-8")
+            (folder / "~$临时.xlsx").write_text("", encoding="utf-8")
+            first = folder / "桔灯 陪伴老师 排课统计.xlsx"
+            second = folder / "桔灯学科组 排课统计.xlsx"
+            first.write_text("", encoding="utf-8")
+            second.write_text("", encoding="utf-8")
+
+            self.assertEqual(discover_lesson_sources(folder), [first, second])
+        finally:
+            for child in folder.iterdir():
+                child.unlink()
+            folder.rmdir()
 
 
 if __name__ == "__main__":

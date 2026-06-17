@@ -1,9 +1,9 @@
-import { importedLessons } from "./importedLessons.js?v=20260616-course-stats-sync";
+import { importedLessons } from "./importedLessons.js?v=20260617-folder-refresh";
+import { importedStudents } from "./importedStudents.js?v=20260617-folder-refresh";
 import {
   importedDefaultShiftOverrides,
   importedShiftRoster,
-} from "./importedTeacherShifts.js?v=20260616-roster-cleanup";
-import { summerCourseLessons } from "./summerCourseLessons.js?v=20260616-course-stats-sync";
+} from "./importedTeacherShifts.js?v=20260617-folder-refresh";
 import {
   normalizeCourseList,
   normalizeLessonCatalogFields,
@@ -26,8 +26,10 @@ export const defaultShiftOverrides = Object.fromEntries(
 );
 
 export const existingLessons = dedupeLessons(
-  [...importedLessons, ...summerCourseLessons].map(normalizeLessonCatalogFields),
+  importedLessons.map(normalizeLessonCatalogFields),
 );
+
+export const studentCatalog = importedStudents;
 
 export const courses = normalizeCourseList([
   "WAICY 集训",

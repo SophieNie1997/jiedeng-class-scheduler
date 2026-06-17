@@ -64,6 +64,34 @@ export function buildStudentOverview(lessons, options = {}) {
     studentsByName.set(name, current);
   }
 
+  for (const student of options.studentCatalog || []) {
+    const name = normalizeText(student.name);
+    if (!name) {
+      continue;
+    }
+
+    const current = studentsByName.get(name) || {
+      name,
+      lessonCount: 0,
+      courses: new Set(),
+      teachers: new Set(),
+      campuses: new Set(),
+      statuses: new Set(),
+      lessonIds: new Set(),
+      firstDate: "",
+      lastDate: "",
+    };
+
+    current.gender = current.gender || normalizeText(student.gender);
+    current.grade = current.grade || normalizeText(student.grade);
+    current.school = current.school || normalizeText(student.school);
+    current.businessType = current.businessType || normalizeText(student.businessType);
+    current.frequency = current.frequency || normalizeText(student.frequency);
+    current.needs = current.needs || normalizeText(student.needs);
+    current.source = current.source || normalizeText(student.source);
+    studentsByName.set(name, current);
+  }
+
   const students = Array.from(studentsByName.values())
     .map((student) => ({
       ...student,
@@ -73,10 +101,16 @@ export function buildStudentOverview(lessons, options = {}) {
       statuses: Array.from(student.statuses).sort(localeSort),
       lessonIds: Array.from(student.lessonIds),
     }))
-    .sort((left, right) => right.lessonCount - left.lessonCount || localeSort(left.name, right.name));
+    .sort(
+      (left, right) =>
+        right.lessonCount - left.lessonCount ||
+        localeSort(left.grade || "", right.grade || "") ||
+        localeSort(left.name, right.name),
+    );
 
   return {
     totalStudents: students.length,
+    activeStudents: students.filter((student) => student.lessonCount > 0).length,
     students,
   };
 }

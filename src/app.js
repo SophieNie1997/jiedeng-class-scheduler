@@ -5,7 +5,8 @@ import {
   existingLessons,
   grades,
   shiftRoster as baseShiftRoster,
-} from "./data.js?v=20260616-roster-cleanup";
+  studentCatalog as baseStudentCatalog,
+} from "./data.js?v=20260617-folder-refresh";
 import {
   applyCoursePermissions,
   buildDefaultCoursePermissions,
@@ -53,7 +54,7 @@ import {
 import {
   buildCourseOverview,
   buildStudentOverview,
-} from "./overview.js?v=20260616-overview-cards";
+} from "./overview.js?v=20260617-folder-refresh";
 import {
   createRemoteStore,
   loadRemoteStoreConfig,
@@ -957,7 +958,7 @@ function renderCourseOverviewView() {
   const effectiveLessons = getEffectiveLessons();
   const today = getTodayIsoDate();
   const overview = buildCourseOverview(effectiveLessons, { today });
-  const studentOverview = buildStudentOverview(effectiveLessons, { today });
+  const studentOverview = buildStudentOverview(effectiveLessons, { today, studentCatalog: baseStudentCatalog });
   courseOverviewLine.textContent = `从 ${formatDateForDisplay(today)} 起，还有 ${overview.totalCourses} 组未来课程、${overview.totalLessons} 节未完成课节。`;
 
   courseOverviewNode.innerHTML = `
@@ -975,7 +976,7 @@ function renderCourseOverviewView() {
       <article class="overview-stat-card lavender">
         <span>覆盖学员</span>
         <strong>${studentOverview.totalStudents}</strong>
-        <em>仍有未来课程的学员</em>
+        <em>来自学员信息与未来课程</em>
       </article>
     </div>
     ${
@@ -1017,16 +1018,16 @@ function renderCourseOverviewCard(card) {
 function renderStudentOverviewView() {
   const effectiveLessons = getEffectiveLessons();
   const today = getTodayIsoDate();
-  const overview = buildStudentOverview(effectiveLessons, { today });
+  const overview = buildStudentOverview(effectiveLessons, { today, studentCatalog: baseStudentCatalog });
   const courseOverview = buildCourseOverview(effectiveLessons, { today });
-  studentOverviewLine.textContent = `从 ${formatDateForDisplay(today)} 起，当前共有 ${overview.totalStudents} 位学员还有未来课程。`;
+  studentOverviewLine.textContent = `当前学员数据库共有 ${overview.totalStudents} 位学员，其中 ${overview.activeStudents} 位从 ${formatDateForDisplay(today)} 起还有未来课程。`;
 
   studentOverviewNode.innerHTML = `
     <div class="overview-stat-row">
       <article class="overview-stat-card">
         <span>总学员</span>
         <strong>${overview.totalStudents}</strong>
-        <em>按姓名去重</em>
+        <em>来自学员信息与排课表</em>
       </article>
       <article class="overview-stat-card lavender">
         <span>未来课节</span>
@@ -1050,15 +1051,21 @@ function renderStudentSummaryCard(student) {
           <strong>${escapeHtml(student.name)}</strong>
           <span>${student.lessonCount} 节课</span>
         </div>
-        <button class="overview-delete-button" data-student-delete="${escapeAttribute(student.name)}" type="button" aria-label="删除这位学员的未来课程">
-          ${renderTrashIcon()}
-        </button>
+        ${
+          student.lessonIds.length
+            ? `<button class="overview-delete-button" data-student-delete="${escapeAttribute(student.name)}" type="button" aria-label="删除这位学员的未来课程">${renderTrashIcon()}</button>`
+            : ""
+        }
       </div>
       <dl>
+        ${renderStudentDetail("年级", student.grade || "未填写")}
+        ${renderStudentDetail("学校", student.school || "未填写")}
+        ${renderStudentDetail("频率", student.frequency || "未填写")}
+        ${renderStudentDetail("需求", student.needs || student.businessType || "未填写")}
         ${renderStudentDetail("课程", student.courses.join("、") || "未填写")}
         ${renderStudentDetail("老师", student.teachers.join("、") || "未填写")}
         ${renderStudentDetail("校区", student.campuses.join("、") || "未填写")}
-        ${renderStudentDetail("时间", `${student.firstDate || "未填写"} 至 ${student.lastDate || "未填写"}`)}
+        ${renderStudentDetail("时间", student.lessonCount ? `${student.firstDate || "未填写"} 至 ${student.lastDate || "未填写"}` : "未排未来课程")}
       </dl>
     </article>
   `;

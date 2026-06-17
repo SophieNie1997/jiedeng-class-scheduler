@@ -10,7 +10,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!X337:X361"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!X337:X361"
   },
   {
     "id": "excel-gioia-2026-01-14-0800-灰色不可排",
@@ -21,9 +21,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-01-14",
     "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Y337"
+  },
+  {
+    "id": "excel-gioia-2026-01-14-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-14",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y337;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y338"
+  },
+  {
+    "id": "excel-gioia-2026-01-14-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-14",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y338;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y339"
+  },
+  {
+    "id": "excel-gioia-2026-01-14-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-14",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y339;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y340"
+  },
+  {
+    "id": "excel-gioia-2026-01-14-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-14",
+    "startTime": "09:30",
     "endTime": "10:30",
     "status": "不可用",
-    "source": "Gioia!Y337;Gioia!Y338;Gioia!Y339;Gioia!Y340;Gioia!Y341"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y340;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y341"
+  },
+  {
+    "id": "excel-gioia-2026-01-14-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-14",
+    "startTime": "10:00",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y341"
   },
   {
     "id": "excel-gioia-2026-01-14-1030-教研",
@@ -36,7 +101,7 @@ export const importedLessons = [
     "startTime": "10:30",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!Y342:Y344"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y342:Y344"
   },
   {
     "id": "excel-gioia-2026-01-14-1200-灰色不可排",
@@ -49,7 +114,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!Y345"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y345"
   },
   {
     "id": "excel-gioia-2026-01-14-1300-灰色不可排",
@@ -62,7 +127,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!Y346"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y346"
   },
   {
     "id": "excel-gioia-2026-01-14-1330-Kason-1v1",
@@ -75,7 +140,20 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!Y347:Y350"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y347:Y350"
+  },
+  {
+    "id": "excel-gioia-2026-01-14-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-14",
+    "startTime": "15:30",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Y351"
   },
   {
     "id": "excel-gioia-2026-01-14-1530-灰色不可排",
@@ -88,7 +166,20 @@ export const importedLessons = [
     "startTime": "15:30",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!Y351;Gioia!Y352"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y351;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y352"
+  },
+  {
+    "id": "excel-gioia-2026-01-14-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-14",
+    "startTime": "16:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y352"
   },
   {
     "id": "excel-gioia-2026-01-14-1630-eva-1v1补课",
@@ -101,7 +192,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:00",
     "status": "不可用",
-    "source": "Gioia!Y353:Y355"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y353:Y355"
   },
   {
     "id": "excel-gioia-2026-01-14-1800-灰色不可排",
@@ -114,7 +205,7 @@ export const importedLessons = [
     "startTime": "18:00",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!Y356"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y356"
   },
   {
     "id": "excel-gioia-2026-01-14-1830-线上Alisa-1v1",
@@ -127,7 +218,7 @@ export const importedLessons = [
     "startTime": "18:30",
     "endTime": "20:30",
     "status": "不可用",
-    "source": "Gioia!Y357:Y360"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y357:Y360"
   },
   {
     "id": "excel-gioia-2026-01-14-2030-灰色不可排",
@@ -140,7 +231,7 @@ export const importedLessons = [
     "startTime": "20:30",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!Y361"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y361"
   },
   {
     "id": "excel-gioia-2026-01-15-0800-休息",
@@ -153,7 +244,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!Z337:Z344"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z337:Z344"
   },
   {
     "id": "excel-gioia-2026-01-15-1200-灰色不可排",
@@ -166,7 +257,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!Z345"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z345"
   },
   {
     "id": "excel-gioia-2026-01-15-1300-灰色不可排",
@@ -179,7 +270,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!Z346"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z346"
   },
   {
     "id": "excel-gioia-2026-01-15-1330-Kason-1v1",
@@ -192,7 +283,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!Z347:Z350"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z347:Z350"
   },
   {
     "id": "excel-gioia-2026-01-15-1530-灰色不可排",
@@ -203,9 +294,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-01-15",
     "startTime": "15:30",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Z351"
+  },
+  {
+    "id": "excel-gioia-2026-01-15-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-15",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z351;桔灯 陪伴老师 排课统计.xlsx:Gioia!Z352"
+  },
+  {
+    "id": "excel-gioia-2026-01-15-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-15",
+    "startTime": "16:00",
     "endTime": "17:00",
     "status": "不可用",
-    "source": "Gioia!Z351;Gioia!Z352;Gioia!Z353"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z352;桔灯 陪伴老师 排课统计.xlsx:Gioia!Z353"
+  },
+  {
+    "id": "excel-gioia-2026-01-15-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-15",
+    "startTime": "16:30",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z353"
   },
   {
     "id": "excel-gioia-2026-01-15-1700-Jesmine-1v1",
@@ -218,7 +348,7 @@ export const importedLessons = [
     "startTime": "17:00",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!Z354:Z357"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z354:Z357"
   },
   {
     "id": "excel-gioia-2026-01-15-1900-A1-Hedy-线上课",
@@ -231,7 +361,20 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!Z358:Z359"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z358:Z359"
+  },
+  {
+    "id": "excel-gioia-2026-01-15-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-15",
+    "startTime": "20:00",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Z360"
   },
   {
     "id": "excel-gioia-2026-01-15-2000-灰色不可排",
@@ -244,7 +387,20 @@ export const importedLessons = [
     "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!Z360;Gioia!Z361"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z360;桔灯 陪伴老师 排课统计.xlsx:Gioia!Z361"
+  },
+  {
+    "id": "excel-gioia-2026-01-15-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-15",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z361"
   },
   {
     "id": "excel-gioia-2026-01-16-0800-休息",
@@ -257,7 +413,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!AA337"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA337"
   },
   {
     "id": "excel-gioia-2026-01-16-0830-灰色不可排",
@@ -268,9 +424,113 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-01-16",
     "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AA338"
+  },
+  {
+    "id": "excel-gioia-2026-01-16-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-16",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA338;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA339"
+  },
+  {
+    "id": "excel-gioia-2026-01-16-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-16",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA339;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA340"
+  },
+  {
+    "id": "excel-gioia-2026-01-16-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-16",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA340;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA341"
+  },
+  {
+    "id": "excel-gioia-2026-01-16-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-16",
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA341;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA342"
+  },
+  {
+    "id": "excel-gioia-2026-01-16-1030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-16",
+    "startTime": "10:30",
+    "endTime": "11:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA342;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA343"
+  },
+  {
+    "id": "excel-gioia-2026-01-16-1100-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-16",
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA343;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA344"
+  },
+  {
+    "id": "excel-gioia-2026-01-16-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-16",
+    "startTime": "11:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!AA338;Gioia!AA339;Gioia!AA340;Gioia!AA341;Gioia!AA342;Gioia!AA343;Gioia!AA344;Gioia!AA345"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA344;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA345"
+  },
+  {
+    "id": "excel-gioia-2026-01-16-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-16",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA345"
   },
   {
     "id": "excel-gioia-2026-01-16-1300-灰色不可排",
@@ -283,7 +543,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!AA346"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA346"
   },
   {
     "id": "excel-gioia-2026-01-16-1330-Kason-1v1",
@@ -296,7 +556,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!AA347:AA350"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA347:AA350"
   },
   {
     "id": "excel-gioia-2026-01-16-1530-灰色不可排",
@@ -309,7 +569,7 @@ export const importedLessons = [
     "startTime": "15:30",
     "endTime": "16:00",
     "status": "不可用",
-    "source": "Gioia!AA351"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA351"
   },
   {
     "id": "excel-gioia-2026-01-16-1600-Snow",
@@ -322,7 +582,20 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "18:00",
     "status": "不可用",
-    "source": "Gioia!AA352:AA355"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA352:AA355"
+  },
+  {
+    "id": "excel-gioia-2026-01-16-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-16",
+    "startTime": "18:00",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AA356"
   },
   {
     "id": "excel-gioia-2026-01-16-1800-灰色不可排",
@@ -335,7 +608,20 @@ export const importedLessons = [
     "startTime": "18:00",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!AA356;Gioia!AA357"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA356;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA357"
+  },
+  {
+    "id": "excel-gioia-2026-01-16-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-16",
+    "startTime": "18:30",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA357"
   },
   {
     "id": "excel-gioia-2026-01-16-1900-A1-Miles-线上课",
@@ -348,7 +634,20 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!AA358:AA359"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA358:AA359"
+  },
+  {
+    "id": "excel-gioia-2026-01-16-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-16",
+    "startTime": "20:00",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AA360"
   },
   {
     "id": "excel-gioia-2026-01-16-2000-灰色不可排",
@@ -361,7 +660,33 @@ export const importedLessons = [
     "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!AA360;Gioia!AA361"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA360;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA361"
+  },
+  {
+    "id": "excel-gioia-2026-01-16-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-16",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA361"
+  },
+  {
+    "id": "excel-gioia-2026-01-17-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-17",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AB337"
   },
   {
     "id": "excel-gioia-2026-01-17-0800-灰色不可排",
@@ -374,7 +699,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!AB337;Gioia!AB338"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB337;桔灯 陪伴老师 排课统计.xlsx:Gioia!AB338"
+  },
+  {
+    "id": "excel-gioia-2026-01-17-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-17",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB338"
   },
   {
     "id": "excel-gioia-2026-01-17-0900-A1-Harold",
@@ -387,7 +725,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!AB339:AB344"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB339:AB344"
   },
   {
     "id": "excel-gioia-2026-01-17-1200-灰色不可排",
@@ -400,7 +738,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!AB345"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB345"
   },
   {
     "id": "excel-gioia-2026-01-17-1300-灰色不可排",
@@ -411,9 +749,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-01-17",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AB346"
+  },
+  {
+    "id": "excel-gioia-2026-01-17-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-17",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB346;桔灯 陪伴老师 排课统计.xlsx:Gioia!AB347"
+  },
+  {
+    "id": "excel-gioia-2026-01-17-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-17",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB347;桔灯 陪伴老师 排课统计.xlsx:Gioia!AB348"
+  },
+  {
+    "id": "excel-gioia-2026-01-17-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-17",
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB348;桔灯 陪伴老师 排课统计.xlsx:Gioia!AB349"
+  },
+  {
+    "id": "excel-gioia-2026-01-17-1430-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-17",
+    "startTime": "14:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!AB346;Gioia!AB347;Gioia!AB348;Gioia!AB349;Gioia!AB350"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB349;桔灯 陪伴老师 排课统计.xlsx:Gioia!AB350"
+  },
+  {
+    "id": "excel-gioia-2026-01-17-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-17",
+    "startTime": "15:00",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB350"
   },
   {
     "id": "excel-gioia-2026-01-17-1530-Dora-1v1-3-15-5-15代课",
@@ -426,7 +829,7 @@ export const importedLessons = [
     "startTime": "15:30",
     "endTime": "17:30",
     "status": "不可用",
-    "source": "Gioia!AB351:AB354"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB351:AB354"
   },
   {
     "id": "excel-gioia-2026-01-17-1730-灰色不可排",
@@ -437,9 +840,113 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-01-17",
     "startTime": "17:30",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AB355"
+  },
+  {
+    "id": "excel-gioia-2026-01-17-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-17",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB355;桔灯 陪伴老师 排课统计.xlsx:Gioia!AB356"
+  },
+  {
+    "id": "excel-gioia-2026-01-17-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-17",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB356;桔灯 陪伴老师 排课统计.xlsx:Gioia!AB357"
+  },
+  {
+    "id": "excel-gioia-2026-01-17-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-17",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB357;桔灯 陪伴老师 排课统计.xlsx:Gioia!AB358"
+  },
+  {
+    "id": "excel-gioia-2026-01-17-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-17",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB358;桔灯 陪伴老师 排课统计.xlsx:Gioia!AB359"
+  },
+  {
+    "id": "excel-gioia-2026-01-17-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-17",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB359;桔灯 陪伴老师 排课统计.xlsx:Gioia!AB360"
+  },
+  {
+    "id": "excel-gioia-2026-01-17-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-17",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!AB355;Gioia!AB356;Gioia!AB357;Gioia!AB358;Gioia!AB359;Gioia!AB360;Gioia!AB361"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB360;桔灯 陪伴老师 排课统计.xlsx:Gioia!AB361"
+  },
+  {
+    "id": "excel-gioia-2026-01-17-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-17",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB361"
+  },
+  {
+    "id": "excel-gioia-2026-01-18-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-18",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AC337"
   },
   {
     "id": "excel-gioia-2026-01-18-0800-灰色不可排",
@@ -452,7 +959,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!AC337;Gioia!AC338"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC337;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC338"
+  },
+  {
+    "id": "excel-gioia-2026-01-18-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-18",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC338"
   },
   {
     "id": "excel-gioia-2026-01-18-0900-A1-xueman-代课",
@@ -465,7 +985,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!AC339:AC344"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC339:AC344"
   },
   {
     "id": "excel-gioia-2026-01-18-1200-灰色不可排",
@@ -478,7 +998,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!AC345"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC345"
   },
   {
     "id": "excel-gioia-2026-01-18-1300-A1-Miles",
@@ -491,7 +1011,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "不可用",
-    "source": "Gioia!AC346:AC351"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC346:AC351"
   },
   {
     "id": "excel-gioia-2026-01-18-1600-灰色不可排",
@@ -502,9 +1022,139 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-01-18",
     "startTime": "16:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AC352"
+  },
+  {
+    "id": "excel-gioia-2026-01-18-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-18",
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC352;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC353"
+  },
+  {
+    "id": "excel-gioia-2026-01-18-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-18",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC353;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC354"
+  },
+  {
+    "id": "excel-gioia-2026-01-18-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-18",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC354;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC355"
+  },
+  {
+    "id": "excel-gioia-2026-01-18-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-18",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC355;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC356"
+  },
+  {
+    "id": "excel-gioia-2026-01-18-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-18",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC356;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC357"
+  },
+  {
+    "id": "excel-gioia-2026-01-18-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-18",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC357;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC358"
+  },
+  {
+    "id": "excel-gioia-2026-01-18-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-18",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC358;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC359"
+  },
+  {
+    "id": "excel-gioia-2026-01-18-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-18",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC359;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC360"
+  },
+  {
+    "id": "excel-gioia-2026-01-18-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-18",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!AC352;Gioia!AC353;Gioia!AC354;Gioia!AC355;Gioia!AC356;Gioia!AC357;Gioia!AC358;Gioia!AC359;Gioia!AC360;Gioia!AC361"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC360;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC361"
+  },
+  {
+    "id": "excel-gioia-2026-01-18-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-18",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC361"
   },
   {
     "id": "excel-gioia-2026-01-19-0800-灰色不可排",
@@ -517,7 +1167,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!W337:W361"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W337:W361"
   },
   {
     "id": "excel-gioia-2026-01-20-0930-芷宓-1v1",
@@ -530,7 +1180,7 @@ export const importedLessons = [
     "startTime": "09:30",
     "endTime": "12:30",
     "status": "Excel导入",
-    "source": "Gioia!D370:D375"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D370:D375"
   },
   {
     "id": "excel-gioia-2026-01-20-1830-灰色不可排",
@@ -541,9 +1191,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-01-20",
     "startTime": "18:30",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!D387"
+  },
+  {
+    "id": "excel-gioia-2026-01-20-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-20",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D387;桔灯 陪伴老师 排课统计.xlsx:Gioia!D388"
+  },
+  {
+    "id": "excel-gioia-2026-01-20-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-20",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D388;桔灯 陪伴老师 排课统计.xlsx:Gioia!D389"
+  },
+  {
+    "id": "excel-gioia-2026-01-20-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-20",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D389;桔灯 陪伴老师 排课统计.xlsx:Gioia!D390"
+  },
+  {
+    "id": "excel-gioia-2026-01-20-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-20",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!D387;Gioia!D388;Gioia!D389;Gioia!D390;Gioia!D391"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D390;桔灯 陪伴老师 排课统计.xlsx:Gioia!D391"
+  },
+  {
+    "id": "excel-gioia-2026-01-20-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-20",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D391"
   },
   {
     "id": "excel-gioia-2026-01-21-1000-教研",
@@ -556,7 +1271,7 @@ export const importedLessons = [
     "startTime": "10:00",
     "endTime": "11:30",
     "status": "不可用",
-    "source": "Gioia!E371:E373"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E371:E373"
   },
   {
     "id": "excel-gioia-2026-01-21-1330-Kason-1v1",
@@ -569,7 +1284,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!E377:E380"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E377:E380"
   },
   {
     "id": "excel-gioia-2026-01-21-1830-线上Alisa-1v1",
@@ -582,7 +1297,7 @@ export const importedLessons = [
     "startTime": "18:30",
     "endTime": "20:30",
     "status": "Excel导入",
-    "source": "Gioia!E387:E390"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E387:E390"
   },
   {
     "id": "excel-gioia-2026-01-22-0800-休息",
@@ -595,7 +1310,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!F367"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F367"
   },
   {
     "id": "excel-gioia-2026-01-22-1000-芷宓-1v1-1-5小时",
@@ -608,7 +1323,7 @@ export const importedLessons = [
     "startTime": "10:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Gioia!F371:F374"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F371:F374"
   },
   {
     "id": "excel-gioia-2026-01-22-1300-灰色不可排",
@@ -621,7 +1336,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!F376"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F376"
   },
   {
     "id": "excel-gioia-2026-01-22-1330-Kason-1v1",
@@ -634,7 +1349,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!F377:F380"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F377:F380"
   },
   {
     "id": "excel-gioia-2026-01-22-1700-Jesmine-1v1",
@@ -647,7 +1362,7 @@ export const importedLessons = [
     "startTime": "17:00",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!F384:F387"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F384:F387"
   },
   {
     "id": "excel-gioia-2026-01-22-1900-A1-Hedy-线上课",
@@ -660,7 +1375,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "Excel导入",
-    "source": "Gioia!F388:F389"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F388:F389"
   },
   {
     "id": "excel-gioia-2026-01-23-0800-休息",
@@ -673,7 +1388,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!G367"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G367"
   },
   {
     "id": "excel-gioia-2026-01-23-1300-灰色不可排",
@@ -686,7 +1401,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!G376"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G376"
   },
   {
     "id": "excel-gioia-2026-01-23-1330-Kason-1v1",
@@ -699,7 +1414,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!G377:G380"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G377:G380"
   },
   {
     "id": "excel-gioia-2026-01-23-1900-A1-Miles-线上课",
@@ -712,7 +1427,20 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "Excel导入",
-    "source": "Gioia!G388:G389"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G388:G389"
+  },
+  {
+    "id": "excel-gioia-2026-01-24-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-24",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!H367"
   },
   {
     "id": "excel-gioia-2026-01-24-0800-灰色不可排",
@@ -725,7 +1453,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!H367;Gioia!H368"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H367;桔灯 陪伴老师 排课统计.xlsx:Gioia!H368"
+  },
+  {
+    "id": "excel-gioia-2026-01-24-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-24",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H368"
   },
   {
     "id": "excel-gioia-2026-01-24-0900-A1-Harold",
@@ -738,7 +1479,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!H369:H374"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H369:H374"
   },
   {
     "id": "excel-gioia-2026-01-24-1200-灰色不可排",
@@ -751,7 +1492,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!H375"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H375"
   },
   {
     "id": "excel-gioia-2026-01-24-1300-Snow",
@@ -764,7 +1505,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "15:00",
     "status": "不可用",
-    "source": "Gioia!H376:H379"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H376:H379"
   },
   {
     "id": "excel-gioia-2026-01-24-1500-灰色不可排",
@@ -775,9 +1516,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-01-24",
     "startTime": "15:00",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!H380"
+  },
+  {
+    "id": "excel-gioia-2026-01-24-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-24",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H380;桔灯 陪伴老师 排课统计.xlsx:Gioia!H381"
+  },
+  {
+    "id": "excel-gioia-2026-01-24-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-24",
+    "startTime": "15:30",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!H380;Gioia!H381;Gioia!H382"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H381;桔灯 陪伴老师 排课统计.xlsx:Gioia!H382"
+  },
+  {
+    "id": "excel-gioia-2026-01-24-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-24",
+    "startTime": "16:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H382"
   },
   {
     "id": "excel-gioia-2026-01-24-1630-Lesli-1v1",
@@ -790,7 +1570,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!H383:H386"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H383:H386"
   },
   {
     "id": "excel-gioia-2026-01-24-1830-灰色不可排",
@@ -801,9 +1581,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-01-24",
     "startTime": "18:30",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!H387"
+  },
+  {
+    "id": "excel-gioia-2026-01-24-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-24",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H387;桔灯 陪伴老师 排课统计.xlsx:Gioia!H388"
+  },
+  {
+    "id": "excel-gioia-2026-01-24-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-24",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H388;桔灯 陪伴老师 排课统计.xlsx:Gioia!H389"
+  },
+  {
+    "id": "excel-gioia-2026-01-24-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-24",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H389;桔灯 陪伴老师 排课统计.xlsx:Gioia!H390"
+  },
+  {
+    "id": "excel-gioia-2026-01-24-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-24",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!H387;Gioia!H388;Gioia!H389;Gioia!H390;Gioia!H391"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H390;桔灯 陪伴老师 排课统计.xlsx:Gioia!H391"
+  },
+  {
+    "id": "excel-gioia-2026-01-24-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-24",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H391"
   },
   {
     "id": "excel-gioia-2026-01-25-0800-灰色不可排",
@@ -816,7 +1661,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!I367"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I367"
   },
   {
     "id": "excel-gioia-2026-01-25-0830-Anna-1v1",
@@ -829,7 +1674,7 @@ export const importedLessons = [
     "startTime": "08:30",
     "endTime": "10:30",
     "status": "不可用",
-    "source": "Gioia!I368:I371"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I368:I371"
   },
   {
     "id": "excel-gioia-2026-01-25-1030-灰色不可排",
@@ -840,9 +1685,61 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-01-25",
     "startTime": "10:30",
+    "endTime": "11:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!I372"
+  },
+  {
+    "id": "excel-gioia-2026-01-25-1030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-25",
+    "startTime": "10:30",
+    "endTime": "11:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I372;桔灯 陪伴老师 排课统计.xlsx:Gioia!I373"
+  },
+  {
+    "id": "excel-gioia-2026-01-25-1100-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-25",
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I373;桔灯 陪伴老师 排课统计.xlsx:Gioia!I374"
+  },
+  {
+    "id": "excel-gioia-2026-01-25-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-25",
+    "startTime": "11:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!I372;Gioia!I373;Gioia!I374;Gioia!I375"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I374;桔灯 陪伴老师 排课统计.xlsx:Gioia!I375"
+  },
+  {
+    "id": "excel-gioia-2026-01-25-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-25",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I375"
   },
   {
     "id": "excel-gioia-2026-01-25-1300-A1-Miles-停课",
@@ -855,7 +1752,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "不可用",
-    "source": "Gioia!I376:I381"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I376:I381"
   },
   {
     "id": "excel-gioia-2026-01-25-1600-灰色不可排",
@@ -866,9 +1763,139 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-01-25",
     "startTime": "16:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!I382"
+  },
+  {
+    "id": "excel-gioia-2026-01-25-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-25",
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I382;桔灯 陪伴老师 排课统计.xlsx:Gioia!I383"
+  },
+  {
+    "id": "excel-gioia-2026-01-25-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-25",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I383;桔灯 陪伴老师 排课统计.xlsx:Gioia!I384"
+  },
+  {
+    "id": "excel-gioia-2026-01-25-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-25",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I384;桔灯 陪伴老师 排课统计.xlsx:Gioia!I385"
+  },
+  {
+    "id": "excel-gioia-2026-01-25-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-25",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I385;桔灯 陪伴老师 排课统计.xlsx:Gioia!I386"
+  },
+  {
+    "id": "excel-gioia-2026-01-25-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-25",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I386;桔灯 陪伴老师 排课统计.xlsx:Gioia!I387"
+  },
+  {
+    "id": "excel-gioia-2026-01-25-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-25",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I387;桔灯 陪伴老师 排课统计.xlsx:Gioia!I388"
+  },
+  {
+    "id": "excel-gioia-2026-01-25-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-25",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I388;桔灯 陪伴老师 排课统计.xlsx:Gioia!I389"
+  },
+  {
+    "id": "excel-gioia-2026-01-25-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-25",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I389;桔灯 陪伴老师 排课统计.xlsx:Gioia!I390"
+  },
+  {
+    "id": "excel-gioia-2026-01-25-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-25",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!I382;Gioia!I383;Gioia!I384;Gioia!I385;Gioia!I386;Gioia!I387;Gioia!I388;Gioia!I389;Gioia!I390;Gioia!I391"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I390;桔灯 陪伴老师 排课统计.xlsx:Gioia!I391"
+  },
+  {
+    "id": "excel-gioia-2026-01-25-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-01-25",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I391"
   },
   {
     "id": "excel-gioia-2026-01-26-0800-休息",
@@ -881,7 +1908,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!C367:C391"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C367:C391"
   },
   {
     "id": "excel-gioia-2026-01-27-0800-休息",
@@ -894,7 +1921,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!N367:N391"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N367:N391"
   },
   {
     "id": "excel-gioia-2026-01-28-0800-休息",
@@ -907,7 +1934,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!O367:O391"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O367:O391"
   },
   {
     "id": "excel-gioia-2026-01-29-0800-休息",
@@ -920,7 +1947,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!P367:P391"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P367:P391"
   },
   {
     "id": "excel-gioia-2026-01-30-0800-休息",
@@ -933,7 +1960,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!Q367:Q391"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q367:Q391"
   },
   {
     "id": "excel-gioia-2026-01-31-0800-休息",
@@ -946,7 +1973,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!R367:R391"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R367:R391"
   },
   {
     "id": "excel-gioia-2026-02-01-0800-休息",
@@ -959,7 +1986,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!S367:S391"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S367:S391"
   },
   {
     "id": "excel-gioia-2026-02-02-0800-休息",
@@ -972,7 +1999,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!M367:M391"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M367:M391"
   },
   {
     "id": "excel-gioia-2026-02-03-0800-休息",
@@ -985,7 +2012,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!D399:D423"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D399:D423"
   },
   {
     "id": "excel-gioia-2026-02-04-1030-教研",
@@ -998,7 +2025,7 @@ export const importedLessons = [
     "startTime": "10:30",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!E404:E406"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E404:E406"
   },
   {
     "id": "excel-gioia-2026-02-04-1330-Kason-1v1",
@@ -1011,7 +2038,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "Excel导入",
-    "source": "Gioia!E409:E412"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E409:E412"
   },
   {
     "id": "excel-gioia-2026-02-04-1600-Lesli-1v1",
@@ -1024,7 +2051,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "18:00",
     "status": "不可用",
-    "source": "Gioia!E414:E417"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E414:E417"
   },
   {
     "id": "excel-gioia-2026-02-04-1830-线上Alisa-1v1",
@@ -1037,7 +2064,7 @@ export const importedLessons = [
     "startTime": "18:30",
     "endTime": "20:30",
     "status": "不可用",
-    "source": "Gioia!E419:E422"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E419:E422"
   },
   {
     "id": "excel-gioia-2026-02-05-0800-休息",
@@ -1050,7 +2077,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!F399:F406"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F399:F406"
   },
   {
     "id": "excel-gioia-2026-02-05-1300-灰色不可排",
@@ -1063,7 +2090,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!F408"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F408"
   },
   {
     "id": "excel-gioia-2026-02-05-1330-Kason-1v1",
@@ -1076,7 +2103,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!F409:F412"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F409:F412"
   },
   {
     "id": "excel-gioia-2026-02-05-1700-Jesmine-1v1",
@@ -1089,7 +2116,7 @@ export const importedLessons = [
     "startTime": "17:00",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!F416:F419"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F416:F419"
   },
   {
     "id": "excel-gioia-2026-02-05-1900-A1-Harold-线上课",
@@ -1102,7 +2129,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "Excel导入",
-    "source": "Gioia!F420:F421"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F420:F421"
   },
   {
     "id": "excel-gioia-2026-02-06-0800-休息",
@@ -1115,7 +2142,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!G399"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G399"
   },
   {
     "id": "excel-gioia-2026-02-06-1300-灰色不可排",
@@ -1128,7 +2155,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!G408"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G408"
   },
   {
     "id": "excel-gioia-2026-02-06-1330-Kason-1v1",
@@ -1141,7 +2168,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "Excel导入",
-    "source": "Gioia!G409:G412"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G409:G412"
   },
   {
     "id": "excel-gioia-2026-02-06-1630-芷宓-1v1",
@@ -1154,7 +2181,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "Excel导入",
-    "source": "Gioia!G415:G418"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G415:G418"
   },
   {
     "id": "excel-gioia-2026-02-07-0900-A1-Harold",
@@ -1167,7 +2194,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Gioia!H401:H406"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H401:H406"
   },
   {
     "id": "excel-gioia-2026-02-07-1300-Snow",
@@ -1180,7 +2207,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "15:00",
     "status": "不可用",
-    "source": "Gioia!H408:H411"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H408:H411"
   },
   {
     "id": "excel-gioia-2026-02-07-1600-Lesli-1v1",
@@ -1193,7 +2220,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "18:00",
     "status": "不可用",
-    "source": "Gioia!H414:H417"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H414:H417"
   },
   {
     "id": "excel-gioia-2026-02-08-0830-Anna-1v1",
@@ -1206,7 +2233,7 @@ export const importedLessons = [
     "startTime": "08:30",
     "endTime": "10:30",
     "status": "Excel导入",
-    "source": "Gioia!I400:I403"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I400:I403"
   },
   {
     "id": "excel-gioia-2026-02-08-1300-A1-Miles",
@@ -1219,7 +2246,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Gioia!I408:I413"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I408:I413"
   },
   {
     "id": "excel-gioia-2026-02-10-0800-休息",
@@ -1232,7 +2259,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!N399:N423"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N399:N423"
   },
   {
     "id": "excel-gioia-2026-02-11-1000-Jesmine-1v1",
@@ -1245,7 +2272,7 @@ export const importedLessons = [
     "startTime": "10:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!O403:O406"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O403:O406"
   },
   {
     "id": "excel-gioia-2026-02-11-1330-Jesmine-1v1",
@@ -1258,7 +2285,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!O409:O412"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O409:O412"
   },
   {
     "id": "excel-gioia-2026-02-11-1630-Leslie-1v1",
@@ -1271,7 +2298,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!O415:O418"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O415:O418"
   },
   {
     "id": "excel-gioia-2026-02-11-1830-线上Alisa-1v1",
@@ -1284,7 +2311,7 @@ export const importedLessons = [
     "startTime": "18:30",
     "endTime": "20:30",
     "status": "Excel导入",
-    "source": "Gioia!O419:O422"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O419:O422"
   },
   {
     "id": "excel-gioia-2026-02-12-0800-休息",
@@ -1297,7 +2324,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!P399:P406"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P399:P406"
   },
   {
     "id": "excel-gioia-2026-02-12-1300-灰色不可排",
@@ -1310,7 +2337,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!P408"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P408"
   },
   {
     "id": "excel-gioia-2026-02-12-1330-Kason-1v1",
@@ -1323,7 +2350,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!P409:P412"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P409:P412"
   },
   {
     "id": "excel-gioia-2026-02-12-1600-Harold补课",
@@ -1336,7 +2363,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "17:00",
     "status": "Excel导入",
-    "source": "Gioia!P414:P415"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P414:P415"
   },
   {
     "id": "excel-gioia-2026-02-13-0800-休息",
@@ -1349,7 +2376,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!Q399"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q399"
   },
   {
     "id": "excel-gioia-2026-02-13-1000-Jesmine-1v1",
@@ -1362,7 +2389,7 @@ export const importedLessons = [
     "startTime": "10:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Gioia!Q403:Q406"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q403:Q406"
   },
   {
     "id": "excel-gioia-2026-02-13-1300-灰色不可排",
@@ -1375,7 +2402,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!Q408"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q408"
   },
   {
     "id": "excel-gioia-2026-02-13-1330-Jesmine-1v1",
@@ -1388,7 +2415,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "Excel导入",
-    "source": "Gioia!Q409:Q412"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q409:Q412"
   },
   {
     "id": "excel-gioia-2026-02-13-1530-Hedy-1v1",
@@ -1401,7 +2428,7 @@ export const importedLessons = [
     "startTime": "15:30",
     "endTime": "18:30",
     "status": "Excel导入",
-    "source": "Gioia!Q413:Q418"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q413:Q418"
   },
   {
     "id": "excel-gioia-2026-02-14-0800-请假",
@@ -1414,7 +2441,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!R399:R406"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R399:R406"
   },
   {
     "id": "excel-gioia-2026-02-14-1300-Snow",
@@ -1427,7 +2454,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "15:00",
     "status": "Excel导入",
-    "source": "Gioia!R408:R411"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R408:R411"
   },
   {
     "id": "excel-gioia-2026-02-14-1630-Leslie-1v1",
@@ -1440,7 +2467,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "Excel导入",
-    "source": "Gioia!R415:R418"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R415:R418"
   },
   {
     "id": "excel-gioia-2026-02-15-0830-Anna-1v1",
@@ -1453,7 +2480,7 @@ export const importedLessons = [
     "startTime": "08:30",
     "endTime": "10:30",
     "status": "Excel导入",
-    "source": "Gioia!S400:S403"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S400:S403"
   },
   {
     "id": "excel-gioia-2026-02-15-1300-A1-Miles",
@@ -1466,7 +2493,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Gioia!S408:S413"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S408:S413"
   },
   {
     "id": "excel-gioia-2026-02-15-1600-Theo-Eric补课",
@@ -1479,7 +2506,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "17:00",
     "status": "Excel导入",
-    "source": "Gioia!S414:S415"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S414:S415"
   },
   {
     "id": "excel-gioia-2026-02-17-0800-休息",
@@ -1492,7 +2519,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!X399:X423"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!X399:X423"
   },
   {
     "id": "excel-gioia-2026-02-18-1000-Jesmine-1v1",
@@ -1505,7 +2532,7 @@ export const importedLessons = [
     "startTime": "10:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Gioia!Y403:Y406"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y403:Y406"
   },
   {
     "id": "excel-gioia-2026-02-18-1330-Jesmine-1v1",
@@ -1518,7 +2545,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "Excel导入",
-    "source": "Gioia!Y409:Y412"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y409:Y412"
   },
   {
     "id": "excel-gioia-2026-02-19-0800-休息",
@@ -1531,7 +2558,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!Z399:Z406"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z399:Z406"
   },
   {
     "id": "excel-gioia-2026-02-19-1300-灰色不可排",
@@ -1544,7 +2571,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!Z408"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z408"
   },
   {
     "id": "excel-gioia-2026-02-19-1900-A1-Harold-线上课",
@@ -1557,7 +2584,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "Excel导入",
-    "source": "Gioia!Z420:Z421"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z420:Z421"
   },
   {
     "id": "excel-gioia-2026-02-20-0800-休息",
@@ -1570,7 +2597,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!AA399"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA399"
   },
   {
     "id": "excel-gioia-2026-02-20-1000-Jesmine-1v1",
@@ -1583,7 +2610,7 @@ export const importedLessons = [
     "startTime": "10:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Gioia!AA403:AA406"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA403:AA406"
   },
   {
     "id": "excel-gioia-2026-02-20-1300-灰色不可排",
@@ -1596,7 +2623,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!AA408"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA408"
   },
   {
     "id": "excel-gioia-2026-02-20-1330-Jesmine-1v1",
@@ -1609,7 +2636,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "Excel导入",
-    "source": "Gioia!AA409:AA412"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA409:AA412"
   },
   {
     "id": "excel-gioia-2026-02-20-1530-Hedy-1v1",
@@ -1622,7 +2649,7 @@ export const importedLessons = [
     "startTime": "15:30",
     "endTime": "18:30",
     "status": "Excel导入",
-    "source": "Gioia!AA413:AA418"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA413:AA418"
   },
   {
     "id": "excel-gioia-2026-02-21-0900-A1-Harold-4C-martin试听",
@@ -1635,7 +2662,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Gioia!AB401:AB406"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB401:AB406"
   },
   {
     "id": "excel-gioia-2026-02-21-1300-Snow",
@@ -1648,7 +2675,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "15:00",
     "status": "Excel导入",
-    "source": "Gioia!AB408:AB411"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB408:AB411"
   },
   {
     "id": "excel-gioia-2026-02-21-1630-Leslie-1v1",
@@ -1661,7 +2688,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!AB415:AB418"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB415:AB418"
   },
   {
     "id": "excel-gioia-2026-02-22-0830-Anna-1v1",
@@ -1674,7 +2701,7 @@ export const importedLessons = [
     "startTime": "08:30",
     "endTime": "10:30",
     "status": "Excel导入",
-    "source": "Gioia!AC400:AC403"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC400:AC403"
   },
   {
     "id": "excel-gioia-2026-02-22-1300-Linkage3-Miles",
@@ -1687,7 +2714,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Gioia!AC408:AC413"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC408:AC413"
   },
   {
     "id": "excel-gioia-2026-02-24-0800-休息",
@@ -1700,7 +2727,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!AH399:AH423"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AH399:AH423"
   },
   {
     "id": "excel-gioia-2026-02-25-1000-Jesmine-1v1",
@@ -1713,7 +2740,7 @@ export const importedLessons = [
     "startTime": "10:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!AI403:AI406"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AI403:AI406"
   },
   {
     "id": "excel-gioia-2026-02-25-1330-Jesmine-1v1",
@@ -1726,7 +2753,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!AI409:AI412"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AI409:AI412"
   },
   {
     "id": "excel-gioia-2026-02-26-0800-休息",
@@ -1739,7 +2766,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!AJ399:AJ406"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AJ399:AJ406"
   },
   {
     "id": "excel-gioia-2026-02-26-1300-灰色不可排",
@@ -1752,7 +2779,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!AJ408"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AJ408"
   },
   {
     "id": "excel-gioia-2026-02-26-1900-A1-Harold-线上课",
@@ -1765,7 +2792,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "Excel导入",
-    "source": "Gioia!AJ420:AJ421"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AJ420:AJ421"
   },
   {
     "id": "excel-gioia-2026-02-27-0800-休息",
@@ -1778,7 +2805,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!AK399"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AK399"
   },
   {
     "id": "excel-gioia-2026-02-27-1000-Jesmine-1v1",
@@ -1791,7 +2818,7 @@ export const importedLessons = [
     "startTime": "10:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Gioia!AK403:AK406"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AK403:AK406"
   },
   {
     "id": "excel-gioia-2026-02-27-1300-灰色不可排",
@@ -1804,7 +2831,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!AK408"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AK408"
   },
   {
     "id": "excel-gioia-2026-02-27-1330-Jesmine-1v1",
@@ -1817,7 +2844,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "Excel导入",
-    "source": "Gioia!AK409:AK412"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AK409:AK412"
   },
   {
     "id": "excel-gioia-2026-02-27-1530-Hedy-1v1",
@@ -1830,7 +2857,7 @@ export const importedLessons = [
     "startTime": "15:30",
     "endTime": "18:30",
     "status": "Excel导入",
-    "source": "Gioia!AK413:AK418"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AK413:AK418"
   },
   {
     "id": "excel-gioia-2026-02-28-0900-A1-Harold",
@@ -1843,7 +2870,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Gioia!AL401:AL406"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AL401:AL406"
   },
   {
     "id": "excel-gioia-2026-02-28-1300-Snow",
@@ -1856,7 +2883,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "15:00",
     "status": "不可用",
-    "source": "Gioia!AL408:AL411"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AL408:AL411"
   },
   {
     "id": "excel-gioia-2026-02-28-1630-Leslie-1v1",
@@ -1869,7 +2896,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "Excel导入",
-    "source": "Gioia!AL415:AL418"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AL415:AL418"
   },
   {
     "id": "excel-gioia-2026-03-01-0830-Anna-1v1",
@@ -1882,7 +2909,7 @@ export const importedLessons = [
     "startTime": "08:30",
     "endTime": "10:30",
     "status": "Excel导入",
-    "source": "Gioia!AM400:AM403"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AM400:AM403"
   },
   {
     "id": "excel-gioia-2026-03-01-1300-Linkage3-Miles",
@@ -1895,7 +2922,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Gioia!AM408:AM413"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AM408:AM413"
   },
   {
     "id": "excel-gioia-2026-03-01-1630-george1v1",
@@ -1908,7 +2935,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "Excel导入",
-    "source": "Gioia!AM415:AM418"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AM415:AM418"
   },
   {
     "id": "excel-gioia-2026-03-02-0800-休息",
@@ -1921,7 +2948,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!AG399:AG423"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AG399:AG423"
   },
   {
     "id": "excel-gioia-2026-03-03-0800-休息",
@@ -1934,7 +2961,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!D431:D455"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D431:D455"
   },
   {
     "id": "excel-gioia-2026-03-04-1000-Jesmine-1v1",
@@ -1947,7 +2974,7 @@ export const importedLessons = [
     "startTime": "10:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Gioia!E435:E438"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E435:E438"
   },
   {
     "id": "excel-gioia-2026-03-04-1330-Jesmine-1v1",
@@ -1960,7 +2987,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "Excel导入",
-    "source": "Gioia!E441:E444"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E441:E444"
   },
   {
     "id": "excel-gioia-2026-03-05-0800-休息",
@@ -1973,7 +3000,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!F431:F438"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F431:F438"
   },
   {
     "id": "excel-gioia-2026-03-05-1300-灰色不可排",
@@ -1986,7 +3013,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!F440"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F440"
   },
   {
     "id": "excel-gioia-2026-03-05-1630-Snow补课",
@@ -1999,7 +3026,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "Excel导入",
-    "source": "Gioia!F447:F450"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F447:F450"
   },
   {
     "id": "excel-gioia-2026-03-06-0800-休息",
@@ -2012,7 +3039,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!G431"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G431"
   },
   {
     "id": "excel-gioia-2026-03-06-1000-Jesmine-1v1",
@@ -2025,7 +3052,7 @@ export const importedLessons = [
     "startTime": "10:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Gioia!G435:G438"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G435:G438"
   },
   {
     "id": "excel-gioia-2026-03-06-1300-灰色不可排",
@@ -2038,7 +3065,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!G440"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G440"
   },
   {
     "id": "excel-gioia-2026-03-06-1330-Jesmine-1v1",
@@ -2051,7 +3078,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "Excel导入",
-    "source": "Gioia!G441:G444"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G441:G444"
   },
   {
     "id": "excel-gioia-2026-03-07-0900-A1-Harold",
@@ -2064,7 +3091,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Gioia!H433:H438"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H433:H438"
   },
   {
     "id": "excel-gioia-2026-03-07-1300-hedy",
@@ -2077,7 +3104,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Gioia!H440:H445"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H440:H445"
   },
   {
     "id": "excel-gioia-2026-03-07-1630-Leslie-1v1",
@@ -2090,7 +3117,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!H447:H450"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H447:H450"
   },
   {
     "id": "excel-gioia-2026-03-08-0830-Anna-1v1",
@@ -2103,7 +3130,7 @@ export const importedLessons = [
     "startTime": "08:30",
     "endTime": "10:30",
     "status": "Excel导入",
-    "source": "Gioia!I432:I435"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I432:I435"
   },
   {
     "id": "excel-gioia-2026-03-08-1300-Linkage3-Miles",
@@ -2116,7 +3143,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Gioia!I440:I445"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I440:I445"
   },
   {
     "id": "excel-gioia-2026-03-08-1630-george1v1",
@@ -2129,7 +3156,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "Excel导入",
-    "source": "Gioia!I447:I450"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I447:I450"
   },
   {
     "id": "excel-gioia-2026-03-09-0800-休息",
@@ -2142,7 +3169,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!C431:C455"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C431:C455"
   },
   {
     "id": "excel-gioia-2026-03-10-0800-休息",
@@ -2155,7 +3182,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!N431:N455"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N431:N455"
   },
   {
     "id": "excel-gioia-2026-03-11-1000-Jesmine-1v1",
@@ -2168,7 +3195,7 @@ export const importedLessons = [
     "startTime": "10:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Gioia!O435:O438"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O435:O438"
   },
   {
     "id": "excel-gioia-2026-03-11-1330-Jesmine-1v1",
@@ -2181,7 +3208,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "Excel导入",
-    "source": "Gioia!O441:O444"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O441:O444"
   },
   {
     "id": "excel-gioia-2026-03-12-0800-休息",
@@ -2194,7 +3221,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!P431:P438"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P431:P438"
   },
   {
     "id": "excel-gioia-2026-03-12-1300-灰色不可排",
@@ -2207,7 +3234,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!P440"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P440"
   },
   {
     "id": "excel-gioia-2026-03-13-0800-休息",
@@ -2220,7 +3247,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!Q431"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q431"
   },
   {
     "id": "excel-gioia-2026-03-13-1000-Jesmine-1v1",
@@ -2233,7 +3260,7 @@ export const importedLessons = [
     "startTime": "10:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Gioia!Q435:Q438"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q435:Q438"
   },
   {
     "id": "excel-gioia-2026-03-13-1300-灰色不可排",
@@ -2246,7 +3273,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!Q440"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q440"
   },
   {
     "id": "excel-gioia-2026-03-13-1330-Jesmine-1v1",
@@ -2259,7 +3286,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "Excel导入",
-    "source": "Gioia!Q441:Q444"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q441:Q444"
   },
   {
     "id": "excel-gioia-2026-03-14-0900-Linkage4",
@@ -2272,7 +3299,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Gioia!R433:R438"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R433:R438"
   },
   {
     "id": "excel-gioia-2026-03-14-1300-hedy",
@@ -2285,7 +3312,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Gioia!R440:R445"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R440:R445"
   },
   {
     "id": "excel-gioia-2026-03-14-1630-Leslie-1v1",
@@ -2298,7 +3325,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!R447:R450"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R447:R450"
   },
   {
     "id": "excel-gioia-2026-03-15-0830-Anna-1v1",
@@ -2311,7 +3338,7 @@ export const importedLessons = [
     "startTime": "08:30",
     "endTime": "10:30",
     "status": "Excel导入",
-    "source": "Gioia!S432:S435"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S432:S435"
   },
   {
     "id": "excel-gioia-2026-03-15-1300-Linkage3-Miles",
@@ -2324,7 +3351,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Gioia!S440:S445"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S440:S445"
   },
   {
     "id": "excel-gioia-2026-03-15-1630-george1v1",
@@ -2337,7 +3364,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "Excel导入",
-    "source": "Gioia!S447:S450"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S447:S450"
   },
   {
     "id": "excel-gioia-2026-03-16-0800-休息",
@@ -2350,7 +3377,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!M431:M455"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M431:M455"
   },
   {
     "id": "excel-gioia-2026-03-17-0800-休息",
@@ -2363,7 +3390,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!X431:X455"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!X431:X455"
   },
   {
     "id": "excel-gioia-2026-03-18-1800-Anna-1v1",
@@ -2376,7 +3403,7 @@ export const importedLessons = [
     "startTime": "18:00",
     "endTime": "20:00",
     "status": "Excel导入",
-    "source": "Gioia!Y450:Y453"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y450:Y453"
   },
   {
     "id": "excel-gioia-2026-03-19-0800-休息",
@@ -2389,7 +3416,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!Z431:Z438"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z431:Z438"
   },
   {
     "id": "excel-gioia-2026-03-19-1300-灰色不可排",
@@ -2402,7 +3429,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!Z440"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z440"
   },
   {
     "id": "excel-gioia-2026-03-20-0800-休息",
@@ -2415,7 +3442,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!AA431"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA431"
   },
   {
     "id": "excel-gioia-2026-03-20-1300-灰色不可排",
@@ -2428,7 +3455,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!AA440"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA440"
   },
   {
     "id": "excel-gioia-2026-03-21-0900-Linkage4",
@@ -2441,7 +3468,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Gioia!AB433:AB438"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB433:AB438"
   },
   {
     "id": "excel-gioia-2026-03-21-1300-hedy",
@@ -2454,7 +3481,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Gioia!AB440:AB445"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB440:AB445"
   },
   {
     "id": "excel-gioia-2026-03-21-1630-Leslie-1v1",
@@ -2467,7 +3494,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!AB447:AB450"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB447:AB450"
   },
   {
     "id": "excel-gioia-2026-03-22-1300-Linkage3-Miles",
@@ -2480,7 +3507,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Gioia!AC440:AC445"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC440:AC445"
   },
   {
     "id": "excel-gioia-2026-03-22-1630-george1v1",
@@ -2493,7 +3520,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "Excel导入",
-    "source": "Gioia!AC447:AC450"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC447:AC450"
   },
   {
     "id": "excel-gioia-2026-03-23-0800-休息",
@@ -2506,7 +3533,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!W431:W455"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W431:W455"
   },
   {
     "id": "excel-gioia-2026-03-24-0800-休息",
@@ -2519,7 +3546,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!AH431:AH455"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AH431:AH455"
   },
   {
     "id": "excel-gioia-2026-03-25-1300-灰色不可排",
@@ -2532,7 +3559,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!AI440"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AI440"
   },
   {
     "id": "excel-gioia-2026-03-25-1800-Anna-1v1",
@@ -2545,7 +3572,7 @@ export const importedLessons = [
     "startTime": "18:00",
     "endTime": "20:00",
     "status": "Excel导入",
-    "source": "Gioia!AI450:AI453"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AI450:AI453"
   },
   {
     "id": "excel-gioia-2026-03-26-0800-休息",
@@ -2558,7 +3585,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!AJ431:AJ438"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AJ431:AJ438"
   },
   {
     "id": "excel-gioia-2026-03-26-1300-灰色不可排",
@@ -2571,7 +3598,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!AJ440"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AJ440"
   },
   {
     "id": "excel-gioia-2026-03-27-0800-休息",
@@ -2584,7 +3611,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!AK431"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AK431"
   },
   {
     "id": "excel-gioia-2026-03-27-1300-灰色不可排",
@@ -2597,7 +3624,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!AK440"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AK440"
   },
   {
     "id": "excel-gioia-2026-03-27-1530-hedy",
@@ -2610,7 +3637,7 @@ export const importedLessons = [
     "startTime": "15:30",
     "endTime": "18:30",
     "status": "Excel导入",
-    "source": "Gioia!AK445:AK450"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AK445:AK450"
   },
   {
     "id": "excel-gioia-2026-03-28-0900-Linkage4",
@@ -2623,7 +3650,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Gioia!AL433:AL438"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AL433:AL438"
   },
   {
     "id": "excel-gioia-2026-03-28-1300-灰色不可排",
@@ -2636,7 +3663,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!AL440"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AL440"
   },
   {
     "id": "excel-gioia-2026-03-28-1630-Leslie-1v1",
@@ -2649,7 +3676,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!AL447:AL450"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AL447:AL450"
   },
   {
     "id": "excel-gioia-2026-03-29-1300-Linkage3-Miles",
@@ -2662,7 +3689,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Gioia!AM440:AM445"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AM440:AM445"
   },
   {
     "id": "excel-gioia-2026-03-29-1630-george1v1",
@@ -2675,7 +3702,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "Excel导入",
-    "source": "Gioia!AM447:AM450"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AM447:AM450"
   },
   {
     "id": "excel-gioia-2026-03-30-0800-休息",
@@ -2688,7 +3715,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!AG431:AG455"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AG431:AG455"
   },
   {
     "id": "excel-gioia-2026-03-31-0800-休息",
@@ -2701,7 +3728,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!D463:D487"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D463:D487"
   },
   {
     "id": "excel-gioia-2026-04-01-1800-Anna-1v1",
@@ -2714,7 +3741,7 @@ export const importedLessons = [
     "startTime": "18:00",
     "endTime": "20:00",
     "status": "Excel导入",
-    "source": "Gioia!E482:E485"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E482:E485"
   },
   {
     "id": "excel-gioia-2026-04-02-0800-休息",
@@ -2727,7 +3754,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!F463:F470"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F463:F470"
   },
   {
     "id": "excel-gioia-2026-04-02-1300-灰色不可排",
@@ -2740,7 +3767,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!F472"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F472"
   },
   {
     "id": "excel-gioia-2026-04-03-0800-休息",
@@ -2753,7 +3780,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!G463"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G463"
   },
   {
     "id": "excel-gioia-2026-04-03-0830-灰色不可排",
@@ -2764,9 +3791,113 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-04-03",
     "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!G464"
+  },
+  {
+    "id": "excel-gioia-2026-04-03-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-03",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G464;桔灯 陪伴老师 排课统计.xlsx:Gioia!G465"
+  },
+  {
+    "id": "excel-gioia-2026-04-03-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-03",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G465;桔灯 陪伴老师 排课统计.xlsx:Gioia!G466"
+  },
+  {
+    "id": "excel-gioia-2026-04-03-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-03",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G466;桔灯 陪伴老师 排课统计.xlsx:Gioia!G467"
+  },
+  {
+    "id": "excel-gioia-2026-04-03-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-03",
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G467;桔灯 陪伴老师 排课统计.xlsx:Gioia!G468"
+  },
+  {
+    "id": "excel-gioia-2026-04-03-1030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-03",
+    "startTime": "10:30",
+    "endTime": "11:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G468;桔灯 陪伴老师 排课统计.xlsx:Gioia!G469"
+  },
+  {
+    "id": "excel-gioia-2026-04-03-1100-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-03",
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G469;桔灯 陪伴老师 排课统计.xlsx:Gioia!G470"
+  },
+  {
+    "id": "excel-gioia-2026-04-03-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-03",
+    "startTime": "11:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!G464;Gioia!G465;Gioia!G466;Gioia!G467;Gioia!G468;Gioia!G469;Gioia!G470;Gioia!G471"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G470;桔灯 陪伴老师 排课统计.xlsx:Gioia!G471"
+  },
+  {
+    "id": "excel-gioia-2026-04-03-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-03",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G471"
   },
   {
     "id": "excel-gioia-2026-04-03-1300-灰色不可排",
@@ -2777,9 +3908,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-04-03",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!G472"
+  },
+  {
+    "id": "excel-gioia-2026-04-03-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-03",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G472;桔灯 陪伴老师 排课统计.xlsx:Gioia!G473"
+  },
+  {
+    "id": "excel-gioia-2026-04-03-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-03",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G473;桔灯 陪伴老师 排课统计.xlsx:Gioia!G474"
+  },
+  {
+    "id": "excel-gioia-2026-04-03-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-03",
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G474;桔灯 陪伴老师 排课统计.xlsx:Gioia!G475"
+  },
+  {
+    "id": "excel-gioia-2026-04-03-1430-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-03",
+    "startTime": "14:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!G472;Gioia!G473;Gioia!G474;Gioia!G475;Gioia!G476"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G475;桔灯 陪伴老师 排课统计.xlsx:Gioia!G476"
+  },
+  {
+    "id": "excel-gioia-2026-04-03-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-03",
+    "startTime": "15:00",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G476"
   },
   {
     "id": "excel-gioia-2026-04-03-1530-hedy",
@@ -2792,7 +3988,7 @@ export const importedLessons = [
     "startTime": "15:30",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!G477:G482"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G477:G482"
   },
   {
     "id": "excel-gioia-2026-04-03-1830-灰色不可排",
@@ -2803,9 +3999,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-04-03",
     "startTime": "18:30",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!G483"
+  },
+  {
+    "id": "excel-gioia-2026-04-03-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-03",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G483;桔灯 陪伴老师 排课统计.xlsx:Gioia!G484"
+  },
+  {
+    "id": "excel-gioia-2026-04-03-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-03",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G484;桔灯 陪伴老师 排课统计.xlsx:Gioia!G485"
+  },
+  {
+    "id": "excel-gioia-2026-04-03-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-03",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G485;桔灯 陪伴老师 排课统计.xlsx:Gioia!G486"
+  },
+  {
+    "id": "excel-gioia-2026-04-03-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-03",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!G483;Gioia!G484;Gioia!G485;Gioia!G486;Gioia!G487"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G486;桔灯 陪伴老师 排课统计.xlsx:Gioia!G487"
+  },
+  {
+    "id": "excel-gioia-2026-04-03-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-03",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G487"
   },
   {
     "id": "excel-gioia-2026-04-04-0900-Linkage4",
@@ -2818,7 +4079,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Gioia!H465:H470"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H465:H470"
   },
   {
     "id": "excel-gioia-2026-04-04-1630-Leslie-1v1",
@@ -2831,7 +4092,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!H479:H482"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H479:H482"
   },
   {
     "id": "excel-gioia-2026-04-05-1300-Linkage3-Miles",
@@ -2844,7 +4105,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Gioia!I472:I477"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I472:I477"
   },
   {
     "id": "excel-gioia-2026-04-05-1630-george1v1",
@@ -2857,7 +4118,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "Excel导入",
-    "source": "Gioia!I479:I482"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I479:I482"
   },
   {
     "id": "excel-gioia-2026-04-06-0800-休息",
@@ -2870,7 +4131,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!C463:C487"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C463:C487"
   },
   {
     "id": "excel-gioia-2026-04-07-0800-休息",
@@ -2883,7 +4144,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!N463:N487"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N463:N487"
   },
   {
     "id": "excel-gioia-2026-04-08-1800-Anna-1v1",
@@ -2896,7 +4157,7 @@ export const importedLessons = [
     "startTime": "18:00",
     "endTime": "20:00",
     "status": "Excel导入",
-    "source": "Gioia!O482:O485"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O482:O485"
   },
   {
     "id": "excel-gioia-2026-04-09-0800-休息",
@@ -2909,7 +4170,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!P463:P470"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P463:P470"
   },
   {
     "id": "excel-gioia-2026-04-09-1300-灰色不可排",
@@ -2922,7 +4183,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!P472"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P472"
   },
   {
     "id": "excel-gioia-2026-04-10-0800-休息",
@@ -2935,7 +4196,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!Q463"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q463"
   },
   {
     "id": "excel-gioia-2026-04-10-1300-灰色不可排",
@@ -2948,7 +4209,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!Q472"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q472"
   },
   {
     "id": "excel-gioia-2026-04-10-1530-hedy",
@@ -2961,7 +4222,7 @@ export const importedLessons = [
     "startTime": "15:30",
     "endTime": "18:30",
     "status": "Excel导入",
-    "source": "Gioia!Q477:Q482"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q477:Q482"
   },
   {
     "id": "excel-gioia-2026-04-11-0900-Linkage4",
@@ -2974,7 +4235,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Gioia!R465:R470"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R465:R470"
   },
   {
     "id": "excel-gioia-2026-04-11-1630-Leslie-1v1",
@@ -2987,7 +4248,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!R479:R482"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R479:R482"
   },
   {
     "id": "excel-gioia-2026-04-12-1300-Linkage3-Miles",
@@ -3000,7 +4261,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Gioia!S472:S477"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S472:S477"
   },
   {
     "id": "excel-gioia-2026-04-12-1630-george1v1",
@@ -3013,7 +4274,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "Excel导入",
-    "source": "Gioia!S479:S482"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S479:S482"
   },
   {
     "id": "excel-gioia-2026-04-13-0800-休息",
@@ -3026,7 +4287,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!M463:M487"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M463:M487"
   },
   {
     "id": "excel-gioia-2026-04-14-0800-休息",
@@ -3039,7 +4300,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!X463:X487"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!X463:X487"
   },
   {
     "id": "excel-gioia-2026-04-15-1800-Anna-1v1",
@@ -3052,7 +4313,7 @@ export const importedLessons = [
     "startTime": "18:00",
     "endTime": "20:00",
     "status": "Excel导入",
-    "source": "Gioia!Y482:Y485"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y482:Y485"
   },
   {
     "id": "excel-gioia-2026-04-16-0800-休息",
@@ -3065,7 +4326,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!Z463:Z470"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z463:Z470"
   },
   {
     "id": "excel-gioia-2026-04-16-1300-灰色不可排",
@@ -3078,7 +4339,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!Z472"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z472"
   },
   {
     "id": "excel-gioia-2026-04-17-0800-休息",
@@ -3091,7 +4352,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!AA463"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA463"
   },
   {
     "id": "excel-gioia-2026-04-17-1300-灰色不可排",
@@ -3104,7 +4365,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!AA472"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA472"
   },
   {
     "id": "excel-gioia-2026-04-17-1530-hedy",
@@ -3117,7 +4378,7 @@ export const importedLessons = [
     "startTime": "15:30",
     "endTime": "18:30",
     "status": "Excel导入",
-    "source": "Gioia!AA477:AA482"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA477:AA482"
   },
   {
     "id": "excel-gioia-2026-04-18-0900-Linkage4",
@@ -3130,7 +4391,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Gioia!AB465:AB470"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB465:AB470"
   },
   {
     "id": "excel-gioia-2026-04-18-1630-Leslie-1v1",
@@ -3143,7 +4404,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!AB479:AB482"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB479:AB482"
   },
   {
     "id": "excel-gioia-2026-04-19-1300-Linkage3-Miles",
@@ -3156,7 +4417,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Gioia!AC472:AC477"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC472:AC477"
   },
   {
     "id": "excel-gioia-2026-04-19-1630-george1v1",
@@ -3169,7 +4430,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "Excel导入",
-    "source": "Gioia!AC479:AC482"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC479:AC482"
   },
   {
     "id": "excel-gioia-2026-04-20-0800-休息",
@@ -3182,7 +4443,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!W463:W487"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W463:W487"
   },
   {
     "id": "excel-gioia-2026-04-21-0800-休息",
@@ -3195,7 +4456,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!AH463:AH487"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AH463:AH487"
   },
   {
     "id": "excel-gioia-2026-04-22-1800-Anna-1v1",
@@ -3208,7 +4469,7 @@ export const importedLessons = [
     "startTime": "18:00",
     "endTime": "20:00",
     "status": "Excel导入",
-    "source": "Gioia!AI482:AI485"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AI482:AI485"
   },
   {
     "id": "excel-gioia-2026-04-23-0800-休息",
@@ -3221,7 +4482,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!AJ463:AJ470"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AJ463:AJ470"
   },
   {
     "id": "excel-gioia-2026-04-23-1300-灰色不可排",
@@ -3234,7 +4495,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!AJ472"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AJ472"
   },
   {
     "id": "excel-gioia-2026-04-24-0800-休息",
@@ -3247,7 +4508,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!AK463"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AK463"
   },
   {
     "id": "excel-gioia-2026-04-24-1300-灰色不可排",
@@ -3260,7 +4521,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!AK472"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AK472"
   },
   {
     "id": "excel-gioia-2026-04-24-1530-hedy",
@@ -3273,7 +4534,7 @@ export const importedLessons = [
     "startTime": "15:30",
     "endTime": "18:30",
     "status": "Excel导入",
-    "source": "Gioia!AK477:AK482"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AK477:AK482"
   },
   {
     "id": "excel-gioia-2026-04-25-0900-Linkage4",
@@ -3286,7 +4547,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Gioia!AL465:AL470"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AL465:AL470"
   },
   {
     "id": "excel-gioia-2026-04-25-1630-Leslie-1v1",
@@ -3299,7 +4560,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!AL479:AL482"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AL479:AL482"
   },
   {
     "id": "excel-gioia-2026-04-26-1300-Linkage3-Miles",
@@ -3312,7 +4573,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "不可用",
-    "source": "Gioia!AM472:AM477"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AM472:AM477"
   },
   {
     "id": "excel-gioia-2026-04-26-1630-george1v1",
@@ -3325,7 +4586,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!AM479:AM482"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AM479:AM482"
   },
   {
     "id": "excel-gioia-2026-04-27-0800-休息",
@@ -3338,7 +4599,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!AG463:AG487"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AG463:AG487"
   },
   {
     "id": "excel-gioia-2026-04-28-0800-休息",
@@ -3351,7 +4612,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!D496:D520"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D496:D520"
   },
   {
     "id": "excel-gioia-2026-04-29-0800-灰色不可排",
@@ -3362,9 +4623,126 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-04-29",
     "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!E496"
+  },
+  {
+    "id": "excel-gioia-2026-04-29-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-29",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E496;桔灯 陪伴老师 排课统计.xlsx:Gioia!E497"
+  },
+  {
+    "id": "excel-gioia-2026-04-29-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-29",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E497;桔灯 陪伴老师 排课统计.xlsx:Gioia!E498"
+  },
+  {
+    "id": "excel-gioia-2026-04-29-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-29",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E498;桔灯 陪伴老师 排课统计.xlsx:Gioia!E499"
+  },
+  {
+    "id": "excel-gioia-2026-04-29-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-29",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E499;桔灯 陪伴老师 排课统计.xlsx:Gioia!E500"
+  },
+  {
+    "id": "excel-gioia-2026-04-29-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-29",
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E500;桔灯 陪伴老师 排课统计.xlsx:Gioia!E501"
+  },
+  {
+    "id": "excel-gioia-2026-04-29-1030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-29",
+    "startTime": "10:30",
+    "endTime": "11:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E501;桔灯 陪伴老师 排课统计.xlsx:Gioia!E502"
+  },
+  {
+    "id": "excel-gioia-2026-04-29-1100-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-29",
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E502;桔灯 陪伴老师 排课统计.xlsx:Gioia!E503"
+  },
+  {
+    "id": "excel-gioia-2026-04-29-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-29",
+    "startTime": "11:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!E496;Gioia!E497;Gioia!E498;Gioia!E499;Gioia!E500;Gioia!E501;Gioia!E502;Gioia!E503;Gioia!E504"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E503;桔灯 陪伴老师 排课统计.xlsx:Gioia!E504"
+  },
+  {
+    "id": "excel-gioia-2026-04-29-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-29",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E504"
   },
   {
     "id": "excel-gioia-2026-04-29-1300-灰色不可排",
@@ -3375,9 +4753,165 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-04-29",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!E505"
+  },
+  {
+    "id": "excel-gioia-2026-04-29-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-29",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E505;桔灯 陪伴老师 排课统计.xlsx:Gioia!E506"
+  },
+  {
+    "id": "excel-gioia-2026-04-29-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-29",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E506;桔灯 陪伴老师 排课统计.xlsx:Gioia!E507"
+  },
+  {
+    "id": "excel-gioia-2026-04-29-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-29",
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E507;桔灯 陪伴老师 排课统计.xlsx:Gioia!E508"
+  },
+  {
+    "id": "excel-gioia-2026-04-29-1430-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-29",
+    "startTime": "14:30",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E508;桔灯 陪伴老师 排课统计.xlsx:Gioia!E509"
+  },
+  {
+    "id": "excel-gioia-2026-04-29-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-29",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E509;桔灯 陪伴老师 排课统计.xlsx:Gioia!E510"
+  },
+  {
+    "id": "excel-gioia-2026-04-29-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-29",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E510;桔灯 陪伴老师 排课统计.xlsx:Gioia!E511"
+  },
+  {
+    "id": "excel-gioia-2026-04-29-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-29",
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E511;桔灯 陪伴老师 排课统计.xlsx:Gioia!E512"
+  },
+  {
+    "id": "excel-gioia-2026-04-29-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-29",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E512;桔灯 陪伴老师 排课统计.xlsx:Gioia!E513"
+  },
+  {
+    "id": "excel-gioia-2026-04-29-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-29",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E513;桔灯 陪伴老师 排课统计.xlsx:Gioia!E514"
+  },
+  {
+    "id": "excel-gioia-2026-04-29-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-29",
+    "startTime": "17:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E514;桔灯 陪伴老师 排课统计.xlsx:Gioia!E515:E518"
+  },
+  {
+    "id": "excel-gioia-2026-04-29-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-29",
+    "startTime": "18:00",
     "endTime": "20:30",
     "status": "不可用",
-    "source": "Gioia!E505;Gioia!E506;Gioia!E507;Gioia!E508;Gioia!E509;Gioia!E510;Gioia!E511;Gioia!E512;Gioia!E513;Gioia!E514;Gioia!E515:E518;Gioia!E519"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E515:E518;桔灯 陪伴老师 排课统计.xlsx:Gioia!E519"
+  },
+  {
+    "id": "excel-gioia-2026-04-29-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-29",
+    "startTime": "20:00",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E519"
   },
   {
     "id": "excel-gioia-2026-04-30-0800-休息",
@@ -3390,7 +4924,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!F496:F503"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F496:F503"
   },
   {
     "id": "excel-gioia-2026-04-30-1200-灰色不可排",
@@ -3403,7 +4937,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!F504"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F504"
   },
   {
     "id": "excel-gioia-2026-04-30-1300-灰色不可排",
@@ -3414,9 +4948,204 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-04-30",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!F505"
+  },
+  {
+    "id": "excel-gioia-2026-04-30-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-30",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F505;桔灯 陪伴老师 排课统计.xlsx:Gioia!F506"
+  },
+  {
+    "id": "excel-gioia-2026-04-30-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-30",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F506;桔灯 陪伴老师 排课统计.xlsx:Gioia!F507"
+  },
+  {
+    "id": "excel-gioia-2026-04-30-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-30",
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F507;桔灯 陪伴老师 排课统计.xlsx:Gioia!F508"
+  },
+  {
+    "id": "excel-gioia-2026-04-30-1430-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-30",
+    "startTime": "14:30",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F508;桔灯 陪伴老师 排课统计.xlsx:Gioia!F509"
+  },
+  {
+    "id": "excel-gioia-2026-04-30-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-30",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F509;桔灯 陪伴老师 排课统计.xlsx:Gioia!F510"
+  },
+  {
+    "id": "excel-gioia-2026-04-30-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-30",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F510;桔灯 陪伴老师 排课统计.xlsx:Gioia!F511"
+  },
+  {
+    "id": "excel-gioia-2026-04-30-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-30",
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F511;桔灯 陪伴老师 排课统计.xlsx:Gioia!F512"
+  },
+  {
+    "id": "excel-gioia-2026-04-30-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-30",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F512;桔灯 陪伴老师 排课统计.xlsx:Gioia!F513"
+  },
+  {
+    "id": "excel-gioia-2026-04-30-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-30",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F513;桔灯 陪伴老师 排课统计.xlsx:Gioia!F514"
+  },
+  {
+    "id": "excel-gioia-2026-04-30-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-30",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F514;桔灯 陪伴老师 排课统计.xlsx:Gioia!F515"
+  },
+  {
+    "id": "excel-gioia-2026-04-30-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-30",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F515;桔灯 陪伴老师 排课统计.xlsx:Gioia!F516"
+  },
+  {
+    "id": "excel-gioia-2026-04-30-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-30",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F516;桔灯 陪伴老师 排课统计.xlsx:Gioia!F517"
+  },
+  {
+    "id": "excel-gioia-2026-04-30-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-30",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F517;桔灯 陪伴老师 排课统计.xlsx:Gioia!F518"
+  },
+  {
+    "id": "excel-gioia-2026-04-30-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-30",
+    "startTime": "19:30",
     "endTime": "20:30",
     "status": "不可用",
-    "source": "Gioia!F505;Gioia!F506;Gioia!F507;Gioia!F508;Gioia!F509;Gioia!F510;Gioia!F511;Gioia!F512;Gioia!F513;Gioia!F514;Gioia!F515;Gioia!F516;Gioia!F517;Gioia!F518;Gioia!F519"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F518;桔灯 陪伴老师 排课统计.xlsx:Gioia!F519"
+  },
+  {
+    "id": "excel-gioia-2026-04-30-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-04-30",
+    "startTime": "20:00",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F519"
   },
   {
     "id": "excel-gioia-2026-05-01-0800-休息",
@@ -3429,7 +5158,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!G496"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G496"
   },
   {
     "id": "excel-gioia-2026-05-01-0830-灰色不可排",
@@ -3440,9 +5169,113 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-05-01",
     "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!G497"
+  },
+  {
+    "id": "excel-gioia-2026-05-01-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-05-01",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G497;桔灯 陪伴老师 排课统计.xlsx:Gioia!G498"
+  },
+  {
+    "id": "excel-gioia-2026-05-01-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-05-01",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G498;桔灯 陪伴老师 排课统计.xlsx:Gioia!G499"
+  },
+  {
+    "id": "excel-gioia-2026-05-01-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-05-01",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G499;桔灯 陪伴老师 排课统计.xlsx:Gioia!G500"
+  },
+  {
+    "id": "excel-gioia-2026-05-01-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-05-01",
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G500;桔灯 陪伴老师 排课统计.xlsx:Gioia!G501"
+  },
+  {
+    "id": "excel-gioia-2026-05-01-1030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-05-01",
+    "startTime": "10:30",
+    "endTime": "11:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G501;桔灯 陪伴老师 排课统计.xlsx:Gioia!G502"
+  },
+  {
+    "id": "excel-gioia-2026-05-01-1100-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-05-01",
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G502;桔灯 陪伴老师 排课统计.xlsx:Gioia!G503"
+  },
+  {
+    "id": "excel-gioia-2026-05-01-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-05-01",
+    "startTime": "11:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!G497;Gioia!G498;Gioia!G499;Gioia!G500;Gioia!G501;Gioia!G502;Gioia!G503;Gioia!G504"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G503;桔灯 陪伴老师 排课统计.xlsx:Gioia!G504"
+  },
+  {
+    "id": "excel-gioia-2026-05-01-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-05-01",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G504"
   },
   {
     "id": "excel-gioia-2026-05-01-1300-灰色不可排",
@@ -3453,9 +5286,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-05-01",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!G505"
+  },
+  {
+    "id": "excel-gioia-2026-05-01-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-05-01",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G505;桔灯 陪伴老师 排课统计.xlsx:Gioia!G506"
+  },
+  {
+    "id": "excel-gioia-2026-05-01-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-05-01",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G506;桔灯 陪伴老师 排课统计.xlsx:Gioia!G507"
+  },
+  {
+    "id": "excel-gioia-2026-05-01-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-05-01",
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G507;桔灯 陪伴老师 排课统计.xlsx:Gioia!G508"
+  },
+  {
+    "id": "excel-gioia-2026-05-01-1430-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-05-01",
+    "startTime": "14:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!G505;Gioia!G506;Gioia!G507;Gioia!G508;Gioia!G509"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G508;桔灯 陪伴老师 排课统计.xlsx:Gioia!G509"
+  },
+  {
+    "id": "excel-gioia-2026-05-01-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-05-01",
+    "startTime": "15:00",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G509"
   },
   {
     "id": "excel-gioia-2026-05-01-1530-hedy",
@@ -3468,7 +5366,7 @@ export const importedLessons = [
     "startTime": "15:30",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!G510:G515"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G510:G515"
   },
   {
     "id": "excel-gioia-2026-05-01-1830-灰色不可排",
@@ -3479,9 +5377,61 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-05-01",
     "startTime": "18:30",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!G516"
+  },
+  {
+    "id": "excel-gioia-2026-05-01-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-05-01",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G516;桔灯 陪伴老师 排课统计.xlsx:Gioia!G517"
+  },
+  {
+    "id": "excel-gioia-2026-05-01-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-05-01",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G517;桔灯 陪伴老师 排课统计.xlsx:Gioia!G518"
+  },
+  {
+    "id": "excel-gioia-2026-05-01-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-05-01",
+    "startTime": "19:30",
     "endTime": "20:30",
     "status": "不可用",
-    "source": "Gioia!G516;Gioia!G517;Gioia!G518;Gioia!G519"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G518;桔灯 陪伴老师 排课统计.xlsx:Gioia!G519"
+  },
+  {
+    "id": "excel-gioia-2026-05-01-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-05-01",
+    "startTime": "20:00",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G519"
   },
   {
     "id": "excel-gioia-2026-05-02-0900-Linkage4",
@@ -3494,7 +5444,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!H498:H503"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H498:H503"
   },
   {
     "id": "excel-gioia-2026-05-02-1500-thomas补课",
@@ -3507,7 +5457,7 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Gioia!H509:H510"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H509:H510"
   },
   {
     "id": "excel-gioia-2026-05-03-1300-Linkage3-Miles",
@@ -3520,7 +5470,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Gioia!I505:I510"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I505:I510"
   },
   {
     "id": "excel-gioia-2026-05-03-1630-george1v1",
@@ -3533,7 +5483,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!I512:I515"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I512:I515"
   },
   {
     "id": "excel-gioia-2026-05-04-0800-休息",
@@ -3546,7 +5496,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!C496:C520"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C496:C520"
   },
   {
     "id": "excel-gioia-2026-05-05-0800-休息",
@@ -3559,7 +5509,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!N496:N520"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N496:N520"
   },
   {
     "id": "excel-lynn-2026-05-06-1900-Ziyi",
@@ -3572,7 +5522,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Lynn!E24:E27"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!E24:E27"
   },
   {
     "id": "excel-tiana-2026-05-06-1900-Patrick-Valerie",
@@ -3585,7 +5535,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!E24:E27"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!E24:E27"
   },
   {
     "id": "excel-gioia-2026-05-07-0800-休息",
@@ -3598,7 +5548,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!P496:P503"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P496:P503"
   },
   {
     "id": "excel-gioia-2026-05-07-1300-灰色不可排",
@@ -3611,7 +5561,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!P505"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P505"
   },
   {
     "id": "excel-lynn-2026-05-07-1900-Ziyi",
@@ -3624,7 +5574,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Lynn!F24:F27"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!F24:F27"
   },
   {
     "id": "excel-tiana-2026-05-07-1900-Patrick-Valerie",
@@ -3637,7 +5587,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!F24:F27"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!F24:F27"
   },
   {
     "id": "excel-gioia-2026-05-08-0800-休息",
@@ -3650,7 +5600,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!Q496"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q496"
   },
   {
     "id": "excel-gioia-2026-05-08-1300-灰色不可排",
@@ -3663,7 +5613,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!Q505"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q505"
   },
   {
     "id": "excel-gioia-2026-05-08-1530-hedy",
@@ -3676,7 +5626,7 @@ export const importedLessons = [
     "startTime": "15:30",
     "endTime": "18:30",
     "status": "Excel导入",
-    "source": "Gioia!Q510:Q515"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q510:Q515"
   },
   {
     "id": "excel-lynn-2026-05-08-1900-Ziyi",
@@ -3689,7 +5639,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Lynn!G24:G27"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!G24:G27"
   },
   {
     "id": "excel-gioia-2026-05-09-0900-Linkage4",
@@ -3702,7 +5652,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Gioia!R498:R503"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R498:R503"
   },
   {
     "id": "excel-gioia-2026-05-10-1300-Linkage3-Miles",
@@ -3715,7 +5665,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Gioia!S505:S510"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S505:S510"
   },
   {
     "id": "excel-gioia-2026-05-10-1630-george1v1",
@@ -3728,7 +5678,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "Excel导入",
-    "source": "Gioia!S512:S515"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S512:S515"
   },
   {
     "id": "excel-gioia-2026-05-11-0800-休息",
@@ -3741,7 +5691,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!M496:M520"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M496:M520"
   },
   {
     "id": "excel-lynn-2026-05-11-1600-Kason",
@@ -3754,7 +5704,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "17:00",
     "status": "Excel导入",
-    "source": "Lynn!M18:M19"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!M18:M19"
   },
   {
     "id": "excel-lynn-2026-05-11-1900-Ziyi",
@@ -3767,7 +5717,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Lynn!M24:M27"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!M24:M27"
   },
   {
     "id": "excel-tiana-2026-05-11-1900-Patrick-Valerie",
@@ -3780,7 +5730,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!M24:M27"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!M24:M27"
   },
   {
     "id": "excel-gioia-2026-05-12-0800-休息",
@@ -3793,7 +5743,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!X496:X520"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!X496:X520"
   },
   {
     "id": "excel-tiana-2026-05-12-1000-Amy语文",
@@ -3806,7 +5756,7 @@ export const importedLessons = [
     "startTime": "10:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Tiana!N7:N10"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!N7:N10"
   },
   {
     "id": "excel-lynn-2026-05-12-1600-Kason",
@@ -3819,7 +5769,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "17:00",
     "status": "Excel导入",
-    "source": "Lynn!N18:N19"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!N18:N19"
   },
   {
     "id": "excel-lynn-2026-05-12-1900-Ziyi",
@@ -3832,7 +5782,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Lynn!N24:N27"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!N24:N27"
   },
   {
     "id": "excel-tiana-2026-05-12-1900-Patrick-Valerie",
@@ -3845,7 +5795,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!N24:N27"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!N24:N27"
   },
   {
     "id": "excel-lynn-2026-05-13-1900-Ziyi",
@@ -3858,7 +5808,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Lynn!O24:O27"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!O24:O27"
   },
   {
     "id": "excel-tiana-2026-05-13-1900-Patrick-Valerie",
@@ -3871,7 +5821,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!O24:O27"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!O24:O27"
   },
   {
     "id": "excel-gioia-2026-05-14-0800-休息",
@@ -3884,7 +5834,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!Z496:Z503"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z496:Z503"
   },
   {
     "id": "excel-gioia-2026-05-14-1300-灰色不可排",
@@ -3897,7 +5847,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!Z505"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z505"
   },
   {
     "id": "excel-lynn-2026-05-14-1800-Ziyi",
@@ -3910,7 +5860,7 @@ export const importedLessons = [
     "startTime": "18:00",
     "endTime": "20:00",
     "status": "Excel导入",
-    "source": "Lynn!P22:P25"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!P22:P25"
   },
   {
     "id": "excel-tiana-2026-05-14-1900-Patrick-Valerie",
@@ -3923,7 +5873,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!P24:P27"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!P24:P27"
   },
   {
     "id": "excel-gioia-2026-05-15-0800-休息",
@@ -3936,7 +5886,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!AA496"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA496"
   },
   {
     "id": "excel-gioia-2026-05-15-1300-灰色不可排",
@@ -3949,7 +5899,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!AA505"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA505"
   },
   {
     "id": "excel-gioia-2026-05-15-1530-hedy",
@@ -3962,7 +5912,7 @@ export const importedLessons = [
     "startTime": "15:30",
     "endTime": "18:30",
     "status": "Excel导入",
-    "source": "Gioia!AA510:AA515"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA510:AA515"
   },
   {
     "id": "excel-lynn-2026-05-15-1800-Ziyi",
@@ -3975,7 +5925,7 @@ export const importedLessons = [
     "startTime": "18:00",
     "endTime": "20:00",
     "status": "Excel导入",
-    "source": "Lynn!Q22:Q25"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!Q22:Q25"
   },
   {
     "id": "excel-gioia-2026-05-16-0900-Linkage4",
@@ -3988,7 +5938,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Gioia!AB498:AB503"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB498:AB503"
   },
   {
     "id": "excel-gioia-2026-05-16-1300-eva补课",
@@ -4001,7 +5951,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "15:00",
     "status": "Excel导入",
-    "source": "Gioia!AB505:AB508"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB505:AB508"
   },
   {
     "id": "excel-tiana-2026-05-16-1300-George的复习课",
@@ -4014,7 +5964,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "15:00",
     "status": "Excel导入",
-    "source": "Tiana!R12:R15"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!R12:R15"
   },
   {
     "id": "excel-gioia-2026-05-17-1300-Linkage3-Miles",
@@ -4027,7 +5977,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Gioia!AC505:AC510"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC505:AC510"
   },
   {
     "id": "excel-gioia-2026-05-17-1630-george1v1",
@@ -4040,7 +5990,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "Excel导入",
-    "source": "Gioia!AC512:AC515"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC512:AC515"
   },
   {
     "id": "excel-gioia-2026-05-18-0800-休息",
@@ -4053,7 +6003,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!W496:W520"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W496:W520"
   },
   {
     "id": "excel-lynn-2026-05-18-1600-Kason",
@@ -4066,7 +6016,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "17:00",
     "status": "Excel导入",
-    "source": "Lynn!W18:W19"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!W18:W19"
   },
   {
     "id": "excel-lynn-2026-05-18-1900-Ziyi",
@@ -4079,7 +6029,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Lynn!W24:W27"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!W24:W27"
   },
   {
     "id": "excel-tiana-2026-05-18-1900-Patrick-Valerie",
@@ -4092,7 +6042,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!W24:W27"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!W24:W27"
   },
   {
     "id": "excel-gioia-2026-05-19-0800-休息",
@@ -4105,7 +6055,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!AH496:AH520"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AH496:AH520"
   },
   {
     "id": "excel-tiana-2026-05-19-1000-Amy语文",
@@ -4118,7 +6068,7 @@ export const importedLessons = [
     "startTime": "10:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Tiana!X7:X10"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!X7:X10"
   },
   {
     "id": "excel-lynn-2026-05-19-1600-Kason",
@@ -4131,7 +6081,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "17:00",
     "status": "Excel导入",
-    "source": "Lynn!X18:X19"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!X18:X19"
   },
   {
     "id": "excel-lynn-2026-05-19-1900-Ziyi",
@@ -4144,7 +6094,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Lynn!X24:X27"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!X24:X27"
   },
   {
     "id": "excel-tiana-2026-05-19-1900-Patrick-Valerie",
@@ -4157,7 +6107,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!X24:X27"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!X24:X27"
   },
   {
     "id": "excel-lynn-2026-05-20-1600-俞家",
@@ -4170,7 +6120,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!Y18:Y21"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!Y18:Y21"
   },
   {
     "id": "excel-lynn-2026-05-20-1900-Ziyi",
@@ -4183,7 +6133,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Lynn!Y24:Y27"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!Y24:Y27"
   },
   {
     "id": "excel-tiana-2026-05-20-1900-Patrick-Valerie",
@@ -4196,7 +6146,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!Y24:Y27"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!Y24:Y27"
   },
   {
     "id": "excel-gioia-2026-05-21-0800-休息",
@@ -4209,7 +6159,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!AJ496:AJ503"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AJ496:AJ503"
   },
   {
     "id": "excel-lynn-2026-05-21-1100-Orion-复习",
@@ -4222,7 +6172,7 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "13:00",
     "status": "Excel导入",
-    "source": "Lynn!Z9:Z11"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!Z9:Z11"
   },
   {
     "id": "excel-gioia-2026-05-21-1300-灰色不可排",
@@ -4235,7 +6185,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!AJ505"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AJ505"
   },
   {
     "id": "excel-lynn-2026-05-21-1800-Ziyi",
@@ -4248,7 +6198,7 @@ export const importedLessons = [
     "startTime": "18:00",
     "endTime": "20:00",
     "status": "Excel导入",
-    "source": "Lynn!Z22:Z25"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!Z22:Z25"
   },
   {
     "id": "excel-tiana-2026-05-21-1900-Patrick-Valerie",
@@ -4261,7 +6211,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!Z24:Z27"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!Z24:Z27"
   },
   {
     "id": "excel-gioia-2026-05-22-0800-休息",
@@ -4274,7 +6224,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!AK496"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AK496"
   },
   {
     "id": "excel-gioia-2026-05-22-1300-灰色不可排",
@@ -4287,7 +6237,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!AK505"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AK505"
   },
   {
     "id": "excel-lynn-2026-05-22-1800-Ziyi",
@@ -4300,7 +6250,7 @@ export const importedLessons = [
     "startTime": "18:00",
     "endTime": "20:00",
     "status": "Excel导入",
-    "source": "Lynn!AA22:AA25"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AA22:AA25"
   },
   {
     "id": "excel-gioia-2026-05-23-0900-Linkage4",
@@ -4313,7 +6263,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Gioia!AL498:AL503"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AL498:AL503"
   },
   {
     "id": "excel-tiana-2026-05-23-0900-俞家",
@@ -4326,7 +6276,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:00",
     "status": "Excel导入",
-    "source": "Tiana!AB5:AB8"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AB5:AB8"
   },
   {
     "id": "excel-tiana-2026-05-23-1300-George的复习课",
@@ -4339,7 +6289,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "15:00",
     "status": "Excel导入",
-    "source": "Tiana!AB12:AB15"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AB12:AB15"
   },
   {
     "id": "excel-gioia-2026-05-24-1300-Linkage3-Miles",
@@ -4352,7 +6302,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Gioia!AM505:AM510"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AM505:AM510"
   },
   {
     "id": "excel-gioia-2026-05-24-1630-george1v1",
@@ -4365,7 +6315,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "Excel导入",
-    "source": "Gioia!AM512:AM515"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AM512:AM515"
   },
   {
     "id": "excel-gioia-2026-05-25-0800-休息",
@@ -4378,7 +6328,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!AG496:AG520"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AG496:AG520"
   },
   {
     "id": "excel-lynn-2026-05-25-1600-Kason",
@@ -4391,7 +6341,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "17:00",
     "status": "Excel导入",
-    "source": "Lynn!AG18:AG19"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AG18:AG19"
   },
   {
     "id": "excel-lynn-2026-05-25-1900-Ziyi",
@@ -4404,7 +6354,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Lynn!AG24:AG27"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AG24:AG27"
   },
   {
     "id": "excel-tiana-2026-05-25-1900-Patrick-Valerie",
@@ -4417,7 +6367,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!AG24:AG27"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AG24:AG27"
   },
   {
     "id": "excel-gioia-2026-05-26-0800-休息",
@@ -4430,7 +6380,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!AR496:AR520"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AR496:AR520"
   },
   {
     "id": "excel-tiana-2026-05-26-1300-George复习课",
@@ -4443,7 +6393,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Tiana!AH12:AH17"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AH12:AH17"
   },
   {
     "id": "excel-lynn-2026-05-26-1600-Kason",
@@ -4456,7 +6406,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "17:00",
     "status": "Excel导入",
-    "source": "Lynn!AH18:AH19"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AH18:AH19"
   },
   {
     "id": "excel-lynn-2026-05-26-1900-Ziyi",
@@ -4469,7 +6419,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Lynn!AH24:AH27"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AH24:AH27"
   },
   {
     "id": "excel-tiana-2026-05-26-1900-Patrick-Valerie",
@@ -4482,7 +6432,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!AH24:AH27"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AH24:AH27"
   },
   {
     "id": "excel-lynn-2026-05-27-1600-俞家",
@@ -4495,7 +6445,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!AI18:AI21"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AI18:AI21"
   },
   {
     "id": "excel-lynn-2026-05-27-1900-Ziyi",
@@ -4508,7 +6458,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Lynn!AI24:AI27"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AI24:AI27"
   },
   {
     "id": "excel-tiana-2026-05-27-1900-Patrick-Valerie",
@@ -4521,7 +6471,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!AI24:AI27"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AI24:AI27"
   },
   {
     "id": "excel-gioia-2026-05-28-0800-休息",
@@ -4534,7 +6484,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!AT496:AT503"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AT496:AT503"
   },
   {
     "id": "excel-lynn-2026-05-28-1100-Orion-复习",
@@ -4547,7 +6497,7 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!AJ9:AJ11"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AJ9:AJ11"
   },
   {
     "id": "excel-gioia-2026-05-28-1300-灰色不可排",
@@ -4560,7 +6510,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!AT505"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AT505"
   },
   {
     "id": "excel-lynn-2026-05-28-1800-Ziyi",
@@ -4573,7 +6523,7 @@ export const importedLessons = [
     "startTime": "18:00",
     "endTime": "20:00",
     "status": "Excel导入",
-    "source": "Lynn!AJ22:AJ25"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AJ22:AJ25"
   },
   {
     "id": "excel-tiana-2026-05-28-1900-Patrick-Valerie",
@@ -4586,7 +6536,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!AJ24:AJ27"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AJ24:AJ27"
   },
   {
     "id": "excel-gioia-2026-05-29-0800-休息",
@@ -4599,7 +6549,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!AU496"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AU496"
   },
   {
     "id": "excel-gioia-2026-05-29-1300-灰色不可排",
@@ -4612,7 +6562,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!AU505"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AU505"
   },
   {
     "id": "excel-lynn-2026-05-29-1400-语文课程",
@@ -4625,7 +6575,7 @@ export const importedLessons = [
     "startTime": "14:00",
     "endTime": "15:30",
     "status": "Excel导入",
-    "source": "Lynn!AK14:AK16"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AK14:AK16"
   },
   {
     "id": "excel-lynn-2026-05-29-1800-Ziyi",
@@ -4638,7 +6588,7 @@ export const importedLessons = [
     "startTime": "18:00",
     "endTime": "20:00",
     "status": "Excel导入",
-    "source": "Lynn!AK22:AK25"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AK22:AK25"
   },
   {
     "id": "excel-gioia-2026-05-30-0900-Linkage4",
@@ -4651,7 +6601,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Gioia!AV498:AV503"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AV498:AV503"
   },
   {
     "id": "excel-tiana-2026-05-30-0900-俞家",
@@ -4664,7 +6614,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:00",
     "status": "Excel导入",
-    "source": "Tiana!AL5:AL8"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AL5:AL8"
   },
   {
     "id": "excel-gioia-2026-05-31-1300-Linkage3-Miles",
@@ -4677,7 +6627,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Gioia!AW505:AW510"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AW505:AW510"
   },
   {
     "id": "excel-gioia-2026-05-31-1630-george1v1",
@@ -4690,7 +6640,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "Excel导入",
-    "source": "Gioia!AW512:AW515"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AW512:AW515"
   },
   {
     "id": "excel-gioia-2026-06-01-0800-休息",
@@ -4703,7 +6653,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!AQ496:AQ520"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AQ496:AQ520"
   },
   {
     "id": "excel-lynn-2026-06-01-1600-Kason复习",
@@ -4716,7 +6666,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "17:00",
     "status": "Excel导入",
-    "source": "Lynn!C47:C48"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!C47:C48"
   },
   {
     "id": "excel-lynn-2026-06-01-1900-Ziyi生病",
@@ -4729,7 +6679,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Lynn!C53:C56"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!C53:C56"
   },
   {
     "id": "excel-tiana-2026-06-01-1900-Patrick-Valerie",
@@ -4742,7 +6692,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!C53:C56"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!C53:C56"
   },
   {
     "id": "excel-gioia-2026-06-02-0800-休息",
@@ -4755,7 +6705,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!D527:D551"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D527:D551"
   },
   {
     "id": "excel-lynn-2026-06-02-1600-Kason复习",
@@ -4768,7 +6718,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "17:00",
     "status": "Excel导入",
-    "source": "Lynn!D47:D48"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!D47:D48"
   },
   {
     "id": "excel-lynn-2026-06-02-1900-Ziyi上门",
@@ -4781,7 +6731,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Lynn!D53:D56"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!D53:D56"
   },
   {
     "id": "excel-tiana-2026-06-02-1900-Patrick-Valerie",
@@ -4794,7 +6744,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!D53:D56"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!D53:D56"
   },
   {
     "id": "excel-lynn-2026-06-03-1600-Eddie上门",
@@ -4807,7 +6757,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!E47:E50"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!E47:E50"
   },
   {
     "id": "excel-lynn-2026-06-03-1900-Ziyi上门",
@@ -4820,7 +6770,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Lynn!E53:E56"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!E53:E56"
   },
   {
     "id": "excel-tiana-2026-06-03-1900-Patrick-Valerie",
@@ -4833,7 +6783,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!E53:E56"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!E53:E56"
   },
   {
     "id": "excel-gioia-2026-06-04-0800-休息",
@@ -4846,7 +6796,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!F527:F534"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F527:F534"
   },
   {
     "id": "excel-lynn-2026-06-04-1100-Orion-复习",
@@ -4859,7 +6809,7 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!F38:F40"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!F38:F40"
   },
   {
     "id": "excel-gioia-2026-06-04-1300-灰色不可排",
@@ -4872,7 +6822,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!F536"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F536"
   },
   {
     "id": "excel-lynn-2026-06-04-1300-语文课程",
@@ -4885,7 +6835,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "Excel导入",
-    "source": "Lynn!F41:F43"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!F41:F43"
   },
   {
     "id": "excel-lynn-2026-06-04-1800-Ziyi上门",
@@ -4898,7 +6848,7 @@ export const importedLessons = [
     "startTime": "18:00",
     "endTime": "20:00",
     "status": "Excel导入",
-    "source": "Lynn!F51:F54"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!F51:F54"
   },
   {
     "id": "excel-tiana-2026-06-04-1900-Patrick-Valerie",
@@ -4911,7 +6861,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!F53:F56"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!F53:F56"
   },
   {
     "id": "excel-gioia-2026-06-05-0800-休息",
@@ -4924,7 +6874,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!G527"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G527"
   },
   {
     "id": "excel-gioia-2026-06-05-1300-灰色不可排",
@@ -4937,7 +6887,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!G536"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G536"
   },
   {
     "id": "excel-lynn-2026-06-05-1330-Orion-复习",
@@ -4950,7 +6900,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "Excel导入",
-    "source": "Lynn!G42:G45"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!G42:G45"
   },
   {
     "id": "excel-lynn-2026-06-05-1800-Ziyi上门",
@@ -4963,7 +6913,7 @@ export const importedLessons = [
     "startTime": "18:00",
     "endTime": "20:00",
     "status": "Excel导入",
-    "source": "Lynn!G51:G54"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!G51:G54"
   },
   {
     "id": "excel-gioia-2026-06-06-0900-Linkage4",
@@ -4976,7 +6926,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Gioia!H529:H534"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H529:H534"
   },
   {
     "id": "excel-tiana-2026-06-06-0900-俞家",
@@ -4989,7 +6939,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:00",
     "status": "Excel导入",
-    "source": "Tiana!H34:H37"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!H34:H37"
   },
   {
     "id": "excel-tiana-2026-06-06-1300-George的复习课",
@@ -5002,7 +6952,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "15:00",
     "status": "Excel导入",
-    "source": "Tiana!H41:H44"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!H41:H44"
   },
   {
     "id": "excel-gioia-2026-06-07-1300-Linkage3-Miles",
@@ -5015,7 +6965,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Gioia!I536:I541"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I536:I541"
   },
   {
     "id": "excel-gioia-2026-06-07-1630-george1v1",
@@ -5028,7 +6978,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "Excel导入",
-    "source": "Gioia!I543:I546"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I543:I546"
   },
   {
     "id": "excel-gioia-2026-06-08-0900-Linkage4",
@@ -5041,7 +6991,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Gioia!C529:C534"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C529:C534"
   },
   {
     "id": "excel-tiana-2026-06-08-1600-Kason",
@@ -5054,7 +7004,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "17:00",
     "status": "Excel导入",
-    "source": "Tiana!M47:M48"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!M47:M48"
   },
   {
     "id": "excel-lynn-2026-06-08-1900-Ziyi上门",
@@ -5067,7 +7017,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Lynn!M53:M56"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!M53:M56"
   },
   {
     "id": "excel-tiana-2026-06-08-1900-Patrick-Valerie",
@@ -5080,7 +7030,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!M53:M56"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!M53:M56"
   },
   {
     "id": "excel-gioia-2026-06-09-0800-休息",
@@ -5093,7 +7043,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!N527:N551"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N527:N551"
   },
   {
     "id": "excel-lynn-2026-06-09-1300-Orion-复习",
@@ -5106,7 +7056,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "15:00",
     "status": "Excel导入",
-    "source": "Lynn!N41:N44"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!N41:N44"
   },
   {
     "id": "excel-tiana-2026-06-09-1600-Kason",
@@ -5119,7 +7069,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "17:00",
     "status": "Excel导入",
-    "source": "Tiana!N47:N48"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!N47:N48"
   },
   {
     "id": "excel-lynn-2026-06-09-1900-Ziyi上门",
@@ -5132,7 +7082,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Lynn!N53:N56"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!N53:N56"
   },
   {
     "id": "excel-tiana-2026-06-09-1900-Patrick-Valerie",
@@ -5145,7 +7095,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!N53:N56"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!N53:N56"
   },
   {
     "id": "excel-lynn-2026-06-10-1600-Eddie上门",
@@ -5158,7 +7108,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!O47:O50"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!O47:O50"
   },
   {
     "id": "excel-lynn-2026-06-10-1900-Ziyi上门",
@@ -5171,7 +7121,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Lynn!O53:O56"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!O53:O56"
   },
   {
     "id": "excel-tiana-2026-06-10-1900-Patrick-Valerie",
@@ -5184,7 +7134,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!O53:O56"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!O53:O56"
   },
   {
     "id": "excel-gioia-2026-06-11-0800-休息",
@@ -5197,7 +7147,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!P527:P534"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P527:P534"
   },
   {
     "id": "excel-lynn-2026-06-11-1100-Orion-复习",
@@ -5210,7 +7160,7 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!P38:P40"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!P38:P40"
   },
   {
     "id": "excel-gioia-2026-06-11-1300-灰色不可排",
@@ -5223,7 +7173,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!P536"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P536"
   },
   {
     "id": "excel-lynn-2026-06-11-1300-语文课程",
@@ -5236,7 +7186,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "Excel导入",
-    "source": "Lynn!P41:P43"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!P41:P43"
   },
   {
     "id": "excel-lynn-2026-06-11-1800-Ziyi上门",
@@ -5249,7 +7199,7 @@ export const importedLessons = [
     "startTime": "18:00",
     "endTime": "20:00",
     "status": "Excel导入",
-    "source": "Lynn!P51:P54"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!P51:P54"
   },
   {
     "id": "excel-tiana-2026-06-11-1900-Patrick-Valerie",
@@ -5262,7 +7212,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!P53:P56"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!P53:P56"
   },
   {
     "id": "excel-gioia-2026-06-12-0800-休息",
@@ -5275,7 +7225,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!Q527"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q527"
   },
   {
     "id": "excel-gioia-2026-06-12-1300-灰色不可排",
@@ -5288,7 +7238,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!Q536"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q536"
   },
   {
     "id": "excel-lynn-2026-06-12-1330-Orion-复习",
@@ -5301,7 +7251,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "Excel导入",
-    "source": "Lynn!Q42:Q45"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!Q42:Q45"
   },
   {
     "id": "excel-lynn-2026-06-12-1800-Ziyi上门",
@@ -5314,7 +7264,7 @@ export const importedLessons = [
     "startTime": "18:00",
     "endTime": "20:00",
     "status": "Excel导入",
-    "source": "Lynn!Q51:Q54"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!Q51:Q54"
   },
   {
     "id": "excel-gioia-2026-06-13-0900-Linkage4",
@@ -5327,7 +7277,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Gioia!R529:R534"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R529:R534"
   },
   {
     "id": "excel-tiana-2026-06-13-0900-俞家",
@@ -5340,7 +7290,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:00",
     "status": "Excel导入",
-    "source": "Tiana!R34:R37"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!R34:R37"
   },
   {
     "id": "excel-tiana-2026-06-13-1300-George的复习课",
@@ -5353,7 +7303,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "15:00",
     "status": "Excel导入",
-    "source": "Tiana!R41:R44"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!R41:R44"
   },
   {
     "id": "excel-gioia-2026-06-14-1300-Linkage3-Miles",
@@ -5366,7 +7316,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Gioia!S536:S541"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S536:S541"
   },
   {
     "id": "excel-gioia-2026-06-14-1630-george1v1",
@@ -5379,7 +7329,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "Excel导入",
-    "source": "Gioia!S543:S546"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S543:S546"
   },
   {
     "id": "excel-gioia-2026-06-15-0800-休息",
@@ -5392,7 +7342,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!M527:M551"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M527:M551"
   },
   {
     "id": "excel-tiana-2026-06-15-1600-Kason",
@@ -5405,7 +7355,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "17:00",
     "status": "Excel导入",
-    "source": "Tiana!W47:W48"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!W47:W48"
   },
   {
     "id": "excel-catherine-2026-06-15-1730-Eric",
@@ -5418,7 +7368,7 @@ export const importedLessons = [
     "startTime": "17:30",
     "endTime": "19:30",
     "status": "Excel导入",
-    "source": "Catherine!W23:W26"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Catherine!W23:W26"
   },
   {
     "id": "excel-lynn-2026-06-15-1900-Ziyi上门",
@@ -5431,7 +7381,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Lynn!W53:W56"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!W53:W56"
   },
   {
     "id": "excel-tiana-2026-06-15-1900-Patrick-Valerie",
@@ -5444,7 +7394,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!W53:W56"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!W53:W56"
   },
   {
     "id": "excel-gioia-2026-06-16-0800-休息",
@@ -5457,7 +7407,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!X527:X551"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!X527:X551"
   },
   {
     "id": "excel-lynn-2026-06-16-1300-Orion-复习",
@@ -5470,7 +7420,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "15:00",
     "status": "Excel导入",
-    "source": "Lynn!X41:X44"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!X41:X44"
   },
   {
     "id": "excel-tiana-2026-06-16-1600-Kason",
@@ -5483,7 +7433,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "17:00",
     "status": "Excel导入",
-    "source": "Tiana!X47:X48"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!X47:X48"
   },
   {
     "id": "excel-lynn-2026-06-16-1900-Ziyi上门",
@@ -5496,7 +7446,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Lynn!X53:X56"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!X53:X56"
   },
   {
     "id": "excel-tiana-2026-06-16-1900-Patrick-Valerie",
@@ -5509,7 +7459,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!X53:X56"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!X53:X56"
   },
   {
     "id": "excel-lynn-2026-06-17-1900-Ziyi上门",
@@ -5522,7 +7472,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Lynn!Y53:Y56"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!Y53:Y56"
   },
   {
     "id": "excel-tiana-2026-06-17-1900-Patrick-Valerie",
@@ -5535,7 +7485,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!Y53:Y56"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!Y53:Y56"
   },
   {
     "id": "excel-gioia-2026-06-18-0800-休息",
@@ -5548,7 +7498,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!Z527:Z534"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z527:Z534"
   },
   {
     "id": "excel-lynn-2026-06-18-1100-Orion-复习",
@@ -5561,7 +7511,7 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!Z38:Z40"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!Z38:Z40"
   },
   {
     "id": "excel-gioia-2026-06-18-1300-灰色不可排",
@@ -5574,7 +7524,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!Z536"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z536"
   },
   {
     "id": "excel-lynn-2026-06-18-1300-语文课程",
@@ -5587,7 +7537,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "Excel导入",
-    "source": "Lynn!Z41:Z43"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!Z41:Z43"
   },
   {
     "id": "excel-lynn-2026-06-18-1800-Ziyi上门",
@@ -5600,7 +7550,7 @@ export const importedLessons = [
     "startTime": "18:00",
     "endTime": "20:00",
     "status": "Excel导入",
-    "source": "Lynn!Z51:Z54"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!Z51:Z54"
   },
   {
     "id": "excel-tiana-2026-06-18-1900-Patrick-Valerie",
@@ -5613,7 +7563,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!Z53:Z56"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!Z53:Z56"
   },
   {
     "id": "excel-gioia-2026-06-19-0800-休息",
@@ -5626,7 +7576,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!AA527"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA527"
   },
   {
     "id": "excel-lynn-2026-06-19-0800-端午假期",
@@ -5639,7 +7589,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Lynn!AA32:AC56"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AA32:AC56"
   },
   {
     "id": "excel-tiana-2026-06-19-0800-端午假期",
@@ -5652,7 +7602,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Tiana!AA32:AC56"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AA32:AC56"
   },
   {
     "id": "excel-gioia-2026-06-19-1300-灰色不可排",
@@ -5665,7 +7615,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!AA536"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA536"
   },
   {
     "id": "excel-gioia-2026-06-20-0900-Linkage4",
@@ -5678,7 +7628,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Gioia!AB529:AB534"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB529:AB534"
   },
   {
     "id": "excel-gioia-2026-06-21-1300-Linkage3-Miles",
@@ -5691,7 +7641,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Gioia!AC536:AC541"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC536:AC541"
   },
   {
     "id": "excel-gioia-2026-06-21-1630-george1v1",
@@ -5704,7 +7654,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "Excel导入",
-    "source": "Gioia!AC543:AC546"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC543:AC546"
   },
   {
     "id": "excel-gioia-2026-06-22-0800-休息",
@@ -5717,7 +7667,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!W527:W551"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W527:W551"
   },
   {
     "id": "excel-tiana-2026-06-22-1300-托福助教",
@@ -5730,7 +7680,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Tiana!AG41:AG46"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AG41:AG46"
   },
   {
     "id": "excel-lynn-2026-06-22-1500-Ziyi上门",
@@ -5743,7 +7693,7 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!AG45:AG50"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AG45:AG50"
   },
   {
     "id": "excel-tiana-2026-06-22-1900-Patrick-Valerie",
@@ -5756,7 +7706,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!AG53:AG56"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AG53:AG56"
   },
   {
     "id": "excel-gioia-2026-06-23-0800-休息",
@@ -5769,7 +7719,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!AH527:AH551"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AH527:AH551"
   },
   {
     "id": "excel-lynn-2026-06-23-1100-Orion-复习",
@@ -5782,7 +7732,7 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!AH38:AH40"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AH38:AH40"
   },
   {
     "id": "excel-tiana-2026-06-23-1300-托福助教",
@@ -5795,7 +7745,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Tiana!AH41:AH46"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AH41:AH46"
   },
   {
     "id": "excel-lynn-2026-06-23-1500-Ziyi上门",
@@ -5808,7 +7758,7 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!AH45:AH50"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AH45:AH50"
   },
   {
     "id": "excel-tiana-2026-06-23-1900-Patrick-Valerie",
@@ -5821,7 +7771,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!AH53:AH56"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AH53:AH56"
   },
   {
     "id": "excel-tiana-2026-06-24-1300-托福助教",
@@ -5834,7 +7784,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Tiana!AI41:AI46"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AI41:AI46"
   },
   {
     "id": "excel-lynn-2026-06-24-1500-Ziyi上门",
@@ -5847,7 +7797,7 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!AI45:AI50"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AI45:AI50"
   },
   {
     "id": "excel-tiana-2026-06-24-1900-Patrick-Valerie",
@@ -5860,7 +7810,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!AI53:AI56"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AI53:AI56"
   },
   {
     "id": "excel-gioia-2026-06-25-0800-休息",
@@ -5873,7 +7823,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!AJ527:AJ534"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AJ527:AJ534"
   },
   {
     "id": "excel-lynn-2026-06-25-1100-Orion-复习",
@@ -5886,7 +7836,7 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!AJ38:AJ40"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AJ38:AJ40"
   },
   {
     "id": "excel-gioia-2026-06-25-1300-灰色不可排",
@@ -5899,7 +7849,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!AJ536"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AJ536"
   },
   {
     "id": "excel-tiana-2026-06-25-1300-托福助教",
@@ -5912,7 +7862,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Tiana!AJ41:AJ46"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AJ41:AJ46"
   },
   {
     "id": "excel-lynn-2026-06-25-1500-Ziyi上门",
@@ -5925,7 +7875,7 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!AJ45:AJ50"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AJ45:AJ50"
   },
   {
     "id": "excel-tiana-2026-06-25-1900-Patrick-Valerie",
@@ -5938,7 +7888,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!AJ53:AJ56"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AJ53:AJ56"
   },
   {
     "id": "excel-gioia-2026-06-26-0800-休息",
@@ -5951,7 +7901,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!AK527"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AK527"
   },
   {
     "id": "excel-lynn-2026-06-26-1100-Orion-复习",
@@ -5964,7 +7914,7 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!AK38:AK40"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AK38:AK40"
   },
   {
     "id": "excel-gioia-2026-06-26-1300-灰色不可排",
@@ -5977,7 +7927,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!AK536"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AK536"
   },
   {
     "id": "excel-tiana-2026-06-26-1300-托福助教",
@@ -5990,7 +7940,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Tiana!AK41:AK46"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AK41:AK46"
   },
   {
     "id": "excel-lynn-2026-06-26-1500-Ziyi上门",
@@ -6003,7 +7953,7 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!AK45:AK50"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AK45:AK50"
   },
   {
     "id": "excel-gioia-2026-06-27-0900-Linkage4",
@@ -6016,7 +7966,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Gioia!AL529:AL534"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AL529:AL534"
   },
   {
     "id": "excel-gioia-2026-06-28-1300-Linkage3-Miles",
@@ -6029,7 +7979,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Gioia!AM536:AM541"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AM536:AM541"
   },
   {
     "id": "excel-gioia-2026-06-28-1630-george1v1",
@@ -6042,7 +7992,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "Excel导入",
-    "source": "Gioia!AM543:AM546"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AM543:AM546"
   },
   {
     "id": "excel-gioia-2026-06-29-0800-休息",
@@ -6055,7 +8005,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!AG527:AG551"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AG527:AG551"
   },
   {
     "id": "excel-tiana-2026-06-29-1300-George",
@@ -6068,7 +8018,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Tiana!C70:C75"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!C70:C75"
   },
   {
     "id": "excel-lynn-2026-06-29-1500-Ziyi上门",
@@ -6081,7 +8031,20 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!C74:C79"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!C74:C79"
+  },
+  {
+    "id": "excel-sophie-2026-06-29-1530-WAICY比赛",
+    "teacherId": "sophie",
+    "teacherName": "Sophie",
+    "studentName": "WAICY比赛",
+    "course": "WAICY比赛",
+    "deliveryType": "线下",
+    "date": "2026-06-29",
+    "startTime": "15:30",
+    "endTime": "18:30",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Sophie!C19:C24"
   },
   {
     "id": "excel-tiana-2026-06-29-1900-Patrick-Valerie",
@@ -6094,7 +8057,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!C82:C85"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!C82:C85"
   },
   {
     "id": "excel-lynn-2026-06-30-1100-Orion-复习",
@@ -6107,7 +8070,7 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!D67:D69"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!D67:D69"
   },
   {
     "id": "excel-tiana-2026-06-30-1300-George",
@@ -6120,7 +8083,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Tiana!D70:D75"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!D70:D75"
   },
   {
     "id": "excel-lynn-2026-06-30-1500-Ziyi上门",
@@ -6133,7 +8096,7 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!D74:D79"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!D74:D79"
   },
   {
     "id": "excel-tiana-2026-06-30-1900-Patrick-Valerie",
@@ -6146,7 +8109,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!D82:D85"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!D82:D85"
   },
   {
     "id": "excel-charlotte-2026-07-01-0900-星河湾备考班",
@@ -6159,7 +8122,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Charlotte 7-8月!E32:E37"
+    "source": "桔灯学科组 排课统计.xlsx:Charlotte 7-8月!E32:E37"
   },
   {
     "id": "excel-hanna-2026-07-01-0900-全天营语法-基础",
@@ -6172,7 +8135,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Hanna 7-8月 !E5:E9"
+    "source": "桔灯学科组 排课统计.xlsx:Hanna 7-8月 !E5:E9"
   },
   {
     "id": "excel-karen-2026-07-01-0900-全天营语法-基础",
@@ -6185,7 +8148,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Karen 7-8月!E5:E9"
+    "source": "桔灯学科组 排课统计.xlsx:Karen 7-8月!E5:E9"
   },
   {
     "id": "excel-hanna-2026-07-01-1300-全天营写作-基础",
@@ -6198,7 +8161,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "Excel导入",
-    "source": "Hanna 7-8月 !E13:E15"
+    "source": "桔灯学科组 排课统计.xlsx:Hanna 7-8月 !E13:E15"
   },
   {
     "id": "excel-karen-2026-07-01-1300-全天营写作-基础",
@@ -6211,7 +8174,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "Excel导入",
-    "source": "Karen 7-8月!E13:E15"
+    "source": "桔灯学科组 排课统计.xlsx:Karen 7-8月!E13:E15"
   },
   {
     "id": "excel-tiana-2026-07-01-1300-George",
@@ -6224,7 +8187,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Tiana!E70:E75"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!E70:E75"
   },
   {
     "id": "excel-lynn-2026-07-01-1500-Ziyi上门",
@@ -6237,7 +8200,20 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!E74:E79"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!E74:E79"
+  },
+  {
+    "id": "excel-sophie-2026-07-01-1530-WAICY比赛",
+    "teacherId": "sophie",
+    "teacherName": "Sophie",
+    "studentName": "WAICY比赛",
+    "course": "WAICY比赛",
+    "deliveryType": "线下",
+    "date": "2026-07-01",
+    "startTime": "15:30",
+    "endTime": "18:30",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Sophie!E19:E24"
   },
   {
     "id": "excel-hanna-2026-07-01-1600-Nini-1v1",
@@ -6250,7 +8226,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Hanna 7-8月 !E19:E22"
+    "source": "桔灯学科组 排课统计.xlsx:Hanna 7-8月 !E19:E22"
   },
   {
     "id": "excel-tiana-2026-07-01-1900-Patrick-Valerie",
@@ -6263,7 +8239,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!E82:E85"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!E82:E85"
   },
   {
     "id": "excel-charlotte-2026-07-02-0900-星河湾备考班",
@@ -6276,7 +8252,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Charlotte 7-8月!F32:F37"
+    "source": "桔灯学科组 排课统计.xlsx:Charlotte 7-8月!F32:F37"
   },
   {
     "id": "excel-hanna-2026-07-02-0900-全天营语法-基础",
@@ -6289,7 +8265,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Hanna 7-8月 !F5:F9"
+    "source": "桔灯学科组 排课统计.xlsx:Hanna 7-8月 !F5:F9"
   },
   {
     "id": "excel-karen-2026-07-02-0900-全天营语法-基础",
@@ -6302,7 +8278,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Karen 7-8月!F5:F9"
+    "source": "桔灯学科组 排课统计.xlsx:Karen 7-8月!F5:F9"
   },
   {
     "id": "excel-lynn-2026-07-02-1100-Orion-复习",
@@ -6315,7 +8291,7 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!F67:F69"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!F67:F69"
   },
   {
     "id": "excel-hanna-2026-07-02-1300-全天营写作-基础",
@@ -6328,7 +8304,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "Excel导入",
-    "source": "Hanna 7-8月 !F13:F15"
+    "source": "桔灯学科组 排课统计.xlsx:Hanna 7-8月 !F13:F15"
   },
   {
     "id": "excel-karen-2026-07-02-1300-全天营写作-基础",
@@ -6341,7 +8317,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "Excel导入",
-    "source": "Karen 7-8月!F13:F15"
+    "source": "桔灯学科组 排课统计.xlsx:Karen 7-8月!F13:F15"
   },
   {
     "id": "excel-tiana-2026-07-02-1300-George",
@@ -6354,7 +8330,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Tiana!F70:F75"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!F70:F75"
   },
   {
     "id": "excel-lynn-2026-07-02-1500-Ziyi上门",
@@ -6367,7 +8343,20 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!F74:F79"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!F74:F79"
+  },
+  {
+    "id": "excel-sophie-2026-07-02-1530-WAICY比赛",
+    "teacherId": "sophie",
+    "teacherName": "Sophie",
+    "studentName": "WAICY比赛",
+    "course": "WAICY比赛",
+    "deliveryType": "线下",
+    "date": "2026-07-02",
+    "startTime": "15:30",
+    "endTime": "18:30",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Sophie!F19:F24"
   },
   {
     "id": "excel-tiana-2026-07-02-1900-Patrick-Valerie",
@@ -6380,7 +8369,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!F82:F85"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!F82:F85"
   },
   {
     "id": "excel-charlotte-2026-07-03-0900-星河湾备考班",
@@ -6393,7 +8382,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Charlotte 7-8月!G32:G37"
+    "source": "桔灯学科组 排课统计.xlsx:Charlotte 7-8月!G32:G37"
   },
   {
     "id": "excel-hanna-2026-07-03-0900-全天营语法-基础",
@@ -6406,7 +8395,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Hanna 7-8月 !G5:G9"
+    "source": "桔灯学科组 排课统计.xlsx:Hanna 7-8月 !G5:G9"
   },
   {
     "id": "excel-karen-2026-07-03-0900-全天营语法-基础",
@@ -6419,7 +8408,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Karen 7-8月!G5:G9"
+    "source": "桔灯学科组 排课统计.xlsx:Karen 7-8月!G5:G9"
   },
   {
     "id": "excel-lynn-2026-07-03-1100-Orion-复习",
@@ -6432,7 +8421,7 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!G67:G69"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!G67:G69"
   },
   {
     "id": "excel-hanna-2026-07-03-1300-全天营写作-基础",
@@ -6445,7 +8434,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "Excel导入",
-    "source": "Hanna 7-8月 !G13:G15"
+    "source": "桔灯学科组 排课统计.xlsx:Hanna 7-8月 !G13:G15"
   },
   {
     "id": "excel-karen-2026-07-03-1300-全天营写作-基础",
@@ -6458,7 +8447,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "Excel导入",
-    "source": "Karen 7-8月!G13:G15"
+    "source": "桔灯学科组 排课统计.xlsx:Karen 7-8月!G13:G15"
   },
   {
     "id": "excel-tiana-2026-07-03-1300-George",
@@ -6471,7 +8460,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Tiana!G70:G75"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!G70:G75"
   },
   {
     "id": "excel-lynn-2026-07-03-1500-Ziyi上门",
@@ -6484,7 +8473,7 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!G74:G79"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!G74:G79"
   },
   {
     "id": "excel-hanna-2026-07-03-1600-Nini-1v1",
@@ -6497,7 +8486,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Hanna 7-8月 !G19:G22"
+    "source": "桔灯学科组 排课统计.xlsx:Hanna 7-8月 !G19:G22"
   },
   {
     "id": "excel-charlotte-2026-07-06-0900-星河湾备考班",
@@ -6510,7 +8499,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Charlotte 7-8月!C32:C37"
+    "source": "桔灯学科组 排课统计.xlsx:Charlotte 7-8月!C32:C37"
   },
   {
     "id": "excel-hanna-2026-07-06-0900-全天营语法-基础",
@@ -6523,7 +8512,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Hanna 7-8月 !C5:C9"
+    "source": "桔灯学科组 排课统计.xlsx:Hanna 7-8月 !C5:C9"
   },
   {
     "id": "excel-karen-2026-07-06-0900-全天营语法-基础",
@@ -6536,7 +8525,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Karen 7-8月!C33:C37"
+    "source": "桔灯学科组 排课统计.xlsx:Karen 7-8月!C33:C37"
   },
   {
     "id": "excel-hanna-2026-07-06-1300-全天营写作-基础",
@@ -6549,7 +8538,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "Excel导入",
-    "source": "Hanna 7-8月 !C13:C15"
+    "source": "桔灯学科组 排课统计.xlsx:Hanna 7-8月 !C13:C15"
   },
   {
     "id": "excel-karen-2026-07-06-1300-全天营写作-基础",
@@ -6562,7 +8551,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "Excel导入",
-    "source": "Karen 7-8月!C41:C43"
+    "source": "桔灯学科组 排课统计.xlsx:Karen 7-8月!C41:C43"
   },
   {
     "id": "excel-tiana-2026-07-06-1300-George",
@@ -6575,7 +8564,20 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Tiana!M70:M75"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!M70:M75"
+  },
+  {
+    "id": "excel-sophie-2026-07-06-1530-WAICY比赛",
+    "teacherId": "sophie",
+    "teacherName": "Sophie",
+    "studentName": "WAICY比赛",
+    "course": "WAICY比赛",
+    "deliveryType": "线下",
+    "date": "2026-07-06",
+    "startTime": "15:30",
+    "endTime": "18:30",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Sophie!M19:M24"
   },
   {
     "id": "excel-tiana-2026-07-06-1900-Patrick-Valerie",
@@ -6588,7 +8590,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!M82:M85"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!M82:M85"
   },
   {
     "id": "excel-charlotte-2026-07-07-0900-星河湾备考班",
@@ -6601,7 +8603,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Charlotte 7-8月!D32:D37"
+    "source": "桔灯学科组 排课统计.xlsx:Charlotte 7-8月!D32:D37"
   },
   {
     "id": "excel-hanna-2026-07-07-0900-全天营语法-基础",
@@ -6614,7 +8616,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Hanna 7-8月 !D5:D9"
+    "source": "桔灯学科组 排课统计.xlsx:Hanna 7-8月 !D5:D9"
   },
   {
     "id": "excel-karen-2026-07-07-0900-全天营语法-基础",
@@ -6627,7 +8629,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Karen 7-8月!D33:D37"
+    "source": "桔灯学科组 排课统计.xlsx:Karen 7-8月!D33:D37"
   },
   {
     "id": "excel-lynn-2026-07-07-1100-Orion-复习",
@@ -6640,7 +8642,7 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!N67:N69"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!N67:N69"
   },
   {
     "id": "excel-hanna-2026-07-07-1300-全天营写作-基础",
@@ -6653,7 +8655,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "Excel导入",
-    "source": "Hanna 7-8月 !D13:D15"
+    "source": "桔灯学科组 排课统计.xlsx:Hanna 7-8月 !D13:D15"
   },
   {
     "id": "excel-karen-2026-07-07-1300-全天营写作-基础",
@@ -6666,7 +8668,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "Excel导入",
-    "source": "Karen 7-8月!D41:D43"
+    "source": "桔灯学科组 排课统计.xlsx:Karen 7-8月!D41:D43"
   },
   {
     "id": "excel-tiana-2026-07-07-1300-George",
@@ -6679,7 +8681,20 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Tiana!N70:N75"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!N70:N75"
+  },
+  {
+    "id": "excel-phebe-2026-07-07-1530-3-15-4-15徐汇班课",
+    "teacherId": "phebe",
+    "teacherName": "Phebe",
+    "studentName": "班课",
+    "course": "3:15-4:15徐汇班课",
+    "deliveryType": "线下",
+    "date": "2026-07-07",
+    "startTime": "15:30",
+    "endTime": "17:00",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Phebe!N19:N21"
   },
   {
     "id": "excel-tiana-2026-07-07-1900-Patrick-Valerie",
@@ -6692,7 +8707,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!N82:N85"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!N82:N85"
   },
   {
     "id": "excel-karen-2026-07-08-0900-全天营语法-基础",
@@ -6705,7 +8720,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Karen 7-8月!E33:E37"
+    "source": "桔灯学科组 排课统计.xlsx:Karen 7-8月!E33:E37"
   },
   {
     "id": "excel-karen-2026-07-08-1300-全天营写作-基础",
@@ -6718,7 +8733,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "Excel导入",
-    "source": "Karen 7-8月!E41:E43"
+    "source": "桔灯学科组 排课统计.xlsx:Karen 7-8月!E41:E43"
   },
   {
     "id": "excel-tiana-2026-07-08-1300-George",
@@ -6731,7 +8746,33 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Tiana!O70:O75"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!O70:O75"
+  },
+  {
+    "id": "excel-phebe-2026-07-08-1530-3-15-4-15徐汇班课",
+    "teacherId": "phebe",
+    "teacherName": "Phebe",
+    "studentName": "班课",
+    "course": "3:15-4:15徐汇班课",
+    "deliveryType": "线下",
+    "date": "2026-07-08",
+    "startTime": "15:30",
+    "endTime": "17:00",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Phebe!O19:O21"
+  },
+  {
+    "id": "excel-sophie-2026-07-08-1530-WAICY比赛",
+    "teacherId": "sophie",
+    "teacherName": "Sophie",
+    "studentName": "WAICY比赛",
+    "course": "WAICY比赛",
+    "deliveryType": "线下",
+    "date": "2026-07-08",
+    "startTime": "15:30",
+    "endTime": "18:30",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Sophie!O19:O24"
   },
   {
     "id": "excel-tiana-2026-07-08-1900-Patrick-Valerie",
@@ -6744,7 +8785,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!O82:O85"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!O82:O85"
   },
   {
     "id": "excel-karen-2026-07-09-0900-全天营语法-基础",
@@ -6757,7 +8798,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Karen 7-8月!F33:F37"
+    "source": "桔灯学科组 排课统计.xlsx:Karen 7-8月!F33:F37"
   },
   {
     "id": "excel-lynn-2026-07-09-1100-Orion-复习",
@@ -6770,7 +8811,7 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!P67:P69"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!P67:P69"
   },
   {
     "id": "excel-karen-2026-07-09-1300-全天营写作-基础",
@@ -6783,7 +8824,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "Excel导入",
-    "source": "Karen 7-8月!F41:F43"
+    "source": "桔灯学科组 排课统计.xlsx:Karen 7-8月!F41:F43"
   },
   {
     "id": "excel-tiana-2026-07-09-1300-George",
@@ -6796,7 +8837,33 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Tiana!P70:P75"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!P70:P75"
+  },
+  {
+    "id": "excel-phebe-2026-07-09-1530-3-15-4-15徐汇班课",
+    "teacherId": "phebe",
+    "teacherName": "Phebe",
+    "studentName": "班课",
+    "course": "3:15-4:15徐汇班课",
+    "deliveryType": "线下",
+    "date": "2026-07-09",
+    "startTime": "15:30",
+    "endTime": "17:00",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Phebe!P19:P21"
+  },
+  {
+    "id": "excel-sophie-2026-07-09-1530-WAICY比赛",
+    "teacherId": "sophie",
+    "teacherName": "Sophie",
+    "studentName": "WAICY比赛",
+    "course": "WAICY比赛",
+    "deliveryType": "线下",
+    "date": "2026-07-09",
+    "startTime": "15:30",
+    "endTime": "18:30",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Sophie!P19:P24"
   },
   {
     "id": "excel-tiana-2026-07-09-1900-Patrick-Valerie",
@@ -6809,7 +8876,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!P82:P85"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!P82:P85"
   },
   {
     "id": "excel-karen-2026-07-10-0900-全天营语法-基础",
@@ -6822,7 +8889,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Karen 7-8月!G33:G37"
+    "source": "桔灯学科组 排课统计.xlsx:Karen 7-8月!G33:G37"
   },
   {
     "id": "excel-lynn-2026-07-10-1100-Orion-复习",
@@ -6835,7 +8902,7 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!Q67:Q69"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!Q67:Q69"
   },
   {
     "id": "excel-karen-2026-07-10-1300-全天营写作-基础",
@@ -6848,7 +8915,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "Excel导入",
-    "source": "Karen 7-8月!G41:G43"
+    "source": "桔灯学科组 排课统计.xlsx:Karen 7-8月!G41:G43"
   },
   {
     "id": "excel-tiana-2026-07-10-1300-George",
@@ -6861,7 +8928,20 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Tiana!Q70:Q75"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!Q70:Q75"
+  },
+  {
+    "id": "excel-phebe-2026-07-10-1530-3-15-4-15徐汇班课",
+    "teacherId": "phebe",
+    "teacherName": "Phebe",
+    "studentName": "班课",
+    "course": "3:15-4:15徐汇班课",
+    "deliveryType": "线下",
+    "date": "2026-07-10",
+    "startTime": "15:30",
+    "endTime": "17:00",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Phebe!Q19:Q21"
   },
   {
     "id": "excel-tiana-2026-07-13-1300-George",
@@ -6874,7 +8954,20 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Tiana!W70:W75"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!W70:W75"
+  },
+  {
+    "id": "excel-sophie-2026-07-13-1530-WAICY比赛",
+    "teacherId": "sophie",
+    "teacherName": "Sophie",
+    "studentName": "WAICY比赛",
+    "course": "WAICY比赛",
+    "deliveryType": "线下",
+    "date": "2026-07-13",
+    "startTime": "15:30",
+    "endTime": "18:30",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Sophie!W19:W24"
   },
   {
     "id": "excel-tiana-2026-07-13-1900-Patrick-Valerie",
@@ -6887,7 +8980,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!W82:W85"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!W82:W85"
   },
   {
     "id": "excel-lynn-2026-07-14-1100-Orion-复习",
@@ -6900,7 +8993,7 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!X67:X69"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!X67:X69"
   },
   {
     "id": "excel-tiana-2026-07-14-1300-George",
@@ -6913,7 +9006,20 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Tiana!X70:X75"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!X70:X75"
+  },
+  {
+    "id": "excel-phebe-2026-07-14-1530-3-15-4-15徐汇班课",
+    "teacherId": "phebe",
+    "teacherName": "Phebe",
+    "studentName": "班课",
+    "course": "3:15-4:15徐汇班课",
+    "deliveryType": "线下",
+    "date": "2026-07-14",
+    "startTime": "15:30",
+    "endTime": "17:00",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Phebe!X19:X21"
   },
   {
     "id": "excel-tiana-2026-07-14-1900-Patrick-Valerie",
@@ -6926,7 +9032,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!X82:X85"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!X82:X85"
   },
   {
     "id": "excel-charlotte-2026-07-15-0900-7-15-7-26全天营语法-进阶",
@@ -6939,7 +9045,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Charlotte 7-8月!E5:E9"
+    "source": "桔灯学科组 排课统计.xlsx:Charlotte 7-8月!E5:E9"
   },
   {
     "id": "excel-charlotte-2026-07-15-1300-全天营写作-进阶",
@@ -6952,7 +9058,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "Excel导入",
-    "source": "Charlotte 7-8月!E13:E15"
+    "source": "桔灯学科组 排课统计.xlsx:Charlotte 7-8月!E13:E15"
   },
   {
     "id": "excel-lynn-2026-07-15-1500-Ziyi上门",
@@ -6965,7 +9071,33 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!Y74:Y79"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!Y74:Y79"
+  },
+  {
+    "id": "excel-phebe-2026-07-15-1530-3-15-4-15徐汇班课",
+    "teacherId": "phebe",
+    "teacherName": "Phebe",
+    "studentName": "班课",
+    "course": "3:15-4:15徐汇班课",
+    "deliveryType": "线下",
+    "date": "2026-07-15",
+    "startTime": "15:30",
+    "endTime": "17:00",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Phebe!Y19:Y21"
+  },
+  {
+    "id": "excel-sophie-2026-07-15-1530-WAICY比赛",
+    "teacherId": "sophie",
+    "teacherName": "Sophie",
+    "studentName": "WAICY比赛",
+    "course": "WAICY比赛",
+    "deliveryType": "线下",
+    "date": "2026-07-15",
+    "startTime": "15:30",
+    "endTime": "18:30",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Sophie!Y19:Y24"
   },
   {
     "id": "excel-tiana-2026-07-15-1900-Patrick-Valerie",
@@ -6978,7 +9110,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!Y82:Y85"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!Y82:Y85"
   },
   {
     "id": "excel-charlotte-2026-07-16-0900-7-15-7-26全天营语法-进阶",
@@ -6991,7 +9123,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Charlotte 7-8月!F5:F9"
+    "source": "桔灯学科组 排课统计.xlsx:Charlotte 7-8月!F5:F9"
   },
   {
     "id": "excel-lynn-2026-07-16-1100-Orion-复习",
@@ -7004,7 +9136,7 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!Z67:Z69"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!Z67:Z69"
   },
   {
     "id": "excel-charlotte-2026-07-16-1300-全天营写作-进阶",
@@ -7017,7 +9149,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "Excel导入",
-    "source": "Charlotte 7-8月!F13:F15"
+    "source": "桔灯学科组 排课统计.xlsx:Charlotte 7-8月!F13:F15"
   },
   {
     "id": "excel-lynn-2026-07-16-1500-Ziyi上门",
@@ -7030,7 +9162,20 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!Z74:Z79"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!Z74:Z79"
+  },
+  {
+    "id": "excel-phebe-2026-07-16-1530-3-15-4-15徐汇班课",
+    "teacherId": "phebe",
+    "teacherName": "Phebe",
+    "studentName": "班课",
+    "course": "3:15-4:15徐汇班课",
+    "deliveryType": "线下",
+    "date": "2026-07-16",
+    "startTime": "15:30",
+    "endTime": "17:00",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Phebe!Z19:Z21"
   },
   {
     "id": "excel-tiana-2026-07-16-1900-Patrick-Valerie",
@@ -7043,7 +9188,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!Z82:Z85"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!Z82:Z85"
   },
   {
     "id": "excel-charlotte-2026-07-17-0900-7-15-7-26全天营语法-进阶",
@@ -7056,7 +9201,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Charlotte 7-8月!G5:G9"
+    "source": "桔灯学科组 排课统计.xlsx:Charlotte 7-8月!G5:G9"
   },
   {
     "id": "excel-lynn-2026-07-17-1100-Orion-复习",
@@ -7069,7 +9214,7 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!AA67:AA69"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AA67:AA69"
   },
   {
     "id": "excel-charlotte-2026-07-17-1300-全天营写作-进阶",
@@ -7082,7 +9227,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "Excel导入",
-    "source": "Charlotte 7-8月!G13:G15"
+    "source": "桔灯学科组 排课统计.xlsx:Charlotte 7-8月!G13:G15"
   },
   {
     "id": "excel-lynn-2026-07-17-1500-Ziyi上门",
@@ -7095,7 +9240,20 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!AA74:AA79"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AA74:AA79"
+  },
+  {
+    "id": "excel-phebe-2026-07-17-1530-3-15-4-15徐汇班课",
+    "teacherId": "phebe",
+    "teacherName": "Phebe",
+    "studentName": "班课",
+    "course": "3:15-4:15徐汇班课",
+    "deliveryType": "线下",
+    "date": "2026-07-17",
+    "startTime": "15:30",
+    "endTime": "17:00",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Phebe!AA19:AA21"
   },
   {
     "id": "excel-charlotte-2026-07-20-0900-7-15-7-26全天营语法-进阶",
@@ -7108,7 +9266,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Charlotte 7-8月!C5:C9"
+    "source": "桔灯学科组 排课统计.xlsx:Charlotte 7-8月!C5:C9"
   },
   {
     "id": "excel-charlotte-2026-07-20-1300-全天营写作-进阶",
@@ -7121,7 +9279,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "Excel导入",
-    "source": "Charlotte 7-8月!C13:C15"
+    "source": "桔灯学科组 排课统计.xlsx:Charlotte 7-8月!C13:C15"
   },
   {
     "id": "excel-tiana-2026-07-20-1300-托福助教",
@@ -7134,7 +9292,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Tiana!AG70:AG75"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AG70:AG75"
   },
   {
     "id": "excel-lynn-2026-07-20-1500-Ziyi上门",
@@ -7147,7 +9305,7 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!AG74:AG79"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AG74:AG79"
   },
   {
     "id": "excel-tiana-2026-07-20-1900-Patrick-Valerie",
@@ -7160,7 +9318,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!AG82:AG85"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AG82:AG85"
   },
   {
     "id": "excel-charlotte-2026-07-21-0900-7-15-7-26全天营语法-进阶",
@@ -7173,7 +9331,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Charlotte 7-8月!D5:D9"
+    "source": "桔灯学科组 排课统计.xlsx:Charlotte 7-8月!D5:D9"
   },
   {
     "id": "excel-lynn-2026-07-21-1100-Orion-复习",
@@ -7186,7 +9344,7 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!AH67:AH69"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AH67:AH69"
   },
   {
     "id": "excel-charlotte-2026-07-21-1300-全天营写作-进阶",
@@ -7199,7 +9357,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "Excel导入",
-    "source": "Charlotte 7-8月!D13:D15"
+    "source": "桔灯学科组 排课统计.xlsx:Charlotte 7-8月!D13:D15"
   },
   {
     "id": "excel-tiana-2026-07-21-1300-托福助教",
@@ -7212,7 +9370,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Tiana!AH70:AH75"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AH70:AH75"
   },
   {
     "id": "excel-lynn-2026-07-21-1500-Ziyi上门",
@@ -7225,7 +9383,20 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!AH74:AH79"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AH74:AH79"
+  },
+  {
+    "id": "excel-phebe-2026-07-21-1530-3-15-4-15浦东",
+    "teacherId": "phebe",
+    "teacherName": "Phebe",
+    "studentName": "3:15-4:15浦东",
+    "course": "3:15-4:15浦东",
+    "deliveryType": "线下",
+    "date": "2026-07-21",
+    "startTime": "15:30",
+    "endTime": "17:00",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Phebe!AH19:AH21"
   },
   {
     "id": "excel-tiana-2026-07-21-1900-Patrick-Valerie",
@@ -7238,7 +9409,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!AH82:AH85"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AH82:AH85"
   },
   {
     "id": "excel-tiana-2026-07-22-1300-托福助教",
@@ -7251,7 +9422,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Tiana!AI70:AI75"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AI70:AI75"
   },
   {
     "id": "excel-lynn-2026-07-22-1500-Ziyi上门",
@@ -7264,7 +9435,20 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!AI74:AI79"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AI74:AI79"
+  },
+  {
+    "id": "excel-phebe-2026-07-22-1530-3-15-4-15浦东",
+    "teacherId": "phebe",
+    "teacherName": "Phebe",
+    "studentName": "3:15-4:15浦东",
+    "course": "3:15-4:15浦东",
+    "deliveryType": "线下",
+    "date": "2026-07-22",
+    "startTime": "15:30",
+    "endTime": "17:00",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Phebe!AI19:AI21"
   },
   {
     "id": "excel-tiana-2026-07-22-1900-Patrick-Valerie",
@@ -7277,7 +9461,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!AI82:AI85"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AI82:AI85"
   },
   {
     "id": "excel-lynn-2026-07-23-1100-Orion-复习",
@@ -7290,7 +9474,7 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!AJ67:AJ69"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AJ67:AJ69"
   },
   {
     "id": "excel-tiana-2026-07-23-1300-托福助教",
@@ -7303,7 +9487,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Tiana!AJ70:AJ75"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AJ70:AJ75"
   },
   {
     "id": "excel-lynn-2026-07-23-1500-Ziyi上门",
@@ -7316,7 +9500,20 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!AJ74:AJ79"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AJ74:AJ79"
+  },
+  {
+    "id": "excel-phebe-2026-07-23-1530-3-15-4-15浦东",
+    "teacherId": "phebe",
+    "teacherName": "Phebe",
+    "studentName": "3:15-4:15浦东",
+    "course": "3:15-4:15浦东",
+    "deliveryType": "线下",
+    "date": "2026-07-23",
+    "startTime": "15:30",
+    "endTime": "17:00",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Phebe!AJ19:AJ21"
   },
   {
     "id": "excel-tiana-2026-07-23-1900-Patrick-Valerie",
@@ -7329,7 +9526,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!AJ82:AJ85"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AJ82:AJ85"
   },
   {
     "id": "excel-lynn-2026-07-24-1100-Orion-复习",
@@ -7342,7 +9539,7 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!AK67:AK69"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AK67:AK69"
   },
   {
     "id": "excel-tiana-2026-07-24-1300-托福助教",
@@ -7355,7 +9552,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Tiana!AK70:AK75"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AK70:AK75"
   },
   {
     "id": "excel-lynn-2026-07-24-1500-Ziyi上门",
@@ -7368,7 +9565,20 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!AK74:AK79"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AK74:AK79"
+  },
+  {
+    "id": "excel-phebe-2026-07-24-1530-3-15-4-15浦东",
+    "teacherId": "phebe",
+    "teacherName": "Phebe",
+    "studentName": "3:15-4:15浦东",
+    "course": "3:15-4:15浦东",
+    "deliveryType": "线下",
+    "date": "2026-07-24",
+    "startTime": "15:30",
+    "endTime": "17:00",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Phebe!AK19:AK21"
   },
   {
     "id": "excel-tiana-2026-07-27-1300-George",
@@ -7381,7 +9591,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Tiana!AQ70:AQ75"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AQ70:AQ75"
   },
   {
     "id": "excel-lynn-2026-07-27-1500-Ziyi上门",
@@ -7394,7 +9604,7 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!AQ74:AQ79"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AQ74:AQ79"
   },
   {
     "id": "excel-tiana-2026-07-27-1900-Patrick-Valerie",
@@ -7407,7 +9617,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!AQ82:AQ85"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AQ82:AQ85"
   },
   {
     "id": "excel-lynn-2026-07-28-1100-Orion-复习",
@@ -7420,7 +9630,7 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!AR67:AR69"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AR67:AR69"
   },
   {
     "id": "excel-tiana-2026-07-28-1300-George",
@@ -7433,7 +9643,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Tiana!AR70:AR75"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AR70:AR75"
   },
   {
     "id": "excel-lynn-2026-07-28-1500-Ziyi上门",
@@ -7446,7 +9656,20 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!AR74:AR79"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AR74:AR79"
+  },
+  {
+    "id": "excel-phebe-2026-07-28-1530-3-15-4-15浦东",
+    "teacherId": "phebe",
+    "teacherName": "Phebe",
+    "studentName": "3:15-4:15浦东",
+    "course": "3:15-4:15浦东",
+    "deliveryType": "线下",
+    "date": "2026-07-28",
+    "startTime": "15:30",
+    "endTime": "17:00",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Phebe!AR19:AR21"
   },
   {
     "id": "excel-tiana-2026-07-28-1900-Patrick-Valerie",
@@ -7459,7 +9682,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!AR82:AR85"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AR82:AR85"
   },
   {
     "id": "excel-gioia-2026-07-29-0800-灰色不可排",
@@ -7470,9 +9693,35 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-07-29",
     "startTime": "08:00",
-    "endTime": "12:30",
+    "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!E31;Gioia!E32;Gioia!E33;Gioia!E34;Gioia!E35;Gioia!E36;Gioia!E37;Gioia!E38;Gioia!E39"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!E31"
+  },
+  {
+    "id": "excel-gioia-2026-07-29-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-29",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E31;桔灯 陪伴老师 排课统计.xlsx:Gioia!E32"
+  },
+  {
+    "id": "excel-gioia-2026-07-29-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-29",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E32;桔灯 陪伴老师 排课统计.xlsx:Gioia!E33"
   },
   {
     "id": "excel-charlotte-2026-07-29-0900-8-12-8-25全天营语法-进阶",
@@ -7485,7 +9734,98 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Charlotte 7-8月!O5:O9"
+    "source": "桔灯学科组 排课统计.xlsx:Charlotte 7-8月!O5:O9"
+  },
+  {
+    "id": "excel-gioia-2026-07-29-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-29",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E33;桔灯 陪伴老师 排课统计.xlsx:Gioia!E34"
+  },
+  {
+    "id": "excel-gioia-2026-07-29-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-29",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E34;桔灯 陪伴老师 排课统计.xlsx:Gioia!E35"
+  },
+  {
+    "id": "excel-gioia-2026-07-29-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-29",
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E35;桔灯 陪伴老师 排课统计.xlsx:Gioia!E36"
+  },
+  {
+    "id": "excel-gioia-2026-07-29-1030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-29",
+    "startTime": "10:30",
+    "endTime": "11:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E36;桔灯 陪伴老师 排课统计.xlsx:Gioia!E37"
+  },
+  {
+    "id": "excel-gioia-2026-07-29-1100-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-29",
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E37;桔灯 陪伴老师 排课统计.xlsx:Gioia!E38"
+  },
+  {
+    "id": "excel-gioia-2026-07-29-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-29",
+    "startTime": "11:30",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E38;桔灯 陪伴老师 排课统计.xlsx:Gioia!E39"
+  },
+  {
+    "id": "excel-gioia-2026-07-29-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-29",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E39"
   },
   {
     "id": "excel-charlotte-2026-07-29-1300-7-29-8-30-专项语进阶法班",
@@ -7498,7 +9838,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "15:30",
     "status": "Excel导入",
-    "source": "Charlotte 7-8月!O12:O16"
+    "source": "桔灯学科组 排课统计.xlsx:Charlotte 7-8月!O12:O16"
   },
   {
     "id": "excel-gioia-2026-07-29-1300-灰色不可排",
@@ -7509,9 +9849,22 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-07-29",
     "startTime": "13:00",
-    "endTime": "14:30",
+    "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!E41;Gioia!E42;Gioia!E43"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!E41"
+  },
+  {
+    "id": "excel-gioia-2026-07-29-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-29",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E41;桔灯 陪伴老师 排课统计.xlsx:Gioia!E42"
   },
   {
     "id": "excel-tiana-2026-07-29-1300-George",
@@ -7524,7 +9877,33 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Tiana!AS70:AS75"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AS70:AS75"
+  },
+  {
+    "id": "excel-gioia-2026-07-29-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-29",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E42;桔灯 陪伴老师 排课统计.xlsx:Gioia!E43"
+  },
+  {
+    "id": "excel-gioia-2026-07-29-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-29",
+    "startTime": "14:00",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E43"
   },
   {
     "id": "excel-gioia-2026-07-29-1430-Rainbow-1v1",
@@ -7537,7 +9916,7 @@ export const importedLessons = [
     "startTime": "14:30",
     "endTime": "17:30",
     "status": "不可用",
-    "source": "Gioia!E44:E49"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E44:E49"
   },
   {
     "id": "excel-lynn-2026-07-29-1500-Ziyi上门",
@@ -7550,7 +9929,20 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!AS74:AS79"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AS74:AS79"
+  },
+  {
+    "id": "excel-phebe-2026-07-29-1530-3-15-4-15浦东",
+    "teacherId": "phebe",
+    "teacherName": "Phebe",
+    "studentName": "3:15-4:15浦东",
+    "course": "3:15-4:15浦东",
+    "deliveryType": "线下",
+    "date": "2026-07-29",
+    "startTime": "15:30",
+    "endTime": "17:00",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Phebe!AS19:AS21"
   },
   {
     "id": "excel-gioia-2026-07-29-1730-灰色不可排",
@@ -7561,9 +9953,61 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-07-29",
     "startTime": "17:30",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!E50"
+  },
+  {
+    "id": "excel-gioia-2026-07-29-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-29",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E50;桔灯 陪伴老师 排课统计.xlsx:Gioia!E51"
+  },
+  {
+    "id": "excel-gioia-2026-07-29-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-29",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E51;桔灯 陪伴老师 排课统计.xlsx:Gioia!E52"
+  },
+  {
+    "id": "excel-gioia-2026-07-29-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-29",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E52;桔灯 陪伴老师 排课统计.xlsx:Gioia!E53"
+  },
+  {
+    "id": "excel-gioia-2026-07-29-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-29",
+    "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!E50;Gioia!E51;Gioia!E52;Gioia!E53;Gioia!E54"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E53;桔灯 陪伴老师 排课统计.xlsx:Gioia!E54"
   },
   {
     "id": "excel-tiana-2026-07-29-1900-Patrick-Valerie",
@@ -7576,7 +10020,20 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!AS82:AS85"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AS82:AS85"
+  },
+  {
+    "id": "excel-gioia-2026-07-29-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-29",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E54"
   },
   {
     "id": "excel-gioia-2026-07-30-0800-灰色不可排",
@@ -7587,9 +10044,35 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-07-30",
     "startTime": "08:00",
-    "endTime": "12:30",
+    "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!F31;Gioia!F32;Gioia!F33;Gioia!F34;Gioia!F35;Gioia!F36;Gioia!F37;Gioia!F38;Gioia!F39"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!F31"
+  },
+  {
+    "id": "excel-gioia-2026-07-30-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-30",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F31;桔灯 陪伴老师 排课统计.xlsx:Gioia!F32"
+  },
+  {
+    "id": "excel-gioia-2026-07-30-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-30",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F32;桔灯 陪伴老师 排课统计.xlsx:Gioia!F33"
   },
   {
     "id": "excel-charlotte-2026-07-30-0900-8-12-8-26全天营语法-进阶",
@@ -7602,7 +10085,72 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Charlotte 7-8月!P5:P9"
+    "source": "桔灯学科组 排课统计.xlsx:Charlotte 7-8月!P5:P9"
+  },
+  {
+    "id": "excel-gioia-2026-07-30-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-30",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F33;桔灯 陪伴老师 排课统计.xlsx:Gioia!F34"
+  },
+  {
+    "id": "excel-gioia-2026-07-30-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-30",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F34;桔灯 陪伴老师 排课统计.xlsx:Gioia!F35"
+  },
+  {
+    "id": "excel-gioia-2026-07-30-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-30",
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F35;桔灯 陪伴老师 排课统计.xlsx:Gioia!F36"
+  },
+  {
+    "id": "excel-gioia-2026-07-30-1030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-30",
+    "startTime": "10:30",
+    "endTime": "11:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F36;桔灯 陪伴老师 排课统计.xlsx:Gioia!F37"
+  },
+  {
+    "id": "excel-gioia-2026-07-30-1100-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-30",
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F37;桔灯 陪伴老师 排课统计.xlsx:Gioia!F38"
   },
   {
     "id": "excel-lynn-2026-07-30-1100-Orion-复习",
@@ -7615,7 +10163,33 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!AT67:AT69"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AT67:AT69"
+  },
+  {
+    "id": "excel-gioia-2026-07-30-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-30",
+    "startTime": "11:30",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F38;桔灯 陪伴老师 排课统计.xlsx:Gioia!F39"
+  },
+  {
+    "id": "excel-gioia-2026-07-30-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-30",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F39"
   },
   {
     "id": "excel-gioia-2026-07-30-1300-灰色不可排",
@@ -7626,9 +10200,22 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-07-30",
     "startTime": "13:00",
-    "endTime": "20:00",
+    "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!F41;Gioia!F42;Gioia!F43;Gioia!F44;Gioia!F45;Gioia!F46;Gioia!F47;Gioia!F48;Gioia!F49;Gioia!F50;Gioia!F51;Gioia!F52;Gioia!F53;Gioia!F54"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!F41"
+  },
+  {
+    "id": "excel-gioia-2026-07-30-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-30",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F41;桔灯 陪伴老师 排课统计.xlsx:Gioia!F42"
   },
   {
     "id": "excel-tiana-2026-07-30-1300-George",
@@ -7641,7 +10228,59 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Tiana!AT70:AT75"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AT70:AT75"
+  },
+  {
+    "id": "excel-gioia-2026-07-30-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-30",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F42;桔灯 陪伴老师 排课统计.xlsx:Gioia!F43"
+  },
+  {
+    "id": "excel-gioia-2026-07-30-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-30",
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F43;桔灯 陪伴老师 排课统计.xlsx:Gioia!F44"
+  },
+  {
+    "id": "excel-gioia-2026-07-30-1430-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-30",
+    "startTime": "14:30",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F44;桔灯 陪伴老师 排课统计.xlsx:Gioia!F45"
+  },
+  {
+    "id": "excel-gioia-2026-07-30-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-30",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F45;桔灯 陪伴老师 排课统计.xlsx:Gioia!F46"
   },
   {
     "id": "excel-lynn-2026-07-30-1500-Ziyi上门",
@@ -7654,7 +10293,46 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!AT74:AT79"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AT74:AT79"
+  },
+  {
+    "id": "excel-gioia-2026-07-30-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-30",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F46;桔灯 陪伴老师 排课统计.xlsx:Gioia!F47"
+  },
+  {
+    "id": "excel-phebe-2026-07-30-1530-3-15-4-15浦东",
+    "teacherId": "phebe",
+    "teacherName": "Phebe",
+    "studentName": "3:15-4:15浦东",
+    "course": "3:15-4:15浦东",
+    "deliveryType": "线下",
+    "date": "2026-07-30",
+    "startTime": "15:30",
+    "endTime": "17:00",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Phebe!AT19:AT21"
+  },
+  {
+    "id": "excel-gioia-2026-07-30-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-30",
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F47;桔灯 陪伴老师 排课统计.xlsx:Gioia!F48"
   },
   {
     "id": "excel-charlotte-2026-07-30-1630-Vivi-1v1",
@@ -7667,7 +10345,85 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "17:30",
     "status": "Excel导入",
-    "source": "Charlotte 7-8月!P19:P20"
+    "source": "桔灯学科组 排课统计.xlsx:Charlotte 7-8月!P19:P20"
+  },
+  {
+    "id": "excel-gioia-2026-07-30-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-30",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F48;桔灯 陪伴老师 排课统计.xlsx:Gioia!F49"
+  },
+  {
+    "id": "excel-gioia-2026-07-30-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-30",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F49;桔灯 陪伴老师 排课统计.xlsx:Gioia!F50"
+  },
+  {
+    "id": "excel-gioia-2026-07-30-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-30",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F50;桔灯 陪伴老师 排课统计.xlsx:Gioia!F51"
+  },
+  {
+    "id": "excel-gioia-2026-07-30-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-30",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F51;桔灯 陪伴老师 排课统计.xlsx:Gioia!F52"
+  },
+  {
+    "id": "excel-gioia-2026-07-30-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-30",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F52;桔灯 陪伴老师 排课统计.xlsx:Gioia!F53"
+  },
+  {
+    "id": "excel-gioia-2026-07-30-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-30",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F53;桔灯 陪伴老师 排课统计.xlsx:Gioia!F54"
   },
   {
     "id": "excel-tiana-2026-07-30-1900-Patrick-Valerie",
@@ -7680,7 +10436,20 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "21:00",
     "status": "Excel导入",
-    "source": "Tiana!AT82:AT85"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AT82:AT85"
+  },
+  {
+    "id": "excel-gioia-2026-07-30-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-30",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F54"
   },
   {
     "id": "excel-gioia-2026-07-31-0800-灰色不可排",
@@ -7691,9 +10460,35 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-07-31",
     "startTime": "08:00",
-    "endTime": "12:30",
+    "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!G31;Gioia!G32;Gioia!G33;Gioia!G34;Gioia!G35;Gioia!G36;Gioia!G37;Gioia!G38;Gioia!G39"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!G31"
+  },
+  {
+    "id": "excel-gioia-2026-07-31-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-31",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G31;桔灯 陪伴老师 排课统计.xlsx:Gioia!G32"
+  },
+  {
+    "id": "excel-gioia-2026-07-31-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-31",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G32;桔灯 陪伴老师 排课统计.xlsx:Gioia!G33"
   },
   {
     "id": "excel-charlotte-2026-07-31-0900-8-12-8-27全天营语法-进阶",
@@ -7706,7 +10501,72 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Charlotte 7-8月!Q5:Q9"
+    "source": "桔灯学科组 排课统计.xlsx:Charlotte 7-8月!Q5:Q9"
+  },
+  {
+    "id": "excel-gioia-2026-07-31-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-31",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G33;桔灯 陪伴老师 排课统计.xlsx:Gioia!G34"
+  },
+  {
+    "id": "excel-gioia-2026-07-31-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-31",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G34;桔灯 陪伴老师 排课统计.xlsx:Gioia!G35"
+  },
+  {
+    "id": "excel-gioia-2026-07-31-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-31",
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G35;桔灯 陪伴老师 排课统计.xlsx:Gioia!G36"
+  },
+  {
+    "id": "excel-gioia-2026-07-31-1030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-31",
+    "startTime": "10:30",
+    "endTime": "11:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G36;桔灯 陪伴老师 排课统计.xlsx:Gioia!G37"
+  },
+  {
+    "id": "excel-gioia-2026-07-31-1100-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-31",
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G37;桔灯 陪伴老师 排课统计.xlsx:Gioia!G38"
   },
   {
     "id": "excel-lynn-2026-07-31-1100-Orion-复习",
@@ -7719,7 +10579,33 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!AU67:AU69"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AU67:AU69"
+  },
+  {
+    "id": "excel-gioia-2026-07-31-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-31",
+    "startTime": "11:30",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G38;桔灯 陪伴老师 排课统计.xlsx:Gioia!G39"
+  },
+  {
+    "id": "excel-gioia-2026-07-31-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-31",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G39"
   },
   {
     "id": "excel-charlotte-2026-07-31-1300-7-29-8-30-专项语进阶法班",
@@ -7732,7 +10618,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "15:30",
     "status": "Excel导入",
-    "source": "Charlotte 7-8月!Q12:Q16"
+    "source": "桔灯学科组 排课统计.xlsx:Charlotte 7-8月!Q12:Q16"
   },
   {
     "id": "excel-gioia-2026-07-31-1300-灰色不可排",
@@ -7743,9 +10629,22 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-07-31",
     "startTime": "13:00",
-    "endTime": "14:30",
+    "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!G41;Gioia!G42;Gioia!G43"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!G41"
+  },
+  {
+    "id": "excel-gioia-2026-07-31-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-31",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G41;桔灯 陪伴老师 排课统计.xlsx:Gioia!G42"
   },
   {
     "id": "excel-tiana-2026-07-31-1300-George",
@@ -7758,7 +10657,33 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Tiana!AU70:AU75"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Tiana!AU70:AU75"
+  },
+  {
+    "id": "excel-gioia-2026-07-31-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-31",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G42;桔灯 陪伴老师 排课统计.xlsx:Gioia!G43"
+  },
+  {
+    "id": "excel-gioia-2026-07-31-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-31",
+    "startTime": "14:00",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G43"
   },
   {
     "id": "excel-gioia-2026-07-31-1430-Rainbow-1v1",
@@ -7771,7 +10696,7 @@ export const importedLessons = [
     "startTime": "14:30",
     "endTime": "17:30",
     "status": "不可用",
-    "source": "Gioia!G44:G49"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G44:G49"
   },
   {
     "id": "excel-lynn-2026-07-31-1500-Ziyi上门",
@@ -7784,7 +10709,20 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!AU74:AU79"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AU74:AU79"
+  },
+  {
+    "id": "excel-phebe-2026-07-31-1530-3-15-4-15浦东",
+    "teacherId": "phebe",
+    "teacherName": "Phebe",
+    "studentName": "3:15-4:15浦东",
+    "course": "3:15-4:15浦东",
+    "deliveryType": "线下",
+    "date": "2026-07-31",
+    "startTime": "15:30",
+    "endTime": "17:00",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Phebe!AU19:AU21"
   },
   {
     "id": "excel-gioia-2026-07-31-1730-灰色不可排",
@@ -7795,9 +10733,22 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-07-31",
     "startTime": "17:30",
-    "endTime": "20:00",
+    "endTime": "18:00",
     "status": "不可用",
-    "source": "Gioia!G50;Gioia!G51;Gioia!G52;Gioia!G53;Gioia!G54"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!G50"
+  },
+  {
+    "id": "excel-gioia-2026-07-31-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-31",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G50;桔灯 陪伴老师 排课统计.xlsx:Gioia!G51"
   },
   {
     "id": "excel-charlotte-2026-07-31-1800-A1-线上课",
@@ -7810,7 +10761,33 @@ export const importedLessons = [
     "startTime": "18:00",
     "endTime": "19:00",
     "status": "Excel导入",
-    "source": "Charlotte 7-8月!Q22:Q23"
+    "source": "桔灯学科组 排课统计.xlsx:Charlotte 7-8月!Q22:Q23"
+  },
+  {
+    "id": "excel-gioia-2026-07-31-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-31",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G51;桔灯 陪伴老师 排课统计.xlsx:Gioia!G52"
+  },
+  {
+    "id": "excel-gioia-2026-07-31-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-31",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G52;桔灯 陪伴老师 排课统计.xlsx:Gioia!G53"
   },
   {
     "id": "excel-charlotte-2026-07-31-1900-A1线上课",
@@ -7823,7 +10800,33 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "Excel导入",
-    "source": "Charlotte 7-8月!Q24:Q25"
+    "source": "桔灯学科组 排课统计.xlsx:Charlotte 7-8月!Q24:Q25"
+  },
+  {
+    "id": "excel-gioia-2026-07-31-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-31",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G53;桔灯 陪伴老师 排课统计.xlsx:Gioia!G54"
+  },
+  {
+    "id": "excel-gioia-2026-07-31-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-07-31",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G54"
   },
   {
     "id": "excel-gioia-2026-08-01-0800-灰色不可排",
@@ -7834,9 +10837,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-01",
     "startTime": "08:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!H31:H34"
+  },
+  {
+    "id": "excel-gioia-2026-08-01-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-01",
+    "startTime": "08:00",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H31:H34;桔灯 陪伴老师 排课统计.xlsx:Gioia!H35:H38"
+  },
+  {
+    "id": "excel-gioia-2026-08-01-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-01",
+    "startTime": "10:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!H31:H34;Gioia!H35:H38;Gioia!H39"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H35:H38;桔灯 陪伴老师 排课统计.xlsx:Gioia!H39"
+  },
+  {
+    "id": "excel-gioia-2026-08-01-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-01",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H39"
   },
   {
     "id": "excel-gioia-2026-08-01-1300-灰色不可排",
@@ -7847,9 +10889,61 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-01",
     "startTime": "13:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!H41:H46"
+  },
+  {
+    "id": "excel-gioia-2026-08-01-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-01",
+    "startTime": "13:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H41:H46;桔灯 陪伴老师 排课统计.xlsx:Gioia!H47:H52"
+  },
+  {
+    "id": "excel-gioia-2026-08-01-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-01",
+    "startTime": "16:00",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H47:H52;桔灯 陪伴老师 排课统计.xlsx:Gioia!H53"
+  },
+  {
+    "id": "excel-gioia-2026-08-01-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-01",
+    "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!H41:H46;Gioia!H47:H52;Gioia!H53;Gioia!H54"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H53;桔灯 陪伴老师 排课统计.xlsx:Gioia!H54"
+  },
+  {
+    "id": "excel-gioia-2026-08-01-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-01",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H54"
   },
   {
     "id": "excel-gioia-2026-08-02-0800-灰色不可排",
@@ -7860,9 +10954,35 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-02",
     "startTime": "08:00",
-    "endTime": "12:30",
+    "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!I31;Gioia!I32;Gioia!I33:I38;Gioia!I39"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!I31"
+  },
+  {
+    "id": "excel-gioia-2026-08-02-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-02",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I31;桔灯 陪伴老师 排课统计.xlsx:Gioia!I32"
+  },
+  {
+    "id": "excel-gioia-2026-08-02-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-02",
+    "startTime": "08:30",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I32;桔灯 陪伴老师 排课统计.xlsx:Gioia!I33:I38"
   },
   {
     "id": "excel-charlotte-2026-08-02-0900-A1",
@@ -7875,7 +10995,33 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Charlotte 7-8月!S5:S10"
+    "source": "桔灯学科组 排课统计.xlsx:Charlotte 7-8月!S5:S10"
+  },
+  {
+    "id": "excel-gioia-2026-08-02-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-02",
+    "startTime": "09:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I33:I38;桔灯 陪伴老师 排课统计.xlsx:Gioia!I39"
+  },
+  {
+    "id": "excel-gioia-2026-08-02-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-02",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I39"
   },
   {
     "id": "excel-charlotte-2026-08-02-1300-A1",
@@ -7888,7 +11034,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Charlotte 7-8月!S12:S17"
+    "source": "桔灯学科组 排课统计.xlsx:Charlotte 7-8月!S12:S17"
   },
   {
     "id": "excel-gioia-2026-08-02-1300-灰色不可排",
@@ -7899,9 +11045,126 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-02",
     "startTime": "13:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!I41:I46"
+  },
+  {
+    "id": "excel-gioia-2026-08-02-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-02",
+    "startTime": "13:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I41:I46;桔灯 陪伴老师 排课统计.xlsx:Gioia!I47"
+  },
+  {
+    "id": "excel-gioia-2026-08-02-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-02",
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I47;桔灯 陪伴老师 排课统计.xlsx:Gioia!I48"
+  },
+  {
+    "id": "excel-gioia-2026-08-02-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-02",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I48;桔灯 陪伴老师 排课统计.xlsx:Gioia!I49"
+  },
+  {
+    "id": "excel-gioia-2026-08-02-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-02",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I49;桔灯 陪伴老师 排课统计.xlsx:Gioia!I50"
+  },
+  {
+    "id": "excel-gioia-2026-08-02-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-02",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I50;桔灯 陪伴老师 排课统计.xlsx:Gioia!I51"
+  },
+  {
+    "id": "excel-gioia-2026-08-02-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-02",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I51;桔灯 陪伴老师 排课统计.xlsx:Gioia!I52"
+  },
+  {
+    "id": "excel-gioia-2026-08-02-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-02",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I52;桔灯 陪伴老师 排课统计.xlsx:Gioia!I53"
+  },
+  {
+    "id": "excel-gioia-2026-08-02-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-02",
+    "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!I41:I46;Gioia!I47;Gioia!I48;Gioia!I49;Gioia!I50;Gioia!I51;Gioia!I52;Gioia!I53;Gioia!I54"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I53;桔灯 陪伴老师 排课统计.xlsx:Gioia!I54"
+  },
+  {
+    "id": "excel-gioia-2026-08-02-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-02",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I54"
   },
   {
     "id": "excel-gioia-2026-08-03-0800-灰色不可排",
@@ -7912,9 +11175,35 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-03",
     "startTime": "08:00",
-    "endTime": "12:30",
+    "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!C31;Gioia!C32;Gioia!C33;Gioia!C34;Gioia!C35;Gioia!C36;Gioia!C37;Gioia!C38;Gioia!C39"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!C31"
+  },
+  {
+    "id": "excel-gioia-2026-08-03-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-03",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C31;桔灯 陪伴老师 排课统计.xlsx:Gioia!C32"
+  },
+  {
+    "id": "excel-gioia-2026-08-03-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-03",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C32;桔灯 陪伴老师 排课统计.xlsx:Gioia!C33"
   },
   {
     "id": "excel-charlotte-2026-08-03-0900-8-12-8-23全天营语法-进阶",
@@ -7927,7 +11216,98 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Charlotte 7-8月!M5:M9"
+    "source": "桔灯学科组 排课统计.xlsx:Charlotte 7-8月!M5:M9"
+  },
+  {
+    "id": "excel-gioia-2026-08-03-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-03",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C33;桔灯 陪伴老师 排课统计.xlsx:Gioia!C34"
+  },
+  {
+    "id": "excel-gioia-2026-08-03-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-03",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C34;桔灯 陪伴老师 排课统计.xlsx:Gioia!C35"
+  },
+  {
+    "id": "excel-gioia-2026-08-03-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-03",
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C35;桔灯 陪伴老师 排课统计.xlsx:Gioia!C36"
+  },
+  {
+    "id": "excel-gioia-2026-08-03-1030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-03",
+    "startTime": "10:30",
+    "endTime": "11:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C36;桔灯 陪伴老师 排课统计.xlsx:Gioia!C37"
+  },
+  {
+    "id": "excel-gioia-2026-08-03-1100-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-03",
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C37;桔灯 陪伴老师 排课统计.xlsx:Gioia!C38"
+  },
+  {
+    "id": "excel-gioia-2026-08-03-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-03",
+    "startTime": "11:30",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C38;桔灯 陪伴老师 排课统计.xlsx:Gioia!C39"
+  },
+  {
+    "id": "excel-gioia-2026-08-03-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-03",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C39"
   },
   {
     "id": "excel-charlotte-2026-08-03-1300-7-29-8-30-专项语进阶法班",
@@ -7940,7 +11320,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "15:30",
     "status": "Excel导入",
-    "source": "Charlotte 7-8月!M12:M16"
+    "source": "桔灯学科组 排课统计.xlsx:Charlotte 7-8月!M12:M16"
   },
   {
     "id": "excel-gioia-2026-08-03-1300-灰色不可排",
@@ -7951,9 +11331,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-03",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!C41"
+  },
+  {
+    "id": "excel-gioia-2026-08-03-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-03",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C41;桔灯 陪伴老师 排课统计.xlsx:Gioia!C42"
+  },
+  {
+    "id": "excel-gioia-2026-08-03-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-03",
+    "startTime": "13:30",
     "endTime": "14:30",
     "status": "不可用",
-    "source": "Gioia!C41;Gioia!C42;Gioia!C43"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C42;桔灯 陪伴老师 排课统计.xlsx:Gioia!C43"
+  },
+  {
+    "id": "excel-gioia-2026-08-03-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-03",
+    "startTime": "14:00",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C43"
   },
   {
     "id": "excel-gioia-2026-08-03-1430-Rainbow-1v1",
@@ -7966,7 +11385,7 @@ export const importedLessons = [
     "startTime": "14:30",
     "endTime": "17:30",
     "status": "不可用",
-    "source": "Gioia!C44:C49"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C44:C49"
   },
   {
     "id": "excel-lynn-2026-08-03-1500-Ziyi上门",
@@ -7979,7 +11398,7 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!C103:C108"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!C103:C108"
   },
   {
     "id": "excel-gioia-2026-08-03-1730-灰色不可排",
@@ -7990,9 +11409,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-03",
     "startTime": "17:30",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!C50"
+  },
+  {
+    "id": "excel-gioia-2026-08-03-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-03",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C50;桔灯 陪伴老师 排课统计.xlsx:Gioia!C51"
+  },
+  {
+    "id": "excel-gioia-2026-08-03-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-03",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C51;桔灯 陪伴老师 排课统计.xlsx:Gioia!C52"
+  },
+  {
+    "id": "excel-gioia-2026-08-03-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-03",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C52;桔灯 陪伴老师 排课统计.xlsx:Gioia!C53"
+  },
+  {
+    "id": "excel-gioia-2026-08-03-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-03",
+    "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!C50;Gioia!C51;Gioia!C52;Gioia!C53;Gioia!C54"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C53;桔灯 陪伴老师 排课统计.xlsx:Gioia!C54"
+  },
+  {
+    "id": "excel-gioia-2026-08-03-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-03",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C54"
   },
   {
     "id": "excel-gioia-2026-08-04-0800-灰色不可排",
@@ -8003,9 +11487,35 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-04",
     "startTime": "08:00",
-    "endTime": "12:30",
+    "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!D31;Gioia!D32;Gioia!D33;Gioia!D34;Gioia!D35;Gioia!D36;Gioia!D37;Gioia!D38;Gioia!D39"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!D31"
+  },
+  {
+    "id": "excel-gioia-2026-08-04-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-04",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D31;桔灯 陪伴老师 排课统计.xlsx:Gioia!D32"
+  },
+  {
+    "id": "excel-gioia-2026-08-04-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-04",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D32;桔灯 陪伴老师 排课统计.xlsx:Gioia!D33"
   },
   {
     "id": "excel-charlotte-2026-08-04-0900-8-12-8-24全天营语法-进阶",
@@ -8018,7 +11528,72 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Charlotte 7-8月!N5:N9"
+    "source": "桔灯学科组 排课统计.xlsx:Charlotte 7-8月!N5:N9"
+  },
+  {
+    "id": "excel-gioia-2026-08-04-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-04",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D33;桔灯 陪伴老师 排课统计.xlsx:Gioia!D34"
+  },
+  {
+    "id": "excel-gioia-2026-08-04-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-04",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D34;桔灯 陪伴老师 排课统计.xlsx:Gioia!D35"
+  },
+  {
+    "id": "excel-gioia-2026-08-04-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-04",
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D35;桔灯 陪伴老师 排课统计.xlsx:Gioia!D36"
+  },
+  {
+    "id": "excel-gioia-2026-08-04-1030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-04",
+    "startTime": "10:30",
+    "endTime": "11:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D36;桔灯 陪伴老师 排课统计.xlsx:Gioia!D37"
+  },
+  {
+    "id": "excel-gioia-2026-08-04-1100-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-04",
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D37;桔灯 陪伴老师 排课统计.xlsx:Gioia!D38"
   },
   {
     "id": "excel-lynn-2026-08-04-1100-Orion-复习",
@@ -8031,7 +11606,33 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!D96:D98"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!D96:D98"
+  },
+  {
+    "id": "excel-gioia-2026-08-04-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-04",
+    "startTime": "11:30",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D38;桔灯 陪伴老师 排课统计.xlsx:Gioia!D39"
+  },
+  {
+    "id": "excel-gioia-2026-08-04-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-04",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D39"
   },
   {
     "id": "excel-gioia-2026-08-04-1300-灰色不可排",
@@ -8042,9 +11643,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-04",
     "startTime": "13:00",
-    "endTime": "20:00",
+    "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!D41;Gioia!D42;Gioia!D43;Gioia!D44;Gioia!D45;Gioia!D46;Gioia!D47;Gioia!D48;Gioia!D49;Gioia!D50;Gioia!D51;Gioia!D52;Gioia!D53;Gioia!D54"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!D41"
+  },
+  {
+    "id": "excel-gioia-2026-08-04-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-04",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D41;桔灯 陪伴老师 排课统计.xlsx:Gioia!D42"
+  },
+  {
+    "id": "excel-gioia-2026-08-04-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-04",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D42;桔灯 陪伴老师 排课统计.xlsx:Gioia!D43"
+  },
+  {
+    "id": "excel-gioia-2026-08-04-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-04",
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D43;桔灯 陪伴老师 排课统计.xlsx:Gioia!D44"
+  },
+  {
+    "id": "excel-gioia-2026-08-04-1430-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-04",
+    "startTime": "14:30",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D44;桔灯 陪伴老师 排课统计.xlsx:Gioia!D45"
+  },
+  {
+    "id": "excel-gioia-2026-08-04-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-04",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D45;桔灯 陪伴老师 排课统计.xlsx:Gioia!D46"
   },
   {
     "id": "excel-lynn-2026-08-04-1500-Ziyi上门",
@@ -8057,7 +11723,59 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!D103:D108"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!D103:D108"
+  },
+  {
+    "id": "excel-phebe-2026-08-04-1500-3-15-4-15徐汇班课",
+    "teacherId": "phebe",
+    "teacherName": "Phebe",
+    "studentName": "班课",
+    "course": "3:15-4:15徐汇班课",
+    "deliveryType": "线下",
+    "date": "2026-08-04",
+    "startTime": "15:00",
+    "endTime": "16:30",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Phebe!D52:D54"
+  },
+  {
+    "id": "excel-sophie-2026-08-04-1500-3-15-4-15徐汇或浦东",
+    "teacherId": "sophie",
+    "teacherName": "Sophie",
+    "studentName": "3:15-4:15徐汇或浦东",
+    "course": "3:15-4:15徐汇或浦东",
+    "deliveryType": "线下",
+    "date": "2026-08-04",
+    "startTime": "15:00",
+    "endTime": "16:30",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Sophie!D49:D51"
+  },
+  {
+    "id": "excel-gioia-2026-08-04-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-04",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D46;桔灯 陪伴老师 排课统计.xlsx:Gioia!D47"
+  },
+  {
+    "id": "excel-gioia-2026-08-04-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-04",
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D47;桔灯 陪伴老师 排课统计.xlsx:Gioia!D48"
   },
   {
     "id": "excel-charlotte-2026-08-04-1630-Vivi-1v1",
@@ -8070,7 +11788,98 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "17:30",
     "status": "Excel导入",
-    "source": "Charlotte 7-8月!N19:N20"
+    "source": "桔灯学科组 排课统计.xlsx:Charlotte 7-8月!N19:N20"
+  },
+  {
+    "id": "excel-gioia-2026-08-04-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-04",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D48;桔灯 陪伴老师 排课统计.xlsx:Gioia!D49"
+  },
+  {
+    "id": "excel-gioia-2026-08-04-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-04",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D49;桔灯 陪伴老师 排课统计.xlsx:Gioia!D50"
+  },
+  {
+    "id": "excel-gioia-2026-08-04-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-04",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D50;桔灯 陪伴老师 排课统计.xlsx:Gioia!D51"
+  },
+  {
+    "id": "excel-gioia-2026-08-04-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-04",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D51;桔灯 陪伴老师 排课统计.xlsx:Gioia!D52"
+  },
+  {
+    "id": "excel-gioia-2026-08-04-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-04",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D52;桔灯 陪伴老师 排课统计.xlsx:Gioia!D53"
+  },
+  {
+    "id": "excel-gioia-2026-08-04-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-04",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D53;桔灯 陪伴老师 排课统计.xlsx:Gioia!D54"
+  },
+  {
+    "id": "excel-gioia-2026-08-04-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-04",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D54"
   },
   {
     "id": "excel-gioia-2026-08-05-0800-灰色不可排",
@@ -8081,9 +11890,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-05",
     "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!O31"
+  },
+  {
+    "id": "excel-gioia-2026-08-05-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-05",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O31;桔灯 陪伴老师 排课统计.xlsx:Gioia!O32"
+  },
+  {
+    "id": "excel-gioia-2026-08-05-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-05",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O32;桔灯 陪伴老师 排课统计.xlsx:Gioia!O33"
+  },
+  {
+    "id": "excel-gioia-2026-08-05-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-05",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O33;桔灯 陪伴老师 排课统计.xlsx:Gioia!O34"
+  },
+  {
+    "id": "excel-gioia-2026-08-05-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-05",
+    "startTime": "09:30",
     "endTime": "10:30",
     "status": "不可用",
-    "source": "Gioia!O31;Gioia!O32;Gioia!O33;Gioia!O34;Gioia!O35"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O34;桔灯 陪伴老师 排课统计.xlsx:Gioia!O35"
+  },
+  {
+    "id": "excel-gioia-2026-08-05-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-05",
+    "startTime": "10:00",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O35"
   },
   {
     "id": "excel-gioia-2026-08-05-1030-Cailen-1v1",
@@ -8096,7 +11970,7 @@ export const importedLessons = [
     "startTime": "10:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!O36:O39"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O36:O39"
   },
   {
     "id": "excel-gioia-2026-08-05-1300-灰色不可排",
@@ -8107,9 +11981,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-05",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!O41"
+  },
+  {
+    "id": "excel-gioia-2026-08-05-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-05",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O41;桔灯 陪伴老师 排课统计.xlsx:Gioia!O42"
+  },
+  {
+    "id": "excel-gioia-2026-08-05-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-05",
+    "startTime": "13:30",
     "endTime": "14:30",
     "status": "不可用",
-    "source": "Gioia!O41;Gioia!O42;Gioia!O43"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O42;桔灯 陪伴老师 排课统计.xlsx:Gioia!O43"
+  },
+  {
+    "id": "excel-gioia-2026-08-05-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-05",
+    "startTime": "14:00",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O43"
   },
   {
     "id": "excel-gioia-2026-08-05-1430-Rainbow-1v1",
@@ -8122,7 +12035,7 @@ export const importedLessons = [
     "startTime": "14:30",
     "endTime": "17:30",
     "status": "不可用",
-    "source": "Gioia!O44:O49"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O44:O49"
   },
   {
     "id": "excel-lynn-2026-08-05-1500-Ziyi上门",
@@ -8135,7 +12048,33 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!E103:E108"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!E103:E108"
+  },
+  {
+    "id": "excel-phebe-2026-08-05-1500-3-15-4-15徐汇班课",
+    "teacherId": "phebe",
+    "teacherName": "Phebe",
+    "studentName": "班课",
+    "course": "3:15-4:15徐汇班课",
+    "deliveryType": "线下",
+    "date": "2026-08-05",
+    "startTime": "15:00",
+    "endTime": "16:30",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Phebe!E52:E54"
+  },
+  {
+    "id": "excel-sophie-2026-08-05-1500-3-15-4-15徐汇或浦东",
+    "teacherId": "sophie",
+    "teacherName": "Sophie",
+    "studentName": "3:15-4:15徐汇或浦东",
+    "course": "3:15-4:15徐汇或浦东",
+    "deliveryType": "线下",
+    "date": "2026-08-05",
+    "startTime": "15:00",
+    "endTime": "16:30",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Sophie!E49:E51"
   },
   {
     "id": "excel-gioia-2026-08-05-1730-灰色不可排",
@@ -8146,9 +12085,87 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-05",
     "startTime": "17:30",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!O50"
+  },
+  {
+    "id": "excel-gioia-2026-08-05-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-05",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O50;桔灯 陪伴老师 排课统计.xlsx:Gioia!O51"
+  },
+  {
+    "id": "excel-gioia-2026-08-05-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-05",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O51;桔灯 陪伴老师 排课统计.xlsx:Gioia!O52"
+  },
+  {
+    "id": "excel-gioia-2026-08-05-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-05",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O52;桔灯 陪伴老师 排课统计.xlsx:Gioia!O53"
+  },
+  {
+    "id": "excel-gioia-2026-08-05-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-05",
+    "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!O50;Gioia!O51;Gioia!O52;Gioia!O53;Gioia!O54"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O53;桔灯 陪伴老师 排课统计.xlsx:Gioia!O54"
+  },
+  {
+    "id": "excel-gioia-2026-08-05-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-05",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O54"
+  },
+  {
+    "id": "excel-gioia-2026-08-06-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-06",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!P31"
   },
   {
     "id": "excel-gioia-2026-08-06-0800-灰色不可排",
@@ -8161,7 +12178,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!P31;Gioia!P32"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P31;桔灯 陪伴老师 排课统计.xlsx:Gioia!P32"
+  },
+  {
+    "id": "excel-gioia-2026-08-06-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-06",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P32"
   },
   {
     "id": "excel-gioia-2026-08-06-0900-双胞胎",
@@ -8174,7 +12204,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!P33:P38"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P33:P38"
   },
   {
     "id": "excel-lynn-2026-08-06-1100-Orion-复习",
@@ -8187,7 +12217,7 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!F96:F98"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!F96:F98"
   },
   {
     "id": "excel-gioia-2026-08-06-1200-灰色不可排",
@@ -8200,7 +12230,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!P39"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P39"
   },
   {
     "id": "excel-gioia-2026-08-06-1300-灰色不可排",
@@ -8211,9 +12241,61 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-06",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!P41"
+  },
+  {
+    "id": "excel-gioia-2026-08-06-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-06",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P41;桔灯 陪伴老师 排课统计.xlsx:Gioia!P42"
+  },
+  {
+    "id": "excel-gioia-2026-08-06-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-06",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P42;桔灯 陪伴老师 排课统计.xlsx:Gioia!P43"
+  },
+  {
+    "id": "excel-gioia-2026-08-06-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-06",
+    "startTime": "14:00",
     "endTime": "15:00",
     "status": "不可用",
-    "source": "Gioia!P41;Gioia!P42;Gioia!P43;Gioia!P44"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P43;桔灯 陪伴老师 排课统计.xlsx:Gioia!P44"
+  },
+  {
+    "id": "excel-gioia-2026-08-06-1430-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-06",
+    "startTime": "14:30",
+    "endTime": "15:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P44"
   },
   {
     "id": "excel-gioia-2026-08-06-1500-Cailen-1v1",
@@ -8226,7 +12308,7 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "17:00",
     "status": "不可用",
-    "source": "Gioia!P45:P48"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P45:P48"
   },
   {
     "id": "excel-lynn-2026-08-06-1500-Ziyi上门",
@@ -8239,7 +12321,33 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!F103:F108"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!F103:F108"
+  },
+  {
+    "id": "excel-phebe-2026-08-06-1500-3-15-4-15徐汇班课",
+    "teacherId": "phebe",
+    "teacherName": "Phebe",
+    "studentName": "班课",
+    "course": "3:15-4:15徐汇班课",
+    "deliveryType": "线下",
+    "date": "2026-08-06",
+    "startTime": "15:00",
+    "endTime": "16:30",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Phebe!F52:F54"
+  },
+  {
+    "id": "excel-sophie-2026-08-06-1500-3-15-4-15徐汇或浦东",
+    "teacherId": "sophie",
+    "teacherName": "Sophie",
+    "studentName": "3:15-4:15徐汇或浦东",
+    "course": "3:15-4:15徐汇或浦东",
+    "deliveryType": "线下",
+    "date": "2026-08-06",
+    "startTime": "15:00",
+    "endTime": "16:30",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Sophie!F49:F51"
   },
   {
     "id": "excel-gioia-2026-08-06-1700-灰色不可排",
@@ -8250,9 +12358,87 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-06",
     "startTime": "17:00",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!P49"
+  },
+  {
+    "id": "excel-gioia-2026-08-06-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-06",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P49;桔灯 陪伴老师 排课统计.xlsx:Gioia!P50"
+  },
+  {
+    "id": "excel-gioia-2026-08-06-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-06",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P50;桔灯 陪伴老师 排课统计.xlsx:Gioia!P51"
+  },
+  {
+    "id": "excel-gioia-2026-08-06-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-06",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P51;桔灯 陪伴老师 排课统计.xlsx:Gioia!P52"
+  },
+  {
+    "id": "excel-gioia-2026-08-06-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-06",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P52;桔灯 陪伴老师 排课统计.xlsx:Gioia!P53"
+  },
+  {
+    "id": "excel-gioia-2026-08-06-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-06",
+    "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!P49;Gioia!P50;Gioia!P51;Gioia!P52;Gioia!P53;Gioia!P54"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P53;桔灯 陪伴老师 排课统计.xlsx:Gioia!P54"
+  },
+  {
+    "id": "excel-gioia-2026-08-06-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-06",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P54"
   },
   {
     "id": "excel-gioia-2026-08-07-0800-灰色不可排",
@@ -8263,9 +12449,100 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-07",
     "startTime": "08:00",
-    "endTime": "12:30",
+    "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!Q31;Gioia!Q32;Gioia!Q33;Gioia!Q34;Gioia!Q35;Gioia!Q36;Gioia!Q37;Gioia!Q38;Gioia!Q39"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Q31"
+  },
+  {
+    "id": "excel-gioia-2026-08-07-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-07",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q31;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q32"
+  },
+  {
+    "id": "excel-gioia-2026-08-07-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-07",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q32;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q33"
+  },
+  {
+    "id": "excel-gioia-2026-08-07-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-07",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q33;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q34"
+  },
+  {
+    "id": "excel-gioia-2026-08-07-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-07",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q34;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q35"
+  },
+  {
+    "id": "excel-gioia-2026-08-07-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-07",
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q35;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q36"
+  },
+  {
+    "id": "excel-gioia-2026-08-07-1030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-07",
+    "startTime": "10:30",
+    "endTime": "11:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q36;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q37"
+  },
+  {
+    "id": "excel-gioia-2026-08-07-1100-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-07",
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q37;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q38"
   },
   {
     "id": "excel-lynn-2026-08-07-1100-Orion-复习",
@@ -8278,7 +12555,33 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!G96:G98"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!G96:G98"
+  },
+  {
+    "id": "excel-gioia-2026-08-07-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-07",
+    "startTime": "11:30",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q38;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q39"
+  },
+  {
+    "id": "excel-gioia-2026-08-07-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-07",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q39"
   },
   {
     "id": "excel-gioia-2026-08-07-1300-灰色不可排",
@@ -8289,9 +12592,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-07",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Q41"
+  },
+  {
+    "id": "excel-gioia-2026-08-07-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-07",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q41;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q42"
+  },
+  {
+    "id": "excel-gioia-2026-08-07-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-07",
+    "startTime": "13:30",
     "endTime": "14:30",
     "status": "不可用",
-    "source": "Gioia!Q41;Gioia!Q42;Gioia!Q43"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q42;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q43"
+  },
+  {
+    "id": "excel-gioia-2026-08-07-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-07",
+    "startTime": "14:00",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q43"
   },
   {
     "id": "excel-gioia-2026-08-07-1430-Rainbow-1v1",
@@ -8304,7 +12646,7 @@ export const importedLessons = [
     "startTime": "14:30",
     "endTime": "17:30",
     "status": "不可用",
-    "source": "Gioia!Q44:Q49"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q44:Q49"
   },
   {
     "id": "excel-lynn-2026-08-07-1500-Ziyi上门",
@@ -8317,7 +12659,33 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!G103:G108"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!G103:G108"
+  },
+  {
+    "id": "excel-phebe-2026-08-07-1500-3-15-4-15徐汇班课",
+    "teacherId": "phebe",
+    "teacherName": "Phebe",
+    "studentName": "班课",
+    "course": "3:15-4:15徐汇班课",
+    "deliveryType": "线下",
+    "date": "2026-08-07",
+    "startTime": "15:00",
+    "endTime": "16:30",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Phebe!G52:G54"
+  },
+  {
+    "id": "excel-sophie-2026-08-07-1500-3-15-4-15徐汇或浦东",
+    "teacherId": "sophie",
+    "teacherName": "Sophie",
+    "studentName": "3:15-4:15徐汇或浦东",
+    "course": "3:15-4:15徐汇或浦东",
+    "deliveryType": "线下",
+    "date": "2026-08-07",
+    "startTime": "15:00",
+    "endTime": "16:30",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Sophie!G49:G51"
   },
   {
     "id": "excel-gioia-2026-08-07-1730-灰色不可排",
@@ -8328,9 +12696,87 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-07",
     "startTime": "17:30",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Q50"
+  },
+  {
+    "id": "excel-gioia-2026-08-07-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-07",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q50;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q51"
+  },
+  {
+    "id": "excel-gioia-2026-08-07-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-07",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q51;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q52"
+  },
+  {
+    "id": "excel-gioia-2026-08-07-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-07",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q52;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q53"
+  },
+  {
+    "id": "excel-gioia-2026-08-07-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-07",
+    "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!Q50;Gioia!Q51;Gioia!Q52;Gioia!Q53;Gioia!Q54"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q53;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q54"
+  },
+  {
+    "id": "excel-gioia-2026-08-07-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-07",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q54"
+  },
+  {
+    "id": "excel-gioia-2026-08-08-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-08",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!R31"
   },
   {
     "id": "excel-gioia-2026-08-08-0800-灰色不可排",
@@ -8343,7 +12789,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!R31;Gioia!R32"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R31;桔灯 陪伴老师 排课统计.xlsx:Gioia!R32"
+  },
+  {
+    "id": "excel-gioia-2026-08-08-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-08",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R32"
   },
   {
     "id": "excel-gioia-2026-08-08-0900-双胞胎",
@@ -8356,7 +12815,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!R33:R38"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R33:R38"
   },
   {
     "id": "excel-gioia-2026-08-08-1200-灰色不可排",
@@ -8369,7 +12828,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!R39"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R39"
   },
   {
     "id": "excel-gioia-2026-08-08-1300-灰色不可排",
@@ -8380,9 +12839,61 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-08",
     "startTime": "13:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!R41:R46"
+  },
+  {
+    "id": "excel-gioia-2026-08-08-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-08",
+    "startTime": "13:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R41:R46;桔灯 陪伴老师 排课统计.xlsx:Gioia!R47:R52"
+  },
+  {
+    "id": "excel-gioia-2026-08-08-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-08",
+    "startTime": "16:00",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R47:R52;桔灯 陪伴老师 排课统计.xlsx:Gioia!R53"
+  },
+  {
+    "id": "excel-gioia-2026-08-08-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-08",
+    "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!R41:R46;Gioia!R47:R52;Gioia!R53;Gioia!R54"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R53;桔灯 陪伴老师 排课统计.xlsx:Gioia!R54"
+  },
+  {
+    "id": "excel-gioia-2026-08-08-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-08",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R54"
   },
   {
     "id": "excel-gioia-2026-08-09-0800-灰色不可排",
@@ -8393,9 +12904,61 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-09",
     "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!S31"
+  },
+  {
+    "id": "excel-gioia-2026-08-09-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-09",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S31;桔灯 陪伴老师 排课统计.xlsx:Gioia!S32"
+  },
+  {
+    "id": "excel-gioia-2026-08-09-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-09",
+    "startTime": "08:30",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S32;桔灯 陪伴老师 排课统计.xlsx:Gioia!S33:S38"
+  },
+  {
+    "id": "excel-gioia-2026-08-09-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-09",
+    "startTime": "09:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!S31;Gioia!S32;Gioia!S33:S38;Gioia!S39"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S33:S38;桔灯 陪伴老师 排课统计.xlsx:Gioia!S39"
+  },
+  {
+    "id": "excel-gioia-2026-08-09-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-09",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S39"
   },
   {
     "id": "excel-gioia-2026-08-09-1300-灰色不可排",
@@ -8406,9 +12969,126 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-09",
     "startTime": "13:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!S41:S46"
+  },
+  {
+    "id": "excel-gioia-2026-08-09-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-09",
+    "startTime": "13:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S41:S46;桔灯 陪伴老师 排课统计.xlsx:Gioia!S47"
+  },
+  {
+    "id": "excel-gioia-2026-08-09-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-09",
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S47;桔灯 陪伴老师 排课统计.xlsx:Gioia!S48"
+  },
+  {
+    "id": "excel-gioia-2026-08-09-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-09",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S48;桔灯 陪伴老师 排课统计.xlsx:Gioia!S49"
+  },
+  {
+    "id": "excel-gioia-2026-08-09-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-09",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S49;桔灯 陪伴老师 排课统计.xlsx:Gioia!S50"
+  },
+  {
+    "id": "excel-gioia-2026-08-09-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-09",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S50;桔灯 陪伴老师 排课统计.xlsx:Gioia!S51"
+  },
+  {
+    "id": "excel-gioia-2026-08-09-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-09",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S51;桔灯 陪伴老师 排课统计.xlsx:Gioia!S52"
+  },
+  {
+    "id": "excel-gioia-2026-08-09-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-09",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S52;桔灯 陪伴老师 排课统计.xlsx:Gioia!S53"
+  },
+  {
+    "id": "excel-gioia-2026-08-09-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-09",
+    "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!S41:S46;Gioia!S47;Gioia!S48;Gioia!S49;Gioia!S50;Gioia!S51;Gioia!S52;Gioia!S53;Gioia!S54"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S53;桔灯 陪伴老师 排课统计.xlsx:Gioia!S54"
+  },
+  {
+    "id": "excel-gioia-2026-08-09-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-09",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S54"
   },
   {
     "id": "excel-gioia-2026-08-10-0800-灰色不可排",
@@ -8419,9 +13099,126 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-10",
     "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!M31"
+  },
+  {
+    "id": "excel-gioia-2026-08-10-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-10",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M31;桔灯 陪伴老师 排课统计.xlsx:Gioia!M32"
+  },
+  {
+    "id": "excel-gioia-2026-08-10-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-10",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M32;桔灯 陪伴老师 排课统计.xlsx:Gioia!M33"
+  },
+  {
+    "id": "excel-gioia-2026-08-10-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-10",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M33;桔灯 陪伴老师 排课统计.xlsx:Gioia!M34"
+  },
+  {
+    "id": "excel-gioia-2026-08-10-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-10",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M34;桔灯 陪伴老师 排课统计.xlsx:Gioia!M35"
+  },
+  {
+    "id": "excel-gioia-2026-08-10-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-10",
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M35;桔灯 陪伴老师 排课统计.xlsx:Gioia!M36"
+  },
+  {
+    "id": "excel-gioia-2026-08-10-1030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-10",
+    "startTime": "10:30",
+    "endTime": "11:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M36;桔灯 陪伴老师 排课统计.xlsx:Gioia!M37"
+  },
+  {
+    "id": "excel-gioia-2026-08-10-1100-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-10",
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M37;桔灯 陪伴老师 排课统计.xlsx:Gioia!M38"
+  },
+  {
+    "id": "excel-gioia-2026-08-10-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-10",
+    "startTime": "11:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!M31;Gioia!M32;Gioia!M33;Gioia!M34;Gioia!M35;Gioia!M36;Gioia!M37;Gioia!M38;Gioia!M39"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M38;桔灯 陪伴老师 排课统计.xlsx:Gioia!M39"
+  },
+  {
+    "id": "excel-gioia-2026-08-10-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-10",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M39"
   },
   {
     "id": "excel-gioia-2026-08-10-1300-灰色不可排",
@@ -8432,9 +13229,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-10",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!M41"
+  },
+  {
+    "id": "excel-gioia-2026-08-10-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-10",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M41;桔灯 陪伴老师 排课统计.xlsx:Gioia!M42"
+  },
+  {
+    "id": "excel-gioia-2026-08-10-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-10",
+    "startTime": "13:30",
     "endTime": "14:30",
     "status": "不可用",
-    "source": "Gioia!M41;Gioia!M42;Gioia!M43"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M42;桔灯 陪伴老师 排课统计.xlsx:Gioia!M43"
+  },
+  {
+    "id": "excel-gioia-2026-08-10-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-10",
+    "startTime": "14:00",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M43"
   },
   {
     "id": "excel-gioia-2026-08-10-1430-Rainbow-1v1",
@@ -8447,7 +13283,7 @@ export const importedLessons = [
     "startTime": "14:30",
     "endTime": "17:30",
     "status": "不可用",
-    "source": "Gioia!M44:M49"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M44:M49"
   },
   {
     "id": "excel-lynn-2026-08-10-1500-Ziyi上门",
@@ -8460,7 +13296,7 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!M103:M108"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!M103:M108"
   },
   {
     "id": "excel-gioia-2026-08-10-1730-灰色不可排",
@@ -8471,9 +13307,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-10",
     "startTime": "17:30",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!M50"
+  },
+  {
+    "id": "excel-gioia-2026-08-10-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-10",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M50;桔灯 陪伴老师 排课统计.xlsx:Gioia!M51"
+  },
+  {
+    "id": "excel-gioia-2026-08-10-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-10",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M51;桔灯 陪伴老师 排课统计.xlsx:Gioia!M52"
+  },
+  {
+    "id": "excel-gioia-2026-08-10-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-10",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M52;桔灯 陪伴老师 排课统计.xlsx:Gioia!M53"
+  },
+  {
+    "id": "excel-gioia-2026-08-10-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-10",
+    "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!M50;Gioia!M51;Gioia!M52;Gioia!M53;Gioia!M54"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M53;桔灯 陪伴老师 排课统计.xlsx:Gioia!M54"
+  },
+  {
+    "id": "excel-gioia-2026-08-10-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-10",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M54"
   },
   {
     "id": "excel-gioia-2026-08-11-0800-灰色不可排",
@@ -8484,9 +13385,100 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-11",
     "startTime": "08:00",
-    "endTime": "12:30",
+    "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!N31;Gioia!N32;Gioia!N33;Gioia!N34;Gioia!N35;Gioia!N36;Gioia!N37;Gioia!N38;Gioia!N39"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!N31"
+  },
+  {
+    "id": "excel-gioia-2026-08-11-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-11",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N31;桔灯 陪伴老师 排课统计.xlsx:Gioia!N32"
+  },
+  {
+    "id": "excel-gioia-2026-08-11-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-11",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N32;桔灯 陪伴老师 排课统计.xlsx:Gioia!N33"
+  },
+  {
+    "id": "excel-gioia-2026-08-11-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-11",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N33;桔灯 陪伴老师 排课统计.xlsx:Gioia!N34"
+  },
+  {
+    "id": "excel-gioia-2026-08-11-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-11",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N34;桔灯 陪伴老师 排课统计.xlsx:Gioia!N35"
+  },
+  {
+    "id": "excel-gioia-2026-08-11-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-11",
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N35;桔灯 陪伴老师 排课统计.xlsx:Gioia!N36"
+  },
+  {
+    "id": "excel-gioia-2026-08-11-1030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-11",
+    "startTime": "10:30",
+    "endTime": "11:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N36;桔灯 陪伴老师 排课统计.xlsx:Gioia!N37"
+  },
+  {
+    "id": "excel-gioia-2026-08-11-1100-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-11",
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N37;桔灯 陪伴老师 排课统计.xlsx:Gioia!N38"
   },
   {
     "id": "excel-lynn-2026-08-11-1100-Orion-复习",
@@ -8499,7 +13491,33 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!N96:N98"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!N96:N98"
+  },
+  {
+    "id": "excel-gioia-2026-08-11-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-11",
+    "startTime": "11:30",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N38;桔灯 陪伴老师 排课统计.xlsx:Gioia!N39"
+  },
+  {
+    "id": "excel-gioia-2026-08-11-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-11",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N39"
   },
   {
     "id": "excel-gioia-2026-08-11-1300-灰色不可排",
@@ -8510,9 +13528,61 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-11",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!N41"
+  },
+  {
+    "id": "excel-gioia-2026-08-11-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-11",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N41;桔灯 陪伴老师 排课统计.xlsx:Gioia!N42"
+  },
+  {
+    "id": "excel-gioia-2026-08-11-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-11",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N42;桔灯 陪伴老师 排课统计.xlsx:Gioia!N43"
+  },
+  {
+    "id": "excel-gioia-2026-08-11-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-11",
+    "startTime": "14:00",
     "endTime": "15:00",
     "status": "不可用",
-    "source": "Gioia!N41;Gioia!N42;Gioia!N43;Gioia!N44"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N43;桔灯 陪伴老师 排课统计.xlsx:Gioia!N44"
+  },
+  {
+    "id": "excel-gioia-2026-08-11-1430-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-11",
+    "startTime": "14:30",
+    "endTime": "15:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N44"
   },
   {
     "id": "excel-gioia-2026-08-11-1500-Cailen-1v1",
@@ -8525,7 +13595,7 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "17:00",
     "status": "不可用",
-    "source": "Gioia!N45:N48"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N45:N48"
   },
   {
     "id": "excel-lynn-2026-08-11-1500-Ziyi上门",
@@ -8538,7 +13608,33 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!N103:N108"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!N103:N108"
+  },
+  {
+    "id": "excel-phebe-2026-08-11-1500-3-15-4-15徐汇班课",
+    "teacherId": "phebe",
+    "teacherName": "Phebe",
+    "studentName": "班课",
+    "course": "3:15-4:15徐汇班课",
+    "deliveryType": "线下",
+    "date": "2026-08-11",
+    "startTime": "15:00",
+    "endTime": "16:30",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Phebe!N52:N54"
+  },
+  {
+    "id": "excel-sophie-2026-08-11-1500-3-15-4-15徐汇或浦东",
+    "teacherId": "sophie",
+    "teacherName": "Sophie",
+    "studentName": "3:15-4:15徐汇或浦东",
+    "course": "3:15-4:15徐汇或浦东",
+    "deliveryType": "线下",
+    "date": "2026-08-11",
+    "startTime": "15:00",
+    "endTime": "16:30",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Sophie!N49:N51"
   },
   {
     "id": "excel-gioia-2026-08-11-1700-灰色不可排",
@@ -8549,9 +13645,100 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-11",
     "startTime": "17:00",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!N49"
+  },
+  {
+    "id": "excel-gioia-2026-08-11-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-11",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N49;桔灯 陪伴老师 排课统计.xlsx:Gioia!N50"
+  },
+  {
+    "id": "excel-gioia-2026-08-11-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-11",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N50;桔灯 陪伴老师 排课统计.xlsx:Gioia!N51"
+  },
+  {
+    "id": "excel-gioia-2026-08-11-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-11",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N51;桔灯 陪伴老师 排课统计.xlsx:Gioia!N52"
+  },
+  {
+    "id": "excel-gioia-2026-08-11-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-11",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N52;桔灯 陪伴老师 排课统计.xlsx:Gioia!N53"
+  },
+  {
+    "id": "excel-gioia-2026-08-11-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-11",
+    "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!N49;Gioia!N50;Gioia!N51;Gioia!N52;Gioia!N53;Gioia!N54"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N53;桔灯 陪伴老师 排课统计.xlsx:Gioia!N54"
+  },
+  {
+    "id": "excel-gioia-2026-08-11-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-11",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N54"
+  },
+  {
+    "id": "excel-gioia-2026-08-12-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-12",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!E59"
   },
   {
     "id": "excel-gioia-2026-08-12-0800-灰色不可排",
@@ -8564,7 +13751,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!E59;Gioia!E60"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E59;桔灯 陪伴老师 排课统计.xlsx:Gioia!E60"
+  },
+  {
+    "id": "excel-gioia-2026-08-12-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-12",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E60"
   },
   {
     "id": "excel-gioia-2026-08-12-0900-全天营语法-基础",
@@ -8577,7 +13777,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "不可用",
-    "source": "Gioia!E61:E65"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E61:E65"
   },
   {
     "id": "excel-karen-2026-08-12-0900-全天营语法-基础",
@@ -8590,7 +13790,20 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Karen 7-8月!O5:O9"
+    "source": "桔灯学科组 排课统计.xlsx:Karen 7-8月!O5:O9"
+  },
+  {
+    "id": "excel-gioia-2026-08-12-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-12",
+    "startTime": "11:30",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!E66"
   },
   {
     "id": "excel-gioia-2026-08-12-1130-灰色不可排",
@@ -8603,7 +13816,20 @@ export const importedLessons = [
     "startTime": "11:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!E66;Gioia!E67"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E66;桔灯 陪伴老师 排课统计.xlsx:Gioia!E67"
+  },
+  {
+    "id": "excel-gioia-2026-08-12-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-12",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E67"
   },
   {
     "id": "excel-gioia-2026-08-12-1300-全天营写作-进阶",
@@ -8616,7 +13842,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "不可用",
-    "source": "Gioia!E69:E71"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E69:E71"
   },
   {
     "id": "excel-hanna-2026-08-12-1300-全天营写作-进阶",
@@ -8629,7 +13855,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "Excel导入",
-    "source": "Hanna 7-8月 !O12:O14"
+    "source": "桔灯学科组 排课统计.xlsx:Hanna 7-8月 !O12:O14"
   },
   {
     "id": "excel-karen-2026-08-12-1300-全天营写作-基础",
@@ -8642,7 +13868,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "Excel导入",
-    "source": "Karen 7-8月!O13:O15"
+    "source": "桔灯学科组 排课统计.xlsx:Karen 7-8月!O13:O15"
   },
   {
     "id": "excel-gioia-2026-08-12-1430-灰色不可排",
@@ -8655,7 +13881,7 @@ export const importedLessons = [
     "startTime": "14:30",
     "endTime": "15:00",
     "status": "不可用",
-    "source": "Gioia!E72"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E72"
   },
   {
     "id": "excel-gioia-2026-08-12-1500-Cailen-1v1",
@@ -8668,7 +13894,7 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "17:00",
     "status": "不可用",
-    "source": "Gioia!E73:E76"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E73:E76"
   },
   {
     "id": "excel-lynn-2026-08-12-1500-Ziyi上门",
@@ -8681,7 +13907,33 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!O103:O108"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!O103:O108"
+  },
+  {
+    "id": "excel-phebe-2026-08-12-1500-3-15-4-15徐汇班课",
+    "teacherId": "phebe",
+    "teacherName": "Phebe",
+    "studentName": "班课",
+    "course": "3:15-4:15徐汇班课",
+    "deliveryType": "线下",
+    "date": "2026-08-12",
+    "startTime": "15:00",
+    "endTime": "16:30",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Phebe!O52:O54"
+  },
+  {
+    "id": "excel-sophie-2026-08-12-1500-3-15-4-15徐汇或浦东",
+    "teacherId": "sophie",
+    "teacherName": "Sophie",
+    "studentName": "3:15-4:15徐汇或浦东",
+    "course": "3:15-4:15徐汇或浦东",
+    "deliveryType": "线下",
+    "date": "2026-08-12",
+    "startTime": "15:00",
+    "endTime": "16:30",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Sophie!O49:O51"
   },
   {
     "id": "excel-hanna-2026-08-12-1600-Nini-1v1",
@@ -8694,7 +13946,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Hanna 7-8月 !O18:O21"
+    "source": "桔灯学科组 排课统计.xlsx:Hanna 7-8月 !O18:O21"
   },
   {
     "id": "excel-gioia-2026-08-12-1700-灰色不可排",
@@ -8705,9 +13957,100 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-12",
     "startTime": "17:00",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!E77"
+  },
+  {
+    "id": "excel-gioia-2026-08-12-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-12",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E77;桔灯 陪伴老师 排课统计.xlsx:Gioia!E78"
+  },
+  {
+    "id": "excel-gioia-2026-08-12-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-12",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E78;桔灯 陪伴老师 排课统计.xlsx:Gioia!E79"
+  },
+  {
+    "id": "excel-gioia-2026-08-12-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-12",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E79;桔灯 陪伴老师 排课统计.xlsx:Gioia!E80"
+  },
+  {
+    "id": "excel-gioia-2026-08-12-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-12",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E80;桔灯 陪伴老师 排课统计.xlsx:Gioia!E81"
+  },
+  {
+    "id": "excel-gioia-2026-08-12-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-12",
+    "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!E77;Gioia!E78;Gioia!E79;Gioia!E80;Gioia!E81;Gioia!E82"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E81;桔灯 陪伴老师 排课统计.xlsx:Gioia!E82"
+  },
+  {
+    "id": "excel-gioia-2026-08-12-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-12",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E82"
+  },
+  {
+    "id": "excel-gioia-2026-08-13-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-13",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!F59"
   },
   {
     "id": "excel-gioia-2026-08-13-0800-灰色不可排",
@@ -8720,7 +14063,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!F59;Gioia!F60"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F59;桔灯 陪伴老师 排课统计.xlsx:Gioia!F60"
+  },
+  {
+    "id": "excel-gioia-2026-08-13-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-13",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F60"
   },
   {
     "id": "excel-gioia-2026-08-13-0900-全天营语法-基础",
@@ -8733,7 +14089,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "不可用",
-    "source": "Gioia!F61:F65"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F61:F65"
   },
   {
     "id": "excel-karen-2026-08-13-0900-全天营语法-基础",
@@ -8746,7 +14102,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Karen 7-8月!P5:P9"
+    "source": "桔灯学科组 排课统计.xlsx:Karen 7-8月!P5:P9"
   },
   {
     "id": "excel-lynn-2026-08-13-1100-Orion-复习",
@@ -8759,7 +14115,20 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!P96:P98"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!P96:P98"
+  },
+  {
+    "id": "excel-gioia-2026-08-13-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-13",
+    "startTime": "11:30",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!F66"
   },
   {
     "id": "excel-gioia-2026-08-13-1130-灰色不可排",
@@ -8772,7 +14141,20 @@ export const importedLessons = [
     "startTime": "11:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!F66;Gioia!F67"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F66;桔灯 陪伴老师 排课统计.xlsx:Gioia!F67"
+  },
+  {
+    "id": "excel-gioia-2026-08-13-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-13",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F67"
   },
   {
     "id": "excel-gioia-2026-08-13-1300-全天营写作-进阶",
@@ -8785,7 +14167,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "不可用",
-    "source": "Gioia!F69:F71"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F69:F71"
   },
   {
     "id": "excel-hanna-2026-08-13-1300-全天营写作-进阶",
@@ -8798,7 +14180,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "Excel导入",
-    "source": "Hanna 7-8月 !P12:P14"
+    "source": "桔灯学科组 排课统计.xlsx:Hanna 7-8月 !P12:P14"
   },
   {
     "id": "excel-karen-2026-08-13-1300-全天营写作-基础",
@@ -8811,7 +14193,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "Excel导入",
-    "source": "Karen 7-8月!P13:P15"
+    "source": "桔灯学科组 排课统计.xlsx:Karen 7-8月!P13:P15"
   },
   {
     "id": "excel-gioia-2026-08-13-1430-George-1v1",
@@ -8824,7 +14206,7 @@ export const importedLessons = [
     "startTime": "14:30",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!F72:F75"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F72:F75"
   },
   {
     "id": "excel-lynn-2026-08-13-1500-Ziyi上门",
@@ -8837,7 +14219,33 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!P103:P108"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!P103:P108"
+  },
+  {
+    "id": "excel-phebe-2026-08-13-1500-3-15-4-15徐汇班课",
+    "teacherId": "phebe",
+    "teacherName": "Phebe",
+    "studentName": "班课",
+    "course": "3:15-4:15徐汇班课",
+    "deliveryType": "线下",
+    "date": "2026-08-13",
+    "startTime": "15:00",
+    "endTime": "16:30",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Phebe!P52:P54"
+  },
+  {
+    "id": "excel-sophie-2026-08-13-1500-3-15-4-15徐汇或浦东",
+    "teacherId": "sophie",
+    "teacherName": "Sophie",
+    "studentName": "3:15-4:15徐汇或浦东",
+    "course": "3:15-4:15徐汇或浦东",
+    "deliveryType": "线下",
+    "date": "2026-08-13",
+    "startTime": "15:00",
+    "endTime": "16:30",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Sophie!P49:P51"
   },
   {
     "id": "excel-gioia-2026-08-13-1630-灰色不可排",
@@ -8848,9 +14256,113 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-13",
     "startTime": "16:30",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!F76"
+  },
+  {
+    "id": "excel-gioia-2026-08-13-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-13",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F76;桔灯 陪伴老师 排课统计.xlsx:Gioia!F77"
+  },
+  {
+    "id": "excel-gioia-2026-08-13-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-13",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F77;桔灯 陪伴老师 排课统计.xlsx:Gioia!F78"
+  },
+  {
+    "id": "excel-gioia-2026-08-13-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-13",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F78;桔灯 陪伴老师 排课统计.xlsx:Gioia!F79"
+  },
+  {
+    "id": "excel-gioia-2026-08-13-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-13",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F79;桔灯 陪伴老师 排课统计.xlsx:Gioia!F80"
+  },
+  {
+    "id": "excel-gioia-2026-08-13-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-13",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F80;桔灯 陪伴老师 排课统计.xlsx:Gioia!F81"
+  },
+  {
+    "id": "excel-gioia-2026-08-13-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-13",
+    "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!F76;Gioia!F77;Gioia!F78;Gioia!F79;Gioia!F80;Gioia!F81;Gioia!F82"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F81;桔灯 陪伴老师 排课统计.xlsx:Gioia!F82"
+  },
+  {
+    "id": "excel-gioia-2026-08-13-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-13",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F82"
+  },
+  {
+    "id": "excel-gioia-2026-08-14-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-14",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!G59"
   },
   {
     "id": "excel-gioia-2026-08-14-0800-灰色不可排",
@@ -8863,7 +14375,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!G59;Gioia!G60"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G59;桔灯 陪伴老师 排课统计.xlsx:Gioia!G60"
+  },
+  {
+    "id": "excel-gioia-2026-08-14-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-14",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G60"
   },
   {
     "id": "excel-gioia-2026-08-14-0900-全天营语法-基础",
@@ -8876,7 +14401,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "不可用",
-    "source": "Gioia!G61:G65"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G61:G65"
   },
   {
     "id": "excel-karen-2026-08-14-0900-全天营语法-基础",
@@ -8889,7 +14414,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Karen 7-8月!Q5:Q9"
+    "source": "桔灯学科组 排课统计.xlsx:Karen 7-8月!Q5:Q9"
   },
   {
     "id": "excel-lynn-2026-08-14-1100-Orion-复习",
@@ -8902,7 +14427,20 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!Q96:Q98"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!Q96:Q98"
+  },
+  {
+    "id": "excel-gioia-2026-08-14-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-14",
+    "startTime": "11:30",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!G66"
   },
   {
     "id": "excel-gioia-2026-08-14-1130-灰色不可排",
@@ -8915,7 +14453,20 @@ export const importedLessons = [
     "startTime": "11:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!G66;Gioia!G67"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G66;桔灯 陪伴老师 排课统计.xlsx:Gioia!G67"
+  },
+  {
+    "id": "excel-gioia-2026-08-14-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-14",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G67"
   },
   {
     "id": "excel-gioia-2026-08-14-1300-全天营写作-进阶",
@@ -8928,7 +14479,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "不可用",
-    "source": "Gioia!G69:G71"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G69:G71"
   },
   {
     "id": "excel-hanna-2026-08-14-1300-全天营写作-进阶",
@@ -8941,7 +14492,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "Excel导入",
-    "source": "Hanna 7-8月 !Q12:Q14"
+    "source": "桔灯学科组 排课统计.xlsx:Hanna 7-8月 !Q12:Q14"
   },
   {
     "id": "excel-karen-2026-08-14-1300-全天营写作-基础",
@@ -8954,7 +14505,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "Excel导入",
-    "source": "Karen 7-8月!Q13:Q15"
+    "source": "桔灯学科组 排课统计.xlsx:Karen 7-8月!Q13:Q15"
   },
   {
     "id": "excel-gioia-2026-08-14-1430-George-1v1",
@@ -8967,7 +14518,7 @@ export const importedLessons = [
     "startTime": "14:30",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!G72:G75"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G72:G75"
   },
   {
     "id": "excel-lynn-2026-08-14-1500-Ziyi上门",
@@ -8980,7 +14531,33 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Lynn!Q103:Q108"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!Q103:Q108"
+  },
+  {
+    "id": "excel-phebe-2026-08-14-1500-3-15-4-15徐汇班课",
+    "teacherId": "phebe",
+    "teacherName": "Phebe",
+    "studentName": "班课",
+    "course": "3:15-4:15徐汇班课",
+    "deliveryType": "线下",
+    "date": "2026-08-14",
+    "startTime": "15:00",
+    "endTime": "16:30",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Phebe!Q52:Q54"
+  },
+  {
+    "id": "excel-sophie-2026-08-14-1500-3-15-4-15徐汇或浦东",
+    "teacherId": "sophie",
+    "teacherName": "Sophie",
+    "studentName": "3:15-4:15徐汇或浦东",
+    "course": "3:15-4:15徐汇或浦东",
+    "deliveryType": "线下",
+    "date": "2026-08-14",
+    "startTime": "15:00",
+    "endTime": "16:30",
+    "status": "Excel导入",
+    "source": "桔灯学科组 排课统计.xlsx:Sophie!Q49:Q51"
   },
   {
     "id": "excel-hanna-2026-08-14-1600-Nini-1v1",
@@ -8993,7 +14570,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Hanna 7-8月 !Q18:Q21"
+    "source": "桔灯学科组 排课统计.xlsx:Hanna 7-8月 !Q18:Q21"
   },
   {
     "id": "excel-gioia-2026-08-14-1630-灰色不可排",
@@ -9004,9 +14581,113 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-14",
     "startTime": "16:30",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!G76"
+  },
+  {
+    "id": "excel-gioia-2026-08-14-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-14",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G76;桔灯 陪伴老师 排课统计.xlsx:Gioia!G77"
+  },
+  {
+    "id": "excel-gioia-2026-08-14-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-14",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G77;桔灯 陪伴老师 排课统计.xlsx:Gioia!G78"
+  },
+  {
+    "id": "excel-gioia-2026-08-14-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-14",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G78;桔灯 陪伴老师 排课统计.xlsx:Gioia!G79"
+  },
+  {
+    "id": "excel-gioia-2026-08-14-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-14",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G79;桔灯 陪伴老师 排课统计.xlsx:Gioia!G80"
+  },
+  {
+    "id": "excel-gioia-2026-08-14-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-14",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G80;桔灯 陪伴老师 排课统计.xlsx:Gioia!G81"
+  },
+  {
+    "id": "excel-gioia-2026-08-14-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-14",
+    "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!G76;Gioia!G77;Gioia!G78;Gioia!G79;Gioia!G80;Gioia!G81;Gioia!G82"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G81;桔灯 陪伴老师 排课统计.xlsx:Gioia!G82"
+  },
+  {
+    "id": "excel-gioia-2026-08-14-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-14",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G82"
+  },
+  {
+    "id": "excel-gioia-2026-08-15-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-15",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!H59"
   },
   {
     "id": "excel-gioia-2026-08-15-0800-灰色不可排",
@@ -9019,7 +14700,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!H59;Gioia!H60"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H59;桔灯 陪伴老师 排课统计.xlsx:Gioia!H60"
+  },
+  {
+    "id": "excel-gioia-2026-08-15-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-15",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H60"
   },
   {
     "id": "excel-gioia-2026-08-15-0900-双胞胎",
@@ -9032,7 +14726,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!H61:H66"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H61:H66"
   },
   {
     "id": "excel-gioia-2026-08-15-1200-灰色不可排",
@@ -9045,7 +14739,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!H67"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H67"
   },
   {
     "id": "excel-gioia-2026-08-15-1300-Rainbow-1v1",
@@ -9058,7 +14752,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "不可用",
-    "source": "Gioia!H69:H74"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H69:H74"
   },
   {
     "id": "excel-gioia-2026-08-15-1600-灰色不可排",
@@ -9069,9 +14763,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-15",
     "startTime": "16:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!H75:H80"
+  },
+  {
+    "id": "excel-gioia-2026-08-15-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-15",
+    "startTime": "16:00",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H75:H80;桔灯 陪伴老师 排课统计.xlsx:Gioia!H81"
+  },
+  {
+    "id": "excel-gioia-2026-08-15-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-15",
+    "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!H75:H80;Gioia!H81;Gioia!H82"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H81;桔灯 陪伴老师 排课统计.xlsx:Gioia!H82"
+  },
+  {
+    "id": "excel-gioia-2026-08-15-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-15",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H82"
   },
   {
     "id": "excel-gioia-2026-08-16-0800-灰色不可排",
@@ -9082,9 +14815,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-16",
     "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!I59"
+  },
+  {
+    "id": "excel-gioia-2026-08-16-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-16",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I59;桔灯 陪伴老师 排课统计.xlsx:Gioia!I60"
+  },
+  {
+    "id": "excel-gioia-2026-08-16-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-16",
+    "startTime": "08:30",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I60;桔灯 陪伴老师 排课统计.xlsx:Gioia!I61:I66"
+  },
+  {
+    "id": "excel-gioia-2026-08-16-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-16",
+    "startTime": "09:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!I59;Gioia!I60;Gioia!I61:I66;Gioia!I67"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I61:I66;桔灯 陪伴老师 排课统计.xlsx:Gioia!I67"
   },
   {
     "id": "excel-hanna-2026-08-16-0900-A1",
@@ -9097,7 +14869,20 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "Excel导入",
-    "source": "Hanna 7-8月 !S5:S10"
+    "source": "桔灯学科组 排课统计.xlsx:Hanna 7-8月 !S5:S10"
+  },
+  {
+    "id": "excel-gioia-2026-08-16-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-16",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I67"
   },
   {
     "id": "excel-gioia-2026-08-16-1300-灰色不可排",
@@ -9108,9 +14893,139 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-16",
     "startTime": "13:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!I69:I74"
+  },
+  {
+    "id": "excel-gioia-2026-08-16-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-16",
+    "startTime": "13:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I69:I74;桔灯 陪伴老师 排课统计.xlsx:Gioia!I75"
+  },
+  {
+    "id": "excel-gioia-2026-08-16-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-16",
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I75;桔灯 陪伴老师 排课统计.xlsx:Gioia!I76"
+  },
+  {
+    "id": "excel-gioia-2026-08-16-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-16",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I76;桔灯 陪伴老师 排课统计.xlsx:Gioia!I77"
+  },
+  {
+    "id": "excel-gioia-2026-08-16-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-16",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I77;桔灯 陪伴老师 排课统计.xlsx:Gioia!I78"
+  },
+  {
+    "id": "excel-gioia-2026-08-16-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-16",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I78;桔灯 陪伴老师 排课统计.xlsx:Gioia!I79"
+  },
+  {
+    "id": "excel-gioia-2026-08-16-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-16",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I79;桔灯 陪伴老师 排课统计.xlsx:Gioia!I80"
+  },
+  {
+    "id": "excel-gioia-2026-08-16-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-16",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I80;桔灯 陪伴老师 排课统计.xlsx:Gioia!I81"
+  },
+  {
+    "id": "excel-gioia-2026-08-16-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-16",
+    "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!I69:I74;Gioia!I75;Gioia!I76;Gioia!I77;Gioia!I78;Gioia!I79;Gioia!I80;Gioia!I81;Gioia!I82"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I81;桔灯 陪伴老师 排课统计.xlsx:Gioia!I82"
+  },
+  {
+    "id": "excel-gioia-2026-08-16-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-16",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I82"
+  },
+  {
+    "id": "excel-gioia-2026-08-17-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-17",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!C59"
   },
   {
     "id": "excel-gioia-2026-08-17-0800-灰色不可排",
@@ -9123,7 +15038,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!C59;Gioia!C60"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C59;桔灯 陪伴老师 排课统计.xlsx:Gioia!C60"
+  },
+  {
+    "id": "excel-gioia-2026-08-17-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-17",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C60"
   },
   {
     "id": "excel-gioia-2026-08-17-0900-全天营语法-基础",
@@ -9136,7 +15064,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "不可用",
-    "source": "Gioia!C61:C65"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C61:C65"
   },
   {
     "id": "excel-karen-2026-08-17-0900-全天营语法-基础",
@@ -9149,7 +15077,20 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Karen 7-8月!M5:M9"
+    "source": "桔灯学科组 排课统计.xlsx:Karen 7-8月!M5:M9"
+  },
+  {
+    "id": "excel-gioia-2026-08-17-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-17",
+    "startTime": "11:30",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!C66"
   },
   {
     "id": "excel-gioia-2026-08-17-1130-灰色不可排",
@@ -9162,7 +15103,20 @@ export const importedLessons = [
     "startTime": "11:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!C66;Gioia!C67"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C66;桔灯 陪伴老师 排课统计.xlsx:Gioia!C67"
+  },
+  {
+    "id": "excel-gioia-2026-08-17-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-17",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C67"
   },
   {
     "id": "excel-gioia-2026-08-17-1300-全天营写作-进阶",
@@ -9175,7 +15129,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "不可用",
-    "source": "Gioia!C69:C71"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C69:C71"
   },
   {
     "id": "excel-hanna-2026-08-17-1300-全天营写作-进阶",
@@ -9188,7 +15142,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "Excel导入",
-    "source": "Hanna 7-8月 !M12:M14"
+    "source": "桔灯学科组 排课统计.xlsx:Hanna 7-8月 !M12:M14"
   },
   {
     "id": "excel-karen-2026-08-17-1300-全天营写作-基础",
@@ -9201,7 +15155,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "Excel导入",
-    "source": "Karen 7-8月!M13:M15"
+    "source": "桔灯学科组 排课统计.xlsx:Karen 7-8月!M13:M15"
   },
   {
     "id": "excel-gioia-2026-08-17-1430-Rainbow-1v1",
@@ -9214,7 +15168,7 @@ export const importedLessons = [
     "startTime": "14:30",
     "endTime": "17:30",
     "status": "不可用",
-    "source": "Gioia!C72:C77"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C72:C77"
   },
   {
     "id": "excel-gioia-2026-08-17-1730-灰色不可排",
@@ -9225,9 +15179,87 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-17",
     "startTime": "17:30",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!C78"
+  },
+  {
+    "id": "excel-gioia-2026-08-17-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-17",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C78;桔灯 陪伴老师 排课统计.xlsx:Gioia!C79"
+  },
+  {
+    "id": "excel-gioia-2026-08-17-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-17",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C79;桔灯 陪伴老师 排课统计.xlsx:Gioia!C80"
+  },
+  {
+    "id": "excel-gioia-2026-08-17-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-17",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C80;桔灯 陪伴老师 排课统计.xlsx:Gioia!C81"
+  },
+  {
+    "id": "excel-gioia-2026-08-17-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-17",
+    "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!C78;Gioia!C79;Gioia!C80;Gioia!C81;Gioia!C82"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C81;桔灯 陪伴老师 排课统计.xlsx:Gioia!C82"
+  },
+  {
+    "id": "excel-gioia-2026-08-17-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-17",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C82"
+  },
+  {
+    "id": "excel-gioia-2026-08-18-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-18",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!D59"
   },
   {
     "id": "excel-gioia-2026-08-18-0800-灰色不可排",
@@ -9240,7 +15272,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!D59;Gioia!D60"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D59;桔灯 陪伴老师 排课统计.xlsx:Gioia!D60"
+  },
+  {
+    "id": "excel-gioia-2026-08-18-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-18",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D60"
   },
   {
     "id": "excel-gioia-2026-08-18-0900-全天营语法-基础",
@@ -9253,7 +15298,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "不可用",
-    "source": "Gioia!D61:D65"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D61:D65"
   },
   {
     "id": "excel-karen-2026-08-18-0900-全天营语法-基础",
@@ -9266,7 +15311,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Karen 7-8月!N5:N9"
+    "source": "桔灯学科组 排课统计.xlsx:Karen 7-8月!N5:N9"
   },
   {
     "id": "excel-lynn-2026-08-18-1100-Orion-复习",
@@ -9279,7 +15324,20 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!X96:X98"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!X96:X98"
+  },
+  {
+    "id": "excel-gioia-2026-08-18-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-18",
+    "startTime": "11:30",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!D66"
   },
   {
     "id": "excel-gioia-2026-08-18-1130-灰色不可排",
@@ -9292,7 +15350,20 @@ export const importedLessons = [
     "startTime": "11:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!D66;Gioia!D67"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D66;桔灯 陪伴老师 排课统计.xlsx:Gioia!D67"
+  },
+  {
+    "id": "excel-gioia-2026-08-18-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-18",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D67"
   },
   {
     "id": "excel-gioia-2026-08-18-1300-全天营写作-进阶",
@@ -9305,7 +15376,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "不可用",
-    "source": "Gioia!D69:D71"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D69:D71"
   },
   {
     "id": "excel-hanna-2026-08-18-1300-全天营写作-进阶",
@@ -9318,7 +15389,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "Excel导入",
-    "source": "Hanna 7-8月 !N12:N14"
+    "source": "桔灯学科组 排课统计.xlsx:Hanna 7-8月 !N12:N14"
   },
   {
     "id": "excel-karen-2026-08-18-1300-全天营写作-基础",
@@ -9331,7 +15402,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "Excel导入",
-    "source": "Karen 7-8月!N13:N15"
+    "source": "桔灯学科组 排课统计.xlsx:Karen 7-8月!N13:N15"
   },
   {
     "id": "excel-gioia-2026-08-18-1430-灰色不可排",
@@ -9344,7 +15415,7 @@ export const importedLessons = [
     "startTime": "14:30",
     "endTime": "15:00",
     "status": "不可用",
-    "source": "Gioia!D72"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D72"
   },
   {
     "id": "excel-gioia-2026-08-18-1500-Cailen-1v1",
@@ -9357,7 +15428,7 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "17:00",
     "status": "不可用",
-    "source": "Gioia!D73:D76"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D73:D76"
   },
   {
     "id": "excel-gioia-2026-08-18-1700-灰色不可排",
@@ -9368,9 +15439,100 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-18",
     "startTime": "17:00",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!D77"
+  },
+  {
+    "id": "excel-gioia-2026-08-18-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-18",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D77;桔灯 陪伴老师 排课统计.xlsx:Gioia!D78"
+  },
+  {
+    "id": "excel-gioia-2026-08-18-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-18",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D78;桔灯 陪伴老师 排课统计.xlsx:Gioia!D79"
+  },
+  {
+    "id": "excel-gioia-2026-08-18-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-18",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D79;桔灯 陪伴老师 排课统计.xlsx:Gioia!D80"
+  },
+  {
+    "id": "excel-gioia-2026-08-18-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-18",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D80;桔灯 陪伴老师 排课统计.xlsx:Gioia!D81"
+  },
+  {
+    "id": "excel-gioia-2026-08-18-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-18",
+    "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!D77;Gioia!D78;Gioia!D79;Gioia!D80;Gioia!D81;Gioia!D82"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D81;桔灯 陪伴老师 排课统计.xlsx:Gioia!D82"
+  },
+  {
+    "id": "excel-gioia-2026-08-18-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-18",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D82"
+  },
+  {
+    "id": "excel-gioia-2026-08-19-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-19",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!O59"
   },
   {
     "id": "excel-gioia-2026-08-19-0800-灰色不可排",
@@ -9383,7 +15545,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!O59;Gioia!O60"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O59;桔灯 陪伴老师 排课统计.xlsx:Gioia!O60"
+  },
+  {
+    "id": "excel-gioia-2026-08-19-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-19",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O60"
   },
   {
     "id": "excel-gioia-2026-08-19-0900-全天营语法-基础",
@@ -9396,7 +15571,20 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "不可用",
-    "source": "Gioia!O61:O65"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O61:O65"
+  },
+  {
+    "id": "excel-gioia-2026-08-19-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-19",
+    "startTime": "11:30",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!O66"
   },
   {
     "id": "excel-gioia-2026-08-19-1130-灰色不可排",
@@ -9409,7 +15597,20 @@ export const importedLessons = [
     "startTime": "11:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!O66;Gioia!O67"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O66;桔灯 陪伴老师 排课统计.xlsx:Gioia!O67"
+  },
+  {
+    "id": "excel-gioia-2026-08-19-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-19",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O67"
   },
   {
     "id": "excel-gioia-2026-08-19-1300-全天营写作-进阶",
@@ -9422,7 +15623,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "不可用",
-    "source": "Gioia!O69:O71"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O69:O71"
   },
   {
     "id": "excel-gioia-2026-08-19-1430-George-1v1",
@@ -9435,7 +15636,7 @@ export const importedLessons = [
     "startTime": "14:30",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!O72:O75"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O72:O75"
   },
   {
     "id": "excel-gioia-2026-08-19-1630-灰色不可排",
@@ -9446,9 +15647,113 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-19",
     "startTime": "16:30",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!O76"
+  },
+  {
+    "id": "excel-gioia-2026-08-19-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-19",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O76;桔灯 陪伴老师 排课统计.xlsx:Gioia!O77"
+  },
+  {
+    "id": "excel-gioia-2026-08-19-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-19",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O77;桔灯 陪伴老师 排课统计.xlsx:Gioia!O78"
+  },
+  {
+    "id": "excel-gioia-2026-08-19-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-19",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O78;桔灯 陪伴老师 排课统计.xlsx:Gioia!O79"
+  },
+  {
+    "id": "excel-gioia-2026-08-19-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-19",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O79;桔灯 陪伴老师 排课统计.xlsx:Gioia!O80"
+  },
+  {
+    "id": "excel-gioia-2026-08-19-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-19",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O80;桔灯 陪伴老师 排课统计.xlsx:Gioia!O81"
+  },
+  {
+    "id": "excel-gioia-2026-08-19-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-19",
+    "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!O76;Gioia!O77;Gioia!O78;Gioia!O79;Gioia!O80;Gioia!O81;Gioia!O82"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O81;桔灯 陪伴老师 排课统计.xlsx:Gioia!O82"
+  },
+  {
+    "id": "excel-gioia-2026-08-19-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-19",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O82"
+  },
+  {
+    "id": "excel-gioia-2026-08-20-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-20",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!P59"
   },
   {
     "id": "excel-gioia-2026-08-20-0800-灰色不可排",
@@ -9461,7 +15766,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!P59;Gioia!P60"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P59;桔灯 陪伴老师 排课统计.xlsx:Gioia!P60"
+  },
+  {
+    "id": "excel-gioia-2026-08-20-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-20",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P60"
   },
   {
     "id": "excel-gioia-2026-08-20-0900-全天营语法-基础",
@@ -9474,7 +15792,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "不可用",
-    "source": "Gioia!P61:P65"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P61:P65"
   },
   {
     "id": "excel-lynn-2026-08-20-1100-Orion-复习",
@@ -9487,7 +15805,20 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!Z96:Z98"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!Z96:Z98"
+  },
+  {
+    "id": "excel-gioia-2026-08-20-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-20",
+    "startTime": "11:30",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!P66"
   },
   {
     "id": "excel-gioia-2026-08-20-1130-灰色不可排",
@@ -9500,7 +15831,20 @@ export const importedLessons = [
     "startTime": "11:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!P66;Gioia!P67"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P66;桔灯 陪伴老师 排课统计.xlsx:Gioia!P67"
+  },
+  {
+    "id": "excel-gioia-2026-08-20-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-20",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P67"
   },
   {
     "id": "excel-gioia-2026-08-20-1300-全天营写作-进阶",
@@ -9513,7 +15857,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "不可用",
-    "source": "Gioia!P69:P71"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P69:P71"
   },
   {
     "id": "excel-gioia-2026-08-20-1430-George-1v1",
@@ -9526,7 +15870,7 @@ export const importedLessons = [
     "startTime": "14:30",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!P72:P75"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P72:P75"
   },
   {
     "id": "excel-gioia-2026-08-20-1630-灰色不可排",
@@ -9537,9 +15881,113 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-20",
     "startTime": "16:30",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!P76"
+  },
+  {
+    "id": "excel-gioia-2026-08-20-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-20",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P76;桔灯 陪伴老师 排课统计.xlsx:Gioia!P77"
+  },
+  {
+    "id": "excel-gioia-2026-08-20-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-20",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P77;桔灯 陪伴老师 排课统计.xlsx:Gioia!P78"
+  },
+  {
+    "id": "excel-gioia-2026-08-20-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-20",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P78;桔灯 陪伴老师 排课统计.xlsx:Gioia!P79"
+  },
+  {
+    "id": "excel-gioia-2026-08-20-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-20",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P79;桔灯 陪伴老师 排课统计.xlsx:Gioia!P80"
+  },
+  {
+    "id": "excel-gioia-2026-08-20-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-20",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P80;桔灯 陪伴老师 排课统计.xlsx:Gioia!P81"
+  },
+  {
+    "id": "excel-gioia-2026-08-20-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-20",
+    "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!P76;Gioia!P77;Gioia!P78;Gioia!P79;Gioia!P80;Gioia!P81;Gioia!P82"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P81;桔灯 陪伴老师 排课统计.xlsx:Gioia!P82"
+  },
+  {
+    "id": "excel-gioia-2026-08-20-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-20",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P82"
+  },
+  {
+    "id": "excel-gioia-2026-08-21-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-21",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Q59"
   },
   {
     "id": "excel-gioia-2026-08-21-0800-灰色不可排",
@@ -9552,7 +16000,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!Q59;Gioia!Q60"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q59;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q60"
+  },
+  {
+    "id": "excel-gioia-2026-08-21-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-21",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q60"
   },
   {
     "id": "excel-gioia-2026-08-21-0900-全天营语法-基础",
@@ -9565,7 +16026,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "不可用",
-    "source": "Gioia!Q61:Q65"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q61:Q65"
   },
   {
     "id": "excel-lynn-2026-08-21-1100-Orion-复习",
@@ -9578,7 +16039,20 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!AA96:AA98"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AA96:AA98"
+  },
+  {
+    "id": "excel-gioia-2026-08-21-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-21",
+    "startTime": "11:30",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Q66"
   },
   {
     "id": "excel-gioia-2026-08-21-1130-灰色不可排",
@@ -9591,7 +16065,20 @@ export const importedLessons = [
     "startTime": "11:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!Q66;Gioia!Q67"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q66;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q67"
+  },
+  {
+    "id": "excel-gioia-2026-08-21-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-21",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q67"
   },
   {
     "id": "excel-gioia-2026-08-21-1300-全天营写作-进阶",
@@ -9604,7 +16091,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "不可用",
-    "source": "Gioia!Q69:Q71"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q69:Q71"
   },
   {
     "id": "excel-gioia-2026-08-21-1430-George-1v1",
@@ -9617,7 +16104,7 @@ export const importedLessons = [
     "startTime": "14:30",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!Q72:Q75"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q72:Q75"
   },
   {
     "id": "excel-gioia-2026-08-21-1630-灰色不可排",
@@ -9628,9 +16115,113 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-21",
     "startTime": "16:30",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Q76"
+  },
+  {
+    "id": "excel-gioia-2026-08-21-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-21",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q76;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q77"
+  },
+  {
+    "id": "excel-gioia-2026-08-21-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-21",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q77;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q78"
+  },
+  {
+    "id": "excel-gioia-2026-08-21-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-21",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q78;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q79"
+  },
+  {
+    "id": "excel-gioia-2026-08-21-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-21",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q79;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q80"
+  },
+  {
+    "id": "excel-gioia-2026-08-21-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-21",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q80;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q81"
+  },
+  {
+    "id": "excel-gioia-2026-08-21-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-21",
+    "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!Q76;Gioia!Q77;Gioia!Q78;Gioia!Q79;Gioia!Q80;Gioia!Q81;Gioia!Q82"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q81;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q82"
+  },
+  {
+    "id": "excel-gioia-2026-08-21-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-21",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q82"
+  },
+  {
+    "id": "excel-gioia-2026-08-22-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-22",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!R59"
   },
   {
     "id": "excel-gioia-2026-08-22-0800-灰色不可排",
@@ -9643,7 +16234,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!R59;Gioia!R60"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R59;桔灯 陪伴老师 排课统计.xlsx:Gioia!R60"
+  },
+  {
+    "id": "excel-gioia-2026-08-22-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-22",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R60"
   },
   {
     "id": "excel-gioia-2026-08-22-0900-双胞胎",
@@ -9656,7 +16260,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!R61:R66"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R61:R66"
   },
   {
     "id": "excel-gioia-2026-08-22-1200-灰色不可排",
@@ -9669,7 +16273,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!R67"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R67"
   },
   {
     "id": "excel-gioia-2026-08-22-1300-Rainbow-1v1",
@@ -9682,7 +16286,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "不可用",
-    "source": "Gioia!R69:R74"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R69:R74"
   },
   {
     "id": "excel-gioia-2026-08-22-1600-灰色不可排",
@@ -9693,9 +16297,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-22",
     "startTime": "16:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!R75:R80"
+  },
+  {
+    "id": "excel-gioia-2026-08-22-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-22",
+    "startTime": "16:00",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R75:R80;桔灯 陪伴老师 排课统计.xlsx:Gioia!R81"
+  },
+  {
+    "id": "excel-gioia-2026-08-22-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-22",
+    "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!R75:R80;Gioia!R81;Gioia!R82"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R81;桔灯 陪伴老师 排课统计.xlsx:Gioia!R82"
+  },
+  {
+    "id": "excel-gioia-2026-08-22-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-22",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R82"
   },
   {
     "id": "excel-gioia-2026-08-23-0800-灰色不可排",
@@ -9706,9 +16349,61 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-23",
     "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!S59"
+  },
+  {
+    "id": "excel-gioia-2026-08-23-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-23",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S59;桔灯 陪伴老师 排课统计.xlsx:Gioia!S60"
+  },
+  {
+    "id": "excel-gioia-2026-08-23-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-23",
+    "startTime": "08:30",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S60;桔灯 陪伴老师 排课统计.xlsx:Gioia!S61:S66"
+  },
+  {
+    "id": "excel-gioia-2026-08-23-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-23",
+    "startTime": "09:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!S59;Gioia!S60;Gioia!S61:S66;Gioia!S67"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S61:S66;桔灯 陪伴老师 排课统计.xlsx:Gioia!S67"
+  },
+  {
+    "id": "excel-gioia-2026-08-23-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-23",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S67"
   },
   {
     "id": "excel-gioia-2026-08-23-1300-灰色不可排",
@@ -9719,9 +16414,139 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-23",
     "startTime": "13:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!S69:S74"
+  },
+  {
+    "id": "excel-gioia-2026-08-23-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-23",
+    "startTime": "13:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S69:S74;桔灯 陪伴老师 排课统计.xlsx:Gioia!S75"
+  },
+  {
+    "id": "excel-gioia-2026-08-23-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-23",
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S75;桔灯 陪伴老师 排课统计.xlsx:Gioia!S76"
+  },
+  {
+    "id": "excel-gioia-2026-08-23-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-23",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S76;桔灯 陪伴老师 排课统计.xlsx:Gioia!S77"
+  },
+  {
+    "id": "excel-gioia-2026-08-23-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-23",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S77;桔灯 陪伴老师 排课统计.xlsx:Gioia!S78"
+  },
+  {
+    "id": "excel-gioia-2026-08-23-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-23",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S78;桔灯 陪伴老师 排课统计.xlsx:Gioia!S79"
+  },
+  {
+    "id": "excel-gioia-2026-08-23-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-23",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S79;桔灯 陪伴老师 排课统计.xlsx:Gioia!S80"
+  },
+  {
+    "id": "excel-gioia-2026-08-23-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-23",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S80;桔灯 陪伴老师 排课统计.xlsx:Gioia!S81"
+  },
+  {
+    "id": "excel-gioia-2026-08-23-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-23",
+    "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!S69:S74;Gioia!S75;Gioia!S76;Gioia!S77;Gioia!S78;Gioia!S79;Gioia!S80;Gioia!S81;Gioia!S82"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S81;桔灯 陪伴老师 排课统计.xlsx:Gioia!S82"
+  },
+  {
+    "id": "excel-gioia-2026-08-23-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-23",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S82"
+  },
+  {
+    "id": "excel-gioia-2026-08-24-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-24",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!M59"
   },
   {
     "id": "excel-gioia-2026-08-24-0800-灰色不可排",
@@ -9734,7 +16559,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!M59;Gioia!M60"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M59;桔灯 陪伴老师 排课统计.xlsx:Gioia!M60"
+  },
+  {
+    "id": "excel-gioia-2026-08-24-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-24",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M60"
   },
   {
     "id": "excel-gioia-2026-08-24-0900-全天营语法-基础",
@@ -9747,7 +16585,20 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "不可用",
-    "source": "Gioia!M61:M65"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M61:M65"
+  },
+  {
+    "id": "excel-gioia-2026-08-24-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-24",
+    "startTime": "11:30",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!M66"
   },
   {
     "id": "excel-gioia-2026-08-24-1130-灰色不可排",
@@ -9760,7 +16611,20 @@ export const importedLessons = [
     "startTime": "11:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!M66;Gioia!M67"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M66;桔灯 陪伴老师 排课统计.xlsx:Gioia!M67"
+  },
+  {
+    "id": "excel-gioia-2026-08-24-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-24",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M67"
   },
   {
     "id": "excel-gioia-2026-08-24-1300-全天营写作-进阶",
@@ -9773,7 +16637,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "不可用",
-    "source": "Gioia!M69:M71"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M69:M71"
   },
   {
     "id": "excel-gioia-2026-08-24-1430-George-1v1",
@@ -9786,7 +16650,7 @@ export const importedLessons = [
     "startTime": "14:30",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!M72:M75"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M72:M75"
   },
   {
     "id": "excel-gioia-2026-08-24-1630-灰色不可排",
@@ -9797,9 +16661,113 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-24",
     "startTime": "16:30",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!M76"
+  },
+  {
+    "id": "excel-gioia-2026-08-24-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-24",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M76;桔灯 陪伴老师 排课统计.xlsx:Gioia!M77"
+  },
+  {
+    "id": "excel-gioia-2026-08-24-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-24",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M77;桔灯 陪伴老师 排课统计.xlsx:Gioia!M78"
+  },
+  {
+    "id": "excel-gioia-2026-08-24-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-24",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M78;桔灯 陪伴老师 排课统计.xlsx:Gioia!M79"
+  },
+  {
+    "id": "excel-gioia-2026-08-24-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-24",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M79;桔灯 陪伴老师 排课统计.xlsx:Gioia!M80"
+  },
+  {
+    "id": "excel-gioia-2026-08-24-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-24",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M80;桔灯 陪伴老师 排课统计.xlsx:Gioia!M81"
+  },
+  {
+    "id": "excel-gioia-2026-08-24-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-24",
+    "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!M76;Gioia!M77;Gioia!M78;Gioia!M79;Gioia!M80;Gioia!M81;Gioia!M82"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M81;桔灯 陪伴老师 排课统计.xlsx:Gioia!M82"
+  },
+  {
+    "id": "excel-gioia-2026-08-24-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-24",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M82"
+  },
+  {
+    "id": "excel-gioia-2026-08-25-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-25",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!N59"
   },
   {
     "id": "excel-gioia-2026-08-25-0800-灰色不可排",
@@ -9812,7 +16780,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!N59;Gioia!N60"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N59;桔灯 陪伴老师 排课统计.xlsx:Gioia!N60"
+  },
+  {
+    "id": "excel-gioia-2026-08-25-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-25",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N60"
   },
   {
     "id": "excel-gioia-2026-08-25-0900-全天营语法-基础",
@@ -9825,7 +16806,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "11:30",
     "status": "不可用",
-    "source": "Gioia!N61:N65"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N61:N65"
   },
   {
     "id": "excel-lynn-2026-08-25-1100-Orion-复习",
@@ -9838,7 +16819,20 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!AH96:AH98"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AH96:AH98"
+  },
+  {
+    "id": "excel-gioia-2026-08-25-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-25",
+    "startTime": "11:30",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!N66"
   },
   {
     "id": "excel-gioia-2026-08-25-1130-灰色不可排",
@@ -9851,7 +16845,20 @@ export const importedLessons = [
     "startTime": "11:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!N66;Gioia!N67"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N66;桔灯 陪伴老师 排课统计.xlsx:Gioia!N67"
+  },
+  {
+    "id": "excel-gioia-2026-08-25-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-25",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N67"
   },
   {
     "id": "excel-gioia-2026-08-25-1300-全天营写作-进阶",
@@ -9864,7 +16871,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:30",
     "status": "不可用",
-    "source": "Gioia!N69:N71"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N69:N71"
   },
   {
     "id": "excel-gioia-2026-08-25-1430-George-1v1",
@@ -9877,7 +16884,7 @@ export const importedLessons = [
     "startTime": "14:30",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!N72:N75"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N72:N75"
   },
   {
     "id": "excel-gioia-2026-08-25-1630-灰色不可排",
@@ -9888,9 +16895,113 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-25",
     "startTime": "16:30",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!N76"
+  },
+  {
+    "id": "excel-gioia-2026-08-25-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-25",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N76;桔灯 陪伴老师 排课统计.xlsx:Gioia!N77"
+  },
+  {
+    "id": "excel-gioia-2026-08-25-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-25",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N77;桔灯 陪伴老师 排课统计.xlsx:Gioia!N78"
+  },
+  {
+    "id": "excel-gioia-2026-08-25-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-25",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N78;桔灯 陪伴老师 排课统计.xlsx:Gioia!N79"
+  },
+  {
+    "id": "excel-gioia-2026-08-25-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-25",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N79;桔灯 陪伴老师 排课统计.xlsx:Gioia!N80"
+  },
+  {
+    "id": "excel-gioia-2026-08-25-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-25",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N80;桔灯 陪伴老师 排课统计.xlsx:Gioia!N81"
+  },
+  {
+    "id": "excel-gioia-2026-08-25-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-25",
+    "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!N76;Gioia!N77;Gioia!N78;Gioia!N79;Gioia!N80;Gioia!N81;Gioia!N82"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N81;桔灯 陪伴老师 排课统计.xlsx:Gioia!N82"
+  },
+  {
+    "id": "excel-gioia-2026-08-25-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-25",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N82"
+  },
+  {
+    "id": "excel-gioia-2026-08-26-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-26",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Y59"
   },
   {
     "id": "excel-gioia-2026-08-26-0800-灰色不可排",
@@ -9903,7 +17014,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!Y59;Gioia!Y60"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y59;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y60"
+  },
+  {
+    "id": "excel-gioia-2026-08-26-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-26",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y60"
   },
   {
     "id": "excel-gioia-2026-08-26-0900-Harold-补课",
@@ -9916,7 +17040,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!Y61:Y66"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y61:Y66"
   },
   {
     "id": "excel-gioia-2026-08-26-1200-灰色不可排",
@@ -9929,7 +17053,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!Y67"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y67"
   },
   {
     "id": "excel-gioia-2026-08-26-1300-灰色不可排",
@@ -9940,9 +17064,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-26",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Y69"
+  },
+  {
+    "id": "excel-gioia-2026-08-26-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-26",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y69;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y70"
+  },
+  {
+    "id": "excel-gioia-2026-08-26-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-26",
+    "startTime": "13:30",
     "endTime": "14:30",
     "status": "不可用",
-    "source": "Gioia!Y69;Gioia!Y70;Gioia!Y71"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y70;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y71"
+  },
+  {
+    "id": "excel-gioia-2026-08-26-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-26",
+    "startTime": "14:00",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y71"
   },
   {
     "id": "excel-gioia-2026-08-26-1430-George-1v1",
@@ -9955,7 +17118,7 @@ export const importedLessons = [
     "startTime": "14:30",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!Y72:Y75"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y72:Y75"
   },
   {
     "id": "excel-gioia-2026-08-26-1630-灰色不可排",
@@ -9966,9 +17129,100 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-26",
     "startTime": "16:30",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Y76"
+  },
+  {
+    "id": "excel-gioia-2026-08-26-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-26",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y76;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y77"
+  },
+  {
+    "id": "excel-gioia-2026-08-26-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-26",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y77;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y78"
+  },
+  {
+    "id": "excel-gioia-2026-08-26-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-26",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y78;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y79"
+  },
+  {
+    "id": "excel-gioia-2026-08-26-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-26",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y79;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y80"
+  },
+  {
+    "id": "excel-gioia-2026-08-26-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-26",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y80;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y81"
+  },
+  {
+    "id": "excel-gioia-2026-08-26-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-26",
+    "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!Y76;Gioia!Y77;Gioia!Y78;Gioia!Y79;Gioia!Y80;Gioia!Y81;Gioia!Y82"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y81;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y82"
+  },
+  {
+    "id": "excel-gioia-2026-08-26-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-26",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y82"
   },
   {
     "id": "excel-gioia-2026-08-27-0800-灰色不可排",
@@ -9979,9 +17233,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-27",
     "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Z59"
+  },
+  {
+    "id": "excel-gioia-2026-08-27-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-27",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z59;桔灯 陪伴老师 排课统计.xlsx:Gioia!Z60"
+  },
+  {
+    "id": "excel-gioia-2026-08-27-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-27",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z60;桔灯 陪伴老师 排课统计.xlsx:Gioia!Z61"
+  },
+  {
+    "id": "excel-gioia-2026-08-27-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-27",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z61;桔灯 陪伴老师 排课统计.xlsx:Gioia!Z62"
+  },
+  {
+    "id": "excel-gioia-2026-08-27-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-27",
+    "startTime": "09:30",
     "endTime": "10:30",
     "status": "不可用",
-    "source": "Gioia!Z59;Gioia!Z60;Gioia!Z61;Gioia!Z62;Gioia!Z63"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z62;桔灯 陪伴老师 排课统计.xlsx:Gioia!Z63"
+  },
+  {
+    "id": "excel-gioia-2026-08-27-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-27",
+    "startTime": "10:00",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z63"
   },
   {
     "id": "excel-gioia-2026-08-27-1030-开会",
@@ -9994,7 +17313,7 @@ export const importedLessons = [
     "startTime": "10:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!Z64:Z67"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z64:Z67"
   },
   {
     "id": "excel-lynn-2026-08-27-1100-Orion-复习",
@@ -10007,7 +17326,7 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!AJ96:AJ98"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AJ96:AJ98"
   },
   {
     "id": "excel-gioia-2026-08-27-1300-灰色不可排",
@@ -10018,9 +17337,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-27",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Z69"
+  },
+  {
+    "id": "excel-gioia-2026-08-27-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-27",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z69;桔灯 陪伴老师 排课统计.xlsx:Gioia!Z70"
+  },
+  {
+    "id": "excel-gioia-2026-08-27-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-27",
+    "startTime": "13:30",
     "endTime": "14:30",
     "status": "不可用",
-    "source": "Gioia!Z69;Gioia!Z70;Gioia!Z71"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z70;桔灯 陪伴老师 排课统计.xlsx:Gioia!Z71"
+  },
+  {
+    "id": "excel-gioia-2026-08-27-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-27",
+    "startTime": "14:00",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z71"
   },
   {
     "id": "excel-gioia-2026-08-27-1430-George-1v1",
@@ -10033,7 +17391,7 @@ export const importedLessons = [
     "startTime": "14:30",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!Z72:Z75"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z72:Z75"
   },
   {
     "id": "excel-gioia-2026-08-27-1630-灰色不可排",
@@ -10046,7 +17404,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "17:00",
     "status": "不可用",
-    "source": "Gioia!Z76"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z76"
   },
   {
     "id": "excel-gioia-2026-08-27-1700-Amy试听1v1",
@@ -10059,7 +17417,7 @@ export const importedLessons = [
     "startTime": "17:00",
     "endTime": "17:30",
     "status": "不可用",
-    "source": "Gioia!Z77"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z77"
   },
   {
     "id": "excel-gioia-2026-08-27-1730-灰色不可排",
@@ -10070,9 +17428,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-27",
     "startTime": "17:30",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Z78"
+  },
+  {
+    "id": "excel-gioia-2026-08-27-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-27",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z78;桔灯 陪伴老师 排课统计.xlsx:Gioia!Z79"
+  },
+  {
+    "id": "excel-gioia-2026-08-27-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-27",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z79;桔灯 陪伴老师 排课统计.xlsx:Gioia!Z80"
+  },
+  {
+    "id": "excel-gioia-2026-08-27-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-27",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z80;桔灯 陪伴老师 排课统计.xlsx:Gioia!Z81"
+  },
+  {
+    "id": "excel-gioia-2026-08-27-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-27",
+    "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!Z78;Gioia!Z79;Gioia!Z80;Gioia!Z81;Gioia!Z82"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z81;桔灯 陪伴老师 排课统计.xlsx:Gioia!Z82"
+  },
+  {
+    "id": "excel-gioia-2026-08-27-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-27",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z82"
   },
   {
     "id": "excel-gioia-2026-08-28-0800-灰色不可排",
@@ -10083,9 +17506,100 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-28",
     "startTime": "08:00",
-    "endTime": "12:30",
+    "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!AA59;Gioia!AA60;Gioia!AA61;Gioia!AA62;Gioia!AA63;Gioia!AA64;Gioia!AA65;Gioia!AA66;Gioia!AA67"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AA59"
+  },
+  {
+    "id": "excel-gioia-2026-08-28-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-28",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA59;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA60"
+  },
+  {
+    "id": "excel-gioia-2026-08-28-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-28",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA60;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA61"
+  },
+  {
+    "id": "excel-gioia-2026-08-28-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-28",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA61;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA62"
+  },
+  {
+    "id": "excel-gioia-2026-08-28-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-28",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA62;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA63"
+  },
+  {
+    "id": "excel-gioia-2026-08-28-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-28",
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA63;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA64"
+  },
+  {
+    "id": "excel-gioia-2026-08-28-1030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-28",
+    "startTime": "10:30",
+    "endTime": "11:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA64;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA65"
+  },
+  {
+    "id": "excel-gioia-2026-08-28-1100-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-28",
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA65;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA66"
   },
   {
     "id": "excel-lynn-2026-08-28-1100-Orion-复习",
@@ -10098,7 +17612,46 @@ export const importedLessons = [
     "startTime": "11:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Lynn!AK96:AK98"
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Lynn!AK96:AK98"
+  },
+  {
+    "id": "excel-gioia-2026-08-28-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-28",
+    "startTime": "11:30",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA66;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA67"
+  },
+  {
+    "id": "excel-gioia-2026-08-28-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-28",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA67"
+  },
+  {
+    "id": "excel-gioia-2026-08-28-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-28",
+    "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AA69"
   },
   {
     "id": "excel-gioia-2026-08-28-1300-灰色不可排",
@@ -10111,7 +17664,20 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:00",
     "status": "不可用",
-    "source": "Gioia!AA69;Gioia!AA70"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA69;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA70"
+  },
+  {
+    "id": "excel-gioia-2026-08-28-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-28",
+    "startTime": "13:30",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA70"
   },
   {
     "id": "excel-gioia-2026-08-28-1400-双胞胎",
@@ -10124,7 +17690,7 @@ export const importedLessons = [
     "startTime": "14:00",
     "endTime": "17:00",
     "status": "不可用",
-    "source": "Gioia!AA71:AA76"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA71:AA76"
   },
   {
     "id": "excel-gioia-2026-08-28-1700-灰色不可排",
@@ -10135,9 +17701,87 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-28",
     "startTime": "17:00",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AA77"
+  },
+  {
+    "id": "excel-gioia-2026-08-28-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-28",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA77;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA78"
+  },
+  {
+    "id": "excel-gioia-2026-08-28-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-28",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA78;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA79"
+  },
+  {
+    "id": "excel-gioia-2026-08-28-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-28",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA79;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA80"
+  },
+  {
+    "id": "excel-gioia-2026-08-28-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-28",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA80;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA81"
+  },
+  {
+    "id": "excel-gioia-2026-08-28-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-28",
+    "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!AA77;Gioia!AA78;Gioia!AA79;Gioia!AA80;Gioia!AA81;Gioia!AA82"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA81;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA82"
+  },
+  {
+    "id": "excel-gioia-2026-08-28-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-28",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA82"
   },
   {
     "id": "excel-gioia-2026-08-29-0800-请假",
@@ -10150,7 +17794,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!AB59:AB82"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB59:AB82"
   },
   {
     "id": "excel-gioia-2026-08-30-0800-灰色不可排",
@@ -10161,9 +17805,126 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-30",
     "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AC59"
+  },
+  {
+    "id": "excel-gioia-2026-08-30-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-30",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC59;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC60"
+  },
+  {
+    "id": "excel-gioia-2026-08-30-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-30",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC60;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC61"
+  },
+  {
+    "id": "excel-gioia-2026-08-30-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-30",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC61;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC62"
+  },
+  {
+    "id": "excel-gioia-2026-08-30-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-30",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC62;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC63"
+  },
+  {
+    "id": "excel-gioia-2026-08-30-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-30",
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC63;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC64"
+  },
+  {
+    "id": "excel-gioia-2026-08-30-1030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-30",
+    "startTime": "10:30",
+    "endTime": "11:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC64;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC65"
+  },
+  {
+    "id": "excel-gioia-2026-08-30-1100-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-30",
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC65;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC66"
+  },
+  {
+    "id": "excel-gioia-2026-08-30-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-30",
+    "startTime": "11:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!AC59;Gioia!AC60;Gioia!AC61;Gioia!AC62;Gioia!AC63;Gioia!AC64;Gioia!AC65;Gioia!AC66;Gioia!AC67"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC66;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC67"
+  },
+  {
+    "id": "excel-gioia-2026-08-30-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-30",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC67"
   },
   {
     "id": "excel-gioia-2026-08-30-1300-灰色不可排",
@@ -10174,9 +17935,191 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-30",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AC69"
+  },
+  {
+    "id": "excel-gioia-2026-08-30-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-30",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC69;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC70"
+  },
+  {
+    "id": "excel-gioia-2026-08-30-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-30",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC70;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC71"
+  },
+  {
+    "id": "excel-gioia-2026-08-30-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-30",
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC71;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC72"
+  },
+  {
+    "id": "excel-gioia-2026-08-30-1430-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-30",
+    "startTime": "14:30",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC72;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC73"
+  },
+  {
+    "id": "excel-gioia-2026-08-30-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-30",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC73;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC74"
+  },
+  {
+    "id": "excel-gioia-2026-08-30-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-30",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC74;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC75"
+  },
+  {
+    "id": "excel-gioia-2026-08-30-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-30",
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC75;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC76"
+  },
+  {
+    "id": "excel-gioia-2026-08-30-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-30",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC76;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC77"
+  },
+  {
+    "id": "excel-gioia-2026-08-30-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-30",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC77;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC78"
+  },
+  {
+    "id": "excel-gioia-2026-08-30-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-30",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC78;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC79"
+  },
+  {
+    "id": "excel-gioia-2026-08-30-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-30",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC79;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC80"
+  },
+  {
+    "id": "excel-gioia-2026-08-30-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-30",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC80;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC81"
+  },
+  {
+    "id": "excel-gioia-2026-08-30-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-30",
+    "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!AC69;Gioia!AC70;Gioia!AC71;Gioia!AC72;Gioia!AC73;Gioia!AC74;Gioia!AC75;Gioia!AC76;Gioia!AC77;Gioia!AC78;Gioia!AC79;Gioia!AC80;Gioia!AC81;Gioia!AC82"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC81;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC82"
+  },
+  {
+    "id": "excel-gioia-2026-08-30-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-30",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC82"
   },
   {
     "id": "excel-gioia-2026-08-31-0800-灰色不可排",
@@ -10187,9 +18130,126 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-31",
     "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!W59"
+  },
+  {
+    "id": "excel-gioia-2026-08-31-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-31",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W59;桔灯 陪伴老师 排课统计.xlsx:Gioia!W60"
+  },
+  {
+    "id": "excel-gioia-2026-08-31-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-31",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W60;桔灯 陪伴老师 排课统计.xlsx:Gioia!W61"
+  },
+  {
+    "id": "excel-gioia-2026-08-31-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-31",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W61;桔灯 陪伴老师 排课统计.xlsx:Gioia!W62"
+  },
+  {
+    "id": "excel-gioia-2026-08-31-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-31",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W62;桔灯 陪伴老师 排课统计.xlsx:Gioia!W63"
+  },
+  {
+    "id": "excel-gioia-2026-08-31-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-31",
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W63;桔灯 陪伴老师 排课统计.xlsx:Gioia!W64"
+  },
+  {
+    "id": "excel-gioia-2026-08-31-1030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-31",
+    "startTime": "10:30",
+    "endTime": "11:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W64;桔灯 陪伴老师 排课统计.xlsx:Gioia!W65"
+  },
+  {
+    "id": "excel-gioia-2026-08-31-1100-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-31",
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W65;桔灯 陪伴老师 排课统计.xlsx:Gioia!W66"
+  },
+  {
+    "id": "excel-gioia-2026-08-31-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-31",
+    "startTime": "11:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!W59;Gioia!W60;Gioia!W61;Gioia!W62;Gioia!W63;Gioia!W64;Gioia!W65;Gioia!W66;Gioia!W67"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W66;桔灯 陪伴老师 排课统计.xlsx:Gioia!W67"
+  },
+  {
+    "id": "excel-gioia-2026-08-31-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-31",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W67"
   },
   {
     "id": "excel-gioia-2026-08-31-1300-灰色不可排",
@@ -10200,9 +18260,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-31",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!W69"
+  },
+  {
+    "id": "excel-gioia-2026-08-31-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-31",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W69;桔灯 陪伴老师 排课统计.xlsx:Gioia!W70"
+  },
+  {
+    "id": "excel-gioia-2026-08-31-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-31",
+    "startTime": "13:30",
     "endTime": "14:30",
     "status": "不可用",
-    "source": "Gioia!W69;Gioia!W70;Gioia!W71"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W70;桔灯 陪伴老师 排课统计.xlsx:Gioia!W71"
+  },
+  {
+    "id": "excel-gioia-2026-08-31-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-31",
+    "startTime": "14:00",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W71"
   },
   {
     "id": "excel-gioia-2026-08-31-1430-George-不舒服走了",
@@ -10215,7 +18314,7 @@ export const importedLessons = [
     "startTime": "14:30",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!W72:W75"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W72:W75"
   },
   {
     "id": "excel-gioia-2026-08-31-1630-灰色不可排",
@@ -10226,9 +18325,113 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-08-31",
     "startTime": "16:30",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!W76"
+  },
+  {
+    "id": "excel-gioia-2026-08-31-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-31",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W76;桔灯 陪伴老师 排课统计.xlsx:Gioia!W77"
+  },
+  {
+    "id": "excel-gioia-2026-08-31-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-31",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W77;桔灯 陪伴老师 排课统计.xlsx:Gioia!W78"
+  },
+  {
+    "id": "excel-gioia-2026-08-31-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-31",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W78;桔灯 陪伴老师 排课统计.xlsx:Gioia!W79"
+  },
+  {
+    "id": "excel-gioia-2026-08-31-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-31",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W79;桔灯 陪伴老师 排课统计.xlsx:Gioia!W80"
+  },
+  {
+    "id": "excel-gioia-2026-08-31-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-31",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W80;桔灯 陪伴老师 排课统计.xlsx:Gioia!W81"
+  },
+  {
+    "id": "excel-gioia-2026-08-31-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-31",
+    "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!W76;Gioia!W77;Gioia!W78;Gioia!W79;Gioia!W80;Gioia!W81;Gioia!W82"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W81;桔灯 陪伴老师 排课统计.xlsx:Gioia!W82"
+  },
+  {
+    "id": "excel-gioia-2026-08-31-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-08-31",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W82"
+  },
+  {
+    "id": "excel-gioia-2026-09-01-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-01",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!X59"
   },
   {
     "id": "excel-gioia-2026-09-01-0800-灰色不可排",
@@ -10241,7 +18444,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!X59;Gioia!X60"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!X59;桔灯 陪伴老师 排课统计.xlsx:Gioia!X60"
+  },
+  {
+    "id": "excel-gioia-2026-09-01-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-01",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!X60"
   },
   {
     "id": "excel-gioia-2026-09-01-0900-双胞胎",
@@ -10254,7 +18470,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!X61:X66"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!X61:X66"
   },
   {
     "id": "excel-gioia-2026-09-01-1200-灰色不可排",
@@ -10267,7 +18483,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!X67"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!X67"
   },
   {
     "id": "excel-gioia-2026-09-01-1300-灰色不可排",
@@ -10278,9 +18494,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-09-01",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!X69"
+  },
+  {
+    "id": "excel-gioia-2026-09-01-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-01",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!X69;桔灯 陪伴老师 排课统计.xlsx:Gioia!X70"
+  },
+  {
+    "id": "excel-gioia-2026-09-01-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-01",
+    "startTime": "13:30",
     "endTime": "14:30",
     "status": "不可用",
-    "source": "Gioia!X69;Gioia!X70;Gioia!X71"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!X70;桔灯 陪伴老师 排课统计.xlsx:Gioia!X71"
+  },
+  {
+    "id": "excel-gioia-2026-09-01-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-01",
+    "startTime": "14:00",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!X71"
   },
   {
     "id": "excel-gioia-2026-09-01-1430-George-1v1",
@@ -10293,7 +18548,7 @@ export const importedLessons = [
     "startTime": "14:30",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!X72:X75"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!X72:X75"
   },
   {
     "id": "excel-gioia-2026-09-01-1630-灰色不可排",
@@ -10304,9 +18559,100 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-09-01",
     "startTime": "16:30",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!X76"
+  },
+  {
+    "id": "excel-gioia-2026-09-01-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-01",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!X76;桔灯 陪伴老师 排课统计.xlsx:Gioia!X77"
+  },
+  {
+    "id": "excel-gioia-2026-09-01-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-01",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!X77;桔灯 陪伴老师 排课统计.xlsx:Gioia!X78"
+  },
+  {
+    "id": "excel-gioia-2026-09-01-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-01",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!X78;桔灯 陪伴老师 排课统计.xlsx:Gioia!X79"
+  },
+  {
+    "id": "excel-gioia-2026-09-01-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-01",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!X79;桔灯 陪伴老师 排课统计.xlsx:Gioia!X80"
+  },
+  {
+    "id": "excel-gioia-2026-09-01-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-01",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!X80;桔灯 陪伴老师 排课统计.xlsx:Gioia!X81"
+  },
+  {
+    "id": "excel-gioia-2026-09-01-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-01",
+    "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!X76;Gioia!X77;Gioia!X78;Gioia!X79;Gioia!X80;Gioia!X81;Gioia!X82"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!X81;桔灯 陪伴老师 排课统计.xlsx:Gioia!X82"
+  },
+  {
+    "id": "excel-gioia-2026-09-01-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-01",
+    "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!X82"
   },
   {
     "id": "excel-gioia-2026-09-02-0800-休息",
@@ -10319,7 +18665,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!E89:E96"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E89:E96"
   },
   {
     "id": "excel-gioia-2026-09-02-1200-灰色不可排",
@@ -10332,7 +18678,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!E97"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E97"
   },
   {
     "id": "excel-gioia-2026-09-02-1300-灰色不可排",
@@ -10343,9 +18689,217 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-09-02",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!E98"
+  },
+  {
+    "id": "excel-gioia-2026-09-02-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-02",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E98;桔灯 陪伴老师 排课统计.xlsx:Gioia!E99"
+  },
+  {
+    "id": "excel-gioia-2026-09-02-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-02",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E99;桔灯 陪伴老师 排课统计.xlsx:Gioia!E100"
+  },
+  {
+    "id": "excel-gioia-2026-09-02-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-02",
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E100;桔灯 陪伴老师 排课统计.xlsx:Gioia!E101"
+  },
+  {
+    "id": "excel-gioia-2026-09-02-1430-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-02",
+    "startTime": "14:30",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E101;桔灯 陪伴老师 排课统计.xlsx:Gioia!E102"
+  },
+  {
+    "id": "excel-gioia-2026-09-02-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-02",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E102;桔灯 陪伴老师 排课统计.xlsx:Gioia!E103"
+  },
+  {
+    "id": "excel-gioia-2026-09-02-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-02",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E103;桔灯 陪伴老师 排课统计.xlsx:Gioia!E104"
+  },
+  {
+    "id": "excel-gioia-2026-09-02-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-02",
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E104;桔灯 陪伴老师 排课统计.xlsx:Gioia!E105"
+  },
+  {
+    "id": "excel-gioia-2026-09-02-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-02",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E105;桔灯 陪伴老师 排课统计.xlsx:Gioia!E106"
+  },
+  {
+    "id": "excel-gioia-2026-09-02-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-02",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E106;桔灯 陪伴老师 排课统计.xlsx:Gioia!E107"
+  },
+  {
+    "id": "excel-gioia-2026-09-02-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-02",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E107;桔灯 陪伴老师 排课统计.xlsx:Gioia!E108"
+  },
+  {
+    "id": "excel-gioia-2026-09-02-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-02",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E108;桔灯 陪伴老师 排课统计.xlsx:Gioia!E109"
+  },
+  {
+    "id": "excel-gioia-2026-09-02-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-02",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E109;桔灯 陪伴老师 排课统计.xlsx:Gioia!E110"
+  },
+  {
+    "id": "excel-gioia-2026-09-02-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-02",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E110;桔灯 陪伴老师 排课统计.xlsx:Gioia!E111"
+  },
+  {
+    "id": "excel-gioia-2026-09-02-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-02",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E111;桔灯 陪伴老师 排课统计.xlsx:Gioia!E112"
+  },
+  {
+    "id": "excel-gioia-2026-09-02-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-02",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!E98;Gioia!E99;Gioia!E100;Gioia!E101;Gioia!E102;Gioia!E103;Gioia!E104;Gioia!E105;Gioia!E106;Gioia!E107;Gioia!E108;Gioia!E109;Gioia!E110;Gioia!E111;Gioia!E112;Gioia!E113"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E112;桔灯 陪伴老师 排课统计.xlsx:Gioia!E113"
+  },
+  {
+    "id": "excel-gioia-2026-09-02-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-02",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E113"
   },
   {
     "id": "excel-gioia-2026-09-03-0800-休息",
@@ -10358,7 +18912,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!F89:F96"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F89:F96"
   },
   {
     "id": "excel-gioia-2026-09-03-1200-灰色不可排",
@@ -10371,7 +18925,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!F97"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F97"
   },
   {
     "id": "excel-gioia-2026-09-03-1300-灰色不可排",
@@ -10382,9 +18936,113 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-09-03",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!F98"
+  },
+  {
+    "id": "excel-gioia-2026-09-03-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-03",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F98;桔灯 陪伴老师 排课统计.xlsx:Gioia!F99"
+  },
+  {
+    "id": "excel-gioia-2026-09-03-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-03",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F99;桔灯 陪伴老师 排课统计.xlsx:Gioia!F100"
+  },
+  {
+    "id": "excel-gioia-2026-09-03-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-03",
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F100;桔灯 陪伴老师 排课统计.xlsx:Gioia!F101"
+  },
+  {
+    "id": "excel-gioia-2026-09-03-1430-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-03",
+    "startTime": "14:30",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F101;桔灯 陪伴老师 排课统计.xlsx:Gioia!F102"
+  },
+  {
+    "id": "excel-gioia-2026-09-03-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-03",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F102;桔灯 陪伴老师 排课统计.xlsx:Gioia!F103"
+  },
+  {
+    "id": "excel-gioia-2026-09-03-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-03",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F103;桔灯 陪伴老师 排课统计.xlsx:Gioia!F104"
+  },
+  {
+    "id": "excel-gioia-2026-09-03-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-03",
+    "startTime": "16:00",
     "endTime": "17:00",
     "status": "不可用",
-    "source": "Gioia!F98;Gioia!F99;Gioia!F100;Gioia!F101;Gioia!F102;Gioia!F103;Gioia!F104;Gioia!F105"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F104;桔灯 陪伴老师 排课统计.xlsx:Gioia!F105"
+  },
+  {
+    "id": "excel-gioia-2026-09-03-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-03",
+    "startTime": "16:30",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F105"
   },
   {
     "id": "excel-gioia-2026-09-03-1700-Jesmine-1v1",
@@ -10397,7 +19055,7 @@ export const importedLessons = [
     "startTime": "17:00",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!F106:F109"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F106:F109"
   },
   {
     "id": "excel-gioia-2026-09-03-1900-灰色不可排",
@@ -10408,9 +19066,61 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-09-03",
     "startTime": "19:00",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!F110"
+  },
+  {
+    "id": "excel-gioia-2026-09-03-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-03",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F110;桔灯 陪伴老师 排课统计.xlsx:Gioia!F111"
+  },
+  {
+    "id": "excel-gioia-2026-09-03-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-03",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F111;桔灯 陪伴老师 排课统计.xlsx:Gioia!F112"
+  },
+  {
+    "id": "excel-gioia-2026-09-03-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-03",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!F110;Gioia!F111;Gioia!F112;Gioia!F113"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F112;桔灯 陪伴老师 排课统计.xlsx:Gioia!F113"
+  },
+  {
+    "id": "excel-gioia-2026-09-03-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-03",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F113"
   },
   {
     "id": "excel-gioia-2026-09-04-0800-休息",
@@ -10423,7 +19133,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!G89:G96"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G89:G96"
   },
   {
     "id": "excel-gioia-2026-09-04-1200-灰色不可排",
@@ -10436,7 +19146,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!G97"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G97"
   },
   {
     "id": "excel-gioia-2026-09-04-1300-灰色不可排",
@@ -10447,9 +19157,139 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-09-04",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!G98"
+  },
+  {
+    "id": "excel-gioia-2026-09-04-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-04",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G98;桔灯 陪伴老师 排课统计.xlsx:Gioia!G99"
+  },
+  {
+    "id": "excel-gioia-2026-09-04-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-04",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G99;桔灯 陪伴老师 排课统计.xlsx:Gioia!G100"
+  },
+  {
+    "id": "excel-gioia-2026-09-04-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-04",
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G100;桔灯 陪伴老师 排课统计.xlsx:Gioia!G101"
+  },
+  {
+    "id": "excel-gioia-2026-09-04-1430-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-04",
+    "startTime": "14:30",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G101;桔灯 陪伴老师 排课统计.xlsx:Gioia!G102"
+  },
+  {
+    "id": "excel-gioia-2026-09-04-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-04",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G102;桔灯 陪伴老师 排课统计.xlsx:Gioia!G103"
+  },
+  {
+    "id": "excel-gioia-2026-09-04-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-04",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G103;桔灯 陪伴老师 排课统计.xlsx:Gioia!G104"
+  },
+  {
+    "id": "excel-gioia-2026-09-04-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-04",
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G104;桔灯 陪伴老师 排课统计.xlsx:Gioia!G105"
+  },
+  {
+    "id": "excel-gioia-2026-09-04-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-04",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G105;桔灯 陪伴老师 排课统计.xlsx:Gioia!G106"
+  },
+  {
+    "id": "excel-gioia-2026-09-04-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-04",
+    "startTime": "17:00",
     "endTime": "18:00",
     "status": "不可用",
-    "source": "Gioia!G98;Gioia!G99;Gioia!G100;Gioia!G101;Gioia!G102;Gioia!G103;Gioia!G104;Gioia!G105;Gioia!G106;Gioia!G107"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G106;桔灯 陪伴老师 排课统计.xlsx:Gioia!G107"
+  },
+  {
+    "id": "excel-gioia-2026-09-04-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-04",
+    "startTime": "17:30",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G107"
   },
   {
     "id": "excel-gioia-2026-09-04-1800-预备开班课",
@@ -10462,7 +19302,7 @@ export const importedLessons = [
     "startTime": "18:00",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!G108:G109"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G108:G109"
   },
   {
     "id": "excel-gioia-2026-09-04-1900-A1-Miles-线上课",
@@ -10475,7 +19315,20 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!G110:G111"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G110:G111"
+  },
+  {
+    "id": "excel-gioia-2026-09-04-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-04",
+    "startTime": "20:00",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!G112"
   },
   {
     "id": "excel-gioia-2026-09-04-2000-灰色不可排",
@@ -10488,7 +19341,20 @@ export const importedLessons = [
     "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!G112;Gioia!G113"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G112;桔灯 陪伴老师 排课统计.xlsx:Gioia!G113"
+  },
+  {
+    "id": "excel-gioia-2026-09-04-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-04",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G113"
   },
   {
     "id": "excel-gioia-2026-09-05-0800-灰色不可排",
@@ -10499,9 +19365,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-09-05",
     "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!H89"
+  },
+  {
+    "id": "excel-gioia-2026-09-05-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-05",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H89;桔灯 陪伴老师 排课统计.xlsx:Gioia!H90"
+  },
+  {
+    "id": "excel-gioia-2026-09-05-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-05",
+    "startTime": "08:30",
     "endTime": "09:30",
     "status": "不可用",
-    "source": "Gioia!H89;Gioia!H90;Gioia!H91"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H90;桔灯 陪伴老师 排课统计.xlsx:Gioia!H91"
+  },
+  {
+    "id": "excel-gioia-2026-09-05-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-05",
+    "startTime": "09:00",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H91"
   },
   {
     "id": "excel-gioia-2026-09-05-0930-Tony-1v1",
@@ -10514,7 +19419,7 @@ export const importedLessons = [
     "startTime": "09:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!H92:H97"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H92:H97"
   },
   {
     "id": "excel-gioia-2026-09-05-1300-灰色不可排",
@@ -10525,9 +19430,100 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-09-05",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!H98"
+  },
+  {
+    "id": "excel-gioia-2026-09-05-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-05",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H98;桔灯 陪伴老师 排课统计.xlsx:Gioia!H99"
+  },
+  {
+    "id": "excel-gioia-2026-09-05-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-05",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H99;桔灯 陪伴老师 排课统计.xlsx:Gioia!H100"
+  },
+  {
+    "id": "excel-gioia-2026-09-05-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-05",
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H100;桔灯 陪伴老师 排课统计.xlsx:Gioia!H101"
+  },
+  {
+    "id": "excel-gioia-2026-09-05-1430-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-05",
+    "startTime": "14:30",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H101;桔灯 陪伴老师 排课统计.xlsx:Gioia!H102"
+  },
+  {
+    "id": "excel-gioia-2026-09-05-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-05",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H102;桔灯 陪伴老师 排课统计.xlsx:Gioia!H103"
+  },
+  {
+    "id": "excel-gioia-2026-09-05-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-05",
+    "startTime": "15:30",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!H98;Gioia!H99;Gioia!H100;Gioia!H101;Gioia!H102;Gioia!H103;Gioia!H104"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H103;桔灯 陪伴老师 排课统计.xlsx:Gioia!H104"
+  },
+  {
+    "id": "excel-gioia-2026-09-05-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-05",
+    "startTime": "16:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H104"
   },
   {
     "id": "excel-gioia-2026-09-05-1630-George-1v1",
@@ -10540,7 +19536,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!H105:H108"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H105:H108"
   },
   {
     "id": "excel-gioia-2026-09-05-1830-灰色不可排",
@@ -10551,9 +19547,87 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-09-05",
     "startTime": "18:30",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!H109"
+  },
+  {
+    "id": "excel-gioia-2026-09-05-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-05",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H109;桔灯 陪伴老师 排课统计.xlsx:Gioia!H110"
+  },
+  {
+    "id": "excel-gioia-2026-09-05-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-05",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H110;桔灯 陪伴老师 排课统计.xlsx:Gioia!H111"
+  },
+  {
+    "id": "excel-gioia-2026-09-05-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-05",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H111;桔灯 陪伴老师 排课统计.xlsx:Gioia!H112"
+  },
+  {
+    "id": "excel-gioia-2026-09-05-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-05",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!H109;Gioia!H110;Gioia!H111;Gioia!H112;Gioia!H113"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H112;桔灯 陪伴老师 排课统计.xlsx:Gioia!H113"
+  },
+  {
+    "id": "excel-gioia-2026-09-05-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-05",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H113"
+  },
+  {
+    "id": "excel-gioia-2026-09-06-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-06",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!I89"
   },
   {
     "id": "excel-gioia-2026-09-06-0800-灰色不可排",
@@ -10566,7 +19640,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!I89;Gioia!I90"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I89;桔灯 陪伴老师 排课统计.xlsx:Gioia!I90"
+  },
+  {
+    "id": "excel-gioia-2026-09-06-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-06",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I90"
   },
   {
     "id": "excel-gioia-2026-09-06-0900-A1预备开班",
@@ -10579,7 +19666,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!I91:I96"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I91:I96"
   },
   {
     "id": "excel-gioia-2026-09-06-1200-灰色不可排",
@@ -10592,7 +19679,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!I97"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I97"
   },
   {
     "id": "excel-gioia-2026-09-06-1300-A1-Miles",
@@ -10605,7 +19692,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "不可用",
-    "source": "Gioia!I98:I103"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I98:I103"
   },
   {
     "id": "excel-gioia-2026-09-06-1600-灰色不可排",
@@ -10616,9 +19703,139 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-09-06",
     "startTime": "16:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!I104"
+  },
+  {
+    "id": "excel-gioia-2026-09-06-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-06",
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I104;桔灯 陪伴老师 排课统计.xlsx:Gioia!I105"
+  },
+  {
+    "id": "excel-gioia-2026-09-06-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-06",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I105;桔灯 陪伴老师 排课统计.xlsx:Gioia!I106"
+  },
+  {
+    "id": "excel-gioia-2026-09-06-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-06",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I106;桔灯 陪伴老师 排课统计.xlsx:Gioia!I107"
+  },
+  {
+    "id": "excel-gioia-2026-09-06-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-06",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I107;桔灯 陪伴老师 排课统计.xlsx:Gioia!I108"
+  },
+  {
+    "id": "excel-gioia-2026-09-06-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-06",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I108;桔灯 陪伴老师 排课统计.xlsx:Gioia!I109"
+  },
+  {
+    "id": "excel-gioia-2026-09-06-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-06",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I109;桔灯 陪伴老师 排课统计.xlsx:Gioia!I110"
+  },
+  {
+    "id": "excel-gioia-2026-09-06-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-06",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I110;桔灯 陪伴老师 排课统计.xlsx:Gioia!I111"
+  },
+  {
+    "id": "excel-gioia-2026-09-06-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-06",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I111;桔灯 陪伴老师 排课统计.xlsx:Gioia!I112"
+  },
+  {
+    "id": "excel-gioia-2026-09-06-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-06",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!I104;Gioia!I105;Gioia!I106;Gioia!I107;Gioia!I108;Gioia!I109;Gioia!I110;Gioia!I111;Gioia!I112;Gioia!I113"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I112;桔灯 陪伴老师 排课统计.xlsx:Gioia!I113"
+  },
+  {
+    "id": "excel-gioia-2026-09-06-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-06",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I113"
   },
   {
     "id": "excel-gioia-2026-09-07-0800-休息",
@@ -10631,7 +19848,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!C89:C113"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C89:C113"
   },
   {
     "id": "excel-gioia-2026-09-08-0800-休息",
@@ -10644,7 +19861,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!D89:D113"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D89:D113"
   },
   {
     "id": "excel-gioia-2026-09-09-0800-休息",
@@ -10657,7 +19874,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!O89:O96"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O89:O96"
   },
   {
     "id": "excel-gioia-2026-09-09-1200-灰色不可排",
@@ -10670,7 +19887,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!O97"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O97"
   },
   {
     "id": "excel-gioia-2026-09-09-1300-灰色不可排",
@@ -10681,9 +19898,217 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-09-09",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!O98"
+  },
+  {
+    "id": "excel-gioia-2026-09-09-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-09",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O98;桔灯 陪伴老师 排课统计.xlsx:Gioia!O99"
+  },
+  {
+    "id": "excel-gioia-2026-09-09-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-09",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O99;桔灯 陪伴老师 排课统计.xlsx:Gioia!O100"
+  },
+  {
+    "id": "excel-gioia-2026-09-09-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-09",
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O100;桔灯 陪伴老师 排课统计.xlsx:Gioia!O101"
+  },
+  {
+    "id": "excel-gioia-2026-09-09-1430-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-09",
+    "startTime": "14:30",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O101;桔灯 陪伴老师 排课统计.xlsx:Gioia!O102"
+  },
+  {
+    "id": "excel-gioia-2026-09-09-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-09",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O102;桔灯 陪伴老师 排课统计.xlsx:Gioia!O103"
+  },
+  {
+    "id": "excel-gioia-2026-09-09-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-09",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O103;桔灯 陪伴老师 排课统计.xlsx:Gioia!O104"
+  },
+  {
+    "id": "excel-gioia-2026-09-09-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-09",
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O104;桔灯 陪伴老师 排课统计.xlsx:Gioia!O105"
+  },
+  {
+    "id": "excel-gioia-2026-09-09-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-09",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O105;桔灯 陪伴老师 排课统计.xlsx:Gioia!O106"
+  },
+  {
+    "id": "excel-gioia-2026-09-09-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-09",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O106;桔灯 陪伴老师 排课统计.xlsx:Gioia!O107"
+  },
+  {
+    "id": "excel-gioia-2026-09-09-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-09",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O107;桔灯 陪伴老师 排课统计.xlsx:Gioia!O108"
+  },
+  {
+    "id": "excel-gioia-2026-09-09-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-09",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O108;桔灯 陪伴老师 排课统计.xlsx:Gioia!O109"
+  },
+  {
+    "id": "excel-gioia-2026-09-09-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-09",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O109;桔灯 陪伴老师 排课统计.xlsx:Gioia!O110"
+  },
+  {
+    "id": "excel-gioia-2026-09-09-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-09",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O110;桔灯 陪伴老师 排课统计.xlsx:Gioia!O111"
+  },
+  {
+    "id": "excel-gioia-2026-09-09-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-09",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O111;桔灯 陪伴老师 排课统计.xlsx:Gioia!O112"
+  },
+  {
+    "id": "excel-gioia-2026-09-09-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-09",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!O98;Gioia!O99;Gioia!O100;Gioia!O101;Gioia!O102;Gioia!O103;Gioia!O104;Gioia!O105;Gioia!O106;Gioia!O107;Gioia!O108;Gioia!O109;Gioia!O110;Gioia!O111;Gioia!O112;Gioia!O113"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O112;桔灯 陪伴老师 排课统计.xlsx:Gioia!O113"
+  },
+  {
+    "id": "excel-gioia-2026-09-09-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-09",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O113"
   },
   {
     "id": "excel-gioia-2026-09-10-0800-休息",
@@ -10696,7 +20121,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!P89:P96"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P89:P96"
   },
   {
     "id": "excel-gioia-2026-09-10-1200-灰色不可排",
@@ -10709,7 +20134,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!P97"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P97"
   },
   {
     "id": "excel-gioia-2026-09-10-1300-灰色不可排",
@@ -10720,9 +20145,113 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-09-10",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!P98"
+  },
+  {
+    "id": "excel-gioia-2026-09-10-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-10",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P98;桔灯 陪伴老师 排课统计.xlsx:Gioia!P99"
+  },
+  {
+    "id": "excel-gioia-2026-09-10-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-10",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P99;桔灯 陪伴老师 排课统计.xlsx:Gioia!P100"
+  },
+  {
+    "id": "excel-gioia-2026-09-10-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-10",
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P100;桔灯 陪伴老师 排课统计.xlsx:Gioia!P101"
+  },
+  {
+    "id": "excel-gioia-2026-09-10-1430-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-10",
+    "startTime": "14:30",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P101;桔灯 陪伴老师 排课统计.xlsx:Gioia!P102"
+  },
+  {
+    "id": "excel-gioia-2026-09-10-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-10",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P102;桔灯 陪伴老师 排课统计.xlsx:Gioia!P103"
+  },
+  {
+    "id": "excel-gioia-2026-09-10-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-10",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P103;桔灯 陪伴老师 排课统计.xlsx:Gioia!P104"
+  },
+  {
+    "id": "excel-gioia-2026-09-10-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-10",
+    "startTime": "16:00",
     "endTime": "17:00",
     "status": "不可用",
-    "source": "Gioia!P98;Gioia!P99;Gioia!P100;Gioia!P101;Gioia!P102;Gioia!P103;Gioia!P104;Gioia!P105"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P104;桔灯 陪伴老师 排课统计.xlsx:Gioia!P105"
+  },
+  {
+    "id": "excel-gioia-2026-09-10-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-10",
+    "startTime": "16:30",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P105"
   },
   {
     "id": "excel-gioia-2026-09-10-1700-Jesmine-1v1",
@@ -10735,7 +20264,7 @@ export const importedLessons = [
     "startTime": "17:00",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!P106:P109"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P106:P109"
   },
   {
     "id": "excel-gioia-2026-09-10-1900-灰色不可排",
@@ -10746,9 +20275,61 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-09-10",
     "startTime": "19:00",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!P110"
+  },
+  {
+    "id": "excel-gioia-2026-09-10-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-10",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P110;桔灯 陪伴老师 排课统计.xlsx:Gioia!P111"
+  },
+  {
+    "id": "excel-gioia-2026-09-10-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-10",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P111;桔灯 陪伴老师 排课统计.xlsx:Gioia!P112"
+  },
+  {
+    "id": "excel-gioia-2026-09-10-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-10",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!P110;Gioia!P111;Gioia!P112;Gioia!P113"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P112;桔灯 陪伴老师 排课统计.xlsx:Gioia!P113"
+  },
+  {
+    "id": "excel-gioia-2026-09-10-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-10",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P113"
   },
   {
     "id": "excel-gioia-2026-09-11-0800-休息",
@@ -10761,7 +20342,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!Q89:Q96"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q89:Q96"
   },
   {
     "id": "excel-gioia-2026-09-11-1200-灰色不可排",
@@ -10774,7 +20355,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!Q97"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q97"
   },
   {
     "id": "excel-gioia-2026-09-11-1300-灰色不可排",
@@ -10785,9 +20366,139 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-09-11",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Q98"
+  },
+  {
+    "id": "excel-gioia-2026-09-11-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-11",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q98;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q99"
+  },
+  {
+    "id": "excel-gioia-2026-09-11-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-11",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q99;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q100"
+  },
+  {
+    "id": "excel-gioia-2026-09-11-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-11",
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q100;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q101"
+  },
+  {
+    "id": "excel-gioia-2026-09-11-1430-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-11",
+    "startTime": "14:30",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q101;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q102"
+  },
+  {
+    "id": "excel-gioia-2026-09-11-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-11",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q102;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q103"
+  },
+  {
+    "id": "excel-gioia-2026-09-11-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-11",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q103;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q104"
+  },
+  {
+    "id": "excel-gioia-2026-09-11-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-11",
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q104;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q105"
+  },
+  {
+    "id": "excel-gioia-2026-09-11-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-11",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q105;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q106"
+  },
+  {
+    "id": "excel-gioia-2026-09-11-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-11",
+    "startTime": "17:00",
     "endTime": "18:00",
     "status": "不可用",
-    "source": "Gioia!Q98;Gioia!Q99;Gioia!Q100;Gioia!Q101;Gioia!Q102;Gioia!Q103;Gioia!Q104;Gioia!Q105;Gioia!Q106;Gioia!Q107"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q106;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q107"
+  },
+  {
+    "id": "excel-gioia-2026-09-11-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-11",
+    "startTime": "17:30",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q107"
   },
   {
     "id": "excel-gioia-2026-09-11-1800-预备开班课",
@@ -10800,7 +20511,7 @@ export const importedLessons = [
     "startTime": "18:00",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!Q108:Q109"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q108:Q109"
   },
   {
     "id": "excel-gioia-2026-09-11-1900-A1-Miles-线上课",
@@ -10813,7 +20524,20 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!Q110:Q111"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q110:Q111"
+  },
+  {
+    "id": "excel-gioia-2026-09-11-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-11",
+    "startTime": "20:00",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Q112"
   },
   {
     "id": "excel-gioia-2026-09-11-2000-灰色不可排",
@@ -10826,7 +20550,20 @@ export const importedLessons = [
     "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!Q112;Gioia!Q113"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q112;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q113"
+  },
+  {
+    "id": "excel-gioia-2026-09-11-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-11",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q113"
   },
   {
     "id": "excel-gioia-2026-09-12-0800-灰色不可排",
@@ -10837,9 +20574,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-09-12",
     "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!R89"
+  },
+  {
+    "id": "excel-gioia-2026-09-12-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-12",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R89;桔灯 陪伴老师 排课统计.xlsx:Gioia!R90"
+  },
+  {
+    "id": "excel-gioia-2026-09-12-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-12",
+    "startTime": "08:30",
     "endTime": "09:30",
     "status": "不可用",
-    "source": "Gioia!R89;Gioia!R90;Gioia!R91"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R90;桔灯 陪伴老师 排课统计.xlsx:Gioia!R91"
+  },
+  {
+    "id": "excel-gioia-2026-09-12-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-12",
+    "startTime": "09:00",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R91"
   },
   {
     "id": "excel-gioia-2026-09-12-0930-Tony-1v1",
@@ -10852,7 +20628,7 @@ export const importedLessons = [
     "startTime": "09:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!R92:R97"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R92:R97"
   },
   {
     "id": "excel-gioia-2026-09-12-1300-灰色不可排",
@@ -10863,9 +20639,230 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-09-12",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!R98"
+  },
+  {
+    "id": "excel-gioia-2026-09-12-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-12",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R98;桔灯 陪伴老师 排课统计.xlsx:Gioia!R99"
+  },
+  {
+    "id": "excel-gioia-2026-09-12-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-12",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R99;桔灯 陪伴老师 排课统计.xlsx:Gioia!R100"
+  },
+  {
+    "id": "excel-gioia-2026-09-12-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-12",
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R100;桔灯 陪伴老师 排课统计.xlsx:Gioia!R101"
+  },
+  {
+    "id": "excel-gioia-2026-09-12-1430-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-12",
+    "startTime": "14:30",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R101;桔灯 陪伴老师 排课统计.xlsx:Gioia!R102"
+  },
+  {
+    "id": "excel-gioia-2026-09-12-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-12",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R102;桔灯 陪伴老师 排课统计.xlsx:Gioia!R103"
+  },
+  {
+    "id": "excel-gioia-2026-09-12-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-12",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R103;桔灯 陪伴老师 排课统计.xlsx:Gioia!R104"
+  },
+  {
+    "id": "excel-gioia-2026-09-12-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-12",
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R104;桔灯 陪伴老师 排课统计.xlsx:Gioia!R105"
+  },
+  {
+    "id": "excel-gioia-2026-09-12-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-12",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R105;桔灯 陪伴老师 排课统计.xlsx:Gioia!R106"
+  },
+  {
+    "id": "excel-gioia-2026-09-12-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-12",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R106;桔灯 陪伴老师 排课统计.xlsx:Gioia!R107"
+  },
+  {
+    "id": "excel-gioia-2026-09-12-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-12",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R107;桔灯 陪伴老师 排课统计.xlsx:Gioia!R108"
+  },
+  {
+    "id": "excel-gioia-2026-09-12-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-12",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R108;桔灯 陪伴老师 排课统计.xlsx:Gioia!R109"
+  },
+  {
+    "id": "excel-gioia-2026-09-12-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-12",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R109;桔灯 陪伴老师 排课统计.xlsx:Gioia!R110"
+  },
+  {
+    "id": "excel-gioia-2026-09-12-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-12",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R110;桔灯 陪伴老师 排课统计.xlsx:Gioia!R111"
+  },
+  {
+    "id": "excel-gioia-2026-09-12-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-12",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R111;桔灯 陪伴老师 排课统计.xlsx:Gioia!R112"
+  },
+  {
+    "id": "excel-gioia-2026-09-12-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-12",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!R98;Gioia!R99;Gioia!R100;Gioia!R101;Gioia!R102;Gioia!R103;Gioia!R104;Gioia!R105;Gioia!R106;Gioia!R107;Gioia!R108;Gioia!R109;Gioia!R110;Gioia!R111;Gioia!R112;Gioia!R113"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R112;桔灯 陪伴老师 排课统计.xlsx:Gioia!R113"
+  },
+  {
+    "id": "excel-gioia-2026-09-12-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-12",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R113"
+  },
+  {
+    "id": "excel-gioia-2026-09-13-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-13",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!S89"
   },
   {
     "id": "excel-gioia-2026-09-13-0800-灰色不可排",
@@ -10878,7 +20875,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!S89;Gioia!S90"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S89;桔灯 陪伴老师 排课统计.xlsx:Gioia!S90"
+  },
+  {
+    "id": "excel-gioia-2026-09-13-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-13",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S90"
   },
   {
     "id": "excel-gioia-2026-09-13-0900-A1预备开班",
@@ -10891,7 +20901,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!S91:S96"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S91:S96"
   },
   {
     "id": "excel-gioia-2026-09-13-1200-灰色不可排",
@@ -10904,7 +20914,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!S97"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S97"
   },
   {
     "id": "excel-gioia-2026-09-13-1300-A1-Miles",
@@ -10917,7 +20927,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "不可用",
-    "source": "Gioia!S98:S103"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S98:S103"
   },
   {
     "id": "excel-gioia-2026-09-13-1600-灰色不可排",
@@ -10930,7 +20940,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!S104"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S104"
   },
   {
     "id": "excel-gioia-2026-09-13-1630-George",
@@ -10943,7 +20953,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "19:30",
     "status": "不可用",
-    "source": "Gioia!S105:S110"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S105:S110"
   },
   {
     "id": "excel-gioia-2026-09-13-1930-灰色不可排",
@@ -10954,9 +20964,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-09-13",
     "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!S111"
+  },
+  {
+    "id": "excel-gioia-2026-09-13-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-13",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S111;桔灯 陪伴老师 排课统计.xlsx:Gioia!S112"
+  },
+  {
+    "id": "excel-gioia-2026-09-13-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-13",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!S111;Gioia!S112;Gioia!S113"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S112;桔灯 陪伴老师 排课统计.xlsx:Gioia!S113"
+  },
+  {
+    "id": "excel-gioia-2026-09-13-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-13",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S113"
   },
   {
     "id": "excel-gioia-2026-09-14-0800-休息",
@@ -10969,7 +21018,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!M89:M113"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M89:M113"
   },
   {
     "id": "excel-gioia-2026-09-15-0800-休息",
@@ -10982,7 +21031,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!N89:N113"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N89:N113"
   },
   {
     "id": "excel-gioia-2026-09-16-0800-休息",
@@ -10995,7 +21044,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!Y89:Y96"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y89:Y96"
   },
   {
     "id": "excel-gioia-2026-09-16-1200-灰色不可排",
@@ -11008,7 +21057,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!Y97"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y97"
   },
   {
     "id": "excel-gioia-2026-09-16-1300-灰色不可排",
@@ -11019,9 +21068,204 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-09-16",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Y98"
+  },
+  {
+    "id": "excel-gioia-2026-09-16-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-16",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y98;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y99"
+  },
+  {
+    "id": "excel-gioia-2026-09-16-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-16",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y99;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y100"
+  },
+  {
+    "id": "excel-gioia-2026-09-16-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-16",
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y100;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y101"
+  },
+  {
+    "id": "excel-gioia-2026-09-16-1430-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-16",
+    "startTime": "14:30",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y101;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y102"
+  },
+  {
+    "id": "excel-gioia-2026-09-16-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-16",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y102;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y103"
+  },
+  {
+    "id": "excel-gioia-2026-09-16-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-16",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y103;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y104"
+  },
+  {
+    "id": "excel-gioia-2026-09-16-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-16",
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y104;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y105"
+  },
+  {
+    "id": "excel-gioia-2026-09-16-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-16",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y105;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y106"
+  },
+  {
+    "id": "excel-gioia-2026-09-16-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-16",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y106;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y107"
+  },
+  {
+    "id": "excel-gioia-2026-09-16-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-16",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y107;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y108"
+  },
+  {
+    "id": "excel-gioia-2026-09-16-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-16",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y108;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y109"
+  },
+  {
+    "id": "excel-gioia-2026-09-16-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-16",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y109;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y110"
+  },
+  {
+    "id": "excel-gioia-2026-09-16-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-16",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y110;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y111"
+  },
+  {
+    "id": "excel-gioia-2026-09-16-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-16",
+    "startTime": "19:30",
     "endTime": "20:30",
     "status": "不可用",
-    "source": "Gioia!Y98;Gioia!Y99;Gioia!Y100;Gioia!Y101;Gioia!Y102;Gioia!Y103;Gioia!Y104;Gioia!Y105;Gioia!Y106;Gioia!Y107;Gioia!Y108;Gioia!Y109;Gioia!Y110;Gioia!Y111;Gioia!Y112"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y111;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y112"
+  },
+  {
+    "id": "excel-gioia-2026-09-16-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-16",
+    "startTime": "20:00",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y112"
   },
   {
     "id": "excel-gioia-2026-09-17-0800-休息",
@@ -11034,7 +21278,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!Z89:Z96"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z89:Z96"
+  },
+  {
+    "id": "excel-gioia-2026-09-17-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-17",
+    "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Z98"
   },
   {
     "id": "excel-gioia-2026-09-17-1300-灰色不可排",
@@ -11047,7 +21304,20 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:00",
     "status": "不可用",
-    "source": "Gioia!Z98;Gioia!Z99"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z98;桔灯 陪伴老师 排课统计.xlsx:Gioia!Z99"
+  },
+  {
+    "id": "excel-gioia-2026-09-17-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-17",
+    "startTime": "13:30",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z99"
   },
   {
     "id": "excel-gioia-2026-09-17-1700-Jesmine-1v1",
@@ -11060,7 +21330,7 @@ export const importedLessons = [
     "startTime": "17:00",
     "endTime": "19:00",
     "status": "Excel导入",
-    "source": "Gioia!Z106:Z109"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z106:Z109"
   },
   {
     "id": "excel-gioia-2026-09-18-0800-休息",
@@ -11073,7 +21343,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!AA89:AA96"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA89:AA96"
+  },
+  {
+    "id": "excel-gioia-2026-09-18-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-18",
+    "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AA98"
   },
   {
     "id": "excel-gioia-2026-09-18-1300-灰色不可排",
@@ -11086,7 +21369,20 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:00",
     "status": "不可用",
-    "source": "Gioia!AA98;Gioia!AA99"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA98;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA99"
+  },
+  {
+    "id": "excel-gioia-2026-09-18-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-18",
+    "startTime": "13:30",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA99"
   },
   {
     "id": "excel-gioia-2026-09-18-1800-预备开班课",
@@ -11099,7 +21395,7 @@ export const importedLessons = [
     "startTime": "18:00",
     "endTime": "19:00",
     "status": "Excel导入",
-    "source": "Gioia!AA108:AA109"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA108:AA109"
   },
   {
     "id": "excel-gioia-2026-09-18-1900-A1-Miles-线上课",
@@ -11112,7 +21408,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "Excel导入",
-    "source": "Gioia!AA110:AA111"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA110:AA111"
   },
   {
     "id": "excel-gioia-2026-09-19-1630-George",
@@ -11125,7 +21421,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "19:30",
     "status": "Excel导入",
-    "source": "Gioia!AB105:AB110"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB105:AB110"
   },
   {
     "id": "excel-gioia-2026-09-20-1000-Turtle-1v1",
@@ -11138,7 +21434,7 @@ export const importedLessons = [
     "startTime": "10:00",
     "endTime": "11:30",
     "status": "Excel导入",
-    "source": "Gioia!AC93:AC95"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC93:AC95"
   },
   {
     "id": "excel-gioia-2026-09-20-1300-A1-Miles",
@@ -11151,7 +21447,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "Excel导入",
-    "source": "Gioia!AC98:AC103"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC98:AC103"
   },
   {
     "id": "excel-gioia-2026-09-20-1630-Tony-1v1",
@@ -11164,7 +21460,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "Excel导入",
-    "source": "Gioia!AC105:AC108"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC105:AC108"
   },
   {
     "id": "excel-gioia-2026-09-21-0800-休息",
@@ -11177,7 +21473,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!W89:W113"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W89:W113"
   },
   {
     "id": "excel-gioia-2026-09-22-0800-休息",
@@ -11190,7 +21486,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!X89:X113"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!X89:X113"
   },
   {
     "id": "excel-gioia-2026-09-23-0800-休息",
@@ -11203,7 +21499,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!E117:E124"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E117:E124"
   },
   {
     "id": "excel-gioia-2026-09-23-1630-Turtle-1v1",
@@ -11216,7 +21512,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:00",
     "status": "Excel导入",
-    "source": "Gioia!E133:E135"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E133:E135"
   },
   {
     "id": "excel-gioia-2026-09-24-0800-休息",
@@ -11229,7 +21525,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!F117:F124"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F117:F124"
+  },
+  {
+    "id": "excel-gioia-2026-09-24-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-24",
+    "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!F126"
   },
   {
     "id": "excel-gioia-2026-09-24-1300-灰色不可排",
@@ -11242,7 +21551,20 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:00",
     "status": "不可用",
-    "source": "Gioia!F126;Gioia!F127"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F126;桔灯 陪伴老师 排课统计.xlsx:Gioia!F127"
+  },
+  {
+    "id": "excel-gioia-2026-09-24-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-24",
+    "startTime": "13:30",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F127"
   },
   {
     "id": "excel-gioia-2026-09-24-1700-Jesmine-1v1",
@@ -11255,7 +21577,7 @@ export const importedLessons = [
     "startTime": "17:00",
     "endTime": "19:00",
     "status": "Excel导入",
-    "source": "Gioia!F134:F137"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F134:F137"
   },
   {
     "id": "excel-gioia-2026-09-25-0800-休息",
@@ -11268,7 +21590,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!G117:G124"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G117:G124"
+  },
+  {
+    "id": "excel-gioia-2026-09-25-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-25",
+    "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!G126"
   },
   {
     "id": "excel-gioia-2026-09-25-1300-灰色不可排",
@@ -11281,7 +21616,20 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:00",
     "status": "不可用",
-    "source": "Gioia!G126;Gioia!G127"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G126;桔灯 陪伴老师 排课统计.xlsx:Gioia!G127"
+  },
+  {
+    "id": "excel-gioia-2026-09-25-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-25",
+    "startTime": "13:30",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G127"
   },
   {
     "id": "excel-gioia-2026-09-25-1800-预备开班课",
@@ -11294,7 +21642,7 @@ export const importedLessons = [
     "startTime": "18:00",
     "endTime": "19:00",
     "status": "Excel导入",
-    "source": "Gioia!G136:G137"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G136:G137"
   },
   {
     "id": "excel-gioia-2026-09-25-1900-A1-Miles-线上课",
@@ -11307,7 +21655,7 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "Excel导入",
-    "source": "Gioia!G138:G139"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G138:G139"
   },
   {
     "id": "excel-gioia-2026-09-26-0930-Tony-1v1",
@@ -11320,7 +21668,7 @@ export const importedLessons = [
     "startTime": "09:30",
     "endTime": "10:00",
     "status": "Excel导入",
-    "source": "Gioia!H120:H125"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H120:H125"
   },
   {
     "id": "excel-gioia-2026-09-26-1630-George",
@@ -11333,7 +21681,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "19:30",
     "status": "Excel导入",
-    "source": "Gioia!H133:H138"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H133:H138"
   },
   {
     "id": "excel-gioia-2026-09-27-0800-灰色不可排",
@@ -11344,9 +21692,113 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-09-27",
     "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!I117"
+  },
+  {
+    "id": "excel-gioia-2026-09-27-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-27",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I117;桔灯 陪伴老师 排课统计.xlsx:Gioia!I118"
+  },
+  {
+    "id": "excel-gioia-2026-09-27-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-27",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I118;桔灯 陪伴老师 排课统计.xlsx:Gioia!I119"
+  },
+  {
+    "id": "excel-gioia-2026-09-27-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-27",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I119;桔灯 陪伴老师 排课统计.xlsx:Gioia!I120"
+  },
+  {
+    "id": "excel-gioia-2026-09-27-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-27",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I120;桔灯 陪伴老师 排课统计.xlsx:Gioia!I121"
+  },
+  {
+    "id": "excel-gioia-2026-09-27-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-27",
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I121;桔灯 陪伴老师 排课统计.xlsx:Gioia!I122"
+  },
+  {
+    "id": "excel-gioia-2026-09-27-1030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-27",
+    "startTime": "10:30",
+    "endTime": "11:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I122;桔灯 陪伴老师 排课统计.xlsx:Gioia!I123"
+  },
+  {
+    "id": "excel-gioia-2026-09-27-1100-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-27",
+    "startTime": "11:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!I117;Gioia!I118;Gioia!I119;Gioia!I120;Gioia!I121;Gioia!I122;Gioia!I123;Gioia!I124"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I123;桔灯 陪伴老师 排课统计.xlsx:Gioia!I124"
+  },
+  {
+    "id": "excel-gioia-2026-09-27-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-27",
+    "startTime": "11:30",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I124"
   },
   {
     "id": "excel-gioia-2026-09-27-1300-A1-Miles",
@@ -11359,7 +21811,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "不可用",
-    "source": "Gioia!I126:I131"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I126:I131"
   },
   {
     "id": "excel-gioia-2026-09-27-1600-灰色不可排",
@@ -11370,9 +21822,139 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-09-27",
     "startTime": "16:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!I132"
+  },
+  {
+    "id": "excel-gioia-2026-09-27-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-27",
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I132;桔灯 陪伴老师 排课统计.xlsx:Gioia!I133"
+  },
+  {
+    "id": "excel-gioia-2026-09-27-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-27",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I133;桔灯 陪伴老师 排课统计.xlsx:Gioia!I134"
+  },
+  {
+    "id": "excel-gioia-2026-09-27-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-27",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I134;桔灯 陪伴老师 排课统计.xlsx:Gioia!I135"
+  },
+  {
+    "id": "excel-gioia-2026-09-27-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-27",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I135;桔灯 陪伴老师 排课统计.xlsx:Gioia!I136"
+  },
+  {
+    "id": "excel-gioia-2026-09-27-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-27",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I136;桔灯 陪伴老师 排课统计.xlsx:Gioia!I137"
+  },
+  {
+    "id": "excel-gioia-2026-09-27-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-27",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I137;桔灯 陪伴老师 排课统计.xlsx:Gioia!I138"
+  },
+  {
+    "id": "excel-gioia-2026-09-27-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-27",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I138;桔灯 陪伴老师 排课统计.xlsx:Gioia!I139"
+  },
+  {
+    "id": "excel-gioia-2026-09-27-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-27",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I139;桔灯 陪伴老师 排课统计.xlsx:Gioia!I140"
+  },
+  {
+    "id": "excel-gioia-2026-09-27-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-27",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!I132;Gioia!I133;Gioia!I134;Gioia!I135;Gioia!I136;Gioia!I137;Gioia!I138;Gioia!I139;Gioia!I140;Gioia!I141"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I140;桔灯 陪伴老师 排课统计.xlsx:Gioia!I141"
+  },
+  {
+    "id": "excel-gioia-2026-09-27-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-27",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I141"
   },
   {
     "id": "excel-gioia-2026-09-28-0800-休息",
@@ -11385,7 +21967,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!C117:C141"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C117:C141"
   },
   {
     "id": "excel-gioia-2026-09-29-0800-休息",
@@ -11398,7 +21980,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!D117:D141"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D117:D141"
   },
   {
     "id": "excel-gioia-2026-09-30-0800-休息",
@@ -11411,7 +21993,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!E149:E156"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E149:E156"
   },
   {
     "id": "excel-gioia-2026-09-30-1200-灰色不可排",
@@ -11424,7 +22006,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!E157"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E157"
   },
   {
     "id": "excel-gioia-2026-09-30-1300-灰色不可排",
@@ -11435,9 +22017,217 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-09-30",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!E158"
+  },
+  {
+    "id": "excel-gioia-2026-09-30-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-30",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E158;桔灯 陪伴老师 排课统计.xlsx:Gioia!E159"
+  },
+  {
+    "id": "excel-gioia-2026-09-30-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-30",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E159;桔灯 陪伴老师 排课统计.xlsx:Gioia!E160"
+  },
+  {
+    "id": "excel-gioia-2026-09-30-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-30",
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E160;桔灯 陪伴老师 排课统计.xlsx:Gioia!E161"
+  },
+  {
+    "id": "excel-gioia-2026-09-30-1430-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-30",
+    "startTime": "14:30",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E161;桔灯 陪伴老师 排课统计.xlsx:Gioia!E162"
+  },
+  {
+    "id": "excel-gioia-2026-09-30-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-30",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E162;桔灯 陪伴老师 排课统计.xlsx:Gioia!E163"
+  },
+  {
+    "id": "excel-gioia-2026-09-30-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-30",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E163;桔灯 陪伴老师 排课统计.xlsx:Gioia!E164"
+  },
+  {
+    "id": "excel-gioia-2026-09-30-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-30",
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E164;桔灯 陪伴老师 排课统计.xlsx:Gioia!E165"
+  },
+  {
+    "id": "excel-gioia-2026-09-30-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-30",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E165;桔灯 陪伴老师 排课统计.xlsx:Gioia!E166"
+  },
+  {
+    "id": "excel-gioia-2026-09-30-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-30",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E166;桔灯 陪伴老师 排课统计.xlsx:Gioia!E167"
+  },
+  {
+    "id": "excel-gioia-2026-09-30-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-30",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E167;桔灯 陪伴老师 排课统计.xlsx:Gioia!E168"
+  },
+  {
+    "id": "excel-gioia-2026-09-30-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-30",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E168;桔灯 陪伴老师 排课统计.xlsx:Gioia!E169"
+  },
+  {
+    "id": "excel-gioia-2026-09-30-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-30",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E169;桔灯 陪伴老师 排课统计.xlsx:Gioia!E170"
+  },
+  {
+    "id": "excel-gioia-2026-09-30-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-30",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E170;桔灯 陪伴老师 排课统计.xlsx:Gioia!E171"
+  },
+  {
+    "id": "excel-gioia-2026-09-30-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-30",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E171;桔灯 陪伴老师 排课统计.xlsx:Gioia!E172"
+  },
+  {
+    "id": "excel-gioia-2026-09-30-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-30",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!E158;Gioia!E159;Gioia!E160;Gioia!E161;Gioia!E162;Gioia!E163;Gioia!E164;Gioia!E165;Gioia!E166;Gioia!E167;Gioia!E168;Gioia!E169;Gioia!E170;Gioia!E171;Gioia!E172;Gioia!E173"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E172;桔灯 陪伴老师 排课统计.xlsx:Gioia!E173"
+  },
+  {
+    "id": "excel-gioia-2026-09-30-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-09-30",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E173"
   },
   {
     "id": "excel-gioia-2026-10-01-0800-休息",
@@ -11450,7 +22240,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!F149:F156"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F149:F156"
   },
   {
     "id": "excel-gioia-2026-10-01-1200-灰色不可排",
@@ -11463,7 +22253,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!F157"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F157"
   },
   {
     "id": "excel-gioia-2026-10-01-1300-灰色不可排",
@@ -11474,9 +22264,113 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-01",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!F158"
+  },
+  {
+    "id": "excel-gioia-2026-10-01-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-01",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F158;桔灯 陪伴老师 排课统计.xlsx:Gioia!F159"
+  },
+  {
+    "id": "excel-gioia-2026-10-01-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-01",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F159;桔灯 陪伴老师 排课统计.xlsx:Gioia!F160"
+  },
+  {
+    "id": "excel-gioia-2026-10-01-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-01",
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F160;桔灯 陪伴老师 排课统计.xlsx:Gioia!F161"
+  },
+  {
+    "id": "excel-gioia-2026-10-01-1430-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-01",
+    "startTime": "14:30",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F161;桔灯 陪伴老师 排课统计.xlsx:Gioia!F162"
+  },
+  {
+    "id": "excel-gioia-2026-10-01-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-01",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F162;桔灯 陪伴老师 排课统计.xlsx:Gioia!F163"
+  },
+  {
+    "id": "excel-gioia-2026-10-01-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-01",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F163;桔灯 陪伴老师 排课统计.xlsx:Gioia!F164"
+  },
+  {
+    "id": "excel-gioia-2026-10-01-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-01",
+    "startTime": "16:00",
     "endTime": "17:00",
     "status": "不可用",
-    "source": "Gioia!F158;Gioia!F159;Gioia!F160;Gioia!F161;Gioia!F162;Gioia!F163;Gioia!F164;Gioia!F165"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F164;桔灯 陪伴老师 排课统计.xlsx:Gioia!F165"
+  },
+  {
+    "id": "excel-gioia-2026-10-01-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-01",
+    "startTime": "16:30",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F165"
   },
   {
     "id": "excel-gioia-2026-10-01-1700-Jesmine-1v1",
@@ -11489,7 +22383,7 @@ export const importedLessons = [
     "startTime": "17:00",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!F166:F169"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F166:F169"
   },
   {
     "id": "excel-gioia-2026-10-01-1900-灰色不可排",
@@ -11500,9 +22394,61 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-01",
     "startTime": "19:00",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!F170"
+  },
+  {
+    "id": "excel-gioia-2026-10-01-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-01",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F170;桔灯 陪伴老师 排课统计.xlsx:Gioia!F171"
+  },
+  {
+    "id": "excel-gioia-2026-10-01-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-01",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F171;桔灯 陪伴老师 排课统计.xlsx:Gioia!F172"
+  },
+  {
+    "id": "excel-gioia-2026-10-01-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-01",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!F170;Gioia!F171;Gioia!F172;Gioia!F173"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F172;桔灯 陪伴老师 排课统计.xlsx:Gioia!F173"
+  },
+  {
+    "id": "excel-gioia-2026-10-01-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-01",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F173"
   },
   {
     "id": "excel-gioia-2026-10-02-0800-休息",
@@ -11515,7 +22461,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!G149:G156"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G149:G156"
   },
   {
     "id": "excel-gioia-2026-10-02-1200-灰色不可排",
@@ -11528,7 +22474,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!G157"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G157"
   },
   {
     "id": "excel-gioia-2026-10-02-1300-灰色不可排",
@@ -11539,9 +22485,139 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-02",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!G158"
+  },
+  {
+    "id": "excel-gioia-2026-10-02-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-02",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G158;桔灯 陪伴老师 排课统计.xlsx:Gioia!G159"
+  },
+  {
+    "id": "excel-gioia-2026-10-02-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-02",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G159;桔灯 陪伴老师 排课统计.xlsx:Gioia!G160"
+  },
+  {
+    "id": "excel-gioia-2026-10-02-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-02",
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G160;桔灯 陪伴老师 排课统计.xlsx:Gioia!G161"
+  },
+  {
+    "id": "excel-gioia-2026-10-02-1430-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-02",
+    "startTime": "14:30",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G161;桔灯 陪伴老师 排课统计.xlsx:Gioia!G162"
+  },
+  {
+    "id": "excel-gioia-2026-10-02-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-02",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G162;桔灯 陪伴老师 排课统计.xlsx:Gioia!G163"
+  },
+  {
+    "id": "excel-gioia-2026-10-02-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-02",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G163;桔灯 陪伴老师 排课统计.xlsx:Gioia!G164"
+  },
+  {
+    "id": "excel-gioia-2026-10-02-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-02",
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G164;桔灯 陪伴老师 排课统计.xlsx:Gioia!G165"
+  },
+  {
+    "id": "excel-gioia-2026-10-02-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-02",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G165;桔灯 陪伴老师 排课统计.xlsx:Gioia!G166"
+  },
+  {
+    "id": "excel-gioia-2026-10-02-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-02",
+    "startTime": "17:00",
     "endTime": "18:00",
     "status": "不可用",
-    "source": "Gioia!G158;Gioia!G159;Gioia!G160;Gioia!G161;Gioia!G162;Gioia!G163;Gioia!G164;Gioia!G165;Gioia!G166;Gioia!G167"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G166;桔灯 陪伴老师 排课统计.xlsx:Gioia!G167"
+  },
+  {
+    "id": "excel-gioia-2026-10-02-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-02",
+    "startTime": "17:30",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G167"
   },
   {
     "id": "excel-gioia-2026-10-02-1800-预备开班课",
@@ -11554,7 +22630,7 @@ export const importedLessons = [
     "startTime": "18:00",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!G168:G169"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G168:G169"
   },
   {
     "id": "excel-gioia-2026-10-02-1900-A1-Miles-线上课",
@@ -11567,7 +22643,20 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!G170:G171"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G170:G171"
+  },
+  {
+    "id": "excel-gioia-2026-10-02-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-02",
+    "startTime": "20:00",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!G172"
   },
   {
     "id": "excel-gioia-2026-10-02-2000-灰色不可排",
@@ -11580,7 +22669,20 @@ export const importedLessons = [
     "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!G172;Gioia!G173"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G172;桔灯 陪伴老师 排课统计.xlsx:Gioia!G173"
+  },
+  {
+    "id": "excel-gioia-2026-10-02-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-02",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G173"
   },
   {
     "id": "excel-gioia-2026-10-03-0800-灰色不可排",
@@ -11591,9 +22693,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-03",
     "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!H149"
+  },
+  {
+    "id": "excel-gioia-2026-10-03-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-03",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H149;桔灯 陪伴老师 排课统计.xlsx:Gioia!H150"
+  },
+  {
+    "id": "excel-gioia-2026-10-03-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-03",
+    "startTime": "08:30",
     "endTime": "09:30",
     "status": "不可用",
-    "source": "Gioia!H149;Gioia!H150;Gioia!H151"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H150;桔灯 陪伴老师 排课统计.xlsx:Gioia!H151"
+  },
+  {
+    "id": "excel-gioia-2026-10-03-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-03",
+    "startTime": "09:00",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H151"
   },
   {
     "id": "excel-gioia-2026-10-03-0930-Tony-1v1",
@@ -11606,7 +22747,7 @@ export const importedLessons = [
     "startTime": "09:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!H152:H157"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H152:H157"
   },
   {
     "id": "excel-gioia-2026-10-03-1300-Eric-1v1",
@@ -11619,7 +22760,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "15:00",
     "status": "不可用",
-    "source": "Gioia!H158:H161"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H158:H161"
   },
   {
     "id": "excel-gioia-2026-10-03-1500-灰色不可排",
@@ -11630,9 +22771,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-03",
     "startTime": "15:00",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!H162"
+  },
+  {
+    "id": "excel-gioia-2026-10-03-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-03",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H162;桔灯 陪伴老师 排课统计.xlsx:Gioia!H163"
+  },
+  {
+    "id": "excel-gioia-2026-10-03-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-03",
+    "startTime": "15:30",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!H162;Gioia!H163;Gioia!H164"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H163;桔灯 陪伴老师 排课统计.xlsx:Gioia!H164"
+  },
+  {
+    "id": "excel-gioia-2026-10-03-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-03",
+    "startTime": "16:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H164"
   },
   {
     "id": "excel-gioia-2026-10-03-1630-George",
@@ -11645,7 +22825,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "19:30",
     "status": "不可用",
-    "source": "Gioia!H165:H170"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H165:H170"
   },
   {
     "id": "excel-gioia-2026-10-03-1930-灰色不可排",
@@ -11656,9 +22836,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-03",
     "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!H171"
+  },
+  {
+    "id": "excel-gioia-2026-10-03-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-03",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H171;桔灯 陪伴老师 排课统计.xlsx:Gioia!H172"
+  },
+  {
+    "id": "excel-gioia-2026-10-03-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-03",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!H171;Gioia!H172;Gioia!H173"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H172;桔灯 陪伴老师 排课统计.xlsx:Gioia!H173"
+  },
+  {
+    "id": "excel-gioia-2026-10-03-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-03",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H173"
   },
   {
     "id": "excel-gioia-2026-10-04-0800-灰色不可排",
@@ -11669,9 +22888,126 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-04",
     "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!I149"
+  },
+  {
+    "id": "excel-gioia-2026-10-04-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-04",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I149;桔灯 陪伴老师 排课统计.xlsx:Gioia!I150"
+  },
+  {
+    "id": "excel-gioia-2026-10-04-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-04",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I150;桔灯 陪伴老师 排课统计.xlsx:Gioia!I151"
+  },
+  {
+    "id": "excel-gioia-2026-10-04-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-04",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I151;桔灯 陪伴老师 排课统计.xlsx:Gioia!I152"
+  },
+  {
+    "id": "excel-gioia-2026-10-04-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-04",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I152;桔灯 陪伴老师 排课统计.xlsx:Gioia!I153"
+  },
+  {
+    "id": "excel-gioia-2026-10-04-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-04",
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I153;桔灯 陪伴老师 排课统计.xlsx:Gioia!I154"
+  },
+  {
+    "id": "excel-gioia-2026-10-04-1030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-04",
+    "startTime": "10:30",
+    "endTime": "11:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I154;桔灯 陪伴老师 排课统计.xlsx:Gioia!I155"
+  },
+  {
+    "id": "excel-gioia-2026-10-04-1100-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-04",
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I155;桔灯 陪伴老师 排课统计.xlsx:Gioia!I156"
+  },
+  {
+    "id": "excel-gioia-2026-10-04-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-04",
+    "startTime": "11:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!I149;Gioia!I150;Gioia!I151;Gioia!I152;Gioia!I153;Gioia!I154;Gioia!I155;Gioia!I156;Gioia!I157"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I156;桔灯 陪伴老师 排课统计.xlsx:Gioia!I157"
+  },
+  {
+    "id": "excel-gioia-2026-10-04-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-04",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I157"
   },
   {
     "id": "excel-gioia-2026-10-04-1300-A1-Miles",
@@ -11684,7 +23020,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "不可用",
-    "source": "Gioia!I158:I163"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I158:I163"
   },
   {
     "id": "excel-gioia-2026-10-04-1600-灰色不可排",
@@ -11695,9 +23031,139 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-04",
     "startTime": "16:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!I164"
+  },
+  {
+    "id": "excel-gioia-2026-10-04-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-04",
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I164;桔灯 陪伴老师 排课统计.xlsx:Gioia!I165"
+  },
+  {
+    "id": "excel-gioia-2026-10-04-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-04",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I165;桔灯 陪伴老师 排课统计.xlsx:Gioia!I166"
+  },
+  {
+    "id": "excel-gioia-2026-10-04-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-04",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I166;桔灯 陪伴老师 排课统计.xlsx:Gioia!I167"
+  },
+  {
+    "id": "excel-gioia-2026-10-04-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-04",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I167;桔灯 陪伴老师 排课统计.xlsx:Gioia!I168"
+  },
+  {
+    "id": "excel-gioia-2026-10-04-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-04",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I168;桔灯 陪伴老师 排课统计.xlsx:Gioia!I169"
+  },
+  {
+    "id": "excel-gioia-2026-10-04-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-04",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I169;桔灯 陪伴老师 排课统计.xlsx:Gioia!I170"
+  },
+  {
+    "id": "excel-gioia-2026-10-04-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-04",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I170;桔灯 陪伴老师 排课统计.xlsx:Gioia!I171"
+  },
+  {
+    "id": "excel-gioia-2026-10-04-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-04",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I171;桔灯 陪伴老师 排课统计.xlsx:Gioia!I172"
+  },
+  {
+    "id": "excel-gioia-2026-10-04-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-04",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!I164;Gioia!I165;Gioia!I166;Gioia!I167;Gioia!I168;Gioia!I169;Gioia!I170;Gioia!I171;Gioia!I172;Gioia!I173"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I172;桔灯 陪伴老师 排课统计.xlsx:Gioia!I173"
+  },
+  {
+    "id": "excel-gioia-2026-10-04-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-04",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I173"
   },
   {
     "id": "excel-gioia-2026-10-05-0800-休息",
@@ -11710,7 +23176,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!C149:C173"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C149:C173"
   },
   {
     "id": "excel-gioia-2026-10-06-0800-休息",
@@ -11723,7 +23189,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!D149:D173"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D149:D173"
   },
   {
     "id": "excel-gioia-2026-10-07-0800-灰色不可排",
@@ -11734,9 +23200,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-07",
     "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!O149"
+  },
+  {
+    "id": "excel-gioia-2026-10-07-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-07",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O149;桔灯 陪伴老师 排课统计.xlsx:Gioia!O150"
+  },
+  {
+    "id": "excel-gioia-2026-10-07-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-07",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O150;桔灯 陪伴老师 排课统计.xlsx:Gioia!O151"
+  },
+  {
+    "id": "excel-gioia-2026-10-07-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-07",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O151;桔灯 陪伴老师 排课统计.xlsx:Gioia!O152"
+  },
+  {
+    "id": "excel-gioia-2026-10-07-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-07",
+    "startTime": "09:30",
     "endTime": "10:30",
     "status": "不可用",
-    "source": "Gioia!O149;Gioia!O150;Gioia!O151;Gioia!O152;Gioia!O153"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O152;桔灯 陪伴老师 排课统计.xlsx:Gioia!O153"
+  },
+  {
+    "id": "excel-gioia-2026-10-07-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-07",
+    "startTime": "10:00",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O153"
   },
   {
     "id": "excel-gioia-2026-10-07-1030-教研",
@@ -11749,7 +23280,7 @@ export const importedLessons = [
     "startTime": "10:30",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!O154:O156"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O154:O156"
   },
   {
     "id": "excel-gioia-2026-10-07-1200-灰色不可排",
@@ -11762,7 +23293,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!O157"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O157"
   },
   {
     "id": "excel-gioia-2026-10-07-1300-灰色不可排",
@@ -11773,9 +23304,100 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-07",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!O158"
+  },
+  {
+    "id": "excel-gioia-2026-10-07-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-07",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O158;桔灯 陪伴老师 排课统计.xlsx:Gioia!O159"
+  },
+  {
+    "id": "excel-gioia-2026-10-07-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-07",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O159;桔灯 陪伴老师 排课统计.xlsx:Gioia!O160"
+  },
+  {
+    "id": "excel-gioia-2026-10-07-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-07",
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O160;桔灯 陪伴老师 排课统计.xlsx:Gioia!O161"
+  },
+  {
+    "id": "excel-gioia-2026-10-07-1430-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-07",
+    "startTime": "14:30",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O161;桔灯 陪伴老师 排课统计.xlsx:Gioia!O162"
+  },
+  {
+    "id": "excel-gioia-2026-10-07-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-07",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O162;桔灯 陪伴老师 排课统计.xlsx:Gioia!O163"
+  },
+  {
+    "id": "excel-gioia-2026-10-07-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-07",
+    "startTime": "15:30",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!O158;Gioia!O159;Gioia!O160;Gioia!O161;Gioia!O162;Gioia!O163;Gioia!O164"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O163;桔灯 陪伴老师 排课统计.xlsx:Gioia!O164"
+  },
+  {
+    "id": "excel-gioia-2026-10-07-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-07",
+    "startTime": "16:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O164"
   },
   {
     "id": "excel-gioia-2026-10-07-1630-Turtle-1v1",
@@ -11788,7 +23410,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:00",
     "status": "不可用",
-    "source": "Gioia!O165:O167"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O165:O167"
   },
   {
     "id": "excel-gioia-2026-10-07-1800-灰色不可排",
@@ -11799,9 +23421,87 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-07",
     "startTime": "18:00",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!O168"
+  },
+  {
+    "id": "excel-gioia-2026-10-07-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-07",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O168;桔灯 陪伴老师 排课统计.xlsx:Gioia!O169"
+  },
+  {
+    "id": "excel-gioia-2026-10-07-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-07",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O169;桔灯 陪伴老师 排课统计.xlsx:Gioia!O170"
+  },
+  {
+    "id": "excel-gioia-2026-10-07-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-07",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O170;桔灯 陪伴老师 排课统计.xlsx:Gioia!O171"
+  },
+  {
+    "id": "excel-gioia-2026-10-07-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-07",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O171;桔灯 陪伴老师 排课统计.xlsx:Gioia!O172"
+  },
+  {
+    "id": "excel-gioia-2026-10-07-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-07",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!O168;Gioia!O169;Gioia!O170;Gioia!O171;Gioia!O172;Gioia!O173"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O172;桔灯 陪伴老师 排课统计.xlsx:Gioia!O173"
+  },
+  {
+    "id": "excel-gioia-2026-10-07-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-07",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O173"
   },
   {
     "id": "excel-gioia-2026-10-08-0800-休息",
@@ -11814,7 +23514,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!P149:P156"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P149:P156"
   },
   {
     "id": "excel-gioia-2026-10-08-1200-灰色不可排",
@@ -11827,7 +23527,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!P157"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P157"
   },
   {
     "id": "excel-gioia-2026-10-08-1300-灰色不可排",
@@ -11838,9 +23538,113 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-08",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!P158"
+  },
+  {
+    "id": "excel-gioia-2026-10-08-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-08",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P158;桔灯 陪伴老师 排课统计.xlsx:Gioia!P159"
+  },
+  {
+    "id": "excel-gioia-2026-10-08-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-08",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P159;桔灯 陪伴老师 排课统计.xlsx:Gioia!P160"
+  },
+  {
+    "id": "excel-gioia-2026-10-08-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-08",
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P160;桔灯 陪伴老师 排课统计.xlsx:Gioia!P161"
+  },
+  {
+    "id": "excel-gioia-2026-10-08-1430-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-08",
+    "startTime": "14:30",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P161;桔灯 陪伴老师 排课统计.xlsx:Gioia!P162"
+  },
+  {
+    "id": "excel-gioia-2026-10-08-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-08",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P162;桔灯 陪伴老师 排课统计.xlsx:Gioia!P163"
+  },
+  {
+    "id": "excel-gioia-2026-10-08-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-08",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P163;桔灯 陪伴老师 排课统计.xlsx:Gioia!P164"
+  },
+  {
+    "id": "excel-gioia-2026-10-08-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-08",
+    "startTime": "16:00",
     "endTime": "17:00",
     "status": "不可用",
-    "source": "Gioia!P158;Gioia!P159;Gioia!P160;Gioia!P161;Gioia!P162;Gioia!P163;Gioia!P164;Gioia!P165"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P164;桔灯 陪伴老师 排课统计.xlsx:Gioia!P165"
+  },
+  {
+    "id": "excel-gioia-2026-10-08-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-08",
+    "startTime": "16:30",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P165"
   },
   {
     "id": "excel-gioia-2026-10-08-1700-Jesmine-1v1",
@@ -11853,7 +23657,7 @@ export const importedLessons = [
     "startTime": "17:00",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!P166:P169"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P166:P169"
   },
   {
     "id": "excel-gioia-2026-10-08-1900-灰色不可排",
@@ -11864,9 +23668,61 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-08",
     "startTime": "19:00",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!P170"
+  },
+  {
+    "id": "excel-gioia-2026-10-08-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-08",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P170;桔灯 陪伴老师 排课统计.xlsx:Gioia!P171"
+  },
+  {
+    "id": "excel-gioia-2026-10-08-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-08",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P171;桔灯 陪伴老师 排课统计.xlsx:Gioia!P172"
+  },
+  {
+    "id": "excel-gioia-2026-10-08-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-08",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!P170;Gioia!P171;Gioia!P172;Gioia!P173"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P172;桔灯 陪伴老师 排课统计.xlsx:Gioia!P173"
+  },
+  {
+    "id": "excel-gioia-2026-10-08-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-08",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P173"
   },
   {
     "id": "excel-gioia-2026-10-09-0800-休息",
@@ -11879,7 +23735,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!Q149:Q156"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q149:Q156"
   },
   {
     "id": "excel-gioia-2026-10-09-1200-灰色不可排",
@@ -11892,7 +23748,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!Q157"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q157"
   },
   {
     "id": "excel-gioia-2026-10-09-1300-灰色不可排",
@@ -11905,7 +23761,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!Q158"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q158"
   },
   {
     "id": "excel-gioia-2026-10-09-1330-Kason-1v1",
@@ -11918,7 +23774,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:00",
     "status": "不可用",
-    "source": "Gioia!Q159:Q161"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q159:Q161"
   },
   {
     "id": "excel-gioia-2026-10-09-1500-灰色不可排",
@@ -11929,9 +23785,113 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-09",
     "startTime": "15:00",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Q162"
+  },
+  {
+    "id": "excel-gioia-2026-10-09-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-09",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q162;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q163"
+  },
+  {
+    "id": "excel-gioia-2026-10-09-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-09",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q163;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q164"
+  },
+  {
+    "id": "excel-gioia-2026-10-09-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-09",
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q164;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q165"
+  },
+  {
+    "id": "excel-gioia-2026-10-09-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-09",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q165;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q166"
+  },
+  {
+    "id": "excel-gioia-2026-10-09-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-09",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q166;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q167"
+  },
+  {
+    "id": "excel-gioia-2026-10-09-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-09",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q167;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q168"
+  },
+  {
+    "id": "excel-gioia-2026-10-09-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-09",
+    "startTime": "18:00",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!Q162;Gioia!Q163;Gioia!Q164;Gioia!Q165;Gioia!Q166;Gioia!Q167;Gioia!Q168;Gioia!Q169"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q168;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q169"
+  },
+  {
+    "id": "excel-gioia-2026-10-09-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-09",
+    "startTime": "18:30",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q169"
   },
   {
     "id": "excel-gioia-2026-10-09-1900-A1-Miles-线上课",
@@ -11944,7 +23904,20 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!Q170:Q171"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q170:Q171"
+  },
+  {
+    "id": "excel-gioia-2026-10-09-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-09",
+    "startTime": "20:00",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Q172"
   },
   {
     "id": "excel-gioia-2026-10-09-2000-灰色不可排",
@@ -11957,7 +23930,20 @@ export const importedLessons = [
     "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!Q172;Gioia!Q173"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q172;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q173"
+  },
+  {
+    "id": "excel-gioia-2026-10-09-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-09",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q173"
   },
   {
     "id": "excel-gioia-2026-10-10-0800-灰色不可排",
@@ -11968,9 +23954,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-10",
     "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!R149"
+  },
+  {
+    "id": "excel-gioia-2026-10-10-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-10",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R149;桔灯 陪伴老师 排课统计.xlsx:Gioia!R150"
+  },
+  {
+    "id": "excel-gioia-2026-10-10-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-10",
+    "startTime": "08:30",
     "endTime": "09:30",
     "status": "不可用",
-    "source": "Gioia!R149;Gioia!R150;Gioia!R151"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R150;桔灯 陪伴老师 排课统计.xlsx:Gioia!R151"
+  },
+  {
+    "id": "excel-gioia-2026-10-10-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-10",
+    "startTime": "09:00",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R151"
   },
   {
     "id": "excel-gioia-2026-10-10-0930-Tony-1v1",
@@ -11983,7 +24008,7 @@ export const importedLessons = [
     "startTime": "09:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!R152:R157"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R152:R157"
   },
   {
     "id": "excel-gioia-2026-10-10-1300-Eric-1v1",
@@ -11996,7 +24021,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "15:00",
     "status": "不可用",
-    "source": "Gioia!R158:R161"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R158:R161"
   },
   {
     "id": "excel-gioia-2026-10-10-1500-灰色不可排",
@@ -12007,9 +24032,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-10",
     "startTime": "15:00",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!R162"
+  },
+  {
+    "id": "excel-gioia-2026-10-10-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-10",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R162;桔灯 陪伴老师 排课统计.xlsx:Gioia!R163"
+  },
+  {
+    "id": "excel-gioia-2026-10-10-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-10",
+    "startTime": "15:30",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!R162;Gioia!R163;Gioia!R164"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R163;桔灯 陪伴老师 排课统计.xlsx:Gioia!R164"
+  },
+  {
+    "id": "excel-gioia-2026-10-10-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-10",
+    "startTime": "16:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R164"
   },
   {
     "id": "excel-gioia-2026-10-10-1630-George",
@@ -12022,7 +24086,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "19:30",
     "status": "不可用",
-    "source": "Gioia!R165:R170"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R165:R170"
   },
   {
     "id": "excel-gioia-2026-10-10-1930-灰色不可排",
@@ -12033,9 +24097,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-10",
     "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!R171"
+  },
+  {
+    "id": "excel-gioia-2026-10-10-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-10",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R171;桔灯 陪伴老师 排课统计.xlsx:Gioia!R172"
+  },
+  {
+    "id": "excel-gioia-2026-10-10-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-10",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!R171;Gioia!R172;Gioia!R173"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R172;桔灯 陪伴老师 排课统计.xlsx:Gioia!R173"
+  },
+  {
+    "id": "excel-gioia-2026-10-10-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-10",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R173"
   },
   {
     "id": "excel-gioia-2026-10-11-0800-灰色不可排",
@@ -12046,9 +24149,126 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-11",
     "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!S149"
+  },
+  {
+    "id": "excel-gioia-2026-10-11-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-11",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S149;桔灯 陪伴老师 排课统计.xlsx:Gioia!S150"
+  },
+  {
+    "id": "excel-gioia-2026-10-11-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-11",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S150;桔灯 陪伴老师 排课统计.xlsx:Gioia!S151"
+  },
+  {
+    "id": "excel-gioia-2026-10-11-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-11",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S151;桔灯 陪伴老师 排课统计.xlsx:Gioia!S152"
+  },
+  {
+    "id": "excel-gioia-2026-10-11-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-11",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S152;桔灯 陪伴老师 排课统计.xlsx:Gioia!S153"
+  },
+  {
+    "id": "excel-gioia-2026-10-11-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-11",
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S153;桔灯 陪伴老师 排课统计.xlsx:Gioia!S154"
+  },
+  {
+    "id": "excel-gioia-2026-10-11-1030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-11",
+    "startTime": "10:30",
+    "endTime": "11:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S154;桔灯 陪伴老师 排课统计.xlsx:Gioia!S155"
+  },
+  {
+    "id": "excel-gioia-2026-10-11-1100-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-11",
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S155;桔灯 陪伴老师 排课统计.xlsx:Gioia!S156"
+  },
+  {
+    "id": "excel-gioia-2026-10-11-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-11",
+    "startTime": "11:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!S149;Gioia!S150;Gioia!S151;Gioia!S152;Gioia!S153;Gioia!S154;Gioia!S155;Gioia!S156;Gioia!S157"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S156;桔灯 陪伴老师 排课统计.xlsx:Gioia!S157"
+  },
+  {
+    "id": "excel-gioia-2026-10-11-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-11",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S157"
   },
   {
     "id": "excel-gioia-2026-10-11-1300-A1-Miles",
@@ -12061,7 +24281,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "不可用",
-    "source": "Gioia!S158:S163"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S158:S163"
   },
   {
     "id": "excel-gioia-2026-10-11-1600-灰色不可排",
@@ -12072,9 +24292,139 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-11",
     "startTime": "16:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!S164"
+  },
+  {
+    "id": "excel-gioia-2026-10-11-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-11",
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S164;桔灯 陪伴老师 排课统计.xlsx:Gioia!S165"
+  },
+  {
+    "id": "excel-gioia-2026-10-11-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-11",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S165;桔灯 陪伴老师 排课统计.xlsx:Gioia!S166"
+  },
+  {
+    "id": "excel-gioia-2026-10-11-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-11",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S166;桔灯 陪伴老师 排课统计.xlsx:Gioia!S167"
+  },
+  {
+    "id": "excel-gioia-2026-10-11-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-11",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S167;桔灯 陪伴老师 排课统计.xlsx:Gioia!S168"
+  },
+  {
+    "id": "excel-gioia-2026-10-11-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-11",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S168;桔灯 陪伴老师 排课统计.xlsx:Gioia!S169"
+  },
+  {
+    "id": "excel-gioia-2026-10-11-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-11",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S169;桔灯 陪伴老师 排课统计.xlsx:Gioia!S170"
+  },
+  {
+    "id": "excel-gioia-2026-10-11-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-11",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S170;桔灯 陪伴老师 排课统计.xlsx:Gioia!S171"
+  },
+  {
+    "id": "excel-gioia-2026-10-11-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-11",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S171;桔灯 陪伴老师 排课统计.xlsx:Gioia!S172"
+  },
+  {
+    "id": "excel-gioia-2026-10-11-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-11",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!S164;Gioia!S165;Gioia!S166;Gioia!S167;Gioia!S168;Gioia!S169;Gioia!S170;Gioia!S171;Gioia!S172;Gioia!S173"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S172;桔灯 陪伴老师 排课统计.xlsx:Gioia!S173"
+  },
+  {
+    "id": "excel-gioia-2026-10-11-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-11",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S173"
   },
   {
     "id": "excel-gioia-2026-10-12-0800-灰色不可排",
@@ -12087,7 +24437,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!M149"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M149"
   },
   {
     "id": "excel-gioia-2026-10-12-0830-x-z-C",
@@ -12100,7 +24450,7 @@ export const importedLessons = [
     "startTime": "08:30",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!M150"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M150"
   },
   {
     "id": "excel-gioia-2026-10-12-0900-灰色不可排",
@@ -12111,9 +24461,100 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-12",
     "startTime": "09:00",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!M151"
+  },
+  {
+    "id": "excel-gioia-2026-10-12-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-12",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M151;桔灯 陪伴老师 排课统计.xlsx:Gioia!M152"
+  },
+  {
+    "id": "excel-gioia-2026-10-12-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-12",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M152;桔灯 陪伴老师 排课统计.xlsx:Gioia!M153"
+  },
+  {
+    "id": "excel-gioia-2026-10-12-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-12",
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M153;桔灯 陪伴老师 排课统计.xlsx:Gioia!M154"
+  },
+  {
+    "id": "excel-gioia-2026-10-12-1030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-12",
+    "startTime": "10:30",
+    "endTime": "11:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M154;桔灯 陪伴老师 排课统计.xlsx:Gioia!M155"
+  },
+  {
+    "id": "excel-gioia-2026-10-12-1100-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-12",
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M155;桔灯 陪伴老师 排课统计.xlsx:Gioia!M156"
+  },
+  {
+    "id": "excel-gioia-2026-10-12-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-12",
+    "startTime": "11:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!M151;Gioia!M152;Gioia!M153;Gioia!M154;Gioia!M155;Gioia!M156;Gioia!M157"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M156;桔灯 陪伴老师 排课统计.xlsx:Gioia!M157"
+  },
+  {
+    "id": "excel-gioia-2026-10-12-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-12",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M157"
   },
   {
     "id": "excel-gioia-2026-10-12-1300-灰色不可排",
@@ -12124,9 +24565,61 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-12",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!M158"
+  },
+  {
+    "id": "excel-gioia-2026-10-12-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-12",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M158;桔灯 陪伴老师 排课统计.xlsx:Gioia!M159"
+  },
+  {
+    "id": "excel-gioia-2026-10-12-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-12",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M159;桔灯 陪伴老师 排课统计.xlsx:Gioia!M160"
+  },
+  {
+    "id": "excel-gioia-2026-10-12-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-12",
+    "startTime": "14:00",
     "endTime": "15:00",
     "status": "不可用",
-    "source": "Gioia!M158;Gioia!M159;Gioia!M160;Gioia!M161"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M160;桔灯 陪伴老师 排课统计.xlsx:Gioia!M161"
+  },
+  {
+    "id": "excel-gioia-2026-10-12-1430-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-12",
+    "startTime": "14:30",
+    "endTime": "15:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M161"
   },
   {
     "id": "excel-gioia-2026-10-12-1500-sophia-补课",
@@ -12139,7 +24632,7 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "16:00",
     "status": "不可用",
-    "source": "Gioia!M162:M163"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M162:M163"
   },
   {
     "id": "excel-gioia-2026-10-12-1600-灰色不可排",
@@ -12150,9 +24643,139 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-12",
     "startTime": "16:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!M164"
+  },
+  {
+    "id": "excel-gioia-2026-10-12-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-12",
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M164;桔灯 陪伴老师 排课统计.xlsx:Gioia!M165"
+  },
+  {
+    "id": "excel-gioia-2026-10-12-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-12",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M165;桔灯 陪伴老师 排课统计.xlsx:Gioia!M166"
+  },
+  {
+    "id": "excel-gioia-2026-10-12-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-12",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M166;桔灯 陪伴老师 排课统计.xlsx:Gioia!M167"
+  },
+  {
+    "id": "excel-gioia-2026-10-12-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-12",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M167;桔灯 陪伴老师 排课统计.xlsx:Gioia!M168"
+  },
+  {
+    "id": "excel-gioia-2026-10-12-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-12",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M168;桔灯 陪伴老师 排课统计.xlsx:Gioia!M169"
+  },
+  {
+    "id": "excel-gioia-2026-10-12-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-12",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M169;桔灯 陪伴老师 排课统计.xlsx:Gioia!M170"
+  },
+  {
+    "id": "excel-gioia-2026-10-12-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-12",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M170;桔灯 陪伴老师 排课统计.xlsx:Gioia!M171"
+  },
+  {
+    "id": "excel-gioia-2026-10-12-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-12",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M171;桔灯 陪伴老师 排课统计.xlsx:Gioia!M172"
+  },
+  {
+    "id": "excel-gioia-2026-10-12-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-12",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!M164;Gioia!M165;Gioia!M166;Gioia!M167;Gioia!M168;Gioia!M169;Gioia!M170;Gioia!M171;Gioia!M172;Gioia!M173"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M172;桔灯 陪伴老师 排课统计.xlsx:Gioia!M173"
+  },
+  {
+    "id": "excel-gioia-2026-10-12-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-12",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M173"
   },
   {
     "id": "excel-gioia-2026-10-13-0800-休息",
@@ -12165,7 +24788,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!N149:N173"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N149:N173"
   },
   {
     "id": "excel-gioia-2026-10-14-0800-灰色不可排",
@@ -12176,9 +24799,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-14",
     "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Y149"
+  },
+  {
+    "id": "excel-gioia-2026-10-14-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-14",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y149;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y150"
+  },
+  {
+    "id": "excel-gioia-2026-10-14-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-14",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y150;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y151"
+  },
+  {
+    "id": "excel-gioia-2026-10-14-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-14",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y151;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y152"
+  },
+  {
+    "id": "excel-gioia-2026-10-14-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-14",
+    "startTime": "09:30",
     "endTime": "10:30",
     "status": "不可用",
-    "source": "Gioia!Y149;Gioia!Y150;Gioia!Y151;Gioia!Y152;Gioia!Y153"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y152;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y153"
+  },
+  {
+    "id": "excel-gioia-2026-10-14-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-14",
+    "startTime": "10:00",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y153"
   },
   {
     "id": "excel-gioia-2026-10-14-1030-教研",
@@ -12191,7 +24879,7 @@ export const importedLessons = [
     "startTime": "10:30",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!Y154:Y156"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y154:Y156"
   },
   {
     "id": "excel-gioia-2026-10-14-1200-灰色不可排",
@@ -12204,7 +24892,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!Y157"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y157"
   },
   {
     "id": "excel-gioia-2026-10-14-1300-灰色不可排",
@@ -12215,9 +24903,100 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-14",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Y158"
+  },
+  {
+    "id": "excel-gioia-2026-10-14-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-14",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y158;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y159"
+  },
+  {
+    "id": "excel-gioia-2026-10-14-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-14",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y159;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y160"
+  },
+  {
+    "id": "excel-gioia-2026-10-14-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-14",
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y160;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y161"
+  },
+  {
+    "id": "excel-gioia-2026-10-14-1430-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-14",
+    "startTime": "14:30",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y161;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y162"
+  },
+  {
+    "id": "excel-gioia-2026-10-14-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-14",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y162;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y163"
+  },
+  {
+    "id": "excel-gioia-2026-10-14-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-14",
+    "startTime": "15:30",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!Y158;Gioia!Y159;Gioia!Y160;Gioia!Y161;Gioia!Y162;Gioia!Y163;Gioia!Y164"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y163;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y164"
+  },
+  {
+    "id": "excel-gioia-2026-10-14-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-14",
+    "startTime": "16:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y164"
   },
   {
     "id": "excel-gioia-2026-10-14-1630-Turtle-1v1",
@@ -12230,7 +25009,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:00",
     "status": "不可用",
-    "source": "Gioia!Y165:Y167"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y165:Y167"
   },
   {
     "id": "excel-gioia-2026-10-14-1800-灰色不可排",
@@ -12241,9 +25020,87 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-14",
     "startTime": "18:00",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Y168"
+  },
+  {
+    "id": "excel-gioia-2026-10-14-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-14",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y168;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y169"
+  },
+  {
+    "id": "excel-gioia-2026-10-14-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-14",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y169;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y170"
+  },
+  {
+    "id": "excel-gioia-2026-10-14-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-14",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y170;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y171"
+  },
+  {
+    "id": "excel-gioia-2026-10-14-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-14",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y171;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y172"
+  },
+  {
+    "id": "excel-gioia-2026-10-14-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-14",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!Y168;Gioia!Y169;Gioia!Y170;Gioia!Y171;Gioia!Y172;Gioia!Y173"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y172;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y173"
+  },
+  {
+    "id": "excel-gioia-2026-10-14-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-14",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y173"
   },
   {
     "id": "excel-gioia-2026-10-15-0800-休息",
@@ -12256,7 +25113,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!Z149:Z156"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z149:Z156"
   },
   {
     "id": "excel-gioia-2026-10-15-1200-灰色不可排",
@@ -12269,7 +25126,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!Z157"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z157"
   },
   {
     "id": "excel-gioia-2026-10-15-1300-灰色不可排",
@@ -12280,9 +25137,113 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-15",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Z158"
+  },
+  {
+    "id": "excel-gioia-2026-10-15-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-15",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z158;桔灯 陪伴老师 排课统计.xlsx:Gioia!Z159"
+  },
+  {
+    "id": "excel-gioia-2026-10-15-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-15",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z159;桔灯 陪伴老师 排课统计.xlsx:Gioia!Z160"
+  },
+  {
+    "id": "excel-gioia-2026-10-15-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-15",
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z160;桔灯 陪伴老师 排课统计.xlsx:Gioia!Z161"
+  },
+  {
+    "id": "excel-gioia-2026-10-15-1430-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-15",
+    "startTime": "14:30",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z161;桔灯 陪伴老师 排课统计.xlsx:Gioia!Z162"
+  },
+  {
+    "id": "excel-gioia-2026-10-15-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-15",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z162;桔灯 陪伴老师 排课统计.xlsx:Gioia!Z163"
+  },
+  {
+    "id": "excel-gioia-2026-10-15-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-15",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z163;桔灯 陪伴老师 排课统计.xlsx:Gioia!Z164"
+  },
+  {
+    "id": "excel-gioia-2026-10-15-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-15",
+    "startTime": "16:00",
     "endTime": "17:00",
     "status": "不可用",
-    "source": "Gioia!Z158;Gioia!Z159;Gioia!Z160;Gioia!Z161;Gioia!Z162;Gioia!Z163;Gioia!Z164;Gioia!Z165"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z164;桔灯 陪伴老师 排课统计.xlsx:Gioia!Z165"
+  },
+  {
+    "id": "excel-gioia-2026-10-15-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-15",
+    "startTime": "16:30",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z165"
   },
   {
     "id": "excel-gioia-2026-10-15-1700-Jesmine-1v1",
@@ -12295,7 +25256,7 @@ export const importedLessons = [
     "startTime": "17:00",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!Z166:Z169"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z166:Z169"
   },
   {
     "id": "excel-gioia-2026-10-15-1900-灰色不可排",
@@ -12306,9 +25267,61 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-15",
     "startTime": "19:00",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Z170"
+  },
+  {
+    "id": "excel-gioia-2026-10-15-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-15",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z170;桔灯 陪伴老师 排课统计.xlsx:Gioia!Z171"
+  },
+  {
+    "id": "excel-gioia-2026-10-15-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-15",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z171;桔灯 陪伴老师 排课统计.xlsx:Gioia!Z172"
+  },
+  {
+    "id": "excel-gioia-2026-10-15-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-15",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!Z170;Gioia!Z171;Gioia!Z172;Gioia!Z173"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z172;桔灯 陪伴老师 排课统计.xlsx:Gioia!Z173"
+  },
+  {
+    "id": "excel-gioia-2026-10-15-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-15",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z173"
   },
   {
     "id": "excel-gioia-2026-10-16-0800-休息",
@@ -12321,7 +25334,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!AA149:AA156"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA149:AA156"
   },
   {
     "id": "excel-gioia-2026-10-16-1200-灰色不可排",
@@ -12334,7 +25347,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!AA157"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA157"
   },
   {
     "id": "excel-gioia-2026-10-16-1300-灰色不可排",
@@ -12345,9 +25358,113 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-16",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AA158"
+  },
+  {
+    "id": "excel-gioia-2026-10-16-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-16",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA158;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA159"
+  },
+  {
+    "id": "excel-gioia-2026-10-16-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-16",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA159;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA160"
+  },
+  {
+    "id": "excel-gioia-2026-10-16-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-16",
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA160;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA161"
+  },
+  {
+    "id": "excel-gioia-2026-10-16-1430-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-16",
+    "startTime": "14:30",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA161;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA162"
+  },
+  {
+    "id": "excel-gioia-2026-10-16-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-16",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA162;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA163"
+  },
+  {
+    "id": "excel-gioia-2026-10-16-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-16",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA163;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA164"
+  },
+  {
+    "id": "excel-gioia-2026-10-16-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-16",
+    "startTime": "16:00",
     "endTime": "17:00",
     "status": "不可用",
-    "source": "Gioia!AA158;Gioia!AA159;Gioia!AA160;Gioia!AA161;Gioia!AA162;Gioia!AA163;Gioia!AA164;Gioia!AA165"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA164;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA165"
+  },
+  {
+    "id": "excel-gioia-2026-10-16-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-16",
+    "startTime": "16:30",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA165"
   },
   {
     "id": "excel-gioia-2026-10-16-1700-Kason-1v1",
@@ -12360,7 +25477,7 @@ export const importedLessons = [
     "startTime": "17:00",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!AA166:AA168"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA166:AA168"
   },
   {
     "id": "excel-gioia-2026-10-16-1830-灰色不可排",
@@ -12373,7 +25490,7 @@ export const importedLessons = [
     "startTime": "18:30",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!AA169"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA169"
   },
   {
     "id": "excel-gioia-2026-10-16-1900-A1-Miles-线上课",
@@ -12386,7 +25503,20 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!AA170:AA171"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA170:AA171"
+  },
+  {
+    "id": "excel-gioia-2026-10-16-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-16",
+    "startTime": "20:00",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AA172"
   },
   {
     "id": "excel-gioia-2026-10-16-2000-灰色不可排",
@@ -12399,7 +25529,20 @@ export const importedLessons = [
     "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!AA172;Gioia!AA173"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA172;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA173"
+  },
+  {
+    "id": "excel-gioia-2026-10-16-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-16",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA173"
   },
   {
     "id": "excel-gioia-2026-10-17-0800-灰色不可排",
@@ -12410,9 +25553,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-17",
     "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AB149"
+  },
+  {
+    "id": "excel-gioia-2026-10-17-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-17",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB149;桔灯 陪伴老师 排课统计.xlsx:Gioia!AB150"
+  },
+  {
+    "id": "excel-gioia-2026-10-17-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-17",
+    "startTime": "08:30",
     "endTime": "09:30",
     "status": "不可用",
-    "source": "Gioia!AB149;Gioia!AB150;Gioia!AB151"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB150;桔灯 陪伴老师 排课统计.xlsx:Gioia!AB151"
+  },
+  {
+    "id": "excel-gioia-2026-10-17-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-17",
+    "startTime": "09:00",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB151"
   },
   {
     "id": "excel-gioia-2026-10-17-0930-Tony-1v1",
@@ -12425,7 +25607,7 @@ export const importedLessons = [
     "startTime": "09:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!AB152:AB157"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB152:AB157"
   },
   {
     "id": "excel-gioia-2026-10-17-1300-Eric-1v1",
@@ -12438,7 +25620,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "15:00",
     "status": "不可用",
-    "source": "Gioia!AB158:AB161"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB158:AB161"
   },
   {
     "id": "excel-gioia-2026-10-17-1500-灰色不可排",
@@ -12449,9 +25631,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-17",
     "startTime": "15:00",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AB162"
+  },
+  {
+    "id": "excel-gioia-2026-10-17-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-17",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB162;桔灯 陪伴老师 排课统计.xlsx:Gioia!AB163"
+  },
+  {
+    "id": "excel-gioia-2026-10-17-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-17",
+    "startTime": "15:30",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!AB162;Gioia!AB163;Gioia!AB164"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB163;桔灯 陪伴老师 排课统计.xlsx:Gioia!AB164"
+  },
+  {
+    "id": "excel-gioia-2026-10-17-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-17",
+    "startTime": "16:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB164"
   },
   {
     "id": "excel-gioia-2026-10-17-1630-George",
@@ -12464,7 +25685,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "19:30",
     "status": "不可用",
-    "source": "Gioia!AB165:AB170"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB165:AB170"
   },
   {
     "id": "excel-gioia-2026-10-17-1930-灰色不可排",
@@ -12475,9 +25696,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-17",
     "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AB171"
+  },
+  {
+    "id": "excel-gioia-2026-10-17-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-17",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB171;桔灯 陪伴老师 排课统计.xlsx:Gioia!AB172"
+  },
+  {
+    "id": "excel-gioia-2026-10-17-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-17",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!AB171;Gioia!AB172;Gioia!AB173"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB172;桔灯 陪伴老师 排课统计.xlsx:Gioia!AB173"
+  },
+  {
+    "id": "excel-gioia-2026-10-17-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-17",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB173"
   },
   {
     "id": "excel-gioia-2026-10-18-0800-灰色不可排",
@@ -12488,9 +25748,126 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-18",
     "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AC149"
+  },
+  {
+    "id": "excel-gioia-2026-10-18-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-18",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC149;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC150"
+  },
+  {
+    "id": "excel-gioia-2026-10-18-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-18",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC150;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC151"
+  },
+  {
+    "id": "excel-gioia-2026-10-18-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-18",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC151;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC152"
+  },
+  {
+    "id": "excel-gioia-2026-10-18-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-18",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC152;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC153"
+  },
+  {
+    "id": "excel-gioia-2026-10-18-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-18",
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC153;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC154"
+  },
+  {
+    "id": "excel-gioia-2026-10-18-1030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-18",
+    "startTime": "10:30",
+    "endTime": "11:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC154;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC155"
+  },
+  {
+    "id": "excel-gioia-2026-10-18-1100-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-18",
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC155;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC156"
+  },
+  {
+    "id": "excel-gioia-2026-10-18-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-18",
+    "startTime": "11:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!AC149;Gioia!AC150;Gioia!AC151;Gioia!AC152;Gioia!AC153;Gioia!AC154;Gioia!AC155;Gioia!AC156;Gioia!AC157"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC156;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC157"
+  },
+  {
+    "id": "excel-gioia-2026-10-18-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-18",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC157"
   },
   {
     "id": "excel-gioia-2026-10-18-1300-A1-Miles",
@@ -12503,7 +25880,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "不可用",
-    "source": "Gioia!AC158:AC163"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC158:AC163"
   },
   {
     "id": "excel-gioia-2026-10-18-1600-灰色不可排",
@@ -12514,9 +25891,139 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-18",
     "startTime": "16:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AC164"
+  },
+  {
+    "id": "excel-gioia-2026-10-18-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-18",
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC164;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC165"
+  },
+  {
+    "id": "excel-gioia-2026-10-18-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-18",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC165;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC166"
+  },
+  {
+    "id": "excel-gioia-2026-10-18-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-18",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC166;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC167"
+  },
+  {
+    "id": "excel-gioia-2026-10-18-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-18",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC167;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC168"
+  },
+  {
+    "id": "excel-gioia-2026-10-18-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-18",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC168;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC169"
+  },
+  {
+    "id": "excel-gioia-2026-10-18-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-18",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC169;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC170"
+  },
+  {
+    "id": "excel-gioia-2026-10-18-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-18",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC170;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC171"
+  },
+  {
+    "id": "excel-gioia-2026-10-18-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-18",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC171;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC172"
+  },
+  {
+    "id": "excel-gioia-2026-10-18-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-18",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!AC164;Gioia!AC165;Gioia!AC166;Gioia!AC167;Gioia!AC168;Gioia!AC169;Gioia!AC170;Gioia!AC171;Gioia!AC172;Gioia!AC173"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC172;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC173"
+  },
+  {
+    "id": "excel-gioia-2026-10-18-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-18",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC173"
   },
   {
     "id": "excel-gioia-2026-10-19-0800-休息",
@@ -12529,7 +26036,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!W149:W173"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W149:W173"
   },
   {
     "id": "excel-gioia-2026-10-20-0800-休息",
@@ -12542,7 +26049,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!X149:X173"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!X149:X173"
   },
   {
     "id": "excel-gioia-2026-10-21-0800-灰色不可排",
@@ -12553,9 +26060,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-21",
     "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!E178"
+  },
+  {
+    "id": "excel-gioia-2026-10-21-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-21",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E178;桔灯 陪伴老师 排课统计.xlsx:Gioia!E179"
+  },
+  {
+    "id": "excel-gioia-2026-10-21-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-21",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E179;桔灯 陪伴老师 排课统计.xlsx:Gioia!E180"
+  },
+  {
+    "id": "excel-gioia-2026-10-21-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-21",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E180;桔灯 陪伴老师 排课统计.xlsx:Gioia!E181"
+  },
+  {
+    "id": "excel-gioia-2026-10-21-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-21",
+    "startTime": "09:30",
     "endTime": "10:30",
     "status": "不可用",
-    "source": "Gioia!E178;Gioia!E179;Gioia!E180;Gioia!E181;Gioia!E182"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E181;桔灯 陪伴老师 排课统计.xlsx:Gioia!E182"
+  },
+  {
+    "id": "excel-gioia-2026-10-21-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-21",
+    "startTime": "10:00",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E182"
   },
   {
     "id": "excel-gioia-2026-10-21-1030-教研",
@@ -12568,7 +26140,7 @@ export const importedLessons = [
     "startTime": "10:30",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!E183:E185"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E183:E185"
   },
   {
     "id": "excel-gioia-2026-10-21-1200-灰色不可排",
@@ -12581,7 +26153,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!E186"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E186"
   },
   {
     "id": "excel-gioia-2026-10-21-1300-Phoebe-1v1",
@@ -12594,7 +26166,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "不可用",
-    "source": "Gioia!E187:E192"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E187:E192"
   },
   {
     "id": "excel-gioia-2026-10-21-1600-灰色不可排",
@@ -12607,7 +26179,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!E193"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E193"
   },
   {
     "id": "excel-gioia-2026-10-21-1630-Turtle-1v1",
@@ -12620,7 +26192,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:00",
     "status": "不可用",
-    "source": "Gioia!E194:E196"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E194:E196"
   },
   {
     "id": "excel-gioia-2026-10-21-1800-灰色不可排",
@@ -12633,7 +26205,7 @@ export const importedLessons = [
     "startTime": "18:00",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!E197"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E197"
   },
   {
     "id": "excel-gioia-2026-10-21-1830-线上Alisa-1v1",
@@ -12646,7 +26218,7 @@ export const importedLessons = [
     "startTime": "18:30",
     "endTime": "20:30",
     "status": "不可用",
-    "source": "Gioia!E198:E201"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E198:E201"
   },
   {
     "id": "excel-gioia-2026-10-21-2030-灰色不可排",
@@ -12659,7 +26231,7 @@ export const importedLessons = [
     "startTime": "20:30",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!E202"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E202"
   },
   {
     "id": "excel-gioia-2026-10-22-0800-休息",
@@ -12672,7 +26244,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!F178:F185"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F178:F185"
   },
   {
     "id": "excel-gioia-2026-10-22-1200-灰色不可排",
@@ -12685,7 +26257,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!F186"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F186"
   },
   {
     "id": "excel-gioia-2026-10-22-1300-灰色不可排",
@@ -12698,7 +26270,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!F187"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F187"
   },
   {
     "id": "excel-gioia-2026-10-22-1330-Kason-1v1",
@@ -12711,7 +26283,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!F188:F191"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F188:F191"
   },
   {
     "id": "excel-gioia-2026-10-22-1530-灰色不可排",
@@ -12722,9 +26294,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-22",
     "startTime": "15:30",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!F192"
+  },
+  {
+    "id": "excel-gioia-2026-10-22-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-22",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F192;桔灯 陪伴老师 排课统计.xlsx:Gioia!F193"
+  },
+  {
+    "id": "excel-gioia-2026-10-22-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-22",
+    "startTime": "16:00",
     "endTime": "17:00",
     "status": "不可用",
-    "source": "Gioia!F192;Gioia!F193;Gioia!F194"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F193;桔灯 陪伴老师 排课统计.xlsx:Gioia!F194"
+  },
+  {
+    "id": "excel-gioia-2026-10-22-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-22",
+    "startTime": "16:30",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F194"
   },
   {
     "id": "excel-gioia-2026-10-22-1700-Jesmine-1v1",
@@ -12737,7 +26348,7 @@ export const importedLessons = [
     "startTime": "17:00",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!F195:F198"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F195:F198"
   },
   {
     "id": "excel-gioia-2026-10-22-1900-灰色不可排",
@@ -12748,9 +26359,61 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-22",
     "startTime": "19:00",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!F199"
+  },
+  {
+    "id": "excel-gioia-2026-10-22-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-22",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F199;桔灯 陪伴老师 排课统计.xlsx:Gioia!F200"
+  },
+  {
+    "id": "excel-gioia-2026-10-22-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-22",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F200;桔灯 陪伴老师 排课统计.xlsx:Gioia!F201"
+  },
+  {
+    "id": "excel-gioia-2026-10-22-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-22",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!F199;Gioia!F200;Gioia!F201;Gioia!F202"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F201;桔灯 陪伴老师 排课统计.xlsx:Gioia!F202"
+  },
+  {
+    "id": "excel-gioia-2026-10-22-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-22",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F202"
   },
   {
     "id": "excel-gioia-2026-10-23-0800-休息",
@@ -12763,7 +26426,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!G178:G185"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G178:G185"
   },
   {
     "id": "excel-gioia-2026-10-23-1200-灰色不可排",
@@ -12776,7 +26439,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!G186"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G186"
   },
   {
     "id": "excel-gioia-2026-10-23-1300-灰色不可排",
@@ -12789,7 +26452,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!G187"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G187"
   },
   {
     "id": "excel-gioia-2026-10-23-1330-Kason-1v1",
@@ -12802,7 +26465,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!G188:G191"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G188:G191"
   },
   {
     "id": "excel-gioia-2026-10-23-1530-Phoebe-1v1",
@@ -12815,7 +26478,7 @@ export const importedLessons = [
     "startTime": "15:30",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!G192:G197"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G192:G197"
   },
   {
     "id": "excel-gioia-2026-10-23-1830-灰色不可排",
@@ -12828,7 +26491,7 @@ export const importedLessons = [
     "startTime": "18:30",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!G198"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G198"
   },
   {
     "id": "excel-gioia-2026-10-23-1900-A1-Miles-线上课",
@@ -12841,7 +26504,20 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!G199:G200"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G199:G200"
+  },
+  {
+    "id": "excel-gioia-2026-10-23-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-23",
+    "startTime": "20:00",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!G201"
   },
   {
     "id": "excel-gioia-2026-10-23-2000-灰色不可排",
@@ -12854,7 +26530,33 @@ export const importedLessons = [
     "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!G201;Gioia!G202"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G201;桔灯 陪伴老师 排课统计.xlsx:Gioia!G202"
+  },
+  {
+    "id": "excel-gioia-2026-10-23-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-23",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G202"
+  },
+  {
+    "id": "excel-gioia-2026-10-24-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-24",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!H178"
   },
   {
     "id": "excel-gioia-2026-10-24-0800-灰色不可排",
@@ -12867,7 +26569,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!H178;Gioia!H179"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H178;桔灯 陪伴老师 排课统计.xlsx:Gioia!H179"
+  },
+  {
+    "id": "excel-gioia-2026-10-24-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-24",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H179"
   },
   {
     "id": "excel-gioia-2026-10-24-0900-代课-A1-Jessica",
@@ -12880,7 +26595,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!H180:H185"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H180:H185"
   },
   {
     "id": "excel-gioia-2026-10-24-1200-灰色不可排",
@@ -12893,7 +26608,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!H186"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H186"
   },
   {
     "id": "excel-gioia-2026-10-24-1300-Eric-1v1",
@@ -12906,7 +26621,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "15:00",
     "status": "不可用",
-    "source": "Gioia!H187:H190"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H187:H190"
   },
   {
     "id": "excel-gioia-2026-10-24-1500-灰色不可排",
@@ -12917,9 +26632,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-24",
     "startTime": "15:00",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!H191"
+  },
+  {
+    "id": "excel-gioia-2026-10-24-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-24",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H191;桔灯 陪伴老师 排课统计.xlsx:Gioia!H192"
+  },
+  {
+    "id": "excel-gioia-2026-10-24-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-24",
+    "startTime": "15:30",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!H191;Gioia!H192;Gioia!H193"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H192;桔灯 陪伴老师 排课统计.xlsx:Gioia!H193"
+  },
+  {
+    "id": "excel-gioia-2026-10-24-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-24",
+    "startTime": "16:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H193"
   },
   {
     "id": "excel-gioia-2026-10-24-1630-George",
@@ -12932,7 +26686,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "19:30",
     "status": "不可用",
-    "source": "Gioia!H194:H199"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H194:H199"
   },
   {
     "id": "excel-gioia-2026-10-24-1930-灰色不可排",
@@ -12943,9 +26697,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-24",
     "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!H200"
+  },
+  {
+    "id": "excel-gioia-2026-10-24-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-24",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H200;桔灯 陪伴老师 排课统计.xlsx:Gioia!H201"
+  },
+  {
+    "id": "excel-gioia-2026-10-24-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-24",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!H200;Gioia!H201;Gioia!H202"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H201;桔灯 陪伴老师 排课统计.xlsx:Gioia!H202"
+  },
+  {
+    "id": "excel-gioia-2026-10-24-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-24",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H202"
   },
   {
     "id": "excel-gioia-2026-10-25-0800-丧假",
@@ -12958,7 +26751,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!I178:I185"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I178:I185"
   },
   {
     "id": "excel-gioia-2026-10-25-1200-灰色不可排",
@@ -12971,7 +26764,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!I186"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I186"
   },
   {
     "id": "excel-gioia-2026-10-25-1300-灰色不可排",
@@ -12982,9 +26775,61 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-25",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!I187"
+  },
+  {
+    "id": "excel-gioia-2026-10-25-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-25",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I187;桔灯 陪伴老师 排课统计.xlsx:Gioia!I188"
+  },
+  {
+    "id": "excel-gioia-2026-10-25-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-25",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I188;桔灯 陪伴老师 排课统计.xlsx:Gioia!I189"
+  },
+  {
+    "id": "excel-gioia-2026-10-25-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-25",
+    "startTime": "14:00",
     "endTime": "15:00",
     "status": "不可用",
-    "source": "Gioia!I187;Gioia!I188;Gioia!I189;Gioia!I190"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I189;桔灯 陪伴老师 排课统计.xlsx:Gioia!I190"
+  },
+  {
+    "id": "excel-gioia-2026-10-25-1430-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-25",
+    "startTime": "14:30",
+    "endTime": "15:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I190"
   },
   {
     "id": "excel-gioia-2026-10-25-1500-A1-Miles",
@@ -12997,7 +26842,7 @@ export const importedLessons = [
     "startTime": "15:00",
     "endTime": "18:00",
     "status": "不可用",
-    "source": "Gioia!I191:I196"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I191:I196"
   },
   {
     "id": "excel-gioia-2026-10-25-1800-灰色不可排",
@@ -13008,9 +26853,87 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-25",
     "startTime": "18:00",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!I197"
+  },
+  {
+    "id": "excel-gioia-2026-10-25-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-25",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I197;桔灯 陪伴老师 排课统计.xlsx:Gioia!I198"
+  },
+  {
+    "id": "excel-gioia-2026-10-25-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-25",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I198;桔灯 陪伴老师 排课统计.xlsx:Gioia!I199"
+  },
+  {
+    "id": "excel-gioia-2026-10-25-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-25",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I199;桔灯 陪伴老师 排课统计.xlsx:Gioia!I200"
+  },
+  {
+    "id": "excel-gioia-2026-10-25-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-25",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I200;桔灯 陪伴老师 排课统计.xlsx:Gioia!I201"
+  },
+  {
+    "id": "excel-gioia-2026-10-25-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-25",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!I197;Gioia!I198;Gioia!I199;Gioia!I200;Gioia!I201;Gioia!I202"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I201;桔灯 陪伴老师 排课统计.xlsx:Gioia!I202"
+  },
+  {
+    "id": "excel-gioia-2026-10-25-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-25",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I202"
   },
   {
     "id": "excel-gioia-2026-10-26-0800-休息",
@@ -13023,7 +26946,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!C178:C202"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C178:C202"
   },
   {
     "id": "excel-gioia-2026-10-27-0800-休息",
@@ -13036,7 +26959,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!D178:D202"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D178:D202"
   },
   {
     "id": "excel-gioia-2026-10-28-0800-灰色不可排",
@@ -13047,9 +26970,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-28",
     "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!O178"
+  },
+  {
+    "id": "excel-gioia-2026-10-28-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-28",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O178;桔灯 陪伴老师 排课统计.xlsx:Gioia!O179"
+  },
+  {
+    "id": "excel-gioia-2026-10-28-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-28",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O179;桔灯 陪伴老师 排课统计.xlsx:Gioia!O180"
+  },
+  {
+    "id": "excel-gioia-2026-10-28-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-28",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O180;桔灯 陪伴老师 排课统计.xlsx:Gioia!O181"
+  },
+  {
+    "id": "excel-gioia-2026-10-28-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-28",
+    "startTime": "09:30",
     "endTime": "10:30",
     "status": "不可用",
-    "source": "Gioia!O178;Gioia!O179;Gioia!O180;Gioia!O181;Gioia!O182"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O181;桔灯 陪伴老师 排课统计.xlsx:Gioia!O182"
+  },
+  {
+    "id": "excel-gioia-2026-10-28-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-28",
+    "startTime": "10:00",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O182"
   },
   {
     "id": "excel-gioia-2026-10-28-1030-教研",
@@ -13062,7 +27050,7 @@ export const importedLessons = [
     "startTime": "10:30",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!O183:O185"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O183:O185"
   },
   {
     "id": "excel-gioia-2026-10-28-1200-灰色不可排",
@@ -13075,7 +27063,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!O186"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O186"
   },
   {
     "id": "excel-gioia-2026-10-28-1300-Phoebe-1v1",
@@ -13088,7 +27076,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "不可用",
-    "source": "Gioia!O187:O192"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O187:O192"
   },
   {
     "id": "excel-gioia-2026-10-28-1600-灰色不可排",
@@ -13099,9 +27087,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-28",
     "startTime": "16:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!O193"
+  },
+  {
+    "id": "excel-gioia-2026-10-28-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-28",
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O193;桔灯 陪伴老师 排课统计.xlsx:Gioia!O194"
+  },
+  {
+    "id": "excel-gioia-2026-10-28-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-28",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O194;桔灯 陪伴老师 排课统计.xlsx:Gioia!O195"
+  },
+  {
+    "id": "excel-gioia-2026-10-28-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-28",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O195;桔灯 陪伴老师 排课统计.xlsx:Gioia!O196"
+  },
+  {
+    "id": "excel-gioia-2026-10-28-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-28",
+    "startTime": "17:30",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!O193;Gioia!O194;Gioia!O195;Gioia!O196;Gioia!O197"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O196;桔灯 陪伴老师 排课统计.xlsx:Gioia!O197"
+  },
+  {
+    "id": "excel-gioia-2026-10-28-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-28",
+    "startTime": "18:00",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O197"
   },
   {
     "id": "excel-gioia-2026-10-28-1830-线上Alisa-1v1",
@@ -13114,7 +27167,7 @@ export const importedLessons = [
     "startTime": "18:30",
     "endTime": "20:30",
     "status": "不可用",
-    "source": "Gioia!O198:O201"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O198:O201"
   },
   {
     "id": "excel-gioia-2026-10-28-2030-灰色不可排",
@@ -13127,7 +27180,7 @@ export const importedLessons = [
     "startTime": "20:30",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!O202"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O202"
   },
   {
     "id": "excel-gioia-2026-10-29-0800-休息",
@@ -13140,7 +27193,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!P178:P185"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P178:P185"
   },
   {
     "id": "excel-gioia-2026-10-29-1200-灰色不可排",
@@ -13153,7 +27206,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!P186"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P186"
   },
   {
     "id": "excel-gioia-2026-10-29-1300-灰色不可排",
@@ -13166,7 +27219,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!P187"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P187"
   },
   {
     "id": "excel-gioia-2026-10-29-1330-Kason-1v1",
@@ -13179,7 +27232,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!P188:P191"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P188:P191"
   },
   {
     "id": "excel-gioia-2026-10-29-1530-灰色不可排",
@@ -13190,9 +27243,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-29",
     "startTime": "15:30",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!P192"
+  },
+  {
+    "id": "excel-gioia-2026-10-29-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-29",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P192;桔灯 陪伴老师 排课统计.xlsx:Gioia!P193"
+  },
+  {
+    "id": "excel-gioia-2026-10-29-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-29",
+    "startTime": "16:00",
     "endTime": "17:00",
     "status": "不可用",
-    "source": "Gioia!P192;Gioia!P193;Gioia!P194"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P193;桔灯 陪伴老师 排课统计.xlsx:Gioia!P194"
+  },
+  {
+    "id": "excel-gioia-2026-10-29-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-29",
+    "startTime": "16:30",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P194"
   },
   {
     "id": "excel-gioia-2026-10-29-1700-Jesmine-1v1",
@@ -13205,7 +27297,7 @@ export const importedLessons = [
     "startTime": "17:00",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!P195:P198"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P195:P198"
   },
   {
     "id": "excel-gioia-2026-10-29-1900-灰色不可排",
@@ -13216,9 +27308,61 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-29",
     "startTime": "19:00",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!P199"
+  },
+  {
+    "id": "excel-gioia-2026-10-29-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-29",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P199;桔灯 陪伴老师 排课统计.xlsx:Gioia!P200"
+  },
+  {
+    "id": "excel-gioia-2026-10-29-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-29",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P200;桔灯 陪伴老师 排课统计.xlsx:Gioia!P201"
+  },
+  {
+    "id": "excel-gioia-2026-10-29-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-29",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!P199;Gioia!P200;Gioia!P201;Gioia!P202"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P201;桔灯 陪伴老师 排课统计.xlsx:Gioia!P202"
+  },
+  {
+    "id": "excel-gioia-2026-10-29-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-29",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P202"
   },
   {
     "id": "excel-gioia-2026-10-30-0800-休息",
@@ -13231,7 +27375,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!Q178:Q185"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q178:Q185"
   },
   {
     "id": "excel-gioia-2026-10-30-1200-灰色不可排",
@@ -13244,7 +27388,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!Q186"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q186"
   },
   {
     "id": "excel-gioia-2026-10-30-1300-灰色不可排",
@@ -13257,7 +27401,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!Q187"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q187"
   },
   {
     "id": "excel-gioia-2026-10-30-1330-Kason-1v1",
@@ -13270,7 +27414,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!Q188:Q191"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q188:Q191"
   },
   {
     "id": "excel-gioia-2026-10-30-1530-Phoebe-1v1",
@@ -13283,7 +27427,7 @@ export const importedLessons = [
     "startTime": "15:30",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!Q192:Q197"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q192:Q197"
   },
   {
     "id": "excel-gioia-2026-10-30-1830-灰色不可排",
@@ -13296,7 +27440,7 @@ export const importedLessons = [
     "startTime": "18:30",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!Q198"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q198"
   },
   {
     "id": "excel-gioia-2026-10-30-1900-A1-Miles-线上课",
@@ -13309,7 +27453,20 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!Q199:Q200"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q199:Q200"
+  },
+  {
+    "id": "excel-gioia-2026-10-30-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-30",
+    "startTime": "20:00",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Q201"
   },
   {
     "id": "excel-gioia-2026-10-30-2000-灰色不可排",
@@ -13322,7 +27479,20 @@ export const importedLessons = [
     "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!Q201;Gioia!Q202"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q201;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q202"
+  },
+  {
+    "id": "excel-gioia-2026-10-30-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-30",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q202"
   },
   {
     "id": "excel-gioia-2026-10-31-0800-灰色不可排",
@@ -13333,9 +27503,126 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-31",
     "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!R178"
+  },
+  {
+    "id": "excel-gioia-2026-10-31-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-31",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R178;桔灯 陪伴老师 排课统计.xlsx:Gioia!R179"
+  },
+  {
+    "id": "excel-gioia-2026-10-31-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-31",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R179;桔灯 陪伴老师 排课统计.xlsx:Gioia!R180"
+  },
+  {
+    "id": "excel-gioia-2026-10-31-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-31",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R180;桔灯 陪伴老师 排课统计.xlsx:Gioia!R181"
+  },
+  {
+    "id": "excel-gioia-2026-10-31-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-31",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R181;桔灯 陪伴老师 排课统计.xlsx:Gioia!R182"
+  },
+  {
+    "id": "excel-gioia-2026-10-31-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-31",
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R182;桔灯 陪伴老师 排课统计.xlsx:Gioia!R183"
+  },
+  {
+    "id": "excel-gioia-2026-10-31-1030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-31",
+    "startTime": "10:30",
+    "endTime": "11:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R183;桔灯 陪伴老师 排课统计.xlsx:Gioia!R184"
+  },
+  {
+    "id": "excel-gioia-2026-10-31-1100-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-31",
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R184;桔灯 陪伴老师 排课统计.xlsx:Gioia!R185"
+  },
+  {
+    "id": "excel-gioia-2026-10-31-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-31",
+    "startTime": "11:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!R178;Gioia!R179;Gioia!R180;Gioia!R181;Gioia!R182;Gioia!R183;Gioia!R184;Gioia!R185;Gioia!R186"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R185;桔灯 陪伴老师 排课统计.xlsx:Gioia!R186"
+  },
+  {
+    "id": "excel-gioia-2026-10-31-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-31",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R186"
   },
   {
     "id": "excel-gioia-2026-10-31-1300-Eric-1v1",
@@ -13348,7 +27635,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "15:00",
     "status": "不可用",
-    "source": "Gioia!R187:R190"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R187:R190"
   },
   {
     "id": "excel-gioia-2026-10-31-1500-灰色不可排",
@@ -13359,9 +27646,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-31",
     "startTime": "15:00",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!R191"
+  },
+  {
+    "id": "excel-gioia-2026-10-31-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-31",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R191;桔灯 陪伴老师 排课统计.xlsx:Gioia!R192"
+  },
+  {
+    "id": "excel-gioia-2026-10-31-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-31",
+    "startTime": "15:30",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!R191;Gioia!R192;Gioia!R193"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R192;桔灯 陪伴老师 排课统计.xlsx:Gioia!R193"
+  },
+  {
+    "id": "excel-gioia-2026-10-31-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-31",
+    "startTime": "16:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R193"
   },
   {
     "id": "excel-gioia-2026-10-31-1630-George",
@@ -13374,7 +27700,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "19:30",
     "status": "不可用",
-    "source": "Gioia!R194:R199"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R194:R199"
   },
   {
     "id": "excel-gioia-2026-10-31-1930-灰色不可排",
@@ -13385,9 +27711,61 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-10-31",
     "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!R200"
+  },
+  {
+    "id": "excel-gioia-2026-10-31-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-31",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R200;桔灯 陪伴老师 排课统计.xlsx:Gioia!R201"
+  },
+  {
+    "id": "excel-gioia-2026-10-31-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-31",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!R200;Gioia!R201;Gioia!R202"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R201;桔灯 陪伴老师 排课统计.xlsx:Gioia!R202"
+  },
+  {
+    "id": "excel-gioia-2026-10-31-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-10-31",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R202"
+  },
+  {
+    "id": "excel-gioia-2026-11-01-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-01",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!S178"
   },
   {
     "id": "excel-gioia-2026-11-01-0800-灰色不可排",
@@ -13400,7 +27778,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!S178;Gioia!S179"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S178;桔灯 陪伴老师 排课统计.xlsx:Gioia!S179"
+  },
+  {
+    "id": "excel-gioia-2026-11-01-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-01",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S179"
   },
   {
     "id": "excel-gioia-2026-11-01-0900-Phoebe-1v1",
@@ -13413,7 +27804,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!S180:S185"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S180:S185"
   },
   {
     "id": "excel-gioia-2026-11-01-1200-灰色不可排",
@@ -13426,7 +27817,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!S186"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S186"
   },
   {
     "id": "excel-gioia-2026-11-01-1300-A1-Miles",
@@ -13439,7 +27830,20 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!S187:S191"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S187:S191"
+  },
+  {
+    "id": "excel-gioia-2026-11-01-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-01",
+    "startTime": "15:30",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!S192"
   },
   {
     "id": "excel-gioia-2026-11-01-1530-灰色不可排",
@@ -13452,7 +27856,20 @@ export const importedLessons = [
     "startTime": "15:30",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!S192;Gioia!S193"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S192;桔灯 陪伴老师 排课统计.xlsx:Gioia!S193"
+  },
+  {
+    "id": "excel-gioia-2026-11-01-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-01",
+    "startTime": "16:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S193"
   },
   {
     "id": "excel-gioia-2026-11-01-1630-Lesli-1v1",
@@ -13465,7 +27882,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!S194:S197"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S194:S197"
   },
   {
     "id": "excel-gioia-2026-11-01-1830-灰色不可排",
@@ -13476,9 +27893,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-11-01",
     "startTime": "18:30",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!S198"
+  },
+  {
+    "id": "excel-gioia-2026-11-01-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-01",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S198;桔灯 陪伴老师 排课统计.xlsx:Gioia!S199"
+  },
+  {
+    "id": "excel-gioia-2026-11-01-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-01",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S199;桔灯 陪伴老师 排课统计.xlsx:Gioia!S200"
+  },
+  {
+    "id": "excel-gioia-2026-11-01-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-01",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S200;桔灯 陪伴老师 排课统计.xlsx:Gioia!S201"
+  },
+  {
+    "id": "excel-gioia-2026-11-01-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-01",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!S198;Gioia!S199;Gioia!S200;Gioia!S201;Gioia!S202"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S201;桔灯 陪伴老师 排课统计.xlsx:Gioia!S202"
+  },
+  {
+    "id": "excel-gioia-2026-11-01-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-01",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S202"
   },
   {
     "id": "excel-gioia-2026-11-02-0800-休息",
@@ -13491,7 +27973,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!M178:M202"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M178:M202"
   },
   {
     "id": "excel-gioia-2026-11-03-0800-休息",
@@ -13504,7 +27986,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!N178:N202"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N178:N202"
   },
   {
     "id": "excel-gioia-2026-11-04-0800-灰色不可排",
@@ -13515,9 +27997,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-11-04",
     "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!E211"
+  },
+  {
+    "id": "excel-gioia-2026-11-04-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-04",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E211;桔灯 陪伴老师 排课统计.xlsx:Gioia!E212"
+  },
+  {
+    "id": "excel-gioia-2026-11-04-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-04",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E212;桔灯 陪伴老师 排课统计.xlsx:Gioia!E213"
+  },
+  {
+    "id": "excel-gioia-2026-11-04-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-04",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E213;桔灯 陪伴老师 排课统计.xlsx:Gioia!E214"
+  },
+  {
+    "id": "excel-gioia-2026-11-04-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-04",
+    "startTime": "09:30",
     "endTime": "10:30",
     "status": "不可用",
-    "source": "Gioia!E211;Gioia!E212;Gioia!E213;Gioia!E214;Gioia!E215"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E214;桔灯 陪伴老师 排课统计.xlsx:Gioia!E215"
+  },
+  {
+    "id": "excel-gioia-2026-11-04-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-04",
+    "startTime": "10:00",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E215"
   },
   {
     "id": "excel-gioia-2026-11-04-1030-教研",
@@ -13530,7 +28077,7 @@ export const importedLessons = [
     "startTime": "10:30",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!E216:E218"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E216:E218"
   },
   {
     "id": "excel-gioia-2026-11-04-1200-灰色不可排",
@@ -13543,7 +28090,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!E219"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E219"
   },
   {
     "id": "excel-gioia-2026-11-04-1300-Phoebe-1v1",
@@ -13556,7 +28103,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "不可用",
-    "source": "Gioia!E220:E225"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E220:E225"
   },
   {
     "id": "excel-gioia-2026-11-04-1600-灰色不可排",
@@ -13569,7 +28116,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!E226"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E226"
   },
   {
     "id": "excel-gioia-2026-11-04-1630-Turtle-1v1",
@@ -13582,7 +28129,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:00",
     "status": "不可用",
-    "source": "Gioia!E227:E229"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E227:E229"
   },
   {
     "id": "excel-gioia-2026-11-04-1800-灰色不可排",
@@ -13595,7 +28142,7 @@ export const importedLessons = [
     "startTime": "18:00",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!E230"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E230"
   },
   {
     "id": "excel-gioia-2026-11-04-1830-线上Alisa-1v1",
@@ -13608,7 +28155,7 @@ export const importedLessons = [
     "startTime": "18:30",
     "endTime": "20:30",
     "status": "不可用",
-    "source": "Gioia!E231:E234"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E231:E234"
   },
   {
     "id": "excel-gioia-2026-11-04-2030-灰色不可排",
@@ -13621,7 +28168,7 @@ export const importedLessons = [
     "startTime": "20:30",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!E235"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E235"
   },
   {
     "id": "excel-gioia-2026-11-05-0800-休息",
@@ -13634,7 +28181,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!F211:F218"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F211:F218"
   },
   {
     "id": "excel-gioia-2026-11-05-1200-灰色不可排",
@@ -13647,7 +28194,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!F219"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F219"
   },
   {
     "id": "excel-gioia-2026-11-05-1300-灰色不可排",
@@ -13660,7 +28207,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!F220"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F220"
   },
   {
     "id": "excel-gioia-2026-11-05-1330-Kason-1v1",
@@ -13673,7 +28220,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!F221:F224"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F221:F224"
   },
   {
     "id": "excel-gioia-2026-11-05-1530-灰色不可排",
@@ -13684,9 +28231,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-11-05",
     "startTime": "15:30",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!F225"
+  },
+  {
+    "id": "excel-gioia-2026-11-05-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-05",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F225;桔灯 陪伴老师 排课统计.xlsx:Gioia!F226"
+  },
+  {
+    "id": "excel-gioia-2026-11-05-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-05",
+    "startTime": "16:00",
     "endTime": "17:00",
     "status": "不可用",
-    "source": "Gioia!F225;Gioia!F226;Gioia!F227"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F226;桔灯 陪伴老师 排课统计.xlsx:Gioia!F227"
+  },
+  {
+    "id": "excel-gioia-2026-11-05-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-05",
+    "startTime": "16:30",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F227"
   },
   {
     "id": "excel-gioia-2026-11-05-1700-Jesmine-1v1",
@@ -13699,7 +28285,7 @@ export const importedLessons = [
     "startTime": "17:00",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!F228:F231"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F228:F231"
   },
   {
     "id": "excel-gioia-2026-11-05-1900-灰色不可排",
@@ -13710,9 +28296,61 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-11-05",
     "startTime": "19:00",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!F232"
+  },
+  {
+    "id": "excel-gioia-2026-11-05-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-05",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F232;桔灯 陪伴老师 排课统计.xlsx:Gioia!F233"
+  },
+  {
+    "id": "excel-gioia-2026-11-05-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-05",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F233;桔灯 陪伴老师 排课统计.xlsx:Gioia!F234"
+  },
+  {
+    "id": "excel-gioia-2026-11-05-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-05",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!F232;Gioia!F233;Gioia!F234;Gioia!F235"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F234;桔灯 陪伴老师 排课统计.xlsx:Gioia!F235"
+  },
+  {
+    "id": "excel-gioia-2026-11-05-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-05",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F235"
   },
   {
     "id": "excel-gioia-2026-11-06-0800-休息",
@@ -13725,7 +28363,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!G211:G218"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G211:G218"
   },
   {
     "id": "excel-gioia-2026-11-06-1200-灰色不可排",
@@ -13738,7 +28376,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!G219"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G219"
   },
   {
     "id": "excel-gioia-2026-11-06-1300-灰色不可排",
@@ -13751,7 +28389,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!G220"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G220"
   },
   {
     "id": "excel-gioia-2026-11-06-1330-Kason-1v1",
@@ -13764,7 +28402,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!G221:G224"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G221:G224"
   },
   {
     "id": "excel-gioia-2026-11-06-1530-Phoebe-1v1",
@@ -13777,7 +28415,7 @@ export const importedLessons = [
     "startTime": "15:30",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!G225:G230"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G225:G230"
   },
   {
     "id": "excel-gioia-2026-11-06-1830-灰色不可排",
@@ -13790,7 +28428,7 @@ export const importedLessons = [
     "startTime": "18:30",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!G231"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G231"
   },
   {
     "id": "excel-gioia-2026-11-06-1900-A1-Miles-线上课",
@@ -13803,7 +28441,20 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!G232:G233"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G232:G233"
+  },
+  {
+    "id": "excel-gioia-2026-11-06-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-06",
+    "startTime": "20:00",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!G234"
   },
   {
     "id": "excel-gioia-2026-11-06-2000-灰色不可排",
@@ -13816,7 +28467,33 @@ export const importedLessons = [
     "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!G234;Gioia!G235"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G234;桔灯 陪伴老师 排课统计.xlsx:Gioia!G235"
+  },
+  {
+    "id": "excel-gioia-2026-11-06-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-06",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G235"
+  },
+  {
+    "id": "excel-gioia-2026-11-07-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-07",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!H211"
   },
   {
     "id": "excel-gioia-2026-11-07-0800-灰色不可排",
@@ -13829,7 +28506,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!H211;Gioia!H212"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H211;桔灯 陪伴老师 排课统计.xlsx:Gioia!H212"
+  },
+  {
+    "id": "excel-gioia-2026-11-07-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-07",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H212"
   },
   {
     "id": "excel-gioia-2026-11-07-0900-A1-Harold",
@@ -13842,7 +28532,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!H213:H218"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H213:H218"
   },
   {
     "id": "excel-gioia-2026-11-07-1200-灰色不可排",
@@ -13855,7 +28545,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!H219"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H219"
   },
   {
     "id": "excel-gioia-2026-11-07-1300-Eric-1v1",
@@ -13868,7 +28558,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "15:00",
     "status": "不可用",
-    "source": "Gioia!H220:H223"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H220:H223"
   },
   {
     "id": "excel-gioia-2026-11-07-1500-灰色不可排",
@@ -13879,9 +28569,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-11-07",
     "startTime": "15:00",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!H224"
+  },
+  {
+    "id": "excel-gioia-2026-11-07-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-07",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H224;桔灯 陪伴老师 排课统计.xlsx:Gioia!H225"
+  },
+  {
+    "id": "excel-gioia-2026-11-07-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-07",
+    "startTime": "15:30",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!H224;Gioia!H225;Gioia!H226"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H225;桔灯 陪伴老师 排课统计.xlsx:Gioia!H226"
+  },
+  {
+    "id": "excel-gioia-2026-11-07-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-07",
+    "startTime": "16:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H226"
   },
   {
     "id": "excel-gioia-2026-11-07-1630-George",
@@ -13894,7 +28623,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "19:30",
     "status": "不可用",
-    "source": "Gioia!H227:H232"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H227:H232"
   },
   {
     "id": "excel-gioia-2026-11-07-1930-灰色不可排",
@@ -13905,9 +28634,61 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-11-07",
     "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!H233"
+  },
+  {
+    "id": "excel-gioia-2026-11-07-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-07",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H233;桔灯 陪伴老师 排课统计.xlsx:Gioia!H234"
+  },
+  {
+    "id": "excel-gioia-2026-11-07-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-07",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!H233;Gioia!H234;Gioia!H235"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H234;桔灯 陪伴老师 排课统计.xlsx:Gioia!H235"
+  },
+  {
+    "id": "excel-gioia-2026-11-07-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-07",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H235"
+  },
+  {
+    "id": "excel-gioia-2026-11-08-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-08",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!I211"
   },
   {
     "id": "excel-gioia-2026-11-08-0800-灰色不可排",
@@ -13920,7 +28701,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!I211;Gioia!I212"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I211;桔灯 陪伴老师 排课统计.xlsx:Gioia!I212"
+  },
+  {
+    "id": "excel-gioia-2026-11-08-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-08",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I212"
   },
   {
     "id": "excel-gioia-2026-11-08-0900-Phoebe-1v1",
@@ -13933,7 +28727,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!I213:I218"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I213:I218"
   },
   {
     "id": "excel-gioia-2026-11-08-1200-灰色不可排",
@@ -13946,7 +28740,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!I219"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I219"
   },
   {
     "id": "excel-gioia-2026-11-08-1300-A1-Miles",
@@ -13959,7 +28753,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "不可用",
-    "source": "Gioia!I220:I225"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I220:I225"
   },
   {
     "id": "excel-gioia-2026-11-08-1600-灰色不可排",
@@ -13972,7 +28766,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!I226"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I226"
   },
   {
     "id": "excel-gioia-2026-11-08-1630-Lesli-1v1",
@@ -13985,7 +28779,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!I227:I230"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I227:I230"
   },
   {
     "id": "excel-gioia-2026-11-08-1830-灰色不可排",
@@ -13996,9 +28790,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-11-08",
     "startTime": "18:30",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!I231"
+  },
+  {
+    "id": "excel-gioia-2026-11-08-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-08",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I231;桔灯 陪伴老师 排课统计.xlsx:Gioia!I232"
+  },
+  {
+    "id": "excel-gioia-2026-11-08-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-08",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I232;桔灯 陪伴老师 排课统计.xlsx:Gioia!I233"
+  },
+  {
+    "id": "excel-gioia-2026-11-08-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-08",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I233;桔灯 陪伴老师 排课统计.xlsx:Gioia!I234"
+  },
+  {
+    "id": "excel-gioia-2026-11-08-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-08",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!I231;Gioia!I232;Gioia!I233;Gioia!I234;Gioia!I235"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I234;桔灯 陪伴老师 排课统计.xlsx:Gioia!I235"
+  },
+  {
+    "id": "excel-gioia-2026-11-08-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-08",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I235"
   },
   {
     "id": "excel-gioia-2026-11-09-0800-休息",
@@ -14011,7 +28870,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!C211:C235"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C211:C235"
   },
   {
     "id": "excel-gioia-2026-11-10-0800-休息",
@@ -14024,7 +28883,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!D211:D235"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D211:D235"
   },
   {
     "id": "excel-gioia-2026-11-11-0800-灰色不可排",
@@ -14035,9 +28894,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-11-11",
     "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!O211"
+  },
+  {
+    "id": "excel-gioia-2026-11-11-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-11",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O211;桔灯 陪伴老师 排课统计.xlsx:Gioia!O212"
+  },
+  {
+    "id": "excel-gioia-2026-11-11-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-11",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O212;桔灯 陪伴老师 排课统计.xlsx:Gioia!O213"
+  },
+  {
+    "id": "excel-gioia-2026-11-11-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-11",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O213;桔灯 陪伴老师 排课统计.xlsx:Gioia!O214"
+  },
+  {
+    "id": "excel-gioia-2026-11-11-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-11",
+    "startTime": "09:30",
     "endTime": "10:30",
     "status": "不可用",
-    "source": "Gioia!O211;Gioia!O212;Gioia!O213;Gioia!O214;Gioia!O215"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O214;桔灯 陪伴老师 排课统计.xlsx:Gioia!O215"
+  },
+  {
+    "id": "excel-gioia-2026-11-11-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-11",
+    "startTime": "10:00",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O215"
   },
   {
     "id": "excel-gioia-2026-11-11-1030-教研",
@@ -14050,7 +28974,7 @@ export const importedLessons = [
     "startTime": "10:30",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!O216:O218"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O216:O218"
   },
   {
     "id": "excel-gioia-2026-11-11-1200-灰色不可排",
@@ -14063,7 +28987,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!O219"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O219"
   },
   {
     "id": "excel-gioia-2026-11-11-1300-Phoebe-1v1",
@@ -14076,7 +29000,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "不可用",
-    "source": "Gioia!O220:O225"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O220:O225"
   },
   {
     "id": "excel-gioia-2026-11-11-1600-灰色不可排",
@@ -14089,7 +29013,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!O226"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O226"
   },
   {
     "id": "excel-gioia-2026-11-11-1630-Turtle-1v1",
@@ -14102,7 +29026,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:00",
     "status": "不可用",
-    "source": "Gioia!O227:O229"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O227:O229"
   },
   {
     "id": "excel-gioia-2026-11-11-1800-灰色不可排",
@@ -14115,7 +29039,7 @@ export const importedLessons = [
     "startTime": "18:00",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!O230"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O230"
   },
   {
     "id": "excel-gioia-2026-11-11-1830-线上Alisa-1v1",
@@ -14128,7 +29052,7 @@ export const importedLessons = [
     "startTime": "18:30",
     "endTime": "20:30",
     "status": "不可用",
-    "source": "Gioia!O231:O234"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O231:O234"
   },
   {
     "id": "excel-gioia-2026-11-11-2030-灰色不可排",
@@ -14141,7 +29065,7 @@ export const importedLessons = [
     "startTime": "20:30",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!O235"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O235"
   },
   {
     "id": "excel-gioia-2026-11-12-0800-休息",
@@ -14154,7 +29078,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!P211:P218"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P211:P218"
   },
   {
     "id": "excel-gioia-2026-11-12-1200-灰色不可排",
@@ -14167,7 +29091,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!P219"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P219"
   },
   {
     "id": "excel-gioia-2026-11-12-1300-灰色不可排",
@@ -14180,7 +29104,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!P220"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P220"
   },
   {
     "id": "excel-gioia-2026-11-12-1330-Kason-1v1",
@@ -14193,7 +29117,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!P221:P224"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P221:P224"
   },
   {
     "id": "excel-gioia-2026-11-12-1530-灰色不可排",
@@ -14204,9 +29128,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-11-12",
     "startTime": "15:30",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!P225"
+  },
+  {
+    "id": "excel-gioia-2026-11-12-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-12",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P225;桔灯 陪伴老师 排课统计.xlsx:Gioia!P226"
+  },
+  {
+    "id": "excel-gioia-2026-11-12-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-12",
+    "startTime": "16:00",
     "endTime": "17:00",
     "status": "不可用",
-    "source": "Gioia!P225;Gioia!P226;Gioia!P227"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P226;桔灯 陪伴老师 排课统计.xlsx:Gioia!P227"
+  },
+  {
+    "id": "excel-gioia-2026-11-12-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-12",
+    "startTime": "16:30",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P227"
   },
   {
     "id": "excel-gioia-2026-11-12-1700-Jesmine-1v1",
@@ -14219,7 +29182,7 @@ export const importedLessons = [
     "startTime": "17:00",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!P228:P231"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P228:P231"
   },
   {
     "id": "excel-gioia-2026-11-12-1900-A1-Hedy-线上课",
@@ -14232,7 +29195,20 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!P232:P233"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P232:P233"
+  },
+  {
+    "id": "excel-gioia-2026-11-12-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-12",
+    "startTime": "20:00",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!P234"
   },
   {
     "id": "excel-gioia-2026-11-12-2000-灰色不可排",
@@ -14245,7 +29221,20 @@ export const importedLessons = [
     "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!P234;Gioia!P235"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P234;桔灯 陪伴老师 排课统计.xlsx:Gioia!P235"
+  },
+  {
+    "id": "excel-gioia-2026-11-12-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-12",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P235"
   },
   {
     "id": "excel-gioia-2026-11-13-0800-休息",
@@ -14258,7 +29247,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!Q211:Q218"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q211:Q218"
   },
   {
     "id": "excel-gioia-2026-11-13-1200-灰色不可排",
@@ -14271,7 +29260,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!Q219"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q219"
   },
   {
     "id": "excel-gioia-2026-11-13-1300-灰色不可排",
@@ -14284,7 +29273,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!Q220"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q220"
   },
   {
     "id": "excel-gioia-2026-11-13-1330-Kason-1v1",
@@ -14297,7 +29286,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!Q221:Q224"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q221:Q224"
   },
   {
     "id": "excel-gioia-2026-11-13-1530-Phoebe-1v1",
@@ -14310,7 +29299,7 @@ export const importedLessons = [
     "startTime": "15:30",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!Q225:Q230"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q225:Q230"
   },
   {
     "id": "excel-gioia-2026-11-13-1830-灰色不可排",
@@ -14323,7 +29312,7 @@ export const importedLessons = [
     "startTime": "18:30",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!Q231"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q231"
   },
   {
     "id": "excel-gioia-2026-11-13-1900-A1-Miles-线上课",
@@ -14336,7 +29325,20 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!Q232:Q233"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q232:Q233"
+  },
+  {
+    "id": "excel-gioia-2026-11-13-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-13",
+    "startTime": "20:00",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Q234"
   },
   {
     "id": "excel-gioia-2026-11-13-2000-灰色不可排",
@@ -14349,7 +29351,33 @@ export const importedLessons = [
     "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!Q234;Gioia!Q235"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q234;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q235"
+  },
+  {
+    "id": "excel-gioia-2026-11-13-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-13",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q235"
+  },
+  {
+    "id": "excel-gioia-2026-11-14-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-14",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!R211"
   },
   {
     "id": "excel-gioia-2026-11-14-0800-灰色不可排",
@@ -14362,7 +29390,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!R211;Gioia!R212"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R211;桔灯 陪伴老师 排课统计.xlsx:Gioia!R212"
+  },
+  {
+    "id": "excel-gioia-2026-11-14-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-14",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R212"
   },
   {
     "id": "excel-gioia-2026-11-14-0900-A1-Harold",
@@ -14375,7 +29416,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!R213:R218"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R213:R218"
   },
   {
     "id": "excel-gioia-2026-11-14-1200-灰色不可排",
@@ -14388,7 +29429,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!R219"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R219"
   },
   {
     "id": "excel-gioia-2026-11-14-1300-Eric-1v1",
@@ -14401,7 +29442,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "15:00",
     "status": "不可用",
-    "source": "Gioia!R220:R223"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R220:R223"
   },
   {
     "id": "excel-gioia-2026-11-14-1500-灰色不可排",
@@ -14412,9 +29453,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-11-14",
     "startTime": "15:00",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!R224"
+  },
+  {
+    "id": "excel-gioia-2026-11-14-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-14",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R224;桔灯 陪伴老师 排课统计.xlsx:Gioia!R225"
+  },
+  {
+    "id": "excel-gioia-2026-11-14-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-14",
+    "startTime": "15:30",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!R224;Gioia!R225;Gioia!R226"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R225;桔灯 陪伴老师 排课统计.xlsx:Gioia!R226"
+  },
+  {
+    "id": "excel-gioia-2026-11-14-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-14",
+    "startTime": "16:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R226"
   },
   {
     "id": "excel-gioia-2026-11-14-1630-George",
@@ -14427,7 +29507,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "19:30",
     "status": "不可用",
-    "source": "Gioia!R227:R232"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R227:R232"
   },
   {
     "id": "excel-gioia-2026-11-14-1930-灰色不可排",
@@ -14438,9 +29518,61 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-11-14",
     "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!R233"
+  },
+  {
+    "id": "excel-gioia-2026-11-14-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-14",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R233;桔灯 陪伴老师 排课统计.xlsx:Gioia!R234"
+  },
+  {
+    "id": "excel-gioia-2026-11-14-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-14",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!R233;Gioia!R234;Gioia!R235"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R234;桔灯 陪伴老师 排课统计.xlsx:Gioia!R235"
+  },
+  {
+    "id": "excel-gioia-2026-11-14-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-14",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R235"
+  },
+  {
+    "id": "excel-gioia-2026-11-15-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-15",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!S211"
   },
   {
     "id": "excel-gioia-2026-11-15-0800-灰色不可排",
@@ -14453,7 +29585,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!S211;Gioia!S212"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S211;桔灯 陪伴老师 排课统计.xlsx:Gioia!S212"
+  },
+  {
+    "id": "excel-gioia-2026-11-15-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-15",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S212"
   },
   {
     "id": "excel-gioia-2026-11-15-0900-Phoebe-1v1",
@@ -14466,7 +29611,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!S213:S218"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S213:S218"
   },
   {
     "id": "excel-gioia-2026-11-15-1200-灰色不可排",
@@ -14479,7 +29624,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!S219"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S219"
   },
   {
     "id": "excel-gioia-2026-11-15-1300-A1-Miles",
@@ -14492,7 +29637,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "不可用",
-    "source": "Gioia!S220:S225"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S220:S225"
   },
   {
     "id": "excel-gioia-2026-11-15-1600-灰色不可排",
@@ -14505,7 +29650,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!S226"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S226"
   },
   {
     "id": "excel-gioia-2026-11-15-1630-Lesli-1v1",
@@ -14518,7 +29663,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!S227:S230"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S227:S230"
   },
   {
     "id": "excel-gioia-2026-11-15-1830-灰色不可排",
@@ -14529,9 +29674,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-11-15",
     "startTime": "18:30",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!S231"
+  },
+  {
+    "id": "excel-gioia-2026-11-15-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-15",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S231;桔灯 陪伴老师 排课统计.xlsx:Gioia!S232"
+  },
+  {
+    "id": "excel-gioia-2026-11-15-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-15",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S232;桔灯 陪伴老师 排课统计.xlsx:Gioia!S233"
+  },
+  {
+    "id": "excel-gioia-2026-11-15-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-15",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S233;桔灯 陪伴老师 排课统计.xlsx:Gioia!S234"
+  },
+  {
+    "id": "excel-gioia-2026-11-15-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-15",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!S231;Gioia!S232;Gioia!S233;Gioia!S234;Gioia!S235"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S234;桔灯 陪伴老师 排课统计.xlsx:Gioia!S235"
+  },
+  {
+    "id": "excel-gioia-2026-11-15-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-15",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!S235"
   },
   {
     "id": "excel-gioia-2026-11-16-0800-休息",
@@ -14544,7 +29754,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!M211:M235"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!M211:M235"
   },
   {
     "id": "excel-gioia-2026-11-17-0800-休息",
@@ -14557,7 +29767,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!N211:N235"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!N211:N235"
   },
   {
     "id": "excel-gioia-2026-11-18-0800-灰色不可排",
@@ -14568,9 +29778,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-11-18",
     "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Y211"
+  },
+  {
+    "id": "excel-gioia-2026-11-18-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-18",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y211;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y212"
+  },
+  {
+    "id": "excel-gioia-2026-11-18-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-18",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y212;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y213"
+  },
+  {
+    "id": "excel-gioia-2026-11-18-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-18",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y213;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y214"
+  },
+  {
+    "id": "excel-gioia-2026-11-18-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-18",
+    "startTime": "09:30",
     "endTime": "10:30",
     "status": "不可用",
-    "source": "Gioia!Y211;Gioia!Y212;Gioia!Y213;Gioia!Y214;Gioia!Y215"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y214;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y215"
+  },
+  {
+    "id": "excel-gioia-2026-11-18-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-18",
+    "startTime": "10:00",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y215"
   },
   {
     "id": "excel-gioia-2026-11-18-1030-教研",
@@ -14583,7 +29858,7 @@ export const importedLessons = [
     "startTime": "10:30",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!Y216:Y218"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y216:Y218"
   },
   {
     "id": "excel-gioia-2026-11-18-1200-灰色不可排",
@@ -14596,7 +29871,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!Y219"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y219"
   },
   {
     "id": "excel-gioia-2026-11-18-1300-phoebe-1v1",
@@ -14609,7 +29884,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "不可用",
-    "source": "Gioia!Y220:Y225"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y220:Y225"
   },
   {
     "id": "excel-gioia-2026-11-18-1600-灰色不可排",
@@ -14622,7 +29897,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!Y226"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y226"
   },
   {
     "id": "excel-gioia-2026-11-18-1630-Turtle-1v1",
@@ -14635,7 +29910,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:00",
     "status": "不可用",
-    "source": "Gioia!Y227:Y229"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y227:Y229"
   },
   {
     "id": "excel-gioia-2026-11-18-1800-灰色不可排",
@@ -14648,7 +29923,7 @@ export const importedLessons = [
     "startTime": "18:00",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!Y230"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y230"
   },
   {
     "id": "excel-gioia-2026-11-18-1830-线上Alisa-1v1",
@@ -14661,7 +29936,7 @@ export const importedLessons = [
     "startTime": "18:30",
     "endTime": "20:30",
     "status": "不可用",
-    "source": "Gioia!Y231:Y234"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y231:Y234"
   },
   {
     "id": "excel-gioia-2026-11-18-2030-灰色不可排",
@@ -14674,7 +29949,7 @@ export const importedLessons = [
     "startTime": "20:30",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!Y235"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y235"
   },
   {
     "id": "excel-gioia-2026-11-19-0800-休息",
@@ -14687,7 +29962,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!Z211:Z218"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z211:Z218"
   },
   {
     "id": "excel-gioia-2026-11-19-1200-灰色不可排",
@@ -14700,7 +29975,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!Z219"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z219"
   },
   {
     "id": "excel-gioia-2026-11-19-1300-灰色不可排",
@@ -14713,7 +29988,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!Z220"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z220"
   },
   {
     "id": "excel-gioia-2026-11-19-1330-Kason-1v1",
@@ -14726,7 +30001,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!Z221:Z224"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z221:Z224"
   },
   {
     "id": "excel-gioia-2026-11-19-1530-灰色不可排",
@@ -14737,9 +30012,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-11-19",
     "startTime": "15:30",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Z225"
+  },
+  {
+    "id": "excel-gioia-2026-11-19-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-19",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z225;桔灯 陪伴老师 排课统计.xlsx:Gioia!Z226"
+  },
+  {
+    "id": "excel-gioia-2026-11-19-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-19",
+    "startTime": "16:00",
     "endTime": "17:00",
     "status": "不可用",
-    "source": "Gioia!Z225;Gioia!Z226;Gioia!Z227"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z226;桔灯 陪伴老师 排课统计.xlsx:Gioia!Z227"
+  },
+  {
+    "id": "excel-gioia-2026-11-19-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-19",
+    "startTime": "16:30",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z227"
   },
   {
     "id": "excel-gioia-2026-11-19-1700-Jesmine-1v1",
@@ -14752,7 +30066,7 @@ export const importedLessons = [
     "startTime": "17:00",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!Z228:Z231"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z228:Z231"
   },
   {
     "id": "excel-gioia-2026-11-19-1900-A1-Hedy-线上课",
@@ -14765,7 +30079,20 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!Z232:Z233"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z232:Z233"
+  },
+  {
+    "id": "excel-gioia-2026-11-19-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-19",
+    "startTime": "20:00",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Z234"
   },
   {
     "id": "excel-gioia-2026-11-19-2000-灰色不可排",
@@ -14778,7 +30105,20 @@ export const importedLessons = [
     "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!Z234;Gioia!Z235"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z234;桔灯 陪伴老师 排课统计.xlsx:Gioia!Z235"
+  },
+  {
+    "id": "excel-gioia-2026-11-19-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-19",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z235"
   },
   {
     "id": "excel-gioia-2026-11-20-0800-休息",
@@ -14791,7 +30131,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!AA211:AA218"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA211:AA218"
   },
   {
     "id": "excel-gioia-2026-11-20-1200-灰色不可排",
@@ -14804,7 +30144,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!AA219"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA219"
   },
   {
     "id": "excel-gioia-2026-11-20-1300-灰色不可排",
@@ -14817,7 +30157,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!AA220"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA220"
   },
   {
     "id": "excel-gioia-2026-11-20-1330-Kason-1v1",
@@ -14830,7 +30170,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!AA221:AA224"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA221:AA224"
   },
   {
     "id": "excel-gioia-2026-11-20-1530-phoebe-1v1",
@@ -14843,7 +30183,7 @@ export const importedLessons = [
     "startTime": "15:30",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!AA225:AA230"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA225:AA230"
   },
   {
     "id": "excel-gioia-2026-11-20-1830-灰色不可排",
@@ -14856,7 +30196,7 @@ export const importedLessons = [
     "startTime": "18:30",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!AA231"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA231"
   },
   {
     "id": "excel-gioia-2026-11-20-1900-A1-Miles-线上课",
@@ -14869,7 +30209,20 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!AA232:AA233"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA232:AA233"
+  },
+  {
+    "id": "excel-gioia-2026-11-20-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-20",
+    "startTime": "20:00",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AA234"
   },
   {
     "id": "excel-gioia-2026-11-20-2000-灰色不可排",
@@ -14882,7 +30235,33 @@ export const importedLessons = [
     "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!AA234;Gioia!AA235"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA234;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA235"
+  },
+  {
+    "id": "excel-gioia-2026-11-20-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-20",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA235"
+  },
+  {
+    "id": "excel-gioia-2026-11-21-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-21",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AB211"
   },
   {
     "id": "excel-gioia-2026-11-21-0800-灰色不可排",
@@ -14895,7 +30274,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!AB211;Gioia!AB212"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB211;桔灯 陪伴老师 排课统计.xlsx:Gioia!AB212"
+  },
+  {
+    "id": "excel-gioia-2026-11-21-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-21",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB212"
   },
   {
     "id": "excel-gioia-2026-11-21-0900-A1-Harold",
@@ -14908,7 +30300,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!AB213:AB218"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB213:AB218"
   },
   {
     "id": "excel-gioia-2026-11-21-1200-灰色不可排",
@@ -14921,7 +30313,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!AB219"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB219"
   },
   {
     "id": "excel-gioia-2026-11-21-1300-Eric-1v1",
@@ -14934,7 +30326,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "15:00",
     "status": "不可用",
-    "source": "Gioia!AB220:AB223"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB220:AB223"
   },
   {
     "id": "excel-gioia-2026-11-21-1500-灰色不可排",
@@ -14945,9 +30337,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-11-21",
     "startTime": "15:00",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AB224"
+  },
+  {
+    "id": "excel-gioia-2026-11-21-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-21",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB224;桔灯 陪伴老师 排课统计.xlsx:Gioia!AB225"
+  },
+  {
+    "id": "excel-gioia-2026-11-21-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-21",
+    "startTime": "15:30",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!AB224;Gioia!AB225;Gioia!AB226"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB225;桔灯 陪伴老师 排课统计.xlsx:Gioia!AB226"
+  },
+  {
+    "id": "excel-gioia-2026-11-21-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-21",
+    "startTime": "16:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB226"
   },
   {
     "id": "excel-gioia-2026-11-21-1630-George",
@@ -14960,7 +30391,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "19:30",
     "status": "不可用",
-    "source": "Gioia!AB227:AB232"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB227:AB232"
   },
   {
     "id": "excel-gioia-2026-11-21-1930-灰色不可排",
@@ -14971,9 +30402,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-11-21",
     "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AB233"
+  },
+  {
+    "id": "excel-gioia-2026-11-21-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-21",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB233;桔灯 陪伴老师 排课统计.xlsx:Gioia!AB234"
+  },
+  {
+    "id": "excel-gioia-2026-11-21-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-21",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!AB233;Gioia!AB234;Gioia!AB235"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB234;桔灯 陪伴老师 排课统计.xlsx:Gioia!AB235"
+  },
+  {
+    "id": "excel-gioia-2026-11-21-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-21",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB235"
   },
   {
     "id": "excel-gioia-2026-11-22-0800-灰色不可排",
@@ -14986,7 +30456,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!AC211"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC211"
   },
   {
     "id": "excel-gioia-2026-11-22-0830-Anna-1v1",
@@ -14999,7 +30469,7 @@ export const importedLessons = [
     "startTime": "08:30",
     "endTime": "10:30",
     "status": "不可用",
-    "source": "Gioia!AC212:AC215"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC212:AC215"
   },
   {
     "id": "excel-gioia-2026-11-22-1030-Tony-1v1",
@@ -15012,7 +30482,7 @@ export const importedLessons = [
     "startTime": "10:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!AC216:AC219"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC216:AC219"
   },
   {
     "id": "excel-gioia-2026-11-22-1300-A1-Miles",
@@ -15025,7 +30495,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "不可用",
-    "source": "Gioia!AC220:AC225"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC220:AC225"
   },
   {
     "id": "excel-gioia-2026-11-22-1600-灰色不可排",
@@ -15038,7 +30508,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!AC226"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC226"
   },
   {
     "id": "excel-gioia-2026-11-22-1630-Lesli-1v1",
@@ -15051,7 +30521,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!AC227:AC230"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC227:AC230"
   },
   {
     "id": "excel-gioia-2026-11-22-1830-灰色不可排",
@@ -15062,9 +30532,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-11-22",
     "startTime": "18:30",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AC231"
+  },
+  {
+    "id": "excel-gioia-2026-11-22-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-22",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC231;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC232"
+  },
+  {
+    "id": "excel-gioia-2026-11-22-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-22",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC232;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC233"
+  },
+  {
+    "id": "excel-gioia-2026-11-22-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-22",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC233;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC234"
+  },
+  {
+    "id": "excel-gioia-2026-11-22-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-22",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!AC231;Gioia!AC232;Gioia!AC233;Gioia!AC234;Gioia!AC235"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC234;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC235"
+  },
+  {
+    "id": "excel-gioia-2026-11-22-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-22",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC235"
   },
   {
     "id": "excel-gioia-2026-11-23-0800-休息",
@@ -15077,7 +30612,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!W211:W235"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W211:W235"
   },
   {
     "id": "excel-gioia-2026-11-24-0800-休息",
@@ -15090,7 +30625,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!X211:X235"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!X211:X235"
   },
   {
     "id": "excel-gioia-2026-11-25-0800-灰色不可排",
@@ -15101,9 +30636,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-11-25",
     "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!E241"
+  },
+  {
+    "id": "excel-gioia-2026-11-25-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-25",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E241;桔灯 陪伴老师 排课统计.xlsx:Gioia!E242"
+  },
+  {
+    "id": "excel-gioia-2026-11-25-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-25",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E242;桔灯 陪伴老师 排课统计.xlsx:Gioia!E243"
+  },
+  {
+    "id": "excel-gioia-2026-11-25-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-25",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E243;桔灯 陪伴老师 排课统计.xlsx:Gioia!E244"
+  },
+  {
+    "id": "excel-gioia-2026-11-25-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-25",
+    "startTime": "09:30",
     "endTime": "10:30",
     "status": "不可用",
-    "source": "Gioia!E241;Gioia!E242;Gioia!E243;Gioia!E244;Gioia!E245"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E244;桔灯 陪伴老师 排课统计.xlsx:Gioia!E245"
+  },
+  {
+    "id": "excel-gioia-2026-11-25-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-25",
+    "startTime": "10:00",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E245"
   },
   {
     "id": "excel-gioia-2026-11-25-1030-教研",
@@ -15116,7 +30716,7 @@ export const importedLessons = [
     "startTime": "10:30",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!E246:E248"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E246:E248"
   },
   {
     "id": "excel-gioia-2026-11-25-1200-灰色不可排",
@@ -15129,7 +30729,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!E249"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E249"
   },
   {
     "id": "excel-gioia-2026-11-25-1300-灰色不可排",
@@ -15142,7 +30742,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!E250"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E250"
   },
   {
     "id": "excel-gioia-2026-11-25-1330-Kason-1v1",
@@ -15155,7 +30755,20 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!E251:E254"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E251:E254"
+  },
+  {
+    "id": "excel-gioia-2026-11-25-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-25",
+    "startTime": "15:30",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!E255"
   },
   {
     "id": "excel-gioia-2026-11-25-1530-灰色不可排",
@@ -15168,7 +30781,20 @@ export const importedLessons = [
     "startTime": "15:30",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!E255;Gioia!E256"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E255;桔灯 陪伴老师 排课统计.xlsx:Gioia!E256"
+  },
+  {
+    "id": "excel-gioia-2026-11-25-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-25",
+    "startTime": "16:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E256"
   },
   {
     "id": "excel-gioia-2026-11-25-1630-Turtle-1v1",
@@ -15181,7 +30807,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:00",
     "status": "不可用",
-    "source": "Gioia!E257:E259"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E257:E259"
   },
   {
     "id": "excel-gioia-2026-11-25-1800-灰色不可排",
@@ -15194,7 +30820,7 @@ export const importedLessons = [
     "startTime": "18:00",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!E260"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E260"
   },
   {
     "id": "excel-gioia-2026-11-25-1830-线上Alisa-1v1",
@@ -15207,7 +30833,7 @@ export const importedLessons = [
     "startTime": "18:30",
     "endTime": "20:30",
     "status": "不可用",
-    "source": "Gioia!E261:E264"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E261:E264"
   },
   {
     "id": "excel-gioia-2026-11-25-2030-灰色不可排",
@@ -15220,7 +30846,7 @@ export const importedLessons = [
     "startTime": "20:30",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!E265"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E265"
   },
   {
     "id": "excel-gioia-2026-11-26-0800-休息",
@@ -15233,7 +30859,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!F241:F248"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F241:F248"
   },
   {
     "id": "excel-gioia-2026-11-26-1200-灰色不可排",
@@ -15246,7 +30872,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!F249"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F249"
   },
   {
     "id": "excel-gioia-2026-11-26-1300-灰色不可排",
@@ -15259,7 +30885,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!F250"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F250"
   },
   {
     "id": "excel-gioia-2026-11-26-1330-Kason-1v1",
@@ -15272,7 +30898,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!F251:F254"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F251:F254"
   },
   {
     "id": "excel-gioia-2026-11-26-1530-灰色不可排",
@@ -15283,9 +30909,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-11-26",
     "startTime": "15:30",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!F255"
+  },
+  {
+    "id": "excel-gioia-2026-11-26-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-26",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F255;桔灯 陪伴老师 排课统计.xlsx:Gioia!F256"
+  },
+  {
+    "id": "excel-gioia-2026-11-26-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-26",
+    "startTime": "16:00",
     "endTime": "17:00",
     "status": "不可用",
-    "source": "Gioia!F255;Gioia!F256;Gioia!F257"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F256;桔灯 陪伴老师 排课统计.xlsx:Gioia!F257"
+  },
+  {
+    "id": "excel-gioia-2026-11-26-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-26",
+    "startTime": "16:30",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F257"
   },
   {
     "id": "excel-gioia-2026-11-26-1700-Jesmine-1v1",
@@ -15298,7 +30963,7 @@ export const importedLessons = [
     "startTime": "17:00",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!F258:F261"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F258:F261"
   },
   {
     "id": "excel-gioia-2026-11-26-1900-A1-Hedy-线上课",
@@ -15311,7 +30976,20 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!F262:F263"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F262:F263"
+  },
+  {
+    "id": "excel-gioia-2026-11-26-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-26",
+    "startTime": "20:00",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!F264"
   },
   {
     "id": "excel-gioia-2026-11-26-2000-灰色不可排",
@@ -15324,7 +31002,20 @@ export const importedLessons = [
     "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!F264;Gioia!F265"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F264;桔灯 陪伴老师 排课统计.xlsx:Gioia!F265"
+  },
+  {
+    "id": "excel-gioia-2026-11-26-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-26",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F265"
   },
   {
     "id": "excel-gioia-2026-11-27-0800-休息",
@@ -15337,7 +31028,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!G241:G248"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G241:G248"
   },
   {
     "id": "excel-gioia-2026-11-27-1200-灰色不可排",
@@ -15350,7 +31041,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!G249"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G249"
   },
   {
     "id": "excel-gioia-2026-11-27-1300-灰色不可排",
@@ -15361,9 +31052,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-11-27",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!G250"
+  },
+  {
+    "id": "excel-gioia-2026-11-27-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-27",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G250;桔灯 陪伴老师 排课统计.xlsx:Gioia!G251"
+  },
+  {
+    "id": "excel-gioia-2026-11-27-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-27",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G251;桔灯 陪伴老师 排课统计.xlsx:Gioia!G252"
+  },
+  {
+    "id": "excel-gioia-2026-11-27-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-27",
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G252;桔灯 陪伴老师 排课统计.xlsx:Gioia!G253"
+  },
+  {
+    "id": "excel-gioia-2026-11-27-1430-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-27",
+    "startTime": "14:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!G250;Gioia!G251;Gioia!G252;Gioia!G253;Gioia!G254"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G253;桔灯 陪伴老师 排课统计.xlsx:Gioia!G254"
+  },
+  {
+    "id": "excel-gioia-2026-11-27-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-27",
+    "startTime": "15:00",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G254"
   },
   {
     "id": "excel-gioia-2026-11-27-1530-Thomas-1v1补课",
@@ -15376,7 +31132,7 @@ export const importedLessons = [
     "startTime": "15:30",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!G255:G256"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G255:G256"
   },
   {
     "id": "excel-gioia-2026-11-27-1630-灰色不可排",
@@ -15387,9 +31143,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-11-27",
     "startTime": "16:30",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!G257"
+  },
+  {
+    "id": "excel-gioia-2026-11-27-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-27",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G257;桔灯 陪伴老师 排课统计.xlsx:Gioia!G258"
+  },
+  {
+    "id": "excel-gioia-2026-11-27-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-27",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G258;桔灯 陪伴老师 排课统计.xlsx:Gioia!G259"
+  },
+  {
+    "id": "excel-gioia-2026-11-27-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-27",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G259;桔灯 陪伴老师 排课统计.xlsx:Gioia!G260"
+  },
+  {
+    "id": "excel-gioia-2026-11-27-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-27",
+    "startTime": "18:00",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!G257;Gioia!G258;Gioia!G259;Gioia!G260;Gioia!G261"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G260;桔灯 陪伴老师 排课统计.xlsx:Gioia!G261"
+  },
+  {
+    "id": "excel-gioia-2026-11-27-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-27",
+    "startTime": "18:30",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G261"
   },
   {
     "id": "excel-gioia-2026-11-27-1900-A1-Miles-线上课",
@@ -15402,7 +31223,20 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!G262:G263"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G262:G263"
+  },
+  {
+    "id": "excel-gioia-2026-11-27-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-27",
+    "startTime": "20:00",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!G264"
   },
   {
     "id": "excel-gioia-2026-11-27-2000-灰色不可排",
@@ -15415,7 +31249,33 @@ export const importedLessons = [
     "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!G264;Gioia!G265"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G264;桔灯 陪伴老师 排课统计.xlsx:Gioia!G265"
+  },
+  {
+    "id": "excel-gioia-2026-11-27-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-27",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G265"
+  },
+  {
+    "id": "excel-gioia-2026-11-28-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-28",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!H241"
   },
   {
     "id": "excel-gioia-2026-11-28-0800-灰色不可排",
@@ -15428,7 +31288,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!H241;Gioia!H242"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H241;桔灯 陪伴老师 排课统计.xlsx:Gioia!H242"
+  },
+  {
+    "id": "excel-gioia-2026-11-28-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-28",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H242"
   },
   {
     "id": "excel-gioia-2026-11-28-0900-A1-Harold",
@@ -15441,7 +31314,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!H243:H248"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H243:H248"
   },
   {
     "id": "excel-gioia-2026-11-28-1200-灰色不可排",
@@ -15454,7 +31327,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!H249"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H249"
   },
   {
     "id": "excel-gioia-2026-11-28-1300-Eric-1v1",
@@ -15467,7 +31340,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "15:00",
     "status": "不可用",
-    "source": "Gioia!H250:H253"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H250:H253"
   },
   {
     "id": "excel-gioia-2026-11-28-1500-灰色不可排",
@@ -15478,9 +31351,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-11-28",
     "startTime": "15:00",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!H254"
+  },
+  {
+    "id": "excel-gioia-2026-11-28-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-28",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H254;桔灯 陪伴老师 排课统计.xlsx:Gioia!H255"
+  },
+  {
+    "id": "excel-gioia-2026-11-28-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-28",
+    "startTime": "15:30",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!H254;Gioia!H255;Gioia!H256"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H255;桔灯 陪伴老师 排课统计.xlsx:Gioia!H256"
+  },
+  {
+    "id": "excel-gioia-2026-11-28-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-28",
+    "startTime": "16:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H256"
   },
   {
     "id": "excel-gioia-2026-11-28-1630-George",
@@ -15493,7 +31405,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "19:30",
     "status": "不可用",
-    "source": "Gioia!H257:H262"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H257:H262"
   },
   {
     "id": "excel-gioia-2026-11-28-1930-灰色不可排",
@@ -15504,9 +31416,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-11-28",
     "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!H263"
+  },
+  {
+    "id": "excel-gioia-2026-11-28-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-28",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H263;桔灯 陪伴老师 排课统计.xlsx:Gioia!H264"
+  },
+  {
+    "id": "excel-gioia-2026-11-28-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-28",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!H263;Gioia!H264;Gioia!H265"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H264;桔灯 陪伴老师 排课统计.xlsx:Gioia!H265"
+  },
+  {
+    "id": "excel-gioia-2026-11-28-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-28",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H265"
   },
   {
     "id": "excel-gioia-2026-11-29-0800-灰色不可排",
@@ -15519,7 +31470,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!I241"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I241"
   },
   {
     "id": "excel-gioia-2026-11-29-0830-Anna-1v1",
@@ -15532,7 +31483,7 @@ export const importedLessons = [
     "startTime": "08:30",
     "endTime": "10:30",
     "status": "不可用",
-    "source": "Gioia!I242:I245"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I242:I245"
   },
   {
     "id": "excel-gioia-2026-11-29-1030-Tony-1v1",
@@ -15545,7 +31496,7 @@ export const importedLessons = [
     "startTime": "10:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!I246:I249"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I246:I249"
   },
   {
     "id": "excel-gioia-2026-11-29-1300-A1-Miles",
@@ -15558,7 +31509,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "不可用",
-    "source": "Gioia!I250:I255"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I250:I255"
   },
   {
     "id": "excel-gioia-2026-11-29-1600-灰色不可排",
@@ -15571,7 +31522,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!I256"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I256"
   },
   {
     "id": "excel-gioia-2026-11-29-1630-Lesli-1v1",
@@ -15584,7 +31535,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!I257:I260"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I257:I260"
   },
   {
     "id": "excel-gioia-2026-11-29-1830-灰色不可排",
@@ -15595,9 +31546,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-11-29",
     "startTime": "18:30",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!I261"
+  },
+  {
+    "id": "excel-gioia-2026-11-29-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-29",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I261;桔灯 陪伴老师 排课统计.xlsx:Gioia!I262"
+  },
+  {
+    "id": "excel-gioia-2026-11-29-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-29",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I262;桔灯 陪伴老师 排课统计.xlsx:Gioia!I263"
+  },
+  {
+    "id": "excel-gioia-2026-11-29-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-29",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I263;桔灯 陪伴老师 排课统计.xlsx:Gioia!I264"
+  },
+  {
+    "id": "excel-gioia-2026-11-29-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-29",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!I261;Gioia!I262;Gioia!I263;Gioia!I264;Gioia!I265"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I264;桔灯 陪伴老师 排课统计.xlsx:Gioia!I265"
+  },
+  {
+    "id": "excel-gioia-2026-11-29-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-11-29",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I265"
   },
   {
     "id": "excel-gioia-2026-11-30-0800-休息",
@@ -15610,7 +31626,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!C241:C265"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C241:C265"
   },
   {
     "id": "excel-gioia-2026-12-01-0800-休息",
@@ -15623,7 +31639,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!D241:D265"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D241:D265"
   },
   {
     "id": "excel-gioia-2026-12-03-0800-休息",
@@ -15636,7 +31652,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!F273:F280"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F273:F280"
   },
   {
     "id": "excel-gioia-2026-12-03-1200-灰色不可排",
@@ -15649,7 +31665,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!F281"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F281"
   },
   {
     "id": "excel-gioia-2026-12-03-1300-灰色不可排",
@@ -15662,7 +31678,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!F282"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F282"
   },
   {
     "id": "excel-gioia-2026-12-03-1330-Kason-1v1",
@@ -15675,7 +31691,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!F283:F286"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F283:F286"
   },
   {
     "id": "excel-gioia-2026-12-03-1530-灰色不可排",
@@ -15686,9 +31702,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-12-03",
     "startTime": "15:30",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!F287"
+  },
+  {
+    "id": "excel-gioia-2026-12-03-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-03",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F287;桔灯 陪伴老师 排课统计.xlsx:Gioia!F288"
+  },
+  {
+    "id": "excel-gioia-2026-12-03-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-03",
+    "startTime": "16:00",
     "endTime": "17:00",
     "status": "不可用",
-    "source": "Gioia!F287;Gioia!F288;Gioia!F289"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F288;桔灯 陪伴老师 排课统计.xlsx:Gioia!F289"
+  },
+  {
+    "id": "excel-gioia-2026-12-03-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-03",
+    "startTime": "16:30",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F289"
   },
   {
     "id": "excel-gioia-2026-12-03-1700-Jesmine-1v1",
@@ -15701,7 +31756,7 @@ export const importedLessons = [
     "startTime": "17:00",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!F290:F293"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F290:F293"
   },
   {
     "id": "excel-gioia-2026-12-03-1900-A1-Hedy-线上课",
@@ -15714,7 +31769,20 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!F294:F295"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F294:F295"
+  },
+  {
+    "id": "excel-gioia-2026-12-03-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-03",
+    "startTime": "20:00",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!F296"
   },
   {
     "id": "excel-gioia-2026-12-03-2000-灰色不可排",
@@ -15727,7 +31795,20 @@ export const importedLessons = [
     "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!F296;Gioia!F297"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F296;桔灯 陪伴老师 排课统计.xlsx:Gioia!F297"
+  },
+  {
+    "id": "excel-gioia-2026-12-03-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-03",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F297"
   },
   {
     "id": "excel-gioia-2026-12-04-0800-休息",
@@ -15740,7 +31821,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!G273"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G273"
   },
   {
     "id": "excel-gioia-2026-12-04-0830-灰色不可排",
@@ -15751,9 +31832,113 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-12-04",
     "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!G274"
+  },
+  {
+    "id": "excel-gioia-2026-12-04-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-04",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G274;桔灯 陪伴老师 排课统计.xlsx:Gioia!G275"
+  },
+  {
+    "id": "excel-gioia-2026-12-04-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-04",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G275;桔灯 陪伴老师 排课统计.xlsx:Gioia!G276"
+  },
+  {
+    "id": "excel-gioia-2026-12-04-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-04",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G276;桔灯 陪伴老师 排课统计.xlsx:Gioia!G277"
+  },
+  {
+    "id": "excel-gioia-2026-12-04-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-04",
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G277;桔灯 陪伴老师 排课统计.xlsx:Gioia!G278"
+  },
+  {
+    "id": "excel-gioia-2026-12-04-1030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-04",
+    "startTime": "10:30",
+    "endTime": "11:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G278;桔灯 陪伴老师 排课统计.xlsx:Gioia!G279"
+  },
+  {
+    "id": "excel-gioia-2026-12-04-1100-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-04",
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G279;桔灯 陪伴老师 排课统计.xlsx:Gioia!G280"
+  },
+  {
+    "id": "excel-gioia-2026-12-04-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-04",
+    "startTime": "11:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!G274;Gioia!G275;Gioia!G276;Gioia!G277;Gioia!G278;Gioia!G279;Gioia!G280;Gioia!G281"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G280;桔灯 陪伴老师 排课统计.xlsx:Gioia!G281"
+  },
+  {
+    "id": "excel-gioia-2026-12-04-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-04",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G281"
   },
   {
     "id": "excel-gioia-2026-12-04-1300-灰色不可排",
@@ -15764,9 +31949,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-12-04",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!G282"
+  },
+  {
+    "id": "excel-gioia-2026-12-04-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-04",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G282;桔灯 陪伴老师 排课统计.xlsx:Gioia!G283"
+  },
+  {
+    "id": "excel-gioia-2026-12-04-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-04",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G283;桔灯 陪伴老师 排课统计.xlsx:Gioia!G284"
+  },
+  {
+    "id": "excel-gioia-2026-12-04-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-04",
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G284;桔灯 陪伴老师 排课统计.xlsx:Gioia!G285"
+  },
+  {
+    "id": "excel-gioia-2026-12-04-1430-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-04",
+    "startTime": "14:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!G282;Gioia!G283;Gioia!G284;Gioia!G285;Gioia!G286"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G285;桔灯 陪伴老师 排课统计.xlsx:Gioia!G286"
+  },
+  {
+    "id": "excel-gioia-2026-12-04-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-04",
+    "startTime": "15:00",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G286"
   },
   {
     "id": "excel-gioia-2026-12-04-1530-Phoebe-1v1",
@@ -15779,7 +32029,7 @@ export const importedLessons = [
     "startTime": "15:30",
     "endTime": "17:30",
     "status": "不可用",
-    "source": "Gioia!G287:G290"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G287:G290"
   },
   {
     "id": "excel-gioia-2026-12-04-1730-灰色不可排",
@@ -15790,9 +32040,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-12-04",
     "startTime": "17:30",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!G291"
+  },
+  {
+    "id": "excel-gioia-2026-12-04-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-04",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G291;桔灯 陪伴老师 排课统计.xlsx:Gioia!G292"
+  },
+  {
+    "id": "excel-gioia-2026-12-04-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-04",
+    "startTime": "18:00",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!G291;Gioia!G292;Gioia!G293"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G292;桔灯 陪伴老师 排课统计.xlsx:Gioia!G293"
+  },
+  {
+    "id": "excel-gioia-2026-12-04-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-04",
+    "startTime": "18:30",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G293"
   },
   {
     "id": "excel-gioia-2026-12-04-1900-A1-Miles-线上课",
@@ -15805,7 +32094,20 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!G294:G295"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G294:G295"
+  },
+  {
+    "id": "excel-gioia-2026-12-04-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-04",
+    "startTime": "20:00",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!G296"
   },
   {
     "id": "excel-gioia-2026-12-04-2000-灰色不可排",
@@ -15818,7 +32120,33 @@ export const importedLessons = [
     "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!G296;Gioia!G297"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G296;桔灯 陪伴老师 排课统计.xlsx:Gioia!G297"
+  },
+  {
+    "id": "excel-gioia-2026-12-04-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-04",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G297"
+  },
+  {
+    "id": "excel-gioia-2026-12-05-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-05",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!H273"
   },
   {
     "id": "excel-gioia-2026-12-05-0800-灰色不可排",
@@ -15831,7 +32159,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!H273;Gioia!H274"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H273;桔灯 陪伴老师 排课统计.xlsx:Gioia!H274"
+  },
+  {
+    "id": "excel-gioia-2026-12-05-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-05",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H274"
   },
   {
     "id": "excel-gioia-2026-12-05-0900-A1-Harold",
@@ -15844,7 +32185,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!H275:H280"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H275:H280"
   },
   {
     "id": "excel-gioia-2026-12-05-1200-灰色不可排",
@@ -15857,7 +32198,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!H281"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H281"
   },
   {
     "id": "excel-gioia-2026-12-05-1300-Eric-1v1",
@@ -15870,7 +32211,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "15:00",
     "status": "不可用",
-    "source": "Gioia!H282:H285"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H282:H285"
   },
   {
     "id": "excel-gioia-2026-12-05-1500-灰色不可排",
@@ -15881,9 +32222,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-12-05",
     "startTime": "15:00",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!H286"
+  },
+  {
+    "id": "excel-gioia-2026-12-05-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-05",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H286;桔灯 陪伴老师 排课统计.xlsx:Gioia!H287"
+  },
+  {
+    "id": "excel-gioia-2026-12-05-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-05",
+    "startTime": "15:30",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!H286;Gioia!H287;Gioia!H288"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H287;桔灯 陪伴老师 排课统计.xlsx:Gioia!H288"
+  },
+  {
+    "id": "excel-gioia-2026-12-05-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-05",
+    "startTime": "16:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H288"
   },
   {
     "id": "excel-gioia-2026-12-05-1630-George",
@@ -15896,7 +32276,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "19:30",
     "status": "不可用",
-    "source": "Gioia!H289:H294"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H289:H294"
   },
   {
     "id": "excel-gioia-2026-12-05-1930-灰色不可排",
@@ -15907,9 +32287,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-12-05",
     "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!H295"
+  },
+  {
+    "id": "excel-gioia-2026-12-05-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-05",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H295;桔灯 陪伴老师 排课统计.xlsx:Gioia!H296"
+  },
+  {
+    "id": "excel-gioia-2026-12-05-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-05",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!H295;Gioia!H296;Gioia!H297"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H296;桔灯 陪伴老师 排课统计.xlsx:Gioia!H297"
+  },
+  {
+    "id": "excel-gioia-2026-12-05-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-05",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H297"
   },
   {
     "id": "excel-gioia-2026-12-06-0800-灰色不可排",
@@ -15922,7 +32341,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!I273"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I273"
   },
   {
     "id": "excel-gioia-2026-12-06-0830-Anna-1v1",
@@ -15935,7 +32354,20 @@ export const importedLessons = [
     "startTime": "08:30",
     "endTime": "10:30",
     "status": "不可用",
-    "source": "Gioia!I274:I277"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I274:I277"
+  },
+  {
+    "id": "excel-gioia-2026-12-06-1030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-06",
+    "startTime": "10:30",
+    "endTime": "11:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!I278"
   },
   {
     "id": "excel-gioia-2026-12-06-1030-灰色不可排",
@@ -15948,7 +32380,20 @@ export const importedLessons = [
     "startTime": "10:30",
     "endTime": "11:30",
     "status": "不可用",
-    "source": "Gioia!I278;Gioia!I279"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I278;桔灯 陪伴老师 排课统计.xlsx:Gioia!I279"
+  },
+  {
+    "id": "excel-gioia-2026-12-06-1100-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-06",
+    "startTime": "11:00",
+    "endTime": "11:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I279"
   },
   {
     "id": "excel-gioia-2026-12-06-1130-口语面试",
@@ -15961,7 +32406,7 @@ export const importedLessons = [
     "startTime": "11:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!I280:I281"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I280:I281"
   },
   {
     "id": "excel-gioia-2026-12-06-1300-A1-Miles",
@@ -15974,7 +32419,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "不可用",
-    "source": "Gioia!I282:I287"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I282:I287"
   },
   {
     "id": "excel-gioia-2026-12-06-1600-灰色不可排",
@@ -15987,7 +32432,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!I288"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I288"
   },
   {
     "id": "excel-gioia-2026-12-06-1630-Lesli-1v1",
@@ -16000,7 +32445,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!I289:I292"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I289:I292"
   },
   {
     "id": "excel-gioia-2026-12-06-1830-灰色不可排",
@@ -16011,9 +32456,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-12-06",
     "startTime": "18:30",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!I293"
+  },
+  {
+    "id": "excel-gioia-2026-12-06-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-06",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I293;桔灯 陪伴老师 排课统计.xlsx:Gioia!I294"
+  },
+  {
+    "id": "excel-gioia-2026-12-06-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-06",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I294;桔灯 陪伴老师 排课统计.xlsx:Gioia!I295"
+  },
+  {
+    "id": "excel-gioia-2026-12-06-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-06",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I295;桔灯 陪伴老师 排课统计.xlsx:Gioia!I296"
+  },
+  {
+    "id": "excel-gioia-2026-12-06-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-06",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!I293;Gioia!I294;Gioia!I295;Gioia!I296;Gioia!I297"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I296;桔灯 陪伴老师 排课统计.xlsx:Gioia!I297"
+  },
+  {
+    "id": "excel-gioia-2026-12-06-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-06",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I297"
   },
   {
     "id": "excel-gioia-2026-12-07-0800-休息",
@@ -16026,7 +32536,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!C273:C297"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C273:C297"
   },
   {
     "id": "excel-gioia-2026-12-08-0800-休息",
@@ -16039,7 +32549,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!D273:D297"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D273:D297"
   },
   {
     "id": "excel-gioia-2026-12-09-0800-灰色不可排",
@@ -16050,9 +32560,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-12-09",
     "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!O273"
+  },
+  {
+    "id": "excel-gioia-2026-12-09-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-09",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O273;桔灯 陪伴老师 排课统计.xlsx:Gioia!O274"
+  },
+  {
+    "id": "excel-gioia-2026-12-09-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-09",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O274;桔灯 陪伴老师 排课统计.xlsx:Gioia!O275"
+  },
+  {
+    "id": "excel-gioia-2026-12-09-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-09",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O275;桔灯 陪伴老师 排课统计.xlsx:Gioia!O276"
+  },
+  {
+    "id": "excel-gioia-2026-12-09-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-09",
+    "startTime": "09:30",
     "endTime": "10:30",
     "status": "不可用",
-    "source": "Gioia!O273;Gioia!O274;Gioia!O275;Gioia!O276;Gioia!O277"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O276;桔灯 陪伴老师 排课统计.xlsx:Gioia!O277"
+  },
+  {
+    "id": "excel-gioia-2026-12-09-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-09",
+    "startTime": "10:00",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O277"
   },
   {
     "id": "excel-gioia-2026-12-09-1030-教研",
@@ -16065,7 +32640,7 @@ export const importedLessons = [
     "startTime": "10:30",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!O278:O280"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O278:O280"
   },
   {
     "id": "excel-gioia-2026-12-09-1200-灰色不可排",
@@ -16078,7 +32653,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!O281"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O281"
   },
   {
     "id": "excel-gioia-2026-12-09-1300-灰色不可排",
@@ -16089,9 +32664,100 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-12-09",
     "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!O282"
+  },
+  {
+    "id": "excel-gioia-2026-12-09-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-09",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O282;桔灯 陪伴老师 排课统计.xlsx:Gioia!O283"
+  },
+  {
+    "id": "excel-gioia-2026-12-09-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-09",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O283;桔灯 陪伴老师 排课统计.xlsx:Gioia!O284"
+  },
+  {
+    "id": "excel-gioia-2026-12-09-1400-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-09",
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O284;桔灯 陪伴老师 排课统计.xlsx:Gioia!O285"
+  },
+  {
+    "id": "excel-gioia-2026-12-09-1430-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-09",
+    "startTime": "14:30",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O285;桔灯 陪伴老师 排课统计.xlsx:Gioia!O286"
+  },
+  {
+    "id": "excel-gioia-2026-12-09-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-09",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O286;桔灯 陪伴老师 排课统计.xlsx:Gioia!O287"
+  },
+  {
+    "id": "excel-gioia-2026-12-09-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-09",
+    "startTime": "15:30",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!O282;Gioia!O283;Gioia!O284;Gioia!O285;Gioia!O286;Gioia!O287;Gioia!O288"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O287;桔灯 陪伴老师 排课统计.xlsx:Gioia!O288"
+  },
+  {
+    "id": "excel-gioia-2026-12-09-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-09",
+    "startTime": "16:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O288"
   },
   {
     "id": "excel-gioia-2026-12-09-1630-Turtle-1v1",
@@ -16104,7 +32770,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "18:00",
     "status": "不可用",
-    "source": "Gioia!O289:O291"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O289:O291"
   },
   {
     "id": "excel-gioia-2026-12-09-1800-灰色不可排",
@@ -16117,7 +32783,7 @@ export const importedLessons = [
     "startTime": "18:00",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!O292"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O292"
   },
   {
     "id": "excel-gioia-2026-12-09-1830-线上Alisa-1v1",
@@ -16130,7 +32796,7 @@ export const importedLessons = [
     "startTime": "18:30",
     "endTime": "20:30",
     "status": "不可用",
-    "source": "Gioia!O293:O296"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O293:O296"
   },
   {
     "id": "excel-gioia-2026-12-09-2030-灰色不可排",
@@ -16143,7 +32809,7 @@ export const importedLessons = [
     "startTime": "20:30",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!O297"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!O297"
   },
   {
     "id": "excel-gioia-2026-12-10-0800-休息",
@@ -16156,7 +32822,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!P273:P280"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P273:P280"
   },
   {
     "id": "excel-gioia-2026-12-10-1200-灰色不可排",
@@ -16169,7 +32835,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!P281"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P281"
   },
   {
     "id": "excel-gioia-2026-12-10-1300-灰色不可排",
@@ -16182,7 +32848,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!P282"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P282"
   },
   {
     "id": "excel-gioia-2026-12-10-1330-Kason-1v1",
@@ -16195,7 +32861,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!P283:P286"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P283:P286"
   },
   {
     "id": "excel-gioia-2026-12-10-1530-灰色不可排",
@@ -16206,9 +32872,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-12-10",
     "startTime": "15:30",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!P287"
+  },
+  {
+    "id": "excel-gioia-2026-12-10-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-10",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P287;桔灯 陪伴老师 排课统计.xlsx:Gioia!P288"
+  },
+  {
+    "id": "excel-gioia-2026-12-10-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-10",
+    "startTime": "16:00",
     "endTime": "17:00",
     "status": "不可用",
-    "source": "Gioia!P287;Gioia!P288;Gioia!P289"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P288;桔灯 陪伴老师 排课统计.xlsx:Gioia!P289"
+  },
+  {
+    "id": "excel-gioia-2026-12-10-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-10",
+    "startTime": "16:30",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P289"
   },
   {
     "id": "excel-gioia-2026-12-10-1700-Jesmine-1v1",
@@ -16221,7 +32926,7 @@ export const importedLessons = [
     "startTime": "17:00",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!P290:P293"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P290:P293"
   },
   {
     "id": "excel-gioia-2026-12-10-1900-A1-Hedy-线上课",
@@ -16234,7 +32939,20 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!P294:P295"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P294:P295"
+  },
+  {
+    "id": "excel-gioia-2026-12-10-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-10",
+    "startTime": "20:00",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!P296"
   },
   {
     "id": "excel-gioia-2026-12-10-2000-灰色不可排",
@@ -16247,7 +32965,20 @@ export const importedLessons = [
     "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!P296;Gioia!P297"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P296;桔灯 陪伴老师 排课统计.xlsx:Gioia!P297"
+  },
+  {
+    "id": "excel-gioia-2026-12-10-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-10",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!P297"
   },
   {
     "id": "excel-gioia-2026-12-11-0800-休息",
@@ -16260,7 +32991,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!Q273:Q280"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q273:Q280"
   },
   {
     "id": "excel-gioia-2026-12-11-1200-灰色不可排",
@@ -16273,7 +33004,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!Q281"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q281"
   },
   {
     "id": "excel-gioia-2026-12-11-1300-灰色不可排",
@@ -16286,7 +33017,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!Q282"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q282"
   },
   {
     "id": "excel-gioia-2026-12-11-1330-Kason-1v1",
@@ -16299,7 +33030,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!Q283:Q286"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q283:Q286"
   },
   {
     "id": "excel-gioia-2026-12-11-1530-灰色不可排",
@@ -16310,9 +33041,100 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-12-11",
     "startTime": "15:30",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Q287"
+  },
+  {
+    "id": "excel-gioia-2026-12-11-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-11",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q287;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q288"
+  },
+  {
+    "id": "excel-gioia-2026-12-11-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-11",
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q288;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q289"
+  },
+  {
+    "id": "excel-gioia-2026-12-11-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-11",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q289;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q290"
+  },
+  {
+    "id": "excel-gioia-2026-12-11-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-11",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q290;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q291"
+  },
+  {
+    "id": "excel-gioia-2026-12-11-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-11",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q291;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q292"
+  },
+  {
+    "id": "excel-gioia-2026-12-11-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-11",
+    "startTime": "18:00",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!Q287;Gioia!Q288;Gioia!Q289;Gioia!Q290;Gioia!Q291;Gioia!Q292;Gioia!Q293"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q292;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q293"
+  },
+  {
+    "id": "excel-gioia-2026-12-11-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-11",
+    "startTime": "18:30",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q293"
   },
   {
     "id": "excel-gioia-2026-12-11-1900-A1-Miles-线上课",
@@ -16325,7 +33147,20 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!Q294:Q295"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q294:Q295"
+  },
+  {
+    "id": "excel-gioia-2026-12-11-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-11",
+    "startTime": "20:00",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Q296"
   },
   {
     "id": "excel-gioia-2026-12-11-2000-灰色不可排",
@@ -16338,7 +33173,33 @@ export const importedLessons = [
     "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!Q296;Gioia!Q297"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q296;桔灯 陪伴老师 排课统计.xlsx:Gioia!Q297"
+  },
+  {
+    "id": "excel-gioia-2026-12-11-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-11",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Q297"
+  },
+  {
+    "id": "excel-gioia-2026-12-12-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-12",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!R273"
   },
   {
     "id": "excel-gioia-2026-12-12-0800-灰色不可排",
@@ -16351,7 +33212,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!R273;Gioia!R274"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R273;桔灯 陪伴老师 排课统计.xlsx:Gioia!R274"
+  },
+  {
+    "id": "excel-gioia-2026-12-12-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-12",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R274"
   },
   {
     "id": "excel-gioia-2026-12-12-0900-A1-Harold",
@@ -16364,7 +33238,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!R275:R280"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R275:R280"
   },
   {
     "id": "excel-gioia-2026-12-12-1200-灰色不可排",
@@ -16377,7 +33251,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!R281"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R281"
   },
   {
     "id": "excel-gioia-2026-12-12-1300-Eric-1v1",
@@ -16390,7 +33264,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "15:00",
     "status": "不可用",
-    "source": "Gioia!R282:R285"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R282:R285"
   },
   {
     "id": "excel-gioia-2026-12-12-1500-灰色不可排",
@@ -16401,9 +33275,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-12-12",
     "startTime": "15:00",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!R286"
+  },
+  {
+    "id": "excel-gioia-2026-12-12-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-12",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R286;桔灯 陪伴老师 排课统计.xlsx:Gioia!R287"
+  },
+  {
+    "id": "excel-gioia-2026-12-12-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-12",
+    "startTime": "15:30",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!R286;Gioia!R287;Gioia!R288"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R287;桔灯 陪伴老师 排课统计.xlsx:Gioia!R288"
+  },
+  {
+    "id": "excel-gioia-2026-12-12-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-12",
+    "startTime": "16:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R288"
   },
   {
     "id": "excel-gioia-2026-12-12-1630-George",
@@ -16416,7 +33329,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "19:30",
     "status": "不可用",
-    "source": "Gioia!R289:R294"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R289:R294"
   },
   {
     "id": "excel-gioia-2026-12-12-1930-灰色不可排",
@@ -16427,9 +33340,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-12-12",
     "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!R295"
+  },
+  {
+    "id": "excel-gioia-2026-12-12-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-12",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R295;桔灯 陪伴老师 排课统计.xlsx:Gioia!R296"
+  },
+  {
+    "id": "excel-gioia-2026-12-12-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-12",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!R295;Gioia!R296;Gioia!R297"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R296;桔灯 陪伴老师 排课统计.xlsx:Gioia!R297"
+  },
+  {
+    "id": "excel-gioia-2026-12-12-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-12",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!R297"
   },
   {
     "id": "excel-gioia-2026-12-16-0800-灰色不可排",
@@ -16440,9 +33392,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-12-16",
     "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Y273"
+  },
+  {
+    "id": "excel-gioia-2026-12-16-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-16",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y273;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y274"
+  },
+  {
+    "id": "excel-gioia-2026-12-16-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-16",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y274;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y275"
+  },
+  {
+    "id": "excel-gioia-2026-12-16-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-16",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y275;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y276"
+  },
+  {
+    "id": "excel-gioia-2026-12-16-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-16",
+    "startTime": "09:30",
     "endTime": "10:30",
     "status": "不可用",
-    "source": "Gioia!Y273;Gioia!Y274;Gioia!Y275;Gioia!Y276;Gioia!Y277"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y276;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y277"
+  },
+  {
+    "id": "excel-gioia-2026-12-16-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-16",
+    "startTime": "10:00",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y277"
   },
   {
     "id": "excel-gioia-2026-12-16-1030-教研",
@@ -16455,7 +33472,7 @@ export const importedLessons = [
     "startTime": "10:30",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!Y278:Y280"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y278:Y280"
   },
   {
     "id": "excel-gioia-2026-12-16-1200-灰色不可排",
@@ -16468,7 +33485,20 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!Y281"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y281"
+  },
+  {
+    "id": "excel-gioia-2026-12-16-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-16",
+    "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Y282"
   },
   {
     "id": "excel-gioia-2026-12-16-1300-灰色不可排",
@@ -16481,7 +33511,20 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:00",
     "status": "不可用",
-    "source": "Gioia!Y282;Gioia!Y283"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y282;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y283"
+  },
+  {
+    "id": "excel-gioia-2026-12-16-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-16",
+    "startTime": "13:30",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y283"
   },
   {
     "id": "excel-gioia-2026-12-16-1400-线上Alisa-1v1",
@@ -16494,7 +33537,7 @@ export const importedLessons = [
     "startTime": "14:00",
     "endTime": "16:00",
     "status": "不可用",
-    "source": "Gioia!Y284:Y287"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y284:Y287"
   },
   {
     "id": "excel-gioia-2026-12-16-1600-Turtle-1v1",
@@ -16507,7 +33550,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "17:30",
     "status": "不可用",
-    "source": "Gioia!Y288:Y290"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y288:Y290"
   },
   {
     "id": "excel-gioia-2026-12-16-1730-灰色不可排",
@@ -16518,9 +33561,100 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-12-16",
     "startTime": "17:30",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Y291"
+  },
+  {
+    "id": "excel-gioia-2026-12-16-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-16",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y291;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y292"
+  },
+  {
+    "id": "excel-gioia-2026-12-16-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-16",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y292;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y293"
+  },
+  {
+    "id": "excel-gioia-2026-12-16-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-16",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y293;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y294"
+  },
+  {
+    "id": "excel-gioia-2026-12-16-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-16",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y294;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y295"
+  },
+  {
+    "id": "excel-gioia-2026-12-16-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-16",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y295;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y296"
+  },
+  {
+    "id": "excel-gioia-2026-12-16-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-16",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!Y291;Gioia!Y292;Gioia!Y293;Gioia!Y294;Gioia!Y295;Gioia!Y296;Gioia!Y297"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y296;桔灯 陪伴老师 排课统计.xlsx:Gioia!Y297"
+  },
+  {
+    "id": "excel-gioia-2026-12-16-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-16",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Y297"
   },
   {
     "id": "excel-gioia-2026-12-17-0800-休息",
@@ -16533,7 +33667,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!Z273:Z280"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z273:Z280"
   },
   {
     "id": "excel-gioia-2026-12-17-1200-灰色不可排",
@@ -16546,7 +33680,20 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!Z281"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z281"
+  },
+  {
+    "id": "excel-gioia-2026-12-17-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-17",
+    "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Z282"
   },
   {
     "id": "excel-gioia-2026-12-17-1300-灰色不可排",
@@ -16559,7 +33706,20 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:00",
     "status": "不可用",
-    "source": "Gioia!Z282;Gioia!Z283"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z282;桔灯 陪伴老师 排课统计.xlsx:Gioia!Z283"
+  },
+  {
+    "id": "excel-gioia-2026-12-17-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-17",
+    "startTime": "13:30",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z283"
   },
   {
     "id": "excel-gioia-2026-12-17-1400-吕老师朋友",
@@ -16572,7 +33732,7 @@ export const importedLessons = [
     "startTime": "14:00",
     "endTime": "17:00",
     "status": "不可用",
-    "source": "Gioia!Z284:Z289"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z284:Z289"
   },
   {
     "id": "excel-gioia-2026-12-17-1700-Jesmine-1v1",
@@ -16585,7 +33745,7 @@ export const importedLessons = [
     "startTime": "17:00",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!Z290:Z293"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z290:Z293"
   },
   {
     "id": "excel-gioia-2026-12-17-1900-A1-Hedy-线上课",
@@ -16598,7 +33758,20 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!Z294:Z295"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z294:Z295"
+  },
+  {
+    "id": "excel-gioia-2026-12-17-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-17",
+    "startTime": "20:00",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!Z296"
   },
   {
     "id": "excel-gioia-2026-12-17-2000-灰色不可排",
@@ -16611,7 +33784,20 @@ export const importedLessons = [
     "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!Z296;Gioia!Z297"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z296;桔灯 陪伴老师 排课统计.xlsx:Gioia!Z297"
+  },
+  {
+    "id": "excel-gioia-2026-12-17-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-17",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!Z297"
   },
   {
     "id": "excel-gioia-2026-12-18-0800-休息",
@@ -16624,7 +33810,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!AA273"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA273"
   },
   {
     "id": "excel-gioia-2026-12-18-0830-灰色不可排",
@@ -16635,9 +33821,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-12-18",
     "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AA274"
+  },
+  {
+    "id": "excel-gioia-2026-12-18-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-18",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA274;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA275"
+  },
+  {
+    "id": "excel-gioia-2026-12-18-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-18",
+    "startTime": "09:00",
     "endTime": "10:00",
     "status": "不可用",
-    "source": "Gioia!AA274;Gioia!AA275;Gioia!AA276"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA275;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA276"
+  },
+  {
+    "id": "excel-gioia-2026-12-18-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-18",
+    "startTime": "09:30",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA276"
   },
   {
     "id": "excel-gioia-2026-12-18-1000-Kason-1v1",
@@ -16650,7 +33875,7 @@ export const importedLessons = [
     "startTime": "10:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!AA277:AA280"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA277:AA280"
   },
   {
     "id": "excel-gioia-2026-12-18-1200-灰色不可排",
@@ -16663,7 +33888,20 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!AA281"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA281"
+  },
+  {
+    "id": "excel-gioia-2026-12-18-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-18",
+    "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AA282"
   },
   {
     "id": "excel-gioia-2026-12-18-1300-灰色不可排",
@@ -16676,7 +33914,20 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:00",
     "status": "不可用",
-    "source": "Gioia!AA282;Gioia!AA283"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA282;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA283"
+  },
+  {
+    "id": "excel-gioia-2026-12-18-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-18",
+    "startTime": "13:30",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA283"
   },
   {
     "id": "excel-gioia-2026-12-18-1400-吕老师朋友",
@@ -16689,7 +33940,7 @@ export const importedLessons = [
     "startTime": "14:00",
     "endTime": "17:00",
     "status": "不可用",
-    "source": "Gioia!AA284:AA289"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA284:AA289"
   },
   {
     "id": "excel-gioia-2026-12-18-1700-灰色不可排",
@@ -16700,9 +33951,61 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-12-18",
     "startTime": "17:00",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AA290"
+  },
+  {
+    "id": "excel-gioia-2026-12-18-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-18",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA290;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA291"
+  },
+  {
+    "id": "excel-gioia-2026-12-18-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-18",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA291;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA292"
+  },
+  {
+    "id": "excel-gioia-2026-12-18-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-18",
+    "startTime": "18:00",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!AA290;Gioia!AA291;Gioia!AA292;Gioia!AA293"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA292;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA293"
+  },
+  {
+    "id": "excel-gioia-2026-12-18-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-18",
+    "startTime": "18:30",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA293"
   },
   {
     "id": "excel-gioia-2026-12-18-1900-A1-Miles-线上课",
@@ -16715,7 +34018,20 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!AA294:AA295"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA294:AA295"
+  },
+  {
+    "id": "excel-gioia-2026-12-18-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-18",
+    "startTime": "20:00",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AA296"
   },
   {
     "id": "excel-gioia-2026-12-18-2000-灰色不可排",
@@ -16728,7 +34044,33 @@ export const importedLessons = [
     "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!AA296;Gioia!AA297"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA296;桔灯 陪伴老师 排课统计.xlsx:Gioia!AA297"
+  },
+  {
+    "id": "excel-gioia-2026-12-18-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-18",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AA297"
+  },
+  {
+    "id": "excel-gioia-2026-12-19-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-19",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AB273"
   },
   {
     "id": "excel-gioia-2026-12-19-0800-灰色不可排",
@@ -16741,7 +34083,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!AB273;Gioia!AB274"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB273;桔灯 陪伴老师 排课统计.xlsx:Gioia!AB274"
+  },
+  {
+    "id": "excel-gioia-2026-12-19-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-19",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB274"
   },
   {
     "id": "excel-gioia-2026-12-19-0900-A1-Harold",
@@ -16754,7 +34109,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!AB275:AB280"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB275:AB280"
   },
   {
     "id": "excel-gioia-2026-12-19-1200-灰色不可排",
@@ -16767,7 +34122,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!AB281"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB281"
   },
   {
     "id": "excel-gioia-2026-12-19-1300-George",
@@ -16780,7 +34135,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "不可用",
-    "source": "Gioia!AB282:AB287"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB282:AB287"
   },
   {
     "id": "excel-gioia-2026-12-19-1600-灰色不可排",
@@ -16793,7 +34148,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!AB288"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB288"
   },
   {
     "id": "excel-gioia-2026-12-19-1630-吕老师朋友",
@@ -16806,7 +34161,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "19:30",
     "status": "不可用",
-    "source": "Gioia!AB289:AB294"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB289:AB294"
   },
   {
     "id": "excel-gioia-2026-12-19-1930-灰色不可排",
@@ -16817,9 +34172,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-12-19",
     "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AB295"
+  },
+  {
+    "id": "excel-gioia-2026-12-19-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-19",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB295;桔灯 陪伴老师 排课统计.xlsx:Gioia!AB296"
+  },
+  {
+    "id": "excel-gioia-2026-12-19-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-19",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!AB295;Gioia!AB296;Gioia!AB297"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB296;桔灯 陪伴老师 排课统计.xlsx:Gioia!AB297"
+  },
+  {
+    "id": "excel-gioia-2026-12-19-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-19",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AB297"
   },
   {
     "id": "excel-gioia-2026-12-20-0800-灰色不可排",
@@ -16832,7 +34226,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!AC273"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC273"
   },
   {
     "id": "excel-gioia-2026-12-20-0830-Anna-1v1",
@@ -16845,7 +34239,7 @@ export const importedLessons = [
     "startTime": "08:30",
     "endTime": "10:30",
     "status": "不可用",
-    "source": "Gioia!AC274:AC277"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC274:AC277"
   },
   {
     "id": "excel-gioia-2026-12-20-1030-灰色不可排",
@@ -16856,9 +34250,61 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-12-20",
     "startTime": "10:30",
+    "endTime": "11:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AC278"
+  },
+  {
+    "id": "excel-gioia-2026-12-20-1030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-20",
+    "startTime": "10:30",
+    "endTime": "11:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC278;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC279"
+  },
+  {
+    "id": "excel-gioia-2026-12-20-1100-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-20",
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC279;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC280"
+  },
+  {
+    "id": "excel-gioia-2026-12-20-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-20",
+    "startTime": "11:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!AC278;Gioia!AC279;Gioia!AC280;Gioia!AC281"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC280;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC281"
+  },
+  {
+    "id": "excel-gioia-2026-12-20-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-20",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC281"
   },
   {
     "id": "excel-gioia-2026-12-20-1300-A1-Miles",
@@ -16871,7 +34317,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "不可用",
-    "source": "Gioia!AC282:AC287"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC282:AC287"
   },
   {
     "id": "excel-gioia-2026-12-20-1600-灰色不可排",
@@ -16884,7 +34330,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!AC288"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC288"
   },
   {
     "id": "excel-gioia-2026-12-20-1630-吕老师朋友",
@@ -16897,7 +34343,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "19:30",
     "status": "不可用",
-    "source": "Gioia!AC289:AC294"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC289:AC294"
   },
   {
     "id": "excel-gioia-2026-12-20-1930-灰色不可排",
@@ -16908,9 +34354,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-12-20",
     "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!AC295"
+  },
+  {
+    "id": "excel-gioia-2026-12-20-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-20",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC295;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC296"
+  },
+  {
+    "id": "excel-gioia-2026-12-20-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-20",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!AC295;Gioia!AC296;Gioia!AC297"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC296;桔灯 陪伴老师 排课统计.xlsx:Gioia!AC297"
+  },
+  {
+    "id": "excel-gioia-2026-12-20-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-20",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!AC297"
   },
   {
     "id": "excel-gioia-2026-12-21-0800-休息",
@@ -16923,7 +34408,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!W273"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W273"
   },
   {
     "id": "excel-gioia-2026-12-21-0830-灰色不可排",
@@ -16934,9 +34419,113 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-12-21",
     "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!W274"
+  },
+  {
+    "id": "excel-gioia-2026-12-21-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-21",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W274;桔灯 陪伴老师 排课统计.xlsx:Gioia!W275"
+  },
+  {
+    "id": "excel-gioia-2026-12-21-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-21",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W275;桔灯 陪伴老师 排课统计.xlsx:Gioia!W276"
+  },
+  {
+    "id": "excel-gioia-2026-12-21-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-21",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W276;桔灯 陪伴老师 排课统计.xlsx:Gioia!W277"
+  },
+  {
+    "id": "excel-gioia-2026-12-21-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-21",
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W277;桔灯 陪伴老师 排课统计.xlsx:Gioia!W278"
+  },
+  {
+    "id": "excel-gioia-2026-12-21-1030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-21",
+    "startTime": "10:30",
+    "endTime": "11:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W278;桔灯 陪伴老师 排课统计.xlsx:Gioia!W279"
+  },
+  {
+    "id": "excel-gioia-2026-12-21-1100-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-21",
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W279;桔灯 陪伴老师 排课统计.xlsx:Gioia!W280"
+  },
+  {
+    "id": "excel-gioia-2026-12-21-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-21",
+    "startTime": "11:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!W274;Gioia!W275;Gioia!W276;Gioia!W277;Gioia!W278;Gioia!W279;Gioia!W280;Gioia!W281"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W280;桔灯 陪伴老师 排课统计.xlsx:Gioia!W281"
+  },
+  {
+    "id": "excel-gioia-2026-12-21-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-21",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W281"
   },
   {
     "id": "excel-gioia-2026-12-21-1300-灰色不可排",
@@ -16949,7 +34538,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!W282"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W282"
   },
   {
     "id": "excel-gioia-2026-12-21-1330-Kason-1v1",
@@ -16962,7 +34551,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!W283:W286"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W283:W286"
   },
   {
     "id": "excel-gioia-2026-12-21-1530-灰色不可排",
@@ -16973,9 +34562,152 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-12-21",
     "startTime": "15:30",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!W287"
+  },
+  {
+    "id": "excel-gioia-2026-12-21-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-21",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W287;桔灯 陪伴老师 排课统计.xlsx:Gioia!W288"
+  },
+  {
+    "id": "excel-gioia-2026-12-21-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-21",
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W288;桔灯 陪伴老师 排课统计.xlsx:Gioia!W289"
+  },
+  {
+    "id": "excel-gioia-2026-12-21-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-21",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W289;桔灯 陪伴老师 排课统计.xlsx:Gioia!W290"
+  },
+  {
+    "id": "excel-gioia-2026-12-21-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-21",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W290;桔灯 陪伴老师 排课统计.xlsx:Gioia!W291"
+  },
+  {
+    "id": "excel-gioia-2026-12-21-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-21",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W291;桔灯 陪伴老师 排课统计.xlsx:Gioia!W292"
+  },
+  {
+    "id": "excel-gioia-2026-12-21-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-21",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W292;桔灯 陪伴老师 排课统计.xlsx:Gioia!W293"
+  },
+  {
+    "id": "excel-gioia-2026-12-21-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-21",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W293;桔灯 陪伴老师 排课统计.xlsx:Gioia!W294"
+  },
+  {
+    "id": "excel-gioia-2026-12-21-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-21",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W294;桔灯 陪伴老师 排课统计.xlsx:Gioia!W295"
+  },
+  {
+    "id": "excel-gioia-2026-12-21-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-21",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W295;桔灯 陪伴老师 排课统计.xlsx:Gioia!W296"
+  },
+  {
+    "id": "excel-gioia-2026-12-21-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-21",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!W287;Gioia!W288;Gioia!W289;Gioia!W290;Gioia!W291;Gioia!W292;Gioia!W293;Gioia!W294;Gioia!W295;Gioia!W296;Gioia!W297"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W296;桔灯 陪伴老师 排课统计.xlsx:Gioia!W297"
+  },
+  {
+    "id": "excel-gioia-2026-12-21-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-21",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!W297"
   },
   {
     "id": "excel-gioia-2026-12-22-0800-休息",
@@ -16988,7 +34720,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!X273:X297"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!X273:X297"
   },
   {
     "id": "excel-gioia-2026-12-23-0800-灰色不可排",
@@ -16999,9 +34731,139 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-12-23",
     "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!E303"
+  },
+  {
+    "id": "excel-gioia-2026-12-23-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-23",
+    "startTime": "08:00",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E303;桔灯 陪伴老师 排课统计.xlsx:Gioia!E304"
+  },
+  {
+    "id": "excel-gioia-2026-12-23-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-23",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E304;桔灯 陪伴老师 排课统计.xlsx:Gioia!E305"
+  },
+  {
+    "id": "excel-gioia-2026-12-23-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-23",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E305;桔灯 陪伴老师 排课统计.xlsx:Gioia!E306"
+  },
+  {
+    "id": "excel-gioia-2026-12-23-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-23",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E306;桔灯 陪伴老师 排课统计.xlsx:Gioia!E307"
+  },
+  {
+    "id": "excel-gioia-2026-12-23-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-23",
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E307;桔灯 陪伴老师 排课统计.xlsx:Gioia!E308"
+  },
+  {
+    "id": "excel-gioia-2026-12-23-1030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-23",
+    "startTime": "10:30",
+    "endTime": "11:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E308;桔灯 陪伴老师 排课统计.xlsx:Gioia!E309"
+  },
+  {
+    "id": "excel-gioia-2026-12-23-1100-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-23",
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E309;桔灯 陪伴老师 排课统计.xlsx:Gioia!E310"
+  },
+  {
+    "id": "excel-gioia-2026-12-23-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-23",
+    "startTime": "11:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!E303;Gioia!E304;Gioia!E305;Gioia!E306;Gioia!E307;Gioia!E308;Gioia!E309;Gioia!E310;Gioia!E311"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E310;桔灯 陪伴老师 排课统计.xlsx:Gioia!E311"
+  },
+  {
+    "id": "excel-gioia-2026-12-23-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-23",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E311"
+  },
+  {
+    "id": "excel-gioia-2026-12-23-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-23",
+    "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!E312"
   },
   {
     "id": "excel-gioia-2026-12-23-1300-灰色不可排",
@@ -17014,7 +34876,20 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:00",
     "status": "不可用",
-    "source": "Gioia!E312;Gioia!E313"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E312;桔灯 陪伴老师 排课统计.xlsx:Gioia!E313"
+  },
+  {
+    "id": "excel-gioia-2026-12-23-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-23",
+    "startTime": "13:30",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E313"
   },
   {
     "id": "excel-gioia-2026-12-23-1400-吕老师朋友",
@@ -17027,7 +34902,7 @@ export const importedLessons = [
     "startTime": "14:00",
     "endTime": "17:00",
     "status": "不可用",
-    "source": "Gioia!E314:E319"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E314:E319"
   },
   {
     "id": "excel-gioia-2026-12-23-1700-灰色不可排",
@@ -17038,9 +34913,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-12-23",
     "startTime": "17:00",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!E320"
+  },
+  {
+    "id": "excel-gioia-2026-12-23-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-23",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E320;桔灯 陪伴老师 排课统计.xlsx:Gioia!E321"
+  },
+  {
+    "id": "excel-gioia-2026-12-23-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-23",
+    "startTime": "17:30",
     "endTime": "18:30",
     "status": "不可用",
-    "source": "Gioia!E320;Gioia!E321;Gioia!E322"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E321;桔灯 陪伴老师 排课统计.xlsx:Gioia!E322"
+  },
+  {
+    "id": "excel-gioia-2026-12-23-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-23",
+    "startTime": "18:00",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E322"
   },
   {
     "id": "excel-gioia-2026-12-23-1830-线上Alisa-1v1",
@@ -17053,7 +34967,7 @@ export const importedLessons = [
     "startTime": "18:30",
     "endTime": "20:30",
     "status": "不可用",
-    "source": "Gioia!E323:E326"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E323:E326"
   },
   {
     "id": "excel-gioia-2026-12-23-2030-灰色不可排",
@@ -17066,7 +34980,7 @@ export const importedLessons = [
     "startTime": "20:30",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!E327"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E327"
   },
   {
     "id": "excel-gioia-2026-12-24-0800-休息",
@@ -17079,7 +34993,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!F303:F310"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F303:F310"
   },
   {
     "id": "excel-gioia-2026-12-24-1200-灰色不可排",
@@ -17092,7 +35006,20 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!F311"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F311"
+  },
+  {
+    "id": "excel-gioia-2026-12-24-1300-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-24",
+    "startTime": "13:00",
+    "endTime": "13:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!F312"
   },
   {
     "id": "excel-gioia-2026-12-24-1300-灰色不可排",
@@ -17105,7 +35032,20 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "14:00",
     "status": "不可用",
-    "source": "Gioia!F312;Gioia!F313"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F312;桔灯 陪伴老师 排课统计.xlsx:Gioia!F313"
+  },
+  {
+    "id": "excel-gioia-2026-12-24-1330-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-24",
+    "startTime": "13:30",
+    "endTime": "14:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F313"
   },
   {
     "id": "excel-gioia-2026-12-24-1400-吕老师朋友",
@@ -17118,7 +35058,7 @@ export const importedLessons = [
     "startTime": "14:00",
     "endTime": "17:00",
     "status": "不可用",
-    "source": "Gioia!F314:F319"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F314:F319"
   },
   {
     "id": "excel-gioia-2026-12-24-1700-Jesmine-1v1",
@@ -17131,7 +35071,7 @@ export const importedLessons = [
     "startTime": "17:00",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!F320:F323"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F320:F323"
   },
   {
     "id": "excel-gioia-2026-12-24-1900-A1-Hedy-线上课",
@@ -17144,7 +35084,20 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!F324:F325"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F324:F325"
+  },
+  {
+    "id": "excel-gioia-2026-12-24-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-24",
+    "startTime": "20:00",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!F326"
   },
   {
     "id": "excel-gioia-2026-12-24-2000-灰色不可排",
@@ -17157,7 +35110,20 @@ export const importedLessons = [
     "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!F326;Gioia!F327"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F326;桔灯 陪伴老师 排课统计.xlsx:Gioia!F327"
+  },
+  {
+    "id": "excel-gioia-2026-12-24-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-24",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F327"
   },
   {
     "id": "excel-gioia-2026-12-25-0800-休息",
@@ -17170,7 +35136,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!G303"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G303"
   },
   {
     "id": "excel-gioia-2026-12-25-0830-灰色不可排",
@@ -17181,9 +35147,113 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-12-25",
     "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!G304"
+  },
+  {
+    "id": "excel-gioia-2026-12-25-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-25",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G304;桔灯 陪伴老师 排课统计.xlsx:Gioia!G305"
+  },
+  {
+    "id": "excel-gioia-2026-12-25-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-25",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G305;桔灯 陪伴老师 排课统计.xlsx:Gioia!G306"
+  },
+  {
+    "id": "excel-gioia-2026-12-25-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-25",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G306;桔灯 陪伴老师 排课统计.xlsx:Gioia!G307"
+  },
+  {
+    "id": "excel-gioia-2026-12-25-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-25",
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G307;桔灯 陪伴老师 排课统计.xlsx:Gioia!G308"
+  },
+  {
+    "id": "excel-gioia-2026-12-25-1030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-25",
+    "startTime": "10:30",
+    "endTime": "11:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G308;桔灯 陪伴老师 排课统计.xlsx:Gioia!G309"
+  },
+  {
+    "id": "excel-gioia-2026-12-25-1100-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-25",
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G309;桔灯 陪伴老师 排课统计.xlsx:Gioia!G310"
+  },
+  {
+    "id": "excel-gioia-2026-12-25-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-25",
+    "startTime": "11:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!G304;Gioia!G305;Gioia!G306;Gioia!G307;Gioia!G308;Gioia!G309;Gioia!G310;Gioia!G311"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G310;桔灯 陪伴老师 排课统计.xlsx:Gioia!G311"
+  },
+  {
+    "id": "excel-gioia-2026-12-25-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-25",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G311"
   },
   {
     "id": "excel-gioia-2026-12-25-1300-灰色不可排",
@@ -17196,7 +35266,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!G312"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G312"
   },
   {
     "id": "excel-gioia-2026-12-25-1330-Kason-1v1",
@@ -17209,7 +35279,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!G313:G316"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G313:G316"
   },
   {
     "id": "excel-gioia-2026-12-25-1530-灰色不可排",
@@ -17222,7 +35292,7 @@ export const importedLessons = [
     "startTime": "15:30",
     "endTime": "16:00",
     "status": "不可用",
-    "source": "Gioia!G317"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G317"
   },
   {
     "id": "excel-gioia-2026-12-25-1600-Turtle-1v1",
@@ -17235,7 +35305,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "17:30",
     "status": "不可用",
-    "source": "Gioia!G318:G320"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G318:G320"
   },
   {
     "id": "excel-gioia-2026-12-25-1730-灰色不可排",
@@ -17246,9 +35316,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-12-25",
     "startTime": "17:30",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!G321"
+  },
+  {
+    "id": "excel-gioia-2026-12-25-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-25",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G321;桔灯 陪伴老师 排课统计.xlsx:Gioia!G322"
+  },
+  {
+    "id": "excel-gioia-2026-12-25-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-25",
+    "startTime": "18:00",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!G321;Gioia!G322;Gioia!G323"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G322;桔灯 陪伴老师 排课统计.xlsx:Gioia!G323"
+  },
+  {
+    "id": "excel-gioia-2026-12-25-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-25",
+    "startTime": "18:30",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G323"
   },
   {
     "id": "excel-gioia-2026-12-25-1900-A1-Miles-线上课",
@@ -17261,7 +35370,20 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!G324:G325"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G324:G325"
+  },
+  {
+    "id": "excel-gioia-2026-12-25-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-25",
+    "startTime": "20:00",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!G326"
   },
   {
     "id": "excel-gioia-2026-12-25-2000-灰色不可排",
@@ -17274,7 +35396,33 @@ export const importedLessons = [
     "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!G326;Gioia!G327"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G326;桔灯 陪伴老师 排课统计.xlsx:Gioia!G327"
+  },
+  {
+    "id": "excel-gioia-2026-12-25-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-25",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G327"
+  },
+  {
+    "id": "excel-gioia-2026-12-26-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-26",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!H303"
   },
   {
     "id": "excel-gioia-2026-12-26-0800-灰色不可排",
@@ -17287,7 +35435,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!H303;Gioia!H304"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H303;桔灯 陪伴老师 排课统计.xlsx:Gioia!H304"
+  },
+  {
+    "id": "excel-gioia-2026-12-26-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-26",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H304"
   },
   {
     "id": "excel-gioia-2026-12-26-0900-A1-Harold",
@@ -17300,7 +35461,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!H305:H310"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H305:H310"
   },
   {
     "id": "excel-gioia-2026-12-26-1200-灰色不可排",
@@ -17313,7 +35474,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!H311"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H311"
   },
   {
     "id": "excel-gioia-2026-12-26-1300-George",
@@ -17326,7 +35487,20 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!H312:H316"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H312:H316"
+  },
+  {
+    "id": "excel-gioia-2026-12-26-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-26",
+    "startTime": "15:30",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!H317"
   },
   {
     "id": "excel-gioia-2026-12-26-1530-灰色不可排",
@@ -17339,7 +35513,20 @@ export const importedLessons = [
     "startTime": "15:30",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!H317;Gioia!H318"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H317;桔灯 陪伴老师 排课统计.xlsx:Gioia!H318"
+  },
+  {
+    "id": "excel-gioia-2026-12-26-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-26",
+    "startTime": "16:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H318"
   },
   {
     "id": "excel-gioia-2026-12-26-1630-吕老师朋友",
@@ -17352,7 +35539,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "19:30",
     "status": "不可用",
-    "source": "Gioia!H319:H324"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H319:H324"
   },
   {
     "id": "excel-gioia-2026-12-26-1930-灰色不可排",
@@ -17363,9 +35550,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-12-26",
     "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!H325"
+  },
+  {
+    "id": "excel-gioia-2026-12-26-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-26",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H325;桔灯 陪伴老师 排课统计.xlsx:Gioia!H326"
+  },
+  {
+    "id": "excel-gioia-2026-12-26-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-26",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!H325;Gioia!H326;Gioia!H327"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H326;桔灯 陪伴老师 排课统计.xlsx:Gioia!H327"
+  },
+  {
+    "id": "excel-gioia-2026-12-26-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-26",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H327"
   },
   {
     "id": "excel-gioia-2026-12-27-0800-灰色不可排",
@@ -17378,7 +35604,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!I303"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I303"
   },
   {
     "id": "excel-gioia-2026-12-27-0830-Anna-1v1",
@@ -17391,7 +35617,7 @@ export const importedLessons = [
     "startTime": "08:30",
     "endTime": "10:30",
     "status": "不可用",
-    "source": "Gioia!I304:I307"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I304:I307"
   },
   {
     "id": "excel-gioia-2026-12-27-1030-灰色不可排",
@@ -17402,9 +35628,61 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-12-27",
     "startTime": "10:30",
+    "endTime": "11:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!I308"
+  },
+  {
+    "id": "excel-gioia-2026-12-27-1030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-27",
+    "startTime": "10:30",
+    "endTime": "11:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I308;桔灯 陪伴老师 排课统计.xlsx:Gioia!I309"
+  },
+  {
+    "id": "excel-gioia-2026-12-27-1100-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-27",
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I309;桔灯 陪伴老师 排课统计.xlsx:Gioia!I310"
+  },
+  {
+    "id": "excel-gioia-2026-12-27-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-27",
+    "startTime": "11:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!I308;Gioia!I309;Gioia!I310;Gioia!I311"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I310;桔灯 陪伴老师 排课统计.xlsx:Gioia!I311"
+  },
+  {
+    "id": "excel-gioia-2026-12-27-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-27",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I311"
   },
   {
     "id": "excel-gioia-2026-12-27-1300-A1-Miles",
@@ -17417,7 +35695,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "不可用",
-    "source": "Gioia!I312:I317"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I312:I317"
   },
   {
     "id": "excel-gioia-2026-12-27-1600-灰色不可排",
@@ -17430,7 +35708,7 @@ export const importedLessons = [
     "startTime": "16:00",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!I318"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I318"
   },
   {
     "id": "excel-gioia-2026-12-27-1630-吕老师朋友",
@@ -17443,7 +35721,7 @@ export const importedLessons = [
     "startTime": "16:30",
     "endTime": "19:30",
     "status": "不可用",
-    "source": "Gioia!I319:I324"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I319:I324"
   },
   {
     "id": "excel-gioia-2026-12-27-1930-灰色不可排",
@@ -17454,9 +35732,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-12-27",
     "startTime": "19:30",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!I325"
+  },
+  {
+    "id": "excel-gioia-2026-12-27-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-27",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I325;桔灯 陪伴老师 排课统计.xlsx:Gioia!I326"
+  },
+  {
+    "id": "excel-gioia-2026-12-27-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-27",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!I325;Gioia!I326;Gioia!I327"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I326;桔灯 陪伴老师 排课统计.xlsx:Gioia!I327"
+  },
+  {
+    "id": "excel-gioia-2026-12-27-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-27",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I327"
   },
   {
     "id": "excel-gioia-2026-12-28-0800-休息",
@@ -17469,7 +35786,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!C303"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C303"
   },
   {
     "id": "excel-gioia-2026-12-28-0830-灰色不可排",
@@ -17480,9 +35797,113 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-12-28",
     "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!C304"
+  },
+  {
+    "id": "excel-gioia-2026-12-28-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-28",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C304;桔灯 陪伴老师 排课统计.xlsx:Gioia!C305"
+  },
+  {
+    "id": "excel-gioia-2026-12-28-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-28",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C305;桔灯 陪伴老师 排课统计.xlsx:Gioia!C306"
+  },
+  {
+    "id": "excel-gioia-2026-12-28-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-28",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C306;桔灯 陪伴老师 排课统计.xlsx:Gioia!C307"
+  },
+  {
+    "id": "excel-gioia-2026-12-28-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-28",
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C307;桔灯 陪伴老师 排课统计.xlsx:Gioia!C308"
+  },
+  {
+    "id": "excel-gioia-2026-12-28-1030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-28",
+    "startTime": "10:30",
+    "endTime": "11:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C308;桔灯 陪伴老师 排课统计.xlsx:Gioia!C309"
+  },
+  {
+    "id": "excel-gioia-2026-12-28-1100-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-28",
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C309;桔灯 陪伴老师 排课统计.xlsx:Gioia!C310"
+  },
+  {
+    "id": "excel-gioia-2026-12-28-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-28",
+    "startTime": "11:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!C304;Gioia!C305;Gioia!C306;Gioia!C307;Gioia!C308;Gioia!C309;Gioia!C310;Gioia!C311"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C310;桔灯 陪伴老师 排课统计.xlsx:Gioia!C311"
+  },
+  {
+    "id": "excel-gioia-2026-12-28-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-28",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C311"
   },
   {
     "id": "excel-gioia-2026-12-28-1300-灰色不可排",
@@ -17495,7 +35916,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!C312"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C312"
   },
   {
     "id": "excel-gioia-2026-12-28-1330-Kason-1v1",
@@ -17508,7 +35929,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!C313:C316"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C313:C316"
   },
   {
     "id": "excel-gioia-2026-12-28-1530-灰色不可排",
@@ -17519,9 +35940,152 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-12-28",
     "startTime": "15:30",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!C317"
+  },
+  {
+    "id": "excel-gioia-2026-12-28-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-28",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C317;桔灯 陪伴老师 排课统计.xlsx:Gioia!C318"
+  },
+  {
+    "id": "excel-gioia-2026-12-28-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-28",
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C318;桔灯 陪伴老师 排课统计.xlsx:Gioia!C319"
+  },
+  {
+    "id": "excel-gioia-2026-12-28-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-28",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C319;桔灯 陪伴老师 排课统计.xlsx:Gioia!C320"
+  },
+  {
+    "id": "excel-gioia-2026-12-28-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-28",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C320;桔灯 陪伴老师 排课统计.xlsx:Gioia!C321"
+  },
+  {
+    "id": "excel-gioia-2026-12-28-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-28",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C321;桔灯 陪伴老师 排课统计.xlsx:Gioia!C322"
+  },
+  {
+    "id": "excel-gioia-2026-12-28-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-28",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C322;桔灯 陪伴老师 排课统计.xlsx:Gioia!C323"
+  },
+  {
+    "id": "excel-gioia-2026-12-28-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-28",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C323;桔灯 陪伴老师 排课统计.xlsx:Gioia!C324"
+  },
+  {
+    "id": "excel-gioia-2026-12-28-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-28",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C324;桔灯 陪伴老师 排课统计.xlsx:Gioia!C325"
+  },
+  {
+    "id": "excel-gioia-2026-12-28-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-28",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C325;桔灯 陪伴老师 排课统计.xlsx:Gioia!C326"
+  },
+  {
+    "id": "excel-gioia-2026-12-28-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-28",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!C317;Gioia!C318;Gioia!C319;Gioia!C320;Gioia!C321;Gioia!C322;Gioia!C323;Gioia!C324;Gioia!C325;Gioia!C326;Gioia!C327"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C326;桔灯 陪伴老师 排课统计.xlsx:Gioia!C327"
+  },
+  {
+    "id": "excel-gioia-2026-12-28-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-28",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C327"
   },
   {
     "id": "excel-gioia-2026-12-29-0800-休息",
@@ -17534,7 +36098,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!D303:D327"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D303:D327"
   },
   {
     "id": "excel-gioia-2026-12-30-0800-元旦放假",
@@ -17547,7 +36111,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!E337:E361"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!E337:E361"
   },
   {
     "id": "excel-gioia-2026-12-31-0800-休息",
@@ -17560,7 +36124,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!F337:F344"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F337:F344"
   },
   {
     "id": "excel-gioia-2026-12-31-1200-灰色不可排",
@@ -17573,7 +36137,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!F345"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F345"
   },
   {
     "id": "excel-gioia-2026-12-31-1300-灰色不可排",
@@ -17586,7 +36150,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!F346"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F346"
   },
   {
     "id": "excel-gioia-2026-12-31-1330-Kason-1v1",
@@ -17599,7 +36163,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!F347:F350"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F347:F350"
   },
   {
     "id": "excel-gioia-2026-12-31-1530-灰色不可排",
@@ -17610,9 +36174,48 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2026-12-31",
     "startTime": "15:30",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!F351"
+  },
+  {
+    "id": "excel-gioia-2026-12-31-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-31",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F351;桔灯 陪伴老师 排课统计.xlsx:Gioia!F352"
+  },
+  {
+    "id": "excel-gioia-2026-12-31-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-31",
+    "startTime": "16:00",
     "endTime": "17:00",
     "status": "不可用",
-    "source": "Gioia!F351;Gioia!F352;Gioia!F353"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F352;桔灯 陪伴老师 排课统计.xlsx:Gioia!F353"
+  },
+  {
+    "id": "excel-gioia-2026-12-31-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-31",
+    "startTime": "16:30",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F353"
   },
   {
     "id": "excel-gioia-2026-12-31-1700-Jesmine-1v1",
@@ -17625,7 +36228,7 @@ export const importedLessons = [
     "startTime": "17:00",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!F354:F357"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F354:F357"
   },
   {
     "id": "excel-gioia-2026-12-31-1900-A1-Hedy-线上课",
@@ -17638,7 +36241,20 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!F358:F359"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F358:F359"
+  },
+  {
+    "id": "excel-gioia-2026-12-31-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-31",
+    "startTime": "20:00",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!F360"
   },
   {
     "id": "excel-gioia-2026-12-31-2000-灰色不可排",
@@ -17651,7 +36267,20 @@ export const importedLessons = [
     "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!F360;Gioia!F361"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F360;桔灯 陪伴老师 排课统计.xlsx:Gioia!F361"
+  },
+  {
+    "id": "excel-gioia-2026-12-31-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2026-12-31",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!F361"
   },
   {
     "id": "excel-gioia-2027-01-01-0800-休息",
@@ -17664,7 +36293,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!G337"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G337"
   },
   {
     "id": "excel-gioia-2027-01-01-0830-灰色不可排",
@@ -17675,9 +36304,113 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2027-01-01",
     "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!G338"
+  },
+  {
+    "id": "excel-gioia-2027-01-01-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-01",
+    "startTime": "08:30",
+    "endTime": "09:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G338;桔灯 陪伴老师 排课统计.xlsx:Gioia!G339"
+  },
+  {
+    "id": "excel-gioia-2027-01-01-0900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-01",
+    "startTime": "09:00",
+    "endTime": "10:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G339;桔灯 陪伴老师 排课统计.xlsx:Gioia!G340"
+  },
+  {
+    "id": "excel-gioia-2027-01-01-0930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-01",
+    "startTime": "09:30",
+    "endTime": "10:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G340;桔灯 陪伴老师 排课统计.xlsx:Gioia!G341"
+  },
+  {
+    "id": "excel-gioia-2027-01-01-1000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-01",
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G341;桔灯 陪伴老师 排课统计.xlsx:Gioia!G342"
+  },
+  {
+    "id": "excel-gioia-2027-01-01-1030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-01",
+    "startTime": "10:30",
+    "endTime": "11:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G342;桔灯 陪伴老师 排课统计.xlsx:Gioia!G343"
+  },
+  {
+    "id": "excel-gioia-2027-01-01-1100-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-01",
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G343;桔灯 陪伴老师 排课统计.xlsx:Gioia!G344"
+  },
+  {
+    "id": "excel-gioia-2027-01-01-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-01",
+    "startTime": "11:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!G338;Gioia!G339;Gioia!G340;Gioia!G341;Gioia!G342;Gioia!G343;Gioia!G344;Gioia!G345"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G344;桔灯 陪伴老师 排课统计.xlsx:Gioia!G345"
+  },
+  {
+    "id": "excel-gioia-2027-01-01-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-01",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G345"
   },
   {
     "id": "excel-gioia-2027-01-01-1300-灰色不可排",
@@ -17690,7 +36423,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "13:30",
     "status": "不可用",
-    "source": "Gioia!G346"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G346"
   },
   {
     "id": "excel-gioia-2027-01-01-1330-Kason-1v1",
@@ -17703,7 +36436,7 @@ export const importedLessons = [
     "startTime": "13:30",
     "endTime": "15:30",
     "status": "不可用",
-    "source": "Gioia!G347:G350"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G347:G350"
   },
   {
     "id": "excel-gioia-2027-01-01-1530-Turtle-1v1",
@@ -17716,7 +36449,7 @@ export const importedLessons = [
     "startTime": "15:30",
     "endTime": "16:30",
     "status": "不可用",
-    "source": "Gioia!G351:G352"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G351:G352"
   },
   {
     "id": "excel-gioia-2027-01-01-1630-灰色不可排",
@@ -17727,9 +36460,74 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2027-01-01",
     "startTime": "16:30",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!G353"
+  },
+  {
+    "id": "excel-gioia-2027-01-01-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-01",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G353;桔灯 陪伴老师 排课统计.xlsx:Gioia!G354"
+  },
+  {
+    "id": "excel-gioia-2027-01-01-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-01",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G354;桔灯 陪伴老师 排课统计.xlsx:Gioia!G355"
+  },
+  {
+    "id": "excel-gioia-2027-01-01-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-01",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G355;桔灯 陪伴老师 排课统计.xlsx:Gioia!G356"
+  },
+  {
+    "id": "excel-gioia-2027-01-01-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-01",
+    "startTime": "18:00",
     "endTime": "19:00",
     "status": "不可用",
-    "source": "Gioia!G353;Gioia!G354;Gioia!G355;Gioia!G356;Gioia!G357"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G356;桔灯 陪伴老师 排课统计.xlsx:Gioia!G357"
+  },
+  {
+    "id": "excel-gioia-2027-01-01-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-01",
+    "startTime": "18:30",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G357"
   },
   {
     "id": "excel-gioia-2027-01-01-1900-A1-Miles-线上课",
@@ -17742,7 +36540,20 @@ export const importedLessons = [
     "startTime": "19:00",
     "endTime": "20:00",
     "status": "不可用",
-    "source": "Gioia!G358:G359"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G358:G359"
+  },
+  {
+    "id": "excel-gioia-2027-01-01-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-01",
+    "startTime": "20:00",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!G360"
   },
   {
     "id": "excel-gioia-2027-01-01-2000-灰色不可排",
@@ -17755,7 +36566,33 @@ export const importedLessons = [
     "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!G360;Gioia!G361"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G360;桔灯 陪伴老师 排课统计.xlsx:Gioia!G361"
+  },
+  {
+    "id": "excel-gioia-2027-01-01-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-01",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!G361"
+  },
+  {
+    "id": "excel-gioia-2027-01-02-0800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-02",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!H337"
   },
   {
     "id": "excel-gioia-2027-01-02-0800-灰色不可排",
@@ -17768,7 +36605,20 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "09:00",
     "status": "不可用",
-    "source": "Gioia!H337;Gioia!H338"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H337;桔灯 陪伴老师 排课统计.xlsx:Gioia!H338"
+  },
+  {
+    "id": "excel-gioia-2027-01-02-0830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-02",
+    "startTime": "08:30",
+    "endTime": "09:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H338"
   },
   {
     "id": "excel-gioia-2027-01-02-0900-A1-Harold",
@@ -17781,7 +36631,7 @@ export const importedLessons = [
     "startTime": "09:00",
     "endTime": "12:00",
     "status": "不可用",
-    "source": "Gioia!H339:H344"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H339:H344"
   },
   {
     "id": "excel-gioia-2027-01-02-1200-灰色不可排",
@@ -17794,7 +36644,7 @@ export const importedLessons = [
     "startTime": "12:00",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!H345"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H345"
   },
   {
     "id": "excel-gioia-2027-01-02-1300-Snow",
@@ -17807,7 +36657,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "15:00",
     "status": "不可用",
-    "source": "Gioia!H346:H349"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H346:H349"
   },
   {
     "id": "excel-gioia-2027-01-02-1500-灰色不可排",
@@ -17818,9 +36668,165 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2027-01-02",
     "startTime": "15:00",
+    "endTime": "15:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!H350"
+  },
+  {
+    "id": "excel-gioia-2027-01-02-1500-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-02",
+    "startTime": "15:00",
+    "endTime": "16:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H350;桔灯 陪伴老师 排课统计.xlsx:Gioia!H351"
+  },
+  {
+    "id": "excel-gioia-2027-01-02-1530-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-02",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H351;桔灯 陪伴老师 排课统计.xlsx:Gioia!H352"
+  },
+  {
+    "id": "excel-gioia-2027-01-02-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-02",
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H352;桔灯 陪伴老师 排课统计.xlsx:Gioia!H353"
+  },
+  {
+    "id": "excel-gioia-2027-01-02-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-02",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H353;桔灯 陪伴老师 排课统计.xlsx:Gioia!H354"
+  },
+  {
+    "id": "excel-gioia-2027-01-02-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-02",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H354;桔灯 陪伴老师 排课统计.xlsx:Gioia!H355"
+  },
+  {
+    "id": "excel-gioia-2027-01-02-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-02",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H355;桔灯 陪伴老师 排课统计.xlsx:Gioia!H356"
+  },
+  {
+    "id": "excel-gioia-2027-01-02-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-02",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H356;桔灯 陪伴老师 排课统计.xlsx:Gioia!H357"
+  },
+  {
+    "id": "excel-gioia-2027-01-02-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-02",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H357;桔灯 陪伴老师 排课统计.xlsx:Gioia!H358"
+  },
+  {
+    "id": "excel-gioia-2027-01-02-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-02",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H358;桔灯 陪伴老师 排课统计.xlsx:Gioia!H359"
+  },
+  {
+    "id": "excel-gioia-2027-01-02-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-02",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H359;桔灯 陪伴老师 排课统计.xlsx:Gioia!H360"
+  },
+  {
+    "id": "excel-gioia-2027-01-02-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-02",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!H350;Gioia!H351;Gioia!H352;Gioia!H353;Gioia!H354;Gioia!H355;Gioia!H356;Gioia!H357;Gioia!H358;Gioia!H359;Gioia!H360;Gioia!H361"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H360;桔灯 陪伴老师 排课统计.xlsx:Gioia!H361"
+  },
+  {
+    "id": "excel-gioia-2027-01-02-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-02",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!H361"
   },
   {
     "id": "excel-gioia-2027-01-03-0800-灰色不可排",
@@ -17833,7 +36839,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "08:30",
     "status": "不可用",
-    "source": "Gioia!I337"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I337"
   },
   {
     "id": "excel-gioia-2027-01-03-0830-Anna-1v1",
@@ -17846,7 +36852,7 @@ export const importedLessons = [
     "startTime": "08:30",
     "endTime": "10:30",
     "status": "不可用",
-    "source": "Gioia!I338:I341"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I338:I341"
   },
   {
     "id": "excel-gioia-2027-01-03-1030-灰色不可排",
@@ -17857,9 +36863,61 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2027-01-03",
     "startTime": "10:30",
+    "endTime": "11:00",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!I342"
+  },
+  {
+    "id": "excel-gioia-2027-01-03-1030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-03",
+    "startTime": "10:30",
+    "endTime": "11:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I342;桔灯 陪伴老师 排课统计.xlsx:Gioia!I343"
+  },
+  {
+    "id": "excel-gioia-2027-01-03-1100-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-03",
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I343;桔灯 陪伴老师 排课统计.xlsx:Gioia!I344"
+  },
+  {
+    "id": "excel-gioia-2027-01-03-1130-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-03",
+    "startTime": "11:30",
     "endTime": "12:30",
     "status": "不可用",
-    "source": "Gioia!I342;Gioia!I343;Gioia!I344;Gioia!I345"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I344;桔灯 陪伴老师 排课统计.xlsx:Gioia!I345"
+  },
+  {
+    "id": "excel-gioia-2027-01-03-1200-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-03",
+    "startTime": "12:00",
+    "endTime": "12:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I345"
   },
   {
     "id": "excel-gioia-2027-01-03-1300-A1-Miles",
@@ -17872,7 +36930,7 @@ export const importedLessons = [
     "startTime": "13:00",
     "endTime": "16:00",
     "status": "不可用",
-    "source": "Gioia!I346:I351"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I346:I351"
   },
   {
     "id": "excel-gioia-2027-01-03-1600-灰色不可排",
@@ -17883,9 +36941,139 @@ export const importedLessons = [
     "deliveryType": "线下",
     "date": "2027-01-03",
     "startTime": "16:00",
+    "endTime": "16:30",
+    "status": "不可用",
+    "source": "桔灯 陪伴老师 排课统计.xlsx:Gioia!I352"
+  },
+  {
+    "id": "excel-gioia-2027-01-03-1600-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-03",
+    "startTime": "16:00",
+    "endTime": "17:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I352;桔灯 陪伴老师 排课统计.xlsx:Gioia!I353"
+  },
+  {
+    "id": "excel-gioia-2027-01-03-1630-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-03",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I353;桔灯 陪伴老师 排课统计.xlsx:Gioia!I354"
+  },
+  {
+    "id": "excel-gioia-2027-01-03-1700-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-03",
+    "startTime": "17:00",
+    "endTime": "18:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I354;桔灯 陪伴老师 排课统计.xlsx:Gioia!I355"
+  },
+  {
+    "id": "excel-gioia-2027-01-03-1730-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-03",
+    "startTime": "17:30",
+    "endTime": "18:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I355;桔灯 陪伴老师 排课统计.xlsx:Gioia!I356"
+  },
+  {
+    "id": "excel-gioia-2027-01-03-1800-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-03",
+    "startTime": "18:00",
+    "endTime": "19:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I356;桔灯 陪伴老师 排课统计.xlsx:Gioia!I357"
+  },
+  {
+    "id": "excel-gioia-2027-01-03-1830-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-03",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I357;桔灯 陪伴老师 排课统计.xlsx:Gioia!I358"
+  },
+  {
+    "id": "excel-gioia-2027-01-03-1900-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-03",
+    "startTime": "19:00",
+    "endTime": "20:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I358;桔灯 陪伴老师 排课统计.xlsx:Gioia!I359"
+  },
+  {
+    "id": "excel-gioia-2027-01-03-1930-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-03",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I359;桔灯 陪伴老师 排课统计.xlsx:Gioia!I360"
+  },
+  {
+    "id": "excel-gioia-2027-01-03-2000-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-03",
+    "startTime": "20:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!I352;Gioia!I353;Gioia!I354;Gioia!I355;Gioia!I356;Gioia!I357;Gioia!I358;Gioia!I359;Gioia!I360;Gioia!I361"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I360;桔灯 陪伴老师 排课统计.xlsx:Gioia!I361"
+  },
+  {
+    "id": "excel-gioia-2027-01-03-2030-灰色不可排",
+    "teacherId": "gioia",
+    "teacherName": "Gioia",
+    "studentName": "不可用",
+    "course": "灰色不可排",
+    "deliveryType": "线下",
+    "date": "2027-01-03",
+    "startTime": "20:30",
+    "endTime": "21:00",
+    "status": "不可用",
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!I361"
   },
   {
     "id": "excel-gioia-2027-01-04-0800-休息",
@@ -17898,7 +37086,7 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!C337:C361"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!C337:C361"
   },
   {
     "id": "excel-gioia-2027-01-05-0800-休息",
@@ -17911,6 +37099,6 @@ export const importedLessons = [
     "startTime": "08:00",
     "endTime": "21:00",
     "status": "不可用",
-    "source": "Gioia!D337:D361"
+    "source": "桔灯学科组 排课统计.xlsx:Gioia!D337:D361"
   }
 ];

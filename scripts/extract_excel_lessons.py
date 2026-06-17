@@ -11,11 +11,14 @@ from openpyxl.utils import get_column_letter
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "桔灯 陪伴老师 排课统计.xlsx"
+SOURCE_DIR = ROOT / "排课信息"
 OUTPUT = ROOT / "src" / "importedLessons.js"
 YEAR = 2026
 
 TEACHER_SHEETS = {
+    "Claire": "claire",
+    "Phebe": "phebe",
+    "Sophie": "sophie",
     "Tiana": "tiana",
     "Lynn": "lynn",
     "Catherine": "catherine",
@@ -46,7 +49,42 @@ GRAY_UNAVAILABLE_COURSE = "灰色不可排"
 
 
 def main() -> None:
-    workbook = load_workbook(SOURCE, data_only=True)
+    sources = discover_lesson_sources(SOURCE_DIR)
+    lessons = extract_lessons_from_workbooks(sources)
+    write_js(lessons, OUTPUT)
+
+    by_month: dict[str, int] = defaultdict(int)
+    by_teacher: dict[str, int] = defaultdict(int)
+    for lesson in lessons:
+        by_month[lesson["date"][:7]] += 1
+        by_teacher[lesson["teacherName"]] += 1
+
+    print(f"Wrote {len(lessons)} imported lessons to {OUTPUT}")
+    print(json.dumps({"sources": [source.name for source in sources], "months": dict(sorted(by_month.items())), "teachers": dict(sorted(by_teacher.items()))}, ensure_ascii=False, indent=2))
+
+
+def discover_lesson_sources(folder: Path = SOURCE_DIR) -> list[Path]:
+    return sorted(
+        [
+            path
+            for path in folder.glob("*.xlsx")
+            if path.is_file() and not path.name.startswith("~$") and not path.name.startswith(".")
+        ],
+        key=lambda path: path.name,
+    )
+
+
+def extract_lessons_from_workbooks(sources: list[Path]) -> list[dict]:
+    lessons = []
+
+    for source in sources:
+        lessons.extend(extract_lessons_from_workbook(source))
+
+    return dedupe_lessons(lessons)
+
+
+def extract_lessons_from_workbook(source: Path) -> list[dict]:
+    workbook = load_workbook(source, data_only=True)
     lessons = []
 
     for sheet_name, teacher_id in TEACHER_SHEETS.items():
@@ -96,24 +134,20 @@ def main() -> None:
                         "startTime": item["start_time"],
                         "endTime": item["end_time"],
                         "status": status,
-                        "source": f"{sheet_name}!{item['coordinate']}",
+                        "source": f"{source.name}:{sheet_name}!{item['coordinate']}",
                     }
                 )
 
-    lessons = dedupe_lessons(lessons)
-    OUTPUT.write_text(
+    return lessons
+
+
+def write_js(lessons: list[dict], output: Path) -> None:
+    output.write_text(
         "export const importedLessons = "
         + json.dumps(lessons, ensure_ascii=False, indent=2)
         + ";\n",
         encoding="utf-8",
     )
-
-    by_month: dict[str, int] = defaultdict(int)
-    for lesson in lessons:
-        by_month[lesson["date"][:7]] += 1
-
-    print(f"Wrote {len(lessons)} imported lessons to {OUTPUT}")
-    print(json.dumps(dict(sorted(by_month.items())), ensure_ascii=False, indent=2))
 
 
 def clean_teacher_name(sheet_name: str) -> str:

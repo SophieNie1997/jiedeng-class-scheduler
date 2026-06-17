@@ -7,9 +7,12 @@ from pathlib import Path
 
 from openpyxl import load_workbook
 
+from extract_excel_lessons import TEACHER_SHEETS, clean_teacher_name, discover_lesson_sources
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SOURCE = ROOT / "桔灯排班表 2026 6月-12月.xlsx"
+DEFAULT_LESSON_SOURCE_DIR = ROOT / "排课信息"
 DEFAULT_OUTPUT = ROOT / "src" / "importedTeacherShifts.js"
 SHEET_NAME = "连续日期排班表"
 HEADER_ROW = 4
@@ -17,13 +20,63 @@ FIRST_TEACHER_COLUMN = 4
 
 DEFAULT_GRADES = ["G2", "Y3", "Y6", "Y8", "Y9", "大班"]
 DEFAULT_DELIVERY_TYPES = ["线上", "线下", "上门", "校区", "樱桃"]
+PREFERRED_TEACHER_ORDER = [
+    "Claire",
+    "Phebe",
+    "Sophie",
+    "Lynn",
+    "Tiana",
+    "Catherine",
+    "Gioia",
+    "Karen",
+    "Charlotte",
+    "Hanna",
+    "Reece",
+]
 
 
 def main() -> None:
-    roster, shifts, summary = extract_teacher_shifts(DEFAULT_SOURCE)
+    roster, shifts, summary = extract_teacher_roster_from_lesson_sources(DEFAULT_LESSON_SOURCE_DIR)
     write_js(roster, shifts, summary, DEFAULT_OUTPUT)
     print(f"Wrote {len(roster)} teachers and {len(shifts)} shifts to {DEFAULT_OUTPUT}")
     print(json.dumps(summary, ensure_ascii=False, indent=2))
+
+
+def extract_teacher_roster_from_lesson_sources(source_dir: Path) -> tuple[list[dict], dict[str, dict], dict]:
+    names_by_id = {}
+    sources = discover_lesson_sources(source_dir)
+
+    for source in sources:
+        workbook = load_workbook(source, data_only=True, read_only=True)
+        try:
+            for sheet_name, teacher_id in TEACHER_SHEETS.items():
+                if sheet_name in workbook.sheetnames:
+                    names_by_id[teacher_id] = clean_teacher_name(sheet_name)
+        finally:
+            workbook.close()
+
+    preferred_ids = [make_teacher_id(name) for name in PREFERRED_TEACHER_ORDER]
+    roster = [
+        build_teacher(names_by_id[teacher_id])
+        for teacher_id in preferred_ids
+        if teacher_id in names_by_id
+    ]
+    roster.extend(
+        build_teacher(name)
+        for teacher_id, name in sorted(names_by_id.items(), key=lambda item: item[1].lower())
+        if teacher_id not in preferred_ids
+    )
+
+    summary = {
+        "source": "排课信息",
+        "sources": [source.name for source in sources],
+        "teacherCount": len(roster),
+        "shiftCount": 0,
+        "dateRows": 0,
+        "filledStartDate": "",
+        "filledEndDate": "",
+    }
+    return roster, {}, summary
 
 
 def extract_teacher_shifts(source: Path) -> tuple[list[dict], dict[str, dict], dict]:
