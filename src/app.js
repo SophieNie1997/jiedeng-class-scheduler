@@ -109,6 +109,7 @@ const state = {
   lessonEdits: loadLessonEdits(),
   selectedLessonId: null,
   draftLesson: null,
+  pendingStudentDeleteId: "",
   sync: {
     status: "local",
     email: "",
@@ -171,6 +172,7 @@ app.innerHTML = `
 	  </header>
 
   <section id="sync-panel" class="sync-panel" aria-live="polite"></section>
+  <div id="student-delete-dialog" aria-live="polite"></div>
 
 	  <nav class="workspace-tabs" aria-label="工作区">
     <button class="tab-button active" data-view-target="planner" type="button">排课助手</button>
@@ -372,6 +374,7 @@ const permissionAddForm = document.querySelector("#permission-add-form");
 const addCalendarLessonButton = document.querySelector("#add-calendar-lesson");
 const tabButtons = document.querySelectorAll("[data-view-target]");
 const syncPanelNode = document.querySelector("#sync-panel");
+const studentDeleteDialogNode = document.querySelector("#student-delete-dialog");
 
 syncPanelNode.addEventListener("submit", (event) => {
   const form = event.target.closest("#sync-form");
@@ -432,7 +435,29 @@ studentOverviewNode.addEventListener("click", (event) => {
     return;
   }
 
-  deleteStudentOverviewCard(deleteButton.dataset.studentDelete);
+  openStudentDeleteConfirm(deleteButton.dataset.studentDelete);
+});
+
+studentDeleteDialogNode.addEventListener("click", (event) => {
+  if (event.target.classList?.contains("student-delete-backdrop")) {
+    closeStudentDeleteConfirm();
+    return;
+  }
+
+  const cancelButton = event.target.closest("[data-student-delete-cancel]");
+  if (cancelButton) {
+    closeStudentDeleteConfirm();
+    return;
+  }
+
+  const confirmButton = event.target.closest("[data-student-delete-confirm]");
+  if (!confirmButton) {
+    return;
+  }
+
+  const studentId = confirmButton.dataset.studentDeleteConfirm || state.pendingStudentDeleteId;
+  closeStudentDeleteConfirm();
+  deleteStudentOverviewCard(studentId);
 });
 
 studentOverviewNode.addEventListener("submit", (event) => {
@@ -593,6 +618,7 @@ function render() {
   renderCalendar();
   renderCourseOverviewView();
   renderStudentOverviewView();
+  renderStudentDeleteDialog();
   renderShiftView();
   renderCoursePermissions();
 }
@@ -1260,6 +1286,59 @@ function renderStudentDetail(label, value) {
   `;
 }
 
+function openStudentDeleteConfirm(studentId) {
+  state.pendingStudentDeleteId = studentId || "";
+  renderStudentDeleteDialog();
+}
+
+function closeStudentDeleteConfirm() {
+  state.pendingStudentDeleteId = "";
+  renderStudentDeleteDialog();
+}
+
+function renderStudentDeleteDialog() {
+  if (!studentDeleteDialogNode) {
+    return;
+  }
+
+  const student = state.pendingStudentDeleteId
+    ? getStudentDirectoryRows().find((item) => item.id === state.pendingStudentDeleteId)
+    : null;
+  if (!student) {
+    state.pendingStudentDeleteId = "";
+    studentDeleteDialogNode.innerHTML = "";
+    return;
+  }
+
+  const consequence = student.lessonIds.length
+    ? `确认后会把 ${student.lessonIds.length} 节未来课程一起同步删除，同事们刷新网站后也会看不到这些课程。`
+    : "确认后会把这位学员从总学员列表里隐藏，同事们刷新网站后也会看不到这条名册记录。";
+
+  studentDeleteDialogNode.innerHTML = `
+    <div class="student-delete-backdrop">
+      <section
+        class="student-delete-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="student-delete-title"
+      >
+        <span class="student-delete-sticker" aria-hidden="true">♡</span>
+        <p class="student-delete-kicker">小心心提醒</p>
+        <h3 id="student-delete-title">确定要删除 ${escapeHtml(student.name)} 吗？</h3>
+        <p>${escapeHtml(consequence)} 请确认不是手滑哦。</p>
+        <div class="student-delete-actions">
+          <button class="student-delete-cancel" data-student-delete-cancel type="button">先不删</button>
+          <button
+            class="student-delete-confirm"
+            data-student-delete-confirm="${escapeAttribute(student.id)}"
+            type="button"
+          >确认删除</button>
+        </div>
+      </section>
+    </div>
+  `;
+}
+
 function renderOverviewEmpty(message) {
   return `<div class="overview-empty">${escapeHtml(message)}</div>`;
 }
@@ -1685,11 +1764,6 @@ function deleteCourseOverviewCard(courseKey) {
 function deleteStudentOverviewCard(studentId) {
   const student = getStudentDirectoryRows().find((item) => item.id === studentId);
   if (!student) {
-    return;
-  }
-
-  const lessonCountText = student.lessonIds.length ? `，并同步删除 ${student.lessonIds.length} 节未来课程` : "";
-  if (!window.confirm(`删除 ${student.name} 的学员记录${lessonCountText}？`)) {
     return;
   }
 

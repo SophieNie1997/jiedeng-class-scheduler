@@ -59,6 +59,19 @@ test("student ledger uses opaque sticky name cells", () => {
   assert.equal(getRuleValue(".student-ledger-table tbody th", "background"), "#fff7fa");
   assert.equal(getRuleValue(".student-ledger-table tbody tr:nth-child(even) th", "background-color"), "#fffafd");
   assert.equal(getRuleValue(".student-ledger-table tbody tr:hover th", "background-color"), "#edf8f3");
+  assert.equal(getRuleValue(".student-ledger-table thead th:first-child", "left"), "0");
+  assert.equal(getRuleValue(".student-ledger-table thead th:first-child", "z-index"), "4");
+});
+
+test("student delete uses a second-step in-app confirmation dialog", () => {
+  assert.equal(appSource.includes('id="student-delete-dialog"'), true);
+  assert.equal(appSource.includes("openStudentDeleteConfirm"), true);
+  assert.equal(appSource.includes("deleteStudentOverviewCard(deleteButton.dataset.studentDelete)"), false);
+  assert.equal(appSource.includes("data-student-delete-confirm"), true);
+  assert.equal(appSource.includes("确认删除"), true);
+  assert.equal(appSource.includes("请确认不是手滑"), true);
+  assert.ok(css.includes(".student-delete-backdrop"));
+  assert.ok(css.includes(".student-delete-modal"));
 });
 
 test("calendar and permission views expose manual creation actions", () => {
