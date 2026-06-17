@@ -12,7 +12,7 @@ export function buildCourseOverview(lessons, options = {}) {
     addIfPresent(current.lessonIds, lesson.id);
     addIfPresent(current.notes, lesson.notes || lesson.note);
     addIfPresent(current.weekdays, getWeekdayLabel(lesson.date));
-    current.firstDate = pickEarlierDate(current.firstDate, lesson.date);
+    current.firstDate = pickEarlierDate(current.firstDate, getLessonStartDate(lesson));
     current.lastDate = pickLaterDate(current.lastDate, lesson.date);
     current.nextDate = current.nextDate || lesson.date || "";
     cardsByKey.set(key, current);
@@ -149,6 +149,10 @@ function createCourseCard(key, lesson) {
     lastDate: "",
     nextDate: "",
   };
+}
+
+function getLessonStartDate(lesson) {
+  return normalizeText(lesson.startDate) || normalizeText(lesson.date);
 }
 
 function buildCourseCardKey(lesson) {

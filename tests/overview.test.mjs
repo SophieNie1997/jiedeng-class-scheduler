@@ -93,6 +93,22 @@ test("course overview groups future scheduled lessons into course cards", () => 
   assert.equal(Object.hasOwn(miaCard, "status"), false);
 });
 
+test("course overview date range uses edited lesson start date", () => {
+  const overview = buildCourseOverview(
+    [
+      {
+        ...lessons.find((lesson) => lesson.id === "lesson-3"),
+        startDate: "2026-06-20",
+      },
+      lessons.find((lesson) => lesson.id === "lesson-4"),
+    ],
+    { today: "2026-06-19" },
+  );
+
+  assert.equal(overview.courseCards[0].firstDate, "2026-06-20");
+  assert.equal(overview.courseCards[0].lastDate, "2026-07-07");
+});
+
 test("student overview groups future scheduled lessons by student name with delete ids", () => {
   const overview = buildStudentOverview(lessons, { today: "2026-06-30" });
 

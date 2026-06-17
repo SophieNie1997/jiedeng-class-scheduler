@@ -205,8 +205,14 @@ test("lesson detail panel has editable fields and color variants", () => {
   assert.equal(appSource.includes('id="lesson-detail-form"'), true);
   assert.equal(appSource.includes('data-lesson-action="save"'), true);
   assert.equal(appSource.includes('data-lesson-action="delete"'), true);
+  assert.equal(appSource.includes('name="startDate"'), true);
+  assert.equal(appSource.includes('data-course-title-edit'), true);
+  assert.equal(appSource.includes('class="lesson-title-edit-button"'), true);
+  assert.equal(appSource.includes('formData.get("startDate")'), true);
   assert.ok(css.includes(".lesson-detail-panel.blue"));
   assert.ok(css.includes(".lesson-detail-panel.gray"));
+  assert.ok(css.includes(".lesson-title-editor"));
+  assert.ok(css.includes(".lesson-title-edit-button"));
 });
 
 test("lesson detail close button uses a glass circular x control", () => {

@@ -121,6 +121,19 @@ test("builds lesson detail with inferred recurring schedule", () => {
   assert.equal(detail.notes, "需要名单 8天");
 });
 
+test("lesson detail uses saved editable start date before inferred series date", () => {
+  const detail = buildLessonDetail(
+    {
+      ...makeLesson("edited", "2026-07-07"),
+      startDate: "2026-07-01",
+    },
+    [makeLesson("edited", "2026-07-07"), makeLesson("later", "2026-07-14")],
+  );
+
+  assert.equal(detail.recurrence.startDate, "2026-07-01");
+  assert.equal(detail.recurrence.summary, "2026-07-01 开始，每周：周二 15:15-16:15，共 2 节");
+});
+
 function makeLesson(id, date) {
   return {
     id,

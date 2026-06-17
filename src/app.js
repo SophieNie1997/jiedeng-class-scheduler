@@ -18,7 +18,7 @@ import {
   buildLessonDetail,
   buildWeekOverview,
   filterCalendarLessons,
-} from "./calendar.js?v=20260616-lesson-detail";
+} from "./calendar.js?v=20260617-editable-lesson-title";
 import {
   buildLessonsForTeacher,
   expandRecurringLessons,
@@ -59,7 +59,7 @@ import {
 import {
   buildCourseOverview,
   buildStudentOverview,
-} from "./overview.js?v=20260617-folder-refresh";
+} from "./overview.js?v=20260617-editable-lesson-title";
 import {
   buildStudentDirectoryRows,
   hideStudentDirectoryRecord,
@@ -486,6 +486,19 @@ studentOverviewNode.addEventListener("focusout", (event) => {
 });
 
 calendarNode.addEventListener("click", (event) => {
+  const titleEditButton = event.target.closest("[data-course-title-edit]");
+  if (titleEditButton) {
+    const titleEditor = titleEditButton.closest(".lesson-title-editor");
+    const titleInput = titleEditor?.querySelector("[name='course']");
+    if (titleInput) {
+      titleInput.readOnly = false;
+      titleEditor.classList.add("is-editing");
+      titleInput.focus();
+      titleInput.select();
+    }
+    return;
+  }
+
   const lessonActionButton = event.target.closest("[data-lesson-action]");
   if (lessonActionButton) {
     if (lessonActionButton.dataset.lessonAction === "save") {
@@ -850,7 +863,20 @@ function renderLessonDetail(detail) {
       <div class="lesson-detail-head">
         <div>
           <p class="label">课程详情</p>
-          <h3>${escapeHtml(detail.title)}</h3>
+          <label class="lesson-title-editor">
+            <input
+              class="lesson-title-input"
+              form="lesson-detail-form"
+              name="course"
+              type="text"
+              value="${escapeAttribute(detail.course === "未填写" ? "" : detail.course)}"
+              aria-label="课程名字"
+              readonly
+            />
+            <button class="lesson-title-edit-button" data-course-title-edit type="button" aria-label="编辑课程名字">
+              ${renderPencilIcon()}
+            </button>
+          </label>
           <p>${escapeHtml(detail.recurrence.summary)}</p>
         </div>
         <button class="lesson-detail-close" data-lesson-detail-close type="button" aria-label="关闭课程详情">
@@ -860,9 +886,9 @@ function renderLessonDetail(detail) {
       <form id="lesson-detail-form" class="lesson-detail-form">
         <div class="lesson-detail-grid">
           ${renderDetailField("学员姓名", "studentName", detail.studentName)}
-          ${renderSelectField("课程需求", "course", getCourses(), detail.course)}
           ${renderSelectField("年级", "grade", ["", ...grades], detail.grade === "未填写" ? "" : detail.grade)}
           ${renderSelectField("授课校区", "campus", ["", ...teachingSites], detail.campus === "未填写" ? "" : detail.campus)}
+          ${renderDetailField("开始日期", "startDate", detail.recurrence.startDate, "date")}
           ${renderDetailField("本节日期", "date", detail.date, "date")}
           ${renderDetailField("开始时间", "startTime", detail.startTime, "time")}
           ${renderReadOnlyField("结束时间", detail.endTime)}
@@ -898,6 +924,15 @@ function renderLessonAvatarStyle(avatar) {
   }
 
   return ` style="--lesson-avatar-image: url('${escapeAttribute(escapeCssString(avatar.image))}');"`;
+}
+
+function renderPencilIcon() {
+  return `
+    <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+      <path d="M12 20h9"></path>
+      <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L8 18l-4 1 1-4 11.5-11.5z"></path>
+    </svg>
+  `;
 }
 
 function renderDetailField(label, name, value, type = "text", extraAttributes = "") {
@@ -1823,6 +1858,7 @@ function readLessonChangesFromDetailForm(detailForm) {
   const teacherId = String(formData.get("teacherId") || "");
   const teacher = getCandidateTeachers().find((item) => item.id === teacherId);
   const campus = String(formData.get("campus") || "");
+  const startDate = String(formData.get("startDate") || "");
   const date = String(formData.get("date") || "");
   const selectedWeekdays = formData
     .getAll("weekdays")
@@ -1838,6 +1874,7 @@ function readLessonChangesFromDetailForm(detailForm) {
     grade: String(formData.get("grade") || ""),
     deliveryType: campus ? deriveDeliveryTypeFromCampus(campus) : "",
     campus,
+    startDate: startDate || date,
     date,
     startTime,
     endTime,
@@ -1856,7 +1893,7 @@ function setManualLessonSeries(rawEdits, baseLessonId, lessonChanges) {
     grade: lessonChanges.grade,
     deliveryType: lessonChanges.deliveryType,
     campus: lessonChanges.campus,
-    startDate: lessonChanges.date,
+    startDate: lessonChanges.startDate || lessonChanges.date,
     startTime: lessonChanges.startTime,
     durationMinutes: lessonChanges.durationMinutes,
     sessionCount: lessonChanges.sessionCount,

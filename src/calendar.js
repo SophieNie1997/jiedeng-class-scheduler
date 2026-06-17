@@ -44,7 +44,7 @@ export function buildLessonDetail(lesson, lessons) {
     : [];
   const weekdayValues = editedWeekdayValues.length ? editedWeekdayValues : seriesWeekdayValues;
   const weekdays = weekdayValues.map((weekday) => WEEKDAY_LABELS[weekday]);
-  const startDate = seriesDates[0] || lesson.date;
+  const startDate = lesson.startDate || seriesDates[0] || lesson.date;
   const endDate = seriesDates[seriesDates.length - 1] || lesson.date;
   const weekdayText = weekdays.join("、") || WEEKDAY_LABELS[getWeekday(lesson.date)];
   const timeRange = `${lesson.startTime}-${lesson.endTime}`;
