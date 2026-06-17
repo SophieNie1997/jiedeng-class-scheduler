@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
+import { createHash } from "node:crypto";
 
 const css = readFileSync(new URL("../styles.css", import.meta.url), "utf8");
 const appSource = readFileSync(new URL("../src/app.js", import.meta.url), "utf8");
@@ -14,6 +15,10 @@ test("site uses a real png favicon", () => {
   assert.equal(indexSource.includes('href="data:,"'), false);
   assert.match(indexSource, /<link rel="icon" type="image\/png" href="\.\/favicon\.png" \/>/);
   assert.equal(existsSync(new URL("../favicon.png", import.meta.url)), true);
+  const faviconHash = createHash("sha256")
+    .update(readFileSync(new URL("../favicon.png", import.meta.url)))
+    .digest("hex");
+  assert.equal(faviconHash, "16643287fb441eeb754543b6dc51a6664a6536f08a90070ccf8f5a2c94c4adf5");
 });
 
 test("calendar week overview uses readable lesson rows", () => {
