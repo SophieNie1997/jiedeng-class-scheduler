@@ -160,7 +160,6 @@ function buildCourseCardKey(lesson) {
     normalizeText(lesson.studentName) || "未填写",
     normalizeText(lesson.course) || "未填写",
     normalizeText(lesson.teacherName) || normalizeText(lesson.teacherId) || "未填写",
-    normalizeText(lesson.campus || lesson.deliveryType) || "未填写",
     normalizeText(lesson.startTime),
     normalizeText(lesson.endTime),
     String(Number(lesson.durationMinutes || 0) || ""),

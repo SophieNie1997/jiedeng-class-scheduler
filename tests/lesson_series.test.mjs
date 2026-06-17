@@ -19,6 +19,23 @@ test("lesson scope can target current and following matching series lessons", ()
   assert.deepEqual(getScopedLessonIds(lessons, "b", "following"), ["b", "c"]);
 });
 
+test("lesson scope keeps a matching series together when campus is missing on a later lesson", () => {
+  assert.deepEqual(
+    getScopedLessonIds(
+      [
+        makeLesson("a", "2026-07-07", "Phebe"),
+        {
+          ...makeLesson("b", "2026-07-08", "Phebe"),
+          campus: "",
+        },
+      ],
+      "a",
+      "following",
+    ),
+    ["a", "b"],
+  );
+});
+
 test("scoped updates keep following lesson dates while applying edited fields", () => {
   const updates = updateLessonsInScope(lessons, {}, "b", "following", {
     teacherId: "lynn",
@@ -41,6 +58,31 @@ test("scoped updates keep following lesson dates while applying edited fields", 
   assert.equal(updates.updates.c.notes, "改后续");
   assert.equal(Object.hasOwn(updates.updates, "other-teacher"), false);
   assert.equal(Object.hasOwn(updates.updates, "other-time"), false);
+});
+
+test("scoped updates regenerate following lesson dates from edited start date", () => {
+  const updates = updateLessonsInScope(lessons, {}, "b", "following", {
+    teacherId: "phebe",
+    teacherName: "Phebe",
+    studentName: "班课",
+    course: "AI 财商",
+    campus: "徐汇",
+    deliveryType: "线下",
+    startDate: "2026-07-07",
+    date: "2026-07-08",
+    startTime: "15:00",
+    endTime: "16:00",
+    durationMinutes: 60,
+    sessionCount: 2,
+    recurrenceWeekdays: [2, 3, 4, 5],
+    regenerateSeriesDates: true,
+    notes: "开始日期提前",
+  });
+
+  assert.equal(updates.updates.b.date, "2026-07-07");
+  assert.equal(updates.updates.c.date, "2026-07-08");
+  assert.equal(updates.updates.b.startDate, "2026-07-07");
+  assert.equal(updates.updates.c.startDate, "2026-07-07");
 });
 
 function makeLesson(id, date, teacherName, teacherId = teacherName.toLowerCase(), startTime = "15:00", endTime = "16:00") {

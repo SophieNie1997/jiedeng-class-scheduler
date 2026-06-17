@@ -109,6 +109,43 @@ test("course overview date range uses edited lesson start date", () => {
   assert.equal(overview.courseCards[0].lastDate, "2026-07-07");
 });
 
+test("course overview keeps same edited course together when campus is missing on later lessons", () => {
+  const overview = buildCourseOverview(
+    [
+      {
+        id: "finance-single",
+        teacherName: "Phebe",
+        studentName: "财商班课",
+        course: "财商徐汇班课",
+        campus: "徐汇",
+        date: "2026-07-07",
+        startTime: "15:30",
+        endTime: "17:00",
+        durationMinutes: 90,
+        status: "手动新增",
+      },
+      {
+        id: "finance-series",
+        teacherName: "Phebe",
+        studentName: "财商班课",
+        course: "财商徐汇班课",
+        campus: "",
+        date: "2026-07-08",
+        startTime: "15:30",
+        endTime: "17:00",
+        durationMinutes: 90,
+        status: "已编辑",
+      },
+    ],
+    { today: "2026-07-01" },
+  );
+
+  assert.equal(overview.totalCourses, 1);
+  assert.equal(overview.courseCards[0].lessonCount, 2);
+  assert.deepEqual(overview.courseCards[0].lessonIds, ["finance-single", "finance-series"]);
+  assert.equal(overview.courseCards[0].nextDate, "2026-07-07");
+});
+
 test("student overview groups future scheduled lessons by student name with delete ids", () => {
   const overview = buildStudentOverview(lessons, { today: "2026-06-30" });
 

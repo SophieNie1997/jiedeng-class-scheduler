@@ -75,6 +75,7 @@ export function buildLessonDetail(lesson, lessons) {
     source: lesson.source || "",
     recurrence: {
       startDate,
+      explicitStartDate: lesson.startDate || "",
       endDate,
       weekdayText,
       weekdayValues,
@@ -119,7 +120,6 @@ function getSeriesKey(lesson) {
     lesson.startTime || "",
     lesson.endTime || "",
     lesson.deliveryType || "",
-    lesson.campus || "",
   ].join("|");
 }
 

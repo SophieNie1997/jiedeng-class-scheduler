@@ -23,11 +23,24 @@ export function getScopedLessonIds(lessons, selectedLessonId, scope = "single") 
 
 export function updateLessonsInScope(lessons, rawEdits, selectedLessonId, scope, lessonChanges) {
   const selectedId = String(selectedLessonId);
-  return getScopedLessonIds(lessons, selectedId, scope).reduce((edits, lessonId) => {
+  const lessonIds = getScopedLessonIds(lessons, selectedId, scope);
+  const { regenerateSeriesDates, ...persistedLessonChanges } = lessonChanges || {};
+  const regeneratedDates = getRegeneratedFollowingDates(
+    scope,
+    lessonIds.length,
+    persistedLessonChanges,
+    Boolean(regenerateSeriesDates),
+  );
+
+  return lessonIds.reduce((edits, lessonId, index) => {
     const lesson = findLessonById(lessons, lessonId);
-    const date = lessonId === selectedId ? lessonChanges.date : lesson?.date || lessonChanges.date;
+    const date =
+      regeneratedDates[index] ||
+      (lessonId === selectedId ? persistedLessonChanges.date : lesson?.date || persistedLessonChanges.date);
+
     return setLessonEdit(edits, lessonId, {
-      ...lessonChanges,
+      ...persistedLessonChanges,
+      startDate: persistedLessonChanges.startDate || persistedLessonChanges.date,
       date,
     });
   }, rawEdits);
@@ -57,7 +70,6 @@ function getSeriesKey(lesson) {
     lesson.startTime || "",
     lesson.endTime || "",
     lesson.deliveryType || "",
-    lesson.campus || "",
   ].join("|");
 }
 
@@ -67,4 +79,50 @@ function compareSeriesLessons(left, right) {
     String(left.startTime || "").localeCompare(String(right.startTime || "")) ||
     String(left.id || "").localeCompare(String(right.id || ""))
   );
+}
+
+function getRegeneratedFollowingDates(scope, count, lessonChanges, shouldRegenerate) {
+  const startDate = normalizeDateString(lessonChanges?.startDate);
+  if (scope !== "following" || !shouldRegenerate || !startDate || count <= 0) {
+    return [];
+  }
+
+  const weekdayValues = normalizeWeekdayValues(lessonChanges.recurrenceWeekdays, startDate);
+  const weekdaySet = new Set(weekdayValues);
+  const dates = [];
+  const cursor = new Date(`${startDate}T00:00:00Z`);
+  const maxDaysToScan = Math.max(14, count * 10 + 14);
+
+  for (let offset = 0; dates.length < count && offset <= maxDaysToScan; offset += 1) {
+    const candidate = new Date(cursor);
+    candidate.setUTCDate(cursor.getUTCDate() + offset);
+    const candidateDate = candidate.toISOString().slice(0, 10);
+    if (weekdaySet.has(getWeekdayValue(candidate))) {
+      dates.push(candidateDate);
+    }
+  }
+
+  return dates;
+}
+
+function normalizeWeekdayValues(recurrenceWeekdays, startDate) {
+  const weekdays = Array.isArray(recurrenceWeekdays)
+    ? recurrenceWeekdays.map((day) => Number(day)).filter((day) => Number.isInteger(day) && day >= 1 && day <= 7)
+    : [];
+
+  if (weekdays.length > 0) {
+    return weekdays;
+  }
+
+  return [getWeekdayValue(new Date(`${startDate}T00:00:00Z`))];
+}
+
+function normalizeDateString(value) {
+  const normalized = String(value || "").trim();
+  return /^\d{4}-\d{2}-\d{2}$/.test(normalized) ? normalized : "";
+}
+
+function getWeekdayValue(date) {
+  const day = date.getUTCDay();
+  return day === 0 ? 7 : day;
 }

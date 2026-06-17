@@ -134,6 +134,23 @@ test("lesson detail uses saved editable start date before inferred series date",
   assert.equal(detail.recurrence.summary, "2026-07-01 开始，每周：周二 15:15-16:15，共 2 节");
 });
 
+test("lesson detail keeps a series together when a later lesson has no campus", () => {
+  const detail = buildLessonDetail(
+    makeLesson("a", "2026-07-07"),
+    [
+      makeLesson("a", "2026-07-07"),
+      {
+        ...makeLesson("b", "2026-07-08"),
+        campus: "",
+      },
+    ],
+  );
+
+  assert.equal(detail.recurrence.endDate, "2026-07-08");
+  assert.deepEqual(detail.recurrence.weekdayValues, [2, 3]);
+  assert.equal(detail.recurrence.sessionCount, 2);
+});
+
 function makeLesson(id, date) {
   return {
     id,

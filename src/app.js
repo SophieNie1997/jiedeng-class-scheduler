@@ -18,7 +18,7 @@ import {
   buildLessonDetail,
   buildWeekOverview,
   filterCalendarLessons,
-} from "./calendar.js?v=20260617-editable-lesson-title";
+} from "./calendar.js?v=20260617-series-start-date";
 import {
   buildLessonsForTeacher,
   expandRecurringLessons,
@@ -55,11 +55,11 @@ import {
   deleteLessonsInScope,
   getScopedLessonCount,
   updateLessonsInScope,
-} from "./lessonSeries.js?v=20260617-lesson-scope";
+} from "./lessonSeries.js?v=20260617-series-start-date";
 import {
   buildCourseOverview,
   buildStudentOverview,
-} from "./overview.js?v=20260617-editable-lesson-title";
+} from "./overview.js?v=20260617-series-start-date";
 import {
   buildStudentDirectoryRows,
   hideStudentDirectoryRecord,
@@ -897,7 +897,13 @@ function renderLessonDetail(detail) {
           <span aria-hidden="true">×</span>
         </button>
       </div>
-      <form id="lesson-detail-form" class="lesson-detail-form">
+      <form
+        id="lesson-detail-form"
+        class="lesson-detail-form"
+        data-original-start-date="${escapeAttribute(detail.recurrence.startDate)}"
+        data-explicit-start-date="${escapeAttribute(detail.recurrence.explicitStartDate || "")}"
+        data-selected-date="${escapeAttribute(detail.date)}"
+      >
         <div class="lesson-detail-grid">
           ${renderDetailField("学员姓名", "studentName", detail.studentName)}
           ${renderSelectField("年级", "grade", ["", ...grades], detail.grade === "未填写" ? "" : detail.grade)}
@@ -1935,11 +1941,19 @@ function readLessonChangesFromDetailForm(detailForm) {
   const campus = String(formData.get("campus") || "");
   const startDate = String(formData.get("startDate") || "");
   const date = String(formData.get("date") || "");
+  const normalizedStartDate = startDate || date;
+  const originalStartDate = String(detailForm.dataset.originalStartDate || "");
+  const explicitStartDate = String(detailForm.dataset.explicitStartDate || "");
+  const selectedDate = String(detailForm.dataset.selectedDate || date);
   const selectedWeekdays = formData
     .getAll("weekdays")
     .map(Number)
     .filter((weekday) => WEEKDAYS.some((day) => day.value === weekday));
   const sessionCount = Math.max(1, Number(formData.get("sessionCount") || 1));
+  const regenerateSeriesDates = Boolean(
+    normalizedStartDate &&
+      (normalizedStartDate !== originalStartDate || (explicitStartDate && explicitStartDate !== selectedDate)),
+  );
 
   return {
     teacherId,
@@ -1949,40 +1963,42 @@ function readLessonChangesFromDetailForm(detailForm) {
     grade: String(formData.get("grade") || ""),
     deliveryType: campus ? deriveDeliveryTypeFromCampus(campus) : "",
     campus,
-    startDate: startDate || date,
+    startDate: normalizedStartDate,
     date,
     startTime,
     endTime,
     durationMinutes,
     sessionCount,
     recurrenceWeekdays: selectedWeekdays.length ? selectedWeekdays : [getWeekdayValue(date)],
+    regenerateSeriesDates,
     notes: String(formData.get("notes") || ""),
     status: state.draftLesson?.id === state.selectedLessonId ? "手动新增" : "已编辑",
   };
 }
 
 function setManualLessonSeries(rawEdits, baseLessonId, lessonChanges) {
+  const { regenerateSeriesDates, ...persistedLessonChanges } = lessonChanges;
   const lessons = expandRecurringLessons({
-    studentName: lessonChanges.studentName,
-    course: lessonChanges.course,
-    grade: lessonChanges.grade,
-    deliveryType: lessonChanges.deliveryType,
-    campus: lessonChanges.campus,
-    startDate: lessonChanges.startDate || lessonChanges.date,
-    startTime: lessonChanges.startTime,
-    durationMinutes: lessonChanges.durationMinutes,
-    sessionCount: lessonChanges.sessionCount,
-    weekdays: lessonChanges.recurrenceWeekdays,
+    studentName: persistedLessonChanges.studentName,
+    course: persistedLessonChanges.course,
+    grade: persistedLessonChanges.grade,
+    deliveryType: persistedLessonChanges.deliveryType,
+    campus: persistedLessonChanges.campus,
+    startDate: persistedLessonChanges.startDate || persistedLessonChanges.date,
+    startTime: persistedLessonChanges.startTime,
+    durationMinutes: persistedLessonChanges.durationMinutes,
+    sessionCount: persistedLessonChanges.sessionCount,
+    weekdays: persistedLessonChanges.recurrenceWeekdays,
   });
   return lessons.reduce((edits, lesson, index) => {
     const id = index === 0 ? baseLessonId : `${baseLessonId}-${index + 1}`;
     return setLessonEdit(edits, id, {
-      ...lessonChanges,
+      ...persistedLessonChanges,
       ...lesson,
-      teacherId: lessonChanges.teacherId,
-      teacherName: lessonChanges.teacherName,
+      teacherId: persistedLessonChanges.teacherId,
+      teacherName: persistedLessonChanges.teacherName,
       status: "手动新增",
-      notes: lessonChanges.notes,
+      notes: persistedLessonChanges.notes,
     });
   }, rawEdits);
 }
