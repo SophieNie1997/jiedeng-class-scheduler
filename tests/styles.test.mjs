@@ -77,6 +77,20 @@ test("student ledger uses opaque sticky name cells", () => {
   assert.equal(getRuleValue(".student-ledger-table thead th:first-child", "z-index"), "4");
 });
 
+test("student directory controls stay inside the panel and table scrolls internally", () => {
+  assert.equal(getRuleValue(".overview-content", "grid-template-columns"), "minmax(0, 1fr)");
+  assert.ok(
+    getRuleText(".student-add-form,\n.student-search-box,\n.student-table-planner").includes("min-width: 0"),
+  );
+  assert.ok(
+    getRuleText(".student-add-form,\n.student-search-box,\n.student-table-planner").includes("max-width: 100%"),
+  );
+  assert.equal(getRuleValue(".student-table-planner", "overflow"), "hidden");
+  assert.equal(getRuleValue(".student-ledger-wrap", "overflow"), "auto");
+  assert.equal(getRuleValue(".student-ledger-wrap", "max-width"), "100%");
+  assert.equal(getRuleValue(".student-ledger-table", "min-width"), "1480px");
+});
+
 test("student delete uses a second-step in-app confirmation dialog", () => {
   assert.equal(appSource.includes('id="student-delete-dialog"'), true);
   assert.equal(appSource.includes("openStudentDeleteConfirm"), true);

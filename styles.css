@@ -1856,7 +1856,9 @@ fieldset {
 
 .overview-content {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 14px;
+  min-width: 0;
 }
 
 .overview-stat-row {
@@ -2420,6 +2422,14 @@ fieldset {
   padding: 58px 14px 14px;
 }
 
+.student-add-form,
+.student-search-box,
+.student-table-planner {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+
 .student-table-planner::before {
   content: "";
   position: absolute;
@@ -2491,6 +2501,8 @@ fieldset {
   position: relative;
   z-index: 2;
   overflow: auto;
+  min-width: 0;
+  max-width: 100%;
   max-height: calc(100vh - 310px);
   border: 1px solid rgba(220, 185, 192, 0.86);
   border-radius: 18px;
