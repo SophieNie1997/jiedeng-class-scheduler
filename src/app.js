@@ -111,6 +111,7 @@ state.coursePermissions = loadCoursePermissions();
 
 let remoteStore = createRemoteStore({ config: {} });
 let remoteSyncReady = false;
+let saveFeedbackToken = 0;
 
 const teacherColors = {
   claire: "violet",
@@ -1688,7 +1689,9 @@ function renderSyncPanel() {
     return;
   }
 
-  if (state.sync.status === "auth" || state.sync.status === "error") {
+  const shouldShowAuthForm = state.sync.status === "auth" || (state.sync.status === "error" && !state.sync.email);
+
+  if (shouldShowAuthForm) {
     syncPanelNode.innerHTML = `
       <div class="sync-copy">
         <strong>${state.sync.status === "error" ? "云端同步需要检查" : "云端同步登录"}</strong>
@@ -1702,10 +1705,15 @@ function renderSyncPanel() {
     return;
   }
 
-  const isSynced = state.sync.status === "synced";
+  const syncTitles = {
+    local: "本地保存模式",
+    syncing: "正在同步",
+    synced: "云端同步已开启",
+    error: "云端同步需要检查",
+  };
   syncPanelNode.innerHTML = `
     <div class="sync-copy">
-      <strong>${isSynced ? "云端同步已开启" : "本地保存模式"}</strong>
+      <strong>${syncTitles[state.sync.status] || "本地保存模式"}</strong>
       <span>${escapeHtml(state.sync.message)}</span>
     </div>
     ${
@@ -1756,13 +1764,36 @@ function applyRemoteBuckets(buckets) {
 
 function saveRemoteBucket(bucket, payload) {
   if (!remoteStore.isConfigured || !remoteSyncReady) {
+    showSaveFeedback("数据已保存到本机浏览器。登录云端同步后，同事可看到更新。", "local");
     return;
   }
 
-  remoteStore.saveBucket(bucket, payload).catch((error) => {
-    document.documentElement.dataset.remoteSync = "error";
-    console.warn(`Could not sync ${bucket} to Supabase.`, error);
-  });
+  const token = showSaveFeedback("正在同步编辑内容...", "syncing");
+  remoteStore
+    .saveBucket(bucket, payload)
+    .then(() => {
+      if (token === saveFeedbackToken) {
+        showSaveFeedback("数据已编辑成功，并同步到网站上。", "synced");
+      }
+    })
+    .catch((error) => {
+      document.documentElement.dataset.remoteSync = "error";
+      if (token === saveFeedbackToken) {
+        showSaveFeedback("保存到本机成功，但云端同步失败。请稍后再试。", "error");
+      }
+      console.warn(`Could not sync ${bucket} to Supabase.`, error);
+    });
+}
+
+function showSaveFeedback(message, status = "synced") {
+  saveFeedbackToken += 1;
+  state.sync = {
+    ...state.sync,
+    status,
+    message,
+  };
+  renderSyncPanel();
+  return saveFeedbackToken;
 }
 
 function compactShift(shift) {

@@ -272,6 +272,12 @@ test("app exposes a Supabase sync sign-in panel for shared editing", () => {
   assert.equal(appSource.includes('name="syncEmail"'), true);
 });
 
+test("app shows a clear synced edit confirmation after saving", () => {
+  assert.equal(appSource.includes("数据已编辑成功，并同步到网站上"), true);
+  assert.equal(appSource.includes("showSaveFeedback"), true);
+  assert.equal(appSource.includes("正在同步编辑内容"), true);
+});
+
 function getRuleText(selector) {
   const escapedSelector = selector.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const rule = new RegExp(`${escapedSelector}\\s*\\{([^}]+)\\}`, "m").exec(css);
