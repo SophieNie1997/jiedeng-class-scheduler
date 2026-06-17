@@ -6,7 +6,7 @@ import {
   grades,
   shiftRoster as baseShiftRoster,
   studentCatalog as baseStudentCatalog,
-} from "./data.js?v=20260617-student-table";
+} from "./data.js?v=20260617-active-teacher-lessons";
 import {
   applyCoursePermissions,
   buildDefaultCoursePermissions,
@@ -2103,10 +2103,11 @@ function getEffectiveTeachers() {
 }
 
 function getEffectiveLessons() {
+  const activeTeacherIds = new Set(baseCandidateTeachers.map((teacher) => teacher.id));
   return applyLessonEdits(
     [...existingLessons, ...buildUnavailableLessonsFromShifts(getShiftRoster(), state.shiftOverrides)],
     state.lessonEdits,
-  );
+  ).filter((lesson) => activeTeacherIds.has(lesson.teacherId));
 }
 
 function renderShiftCellMeta(shift) {
