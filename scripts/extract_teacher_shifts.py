@@ -7,12 +7,9 @@ from pathlib import Path
 
 from openpyxl import load_workbook
 
-from extract_excel_lessons import TEACHER_SHEETS, clean_teacher_name, discover_lesson_sources
-
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_SOURCE = ROOT / "桔灯排班表 2026 6月-12月.xlsx"
-DEFAULT_LESSON_SOURCE_DIR = ROOT / "排课信息"
+DEFAULT_SOURCE_DIR = ROOT / "老师排班"
 DEFAULT_OUTPUT = ROOT / "src" / "importedTeacherShifts.js"
 SHEET_NAME = "连续日期排班表"
 HEADER_ROW = 4
@@ -36,47 +33,62 @@ PREFERRED_TEACHER_ORDER = [
 
 
 def main() -> None:
-    roster, shifts, summary = extract_teacher_roster_from_lesson_sources(DEFAULT_LESSON_SOURCE_DIR)
+    roster, shifts, summary = extract_teacher_shifts_from_sources(discover_shift_sources(DEFAULT_SOURCE_DIR))
     write_js(roster, shifts, summary, DEFAULT_OUTPUT)
     print(f"Wrote {len(roster)} teachers and {len(shifts)} shifts to {DEFAULT_OUTPUT}")
     print(json.dumps(summary, ensure_ascii=False, indent=2))
 
 
-def extract_teacher_roster_from_lesson_sources(source_dir: Path) -> tuple[list[dict], dict[str, dict], dict]:
-    names_by_id = {}
-    sources = discover_lesson_sources(source_dir)
+def discover_shift_sources(folder: Path = DEFAULT_SOURCE_DIR) -> list[Path]:
+    return sorted(
+        [
+            path
+            for path in folder.glob("*.xlsx")
+            if path.is_file() and not path.name.startswith("~$") and not path.name.startswith(".")
+        ],
+        key=lambda path: path.name,
+    )
+
+
+def extract_teacher_shifts_from_sources(sources: list[Path]) -> tuple[list[dict], dict[str, dict], dict]:
+    roster_by_id = {}
+    shifts: dict[str, dict] = {}
+    summaries = []
+    filled_dates = []
+    total_date_rows = 0
 
     for source in sources:
-        workbook = load_workbook(source, data_only=True, read_only=True)
-        try:
-            for sheet_name, teacher_id in TEACHER_SHEETS.items():
-                if sheet_name in workbook.sheetnames:
-                    names_by_id[teacher_id] = clean_teacher_name(sheet_name)
-        finally:
-            workbook.close()
+        roster, source_shifts, summary = extract_teacher_shifts(source)
+        summaries.append(summary)
+        total_date_rows += summary["dateRows"]
+        if summary["filledStartDate"]:
+            filled_dates.append(summary["filledStartDate"])
+        if summary["filledEndDate"]:
+            filled_dates.append(summary["filledEndDate"])
+        for teacher in roster:
+            roster_by_id[teacher["id"]] = teacher
+        shifts.update(source_shifts)
 
     preferred_ids = [make_teacher_id(name) for name in PREFERRED_TEACHER_ORDER]
-    roster = [
-        build_teacher(names_by_id[teacher_id])
-        for teacher_id in preferred_ids
-        if teacher_id in names_by_id
-    ]
+    roster = [roster_by_id[teacher_id] for teacher_id in preferred_ids if teacher_id in roster_by_id]
     roster.extend(
-        build_teacher(name)
-        for teacher_id, name in sorted(names_by_id.items(), key=lambda item: item[1].lower())
+        teacher
+        for teacher_id, teacher in sorted(roster_by_id.items(), key=lambda item: item[1]["name"].lower())
         if teacher_id not in preferred_ids
     )
 
     summary = {
-        "source": "排课信息",
+        "source": "老师排班",
         "sources": [source.name for source in sources],
+        "sheet": SHEET_NAME,
         "teacherCount": len(roster),
-        "shiftCount": 0,
-        "dateRows": 0,
-        "filledStartDate": "",
-        "filledEndDate": "",
+        "shiftCount": len(shifts),
+        "dateRows": total_date_rows,
+        "filledStartDate": min(filled_dates) if filled_dates else "",
+        "filledEndDate": max(filled_dates) if filled_dates else "",
+        "sourceSummaries": summaries,
     }
-    return roster, {}, summary
+    return roster, dict(sorted(shifts.items())), summary
 
 
 def extract_teacher_shifts(source: Path) -> tuple[list[dict], dict[str, dict], dict]:

@@ -3,7 +3,7 @@ import { importedStudents } from "./importedStudents.js?v=20260617-folder-refres
 import {
   importedDefaultShiftOverrides,
   importedShiftRoster,
-} from "./importedTeacherShifts.js?v=20260617-folder-refresh";
+} from "./importedTeacherShifts.js?v=20260617-shift-refresh";
 import {
   normalizeCourseList,
   normalizeLessonCatalogFields,

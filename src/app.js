@@ -6,7 +6,7 @@ import {
   grades,
   shiftRoster as baseShiftRoster,
   studentCatalog as baseStudentCatalog,
-} from "./data.js?v=20260617-folder-refresh";
+} from "./data.js?v=20260617-shift-refresh";
 import {
   applyCoursePermissions,
   buildDefaultCoursePermissions,
@@ -60,12 +60,12 @@ import {
   loadRemoteStoreConfig,
 } from "./remoteStore.js?v=20260616-supabase-sync";
 
-const SHIFT_STORAGE_KEY = "jiedeng-teacher-shifts-folder-20260617";
-const COURSE_PERMISSION_STORAGE_KEY = "jiedeng-course-permissions-folder-20260617";
-const LESSON_EDIT_STORAGE_KEY = "jiedeng-lesson-edits-folder-20260617";
+const SHIFT_STORAGE_KEY = "jiedeng-teacher-shifts-folder-20260617-shift";
+const COURSE_PERMISSION_STORAGE_KEY = "jiedeng-course-permissions-folder-20260617-shift";
+const LESSON_EDIT_STORAGE_KEY = "jiedeng-lesson-edits-folder-20260617-shift";
 const LESSON_EDIT_RESTORE_RESULT_KEY = "jiedeng-lesson-edits-last-restore";
 const LESSON_EDIT_RESTORE_BACKUP_PREFIX = "jiedeng-lesson-edits-backup-before-restore";
-const CUSTOM_CATALOG_STORAGE_KEY = "jiedeng-custom-catalog-folder-20260617";
+const CUSTOM_CATALOG_STORAGE_KEY = "jiedeng-custom-catalog-folder-20260617-shift";
 const REMOTE_BUCKETS = {
   shiftOverrides: "shiftOverrides",
   coursePermissions: "coursePermissions",
