@@ -2642,6 +2642,7 @@ function renderShiftLessonChip(lesson, fallbackCampus) {
   const courseName = String(lesson.course || "").trim() || "未填写课程";
   return `
     <span class="shift-lesson-chip ${getShiftCampusClass(campus)}">
+      <span class="shift-lesson-time">${escapeHtml(lesson.timeLabel)}</span>
       <span class="shift-lesson-title">${escapeHtml(courseName)}</span>
     </span>
   `;

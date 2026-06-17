@@ -208,17 +208,17 @@ test("shift editor auto-saves field changes and only shows the default restore a
   assert.equal(appSource.includes('class="primary-button" data-shift-action="clear"'), true);
 });
 
-test("shift cells show readonly same-day course names without student or campus clutter", () => {
+test("shift cells show readonly same-day course times and names without student or campus clutter", () => {
   const chipRenderer = /function renderShiftLessonChip[\s\S]*?function resolveShiftLessonCampus/.exec(appSource)?.[0] || "";
 
   assert.equal(appSource.includes("buildTeacherDayLessonIndex"), true);
   assert.equal(appSource.includes("renderShiftLessonList"), true);
   assert.equal(appSource.includes("resolveShiftLessonCampus"), true);
   assert.equal(appSource.includes('class="shift-lesson-list"'), true);
-  assert.equal(chipRenderer.includes('class="shift-lesson-time"'), false);
+  assert.equal(chipRenderer.includes('class="shift-lesson-time"'), true);
   assert.equal(chipRenderer.includes('class="shift-lesson-campus"'), false);
   assert.equal(chipRenderer.includes("lesson.studentName"), false);
-  assert.equal(chipRenderer.includes("lesson.timeLabel"), false);
+  assert.equal(chipRenderer.includes("lesson.timeLabel"), true);
   assert.equal(chipRenderer.includes("escapeHtml(courseName)"), true);
   assert.equal(appSource.includes("shift-campus-xuhui"), true);
   assert.equal(appSource.includes("shift-campus-pudong"), true);

@@ -1627,7 +1627,10 @@ fieldset {
 }
 
 .shift-lesson-chip {
-  display: block;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 5px;
+  align-items: baseline;
   min-width: 0;
   border-top: 1px dashed rgba(220, 185, 192, 0.72);
   padding-top: 4px;
@@ -1636,11 +1639,16 @@ fieldset {
   line-height: 1.25;
 }
 
+.shift-lesson-time,
 .shift-lesson-title,
 .shift-lesson-more {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.shift-lesson-time {
+  font-weight: 900;
 }
 
 .shift-lesson-title {
