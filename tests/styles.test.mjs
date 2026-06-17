@@ -216,6 +216,10 @@ test("lesson detail panel has editable fields and color variants", () => {
   assert.equal(appSource.includes('data-lesson-action="save"'), true);
   assert.equal(appSource.includes('data-lesson-action="delete"'), true);
   assert.equal(appSource.includes('name="startDate"'), true);
+  assert.equal(appSource.includes("总上课次数"), true);
+  assert.equal(appSource.includes("结束日期"), true);
+  assert.equal(appSource.includes("data-lesson-end-date-preview"), true);
+  assert.equal(appSource.includes("updateLessonEndDatePreview"), true);
   assert.equal(appSource.includes('data-course-title-edit'), true);
   assert.equal(appSource.includes('class="lesson-title-edit-button"'), true);
   assert.equal(appSource.includes('formData.get("startDate")'), true);

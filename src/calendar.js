@@ -45,11 +45,11 @@ export function buildLessonDetail(lesson, lessons) {
   const weekdayValues = editedWeekdayValues.length ? editedWeekdayValues : seriesWeekdayValues;
   const weekdays = weekdayValues.map((weekday) => WEEKDAY_LABELS[weekday]);
   const startDate = lesson.startDate || seriesDates[0] || lesson.date;
-  const endDate = seriesDates[seriesDates.length - 1] || lesson.date;
-  const weekdayText = weekdays.join("、") || WEEKDAY_LABELS[getWeekday(lesson.date)];
   const timeRange = `${lesson.startTime}-${lesson.endTime}`;
   const durationMinutes = parseTimeToMinutes(lesson.endTime) - parseTimeToMinutes(lesson.startTime);
   const sessionCount = Number(lesson.sessionCount || seriesLessons.length) || seriesLessons.length;
+  const endDate = calculateRecurringEndDate(startDate, weekdayValues, sessionCount) || seriesDates[seriesDates.length - 1] || lesson.date;
+  const weekdayText = weekdays.join("、") || WEEKDAY_LABELS[getWeekday(lesson.date)];
 
   return {
     id: lesson.id,
@@ -121,6 +121,38 @@ function getSeriesKey(lesson) {
     lesson.endTime || "",
     lesson.deliveryType || "",
   ].join("|");
+}
+
+function calculateRecurringEndDate(startDate, weekdayValues, sessionCount) {
+  const normalizedStart = String(startDate || "").trim();
+  const count = Number(sessionCount || 0);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(normalizedStart) || !count) {
+    return "";
+  }
+
+  const weekdays = Array.isArray(weekdayValues) && weekdayValues.length
+    ? weekdayValues.map(Number).filter((weekday) => WEEKDAY_LABELS[weekday])
+    : [getWeekday(normalizedStart)];
+  const weekdaySet = new Set(weekdays);
+  const cursor = new Date(`${normalizedStart}T00:00:00Z`);
+  let matched = 0;
+  const maxDaysToScan = Math.max(14, count * 10 + 14);
+
+  for (let offset = 0; offset <= maxDaysToScan; offset += 1) {
+    const candidate = new Date(cursor);
+    candidate.setUTCDate(cursor.getUTCDate() + offset);
+    const dateString = candidate.toISOString().slice(0, 10);
+    if (!weekdaySet.has(getWeekday(dateString))) {
+      continue;
+    }
+
+    matched += 1;
+    if (matched >= count) {
+      return dateString;
+    }
+  }
+
+  return "";
 }
 
 function getWeekday(dateString) {

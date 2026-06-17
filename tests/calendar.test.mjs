@@ -134,6 +134,34 @@ test("lesson detail uses saved editable start date before inferred series date",
   assert.equal(detail.recurrence.summary, "2026-07-01 开始，每周：周二 15:15-16:15，共 2 节");
 });
 
+test("lesson detail calculates end date from start date weekdays and total session count", () => {
+  const detail = buildLessonDetail(
+    {
+      ...makeLesson("a", "2026-07-07"),
+      startDate: "2026-07-07",
+      sessionCount: 7,
+      recurrenceWeekdays: [2, 3, 4, 5],
+    },
+    [
+      {
+        ...makeLesson("a", "2026-07-07"),
+        startDate: "2026-07-07",
+        sessionCount: 7,
+        recurrenceWeekdays: [2, 3, 4, 5],
+      },
+      makeLesson("b", "2026-07-08"),
+      makeLesson("c", "2026-07-10"),
+      makeLesson("d", "2026-07-14"),
+      makeLesson("e", "2026-07-15"),
+      makeLesson("f", "2026-07-16"),
+      makeLesson("g", "2026-07-17"),
+    ],
+  );
+
+  assert.equal(detail.recurrence.endDate, "2026-07-16");
+  assert.equal(detail.recurrence.summary, "2026-07-07 开始，每周：周二、周三、周四、周五 15:15-16:15，共 7 节");
+});
+
 test("lesson detail keeps a series together when a later lesson has no campus", () => {
   const detail = buildLessonDetail(
     makeLesson("a", "2026-07-07"),

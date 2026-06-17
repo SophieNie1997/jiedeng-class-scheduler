@@ -26,12 +26,6 @@ export function alignExplicitSeriesDates(lessons) {
   const groups = new Map();
 
   alignedLessons.forEach((lesson, index) => {
-    const sessionCount = Number(lesson.sessionCount || 0);
-    const startDate = normalizeDateString(lesson.startDate);
-    if (!startDate || sessionCount <= 1 || !Array.isArray(lesson.recurrenceWeekdays)) {
-      return;
-    }
-
     const key = getSeriesKey(lesson);
     const group = groups.get(key) || [];
     group.push({ lesson, index });
@@ -40,9 +34,13 @@ export function alignExplicitSeriesDates(lessons) {
 
   for (const group of groups.values()) {
     const sortedGroup = group.sort((left, right) => compareSeriesLessons(left.lesson, right.lesson));
-    const anchor = sortedGroup[0]?.lesson;
-    const count = Math.min(Number(anchor?.sessionCount || sortedGroup.length) || sortedGroup.length, sortedGroup.length);
-    const regeneratedDates = getRegeneratedDates(count, anchor);
+    if (!shouldAlignSeriesGroup(sortedGroup)) {
+      continue;
+    }
+
+    const seed = buildSeriesDateSeed(sortedGroup);
+    const count = Math.min(seed.sessionCount, sortedGroup.length);
+    const regeneratedDates = getRegeneratedDates(count, seed);
 
     regeneratedDates.forEach((date, index) => {
       sortedGroup[index].lesson.date = date;
@@ -112,6 +110,52 @@ function compareSeriesLessons(left, right) {
   );
 }
 
+function shouldAlignSeriesGroup(group) {
+  if (group.length <= 1) {
+    return false;
+  }
+
+  return group.some(({ lesson }) => {
+    const status = String(lesson.status || "");
+    return (
+      Boolean(normalizeDateString(lesson.startDate)) ||
+      Number(lesson.sessionCount || 0) > 1 ||
+      Array.isArray(lesson.recurrenceWeekdays) ||
+      status === "已编辑" ||
+      status === "手动新增"
+    );
+  });
+}
+
+function buildSeriesDateSeed(group) {
+  const explicitLesson =
+    group.find(({ lesson }) => normalizeDateString(lesson.startDate))?.lesson ||
+    group.find(({ lesson }) => Array.isArray(lesson.recurrenceWeekdays))?.lesson ||
+    group.find(({ lesson }) => Number(lesson.sessionCount || 0) > 1)?.lesson ||
+    group[0].lesson;
+  const startDate = normalizeDateString(explicitLesson.startDate) || normalizeDateString(group[0].lesson.date);
+  const sessionCount = Number(explicitLesson.sessionCount || 0) || group.length;
+  const explicitWeekdays = normalizeWeekdayValues(explicitLesson.recurrenceWeekdays, startDate);
+
+  return {
+    ...explicitLesson,
+    startDate,
+    sessionCount,
+    recurrenceWeekdays: explicitWeekdays.length ? explicitWeekdays : inferWeekdaysFromGroup(group),
+  };
+}
+
+function inferWeekdaysFromGroup(group) {
+  return Array.from(
+    new Set(
+      group
+        .map(({ lesson }) => normalizeDateString(lesson.date))
+        .filter(Boolean)
+        .map((dateString) => getWeekdayValue(new Date(`${dateString}T00:00:00Z`))),
+    ),
+  ).sort((left, right) => left - right);
+}
+
 function getRegeneratedFollowingDates(scope, count, lessonChanges, shouldRegenerate) {
   if (scope !== "following" || !shouldRegenerate) {
     return [];
@@ -149,11 +193,7 @@ function normalizeWeekdayValues(recurrenceWeekdays, startDate) {
     ? recurrenceWeekdays.map((day) => Number(day)).filter((day) => Number.isInteger(day) && day >= 1 && day <= 7)
     : [];
 
-  if (weekdays.length > 0) {
-    return weekdays;
-  }
-
-  return [getWeekdayValue(new Date(`${startDate}T00:00:00Z`))];
+  return weekdays;
 }
 
 function normalizeDateString(value) {

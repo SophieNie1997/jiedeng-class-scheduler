@@ -107,6 +107,40 @@ test("explicit edited series dates align from their saved start date on load", (
   );
 });
 
+test("edited inferred series dates fill the missing weekday slot from the first date", () => {
+  const aligned = alignExplicitSeriesDates([
+    makeEditedFinanceLesson("a", "2026-07-07"),
+    makeEditedFinanceLesson("b", "2026-07-08"),
+    makeEditedFinanceLesson("c", "2026-07-10"),
+    makeEditedFinanceLesson("d", "2026-07-14"),
+    makeEditedFinanceLesson("e", "2026-07-15"),
+    makeEditedFinanceLesson("f", "2026-07-16"),
+    makeEditedFinanceLesson("g", "2026-07-17"),
+  ]);
+
+  assert.deepEqual(
+    aligned.map((lesson) => lesson.date),
+    [
+      "2026-07-07",
+      "2026-07-08",
+      "2026-07-09",
+      "2026-07-10",
+      "2026-07-14",
+      "2026-07-15",
+      "2026-07-16",
+    ],
+  );
+});
+
+function makeEditedFinanceLesson(id, date) {
+  return {
+    ...makeLesson(id, date, "Phebe", "phebe", "15:30", "17:00"),
+    studentName: "财商班课",
+    course: "财商徐汇班课",
+    status: "已编辑",
+  };
+}
+
 function makeLesson(id, date, teacherName, teacherId = teacherName.toLowerCase(), startTime = "15:00", endTime = "16:00") {
   return {
     id,

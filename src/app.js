@@ -18,7 +18,7 @@ import {
   buildLessonDetail,
   buildWeekOverview,
   filterCalendarLessons,
-} from "./calendar.js?v=20260617-series-start-date";
+} from "./calendar.js?v=20260617-finance-series-hole";
 import {
   buildLessonsForTeacher,
   expandRecurringLessons,
@@ -56,7 +56,7 @@ import {
   deleteLessonsInScope,
   getScopedLessonCount,
   updateLessonsInScope,
-} from "./lessonSeries.js?v=20260617-series-start-date-v2";
+} from "./lessonSeries.js?v=20260617-finance-series-hole";
 import {
   buildCourseOverview,
   buildStudentOverview,
@@ -545,6 +545,20 @@ calendarNode.addEventListener("click", (event) => {
   renderCalendar();
 });
 
+calendarNode.addEventListener("input", (event) => {
+  const detailForm = event.target.closest("#lesson-detail-form");
+  if (detailForm) {
+    updateLessonEndDatePreview(detailForm);
+  }
+});
+
+calendarNode.addEventListener("change", (event) => {
+  const detailForm = event.target.closest("#lesson-detail-form");
+  if (detailForm) {
+    updateLessonEndDatePreview(detailForm);
+  }
+});
+
 tabButtons.forEach((button) => {
   button.addEventListener("click", () => {
     state.view = button.dataset.viewTarget;
@@ -910,11 +924,12 @@ function renderLessonDetail(detail) {
           ${renderSelectField("年级", "grade", ["", ...grades], detail.grade === "未填写" ? "" : detail.grade)}
           ${renderSelectField("授课校区", "campus", ["", ...teachingSites], detail.campus === "未填写" ? "" : detail.campus)}
           ${renderDetailField("开始日期", "startDate", detail.recurrence.startDate, "date")}
+          ${renderReadOnlyField("结束日期", detail.recurrence.endDate, 'data-lesson-end-date-preview="true"')}
           ${renderDetailField("本节日期", "date", detail.date, "date")}
           ${renderDetailField("开始时间", "startTime", detail.startTime, "time")}
           ${renderReadOnlyField("结束时间", detail.endTime)}
           ${renderDurationSelect("单次时长", "durationMinutes", detail.durationMinutes)}
-          ${renderDetailField("上课次数", "sessionCount", detail.recurrence.sessionCount, "number", 'min="1" step="1"')}
+          ${renderDetailField("总上课次数", "sessionCount", detail.recurrence.sessionCount, "number", 'min="1" step="1"')}
           ${renderWeekdayCheckboxField(detail.recurrence.weekdayValues)}
           ${renderSelectField("上课老师", "teacherId", getCandidateTeachers().map((teacher) => teacher.id), detail.teacherId, formatTeacherOption)}
         </div>
@@ -967,11 +982,11 @@ function renderDetailField(label, name, value, type = "text", extraAttributes = 
   `;
 }
 
-function renderReadOnlyField(label, value) {
+function renderReadOnlyField(label, value, extraAttributes = "") {
   return `
     <label>
       <span>${escapeHtml(label)}</span>
-      <input value="${escapeAttribute(value || "未填写")}" readonly />
+      <input value="${escapeAttribute(value || "未填写")}" ${extraAttributes} readonly />
     </label>
   `;
 }
@@ -1970,11 +1985,58 @@ function readLessonChangesFromDetailForm(detailForm) {
     endTime,
     durationMinutes,
     sessionCount,
-    recurrenceWeekdays: selectedWeekdays.length ? selectedWeekdays : [getWeekdayValue(date)],
+    recurrenceWeekdays: selectedWeekdays.length ? selectedWeekdays : [getWeekdayValue(normalizedStartDate || date)],
     regenerateSeriesDates,
     notes: String(formData.get("notes") || ""),
     status: state.draftLesson?.id === state.selectedLessonId ? "手动新增" : "已编辑",
   };
+}
+
+function updateLessonEndDatePreview(detailForm) {
+  const endDateInput = detailForm.querySelector("[data-lesson-end-date-preview]");
+  if (!endDateInput) {
+    return;
+  }
+
+  const formData = new FormData(detailForm);
+  const startDate = String(formData.get("startDate") || formData.get("date") || "");
+  const sessionCount = Math.max(1, Number(formData.get("sessionCount") || 1));
+  const weekdays = formData
+    .getAll("weekdays")
+    .map(Number)
+    .filter((weekday) => WEEKDAYS.some((day) => day.value === weekday));
+
+  endDateInput.value = calculateLessonEndDate(startDate, weekdays, sessionCount) || "未填写";
+}
+
+function calculateLessonEndDate(startDate, weekdays, sessionCount) {
+  const normalizedStart = String(startDate || "").trim();
+  const count = Number(sessionCount || 0);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(normalizedStart) || !count) {
+    return "";
+  }
+
+  const selectedWeekdays = Array.isArray(weekdays) && weekdays.length ? weekdays : [getWeekdayValue(normalizedStart)];
+  const weekdaySet = new Set(selectedWeekdays.map(Number));
+  const cursor = new Date(`${normalizedStart}T00:00:00Z`);
+  const maxDaysToScan = Math.max(14, count * 10 + 14);
+  let matched = 0;
+
+  for (let offset = 0; offset <= maxDaysToScan; offset += 1) {
+    const candidate = new Date(cursor);
+    candidate.setUTCDate(cursor.getUTCDate() + offset);
+    const candidateDate = candidate.toISOString().slice(0, 10);
+    if (!weekdaySet.has(getWeekdayValue(candidateDate))) {
+      continue;
+    }
+
+    matched += 1;
+    if (matched >= count) {
+      return candidateDate;
+    }
+  }
+
+  return "";
 }
 
 function setManualLessonSeries(rawEdits, baseLessonId, lessonChanges) {
