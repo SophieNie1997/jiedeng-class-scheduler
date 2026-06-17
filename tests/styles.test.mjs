@@ -27,6 +27,17 @@ test("calendar week overview uses readable lesson rows", () => {
   assert.equal(getRuleValue(".lesson-row", "grid-template-columns"), "minmax(0, 1fr) auto");
 });
 
+test("calendar lesson color chips use the soft planner palette", () => {
+  assert.equal(getRuleValue(".lesson-row.blue", "border-left-color"), "#6f9fcf");
+  assert.equal(getRuleValue(".lesson-row.blue", "background"), "#edf6ff");
+  assert.equal(getRuleValue(".lesson-row.violet", "border-left-color"), "#a28cc7");
+  assert.equal(getRuleValue(".lesson-row.orange", "background"), "#fff1e7");
+  assert.equal(getRuleValue(".lesson-detail-panel.blue", "--lesson-accent"), "#6f9fcf");
+  for (const oldColor of ["#2563eb", "#d66a24", "#7058d8", "#0f766e", "#0884a8"]) {
+    assert.equal(css.includes(oldColor), false, `${oldColor} should not remain in lesson color tokens`);
+  }
+});
+
 test("calendar page only renders the week overview without single-day detail", () => {
   assert.equal(appSource.includes("day-detail"), false);
   assert.equal(appSource.includes("renderDayDetail"), false);

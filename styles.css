@@ -951,9 +951,9 @@ fieldset {
   align-items: start;
   width: 100%;
   border: 0;
-  border-left: 4px solid #64748b;
+  border-left: 4px solid #9b8f9c;
   border-radius: 15px;
-  background: #f1f5f9;
+  background: #f7f1f6;
   padding: 7px 8px;
   color: #1f2933;
   font-size: 12px;
@@ -1009,43 +1009,43 @@ fieldset {
 }
 
 .lesson-row.blue {
-  border-left-color: #2563eb;
-  background: #dbeafe;
+  border-left-color: #6f9fcf;
+  background: #edf6ff;
 }
 
 .lesson-row.green {
-  border-left-color: #16845f;
-  background: #dff5ea;
+  border-left-color: #7bb79e;
+  background: #eaf8f2;
 }
 
 .lesson-row.orange {
-  border-left-color: #d66a24;
-  background: #fde8d4;
+  border-left-color: #e2a16f;
+  background: #fff1e7;
 }
 
 .lesson-row.rose {
-  border-left-color: #be3f66;
-  background: #f9d9e4;
+  border-left-color: #d982a6;
+  background: #fff0f6;
 }
 
 .lesson-row.violet {
-  border-left-color: #7058d8;
-  background: #e6e1ff;
+  border-left-color: #a28cc7;
+  background: #f3effb;
 }
 
 .lesson-row.teal {
-  border-left-color: #0f766e;
-  background: #ccfbf1;
+  border-left-color: #70b9bb;
+  background: #e9f8f7;
 }
 
 .lesson-row.amber {
-  border-left-color: #b7791f;
-  background: #fef3c7;
+  border-left-color: #d6b75f;
+  background: #fff8df;
 }
 
 .lesson-row.cyan {
-  border-left-color: #0884a8;
-  background: #cffafe;
+  border-left-color: #7fb7d6;
+  background: #eff8fc;
 }
 
 .lesson-row.preview {
@@ -1062,10 +1062,10 @@ fieldset {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  --lesson-accent: #64748b;
-  --lesson-tint: #f1f5f9;
-  --lesson-field: rgba(100, 116, 139, 0.13);
-  --lesson-control: rgba(248, 250, 252, 0.54);
+  --lesson-accent: #9b8f9c;
+  --lesson-tint: #f7f1f6;
+  --lesson-field: rgba(155, 143, 156, 0.14);
+  --lesson-control: rgba(247, 241, 246, 0.6);
   margin-bottom: 14px;
   border: 1px solid #c9d8d4;
   border-left: 6px solid var(--lesson-accent);
@@ -1111,66 +1111,66 @@ fieldset {
 }
 
 .lesson-detail-panel.gray {
-  --lesson-accent: #64748b;
-  --lesson-tint: #f1f5f9;
-  --lesson-field: rgba(100, 116, 139, 0.13);
-  --lesson-control: rgba(248, 250, 252, 0.54);
+  --lesson-accent: #9b8f9c;
+  --lesson-tint: #f7f1f6;
+  --lesson-field: rgba(155, 143, 156, 0.14);
+  --lesson-control: rgba(247, 241, 246, 0.6);
 }
 
 .lesson-detail-panel.blue {
-  --lesson-accent: #2563eb;
-  --lesson-tint: #dbeafe;
-  --lesson-field: rgba(37, 99, 235, 0.12);
-  --lesson-control: rgba(219, 234, 254, 0.58);
+  --lesson-accent: #6f9fcf;
+  --lesson-tint: #edf6ff;
+  --lesson-field: rgba(111, 159, 207, 0.16);
+  --lesson-control: rgba(237, 246, 255, 0.64);
 }
 
 .lesson-detail-panel.green {
-  --lesson-accent: #16845f;
-  --lesson-tint: #dff5ea;
-  --lesson-field: rgba(22, 132, 95, 0.13);
-  --lesson-control: rgba(223, 245, 234, 0.58);
+  --lesson-accent: #7bb79e;
+  --lesson-tint: #eaf8f2;
+  --lesson-field: rgba(123, 183, 158, 0.17);
+  --lesson-control: rgba(234, 248, 242, 0.64);
 }
 
 .lesson-detail-panel.orange {
-  --lesson-accent: #d66a24;
-  --lesson-tint: #fde8d4;
-  --lesson-field: rgba(214, 106, 36, 0.13);
-  --lesson-control: rgba(253, 232, 212, 0.58);
+  --lesson-accent: #e2a16f;
+  --lesson-tint: #fff1e7;
+  --lesson-field: rgba(226, 161, 111, 0.17);
+  --lesson-control: rgba(255, 241, 231, 0.64);
 }
 
 .lesson-detail-panel.rose {
-  --lesson-accent: #be3f66;
-  --lesson-tint: #f9d9e4;
-  --lesson-field: rgba(190, 63, 102, 0.13);
-  --lesson-control: rgba(249, 217, 228, 0.58);
+  --lesson-accent: #d982a6;
+  --lesson-tint: #fff0f6;
+  --lesson-field: rgba(217, 130, 166, 0.17);
+  --lesson-control: rgba(255, 240, 246, 0.64);
 }
 
 .lesson-detail-panel.violet {
-  --lesson-accent: #7058d8;
-  --lesson-tint: #e6e1ff;
-  --lesson-field: rgba(112, 88, 216, 0.13);
-  --lesson-control: rgba(230, 225, 255, 0.58);
+  --lesson-accent: #a28cc7;
+  --lesson-tint: #f3effb;
+  --lesson-field: rgba(162, 140, 199, 0.17);
+  --lesson-control: rgba(243, 239, 251, 0.64);
 }
 
 .lesson-detail-panel.teal {
-  --lesson-accent: #0f766e;
-  --lesson-tint: #ccfbf1;
-  --lesson-field: rgba(15, 118, 110, 0.13);
-  --lesson-control: rgba(204, 251, 241, 0.58);
+  --lesson-accent: #70b9bb;
+  --lesson-tint: #e9f8f7;
+  --lesson-field: rgba(112, 185, 187, 0.17);
+  --lesson-control: rgba(233, 248, 247, 0.64);
 }
 
 .lesson-detail-panel.amber {
-  --lesson-accent: #b7791f;
-  --lesson-tint: #fef3c7;
-  --lesson-field: rgba(183, 121, 31, 0.13);
-  --lesson-control: rgba(254, 243, 199, 0.58);
+  --lesson-accent: #d6b75f;
+  --lesson-tint: #fff8df;
+  --lesson-field: rgba(214, 183, 95, 0.18);
+  --lesson-control: rgba(255, 248, 223, 0.64);
 }
 
 .lesson-detail-panel.cyan {
-  --lesson-accent: #0884a8;
-  --lesson-tint: #cffafe;
-  --lesson-field: rgba(8, 132, 168, 0.13);
-  --lesson-control: rgba(207, 250, 254, 0.58);
+  --lesson-accent: #7fb7d6;
+  --lesson-tint: #eff8fc;
+  --lesson-field: rgba(127, 183, 214, 0.17);
+  --lesson-control: rgba(239, 248, 252, 0.64);
 }
 
 .lesson-detail-head {
