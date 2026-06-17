@@ -12,7 +12,7 @@ from extract_student_info import extract_students_from_workbook  # noqa: E402
 
 
 class ExtractStudentInfoTest(unittest.TestCase):
-    def test_extracts_and_dedupes_students_without_contact_fields(self):
+    def test_extracts_and_dedupes_students_with_contact_fields(self):
         workbook = Workbook()
         worksheet = workbook.active
         worksheet.title = "Sheet1"
@@ -34,10 +34,12 @@ class ExtractStudentInfoTest(unittest.TestCase):
         self.assertEqual(students[0]["grade"], "Y3")
         self.assertEqual(students[0]["school"], "YCIS")
         self.assertEqual(students[0]["needs"], "学科陪伴")
+        self.assertEqual(students[0]["phone"], "13600000000")
+        self.assertEqual(students[0]["address"], "上海")
         self.assertEqual(students[1]["businessType"], "樱桃")
         self.assertEqual(students[2]["needs"], "阅读")
-        self.assertFalse(any("phone" in student for student in students))
-        self.assertFalse(any("address" in student for student in students))
+        self.assertEqual(students[2]["phone"], "13900000000")
+        self.assertEqual(students[2]["address"], "徐汇")
 
 
 if __name__ == "__main__":

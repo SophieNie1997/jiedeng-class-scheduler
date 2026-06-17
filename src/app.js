@@ -6,7 +6,7 @@ import {
   grades,
   shiftRoster as baseShiftRoster,
   studentCatalog as baseStudentCatalog,
-} from "./data.js?v=20260617-shift-refresh";
+} from "./data.js?v=20260617-student-table";
 import {
   applyCoursePermissions,
   buildDefaultCoursePermissions,
@@ -1037,38 +1037,78 @@ function renderStudentOverviewView() {
     </div>
     ${
       overview.students.length
-        ? `<div class="student-summary-grid">${overview.students.map((student) => renderStudentSummaryCard(student)).join("")}</div>`
+        ? renderStudentLedgerTable(overview.students)
         : renderOverviewEmpty("目前没有未来课程学员")
     }
   `;
 }
 
-function renderStudentSummaryCard(student) {
+function renderStudentLedgerTable(students) {
   return `
-    <article class="student-summary-card">
-      <div class="student-summary-head">
-        <div>
-          <strong>${escapeHtml(student.name)}</strong>
-          <span>${student.lessonCount} 节课</span>
-        </div>
+    <div class="student-table-planner">
+      <img class="student-table-sticker sticker-ribbon" src="./background/my melody _3.jpeg" alt="" loading="lazy" aria-hidden="true" />
+      <img class="student-table-sticker sticker-heart" src="./photo/♡.jpeg" alt="" loading="lazy" aria-hidden="true" />
+      <div class="student-table-note">
+        <span>Student ledger</span>
+        <strong>${students.length} 位</strong>
+      </div>
+      <div class="student-ledger-wrap">
+        <table class="student-ledger-table">
+          <thead>
+            <tr>
+              <th>学员</th>
+              <th>性别</th>
+              <th>年级</th>
+              <th>学校</th>
+              <th>业务/频率</th>
+              <th>电话</th>
+              <th>家庭住址</th>
+              <th>需求</th>
+              <th>课程</th>
+              <th>老师</th>
+              <th>未来时间</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${students.map((student) => renderStudentTableRow(student)).join("")}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  `;
+}
+
+function renderStudentTableRow(student) {
+  return `
+    <tr>
+      <th scope="row">
+        <span class="student-ledger-name">${escapeHtml(student.name)}</span>
+        <em>${escapeHtml(student.lessonCount ? `${student.lessonCount} 节课` : "未排未来课程")}</em>
+      </th>
+      <td>${escapeHtml(student.gender || "未填写")}</td>
+      <td>${escapeHtml(student.grade || "未填写")}</td>
+      <td>${escapeHtml(student.school || "未填写")}</td>
+      <td>${escapeHtml(formatStudentBusiness(student))}</td>
+      <td class="student-ledger-phone">${escapeHtml(student.phone || "未填写")}</td>
+      <td class="student-ledger-address">${escapeHtml(student.address || "未填写")}</td>
+      <td>${escapeHtml(student.needs || "未填写")}</td>
+      <td>${escapeHtml(student.courses.join("、") || "未填写")}</td>
+      <td>${escapeHtml(student.teachers.join("、") || "未填写")}</td>
+      <td>${escapeHtml(student.lessonCount ? `${student.firstDate || "未填写"} 至 ${student.lastDate || "未填写"}` : "未排未来课程")}</td>
+      <td>
         ${
           student.lessonIds.length
             ? `<button class="overview-delete-button" data-student-delete="${escapeAttribute(student.name)}" type="button" aria-label="删除这位学员的未来课程">${renderTrashIcon()}</button>`
-            : ""
+            : `<span class="student-ledger-empty">-</span>`
         }
-      </div>
-      <dl>
-        ${renderStudentDetail("年级", student.grade || "未填写")}
-        ${renderStudentDetail("学校", student.school || "未填写")}
-        ${renderStudentDetail("频率", student.frequency || "未填写")}
-        ${renderStudentDetail("需求", student.needs || student.businessType || "未填写")}
-        ${renderStudentDetail("课程", student.courses.join("、") || "未填写")}
-        ${renderStudentDetail("老师", student.teachers.join("、") || "未填写")}
-        ${renderStudentDetail("校区", student.campuses.join("、") || "未填写")}
-        ${renderStudentDetail("时间", student.lessonCount ? `${student.firstDate || "未填写"} 至 ${student.lastDate || "未填写"}` : "未排未来课程")}
-      </dl>
-    </article>
+      </td>
+    </tr>
   `;
+}
+
+function formatStudentBusiness(student) {
+  return [student.businessType, student.frequency].filter(Boolean).join(" / ") || "未填写";
 }
 
 function renderStudentDetail(label, value) {

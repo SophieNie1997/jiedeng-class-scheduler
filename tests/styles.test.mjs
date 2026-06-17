@@ -42,7 +42,12 @@ test("course and student overview views are available as workspace tabs", () => 
   assert.ok(css.includes(".course-card-grid"));
   assert.ok(css.includes(".course-overview-card"));
   assert.ok(css.includes(".overview-delete-button"));
-  assert.ok(css.includes(".student-summary-grid"));
+  assert.equal(appSource.includes("renderStudentTableRow"), true);
+  assert.equal(appSource.includes('class="student-table-planner"'), true);
+  assert.equal(appSource.includes('class="student-table-sticker'), true);
+  assert.ok(css.includes(".student-table-planner"));
+  assert.ok(css.includes(".student-ledger-table"));
+  assert.ok(css.includes(".student-table-sticker"));
 });
 
 test("calendar and permission views expose manual creation actions", () => {

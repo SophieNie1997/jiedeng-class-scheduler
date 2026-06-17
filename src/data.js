@@ -1,5 +1,5 @@
 import { importedLessons } from "./importedLessons.js?v=20260617-folder-refresh";
-import { importedStudents } from "./importedStudents.js?v=20260617-folder-refresh";
+import { importedStudents } from "./importedStudents.js?v=20260617-student-table";
 import {
   importedDefaultShiftOverrides,
   importedShiftRoster,

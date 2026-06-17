@@ -88,6 +88,8 @@ export function buildStudentOverview(lessons, options = {}) {
     current.businessType = current.businessType || normalizeText(student.businessType);
     current.frequency = current.frequency || normalizeText(student.frequency);
     current.needs = current.needs || normalizeText(student.needs);
+    current.phone = current.phone || normalizeText(student.phone);
+    current.address = current.address || normalizeText(student.address);
     current.source = current.source || normalizeText(student.source);
     studentsByName.set(name, current);
   }

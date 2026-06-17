@@ -104,6 +104,8 @@ def build_student_from_row(values: dict[str, str], source_name: str, sheet_name:
             "businessType": pick_first(values, ["业务类型"]),
             "frequency": pick_first(values, ["上课频率"]),
             "needs": pick_first(values, ["当前主要需求陪伴板块"]),
+            "phone": pick_first(values, ["电话", "电话号码 2"]),
+            "address": pick_first(values, ["地址", "家庭地址"]),
             "_phone": pick_first(values, ["电话", "电话号码 2"]),
             "source": f"{source_name}:{sheet_name}!{row}",
         }
@@ -141,7 +143,20 @@ def merge_student(current: dict | None, incoming: dict) -> dict:
 
 
 def compact_student(student: dict) -> dict:
-    ordered_keys = ["id", "name", "gender", "grade", "school", "businessType", "frequency", "needs", "_phone", "source"]
+    ordered_keys = [
+        "id",
+        "name",
+        "gender",
+        "grade",
+        "school",
+        "businessType",
+        "frequency",
+        "needs",
+        "phone",
+        "address",
+        "_phone",
+        "source",
+    ]
     return {key: normalize_text(student.get(key)) for key in ordered_keys if normalize_text(student.get(key))}
 
 
