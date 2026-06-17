@@ -113,6 +113,7 @@ const state = {
   coursePermissions: {},
   lessonEdits: loadLessonEdits(),
   selectedLessonId: null,
+  selectedCourseKey: "",
   draftLesson: null,
   pendingConfirm: null,
   sync: {
@@ -427,11 +428,24 @@ addCalendarLessonButton.addEventListener("click", () => {
 
 courseOverviewNode.addEventListener("click", (event) => {
   const deleteButton = event.target.closest("[data-course-delete]");
-  if (!deleteButton) {
+  if (deleteButton) {
+    openCourseDeleteConfirm(deleteButton.dataset.courseDelete);
     return;
   }
 
-  openCourseDeleteConfirm(deleteButton.dataset.courseDelete);
+  const editButton = event.target.closest("[data-course-edit]");
+  if (editButton) {
+    openCourseInLessonEditor(editButton.dataset.courseEdit);
+    return;
+  }
+
+  const courseButton = event.target.closest("[data-course-select]");
+  if (!courseButton) {
+    return;
+  }
+
+  state.selectedCourseKey = courseButton.dataset.courseSelect || "";
+  renderCourseOverviewView();
 });
 
 studentOverviewNode.addEventListener("click", (event) => {
@@ -1055,59 +1069,120 @@ function renderCourseOverviewView() {
   const today = getTodayIsoDate();
   const overview = buildCourseOverview(effectiveLessons, { today });
   const studentOverview = buildStudentOverview(effectiveLessons, { today, studentCatalog: baseStudentCatalog });
+  const selectedCard = overview.courseCards.find((card) => card.key === state.selectedCourseKey) || null;
   courseOverviewLine.textContent = `从 ${formatDateForDisplay(today)} 起，还有 ${overview.totalCourses} 组未来课程、${overview.totalLessons} 节未完成课节。`;
 
   courseOverviewNode.innerHTML = `
-    <div class="overview-stat-row">
-      <article class="overview-stat-card">
-        <span>未来课程</span>
-        <strong>${overview.totalCourses}</strong>
-        <em>按学员与课程组合成卡片</em>
-      </article>
-      <article class="overview-stat-card mint">
-        <span>未来课节</span>
-        <strong>${overview.totalLessons}</strong>
-        <em>今日以前已自动隐藏</em>
-      </article>
-      <article class="overview-stat-card lavender">
-        <span>覆盖学员</span>
-        <strong>${studentOverview.totalStudents}</strong>
-        <em>来自学员信息与未来课程</em>
-      </article>
+    <div class="course-summary-strip">
+      ${renderCourseSummaryPill("未来课程", overview.totalCourses, "按学员与课程汇总")}
+      ${renderCourseSummaryPill("未来课节", overview.totalLessons, "今日以前自动隐藏")}
+      ${renderCourseSummaryPill("覆盖学员", studentOverview.totalStudents, "来自学员信息与未来课程")}
     </div>
     ${
       overview.courseCards.length
-        ? `<div class="course-card-grid">${overview.courseCards.map((card) => renderCourseOverviewCard(card)).join("")}</div>`
+        ? `
+          <div class="course-overview-board">
+            <section class="course-quick-list" aria-label="所有课程总览">
+              <div class="course-quick-header" aria-hidden="true">
+                <span>课程 / 学员</span>
+                <span>老师</span>
+                <span>时间</span>
+                <span>下节</span>
+                <span>剩余</span>
+                <span>校区</span>
+              </div>
+              <div class="course-quick-rows">
+                ${overview.courseCards.map((card) => renderCourseOverviewRow(card, card.key === state.selectedCourseKey)).join("")}
+              </div>
+            </section>
+            ${selectedCard ? renderCourseDetailCard(selectedCard) : renderCourseDetailPlaceholder()}
+          </div>
+        `
         : renderOverviewEmpty("目前没有未来课程")
     }
   `;
 }
 
-function renderCourseOverviewCard(card) {
+function renderCourseSummaryPill(label, value, caption) {
   return `
-    <article class="course-overview-card">
-      <div class="course-card-head">
+    <span>
+      <strong>${escapeHtml(value)}</strong>
+      <em>${escapeHtml(label)}</em>
+      <small>${escapeHtml(caption)}</small>
+    </span>
+  `;
+}
+
+function renderCourseOverviewRow(card, isSelected) {
+  return `
+    <article class="course-quick-row ${isSelected ? "selected" : ""}">
+      <button
+        class="course-quick-button"
+        data-course-select="${escapeAttribute(card.key)}"
+        type="button"
+        aria-label="查看 ${escapeAttribute(card.studentName)} ${escapeAttribute(card.course)} 课程详情"
+      >
+        <span class="course-quick-main">
+          <strong>${escapeHtml(card.course)}</strong>
+          <small>${escapeHtml(card.studentName)}</small>
+        </span>
+        <span>${escapeHtml(card.teacherName)}</span>
+        <span>${escapeHtml(card.timeLabel)}</span>
+        <span>${escapeHtml(card.nextDate || "未填写")}</span>
+        <span>${escapeHtml(card.lessonCount)} 节</span>
+        <span>${escapeHtml(card.campus)}</span>
+      </button>
+      <button class="overview-delete-button course-row-delete" data-course-delete="${escapeAttribute(card.key)}" type="button" aria-label="删除这组课程">
+        ${renderTrashIcon()}
+      </button>
+    </article>
+  `;
+}
+
+function renderCourseDetailCard(card) {
+  return `
+    <aside class="course-detail-card" aria-label="课程详细信息">
+      <img class="course-detail-sticker" src="./photo/@mikkoillustrations on ig_.jpeg" alt="" loading="lazy" aria-hidden="true" />
+      <div class="course-detail-head">
         <div>
-          <span>下节 ${escapeHtml(card.nextDate || "未填写")}</span>
-          <h3>${escapeHtml(card.studentName)}</h3>
-          <p>${escapeHtml(card.course)}</p>
+          <span>课程详情贴纸</span>
+          <h3>${escapeHtml(card.course)}</h3>
+          <p>${escapeHtml(card.studentName)}</p>
         </div>
+      </div>
+      <div class="course-detail-actions">
+        <button class="course-edit-button" data-course-edit="${escapeAttribute(card.key)}" type="button">编辑课程</button>
         <button class="overview-delete-button" data-course-delete="${escapeAttribute(card.key)}" type="button" aria-label="删除这组课程">
           ${renderTrashIcon()}
         </button>
       </div>
-      <div class="course-card-tags">
+      <div class="course-detail-tags">
         <span>${escapeHtml(card.lessonCount)} 节未完成</span>
         <span>${escapeHtml(card.timeLabel)}</span>
         <span>${escapeHtml(card.weekdays.join("、") || "上课日未填写")}</span>
       </div>
-      <dl class="course-card-details">
+      <dl class="course-detail-list">
         ${renderStudentDetail("老师", card.teacherName)}
         ${renderStudentDetail("校区", card.campus)}
         ${renderStudentDetail("日期", `${card.firstDate || "未填写"} 至 ${card.lastDate || "未填写"}`)}
         ${renderStudentDetail("备注", card.notes.join("、") || "无")}
       </dl>
-    </article>
+    </aside>
+  `;
+}
+
+function renderCourseDetailPlaceholder() {
+  return `
+    <aside class="course-detail-card empty" aria-label="课程详细信息">
+      <img class="course-detail-sticker" src="./photo/˗ˏˋ꒰🍥꒱.jpeg" alt="" loading="lazy" aria-hidden="true" />
+      <div class="course-detail-head">
+        <div>
+          <span>课程详情贴纸</span>
+          <h3>点一门课程看看</h3>
+          <p>左侧总览只放核心信息，详细老师、日期、备注会在这里展开。</p>
+        </div>
+      </div>
+    </aside>
   `;
 }
 
@@ -1922,6 +1997,26 @@ function deleteCourseOverviewCard(courseKey) {
   deleteLessonsByIds(card.lessonIds);
 }
 
+function openCourseInLessonEditor(courseKey) {
+  const lessons = getEffectiveLessons();
+  const overview = buildCourseOverview(lessons, { today: getTodayIsoDate() });
+  const card = overview.courseCards.find((item) => item.key === courseKey);
+  const lesson = card?.lessonIds.length
+    ? lessons.find((item) => String(item.id) === String(card.lessonIds[0]))
+    : null;
+  if (!lesson) {
+    return;
+  }
+
+  state.view = "planner";
+  state.selectedLessonId = lesson.id;
+  state.draftLesson = null;
+  state.weekStart = getWeekStartForDate(lesson.date);
+  weekStartInput.value = state.weekStart;
+  shiftWeekStartInput.value = state.weekStart;
+  render();
+}
+
 function deleteStudentOverviewCard(studentId) {
   const student = getStudentDirectoryRows().find((item) => item.id === studentId);
   if (!student) {
@@ -2331,6 +2426,13 @@ function getWeekDates(weekStart) {
       label: day.label,
     };
   });
+}
+
+function getWeekStartForDate(dateString) {
+  const date = new Date(`${dateString}T00:00:00Z`);
+  const weekday = getWeekdayValue(dateString);
+  date.setUTCDate(date.getUTCDate() - weekday + 1);
+  return date.toISOString().slice(0, 10);
 }
 
 function getTodayIsoDate() {

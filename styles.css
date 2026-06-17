@@ -1938,51 +1938,223 @@ fieldset {
   white-space: nowrap;
 }
 
-.course-card-grid {
+.course-summary-strip {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
 }
 
-.course-overview-card {
-  border: 1px solid rgba(239, 189, 203, 0.76);
+.course-summary-strip span {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: 10px;
+  align-items: center;
+  min-width: 0;
+  border: 1px solid rgba(239, 189, 203, 0.7);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.58);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.82);
+  padding: 10px 12px;
+}
+
+.course-summary-strip strong {
+  grid-row: span 2;
+  color: #1f2933;
+  font-size: 26px;
+  line-height: 1;
+}
+
+.course-summary-strip em,
+.course-summary-strip small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.course-summary-strip em {
+  color: #526069;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.course-summary-strip small {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.course-overview-board {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  gap: 14px;
+  align-items: start;
+}
+
+.course-quick-list {
+  overflow: hidden;
+  border: 1px solid rgba(239, 189, 203, 0.72);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.68);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.86);
+}
+
+.course-quick-header,
+.course-quick-button {
+  display: grid;
+  grid-template-columns: minmax(170px, 1.55fr) minmax(80px, 0.85fr) minmax(92px, 0.9fr) minmax(92px, 0.9fr) minmax(62px, 0.62fr) minmax(74px, 0.78fr);
+  gap: 8px;
+  align-items: center;
+}
+
+.course-quick-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border-bottom: 1px solid rgba(239, 189, 203, 0.72);
+  background: #fff0f5;
+  padding: 10px 52px 10px 12px;
+  color: #526069;
+  font-size: 11px;
+  font-weight: 950;
+}
+
+.course-quick-rows {
+  max-height: calc(100vh - 375px);
+  overflow: auto;
+}
+
+.course-quick-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 40px;
+  align-items: stretch;
+  border-bottom: 1px solid rgba(239, 189, 203, 0.48);
+}
+
+.course-quick-row:last-child {
+  border-bottom: 0;
+}
+
+.course-quick-row.selected {
+  background:
+    linear-gradient(90deg, rgba(255, 231, 238, 0.82), rgba(255, 255, 255, 0.48)),
+    rgba(255, 255, 255, 0.7);
+}
+
+.course-quick-button {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: #25313a;
+  padding: 9px 8px 9px 12px;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 850;
+  text-align: left;
+  cursor: pointer;
+}
+
+.course-quick-button > span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.course-quick-main {
+  display: grid;
+  gap: 2px;
+}
+
+.course-quick-main strong,
+.course-quick-main small {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.course-quick-main strong {
+  color: #1f2933;
+  font-size: 13px;
+  font-weight: 950;
+}
+
+.course-quick-main small {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.course-row-delete {
+  align-self: center;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+}
+
+.course-row-delete svg {
+  width: 15px;
+  height: 15px;
+}
+
+.course-detail-card {
+  position: sticky;
+  top: 16px;
+  min-height: 310px;
+  overflow: hidden;
+  border: 1px solid rgba(239, 189, 203, 0.78);
   border-radius: 24px;
   background:
-    linear-gradient(180deg, rgba(255, 250, 253, 0.94), rgba(255, 255, 255, 0.74)),
+    linear-gradient(180deg, rgba(255, 250, 253, 0.94), rgba(255, 255, 255, 0.78)),
     #fffdfb;
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.9),
-    0 12px 24px rgba(143, 84, 103, 0.08);
-  padding: 14px;
+    0 16px 30px rgba(143, 84, 103, 0.09);
+  padding: 16px;
 }
 
-.course-card-head {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: start;
-  gap: 12px;
+.course-detail-card.empty {
+  min-height: 240px;
+}
+
+.course-detail-sticker {
+  position: absolute;
+  right: -8px;
+  bottom: -10px;
+  width: 98px;
+  height: 98px;
+  object-fit: cover;
+  border-radius: 28px;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.course-detail-head {
+  position: relative;
+  z-index: 1;
   border: 1px solid rgba(244, 167, 190, 0.4);
   border-radius: 18px;
   background: linear-gradient(180deg, rgba(255, 231, 238, 0.82), rgba(255, 247, 250, 0.7));
   padding: 12px;
 }
 
-.course-card-head span {
+.course-detail-head span {
   display: inline-block;
   color: var(--accent);
   font-size: 12px;
-  font-weight: 900;
+  font-weight: 950;
 }
 
-.course-card-head h3 {
+.course-detail-head h3 {
   margin: 4px 0 0;
   color: #1f2730;
   font-size: 22px;
-  line-height: 1.1;
+  line-height: 1.12;
   overflow-wrap: anywhere;
 }
 
-.course-card-head p {
+.course-detail-head p {
   margin: 6px 0 0;
   color: #526069;
   font-size: 14px;
@@ -1991,14 +2163,37 @@ fieldset {
   overflow-wrap: anywhere;
 }
 
-.course-card-tags {
+.course-detail-actions {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.course-edit-button {
+  height: 38px;
+  border: 1px solid rgba(215, 125, 151, 0.24);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.48);
+  color: #9b4262;
+  padding: 0 14px;
+  font-size: 12px;
+  font-weight: 950;
+  cursor: pointer;
+}
+
+.course-detail-tags {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin-top: 12px;
 }
 
-.course-card-tags span {
+.course-detail-tags span {
   border: 1px solid rgba(47, 116, 101, 0.16);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.68);
@@ -2008,25 +2203,27 @@ fieldset {
   font-weight: 900;
 }
 
-.course-card-details {
+.course-detail-list {
+  position: relative;
+  z-index: 1;
   display: grid;
   gap: 9px;
   margin: 12px 0 0;
 }
 
-.course-card-details div {
+.course-detail-list div {
   display: grid;
   grid-template-columns: 48px minmax(0, 1fr);
   gap: 10px;
 }
 
-.course-card-details dt {
+.course-detail-list dt {
   color: var(--muted);
   font-size: 12px;
   font-weight: 900;
 }
 
-.course-card-details dd {
+.course-detail-list dd {
   margin: 0;
   color: #27343b;
   font-size: 13px;
@@ -2582,7 +2779,8 @@ fieldset {
   .permission-add-form,
   .student-add-form,
   .overview-stat-row,
-  .course-card-grid,
+  .course-summary-strip,
+  .course-overview-board,
   .student-summary-grid {
     grid-template-columns: 1fr;
   }
