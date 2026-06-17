@@ -52,6 +52,11 @@ import {
   setLessonEdit,
 } from "./lessonEdits.js?v=20260616-restore-deleted";
 import {
+  deleteLessonsInScope,
+  getScopedLessonCount,
+  updateLessonsInScope,
+} from "./lessonSeries.js?v=20260617-lesson-scope";
+import {
   buildCourseOverview,
   buildStudentOverview,
 } from "./overview.js?v=20260617-folder-refresh";
@@ -109,7 +114,7 @@ const state = {
   lessonEdits: loadLessonEdits(),
   selectedLessonId: null,
   draftLesson: null,
-  pendingStudentDeleteId: "",
+  pendingConfirm: null,
   sync: {
     status: "local",
     email: "",
@@ -426,7 +431,7 @@ courseOverviewNode.addEventListener("click", (event) => {
     return;
   }
 
-  deleteCourseOverviewCard(deleteButton.dataset.courseDelete);
+  openCourseDeleteConfirm(deleteButton.dataset.courseDelete);
 });
 
 studentOverviewNode.addEventListener("click", (event) => {
@@ -450,14 +455,15 @@ studentDeleteDialogNode.addEventListener("click", (event) => {
     return;
   }
 
-  const confirmButton = event.target.closest("[data-student-delete-confirm]");
+  const confirmButton = event.target.closest("[data-confirm-action]");
   if (!confirmButton) {
     return;
   }
 
-  const studentId = confirmButton.dataset.studentDeleteConfirm || state.pendingStudentDeleteId;
+  const action = confirmButton.dataset.confirmAction || "";
+  const scope = confirmButton.dataset.lessonScope || "single";
+  runPendingConfirmAction(action, scope);
   closeStudentDeleteConfirm();
-  deleteStudentOverviewCard(studentId);
 });
 
 studentOverviewNode.addEventListener("submit", (event) => {
@@ -483,11 +489,11 @@ calendarNode.addEventListener("click", (event) => {
   const lessonActionButton = event.target.closest("[data-lesson-action]");
   if (lessonActionButton) {
     if (lessonActionButton.dataset.lessonAction === "save") {
-      saveSelectedLessonFromDetail();
+      requestSelectedLessonSave();
     }
 
     if (lessonActionButton.dataset.lessonAction === "delete") {
-      deleteSelectedLessonFromDetail();
+      requestSelectedLessonDelete();
     }
 
     return;
@@ -1287,12 +1293,26 @@ function renderStudentDetail(label, value) {
 }
 
 function openStudentDeleteConfirm(studentId) {
-  state.pendingStudentDeleteId = studentId || "";
+  state.pendingConfirm = { type: "student-delete", studentId: studentId || "" };
+  renderStudentDeleteDialog();
+}
+
+function openCourseDeleteConfirm(courseKey) {
+  state.pendingConfirm = { type: "course-delete", courseKey: courseKey || "" };
+  renderStudentDeleteDialog();
+}
+
+function openLessonScopeConfirm(action, lessonChanges = null) {
+  state.pendingConfirm = {
+    type: action === "save" ? "lesson-save" : "lesson-delete",
+    lessonId: state.selectedLessonId || "",
+    lessonChanges,
+  };
   renderStudentDeleteDialog();
 }
 
 function closeStudentDeleteConfirm() {
-  state.pendingStudentDeleteId = "";
+  state.pendingConfirm = null;
   renderStudentDeleteDialog();
 }
 
@@ -1301,18 +1321,12 @@ function renderStudentDeleteDialog() {
     return;
   }
 
-  const student = state.pendingStudentDeleteId
-    ? getStudentDirectoryRows().find((item) => item.id === state.pendingStudentDeleteId)
-    : null;
-  if (!student) {
-    state.pendingStudentDeleteId = "";
+  const dialog = buildPendingConfirmDialog();
+  if (!dialog) {
+    state.pendingConfirm = null;
     studentDeleteDialogNode.innerHTML = "";
     return;
   }
-
-  const consequence = student.lessonIds.length
-    ? `确认后会把 ${student.lessonIds.length} 节未来课程一起同步删除，同事们刷新网站后也会看不到这些课程。`
-    : "确认后会把这位学员从总学员列表里隐藏，同事们刷新网站后也会看不到这条名册记录。";
 
   studentDeleteDialogNode.innerHTML = `
     <div class="student-delete-backdrop">
@@ -1323,20 +1337,110 @@ function renderStudentDeleteDialog() {
         aria-labelledby="student-delete-title"
       >
         <span class="student-delete-sticker" aria-hidden="true">♡</span>
-        <p class="student-delete-kicker">小心心提醒</p>
-        <h3 id="student-delete-title">确定要删除 ${escapeHtml(student.name)} 吗？</h3>
-        <p>${escapeHtml(consequence)} 请确认不是手滑哦。</p>
+        <p class="student-delete-kicker">${escapeHtml(dialog.kicker)}</p>
+        <h3 id="student-delete-title">${escapeHtml(dialog.title)}</h3>
+        <p>${escapeHtml(dialog.message)}</p>
         <div class="student-delete-actions">
           <button class="student-delete-cancel" data-student-delete-cancel type="button">先不删</button>
-          <button
-            class="student-delete-confirm"
-            data-student-delete-confirm="${escapeAttribute(student.id)}"
-            type="button"
-          >确认删除</button>
+          ${dialog.actions
+            .map(
+              (action) => `
+                <button
+                  class="${escapeAttribute(action.className)}"
+                  data-confirm-action="${escapeAttribute(action.action)}"
+                  ${action.action === "student-delete" ? 'data-student-delete-confirm="true"' : ""}
+                  ${action.scope ? `data-lesson-scope="${escapeAttribute(action.scope)}"` : ""}
+                  type="button"
+                >${escapeHtml(action.label)}</button>
+              `,
+            )
+            .join("")}
         </div>
       </section>
     </div>
   `;
+}
+
+function buildPendingConfirmDialog() {
+  const pending = state.pendingConfirm;
+  if (!pending) {
+    return null;
+  }
+
+  if (pending.type === "student-delete") {
+    const student = getStudentDirectoryRows().find((item) => item.id === pending.studentId);
+    if (!student) {
+      return null;
+    }
+    const consequence = student.lessonIds.length
+      ? `确认后会把 ${student.lessonIds.length} 节未来课程一起同步删除，同事们刷新网站后也会看不到这些课程。`
+      : "确认后会把这位学员从总学员列表里隐藏，同事们刷新网站后也会看不到这条名册记录。";
+    return {
+      kicker: "小心心提醒",
+      title: `确定要删除 ${student.name} 吗？`,
+      message: `${consequence} 请确认不是手滑哦。`,
+      actions: [{ label: "确认删除", action: "student-delete", className: "student-delete-confirm" }],
+    };
+  }
+
+  if (pending.type === "course-delete") {
+    const overview = buildCourseOverview(getEffectiveLessons(), { today: getTodayIsoDate() });
+    const card = overview.courseCards.find((item) => item.key === pending.courseKey);
+    if (!card) {
+      return null;
+    }
+    return {
+      kicker: "课程收纳提醒",
+      title: `确定删除 ${card.studentName} · ${card.course} 吗？`,
+      message: `确认后会同步删除这组 ${card.lessonIds.length} 节未来课程。请确认不是手滑哦。`,
+      actions: [{ label: "确认删除", action: "course-delete", className: "student-delete-confirm" }],
+    };
+  }
+
+  if (pending.type === "lesson-save" || pending.type === "lesson-delete") {
+    const lesson = getEffectiveLessons().find((item) => String(item.id) === String(pending.lessonId));
+    if (!lesson) {
+      return null;
+    }
+    const isSave = pending.type === "lesson-save";
+    const followingCount = getScopedLessonCount(getCalendarActionLessons(), pending.lessonId, "following");
+    return {
+      kicker: isSave ? "循环课程小纸条" : "删除课程小纸条",
+      title: isSave ? "要修改哪几节课？" : `要删除 ${lesson.studentName} · ${lesson.course} 的哪几节？`,
+      message: isSave
+        ? "像苹果日历一样，可以只改当前这节，也可以把这节以及后续同系列课程一起更新。"
+        : `仅此节会只删除当前课程；此节及后续会同步删除 ${followingCount} 节同系列课程。请确认不是手滑哦。`,
+      actions: [
+        { label: "仅此节", action: pending.type, scope: "single", className: "student-delete-cancel" },
+        { label: "此节及后续", action: pending.type, scope: "following", className: "student-delete-confirm" },
+      ],
+    };
+  }
+
+  return null;
+}
+
+function runPendingConfirmAction(action, scope) {
+  const pending = state.pendingConfirm;
+  if (!pending || action !== pending.type) {
+    return;
+  }
+
+  if (action === "student-delete") {
+    deleteStudentOverviewCard(pending.studentId);
+  }
+
+  if (action === "course-delete") {
+    deleteCourseOverviewCard(pending.courseKey);
+  }
+
+  if (action === "lesson-save") {
+    saveSelectedLessonFromDetail(scope, pending.lessonChanges);
+  }
+
+  if (action === "lesson-delete") {
+    deleteSelectedLessonFromDetail(scope);
+  }
 }
 
 function renderOverviewEmpty(message) {
@@ -1656,7 +1760,7 @@ function saveSelectedShiftFromEditor() {
   });
 }
 
-function saveSelectedLessonFromDetail() {
+function requestSelectedLessonSave() {
   if (!state.selectedLessonId) {
     return;
   }
@@ -1672,10 +1776,34 @@ function saveSelectedLessonFromDetail() {
   }
 
   if (state.draftLesson?.id === state.selectedLessonId) {
-    state.lessonEdits = setManualLessonSeries(state.lessonEdits, state.selectedLessonId, lessonChanges);
+    saveSelectedLessonFromDetail("following", lessonChanges);
+    return;
+  }
+
+  openLessonScopeConfirm("save", lessonChanges);
+}
+
+function saveSelectedLessonFromDetail(scope = "single", lessonChanges = null) {
+  if (!state.selectedLessonId) {
+    return;
+  }
+
+  const changes = lessonChanges || readLessonChangesFromDetailForm(document.querySelector("#lesson-detail-form"));
+  if (!changes) {
+    return;
+  }
+
+  if (state.draftLesson?.id === state.selectedLessonId) {
+    state.lessonEdits = setManualLessonSeries(state.lessonEdits, state.selectedLessonId, changes);
     state.draftLesson = null;
   } else {
-    state.lessonEdits = setLessonEdit(state.lessonEdits, state.selectedLessonId, lessonChanges);
+    state.lessonEdits = updateLessonsInScope(
+      getCalendarActionLessons(),
+      state.lessonEdits,
+      state.selectedLessonId,
+      scope,
+      changes,
+    );
   }
 
   saveLessonEdits(state.lessonEdits);
@@ -1754,10 +1882,6 @@ function deleteCourseOverviewCard(courseKey) {
     return;
   }
 
-  if (!window.confirm(`删除 ${card.studentName} · ${card.course} 的 ${card.lessonIds.length} 节未来课程？`)) {
-    return;
-  }
-
   deleteLessonsByIds(card.lessonIds);
 }
 
@@ -1793,7 +1917,15 @@ function deleteLessonsByIds(lessonIds) {
   render();
 }
 
-function deleteSelectedLessonFromDetail() {
+function requestSelectedLessonDelete() {
+  if (!state.selectedLessonId) {
+    return;
+  }
+
+  openLessonScopeConfirm("delete");
+}
+
+function deleteSelectedLessonFromDetail(scope = "single") {
   if (!state.selectedLessonId) {
     return;
   }
@@ -1805,7 +1937,7 @@ function deleteSelectedLessonFromDetail() {
     return;
   }
 
-  state.lessonEdits = deleteLessonEdit(state.lessonEdits, state.selectedLessonId);
+  state.lessonEdits = deleteLessonsInScope(getCalendarActionLessons(), state.lessonEdits, state.selectedLessonId, scope);
   state.selectedLessonId = null;
   state.draftLesson = null;
   saveLessonEdits(state.lessonEdits);
@@ -2108,6 +2240,15 @@ function getEffectiveLessons() {
     [...existingLessons, ...buildUnavailableLessonsFromShifts(getShiftRoster(), state.shiftOverrides)],
     state.lessonEdits,
   ).filter((lesson) => activeTeacherIds.has(lesson.teacherId));
+}
+
+function getCalendarActionLessons() {
+  const lessons = filterCalendarLessons(getEffectiveLessons());
+  if (!state.draftLesson) {
+    return lessons;
+  }
+
+  return [...lessons.filter((lesson) => lesson.id !== state.draftLesson.id), state.draftLesson];
 }
 
 function renderShiftCellMeta(shift) {

@@ -66,9 +66,17 @@ test("student ledger uses opaque sticky name cells", () => {
 test("student delete uses a second-step in-app confirmation dialog", () => {
   assert.equal(appSource.includes('id="student-delete-dialog"'), true);
   assert.equal(appSource.includes("openStudentDeleteConfirm"), true);
+  assert.equal(appSource.includes("openCourseDeleteConfirm"), true);
+  assert.equal(appSource.includes("openLessonScopeConfirm"), true);
   assert.equal(appSource.includes("deleteStudentOverviewCard(deleteButton.dataset.studentDelete)"), false);
+  assert.equal(appSource.includes("deleteCourseOverviewCard(deleteButton.dataset.courseDelete)"), false);
+  assert.equal(appSource.includes("deleteSelectedLessonFromDetail()"), false);
+  assert.equal(appSource.includes("window.confirm"), false);
   assert.equal(appSource.includes("data-student-delete-confirm"), true);
+  assert.equal(appSource.includes("data-confirm-action"), true);
   assert.equal(appSource.includes("确认删除"), true);
+  assert.equal(appSource.includes("仅此节"), true);
+  assert.equal(appSource.includes("此节及后续"), true);
   assert.equal(appSource.includes("请确认不是手滑"), true);
   assert.ok(css.includes(".student-delete-backdrop"));
   assert.ok(css.includes(".student-delete-modal"));
