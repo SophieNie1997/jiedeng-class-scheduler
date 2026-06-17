@@ -114,6 +114,7 @@ const state = {
   selectedTeacherId: null,
   selectedShift: { teacherId: baseShiftRoster[0]?.id || "", date: "2026-06-29" },
   selectedShiftCourseKey: "",
+  showShiftBulkForm: false,
   shiftOverrides: loadShiftOverrides(),
   customCatalog: loadCustomCatalog(),
   studentDirectory: loadStudentDirectory(),
@@ -332,9 +333,9 @@ app.innerHTML = `
         <div class="shift-layout">
           <div id="shift-grid" class="shift-grid"></div>
           <div class="shift-side-stack">
-            <form id="shift-bulk-form" class="shift-bulk-form" aria-label="批量排班小纸条"></form>
             <div id="shift-course-detail" class="shift-course-detail"></div>
             <aside id="shift-editor" class="shift-editor"></aside>
+            <form id="shift-bulk-form" class="shift-bulk-form hidden" aria-label="批量排班小纸条"></form>
           </div>
         </div>
       </section>
@@ -632,6 +633,7 @@ function selectShiftCell(cell) {
     date: cell.dataset.shiftDate,
   };
   state.selectedShiftCourseKey = "";
+  state.showShiftBulkForm = false;
   renderShiftView();
 }
 
@@ -682,6 +684,10 @@ shiftEditorNode.addEventListener("click", (event) => {
 
   if (actionButton.dataset.shiftAction === "clear") {
     clearSelectedShift();
+  }
+
+  if (actionButton.dataset.shiftAction === "bulk") {
+    toggleShiftBulkForm();
   }
 });
 
@@ -1889,6 +1895,13 @@ function renderShiftCourseDetailPlaceholder() {
 }
 
 function renderShiftBulkForm(weekDates = getWeekDates(state.weekStart)) {
+  if (!state.showShiftBulkForm) {
+    shiftBulkFormNode.classList.add("hidden");
+    shiftBulkFormNode.innerHTML = "";
+    return;
+  }
+
+  shiftBulkFormNode.classList.remove("hidden");
   const roster = getShiftRoster();
   const selectedTeacherId = roster.some((teacher) => teacher.id === state.selectedShift.teacherId)
     ? state.selectedShift.teacherId
@@ -2064,8 +2077,21 @@ function renderShiftEditor() {
 
     <div class="editor-actions">
       <button class="primary-button" data-shift-action="clear" type="button">恢复默认</button>
+      <button
+        class="shift-bulk-toggle"
+        data-shift-action="bulk"
+        type="button"
+        aria-expanded="${state.showShiftBulkForm ? "true" : "false"}"
+      >
+        批量修改
+      </button>
     </div>
   `;
+}
+
+function toggleShiftBulkForm() {
+  state.showShiftBulkForm = !state.showShiftBulkForm;
+  renderShiftView();
 }
 
 function renderCoursePermissions() {
@@ -2285,6 +2311,7 @@ function applyBulkShift(payload) {
     date: targets[0].date,
   };
   state.selectedShiftCourseKey = "";
+  state.showShiftBulkForm = false;
   saveShiftOverrides(state.shiftOverrides);
   render();
 }

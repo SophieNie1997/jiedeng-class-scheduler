@@ -213,10 +213,14 @@ test("shift editor shows the selected teacher avatar", () => {
   assert.ok(getRuleText(".shift-editor-avatar .teacher-avatar").includes("width"));
 });
 
-test("shift editor auto-saves field changes and only shows the default restore action", () => {
+test("shift editor auto-saves field changes and offers compact restore plus bulk actions", () => {
   assert.equal(appSource.includes('data-shift-action="save"'), false);
   assert.equal(appSource.includes('shiftEditorNode.addEventListener("change"'), true);
   assert.equal(appSource.includes('class="primary-button" data-shift-action="clear"'), true);
+  assert.equal(appSource.includes('data-shift-action="bulk"'), true);
+  assert.equal(appSource.includes("批量修改"), true);
+  assert.equal(appSource.includes("toggleShiftBulkForm"), true);
+  assert.ok(css.includes(".shift-bulk-toggle"));
 });
 
 test("shift cells show clickable same-day course times and names without student or campus clutter", () => {
@@ -254,7 +258,11 @@ test("shift cells show clickable same-day course times and names without student
 });
 
 test("shift view offers a compact bulk scheduling sticker with in-app confirmation", () => {
-  assert.equal(appSource.includes('id="shift-bulk-form"'), true);
+  assert.equal(appSource.includes('id="shift-bulk-form" class="shift-bulk-form hidden"'), true);
+  assert.equal(appSource.includes("showShiftBulkForm: false"), true);
+  assert.equal(appSource.includes("if (!state.showShiftBulkForm)"), true);
+  assert.equal(appSource.includes('shiftBulkFormNode.classList.add("hidden")'), true);
+  assert.equal(appSource.includes('shiftBulkFormNode.classList.remove("hidden")'), true);
   assert.equal(appSource.includes("renderShiftBulkForm"), true);
   assert.equal(appSource.includes("data-bulk-shift-field"), true);
   assert.equal(appSource.includes("data-bulk-shift-weekday"), true);
