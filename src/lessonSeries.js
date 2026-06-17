@@ -21,6 +21,37 @@ export function getScopedLessonIds(lessons, selectedLessonId, scope = "single") 
     .map((lesson) => String(lesson.id));
 }
 
+export function alignExplicitSeriesDates(lessons) {
+  const alignedLessons = (lessons || []).map((lesson) => ({ ...lesson }));
+  const groups = new Map();
+
+  alignedLessons.forEach((lesson, index) => {
+    const sessionCount = Number(lesson.sessionCount || 0);
+    const startDate = normalizeDateString(lesson.startDate);
+    if (!startDate || sessionCount <= 1 || !Array.isArray(lesson.recurrenceWeekdays)) {
+      return;
+    }
+
+    const key = getSeriesKey(lesson);
+    const group = groups.get(key) || [];
+    group.push({ lesson, index });
+    groups.set(key, group);
+  });
+
+  for (const group of groups.values()) {
+    const sortedGroup = group.sort((left, right) => compareSeriesLessons(left.lesson, right.lesson));
+    const anchor = sortedGroup[0]?.lesson;
+    const count = Math.min(Number(anchor?.sessionCount || sortedGroup.length) || sortedGroup.length, sortedGroup.length);
+    const regeneratedDates = getRegeneratedDates(count, anchor);
+
+    regeneratedDates.forEach((date, index) => {
+      sortedGroup[index].lesson.date = date;
+    });
+  }
+
+  return alignedLessons;
+}
+
 export function updateLessonsInScope(lessons, rawEdits, selectedLessonId, scope, lessonChanges) {
   const selectedId = String(selectedLessonId);
   const lessonIds = getScopedLessonIds(lessons, selectedId, scope);
@@ -82,8 +113,16 @@ function compareSeriesLessons(left, right) {
 }
 
 function getRegeneratedFollowingDates(scope, count, lessonChanges, shouldRegenerate) {
+  if (scope !== "following" || !shouldRegenerate) {
+    return [];
+  }
+
+  return getRegeneratedDates(count, lessonChanges);
+}
+
+function getRegeneratedDates(count, lessonChanges) {
   const startDate = normalizeDateString(lessonChanges?.startDate);
-  if (scope !== "following" || !shouldRegenerate || !startDate || count <= 0) {
+  if (!startDate || count <= 0) {
     return [];
   }
 

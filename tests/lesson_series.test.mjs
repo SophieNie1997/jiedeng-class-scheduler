@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
-import { getScopedLessonIds, updateLessonsInScope } from "../src/lessonSeries.js";
+import { alignExplicitSeriesDates, getScopedLessonIds, updateLessonsInScope } from "../src/lessonSeries.js";
 
 const lessons = [
   makeLesson("a", "2026-07-01", "Phebe"),
@@ -83,6 +83,28 @@ test("scoped updates regenerate following lesson dates from edited start date", 
   assert.equal(updates.updates.c.date, "2026-07-08");
   assert.equal(updates.updates.b.startDate, "2026-07-07");
   assert.equal(updates.updates.c.startDate, "2026-07-07");
+});
+
+test("explicit edited series dates align from their saved start date on load", () => {
+  const aligned = alignExplicitSeriesDates([
+    {
+      ...makeLesson("b", "2026-07-08", "Phebe"),
+      startDate: "2026-07-07",
+      sessionCount: 2,
+      recurrenceWeekdays: [2, 3],
+    },
+    {
+      ...makeLesson("c", "2026-07-15", "Phebe"),
+      startDate: "2026-07-07",
+      sessionCount: 2,
+      recurrenceWeekdays: [2, 3],
+    },
+  ]);
+
+  assert.deepEqual(
+    aligned.map((lesson) => lesson.date),
+    ["2026-07-07", "2026-07-08"],
+  );
 });
 
 function makeLesson(id, date, teacherName, teacherId = teacherName.toLowerCase(), startTime = "15:00", endTime = "16:00") {

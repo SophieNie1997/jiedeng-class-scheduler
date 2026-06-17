@@ -52,10 +52,11 @@ import {
   setLessonEdit,
 } from "./lessonEdits.js?v=20260616-restore-deleted";
 import {
+  alignExplicitSeriesDates,
   deleteLessonsInScope,
   getScopedLessonCount,
   updateLessonsInScope,
-} from "./lessonSeries.js?v=20260617-series-start-date";
+} from "./lessonSeries.js?v=20260617-series-start-date-v2";
 import {
   buildCourseOverview,
   buildStudentOverview,
@@ -2384,10 +2385,10 @@ function getEffectiveTeachers() {
 
 function getEffectiveLessons() {
   const activeTeacherIds = new Set(baseCandidateTeachers.map((teacher) => teacher.id));
-  return applyLessonEdits(
+  return alignExplicitSeriesDates(applyLessonEdits(
     [...existingLessons, ...buildUnavailableLessonsFromShifts(getShiftRoster(), state.shiftOverrides)],
     state.lessonEdits,
-  ).filter((lesson) => activeTeacherIds.has(lesson.teacherId));
+  )).filter((lesson) => activeTeacherIds.has(lesson.teacherId));
 }
 
 function getCalendarActionLessons() {
