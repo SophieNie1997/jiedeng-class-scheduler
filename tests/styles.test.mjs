@@ -350,6 +350,19 @@ test("app shows a clear synced edit confirmation after saving", () => {
   assert.equal(appSource.includes("正在同步编辑内容"), true);
 });
 
+test("lesson detail save and delete return to the planner calendar", () => {
+  assert.equal(appSource.includes("closeLessonDetailToPlanner"), true);
+  assert.equal(appSource.includes('state.view = "planner"'), true);
+  assert.match(
+    appSource,
+    /function saveSelectedLessonFromDetail[\s\S]*saveLessonEdits\(state\.lessonEdits\);[\s\S]*closeLessonDetailToPlanner\(\);[\s\S]*render\(\);/,
+  );
+  assert.match(
+    appSource,
+    /function deleteSelectedLessonFromDetail[\s\S]*closeLessonDetailToPlanner\(\);[\s\S]*saveLessonEdits\(state\.lessonEdits\);[\s\S]*render\(\);/,
+  );
+});
+
 function getRuleText(selector) {
   const escapedSelector = selector.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const rule = new RegExp(`${escapedSelector}\\s*\\{([^}]+)\\}`, "m").exec(css);

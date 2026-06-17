@@ -2024,7 +2024,14 @@ function saveSelectedLessonFromDetail(scope = "single", lessonChanges = null) {
   }
 
   saveLessonEdits(state.lessonEdits);
+  closeLessonDetailToPlanner();
   render();
+}
+
+function closeLessonDetailToPlanner() {
+  state.selectedLessonId = null;
+  state.draftLesson = null;
+  state.view = "planner";
 }
 
 function readLessonChangesFromDetailForm(detailForm) {
@@ -2261,15 +2268,13 @@ function deleteSelectedLessonFromDetail(scope = "single") {
   }
 
   if (state.draftLesson?.id === state.selectedLessonId) {
-    state.selectedLessonId = null;
-    state.draftLesson = null;
-    renderCalendar();
+    closeLessonDetailToPlanner();
+    render();
     return;
   }
 
   state.lessonEdits = deleteLessonsInScope(getCalendarActionLessons(), state.lessonEdits, state.selectedLessonId, scope);
-  state.selectedLessonId = null;
-  state.draftLesson = null;
+  closeLessonDetailToPlanner();
   saveLessonEdits(state.lessonEdits);
   render();
 }
