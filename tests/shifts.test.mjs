@@ -28,7 +28,37 @@ const teachers = [
   },
 ];
 
-test("builds bulk shift targets across a date range and skips existing shift records by default", () => {
+test("builds bulk shift targets across a date range and overwrites existing shift records by default", () => {
+  const shifts = {
+    [makeShiftKey("lynn", "2026-06-30")]: {
+      type: "off",
+      label: "休",
+    },
+  };
+
+  assert.deepEqual(
+    buildBulkShiftTargets(teachers, {
+      teacherId: "__all",
+      startDate: "2026-06-29",
+      endDate: "2026-07-03",
+      weekdays: [1, 2, 3, 4, 5],
+    }, shifts),
+    [
+      { teacherId: "lynn", date: "2026-06-29", key: "lynn__2026-06-29" },
+      { teacherId: "lynn", date: "2026-06-30", key: "lynn__2026-06-30" },
+      { teacherId: "lynn", date: "2026-07-01", key: "lynn__2026-07-01" },
+      { teacherId: "lynn", date: "2026-07-02", key: "lynn__2026-07-02" },
+      { teacherId: "lynn", date: "2026-07-03", key: "lynn__2026-07-03" },
+      { teacherId: "reece", date: "2026-06-29", key: "reece__2026-06-29" },
+      { teacherId: "reece", date: "2026-06-30", key: "reece__2026-06-30" },
+      { teacherId: "reece", date: "2026-07-01", key: "reece__2026-07-01" },
+      { teacherId: "reece", date: "2026-07-02", key: "reece__2026-07-02" },
+      { teacherId: "reece", date: "2026-07-03", key: "reece__2026-07-03" },
+    ],
+  );
+});
+
+test("bulk shift targets can still fill only empty cells when explicitly requested", () => {
   const shifts = {
     [makeShiftKey("lynn", "2026-06-30")]: {
       type: "off",

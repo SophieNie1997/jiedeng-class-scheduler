@@ -2276,8 +2276,7 @@ fieldset {
   font-weight: 900;
 }
 
-.shift-bulk-weekdays label,
-.shift-bulk-mode label {
+.shift-bulk-weekdays label {
   display: flex;
   align-items: center;
   gap: 5px;
@@ -2286,26 +2285,8 @@ fieldset {
   font-weight: 900;
 }
 
-.shift-bulk-weekdays input,
-.shift-bulk-mode input {
+.shift-bulk-weekdays input {
   accent-color: #df8aac;
-}
-
-.shift-bulk-mode {
-  display: grid;
-  gap: 8px;
-}
-
-.shift-bulk-preview {
-  border: 1px solid rgba(183, 218, 210, 0.82);
-  border-radius: 16px;
-  background: rgba(245, 253, 249, 0.78);
-  color: var(--accent);
-  margin: 0;
-  padding: 10px 12px;
-  font-size: 12px;
-  font-weight: 900;
-  line-height: 1.45;
 }
 
 .shift-bulk-actions {

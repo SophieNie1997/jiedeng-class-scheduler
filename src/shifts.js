@@ -145,7 +145,7 @@ export function buildBulkShiftTargets(teachers, options, existingShifts = {}) {
     return [];
   }
 
-  const mode = options.mode || "fill-empty";
+  const mode = options.mode || "overwrite";
   const targets = [];
 
   for (const teacher of targetTeachers) {

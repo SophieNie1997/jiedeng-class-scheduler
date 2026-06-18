@@ -2238,7 +2238,7 @@ function renderShiftBulkForm(weekDates = getWeekDates(state.weekStart)) {
     startTime: "09:00",
     endTime: "18:00",
     note: "",
-    mode: "fill-empty",
+    mode: "overwrite",
   };
   const targetCount = buildBulkShiftTargets(roster, defaultPayload, state.shiftOverrides).length;
 
@@ -2312,17 +2312,6 @@ function renderShiftBulkForm(weekDates = getWeekDates(state.weekStart)) {
       <span>备注</span>
       <input data-bulk-shift-field name="bulkNote" placeholder="例如：暑期集中排班" />
     </label>
-    <div class="shift-bulk-mode" aria-label="应用方式">
-      <label>
-        <input data-bulk-shift-field name="bulkMode" type="radio" value="fill-empty" checked />
-        <span>只填空白格子</span>
-      </label>
-      <label>
-        <input data-bulk-shift-field name="bulkMode" type="radio" value="overwrite" />
-        <span>覆盖已有排班</span>
-      </label>
-    </div>
-    <p class="shift-bulk-preview" data-bulk-shift-preview>${renderBulkShiftPreviewText(targetCount)}</p>
     <div class="shift-bulk-actions">
       <button class="primary-button" data-bulk-shift-action="apply" type="submit" ${targetCount ? "" : "disabled"}>
         批量应用
@@ -2578,7 +2567,7 @@ function readBulkShiftPayload(formNode) {
     startTime: String(formData.get("bulkStartTime") || "09:00"),
     endTime: String(formData.get("bulkEndTime") || "18:00"),
     note: String(formData.get("bulkNote") || "").trim(),
-    mode: String(formData.get("bulkMode") || "fill-empty"),
+    mode: "overwrite",
   };
 }
 
@@ -2596,22 +2585,11 @@ function refreshBulkShiftFormState(formNode) {
     }
   }
 
-  const targetCount = buildBulkShiftTargets(getShiftRoster(), payload, state.shiftOverrides).length;
-  const preview = formNode.querySelector("[data-bulk-shift-preview]");
-  if (preview) {
-    preview.textContent = renderBulkShiftPreviewText(targetCount);
-  }
-
   const submitButton = formNode.querySelector("[data-bulk-shift-action='apply']");
   if (submitButton) {
+    const targetCount = buildBulkShiftTargets(getShiftRoster(), payload, state.shiftOverrides).length;
     submitButton.disabled = targetCount === 0;
   }
-}
-
-function renderBulkShiftPreviewText(targetCount) {
-  return targetCount
-    ? `准备更新 ${targetCount} 个排班格子，点确认后才会同步。`
-    : "当前筛选没有可更新的格子，可以换日期、星期或选择覆盖已有排班。";
 }
 
 function applyBulkShift(payload) {

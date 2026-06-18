@@ -323,11 +323,15 @@ test("shift view offers a compact bulk scheduling sticker with in-app confirmati
   assert.equal(appSource.includes("applyBulkShift"), true);
   assert.equal(appSource.includes('action: "bulk-shift"'), true);
   assert.equal(appSource.includes("data-confirm-action"), true);
-  assert.equal(appSource.includes("只填空白格子"), true);
-  assert.equal(appSource.includes("覆盖已有排班"), true);
+  assert.equal(appSource.includes("只填空白格子"), false);
+  assert.equal(appSource.includes("覆盖已有排班"), false);
+  assert.equal(appSource.includes("当前筛选没有可更新的格子"), false);
+  assert.equal(appSource.includes('mode: "overwrite"'), true);
+  assert.equal(appSource.includes("renderBulkShiftPreviewText"), false);
   assert.ok(css.includes(".shift-bulk-form"));
   assert.ok(css.includes(".shift-bulk-weekdays"));
-  assert.ok(css.includes(".shift-bulk-preview"));
+  assert.equal(css.includes(".shift-bulk-preview"), false);
+  assert.equal(css.includes(".shift-bulk-mode"), false);
   assert.ok(css.includes(".shift-bulk-actions"));
 });
 
