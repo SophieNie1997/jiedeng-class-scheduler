@@ -396,6 +396,29 @@ test("shift month overview has kawaii stickers without blocking schedule density
   assert.ok(getRuleText(".shift-month-week-sticker").includes("pointer-events: none"));
 });
 
+test("shift month overview separates work and rest states at a glance", () => {
+  assert.ok(getRuleText(".shift-month-mini-cell.work").includes("inset 4px 0 0 var(--shift-month-campus-accent"));
+  assert.ok(getRuleText(".shift-month-mini-cell.work strong").includes("var(--shift-month-campus-text"));
+  assert.equal(
+    getRuleValue(".shift-month-mini-cell.work.shift-campus-xuhui", "background"),
+    "linear-gradient(180deg, #ffd9e8 0%, #fff5f9 100%)",
+  );
+  assert.equal(
+    getRuleValue(".shift-month-mini-cell.work.shift-campus-babaiban", "background"),
+    "linear-gradient(180deg, #dff6ea 0%, #f4fff8 100%)",
+  );
+  assert.equal(
+    getRuleValue(".shift-month-mini-cell.work.shift-campus-biyun", "background"),
+    "linear-gradient(180deg, #dceeff 0%, #f4faff 100%)",
+  );
+  assert.ok(
+    getRuleText(".shift-month-mini-cell.off,\n.shift-month-mini-cell.holiday").includes(
+      "repeating-linear-gradient",
+    ),
+  );
+  assert.equal(getRuleValue(".shift-month-mini-cell.off,\n.shift-month-mini-cell.holiday", "color"), "#6c5864");
+});
+
 test("selected states use the cream planner palette instead of deep green fills", () => {
   assert.ok(getRuleText(":root").includes("--selected-fill"));
   for (const selector of [

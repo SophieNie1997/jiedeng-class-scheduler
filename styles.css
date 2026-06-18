@@ -1856,22 +1856,45 @@ fieldset {
   white-space: nowrap;
 }
 
+.shift-month-mini-cell.work {
+  box-shadow:
+    inset 4px 0 0 var(--shift-month-campus-accent, rgba(123, 154, 140, 0.72)),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.58);
+}
+
+.shift-month-mini-cell.work strong {
+  color: var(--shift-month-campus-text, var(--ink));
+}
+
 .shift-month-mini-cell.work.shift-campus-xuhui {
-  background: #ffeaf3;
+  --shift-month-campus-accent: #df6f98;
+  --shift-month-campus-text: #74304e;
+  background: linear-gradient(180deg, #ffd9e8 0%, #fff5f9 100%);
 }
 
 .shift-month-mini-cell.work.shift-campus-babaiban {
-  background: #f0f8f4;
+  --shift-month-campus-accent: #55b487;
+  --shift-month-campus-text: #236856;
+  background: linear-gradient(180deg, #dff6ea 0%, #f4fff8 100%);
 }
 
 .shift-month-mini-cell.work.shift-campus-biyun {
-  background: #eef7ff;
+  --shift-month-campus-accent: #6faee8;
+  --shift-month-campus-text: #2d5f89;
+  background: linear-gradient(180deg, #dceeff 0%, #f4faff 100%);
 }
 
 .shift-month-mini-cell.off,
 .shift-month-mini-cell.holiday {
-  background: #f2edf1;
-  color: #7a6870;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      rgba(126, 101, 118, 0.13) 0 6px,
+      rgba(255, 255, 255, 0.5) 6px 12px
+    ),
+    #eee5eb;
+  color: #6c5864;
+  box-shadow: inset 0 0 0 1px rgba(126, 101, 118, 0.18);
 }
 
 .shift-month-mini-head.outside-month,
