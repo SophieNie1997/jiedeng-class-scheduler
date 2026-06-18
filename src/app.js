@@ -171,6 +171,14 @@ const teacherAvatars = {
   reece: { character: "Keroppi", mark: "Ker", tone: "keroppi", image: "photo/344595809001891606.jpeg" },
 };
 
+const SHIFT_MONTH_STICKERS = [
+  "photo/551268810646516216.jpeg",
+  "photo/9992430418961551.jpeg",
+  "photo/2251868558517832.jpeg",
+  "photo/@mikkoillustrations on ig_.jpeg",
+  "background/my melody _3.jpeg",
+];
+
 const app = document.querySelector("#app");
 app.innerHTML = `
   <header class="app-header">
@@ -2012,6 +2020,7 @@ function renderShiftMonthGrid(shiftLessonIndex) {
   const weekCards = getMonthWeeks(getShiftDateInputValue())
     .map((week, index) => {
       const rangeLabel = `${week[0]?.iso.slice(5) || ""} - ${week[week.length - 1]?.iso.slice(5) || ""}`;
+      const stickerSrc = SHIFT_MONTH_STICKERS[index % SHIFT_MONTH_STICKERS.length];
       return `
         <button
           class="shift-month-week"
@@ -2019,6 +2028,7 @@ function renderShiftMonthGrid(shiftLessonIndex) {
           type="button"
           aria-label="打开第 ${index + 1} 周排班编辑窗口"
         >
+          <img class="shift-month-week-sticker" src="./${escapeAttribute(stickerSrc)}" alt="" loading="lazy" aria-hidden="true" />
           <div class="shift-month-week-label">
             <strong>第 ${index + 1} 周</strong>
             <span>${escapeHtml(rangeLabel)}</span>
@@ -2030,7 +2040,30 @@ function renderShiftMonthGrid(shiftLessonIndex) {
       `;
     })
     .join("");
-  return `<div class="shift-month-overview-grid">${weekCards}</div>`;
+  return `
+    <div class="shift-month-overview-shell">
+      <div class="shift-month-sticker-strip" aria-hidden="true">
+        ${SHIFT_MONTH_STICKERS.slice(0, 3)
+          .map((src) => `<img src="./${escapeAttribute(src)}" alt="" loading="lazy" />`)
+          .join("")}
+      </div>
+      <img
+        class="shift-month-floating-sticker sticker-left"
+        src="./${escapeAttribute(SHIFT_MONTH_STICKERS[3])}"
+        alt=""
+        loading="lazy"
+        aria-hidden="true"
+      />
+      <img
+        class="shift-month-floating-sticker sticker-right"
+        src="./${escapeAttribute(SHIFT_MONTH_STICKERS[4])}"
+        alt=""
+        loading="lazy"
+        aria-hidden="true"
+      />
+      <div class="shift-month-overview-grid">${weekCards}</div>
+    </div>
+  `;
 }
 
 function renderShiftMonthOverviewWeek(week, shiftLessonIndex) {

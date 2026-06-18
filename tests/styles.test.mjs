@@ -381,6 +381,21 @@ test("shift month overview keeps the default screen compact before opening a wee
   assert.equal(css.includes(".shift-month-week-grid .shift-lesson-list"), false);
 });
 
+test("shift month overview has kawaii stickers without blocking schedule density", () => {
+  const monthGridRenderer = /function renderShiftMonthGrid[\s\S]*?function renderShiftMonthOverviewWeek/.exec(appSource)?.[0] || "";
+
+  assert.equal(monthGridRenderer.includes("shift-month-overview-shell"), true);
+  assert.equal(monthGridRenderer.includes("shift-month-sticker-strip"), true);
+  assert.equal(monthGridRenderer.includes("shift-month-floating-sticker"), true);
+  assert.equal(monthGridRenderer.includes("shift-month-week-sticker"), true);
+  assert.equal(monthGridRenderer.includes("aria-hidden=\"true\""), true);
+  assert.ok(css.includes(".shift-month-sticker-strip"));
+  assert.ok(css.includes(".shift-month-floating-sticker"));
+  assert.ok(css.includes(".shift-month-week-sticker"));
+  assert.ok(getRuleText(".shift-month-floating-sticker").includes("pointer-events: none"));
+  assert.ok(getRuleText(".shift-month-week-sticker").includes("pointer-events: none"));
+});
+
 test("selected states use the cream planner palette instead of deep green fills", () => {
   assert.ok(getRuleText(":root").includes("--selected-fill"));
   for (const selector of [
