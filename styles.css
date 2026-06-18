@@ -945,6 +945,7 @@ fieldset {
 }
 
 .lesson-row {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 8px;
@@ -1033,6 +1034,18 @@ fieldset {
   background: #f3effb;
 }
 
+.lesson-row.peach {
+  border-left-color: #df8f70;
+  background: #fff0e8;
+  box-shadow: inset 0 0 0 1px rgba(223, 143, 112, 0.12);
+}
+
+.lesson-row.lilac {
+  border-left-color: #b487d8;
+  background: #f4edff;
+  box-shadow: inset 0 0 0 1px rgba(180, 135, 216, 0.12);
+}
+
 .lesson-row.teal {
   border-left-color: #70b9bb;
   background: #e9f8f7;
@@ -1049,13 +1062,50 @@ fieldset {
 }
 
 .lesson-row.preview {
-  outline: 2px dashed rgba(22, 107, 91, 0.34);
-  outline-offset: -3px;
+  border-left-color: #d65f91;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(255, 244, 250, 0.9)),
+    repeating-linear-gradient(135deg, rgba(214, 95, 145, 0.18) 0 6px, transparent 6px 12px);
+  outline: 3px dashed rgba(214, 95, 145, 0.82);
+  outline-offset: -4px;
+  box-shadow:
+    0 0 0 3px rgba(255, 255, 255, 0.7),
+    0 10px 22px rgba(214, 95, 145, 0.18);
+}
+
+.lesson-row.preview::after {
+  content: "试排";
+  position: absolute;
+  top: -9px;
+  right: 8px;
+  padding: 2px 8px 3px;
+  border: 1px solid rgba(214, 95, 145, 0.32);
+  border-radius: 999px;
+  background: #fff6fb;
+  color: #a94b72;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0;
+  box-shadow: 0 5px 14px rgba(214, 95, 145, 0.14);
+  pointer-events: none;
+}
+
+.lesson-row.preview small {
+  color: #a94b72;
+  font-weight: 900;
 }
 
 .lesson-row.selected {
   outline: 2px solid var(--selected-ring);
   outline-offset: -2px;
+}
+
+.lesson-row.preview.selected {
+  outline-color: var(--selected-ring);
+  box-shadow:
+    0 0 0 3px rgba(255, 255, 255, 0.72),
+    0 0 0 6px rgba(224, 132, 167, 0.24),
+    0 10px 22px rgba(214, 95, 145, 0.2);
 }
 
 .lesson-detail-panel {
@@ -1150,6 +1200,20 @@ fieldset {
   --lesson-tint: #f3effb;
   --lesson-field: rgba(162, 140, 199, 0.17);
   --lesson-control: rgba(243, 239, 251, 0.64);
+}
+
+.lesson-detail-panel.peach {
+  --lesson-accent: #df8f70;
+  --lesson-tint: #fff0e8;
+  --lesson-field: rgba(223, 143, 112, 0.18);
+  --lesson-control: rgba(255, 240, 232, 0.68);
+}
+
+.lesson-detail-panel.lilac {
+  --lesson-accent: #b487d8;
+  --lesson-tint: #f4edff;
+  --lesson-field: rgba(180, 135, 216, 0.18);
+  --lesson-control: rgba(244, 237, 255, 0.68);
 }
 
 .lesson-detail-panel.teal {

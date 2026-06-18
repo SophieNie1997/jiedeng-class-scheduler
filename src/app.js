@@ -144,8 +144,8 @@ let saveFeedbackToken = 0;
 
 const teacherColors = {
   claire: "violet",
-  phebe: "gray",
-  sophie: "gray",
+  phebe: "peach",
+  sophie: "lilac",
   lynn: "blue",
   tiana: "green",
   catherine: "orange",

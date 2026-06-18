@@ -48,11 +48,26 @@ test("calendar lesson color chips use the soft planner palette", () => {
   assert.equal(getRuleValue(".lesson-row.blue", "border-left-color"), "#6f9fcf");
   assert.equal(getRuleValue(".lesson-row.blue", "background"), "#edf6ff");
   assert.equal(getRuleValue(".lesson-row.violet", "border-left-color"), "#a28cc7");
+  assert.equal(getRuleValue(".lesson-row.peach", "border-left-color"), "#df8f70");
+  assert.equal(getRuleValue(".lesson-row.peach", "background"), "#fff0e8");
+  assert.equal(getRuleValue(".lesson-row.lilac", "border-left-color"), "#b487d8");
+  assert.equal(getRuleValue(".lesson-row.lilac", "background"), "#f4edff");
   assert.equal(getRuleValue(".lesson-row.orange", "background"), "#fff1e7");
   assert.equal(getRuleValue(".lesson-detail-panel.blue", "--lesson-accent"), "#6f9fcf");
+  assert.equal(getRuleValue(".lesson-detail-panel.peach", "--lesson-accent"), "#df8f70");
+  assert.equal(getRuleValue(".lesson-detail-panel.lilac", "--lesson-accent"), "#b487d8");
+  assert.equal(appSource.includes('phebe: "peach"'), true);
+  assert.equal(appSource.includes('sophie: "lilac"'), true);
   for (const oldColor of ["#2563eb", "#d66a24", "#7058d8", "#0f766e", "#0884a8"]) {
     assert.equal(css.includes(oldColor), false, `${oldColor} should not remain in lesson color tokens`);
   }
+});
+
+test("candidate preview lessons look visibly different from synced lessons", () => {
+  assert.equal(getRuleValue(".lesson-row.preview", "border-left-color"), "#d65f91");
+  assert.equal(getRuleValue(".lesson-row.preview", "outline"), "3px dashed rgba(214, 95, 145, 0.82)");
+  assert.equal(getRuleValue(".lesson-row.preview::after", "content"), "\"试排\"");
+  assert.equal(getRuleValue(".lesson-row.preview small", "font-weight"), "900");
 });
 
 test("calendar page only renders the week overview without single-day detail", () => {
