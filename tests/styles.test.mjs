@@ -223,6 +223,18 @@ test("shift editor auto-saves field changes and offers compact restore plus bulk
   assert.ok(css.includes(".shift-bulk-toggle"));
 });
 
+test("shift sidebar shows the editable shift card above the course detail sticker", () => {
+  const sideStackStart = appSource.indexOf('<div class="shift-side-stack">');
+  const editorIndex = appSource.indexOf('id="shift-editor"', sideStackStart);
+  const bulkFormIndex = appSource.indexOf('id="shift-bulk-form"', sideStackStart);
+  const courseDetailIndex = appSource.indexOf('id="shift-course-detail"', sideStackStart);
+
+  assert.ok(sideStackStart >= 0);
+  assert.ok(editorIndex > sideStackStart);
+  assert.ok(bulkFormIndex > editorIndex);
+  assert.ok(courseDetailIndex > bulkFormIndex);
+});
+
 test("shift cells show clickable same-day course times and names without student or campus clutter", () => {
   const chipRenderer = /function renderShiftLessonChip[\s\S]*?function resolveShiftLessonCampus/.exec(appSource)?.[0] || "";
 

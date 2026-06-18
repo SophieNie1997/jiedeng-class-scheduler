@@ -333,9 +333,9 @@ app.innerHTML = `
         <div class="shift-layout">
           <div id="shift-grid" class="shift-grid"></div>
           <div class="shift-side-stack">
-            <div id="shift-course-detail" class="shift-course-detail"></div>
             <aside id="shift-editor" class="shift-editor"></aside>
             <form id="shift-bulk-form" class="shift-bulk-form hidden" aria-label="批量排班小纸条"></form>
+            <div id="shift-course-detail" class="shift-course-detail"></div>
           </div>
         </div>
       </section>
