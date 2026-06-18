@@ -1568,6 +1568,52 @@ fieldset {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.82);
 }
 
+.shift-grid.month {
+  grid-template-columns: 1fr;
+  gap: 18px;
+  border: 0;
+  overflow-x: visible;
+  background: transparent;
+  box-shadow: none;
+}
+
+.shift-month-week {
+  display: grid;
+  gap: 8px;
+}
+
+.shift-month-week-label {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  justify-self: start;
+  border: 1px dashed rgba(239, 189, 203, 0.86);
+  border-radius: 999px;
+  background: rgba(255, 248, 252, 0.78);
+  color: #8a5268;
+  padding: 6px 14px;
+}
+
+.shift-month-week-label strong {
+  font-size: 13px;
+}
+
+.shift-month-week-label span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.shift-month-week-grid {
+  display: grid;
+  grid-template-columns: 96px repeat(7, minmax(96px, 1fr));
+  border: 1px solid rgba(220, 185, 192, 0.78);
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.68);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.82);
+}
+
 .shift-corner,
 .shift-day-head,
 .shift-teacher-name {
@@ -1757,6 +1803,15 @@ fieldset {
   z-index: 1;
   outline: 3px solid var(--selected-ring);
   outline-offset: -3px;
+}
+
+.shift-day-head.outside-month,
+.shift-cell.outside-month {
+  opacity: 0.48;
+}
+
+.shift-cell.outside-month.selected {
+  opacity: 0.82;
 }
 
 .shift-grid.month .shift-day-head {

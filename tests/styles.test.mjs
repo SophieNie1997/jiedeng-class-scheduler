@@ -318,12 +318,19 @@ test("shift view offers a compact bulk scheduling sticker with in-app confirmati
 
 test("shift view supports week and month modes", () => {
   assert.equal(appSource.includes('shiftViewMode: "week"'), true);
+  assert.equal(appSource.includes("shiftMonthAnchor"), true);
   assert.equal(appSource.includes('data-shift-view-mode="month"'), true);
   assert.equal(appSource.includes("getShiftViewDates"), true);
-  assert.equal(appSource.includes("getMonthDates"), true);
+  assert.equal(appSource.includes("getMonthWeeks"), true);
+  assert.equal(appSource.includes("renderShiftMonthGrid"), true);
+  assert.equal(appSource.includes("renderShiftWeekGrid"), true);
   assert.equal(appSource.includes("shift-lesson-count"), true);
+  assert.equal(appSource.includes("outside-month"), true);
   assert.ok(css.includes(".shift-view-toggle"));
   assert.ok(css.includes(".shift-grid.month"));
+  assert.ok(css.includes(".shift-month-week-grid"));
+  assert.ok(css.includes(".shift-month-week-label"));
+  assert.ok(css.includes(".shift-cell.outside-month"));
 });
 
 test("selected states use the cream planner palette instead of deep green fills", () => {

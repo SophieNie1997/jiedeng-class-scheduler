@@ -18,7 +18,7 @@ import {
   buildLessonDetail,
   buildWeekOverview,
   filterCalendarLessons,
-} from "./calendar.js?v=20260618-campus-month";
+} from "./calendar.js?v=20260618-shift-month-weeks";
 import {
   buildLessonsForTeacher,
   expandRecurringLessons,
@@ -35,11 +35,11 @@ import {
   getTeacherShiftForDate,
   makeShiftKey,
   mergeTeacherShiftOverrides,
-} from "./shifts.js?v=20260618-campus-month";
+} from "./shifts.js?v=20260618-shift-month-weeks";
 import {
   deriveDeliveryTypeFromCampus,
   teachingSites,
-} from "./courseCatalog.js?v=20260618-campus-month";
+} from "./courseCatalog.js?v=20260618-shift-month-weeks";
 import {
   addCustomCourse,
   addCustomTeacher,
@@ -64,7 +64,7 @@ import {
   buildStudentOverview,
   buildTeacherDayLessonIndex,
   splitStudentNames,
-} from "./overview.js?v=20260618-campus-month";
+} from "./overview.js?v=20260618-shift-month-weeks";
 import {
   buildStudentDirectoryRows,
   filterStudentDirectoryRows,
@@ -115,6 +115,7 @@ const state = {
   selectedShift: { teacherId: baseShiftRoster[0]?.id || "", date: "2026-06-29" },
   selectedShiftCourseKey: "",
   shiftViewMode: "week",
+  shiftMonthAnchor: "2026-06-29",
   showShiftBulkForm: false,
   shiftOverrides: loadShiftOverrides(),
   customCatalog: loadCustomCatalog(),
@@ -438,6 +439,7 @@ weekStartInput.addEventListener("input", () => {
 
 shiftWeekStartInput.addEventListener("input", () => {
   if (state.shiftViewMode === "month") {
+    state.shiftMonthAnchor = shiftWeekStartInput.value;
     state.selectedShift = {
       teacherId: state.selectedShift.teacherId || getShiftRoster()[0]?.id || "",
       date: shiftWeekStartInput.value,
@@ -614,7 +616,11 @@ tabButtons.forEach((button) => {
 
 shiftViewModeButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    state.shiftViewMode = button.dataset.shiftViewMode === "month" ? "month" : "week";
+    const nextMode = button.dataset.shiftViewMode === "month" ? "month" : "week";
+    if (nextMode === "month" && state.shiftViewMode !== "month") {
+      state.shiftMonthAnchor = state.selectedShift.date || state.weekStart;
+    }
+    state.shiftViewMode = nextMode;
     if (state.shiftViewMode === "week") {
       state.weekStart = getWeekStartForDate(state.selectedShift.date || state.weekStart);
       shiftWeekStartInput.value = state.weekStart;
@@ -1858,20 +1864,29 @@ function renderShiftView() {
     button.classList.toggle("active", button.dataset.shiftViewMode === state.shiftViewMode);
     button.setAttribute("aria-pressed", button.dataset.shiftViewMode === state.shiftViewMode ? "true" : "false");
   });
-  shiftGridNode.classList.toggle("month", state.shiftViewMode === "month");
-  shiftGridNode.classList.toggle("week", state.shiftViewMode !== "month");
-  shiftGridNode.style.gridTemplateColumns = `96px repeat(${shiftDates.length}, minmax(${
-    state.shiftViewMode === "month" ? "72px" : "96px"
-  }, 1fr))`;
+  const isMonthView = state.shiftViewMode === "month";
+  shiftGridNode.classList.toggle("month", isMonthView);
+  shiftGridNode.classList.toggle("week", !isMonthView);
+  shiftGridNode.style.gridTemplateColumns = isMonthView ? "1fr" : `96px repeat(${shiftDates.length}, minmax(96px, 1fr))`;
   shiftSyncLine.textContent = `${manualShiftCount} 个排班已录入，会即时参与候选老师匹配和总课表。`;
 
-  shiftGridNode.innerHTML = `
+  shiftGridNode.innerHTML = isMonthView
+    ? renderShiftMonthGrid(shiftLessonIndex, selectedShiftLessonIds)
+    : renderShiftWeekGrid(shiftDates, shiftLessonIndex, selectedShiftLessonIds);
+
+  renderShiftBulkForm(isMonthView ? getMonthDates(getShiftDateInputValue()) : shiftDates);
+  renderShiftCourseDetail(selectedShiftCard);
+  renderShiftEditor();
+}
+
+function renderShiftWeekGrid(shiftDates, shiftLessonIndex, selectedShiftLessonIds, options = {}) {
+  return `
     <div class="shift-corner">老师</div>
     ${shiftDates
       .map(
         (day) => `
-          <div class="shift-day-head">
-            <strong>${state.shiftViewMode === "month" ? day.iso.slice(8) : day.iso.slice(5)}</strong>
+          <div class="shift-day-head ${day.inMonth === false ? "outside-month" : ""}">
+            <strong>${options.dayFormat === "day" ? day.iso.slice(8) : day.iso.slice(5)}</strong>
             <span>${day.label}</span>
           </div>
         `,
@@ -1882,25 +1897,42 @@ function renderShiftView() {
         (teacher) => `
           <div class="shift-teacher-name">${escapeHtml(teacher.name)}</div>
           ${shiftDates
-            .map((day) => renderShiftCell(teacher, day.iso, shiftLessonIndex, selectedShiftLessonIds, state.shiftViewMode))
+            .map((day) => renderShiftCell(teacher, day.iso, shiftLessonIndex, selectedShiftLessonIds, state.shiftViewMode, day))
             .join("")}
         `,
       )
       .join("")}
   `;
-
-  renderShiftBulkForm(shiftDates);
-  renderShiftCourseDetail(selectedShiftCard);
-  renderShiftEditor();
 }
 
-function renderShiftCell(teacher, date, shiftLessonIndex, selectedLessonIds = new Set(), shiftViewMode = "week") {
+function renderShiftMonthGrid(shiftLessonIndex, selectedShiftLessonIds) {
+  return getMonthWeeks(getShiftDateInputValue())
+    .map((week, index) => {
+      const rangeLabel = `${week[0]?.iso.slice(5) || ""} - ${week[week.length - 1]?.iso.slice(5) || ""}`;
+      return `
+        <section class="shift-month-week" aria-label="第 ${index + 1} 周排班">
+          <div class="shift-month-week-label">
+            <strong>第 ${index + 1} 周</strong>
+            <span>${escapeHtml(rangeLabel)}</span>
+          </div>
+          <div class="shift-month-week-grid">
+            ${renderShiftWeekGrid(week, shiftLessonIndex, selectedShiftLessonIds, { dayFormat: "date" })}
+          </div>
+        </section>
+      `;
+    })
+    .join("");
+}
+
+function renderShiftCell(teacher, date, shiftLessonIndex, selectedLessonIds = new Set(), shiftViewMode = "week", day = {}) {
   const shift = getTeacherShiftForDate(teacher, date, state.shiftOverrides);
   const selected = state.selectedShift.teacherId === teacher.id && state.selectedShift.date === date;
   const lessons = getShiftCellLessons(shiftLessonIndex, teacher, date);
   return `
     <div
-      class="shift-cell ${shift.type} ${shift.source} ${getShiftCampusClass(shift.campus)} ${selected ? "selected" : ""}"
+      class="shift-cell ${shift.type} ${shift.source} ${getShiftCampusClass(shift.campus)} ${selected ? "selected" : ""} ${
+        day.inMonth === false ? "outside-month" : ""
+      }"
       data-shift-teacher-id="${escapeAttribute(teacher.id)}"
       data-shift-date="${date}"
       role="button"
@@ -3135,11 +3167,11 @@ function getWeekDates(weekStart) {
 }
 
 function getShiftViewDates() {
-  return state.shiftViewMode === "month" ? getMonthDates(getShiftDateInputValue()) : getWeekDates(state.weekStart);
+  return state.shiftViewMode === "month" ? getMonthWeeks(getShiftDateInputValue()).flat() : getWeekDates(state.weekStart);
 }
 
 function getShiftDateInputValue() {
-  return state.shiftViewMode === "month" ? state.selectedShift.date || state.weekStart : state.weekStart;
+  return state.shiftViewMode === "month" ? state.shiftMonthAnchor || state.selectedShift.date || state.weekStart : state.weekStart;
 }
 
 function getMonthDates(anchorDate) {
@@ -3159,6 +3191,35 @@ function getMonthDates(anchorDate) {
   }
 
   return dates;
+}
+
+function getMonthWeeks(anchorDate) {
+  const monthDates = getMonthDates(anchorDate);
+  if (!monthDates.length) {
+    return [];
+  }
+
+  const monthKey = monthDates[0].iso.slice(0, 7);
+  const lastMonthDate = monthDates[monthDates.length - 1].iso;
+  const weeks = [];
+  let cursor = getWeekStartForDate(monthDates[0].iso);
+
+  while (cursor <= lastMonthDate) {
+    const week = getWeekDates(cursor).map((day) => ({
+      ...day,
+      inMonth: day.iso.slice(0, 7) === monthKey,
+    }));
+    weeks.push(week);
+    cursor = addDays(cursor, 7);
+  }
+
+  return weeks;
+}
+
+function addDays(dateString, days) {
+  const date = new Date(`${dateString}T00:00:00Z`);
+  date.setUTCDate(date.getUTCDate() + days);
+  return date.toISOString().slice(0, 10);
 }
 
 function getWeekStartForDate(dateString) {
