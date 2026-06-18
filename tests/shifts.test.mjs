@@ -89,7 +89,7 @@ test("derives editable cells from explicit shifts before weekly templates", () =
       type: "work",
       startTime: "09:00",
       endTime: "18:00",
-      campus: "浦东",
+      campus: "八佰伴",
       note: "临时换班",
     },
   };
@@ -100,7 +100,7 @@ test("derives editable cells from explicit shifts before weekly templates", () =
     label: "早9-6",
     startTime: "09:00",
     endTime: "18:00",
-    campus: "浦东",
+    campus: "八佰伴",
     note: "临时换班",
   });
 
@@ -110,8 +110,36 @@ test("derives editable cells from explicit shifts before weekly templates", () =
     label: "下午2-9",
     startTime: "14:00",
     endTime: "21:00",
-    campus: "浦东",
+    campus: "八佰伴",
   });
+});
+
+test("normalizes legacy Pudong campus to Babaiban and accepts Biyun", () => {
+  assert.deepEqual(
+    buildBulkShiftOverride({
+      type: "work",
+      campus: "浦东",
+      startTime: "09:00",
+      endTime: "18:00",
+    }),
+    {
+      type: "work",
+      label: "早9-6",
+      campus: "八佰伴",
+      startTime: "09:00",
+      endTime: "18:00",
+    },
+  );
+
+  assert.equal(
+    buildBulkShiftOverride({
+      type: "work",
+      campus: "碧云",
+      startTime: "09:00",
+      endTime: "18:00",
+    }).campus,
+    "碧云",
+  );
 });
 
 test("converts work shifts into date-specific teacher availability", () => {
@@ -223,7 +251,7 @@ test("includes workbook imported roster shifts through July 2026", () => {
     label: "晚1-9",
     startTime: "13:00",
     endTime: "21:00",
-    campus: "浦东",
+    campus: "八佰伴",
   });
   assert.deepEqual(getTeacherShiftForDate(phebe, "2026-06-20", defaultShiftOverrides), {
     source: "override",

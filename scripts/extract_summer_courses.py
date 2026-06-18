@@ -157,7 +157,7 @@ def infer_campus(course_name: str, location: str) -> str:
     if "徐汇" in course_name or "上海电影厂" in location:
         return "徐汇"
     if "浦东" in course_name or "樱桃图书馆" in location:
-        return "浦东"
+        return "八佰伴"
     return ""
 
 

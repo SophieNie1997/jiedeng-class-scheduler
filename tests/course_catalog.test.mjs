@@ -52,10 +52,22 @@ test("summer course variants keep course body and move location into campus", ()
       notes: "正常上课",
     },
   );
+
+  assert.equal(
+    normalizeLessonCatalogFields({
+      course: "财商x樱桃 浦东暑期课",
+      deliveryType: "线下",
+      campus: "",
+      notes: "",
+    }).campus,
+    "八佰伴",
+  );
 });
 
 test("teaching site options derive legacy delivery type for matching", () => {
-  assert.deepEqual(teachingSites, ["浦东", "徐汇", "上门", "线上"]);
+  assert.deepEqual(teachingSites, ["八佰伴", "徐汇", "碧云", "上门", "线上"]);
+  assert.equal(deriveDeliveryTypeFromCampus("八佰伴"), "线下");
+  assert.equal(deriveDeliveryTypeFromCampus("碧云"), "线下");
   assert.equal(deriveDeliveryTypeFromCampus("浦东"), "线下");
   assert.equal(deriveDeliveryTypeFromCampus("徐汇"), "线下");
   assert.equal(deriveDeliveryTypeFromCampus("上门"), "上门");

@@ -18,7 +18,7 @@ import {
   buildLessonDetail,
   buildWeekOverview,
   filterCalendarLessons,
-} from "./calendar.js?v=20260617-finance-series-hole";
+} from "./calendar.js?v=20260618-campus-month";
 import {
   buildLessonsForTeacher,
   expandRecurringLessons,
@@ -35,11 +35,11 @@ import {
   getTeacherShiftForDate,
   makeShiftKey,
   mergeTeacherShiftOverrides,
-} from "./shifts.js?v=20260618-shift-label-palette";
+} from "./shifts.js?v=20260618-campus-month";
 import {
   deriveDeliveryTypeFromCampus,
   teachingSites,
-} from "./courseCatalog.js?v=20260616-course-catalog";
+} from "./courseCatalog.js?v=20260618-campus-month";
 import {
   addCustomCourse,
   addCustomTeacher,
@@ -64,7 +64,7 @@ import {
   buildStudentOverview,
   buildTeacherDayLessonIndex,
   splitStudentNames,
-} from "./overview.js?v=20260617-shift-courses";
+} from "./overview.js?v=20260618-campus-month";
 import {
   buildStudentDirectoryRows,
   filterStudentDirectoryRows,
@@ -114,6 +114,7 @@ const state = {
   selectedTeacherId: null,
   selectedShift: { teacherId: baseShiftRoster[0]?.id || "", date: "2026-06-29" },
   selectedShiftCourseKey: "",
+  shiftViewMode: "week",
   showShiftBulkForm: false,
   shiftOverrides: loadShiftOverrides(),
   customCatalog: loadCustomCatalog(),
@@ -326,9 +327,13 @@ app.innerHTML = `
             <p id="shift-sync-line">修改后会立即同步到候选老师和总课表。</p>
           </div>
           <label>
-            <span>周起始</span>
+            <span id="shift-date-label">周起始</span>
             <input id="shift-week-start" type="date" value="${state.weekStart}" />
           </label>
+          <div class="shift-view-toggle" aria-label="排班视图">
+            <button class="shift-view-button active" data-shift-view-mode="week" type="button">周视图</button>
+            <button class="shift-view-button" data-shift-view-mode="month" type="button">月视图</button>
+          </div>
         </div>
         <div class="shift-layout">
           <div id="shift-grid" class="shift-grid"></div>
@@ -374,6 +379,8 @@ const summaryLine = document.querySelector("#summary-line");
 const calendarNode = document.querySelector("#calendar");
 const weekStartInput = document.querySelector("#week-start");
 const shiftWeekStartInput = document.querySelector("#shift-week-start");
+const shiftDateLabel = document.querySelector("#shift-date-label");
+const shiftViewModeButtons = document.querySelectorAll("[data-shift-view-mode]");
 const shiftGridNode = document.querySelector("#shift-grid");
 const shiftBulkFormNode = document.querySelector("#shift-bulk-form");
 const shiftCourseDetailNode = document.querySelector("#shift-course-detail");
@@ -430,7 +437,15 @@ weekStartInput.addEventListener("input", () => {
 });
 
 shiftWeekStartInput.addEventListener("input", () => {
-  state.weekStart = shiftWeekStartInput.value;
+  if (state.shiftViewMode === "month") {
+    state.selectedShift = {
+      teacherId: state.selectedShift.teacherId || getShiftRoster()[0]?.id || "",
+      date: shiftWeekStartInput.value,
+    };
+    state.weekStart = getWeekStartForDate(shiftWeekStartInput.value);
+  } else {
+    state.weekStart = shiftWeekStartInput.value;
+  }
   weekStartInput.value = state.weekStart;
   state.selectedLessonId = null;
   state.draftLesson = null;
@@ -594,6 +609,17 @@ tabButtons.forEach((button) => {
   button.addEventListener("click", () => {
     state.view = button.dataset.viewTarget;
     renderWorkspace();
+  });
+});
+
+shiftViewModeButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    state.shiftViewMode = button.dataset.shiftViewMode === "month" ? "month" : "week";
+    if (state.shiftViewMode === "week") {
+      state.weekStart = getWeekStartForDate(state.selectedShift.date || state.weekStart);
+      shiftWeekStartInput.value = state.weekStart;
+    }
+    renderShiftView();
   });
 });
 
@@ -976,7 +1002,7 @@ function renderLessonRow(lesson) {
 
 function getTeachingSiteLabel(lesson) {
   if (lesson.campus) {
-    return lesson.campus;
+    return normalizeCampusForDisplay(lesson.campus);
   }
 
   return lesson.deliveryType || lesson.status || "";
@@ -1023,7 +1049,7 @@ function renderLessonDetail(detail) {
         <div class="lesson-detail-grid">
           ${renderStudentNameField(detail.studentName)}
           ${renderSelectField("年级", "grade", ["", ...grades], detail.grade === "未填写" ? "" : detail.grade)}
-          ${renderSelectField("授课校区", "campus", ["", ...teachingSites], detail.campus === "未填写" ? "" : detail.campus)}
+          ${renderSelectField("授课校区", "campus", ["", ...teachingSites], getEditableCampusValue(detail.campus))}
           ${renderDetailField("开始日期", "startDate", detail.recurrence.startDate, "date")}
           ${renderReadOnlyField("结束日期", detail.recurrence.endDate, 'data-lesson-end-date-preview="true"')}
           ${renderDetailField("本节日期", "date", detail.date, "date")}
@@ -1277,7 +1303,7 @@ function renderCourseOverviewRow(card, isSelected) {
         <span>${escapeHtml(card.timeLabel)}</span>
         <span>${escapeHtml(card.nextDate || "未填写")}</span>
         <span>${escapeHtml(card.lessonCount)} 节</span>
-        <span>${escapeHtml(card.campus)}</span>
+        <span>${escapeHtml(normalizeCampusForDisplay(card.campus))}</span>
       </button>
       <button class="overview-delete-button course-row-delete" data-course-delete="${escapeAttribute(card.key)}" type="button" aria-label="删除这组课程">
         ${renderTrashIcon()}
@@ -1310,7 +1336,7 @@ function renderCourseDetailCard(card) {
       </div>
       <dl class="course-detail-list">
         ${renderStudentDetail("老师", card.teacherName)}
-        ${renderStudentDetail("校区", card.campus)}
+        ${renderStudentDetail("校区", normalizeCampusForDisplay(card.campus))}
         ${renderStudentDetail("日期", `${card.firstDate || "未填写"} 至 ${card.lastDate || "未填写"}`)}
         ${renderStudentDetail("备注", card.notes.join("、") || "无")}
       </dl>
@@ -1812,12 +1838,12 @@ function renderTrashIcon() {
 }
 
 function renderShiftView() {
-  const weekDates = getWeekDates(state.weekStart);
-  const selectedDateInWeek = weekDates.some((date) => date.iso === state.selectedShift.date);
-  if (!state.selectedShift.teacherId || !selectedDateInWeek) {
+  const shiftDates = getShiftViewDates();
+  const selectedDateInView = shiftDates.some((date) => date.iso === state.selectedShift.date);
+  if (!state.selectedShift.teacherId || !selectedDateInView) {
     state.selectedShift = {
       teacherId: getShiftRoster()[0]?.id || "",
-      date: weekDates[0]?.iso || state.weekStart,
+      date: shiftDates[0]?.iso || state.weekStart,
     };
   }
 
@@ -1826,16 +1852,26 @@ function renderShiftView() {
   const shiftCourseOverview = buildCourseOverview(getEffectiveLessons(), { today: getTodayIsoDate() });
   const selectedShiftCard = shiftCourseOverview.courseCards.find((card) => card.key === state.selectedShiftCourseKey) || null;
   const selectedShiftLessonIds = new Set((selectedShiftCard?.lessonIds || []).map((id) => String(id)));
-  shiftWeekStartInput.value = state.weekStart;
+  shiftWeekStartInput.value = getShiftDateInputValue();
+  shiftDateLabel.textContent = state.shiftViewMode === "month" ? "月份定位" : "周起始";
+  shiftViewModeButtons.forEach((button) => {
+    button.classList.toggle("active", button.dataset.shiftViewMode === state.shiftViewMode);
+    button.setAttribute("aria-pressed", button.dataset.shiftViewMode === state.shiftViewMode ? "true" : "false");
+  });
+  shiftGridNode.classList.toggle("month", state.shiftViewMode === "month");
+  shiftGridNode.classList.toggle("week", state.shiftViewMode !== "month");
+  shiftGridNode.style.gridTemplateColumns = `96px repeat(${shiftDates.length}, minmax(${
+    state.shiftViewMode === "month" ? "72px" : "96px"
+  }, 1fr))`;
   shiftSyncLine.textContent = `${manualShiftCount} 个排班已录入，会即时参与候选老师匹配和总课表。`;
 
   shiftGridNode.innerHTML = `
     <div class="shift-corner">老师</div>
-    ${weekDates
+    ${shiftDates
       .map(
         (day) => `
           <div class="shift-day-head">
-            <strong>${day.iso.slice(5)}</strong>
+            <strong>${state.shiftViewMode === "month" ? day.iso.slice(8) : day.iso.slice(5)}</strong>
             <span>${day.label}</span>
           </div>
         `,
@@ -1845,18 +1881,20 @@ function renderShiftView() {
       .map(
         (teacher) => `
           <div class="shift-teacher-name">${escapeHtml(teacher.name)}</div>
-          ${weekDates.map((day) => renderShiftCell(teacher, day.iso, shiftLessonIndex, selectedShiftLessonIds)).join("")}
+          ${shiftDates
+            .map((day) => renderShiftCell(teacher, day.iso, shiftLessonIndex, selectedShiftLessonIds, state.shiftViewMode))
+            .join("")}
         `,
       )
       .join("")}
   `;
 
-  renderShiftBulkForm(weekDates);
+  renderShiftBulkForm(shiftDates);
   renderShiftCourseDetail(selectedShiftCard);
   renderShiftEditor();
 }
 
-function renderShiftCell(teacher, date, shiftLessonIndex, selectedLessonIds = new Set()) {
+function renderShiftCell(teacher, date, shiftLessonIndex, selectedLessonIds = new Set(), shiftViewMode = "week") {
   const shift = getTeacherShiftForDate(teacher, date, state.shiftOverrides);
   const selected = state.selectedShift.teacherId === teacher.id && state.selectedShift.date === date;
   const lessons = getShiftCellLessons(shiftLessonIndex, teacher, date);
@@ -1869,13 +1907,13 @@ function renderShiftCell(teacher, date, shiftLessonIndex, selectedLessonIds = ne
       tabindex="0"
     >
       <strong>${escapeHtml(formatShiftCellLabel(shift))}</strong>
-      ${renderShiftLessonList(lessons, shift, selectedLessonIds)}
+      ${renderShiftLessonList(lessons, shift, selectedLessonIds, shiftViewMode)}
     </div>
   `;
 }
 
 function formatShiftCellLabel(shift) {
-  const label = String(shift.label || "").replace(/徐汇|浦东/g, "").trim();
+  const label = String(shift.label || "").replace(/八佰伴|徐汇|浦东|碧云/g, "").trim();
   if (shift.type === "work" && isCompactShiftTimeLabel(label)) {
     return buildShiftLabel({
       type: "work",
@@ -1893,6 +1931,15 @@ function formatShiftCellLabel(shift) {
   }
 
   return shift.type === "holiday" ? "法定假" : shift.type === "off" ? "休" : "上班";
+}
+
+function normalizeCampusForDisplay(campus) {
+  return String(campus || "").trim() === "浦东" ? "八佰伴" : String(campus || "").trim();
+}
+
+function getEditableCampusValue(campus) {
+  const normalized = normalizeCampusForDisplay(campus);
+  return normalized === "未填写" ? "" : normalized;
 }
 
 function isCompactShiftTimeLabel(label) {
@@ -1936,14 +1983,14 @@ function renderShiftBulkForm(weekDates = getWeekDates(state.weekStart)) {
     ? state.selectedShift.teacherId
     : "__all";
   const startDate = weekDates[0]?.iso || state.weekStart;
-  const endDate = weekDates[6]?.iso || startDate;
+  const endDate = weekDates[weekDates.length - 1]?.iso || startDate;
   const defaultPayload = {
     teacherId: selectedTeacherId,
     startDate,
     endDate,
     weekdays: WEEKDAYS.map((day) => day.value),
     type: "work",
-    campus: "浦东",
+    campus: "八佰伴",
     startTime: "09:00",
     endTime: "18:00",
     note: "",
@@ -2054,7 +2101,7 @@ function renderShiftEditor() {
   const isWork = editorType === "work";
   const startTime = manualShift?.startTime || currentShift.startTime || "09:00";
   const endTime = manualShift?.endTime || currentShift.endTime || "18:00";
-  const campus = manualShift?.campus || currentShift.campus || "浦东";
+  const campus = normalizeCampusForDisplay(manualShift?.campus || currentShift.campus || "八佰伴");
   const note = manualShift?.note || currentShift.note || "";
 
   shiftEditorNode.innerHTML = `
@@ -2283,7 +2330,7 @@ function readBulkShiftPayload(formNode) {
     endDate: String(formData.get("bulkEndDate") || state.weekStart),
     weekdays,
     type: String(formData.get("bulkType") || "work"),
-    campus: String(formData.get("bulkCampus") || "浦东"),
+    campus: String(formData.get("bulkCampus") || "八佰伴"),
     startTime: String(formData.get("bulkStartTime") || "09:00"),
     endTime: String(formData.get("bulkEndTime") || "18:00"),
     note: String(formData.get("bulkNote") || "").trim(),
@@ -2357,7 +2404,7 @@ function setSelectedShift(shift) {
 
 function saveSelectedShiftFromEditor() {
   const type = shiftEditorNode.querySelector('[name="shiftType"]')?.value || "work";
-  const campus = shiftEditorNode.querySelector('[name="shiftCampus"]')?.value || "浦东";
+  const campus = shiftEditorNode.querySelector('[name="shiftCampus"]')?.value || "八佰伴";
   const startTime = shiftEditorNode.querySelector('[name="shiftStart"]')?.value || "09:00";
   const endTime = shiftEditorNode.querySelector('[name="shiftEnd"]')?.value || "18:00";
   const note = shiftEditorNode.querySelector('[name="shiftNote"]')?.value.trim() || "";
@@ -2947,8 +2994,8 @@ function compactShift(shift) {
   if (shift.type === "work") {
     return {
       type: "work",
-      label: shift.label || getDefaultShiftLabel("work", shift.campus || "浦东", shift.startTime, shift.endTime),
-      campus: shift.campus || "浦东",
+      label: shift.label || getDefaultShiftLabel("work", normalizeCampusForDisplay(shift.campus || "八佰伴"), shift.startTime, shift.endTime),
+      campus: normalizeCampusForDisplay(shift.campus || "八佰伴"),
       startTime: shift.startTime,
       endTime: shift.endTime,
       ...(shift.note ? { note: shift.note } : {}),
@@ -3002,9 +3049,13 @@ function getShiftCellLessons(shiftLessonIndex, teacher, date) {
   return shiftLessonIndex.get(idKey) || shiftLessonIndex.get(nameKey) || [];
 }
 
-function renderShiftLessonList(lessons, shift, selectedLessonIds = new Set()) {
+function renderShiftLessonList(lessons, shift, selectedLessonIds = new Set(), shiftViewMode = "week") {
   if (!lessons.length) {
     return "";
+  }
+
+  if (shiftViewMode === "month") {
+    return `<span class="shift-lesson-count">${lessons.length}课</span>`;
   }
 
   const visibleLessons = lessons.slice(0, 3);
@@ -3033,12 +3084,15 @@ function renderShiftLessonChip(lesson, isSelected = false) {
 }
 
 function getShiftCampusClass(campus) {
-  const value = String(campus || "");
+  const value = normalizeCampusForDisplay(campus);
   if (value.includes("徐汇")) {
     return "shift-campus-xuhui";
   }
-  if (value.includes("浦东")) {
-    return "shift-campus-pudong";
+  if (value.includes("八佰伴")) {
+    return "shift-campus-babaiban";
+  }
+  if (value.includes("碧云")) {
+    return "shift-campus-biyun";
   }
   return "shift-campus-neutral";
 }
@@ -3078,6 +3132,33 @@ function getWeekDates(weekStart) {
       label: day.label,
     };
   });
+}
+
+function getShiftViewDates() {
+  return state.shiftViewMode === "month" ? getMonthDates(getShiftDateInputValue()) : getWeekDates(state.weekStart);
+}
+
+function getShiftDateInputValue() {
+  return state.shiftViewMode === "month" ? state.selectedShift.date || state.weekStart : state.weekStart;
+}
+
+function getMonthDates(anchorDate) {
+  const anchor = new Date(`${anchorDate || state.weekStart}T00:00:00Z`);
+  const year = anchor.getUTCFullYear();
+  const month = anchor.getUTCMonth();
+  const cursor = new Date(Date.UTC(year, month, 1));
+  const dates = [];
+
+  while (cursor.getUTCMonth() === month) {
+    const iso = cursor.toISOString().slice(0, 10);
+    dates.push({
+      iso,
+      label: WEEKDAYS.find((day) => day.value === getWeekdayValue(iso))?.label || "",
+    });
+    cursor.setUTCDate(cursor.getUTCDate() + 1);
+  }
+
+  return dates;
 }
 
 function getWeekStartForDate(dateString) {
@@ -3301,7 +3382,7 @@ function inferCampus(shift) {
     return "上门";
   }
 
-  return "浦东";
+  return "八佰伴";
 }
 
 function escapeHtml(value) {

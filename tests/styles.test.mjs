@@ -9,12 +9,16 @@ const indexSource = readFileSync(new URL("../index.html", import.meta.url), "utf
 
 test("shift work cells use campus background colors instead of campus text labels", () => {
   assert.equal(
-    getRuleValue(".shift-cell.work.shift-campus-pudong,\n.shift-cell.template.shift-campus-pudong", "background"),
+    getRuleValue(".shift-cell.work.shift-campus-babaiban,\n.shift-cell.template.shift-campus-babaiban", "background"),
     "#f0f8f4",
   );
   assert.equal(
     getRuleValue(".shift-cell.work.shift-campus-xuhui,\n.shift-cell.template.shift-campus-xuhui", "background"),
     "#ffeaf3",
+  );
+  assert.equal(
+    getRuleValue(".shift-cell.work.shift-campus-biyun,\n.shift-cell.template.shift-campus-biyun", "background"),
+    "#eef7ff",
   );
 });
 
@@ -257,7 +261,7 @@ test("shift cells show clickable same-day course times and names without student
   assert.equal(cellRenderer.includes("getShiftCampusClass(shift.campus)"), true);
   assert.equal(cellRenderer.includes("formatShiftCellLabel(shift)"), true);
   assert.equal(appSource.includes("function formatShiftCellLabel"), true);
-  assert.equal(appSource.includes('replace(/徐汇|浦东/g, "")'), true);
+  assert.equal(appSource.includes('replace(/八佰伴|徐汇|浦东|碧云/g, "")'), true);
   assert.equal(appSource.includes("isCompactShiftTimeLabel(label)"), true);
   assert.equal(appSource.includes("compactShiftTimeToClock"), true);
   assert.equal(cellRenderer.includes("renderShiftCampusMeta"), false);
@@ -282,7 +286,8 @@ test("shift cells show clickable same-day course times and names without student
   assert.equal(chipRenderer.includes("lesson.timeLabel"), true);
   assert.equal(chipRenderer.includes("escapeHtml(courseName)"), true);
   assert.equal(appSource.includes("shift-campus-xuhui"), true);
-  assert.equal(appSource.includes("shift-campus-pudong"), true);
+  assert.equal(appSource.includes("shift-campus-babaiban"), true);
+  assert.equal(appSource.includes("shift-campus-biyun"), true);
   assert.ok(css.includes(".shift-lesson-list"));
   assert.ok(css.includes(".shift-lesson-chip"));
   assert.equal(css.includes(".shift-campus-label"), false);
@@ -309,6 +314,16 @@ test("shift view offers a compact bulk scheduling sticker with in-app confirmati
   assert.ok(css.includes(".shift-bulk-weekdays"));
   assert.ok(css.includes(".shift-bulk-preview"));
   assert.ok(css.includes(".shift-bulk-actions"));
+});
+
+test("shift view supports week and month modes", () => {
+  assert.equal(appSource.includes('shiftViewMode: "week"'), true);
+  assert.equal(appSource.includes('data-shift-view-mode="month"'), true);
+  assert.equal(appSource.includes("getShiftViewDates"), true);
+  assert.equal(appSource.includes("getMonthDates"), true);
+  assert.equal(appSource.includes("shift-lesson-count"), true);
+  assert.ok(css.includes(".shift-view-toggle"));
+  assert.ok(css.includes(".shift-grid.month"));
 });
 
 test("selected states use the cream planner palette instead of deep green fills", () => {
@@ -461,6 +476,8 @@ test("planner uses teaching site instead of course location variants", () => {
   assert.equal(appSource.includes("授课校区"), true);
   assert.equal(appSource.includes("授课方式"), false);
   assert.equal(appSource.includes("teachingSites"), true);
+  assert.equal(appSource.includes("八佰伴"), true);
+  assert.equal(appSource.includes("碧云"), true);
   assert.equal(appSource.includes("WAICY 徐汇集训班"), false);
   assert.equal(appSource.includes("财商x樱桃 徐汇暑期课"), false);
 });

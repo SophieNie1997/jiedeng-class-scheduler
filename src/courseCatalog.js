@@ -1,4 +1,4 @@
-export const teachingSites = ["浦东", "徐汇", "上门", "线上"];
+export const teachingSites = ["八佰伴", "徐汇", "碧云", "上门", "线上"];
 
 const COURSE_VARIANTS = {
   "WAICY 徐汇集训班": {
@@ -12,7 +12,7 @@ const COURSE_VARIANTS = {
   },
   "财商x樱桃 浦东暑期课": {
     course: "AI 财商",
-    campus: "浦东",
+    campus: "八佰伴",
     contextNote: "樱桃图书馆英语课后",
   },
 };
@@ -52,7 +52,11 @@ export function deriveDeliveryTypeFromCampus(campus) {
 }
 
 export function normalizeCampus(value) {
-  if (value === "线上" || value === "上门" || value === "徐汇" || value === "浦东") {
+  if (value === "浦东") {
+    return "八佰伴";
+  }
+
+  if (value === "线上" || value === "上门" || value === "徐汇" || value === "八佰伴" || value === "碧云") {
     return value;
   }
 

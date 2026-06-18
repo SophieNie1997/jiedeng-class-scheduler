@@ -163,8 +163,8 @@ def parse_shift_value(value) -> dict | None:
     if label in {"休", "本休"}:
         return {"type": "off", "label": "休"}
 
-    campus = "徐汇" if label.startswith("徐汇") else "浦东"
-    time_text = label.replace("徐汇", "").replace("早", "").replace("晚", "").strip()
+    campus = "徐汇" if label.startswith("徐汇") else "八佰伴"
+    time_text = label.replace("徐汇", "").replace("浦东", "").replace("八佰伴", "").replace("碧云", "").replace("早", "").replace("晚", "").strip()
     start_time, end_time = parse_time_range(time_text, prefer_evening=label.startswith("晚"))
     return {
         "type": "work",

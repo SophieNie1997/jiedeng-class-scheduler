@@ -60,7 +60,7 @@ export function buildLessonDetail(lesson, lessons) {
     course: lesson.course || "未填写",
     grade: lesson.grade || "未填写",
     deliveryType: lesson.deliveryType || "未填写",
-    campus: lesson.campus || "未填写",
+    campus: normalizeCampusForDisplay(lesson.campus) || "未填写",
     location: lesson.location || "",
     date: lesson.date,
     weekdayName: WEEKDAY_LABELS[getWeekday(lesson.date)],
@@ -182,6 +182,11 @@ function formatWeeksBetween(startDate, endDate) {
   const end = new Date(`${endDate}T00:00:00Z`);
   const days = Math.max(1, Math.floor((end - start) / 86400000) + 1);
   return `${Math.ceil(days / 7)} 周`;
+}
+
+function normalizeCampusForDisplay(value) {
+  const normalized = String(value ?? "").trim();
+  return normalized === "浦东" ? "八佰伴" : normalized;
 }
 
 function parseTimeToMinutes(time) {

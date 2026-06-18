@@ -1,6 +1,6 @@
 import { getWeekday } from "./scheduler.js";
 
-export const CAMPUS_OPTIONS = ["浦东", "徐汇", "上门"];
+export const CAMPUS_OPTIONS = ["八佰伴", "徐汇", "碧云", "上门"];
 
 const BLOCKED_DAY_START = "08:00";
 const BLOCKED_DAY_END = "21:30";
@@ -25,7 +25,7 @@ export function getTeacherShiftForDate(teacher, date, shifts) {
       type: "work",
       startTime: weeklySlot.startTime,
       endTime: weeklySlot.endTime,
-      campus: weeklySlot.campus || "浦东",
+      campus: normalizeShiftCampus(weeklySlot.campus),
     };
 
     return {
@@ -173,7 +173,7 @@ export function buildBulkShiftOverride(options) {
   if (type === "work") {
     const startTime = options.startTime || "09:00";
     const endTime = options.endTime || "18:00";
-    const campus = CAMPUS_OPTIONS.includes(options.campus) ? options.campus : "浦东";
+    const campus = normalizeShiftCampus(options.campus);
     return {
       type: "work",
       label: buildShiftLabel({ type: "work", campus, startTime, endTime }),
@@ -230,7 +230,7 @@ function normalizeWorkShiftLabel(shift) {
 }
 
 function stripShiftCampusText(label) {
-  return String(label || "").replace(/徐汇|浦东/g, "").trim();
+  return String(label || "").replace(/八佰伴|徐汇|浦东|碧云/g, "").trim();
 }
 
 function isCompactShiftTimeLabel(label) {
@@ -255,7 +255,7 @@ function normalizeShift(shift, source) {
       label: normalizeWorkShiftLabel(shift),
       startTime: shift.startTime || "",
       endTime: shift.endTime || "",
-      campus: shift.campus || "浦东",
+      campus: normalizeShiftCampus(shift.campus),
       ...(shift.note ? { note: shift.note } : {}),
     };
   }
@@ -289,6 +289,14 @@ function normalizeShift(shift, source) {
     startTime: "",
     endTime: "",
   };
+}
+
+function normalizeShiftCampus(campus) {
+  if (campus === "浦东") {
+    return "八佰伴";
+  }
+
+  return CAMPUS_OPTIONS.includes(campus) ? campus : "八佰伴";
 }
 
 function formatStartTimeLabel(time) {

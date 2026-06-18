@@ -200,7 +200,7 @@ test("teacher day lesson index groups visible same-day courses for shift cells",
 
   assert.deepEqual(
     index.get("sophie__2026-07-01").map((lesson) => `${lesson.timeLabel} ${lesson.campus} ${lesson.studentName} ${lesson.course}`),
-    ["10:00-12:00 浦东 Mia AI 财商", "15:30-18:30 徐汇 Ivan WAICY 集训"],
+    ["10:00-12:00 八佰伴 Mia AI 财商", "15:30-18:30 徐汇 Ivan WAICY 集训"],
   );
   assert.equal(index.get("sophie__2026-07-01").some((lesson) => lesson.id === "hidden-shift-block"), false);
   assert.equal(index.get("phebe__2026-07-01")[0].studentName, "Eric");

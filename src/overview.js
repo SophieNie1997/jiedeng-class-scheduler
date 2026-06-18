@@ -49,7 +49,7 @@ export function buildStudentOverview(lessons, options = {}) {
       addIfPresent(current.lessonIds, lesson.id);
       addIfPresent(current.courses, lesson.course);
       addIfPresent(current.teachers, lesson.teacherName);
-      addIfPresent(current.campuses, lesson.campus || lesson.deliveryType);
+      addIfPresent(current.campuses, normalizeCampusForDisplay(lesson.campus || lesson.deliveryType));
       addIfPresent(current.statuses, lesson.status);
       current.firstDate = pickEarlierDate(current.firstDate, lesson.date);
       current.lastDate = pickLaterDate(current.lastDate, lesson.date);
@@ -157,7 +157,7 @@ function createTeacherDayLessonSummary(lesson) {
     teacherName: normalizeText(lesson.teacherName),
     studentName: normalizeText(lesson.studentName) || "未填写",
     course: normalizeText(lesson.course) || "未填写",
-    campus: normalizeText(lesson.campus || lesson.deliveryType) || "未填写",
+    campus: normalizeCampusForDisplay(lesson.campus || lesson.deliveryType) || "未填写",
     startTime,
     endTime,
     timeLabel: startTime && endTime ? `${startTime}-${endTime}` : startTime || endTime || "未填写",
@@ -206,7 +206,7 @@ function createCourseCard(key, lesson) {
     studentName: normalizeText(lesson.studentName) || "未填写",
     course: normalizeText(lesson.course) || "未填写",
     teacherName: normalizeText(lesson.teacherName) || normalizeText(lesson.teacherId) || "未填写",
-    campus: normalizeText(lesson.campus || lesson.deliveryType) || "未填写",
+    campus: normalizeCampusForDisplay(lesson.campus || lesson.deliveryType) || "未填写",
     startTime,
     endTime,
     timeLabel: startTime && endTime ? `${startTime}-${endTime}` : startTime || endTime || "未填写",
@@ -336,6 +336,11 @@ function pickLaterDate(current, next) {
 
 function normalizeText(value) {
   return String(value ?? "").trim();
+}
+
+function normalizeCampusForDisplay(value) {
+  const normalized = normalizeText(value);
+  return normalized === "浦东" ? "八佰伴" : normalized;
 }
 
 function localeSort(left, right) {
