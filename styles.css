@@ -1675,26 +1675,26 @@ fieldset {
 }
 
 .shift-cell.template {
-  background: #e7f6ef;
+  background: #f0f8f4;
 }
 
 .shift-cell.work {
-  background: #e7f6ef;
+  background: #f0f8f4;
 }
 
 .shift-cell.work.shift-campus-pudong,
 .shift-cell.template.shift-campus-pudong {
-  background: #e7f6ef;
+  background: #f0f8f4;
 }
 
 .shift-cell.work.shift-campus-xuhui,
 .shift-cell.template.shift-campus-xuhui {
-  background: #fff0f5;
+  background: #ffeaf3;
 }
 
 .shift-cell.off {
-  background: #f1e5ea;
-  color: #6f5d66;
+  background: #f2edf1;
+  color: #7a6870;
 }
 
 .shift-cell.holiday {

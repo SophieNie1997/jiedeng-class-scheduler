@@ -10,17 +10,17 @@ const indexSource = readFileSync(new URL("../index.html", import.meta.url), "utf
 test("shift work cells use campus background colors instead of campus text labels", () => {
   assert.equal(
     getRuleValue(".shift-cell.work.shift-campus-pudong,\n.shift-cell.template.shift-campus-pudong", "background"),
-    "#e7f6ef",
+    "#f0f8f4",
   );
   assert.equal(
     getRuleValue(".shift-cell.work.shift-campus-xuhui,\n.shift-cell.template.shift-campus-xuhui", "background"),
-    "#fff0f5",
+    "#ffeaf3",
   );
 });
 
 test("shift rest cells use a soft planner tint instead of hard gray", () => {
-  assert.equal(getRuleValue(".shift-cell.off", "background"), "#f1e5ea");
-  assert.equal(getRuleValue(".shift-cell.off", "color"), "#6f5d66");
+  assert.equal(getRuleValue(".shift-cell.off", "background"), "#f2edf1");
+  assert.equal(getRuleValue(".shift-cell.off", "color"), "#7a6870");
   assert.notEqual(getRuleValue(".shift-cell.off", "background"), "#a9a9a9");
 });
 
@@ -258,6 +258,8 @@ test("shift cells show clickable same-day course times and names without student
   assert.equal(cellRenderer.includes("formatShiftCellLabel(shift)"), true);
   assert.equal(appSource.includes("function formatShiftCellLabel"), true);
   assert.equal(appSource.includes('replace(/徐汇|浦东/g, "")'), true);
+  assert.equal(appSource.includes("isCompactShiftTimeLabel(label)"), true);
+  assert.equal(appSource.includes("compactShiftTimeToClock"), true);
   assert.equal(cellRenderer.includes("renderShiftCampusMeta"), false);
   assert.equal(appSource.includes("function renderShiftCampusMeta"), false);
   assert.equal(appSource.includes("function renderShiftCellMeta"), false);

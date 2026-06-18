@@ -211,6 +211,37 @@ export function buildShiftLabel(shift) {
   return `${formatStartTimeLabel(shift.startTime)}-${formatDisplayHour(shift.endTime)}`;
 }
 
+function normalizeWorkShiftLabel(shift) {
+  const label = stripShiftCampusText(shift.label);
+  if (!label) {
+    return buildShiftLabel(shift);
+  }
+
+  if (isCompactShiftTimeLabel(label)) {
+    const [startPart, endPart] = label.split("-");
+    return buildShiftLabel({
+      type: "work",
+      startTime: shift.startTime || compactShiftTimeToClock(startPart),
+      endTime: shift.endTime || compactShiftTimeToClock(endPart),
+    });
+  }
+
+  return label;
+}
+
+function stripShiftCampusText(label) {
+  return String(label || "").replace(/徐汇|浦东/g, "").trim();
+}
+
+function isCompactShiftTimeLabel(label) {
+  return /^\d{1,2}(?::\d{2})?-\d{1,2}(?::\d{2})?$/.test(String(label || "").trim());
+}
+
+function compactShiftTimeToClock(timePart) {
+  const [hourPart, minutePart = "00"] = String(timePart || "").split(":");
+  return `${hourPart.padStart(2, "0")}:${minutePart.padStart(2, "0")}`;
+}
+
 export function parseShiftKey(key) {
   const [teacherId, date] = String(key).split("__");
   return { teacherId, date };
@@ -221,7 +252,7 @@ function normalizeShift(shift, source) {
     return {
       source,
       type: "work",
-      label: shift.label || buildShiftLabel(shift),
+      label: normalizeWorkShiftLabel(shift),
       startTime: shift.startTime || "",
       endTime: shift.endTime || "",
       campus: shift.campus || "浦东",

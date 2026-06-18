@@ -35,7 +35,7 @@ import {
   getTeacherShiftForDate,
   makeShiftKey,
   mergeTeacherShiftOverrides,
-} from "./shifts.js?v=20260617-bulk-shifts";
+} from "./shifts.js?v=20260618-shift-label-palette";
 import {
   deriveDeliveryTypeFromCampus,
   teachingSites,
@@ -1876,15 +1876,32 @@ function renderShiftCell(teacher, date, shiftLessonIndex, selectedLessonIds = ne
 
 function formatShiftCellLabel(shift) {
   const label = String(shift.label || "").replace(/徐汇|浦东/g, "").trim();
+  if (shift.type === "work" && isCompactShiftTimeLabel(label)) {
+    return buildShiftLabel({
+      type: "work",
+      startTime: shift.startTime || compactShiftTimeToClock(label.split("-")[0]),
+      endTime: shift.endTime || compactShiftTimeToClock(label.split("-")[1]),
+    });
+  }
+
   if (label) {
     return label;
   }
 
   if (shift.startTime && shift.endTime) {
-    return `${shift.startTime}-${shift.endTime}`;
+    return buildShiftLabel({ type: "work", startTime: shift.startTime, endTime: shift.endTime });
   }
 
   return shift.type === "holiday" ? "法定假" : shift.type === "off" ? "休" : "上班";
+}
+
+function isCompactShiftTimeLabel(label) {
+  return /^\d{1,2}(?::\d{2})?-\d{1,2}(?::\d{2})?$/.test(String(label || "").trim());
+}
+
+function compactShiftTimeToClock(timePart) {
+  const [hourPart, minutePart = "00"] = String(timePart || "").split(":");
+  return `${hourPart.padStart(2, "0")}:${minutePart.padStart(2, "0")}`;
 }
 
 function renderShiftCourseDetail(selectedCard) {

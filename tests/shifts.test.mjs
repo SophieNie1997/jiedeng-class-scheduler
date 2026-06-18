@@ -235,7 +235,7 @@ test("includes workbook imported roster shifts through July 2026", () => {
   assert.deepEqual(getTeacherShiftForDate(phebe, "2026-06-29", defaultShiftOverrides), {
     source: "override",
     type: "work",
-    label: "徐汇10-19",
+    label: "早10-7",
     startTime: "10:00",
     endTime: "19:00",
     campus: "徐汇",
