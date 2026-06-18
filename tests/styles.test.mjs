@@ -18,6 +18,12 @@ test("shift work cells use campus background colors instead of campus text label
   );
 });
 
+test("shift rest cells use a soft planner tint instead of hard gray", () => {
+  assert.equal(getRuleValue(".shift-cell.off", "background"), "#f1e5ea");
+  assert.equal(getRuleValue(".shift-cell.off", "color"), "#6f5d66");
+  assert.notEqual(getRuleValue(".shift-cell.off", "background"), "#a9a9a9");
+});
+
 test("site uses a real png favicon", () => {
   assert.equal(indexSource.includes('href="data:,"'), false);
   assert.match(indexSource, /<link rel="icon" type="image\/png" href="\.\/favicon-kuromi\.png\?v=20260617-kuromi" \/>/);
