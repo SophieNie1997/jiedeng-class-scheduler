@@ -1610,19 +1610,6 @@ fieldset {
   font-size: 14px;
 }
 
-.shift-cell > span {
-  justify-self: center;
-  color: rgba(31, 41, 51, 0.66);
-  font-size: 11px;
-  font-weight: 800;
-}
-
-.shift-campus-label {
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.58);
-  padding: 2px 8px;
-}
-
 .shift-lesson-list {
   display: grid;
   justify-self: stretch;
@@ -1687,34 +1674,22 @@ fieldset {
   padding-inline: 4px;
 }
 
-.shift-campus-xuhui {
-  color: #b44f7a;
-}
-
-.shift-campus-pudong {
-  color: #1f7f8b;
-}
-
-.shift-campus-label.shift-campus-xuhui,
-.shift-lesson-chip.shift-campus-xuhui {
-  color: #b44f7a;
-}
-
-.shift-campus-label.shift-campus-pudong,
-.shift-lesson-chip.shift-campus-pudong {
-  color: #1f7f8b;
-}
-
-.shift-campus-neutral {
-  color: rgba(31, 41, 51, 0.66);
-}
-
 .shift-cell.template {
   background: #e7f6ef;
 }
 
 .shift-cell.work {
   background: #e7f6ef;
+}
+
+.shift-cell.work.shift-campus-pudong,
+.shift-cell.template.shift-campus-pudong {
+  background: #e7f6ef;
+}
+
+.shift-cell.work.shift-campus-xuhui,
+.shift-cell.template.shift-campus-xuhui {
+  background: #fff0f5;
 }
 
 .shift-cell.off {

@@ -1862,17 +1862,29 @@ function renderShiftCell(teacher, date, shiftLessonIndex, selectedLessonIds = ne
   const lessons = getShiftCellLessons(shiftLessonIndex, teacher, date);
   return `
     <div
-      class="shift-cell ${shift.type} ${shift.source} ${selected ? "selected" : ""}"
+      class="shift-cell ${shift.type} ${shift.source} ${getShiftCampusClass(shift.campus)} ${selected ? "selected" : ""}"
       data-shift-teacher-id="${escapeAttribute(teacher.id)}"
       data-shift-date="${date}"
       role="button"
       tabindex="0"
     >
-      <strong>${escapeHtml(shift.label)}</strong>
-      ${renderShiftCampusMeta(shift)}
+      <strong>${escapeHtml(formatShiftCellLabel(shift))}</strong>
       ${renderShiftLessonList(lessons, shift, selectedLessonIds)}
     </div>
   `;
+}
+
+function formatShiftCellLabel(shift) {
+  const label = String(shift.label || "").replace(/徐汇|浦东/g, "").trim();
+  if (label) {
+    return label;
+  }
+
+  if (shift.startTime && shift.endTime) {
+    return `${shift.startTime}-${shift.endTime}`;
+  }
+
+  return shift.type === "holiday" ? "法定假" : shift.type === "off" ? "休" : "上班";
 }
 
 function renderShiftCourseDetail(selectedCard) {
@@ -2967,27 +2979,10 @@ function getCalendarActionLessons() {
   return [...lessons.filter((lesson) => lesson.id !== state.draftLesson.id), state.draftLesson];
 }
 
-function renderShiftCellMeta(shift) {
-  if (["work", "template"].includes(shift.type) && shift.campus) {
-    return shift.campus;
-  }
-
-  return "";
-}
-
 function getShiftCellLessons(shiftLessonIndex, teacher, date) {
   const idKey = teacher.id ? `${teacher.id}__${date}` : "";
   const nameKey = teacher.name ? `${teacher.name}__${date}` : "";
   return shiftLessonIndex.get(idKey) || shiftLessonIndex.get(nameKey) || [];
-}
-
-function renderShiftCampusMeta(shift) {
-  const campus = renderShiftCellMeta(shift);
-  if (!campus) {
-    return "";
-  }
-
-  return `<span class="shift-campus-label ${getShiftCampusClass(campus)}">${escapeHtml(campus)}</span>`;
 }
 
 function renderShiftLessonList(lessons, shift, selectedLessonIds = new Set()) {
@@ -2999,18 +2994,17 @@ function renderShiftLessonList(lessons, shift, selectedLessonIds = new Set()) {
   const overflowCount = lessons.length - visibleLessons.length;
   return `
     <span class="shift-lesson-list" aria-label="当天课程">
-      ${visibleLessons.map((lesson) => renderShiftLessonChip(lesson, shift.campus, selectedLessonIds.has(String(lesson.id)))).join("")}
+      ${visibleLessons.map((lesson) => renderShiftLessonChip(lesson, selectedLessonIds.has(String(lesson.id)))).join("")}
       ${overflowCount > 0 ? `<span class="shift-lesson-more">+ ${overflowCount} 节</span>` : ""}
     </span>
   `;
 }
 
-function renderShiftLessonChip(lesson, fallbackCampus, isSelected = false) {
-  const campus = resolveShiftLessonCampus(lesson.campus, fallbackCampus);
+function renderShiftLessonChip(lesson, isSelected = false) {
   const courseName = String(lesson.course || "").trim() || "未填写课程";
   return `
     <button
-      class="shift-lesson-chip ${getShiftCampusClass(campus)} ${isSelected ? "selected" : ""}"
+      class="shift-lesson-chip ${isSelected ? "selected" : ""}"
       data-shift-lesson-select="${escapeAttribute(lesson.id)}"
       type="button"
       aria-label="查看 ${escapeAttribute(lesson.timeLabel)} ${escapeAttribute(courseName)} 课程详情"
@@ -3019,20 +3013,6 @@ function renderShiftLessonChip(lesson, fallbackCampus, isSelected = false) {
       <span class="shift-lesson-title">${escapeHtml(courseName)}</span>
     </button>
   `;
-}
-
-function resolveShiftLessonCampus(campus, fallbackCampus) {
-  const value = String(campus || "").trim();
-  if (value.includes("徐汇") || value.includes("浦东")) {
-    return value;
-  }
-
-  const fallback = String(fallbackCampus || "").trim();
-  if (fallback.includes("徐汇") || fallback.includes("浦东")) {
-    return fallback;
-  }
-
-  return value || fallback || "未填写";
 }
 
 function getShiftCampusClass(campus) {

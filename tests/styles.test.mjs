@@ -7,8 +7,15 @@ const css = readFileSync(new URL("../styles.css", import.meta.url), "utf8");
 const appSource = readFileSync(new URL("../src/app.js", import.meta.url), "utf8");
 const indexSource = readFileSync(new URL("../index.html", import.meta.url), "utf8");
 
-test("uses the same background for scheduled work cells and template work cells", () => {
-  assert.equal(getRuleValue(".shift-cell.work", "background"), getRuleValue(".shift-cell.template", "background"));
+test("shift work cells use campus background colors instead of campus text labels", () => {
+  assert.equal(
+    getRuleValue(".shift-cell.work.shift-campus-pudong,\n.shift-cell.template.shift-campus-pudong", "background"),
+    "#e7f6ef",
+  );
+  assert.equal(
+    getRuleValue(".shift-cell.work.shift-campus-xuhui,\n.shift-cell.template.shift-campus-xuhui", "background"),
+    "#fff0f5",
+  );
 });
 
 test("site uses a real png favicon", () => {
@@ -236,11 +243,19 @@ test("shift sidebar shows the editable shift card above the course detail sticke
 });
 
 test("shift cells show clickable same-day course times and names without student or campus clutter", () => {
-  const chipRenderer = /function renderShiftLessonChip[\s\S]*?function resolveShiftLessonCampus/.exec(appSource)?.[0] || "";
+  const cellRenderer = /function renderShiftCell[\s\S]*?function renderShiftCourseDetail/.exec(appSource)?.[0] || "";
+  const chipRenderer = /function renderShiftLessonChip[\s\S]*?function getShiftCampusClass/.exec(appSource)?.[0] || "";
 
   assert.equal(appSource.includes("buildTeacherDayLessonIndex"), true);
   assert.equal(appSource.includes("renderShiftLessonList"), true);
-  assert.equal(appSource.includes("resolveShiftLessonCampus"), true);
+  assert.equal(cellRenderer.includes("getShiftCampusClass(shift.campus)"), true);
+  assert.equal(cellRenderer.includes("formatShiftCellLabel(shift)"), true);
+  assert.equal(appSource.includes("function formatShiftCellLabel"), true);
+  assert.equal(appSource.includes('replace(/徐汇|浦东/g, "")'), true);
+  assert.equal(cellRenderer.includes("renderShiftCampusMeta"), false);
+  assert.equal(appSource.includes("function renderShiftCampusMeta"), false);
+  assert.equal(appSource.includes("function renderShiftCellMeta"), false);
+  assert.equal(appSource.includes("resolveShiftLessonCampus"), false);
   assert.equal(appSource.includes('id="shift-course-detail"'), true);
   assert.equal(appSource.includes("renderShiftCourseDetail"), true);
   assert.equal(appSource.includes("openShiftCourseDetail"), true);
@@ -254,6 +269,7 @@ test("shift cells show clickable same-day course times and names without student
   assert.equal(chipRenderer.includes("data-shift-lesson-select"), true);
   assert.equal(chipRenderer.includes('class="shift-lesson-time"'), true);
   assert.equal(chipRenderer.includes('class="shift-lesson-campus"'), false);
+  assert.equal(chipRenderer.includes("getShiftCampusClass("), false);
   assert.equal(chipRenderer.includes("lesson.studentName"), false);
   assert.equal(chipRenderer.includes("lesson.timeLabel"), true);
   assert.equal(chipRenderer.includes("escapeHtml(courseName)"), true);
@@ -261,10 +277,7 @@ test("shift cells show clickable same-day course times and names without student
   assert.equal(appSource.includes("shift-campus-pudong"), true);
   assert.ok(css.includes(".shift-lesson-list"));
   assert.ok(css.includes(".shift-lesson-chip"));
-  assert.equal(getRuleValue(".shift-campus-xuhui", "color"), "#b44f7a");
-  assert.equal(getRuleValue(".shift-campus-pudong", "color"), "#1f7f8b");
-  assert.equal(getRuleValue(".shift-campus-label.shift-campus-xuhui,\n.shift-lesson-chip.shift-campus-xuhui", "color"), "#b44f7a");
-  assert.equal(getRuleValue(".shift-campus-label.shift-campus-pudong,\n.shift-lesson-chip.shift-campus-pudong", "color"), "#1f7f8b");
+  assert.equal(css.includes(".shift-campus-label"), false);
   assert.ok(css.includes(".shift-side-stack"));
   assert.ok(css.includes(".shift-lesson-chip.selected"));
 });
