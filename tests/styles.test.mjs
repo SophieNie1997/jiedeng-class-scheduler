@@ -256,7 +256,7 @@ test("shift editor auto-saves field changes and offers compact restore plus bulk
 });
 
 test("shift sidebar shows the editable shift card above the course detail sticker", () => {
-  const sideStackStart = appSource.indexOf('<div class="shift-side-stack">');
+  const sideStackStart = appSource.indexOf('id="shift-side-stack" class="shift-side-stack"');
   const editorIndex = appSource.indexOf('id="shift-editor"', sideStackStart);
   const bulkFormIndex = appSource.indexOf('id="shift-bulk-form"', sideStackStart);
   const courseDetailIndex = appSource.indexOf('id="shift-course-detail"', sideStackStart);
@@ -332,20 +332,53 @@ test("shift view offers a compact bulk scheduling sticker with in-app confirmati
 });
 
 test("shift view supports week and month modes", () => {
-  assert.equal(appSource.includes('shiftViewMode: "week"'), true);
+  assert.equal(appSource.includes('shiftViewMode: "month"'), true);
   assert.equal(appSource.includes("shiftMonthAnchor"), true);
   assert.equal(appSource.includes('data-shift-view-mode="month"'), true);
   assert.equal(appSource.includes("getShiftViewDates"), true);
   assert.equal(appSource.includes("getMonthWeeks"), true);
   assert.equal(appSource.includes("renderShiftMonthGrid"), true);
   assert.equal(appSource.includes("renderShiftWeekGrid"), true);
+  assert.equal(appSource.includes("renderShiftMonthOverviewCell"), true);
+  assert.equal(appSource.includes("renderShiftWeekOverlay"), true);
+  assert.equal(appSource.includes("openShiftWeekOverlay"), true);
+  assert.equal(appSource.includes("closeShiftWeekOverlay"), true);
+  assert.equal(appSource.includes("data-shift-week-open"), true);
+  assert.equal(appSource.includes('id="shift-week-overlay"'), true);
+  assert.equal(appSource.includes("month-overview"), true);
   assert.equal(appSource.includes("shift-lesson-count"), true);
   assert.equal(appSource.includes("outside-month"), true);
   assert.ok(css.includes(".shift-view-toggle"));
   assert.ok(css.includes(".shift-grid.month"));
+  assert.ok(css.includes(".shift-grid.month-overview"));
+  assert.ok(css.includes(".shift-week-overlay"));
+  assert.ok(css.includes(".shift-week-modal"));
   assert.ok(css.includes(".shift-month-week-grid"));
   assert.ok(css.includes(".shift-month-week-label"));
   assert.ok(css.includes(".shift-cell.outside-month"));
+});
+
+test("shift month overview keeps the default screen compact before opening a week", () => {
+  const monthGridRenderer = /function renderShiftMonthGrid[\s\S]*?function renderShiftMonthOverviewWeek/.exec(appSource)?.[0] || "";
+  const monthWeekRenderer = /function renderShiftMonthOverviewWeek[\s\S]*?function renderShiftMonthOverviewCell/.exec(appSource)?.[0] || "";
+  const monthCellRenderer = /function renderShiftMonthOverviewCell[\s\S]*?function renderShiftWeekOverlay/.exec(appSource)?.[0] || "";
+
+  assert.match(
+    appSource,
+    /function renderShiftView[\s\S]*if \(isMonthView && !state\.activeShiftWeekStart\)[\s\S]*shiftSideStackNode\.classList\.add\("hidden"\)/,
+  );
+  assert.equal(monthGridRenderer.includes("data-shift-week-open"), true);
+  assert.equal(monthWeekRenderer.includes("renderShiftMonthOverviewCell"), true);
+  assert.match(
+    appSource,
+    /function renderShiftMonthOverviewCell[\s\S]*formatShiftCellLabel\(shift\)[\s\S]*function renderShiftWeekOverlay/s,
+  );
+  assert.equal(monthCellRenderer.includes("getShiftCellLessons"), false);
+  assert.equal(monthCellRenderer.includes("renderShiftLessonList"), false);
+  assert.equal(monthCellRenderer.includes("shift-lesson-count"), false);
+  assert.equal(appSource.includes("renderShiftLessonList(lessons, shift, selectedLessonIds, shiftViewMode)"), true);
+  assert.equal(appSource.includes('renderShiftLessonList(lessons, shift, selectedLessonIds, "month")'), false);
+  assert.equal(css.includes(".shift-month-week-grid .shift-lesson-list"), false);
 });
 
 test("selected states use the cream planner palette instead of deep green fills", () => {
