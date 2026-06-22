@@ -147,6 +147,14 @@ let remoteSyncReady = false;
 let saveFeedbackToken = 0;
 
 const lessonColorPalette = ["green", "blue", "rose", "orange", "violet", "peach", "lilac", "teal", "amber", "cyan"];
+const lessonPatternPalette = [
+  "pattern-stripe",
+  "pattern-dot",
+  "pattern-grid",
+  "pattern-line",
+  "pattern-ribbon",
+  "pattern-corner",
+];
 
 const teacherAvatars = {
   claire: { character: "小恶魔", mark: "C", tone: "kuromi", image: "photo/1133570168691764439.jpeg" },
@@ -1090,22 +1098,24 @@ function getTeacherAvatar(teacherId) {
 }
 
 function getLessonColor(lesson) {
-  const key = getLessonColorKey(lesson);
-  if (!key) {
+  const courseKey = getLessonCourseKey(lesson);
+  if (!courseKey) {
     return "gray";
   }
 
-  return lessonColorPalette[getStableColorIndex(key, lessonColorPalette.length)] || "gray";
+  const baseColor = lessonColorPalette[getStableColorIndex(courseKey, lessonColorPalette.length)] || "gray";
+
+  return `${baseColor} ${lessonPatternPalette[getStableColorIndex(`${courseKey}|pattern`, lessonPatternPalette.length)]}`;
 }
 
 function getLessonColorKey(lesson) {
+  return getLessonCourseKey(lesson);
+}
+
+function getLessonCourseKey(lesson) {
   return [
     lesson?.teacherId || lesson?.teacherName || "",
     lesson?.course || lesson?.title || "",
-    lesson?.studentName || "",
-    lesson?.startTime || "",
-    lesson?.endTime || "",
-    lesson?.campus || lesson?.deliveryType || "",
   ]
     .join("|")
     .toLowerCase()

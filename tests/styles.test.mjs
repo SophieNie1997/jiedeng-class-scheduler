@@ -53,12 +53,22 @@ test("calendar lesson color chips use the soft planner palette", () => {
   assert.equal(getRuleValue(".lesson-row.lilac", "border-left-color"), "#b487d8");
   assert.equal(getRuleValue(".lesson-row.lilac", "background"), "#f4edff");
   assert.equal(getRuleValue(".lesson-row.orange", "background"), "#fff1e7");
+  assert.equal(getRuleValue(".lesson-row.pattern-stripe", "background-image").includes("repeating-linear-gradient"), true);
+  assert.equal(getRuleValue(".lesson-row.pattern-dot", "background-image").includes("radial-gradient"), true);
+  assert.equal(getRuleValue(".lesson-row.pattern-grid", "background-image").includes("linear-gradient"), true);
+  assert.equal(getRuleValue(".lesson-row.pattern-line", "background-image").includes("repeating-linear-gradient"), true);
   assert.equal(getRuleValue(".lesson-detail-panel.blue", "--lesson-accent"), "#6f9fcf");
   assert.equal(getRuleValue(".lesson-detail-panel.peach", "--lesson-accent"), "#df8f70");
   assert.equal(getRuleValue(".lesson-detail-panel.lilac", "--lesson-accent"), "#b487d8");
   assert.equal(appSource.includes("const lessonColorPalette"), true);
+  assert.equal(appSource.includes("const lessonPatternPalette"), true);
+  assert.equal(appSource.includes("function getLessonCourseKey"), true);
   assert.equal(appSource.includes("function getLessonColor"), true);
   assert.equal(appSource.includes("function getLessonColorKey"), true);
+  assert.match(
+    appSource,
+    /return `\$\{baseColor\} \$\{lessonPatternPalette\[getStableColorIndex\(`\$\{courseKey\}\|pattern`, lessonPatternPalette\.length\)\]\}`/,
+  );
   assert.match(
     appSource,
     /function renderLessonRow[\s\S]*const color = getLessonColor\(lesson\)/,

@@ -1272,6 +1272,46 @@ fieldset {
   background: #eff8fc;
 }
 
+.lesson-row.pattern-stripe {
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.44) 0 5px,
+    rgba(255, 255, 255, 0) 5px 10px
+  );
+}
+
+.lesson-row.pattern-dot {
+  background-image: radial-gradient(rgba(143, 84, 103, 0.18) 1px, transparent 1.5px);
+  background-size: 9px 9px;
+}
+
+.lesson-row.pattern-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.48) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.48) 1px, transparent 1px);
+  background-size: 12px 12px;
+}
+
+.lesson-row.pattern-line {
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0) 0 8px,
+    rgba(143, 84, 103, 0.12) 8px 9px
+  );
+}
+
+.lesson-row.pattern-ribbon {
+  background-image:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0) 36%),
+    repeating-linear-gradient(90deg, rgba(143, 84, 103, 0.1) 0 1px, transparent 1px 11px);
+}
+
+.lesson-row.pattern-corner {
+  background-image:
+    radial-gradient(circle at 100% 0, rgba(255, 255, 255, 0.68) 0 13px, transparent 13px),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0));
+}
+
 .lesson-row.preview {
   border-left-color: #d65f91;
   background:
