@@ -144,6 +144,7 @@ state.coursePermissions = loadCoursePermissions();
 
 let remoteStore = createRemoteStore({ config: {} });
 let remoteSyncReady = false;
+let remoteSyncCanWrite = false;
 let saveFeedbackToken = 0;
 
 const lessonColorPalette = ["green", "blue", "rose", "orange", "violet", "peach", "lilac", "teal", "amber", "cyan"];
@@ -3359,9 +3360,10 @@ async function initializeRemoteSync() {
   try {
     const config = await loadRemoteStoreConfig();
     remoteStore = createRemoteStore({ config });
-    document.documentElement.dataset.remoteSync = remoteStore.isConfigured ? "enabled" : "local";
+    document.documentElement.dataset.remoteSync = remoteStore.isConfigured ? "loading" : "local";
     if (!remoteStore.isConfigured) {
       remoteSyncReady = false;
+      remoteSyncCanWrite = false;
       state.sync = {
         status: "local",
         email: "",
@@ -3372,13 +3374,24 @@ async function initializeRemoteSync() {
     }
 
     const session = await remoteStore.getSession();
-    if (!session && config.requireAuth !== false) {
-      document.documentElement.dataset.remoteSync = "auth-required";
+    const canWrite = Boolean(session) || config.requireAuth === false;
+
+    state.sync = {
+      status: "syncing",
+      email: session?.user?.email || "",
+      message: "正在读取云端排课数据...",
+    };
+    renderSyncPanel();
+
+    const remoteBuckets = await remoteStore.loadAll();
+    if (!canWrite && Object.keys(remoteBuckets).length === 0) {
+      document.documentElement.dataset.remoteSync = "viewer-unavailable";
       remoteSyncReady = false;
+      remoteSyncCanWrite = false;
       state.sync = {
         status: "auth",
         email: "",
-        message: "请先登录云端同步，再查看最新排课数据。这样不会看到本机旧版本。",
+        message: "云端只读还没开通。请先登录查看最新排课，或让管理员在 Supabase 开启匿名只读。",
       };
       renderSyncPanel();
       await remoteStore.onAuthStateChange((_event, nextSession) => {
@@ -3389,24 +3402,19 @@ async function initializeRemoteSync() {
       return;
     }
 
-    state.sync = {
-      status: "syncing",
-      email: session?.user?.email || "",
-      message: "正在读取云端排课数据...",
-    };
-    renderSyncPanel();
-
-    const remoteBuckets = await remoteStore.loadAll();
     if (applyRemoteBuckets(remoteBuckets)) {
       render();
     }
 
     remoteSyncReady = true;
-    document.documentElement.dataset.remoteSync = "enabled";
+    remoteSyncCanWrite = canWrite;
+    document.documentElement.dataset.remoteSync = canWrite ? "enabled" : "viewer";
     state.sync = {
-      status: "synced",
+      status: canWrite ? "synced" : "viewer",
       email: session?.user?.email || "",
-      message: "云端同步已开启，保存后同事会看到更新。",
+      message: canWrite
+        ? "云端同步已开启，保存后同事会看到更新。"
+        : "云端只读模式已开启，可以查看最新排课；登录后才能编辑同步。",
     };
     renderSyncPanel();
 
@@ -3415,9 +3423,16 @@ async function initializeRemoteSync() {
         render();
       }
     });
+
+    await remoteStore.onAuthStateChange((_event, nextSession) => {
+      if (nextSession && !remoteSyncCanWrite) {
+        initializeRemoteSync();
+      }
+    });
   } catch (error) {
     document.documentElement.dataset.remoteSync = "error";
     remoteSyncReady = false;
+    remoteSyncCanWrite = false;
     state.sync = {
       status: "error",
       email: state.sync.email,
@@ -3476,6 +3491,7 @@ async function signOutFromRemoteSync() {
   }
 
   remoteSyncReady = false;
+  remoteSyncCanWrite = false;
   state.sync = {
     status: "auth",
     email: "",
@@ -3489,17 +3505,23 @@ function renderSyncPanel() {
     return;
   }
 
-  const shouldShowAuthForm = state.sync.status === "auth" || (state.sync.status === "error" && !state.sync.email);
+  const shouldShowAuthForm =
+    state.sync.status === "auth" || state.sync.status === "viewer" || (state.sync.status === "error" && !state.sync.email);
 
   if (shouldShowAuthForm) {
+    const title = state.sync.status === "viewer"
+      ? "云端只读模式"
+      : state.sync.status === "error"
+        ? "云端同步需要检查"
+        : "云端同步登录";
     syncPanelNode.innerHTML = `
       <div class="sync-copy">
-        <strong>${state.sync.status === "error" ? "云端同步需要检查" : "云端同步登录"}</strong>
+        <strong>${title}</strong>
         <span>${escapeHtml(state.sync.message)}</span>
       </div>
       <form id="sync-form" class="sync-form">
         <input name="syncEmail" type="email" placeholder="同事邮箱" value="${escapeAttribute(state.sync.email)}" />
-        <button type="submit">发送登录链接</button>
+        <button type="submit">${state.sync.status === "viewer" ? "登录后编辑" : "发送登录链接"}</button>
       </form>
     `;
     return;
@@ -3509,6 +3531,7 @@ function renderSyncPanel() {
     local: "本地保存模式",
     syncing: "正在同步",
     synced: "云端同步已开启",
+    viewer: "云端只读模式",
     error: "云端同步需要检查",
   };
   syncPanelNode.innerHTML = `
@@ -3574,6 +3597,11 @@ function saveRemoteBucket(bucket, payload) {
     return;
   }
 
+  if (!remoteSyncCanWrite) {
+    showSaveFeedback("当前是只读浏览模式。请先用邮箱登录，登录后才能保存并同步。", "viewer");
+    return;
+  }
+
   const token = showSaveFeedback("正在同步编辑内容...", "syncing");
   remoteStore
     .saveBucket(bucket, payload)
@@ -3589,6 +3617,16 @@ function saveRemoteBucket(bucket, payload) {
       }
       console.warn(`Could not sync ${bucket} to Supabase.`, error);
     });
+}
+
+function rejectReadOnlySave() {
+  if (!remoteStore.isConfigured || !remoteSyncReady || remoteSyncCanWrite) {
+    return false;
+  }
+
+  showSaveFeedback("当前是只读浏览模式。请先用邮箱登录，登录后才能保存并同步。", "viewer");
+  initializeRemoteSync();
+  return true;
 }
 
 function showSaveFeedback(message, status = "synced") {
@@ -3960,28 +3998,43 @@ function restoreDeletedLessonsIfRequested(edits) {
 }
 
 function saveShiftOverrides(shifts) {
+  if (rejectReadOnlySave()) {
+    return;
+  }
   saveLocalShiftOverrides(shifts);
   saveRemoteBucket(REMOTE_BUCKETS.shiftOverrides, shifts);
 }
 
 function saveCoursePermissions(permissions) {
+  if (rejectReadOnlySave()) {
+    return;
+  }
   saveLocalCoursePermissions(permissions);
   saveRemoteBucket(REMOTE_BUCKETS.coursePermissions, permissions);
 }
 
 function saveCustomCatalog(catalog) {
+  if (rejectReadOnlySave()) {
+    return;
+  }
   const normalizedCatalog = normalizeCustomCatalog(catalog);
   saveLocalCustomCatalog(normalizedCatalog);
   saveRemoteBucket(REMOTE_BUCKETS.customCatalog, normalizedCatalog);
 }
 
 function saveLessonEdits(edits) {
+  if (rejectReadOnlySave()) {
+    return;
+  }
   const normalizedEdits = normalizeLessonEdits(edits);
   saveLocalLessonEdits(normalizedEdits);
   saveRemoteBucket(REMOTE_BUCKETS.lessonEdits, normalizedEdits);
 }
 
 function saveStudentDirectory(directory) {
+  if (rejectReadOnlySave()) {
+    return;
+  }
   const normalizedDirectory = normalizeStudentDirectory(directory);
   saveLocalStudentDirectory(normalizedDirectory);
   saveRemoteBucket(REMOTE_BUCKETS.studentDirectory, normalizedDirectory);

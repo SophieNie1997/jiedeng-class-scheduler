@@ -6,8 +6,16 @@ create table if not exists public.class_system_state (
   updated_at timestamptz not null default now(),
   primary key (app_id, bucket),
   constraint class_system_state_bucket_check check (
-    bucket in ('shiftOverrides', 'coursePermissions', 'customCatalog', 'lessonEdits')
+    bucket in ('shiftOverrides', 'coursePermissions', 'customCatalog', 'lessonEdits', 'studentDirectory')
   )
+);
+
+alter table public.class_system_state
+drop constraint if exists class_system_state_bucket_check;
+
+alter table public.class_system_state
+add constraint class_system_state_bucket_check check (
+  bucket in ('shiftOverrides', 'coursePermissions', 'customCatalog', 'lessonEdits', 'studentDirectory')
 );
 
 create or replace function public.set_class_system_state_updated_at()
@@ -30,10 +38,11 @@ execute function public.set_class_system_state_updated_at();
 alter table public.class_system_state enable row level security;
 
 drop policy if exists "class system authenticated read" on public.class_system_state;
-create policy "class system authenticated read"
+drop policy if exists "class system shared read" on public.class_system_state;
+create policy "class system shared read"
 on public.class_system_state
 for select
-to authenticated
+to anon, authenticated
 using (true);
 
 drop policy if exists "class system authenticated insert" on public.class_system_state;
@@ -42,7 +51,7 @@ on public.class_system_state
 for insert
 to authenticated
 with check (
-  bucket in ('shiftOverrides', 'coursePermissions', 'customCatalog', 'lessonEdits')
+  bucket in ('shiftOverrides', 'coursePermissions', 'customCatalog', 'lessonEdits', 'studentDirectory')
 );
 
 drop policy if exists "class system authenticated update" on public.class_system_state;
@@ -52,7 +61,7 @@ for update
 to authenticated
 using (true)
 with check (
-  bucket in ('shiftOverrides', 'coursePermissions', 'customCatalog', 'lessonEdits')
+  bucket in ('shiftOverrides', 'coursePermissions', 'customCatalog', 'lessonEdits', 'studentDirectory')
 );
 
 do $$

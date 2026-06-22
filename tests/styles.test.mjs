@@ -6,6 +6,7 @@ import { createHash } from "node:crypto";
 const css = readFileSync(new URL("../styles.css", import.meta.url), "utf8");
 const appSource = readFileSync(new URL("../src/app.js", import.meta.url), "utf8");
 const indexSource = readFileSync(new URL("../index.html", import.meta.url), "utf8");
+const supabaseSql = readFileSync(new URL("../docs/deployment/supabase.sql", import.meta.url), "utf8");
 
 test("shift work cells use campus background colors instead of campus text labels", () => {
   assert.equal(
@@ -714,12 +715,23 @@ test("app exposes a Supabase sync sign-in panel for shared editing", () => {
   assert.equal(appSource.includes('name="syncEmail"'), true);
 });
 
-test("unauthenticated shared mode hides stale local schedule data", () => {
-  assert.equal(appSource.includes('document.documentElement.dataset.remoteSync = "auth-required"'), true);
-  assert.equal(appSource.includes("请先登录云端同步，再查看最新排课数据。"), true);
-  assert.equal(getRuleValue('html[data-remote-sync="auth-required"] .workspace-tabs', "display"), "none");
-  assert.equal(getRuleValue('html[data-remote-sync="auth-required"] main', "display"), "none");
-  assert.equal(getRuleValue('html[data-remote-sync="auth-required"] .sync-panel', "margin-bottom"), "24px");
+test("unauthenticated shared mode shows a cloud read-only view", () => {
+  assert.equal(appSource.includes('document.documentElement.dataset.remoteSync = canWrite ? "enabled" : "viewer"'), true);
+  assert.equal(appSource.includes('status: canWrite ? "synced" : "viewer"'), true);
+  assert.equal(appSource.includes("云端只读模式已开启，可以查看最新排课；登录后才能编辑同步。"), true);
+  assert.equal(appSource.includes("当前是只读浏览模式。请先用邮箱登录，登录后才能保存并同步。"), true);
+  assert.equal(appSource.includes("function rejectReadOnlySave()"), true);
+  assert.match(appSource, /function saveLessonEdits\(edits\) \{\s+if \(rejectReadOnlySave\(\)\)/);
+  assert.equal(appSource.includes('document.documentElement.dataset.remoteSync = "viewer-unavailable"'), true);
+  assert.equal(appSource.includes("云端只读还没开通。请先登录查看最新排课"), true);
+  assert.equal(appSource.includes("remoteSyncCanWrite"), true);
+  assert.equal(css.includes('html[data-remote-sync="auth-required"] .workspace-tabs'), false);
+  assert.equal(css.includes('html[data-remote-sync="auth-required"] main'), false);
+  assert.equal(getRuleValue('html[data-remote-sync="viewer-unavailable"] .workspace-tabs', "display"), "none");
+  assert.equal(getRuleValue('html[data-remote-sync="viewer-unavailable"] main', "display"), "none");
+  assert.match(supabaseSql, /for select\s+to anon, authenticated\s+using \(true\);/);
+  assert.equal(supabaseSql.includes("for insert\nto anon"), false);
+  assert.equal(supabaseSql.includes("for update\nto anon"), false);
 });
 
 test("app shows a clear synced edit confirmation after saving", () => {
