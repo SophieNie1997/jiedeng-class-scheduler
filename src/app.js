@@ -18,7 +18,7 @@ import {
   buildLessonDetail,
   buildWeekOverview,
   filterCalendarLessons,
-} from "./calendar.js?v=20260618-shift-month-weeks";
+} from "./calendar.js?v=20260622-confirm-preview-lessons";
 import {
   buildLessonsForTeacher,
   expandRecurringLessons,
