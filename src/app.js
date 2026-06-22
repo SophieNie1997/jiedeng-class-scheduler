@@ -135,7 +135,9 @@ const state = {
     message: "本地模式",
   },
   view: "planner",
-  weekStart: "2026-06-29",
+  weekStart: getWeekStartForDate(getTodayIsoDate()),
+  calendarViewMode: "month",
+  calendarMonthAnchor: getTodayIsoDate(),
 };
 
 state.coursePermissions = loadCoursePermissions();
@@ -144,19 +146,7 @@ let remoteStore = createRemoteStore({ config: {} });
 let remoteSyncReady = false;
 let saveFeedbackToken = 0;
 
-const teacherColors = {
-  claire: "violet",
-  phebe: "peach",
-  sophie: "lilac",
-  lynn: "blue",
-  tiana: "green",
-  catherine: "orange",
-  charlotte: "rose",
-  gioia: "teal",
-  karen: "amber",
-  hanna: "cyan",
-  reece: "violet",
-};
+const lessonColorPalette = ["green", "blue", "rose", "orange", "violet", "peach", "lilac", "teal", "amber", "cyan"];
 
 const teacherAvatars = {
   claire: { character: "小恶魔", mark: "C", tone: "kuromi", image: "photo/1133570168691764439.jpeg" },
@@ -292,12 +282,16 @@ app.innerHTML = `
           <div class="calendar-toolbar">
             <div>
               <h2>所有老师总课表</h2>
-              <p>按天查看周课程列表，课程会按时间段分组展示。</p>
+              <p>默认查看本月课程总览，点开某节课后进入对应周视图细看。</p>
             </div>
             <div class="calendar-actions">
+              <div class="calendar-view-toggle" aria-label="总课表视图切换">
+                <button class="calendar-view-button active" data-calendar-view-mode="month" type="button">月视图</button>
+                <button class="calendar-view-button" data-calendar-view-mode="week" type="button">周视图</button>
+              </div>
               <button id="add-calendar-lesson" class="add-lesson-button" type="button">新增课程</button>
               <label>
-                <span>周起始</span>
+                <span id="calendar-date-label">月份定位</span>
                 <input id="week-start" type="date" value="${state.weekStart}" />
               </label>
             </div>
@@ -399,6 +393,8 @@ const matchesNode = document.querySelector("#matches");
 const summaryLine = document.querySelector("#summary-line");
 const calendarNode = document.querySelector("#calendar");
 const weekStartInput = document.querySelector("#week-start");
+const calendarDateLabel = document.querySelector("#calendar-date-label");
+const calendarViewModeButtons = document.querySelectorAll("[data-calendar-view-mode]");
 const shiftWeekStartInput = document.querySelector("#shift-week-start");
 const shiftDateLabel = document.querySelector("#shift-date-label");
 const shiftViewModeButtons = document.querySelectorAll("[data-shift-view-mode]");
@@ -455,11 +451,39 @@ form.addEventListener("input", () => {
 });
 
 weekStartInput.addEventListener("input", () => {
-  state.weekStart = weekStartInput.value;
+  if (state.calendarViewMode === "month") {
+    state.calendarMonthAnchor = weekStartInput.value;
+    state.weekStart = getWeekStartForDate(weekStartInput.value);
+  } else {
+    state.weekStart = weekStartInput.value;
+    state.calendarMonthAnchor = weekStartInput.value;
+  }
   shiftWeekStartInput.value = state.weekStart;
   state.selectedLessonId = null;
   state.draftLesson = null;
   render();
+});
+
+calendarViewModeButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const nextMode = button.dataset.calendarViewMode;
+    if (!nextMode || nextMode === state.calendarViewMode) {
+      return;
+    }
+
+    const anchorDate = getCalendarSelectionDate();
+    state.calendarViewMode = nextMode;
+    if (nextMode === "month") {
+      state.calendarMonthAnchor = anchorDate;
+      state.selectedLessonId = null;
+      state.draftLesson = null;
+    } else {
+      state.weekStart = getWeekStartForDate(anchorDate);
+    }
+    weekStartInput.value = getCalendarDateInputValue();
+    shiftWeekStartInput.value = state.weekStart;
+    renderCalendar();
+  });
 });
 
 shiftWeekStartInput.addEventListener("input", () => {
@@ -616,6 +640,10 @@ calendarNode.addEventListener("click", (event) => {
 
   state.selectedLessonId = lessonButton.dataset.lessonId;
   state.draftLesson = null;
+  state.calendarViewMode = "week";
+  state.weekStart = getWeekStartForDate(lessonButton.dataset.lessonDate || state.weekStart);
+  weekStartInput.value = state.weekStart;
+  shiftWeekStartInput.value = state.weekStart;
   renderCalendar();
 });
 
@@ -1061,6 +1089,53 @@ function getTeacherAvatar(teacherId) {
   return teacherAvatars[teacherId] || { character: "随机角色", mark: "师", tone: "default" };
 }
 
+function getLessonColor(lesson) {
+  const key = getLessonColorKey(lesson);
+  if (!key) {
+    return "gray";
+  }
+
+  return lessonColorPalette[getStableColorIndex(key, lessonColorPalette.length)] || "gray";
+}
+
+function getLessonColorKey(lesson) {
+  return [
+    lesson?.teacherId || lesson?.teacherName || "",
+    lesson?.course || lesson?.title || "",
+    lesson?.studentName || "",
+    lesson?.startTime || "",
+    lesson?.endTime || "",
+    lesson?.campus || lesson?.deliveryType || "",
+  ]
+    .join("|")
+    .toLowerCase()
+    .trim();
+}
+
+function getStableColorIndex(key, size) {
+  let hash = 0;
+  for (const char of String(key)) {
+    hash = (hash * 31 + char.charCodeAt(0)) >>> 0;
+  }
+
+  return size ? hash % size : 0;
+}
+
+function getCalendarDateInputValue() {
+  return state.calendarViewMode === "month"
+    ? state.calendarMonthAnchor || getTodayIsoDate()
+    : state.weekStart || getWeekStartForDate(getTodayIsoDate());
+}
+
+function getCalendarSelectionDate() {
+  if (state.draftLesson?.date) {
+    return state.draftLesson.date;
+  }
+
+  const selectedLesson = getCalendarActionLessons().find((lesson) => String(lesson.id) === String(state.selectedLessonId));
+  return selectedLesson?.date || state.calendarMonthAnchor || state.weekStart || getTodayIsoDate();
+}
+
 function renderCalendar() {
   const request = readRequest();
   const effectiveTeachers = getEffectiveTeachers();
@@ -1070,8 +1145,20 @@ function renderCalendar() {
   const editedPreviewLessons = applyLessonEdits(previewLessons, state.lessonEdits, {
     includeAddedLessons: false,
   });
-  const weekDates = getWeekDates(state.weekStart);
   const visibleLessons = filterCalendarLessons([...effectiveLessons, ...editedPreviewLessons]);
+
+  calendarDateLabel.textContent = state.calendarViewMode === "month" ? "月份定位" : "周起始";
+  weekStartInput.value = getCalendarDateInputValue();
+  calendarViewModeButtons.forEach((button) => {
+    button.classList.toggle("active", button.dataset.calendarViewMode === state.calendarViewMode);
+  });
+
+  if (state.calendarViewMode === "month") {
+    calendarNode.innerHTML = renderCalendarMonthGrid(visibleLessons);
+    return;
+  }
+
+  const weekDates = getWeekDates(state.weekStart);
   const allLessons = visibleLessons.filter((lesson) =>
     weekDates.some((date) => date.iso === lesson.date),
   );
@@ -1088,6 +1175,77 @@ function renderCalendar() {
     <div class="calendar-overview">
       ${overview.map((day) => renderCalendarDayCard(day)).join("")}
     </div>
+  `;
+}
+
+function renderCalendarMonthGrid(visibleLessons) {
+  const weeks = getMonthWeeks(getCalendarDateInputValue());
+  const cards = weeks.map((week, index) => renderCalendarMonthWeek(week, visibleLessons, index)).join("");
+
+  return `
+    <div class="calendar-month-overview-grid">
+      ${cards}
+    </div>
+  `;
+}
+
+function renderCalendarMonthWeek(week, visibleLessons, index) {
+  const rangeLabel = `${week[0]?.iso.slice(5) || ""} - ${week[week.length - 1]?.iso.slice(5) || ""}`;
+  const weekLessons = visibleLessons.filter((lesson) => week.some((day) => day.iso === lesson.date));
+  const overview = buildWeekOverview(week, weekLessons);
+  const lessonCount = overview.reduce((sum, day) => sum + day.lessonCount, 0);
+
+  return `
+    <section class="calendar-month-week-card">
+      <div class="calendar-month-week-head">
+        <span>
+          <strong>第 ${index + 1} 周</strong>
+          <em>${escapeHtml(rangeLabel)}</em>
+        </span>
+        <b>${lessonCount} 节</b>
+      </div>
+      <div class="calendar-month-week-grid">
+        ${overview.map((day) => renderCalendarMonthDay(day)).join("")}
+      </div>
+    </section>
+  `;
+}
+
+function renderCalendarMonthDay(day) {
+  const lessons = day.groups.flatMap((group) => group.lessons);
+  return `
+    <div class="calendar-month-day ${day.inMonth === false ? "outside-month" : ""}">
+      <span class="calendar-month-day-head">
+        <strong>${escapeHtml(day.label.replace("周", ""))}</strong>
+        <em>${escapeHtml(day.iso.slice(5))}</em>
+      </span>
+      <span class="calendar-month-lesson-list">
+        ${
+          lessons.length
+            ? lessons.map((lesson) => renderCalendarMonthLessonChip(lesson)).join("")
+            : `<span class="calendar-month-empty">空</span>`
+        }
+      </span>
+    </div>
+  `;
+}
+
+function renderCalendarMonthLessonChip(lesson) {
+  const color = getLessonColor(lesson);
+  const isPreview = lesson.status === "预排";
+  return `
+    <button
+      class="calendar-month-lesson lesson-row ${color} ${isPreview ? "preview" : ""}"
+      data-lesson-id="${escapeAttribute(lesson.id)}"
+      data-lesson-date="${escapeAttribute(lesson.date)}"
+      type="button"
+      aria-label="打开 ${escapeAttribute(lesson.date)} ${escapeAttribute(lesson.teacherName)} ${escapeAttribute(lesson.course)}"
+    >
+      <span class="lesson-row-main">
+        <strong>${escapeHtml(lesson.startTime)}-${escapeHtml(lesson.endTime)}</strong>
+        <span>${escapeHtml(lesson.teacherName)} · ${escapeHtml(lesson.course)}</span>
+      </span>
+    </button>
   `;
 }
 
@@ -1120,7 +1278,7 @@ function renderCalendarTimeGroup(group) {
 }
 
 function renderLessonRow(lesson) {
-  const color = teacherColors[lesson.teacherId] || "gray";
+  const color = getLessonColor(lesson);
   const isPreview = lesson.status === "预排";
   const selected = state.selectedLessonId === lesson.id;
   const detail = getTeachingSiteLabel(lesson);
@@ -1129,6 +1287,7 @@ function renderLessonRow(lesson) {
     <button
       class="lesson-row ${color} ${isPreview ? "preview" : ""} ${selected ? "selected" : ""}"
       data-lesson-id="${escapeAttribute(lesson.id)}"
+      data-lesson-date="${escapeAttribute(lesson.date)}"
       type="button"
       aria-label="查看 ${escapeAttribute(lesson.teacherName)} ${escapeAttribute(lesson.course)} 课程详情"
     >
@@ -1150,7 +1309,7 @@ function getTeachingSiteLabel(lesson) {
 }
 
 function renderLessonDetail(detail) {
-  const color = teacherColors[detail.teacherId] || "gray";
+  const color = getLessonColor(detail);
   const avatar = getTeacherAvatar(detail.teacherId);
   const isPreviewDetail = Boolean(detail.isPreview);
   const saveButtonLabel = isPreviewDetail ? "确认排课并同步到网站" : "保存并同步";
@@ -2665,8 +2824,10 @@ function renderPermissionToggle(teacher, course, isChecked) {
 function createDraftCalendarLesson() {
   const teacher = getCandidateTeachers()[0] || { id: "", name: "" };
   const course = getCourses()[0] || "未填写";
-  const date = state.weekStart;
+  const date = state.calendarViewMode === "month" ? state.calendarMonthAnchor || state.weekStart : state.weekStart;
   const id = `manual-${Date.now()}`;
+  state.calendarViewMode = "week";
+  state.weekStart = getWeekStartForDate(date);
   state.selectedLessonId = id;
   state.draftLesson = {
     id,
@@ -3108,6 +3269,7 @@ function openCourseInLessonEditor(courseKey) {
   }
 
   state.view = "planner";
+  state.calendarViewMode = "week";
   state.selectedLessonId = lesson.id;
   state.draftLesson = null;
   state.weekStart = getWeekStartForDate(lesson.date);

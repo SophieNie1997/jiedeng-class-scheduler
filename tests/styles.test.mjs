@@ -56,11 +56,41 @@ test("calendar lesson color chips use the soft planner palette", () => {
   assert.equal(getRuleValue(".lesson-detail-panel.blue", "--lesson-accent"), "#6f9fcf");
   assert.equal(getRuleValue(".lesson-detail-panel.peach", "--lesson-accent"), "#df8f70");
   assert.equal(getRuleValue(".lesson-detail-panel.lilac", "--lesson-accent"), "#b487d8");
-  assert.equal(appSource.includes('phebe: "peach"'), true);
-  assert.equal(appSource.includes('sophie: "lilac"'), true);
+  assert.equal(appSource.includes("const lessonColorPalette"), true);
+  assert.equal(appSource.includes("function getLessonColor"), true);
+  assert.equal(appSource.includes("function getLessonColorKey"), true);
+  assert.match(
+    appSource,
+    /function renderLessonRow[\s\S]*const color = getLessonColor\(lesson\)/,
+  );
+  assert.match(
+    appSource,
+    /function renderLessonDetail[\s\S]*const color = getLessonColor\(detail\)/,
+  );
+  assert.equal(appSource.includes("teacherColors[lesson.teacherId]"), false);
   for (const oldColor of ["#2563eb", "#d66a24", "#7058d8", "#0f766e", "#0884a8"]) {
     assert.equal(css.includes(oldColor), false, `${oldColor} should not remain in lesson color tokens`);
   }
+});
+
+test("calendar defaults to a month overview and drills into a week from lessons", () => {
+  assert.equal(appSource.includes('calendarViewMode: "month"'), true);
+  assert.equal(appSource.includes("calendarMonthAnchor: getTodayIsoDate()"), true);
+  assert.equal(appSource.includes('data-calendar-view-mode="month"'), true);
+  assert.equal(appSource.includes('data-calendar-view-mode="week"'), true);
+  assert.equal(appSource.includes("calendarViewModeButtons"), true);
+  assert.equal(appSource.includes("renderCalendarMonthGrid"), true);
+  assert.equal(appSource.includes("renderCalendarMonthWeek"), true);
+  assert.equal(appSource.includes("renderCalendarMonthLessonChip"), true);
+  assert.match(
+    appSource,
+    /const lessonButton = event\.target\.closest\("\[data-lesson-id\]"\)[\s\S]*state\.calendarViewMode = "week"[\s\S]*getWeekStartForDate\(lessonButton\.dataset\.lessonDate/,
+  );
+  assert.ok(css.includes(".calendar-view-toggle"));
+  assert.ok(css.includes(".calendar-month-overview-grid"));
+  assert.ok(css.includes(".calendar-month-week-card"));
+  assert.ok(css.includes(".calendar-month-week-grid"));
+  assert.ok(css.includes(".calendar-month-lesson"));
 });
 
 test("candidate preview lessons look visibly different from synced lessons", () => {

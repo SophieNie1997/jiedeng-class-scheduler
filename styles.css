@@ -435,6 +435,33 @@ h2 {
   gap: 12px;
 }
 
+.calendar-view-toggle {
+  display: inline-flex;
+  gap: 6px;
+  align-self: end;
+  border: 1px solid rgba(239, 189, 203, 0.82);
+  border-radius: 999px;
+  background: rgba(255, 250, 253, 0.78);
+  padding: 4px;
+}
+
+.calendar-view-button {
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 900;
+  padding: 8px 14px;
+}
+
+.calendar-view-button.active {
+  background: var(--selected-fill);
+  color: #7b3d56;
+  box-shadow: 0 8px 18px rgba(215, 125, 151, 0.18);
+}
+
 .add-lesson-button {
   height: 42px;
   border: 1px solid rgba(47, 116, 101, 0.22);
@@ -850,6 +877,157 @@ fieldset {
   align-items: start;
   overflow-x: auto;
   padding: 4px 2px 8px;
+}
+
+.calendar-month-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  align-items: start;
+  padding: 4px 2px 10px;
+}
+
+.calendar-month-week-card {
+  border: 1px solid rgba(239, 189, 203, 0.76);
+  border-radius: 22px;
+  background:
+    linear-gradient(135deg, rgba(255, 248, 252, 0.9), rgba(242, 253, 248, 0.72)),
+    rgba(255, 255, 255, 0.66);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.86),
+    0 12px 24px rgba(180, 108, 133, 0.08);
+  padding: 12px;
+  overflow: hidden;
+}
+
+.calendar-month-week-head {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+  border: 1px dashed rgba(239, 189, 203, 0.82);
+  border-radius: 17px;
+  background: rgba(255, 250, 253, 0.76);
+  padding: 8px 10px;
+}
+
+.calendar-month-week-head span,
+.calendar-month-week-head strong,
+.calendar-month-week-head em,
+.calendar-month-week-head b {
+  display: block;
+}
+
+.calendar-month-week-head strong {
+  color: #8a5268;
+  font-size: 14px;
+}
+
+.calendar-month-week-head em {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 12px;
+  font-style: normal;
+}
+
+.calendar-month-week-head b {
+  flex: 0 0 auto;
+  border: 1px solid rgba(47, 116, 101, 0.2);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--accent);
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.calendar-month-week-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.calendar-month-day {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: 138px;
+  border: 1px solid rgba(239, 189, 203, 0.58);
+  border-radius: 16px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.62), rgba(255, 248, 252, 0.54)),
+    rgba(255, 255, 255, 0.52);
+  padding: 7px;
+  min-width: 0;
+}
+
+.calendar-month-day.outside-month {
+  opacity: 0.46;
+}
+
+.calendar-month-day-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px;
+  margin-bottom: 7px;
+  color: var(--ink);
+}
+
+.calendar-month-day-head strong,
+.calendar-month-day-head em {
+  display: block;
+}
+
+.calendar-month-day-head strong {
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.calendar-month-day-head em {
+  color: var(--muted);
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.calendar-month-lesson-list {
+  display: grid;
+  align-content: start;
+  gap: 5px;
+  min-width: 0;
+}
+
+.calendar-month-lesson {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+  min-height: 0;
+  border-left-width: 4px;
+  border-radius: 12px;
+  padding: 5px 6px;
+  font-size: 10px;
+  line-height: 1.25;
+}
+
+.calendar-month-lesson strong {
+  font-size: 10px;
+  line-height: 1.18;
+}
+
+.calendar-month-lesson span span {
+  margin-top: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.calendar-month-empty {
+  display: block;
+  border: 1px dashed rgba(239, 189, 203, 0.46);
+  border-radius: 12px;
+  color: #9a8b93;
+  padding: 10px 4px;
+  font-size: 11px;
+  text-align: center;
 }
 
 .calendar-day-card {
@@ -3786,6 +3964,14 @@ fieldset {
   .student-add-form {
     display: grid;
     margin-top: 12px;
+  }
+
+  .calendar-view-toggle {
+    justify-self: start;
+  }
+
+  .calendar-month-overview-grid {
+    grid-template-columns: 1fr;
   }
 
   .header-metrics {
