@@ -179,6 +179,24 @@ test("lesson detail keeps a series together when a later lesson has no campus", 
   assert.equal(detail.recurrence.sessionCount, 2);
 });
 
+test("lesson detail marks preview lessons for confirmation", () => {
+  const detail = buildLessonDetail(
+    {
+      ...makeLesson("preview-phebe-1", "2026-07-07"),
+      status: "预排",
+    },
+    [
+      {
+        ...makeLesson("preview-phebe-1", "2026-07-07"),
+        status: "预排",
+      },
+    ],
+  );
+
+  assert.equal(detail.isPreview, true);
+  assert.equal(detail.status, "预排");
+});
+
 function makeLesson(id, date) {
   return {
     id,

@@ -71,6 +71,7 @@ export function buildLessonDetail(lesson, lessons) {
     durationMinutes,
     durationLabel: formatDuration(lesson.startTime, lesson.endTime),
     status: lesson.status || "未填写",
+    isPreview: lesson.status === "预排",
     notes: lesson.notes || lesson.note || "",
     source: lesson.source || "",
     recurrence: {

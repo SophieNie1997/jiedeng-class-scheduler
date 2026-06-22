@@ -1112,6 +1112,7 @@ function getTeachingSiteLabel(lesson) {
 function renderLessonDetail(detail) {
   const color = teacherColors[detail.teacherId] || "gray";
   const avatar = getTeacherAvatar(detail.teacherId);
+  const saveButtonLabel = detail.isPreview ? "确认排课并同步" : "保存并同步";
 
   return `
     <aside class="lesson-detail-panel ${color}${avatar.image ? " has-avatar-bg" : ""}"${renderLessonAvatarStyle(
@@ -1166,7 +1167,7 @@ function renderLessonDetail(detail) {
           <textarea name="notes" rows="3">${escapeHtml(detail.notes)}</textarea>
         </label>
         <div class="lesson-detail-actions">
-          <button class="lesson-save-button" data-lesson-action="save" type="button">保存并同步</button>
+          <button class="lesson-save-button" data-lesson-action="save" type="button">${saveButtonLabel}</button>
           <button class="lesson-delete-button" data-lesson-action="delete" type="button" aria-label="删除课程">
             <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
               <path d="M4 7h16"></path>
@@ -2658,7 +2659,7 @@ function requestSelectedLessonSave() {
     return;
   }
 
-  if (state.draftLesson?.id === state.selectedLessonId) {
+  if (state.draftLesson?.id === state.selectedLessonId || isPreviewLessonId(state.selectedLessonId)) {
     saveSelectedLessonFromDetail("following", lessonChanges);
     return;
   }
@@ -2676,9 +2677,15 @@ function saveSelectedLessonFromDetail(scope = "single", lessonChanges = null) {
     return;
   }
 
-  if (state.draftLesson?.id === state.selectedLessonId) {
-    state.lessonEdits = setManualLessonSeries(state.lessonEdits, state.selectedLessonId, changes);
+  const selectedLessonIsDraft = state.draftLesson?.id === state.selectedLessonId;
+  const selectedLessonIsPreview = isPreviewLessonId(state.selectedLessonId);
+  if (selectedLessonIsDraft || selectedLessonIsPreview) {
+    const manualLessonId = selectedLessonIsPreview ? `manual-${Date.now()}` : state.selectedLessonId;
+    state.lessonEdits = setManualLessonSeries(state.lessonEdits, manualLessonId, changes);
     state.draftLesson = null;
+    if (selectedLessonIsPreview) {
+      state.selectedTeacherId = null;
+    }
   } else {
     state.lessonEdits = updateLessonsInScope(
       getCalendarActionLessons(),
@@ -2698,6 +2705,10 @@ function closeLessonDetailToPlanner() {
   state.selectedLessonId = null;
   state.draftLesson = null;
   state.view = "planner";
+}
+
+function isPreviewLessonId(lessonId) {
+  return String(lessonId || "").startsWith("preview-");
 }
 
 function readLessonChangesFromDetailForm(detailForm) {
@@ -2729,6 +2740,8 @@ function readLessonChangesFromDetailForm(detailForm) {
       (normalizedStartDate !== originalStartDate || (explicitStartDate && explicitStartDate !== selectedDate)),
   );
 
+  const isManualLesson = state.draftLesson?.id === state.selectedLessonId || isPreviewLessonId(state.selectedLessonId);
+
   return {
     teacherId,
     teacherName: teacher?.name || teacherId,
@@ -2746,7 +2759,7 @@ function readLessonChangesFromDetailForm(detailForm) {
     recurrenceWeekdays: selectedWeekdays.length ? selectedWeekdays : [getWeekdayValue(normalizedStartDate || date)],
     regenerateSeriesDates,
     notes: String(formData.get("notes") || ""),
-    status: state.draftLesson?.id === state.selectedLessonId ? "手动新增" : "已编辑",
+    status: isManualLesson ? "手动新增" : "已编辑",
   };
 }
 

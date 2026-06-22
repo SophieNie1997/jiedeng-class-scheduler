@@ -70,6 +70,27 @@ test("candidate preview lessons look visibly different from synced lessons", () 
   assert.equal(getRuleValue(".lesson-row.preview small", "font-weight"), "900");
 });
 
+test("candidate preview lessons can be confirmed into synced manual lessons", () => {
+  assert.equal(appSource.includes("确认排课并同步"), true);
+  assert.equal(appSource.includes("isPreviewLessonId"), true);
+  assert.match(
+    appSource,
+    /function requestSelectedLessonSave[\s\S]*isPreviewLessonId\(state\.selectedLessonId\)[\s\S]*saveSelectedLessonFromDetail\("following", lessonChanges\)/,
+  );
+  assert.match(
+    appSource,
+    /function saveSelectedLessonFromDetail[\s\S]*manual-\$\{Date\.now\(\)\}[\s\S]*setManualLessonSeries/,
+  );
+  assert.match(
+    appSource,
+    /function saveSelectedLessonFromDetail[\s\S]*state\.selectedTeacherId = null/,
+  );
+  assert.match(
+    appSource,
+    /function readLessonChangesFromDetailForm[\s\S]*isPreviewLessonId\(state\.selectedLessonId\)[\s\S]*"手动新增"/,
+  );
+});
+
 test("calendar page only renders the week overview without single-day detail", () => {
   assert.equal(appSource.includes("day-detail"), false);
   assert.equal(appSource.includes("renderDayDetail"), false);
