@@ -6,7 +6,7 @@ import {
   grades,
   shiftRoster as baseShiftRoster,
   studentCatalog as baseStudentCatalog,
-} from "./data.js?v=20260617-active-teacher-lessons";
+} from "./data.js?v=20260622-shift-team-planner";
 import {
   applyCoursePermissions,
   buildDefaultCoursePermissions,
@@ -118,6 +118,7 @@ const state = {
   shiftMonthAnchor: getTodayIsoDate(),
   activeShiftWeekStart: "",
   showShiftBulkForm: false,
+  showShiftMonthPlanner: false,
   shiftOverrides: loadShiftOverrides(),
   customCatalog: loadCustomCatalog(),
   studentDirectory: loadStudentDirectory(),
@@ -340,6 +341,14 @@ app.innerHTML = `
             <span id="shift-date-label">周起始</span>
             <input id="shift-week-start" type="date" value="${state.weekStart}" />
           </label>
+          <button
+            id="open-month-shift-planner"
+            class="month-shift-planner-button"
+            data-shift-action="month-plan"
+            type="button"
+          >
+            设置月排班
+          </button>
           <div class="shift-view-toggle" aria-label="排班视图">
             <button class="shift-view-button active" data-shift-view-mode="week" type="button">周视图</button>
             <button class="shift-view-button" data-shift-view-mode="month" type="button">月视图</button>
@@ -354,6 +363,7 @@ app.innerHTML = `
           </div>
         </div>
         <div id="shift-week-overlay" class="shift-week-overlay hidden"></div>
+        <div id="shift-month-planner" class="shift-month-planner hidden"></div>
       </section>
     </section>
 
@@ -396,10 +406,12 @@ const shiftLayoutNode = document.querySelector("#shift-layout");
 const shiftGridNode = document.querySelector("#shift-grid");
 const shiftSideStackNode = document.querySelector("#shift-side-stack");
 const shiftWeekOverlayNode = document.querySelector("#shift-week-overlay");
+const shiftMonthPlannerNode = document.querySelector("#shift-month-planner");
 const shiftBulkFormNode = document.querySelector("#shift-bulk-form");
 const shiftCourseDetailNode = document.querySelector("#shift-course-detail");
 const shiftEditorNode = document.querySelector("#shift-editor");
 const shiftSyncLine = document.querySelector("#shift-sync-line");
+const openMonthShiftPlannerButton = document.querySelector("#open-month-shift-planner");
 const plannerView = document.querySelector("#planner-view");
 const coursesView = document.querySelector("#courses-view");
 const studentsView = document.querySelector("#students-view");
@@ -629,6 +641,7 @@ tabButtons.forEach((button) => {
       state.activeShiftWeekStart = "";
       state.shiftMonthAnchor = getTodayIsoDate();
       state.showShiftBulkForm = false;
+      state.showShiftMonthPlanner = false;
       state.selectedShiftCourseKey = "";
     }
     renderWorkspace();
@@ -644,6 +657,7 @@ shiftViewModeButtons.forEach((button) => {
     state.shiftViewMode = nextMode;
     state.activeShiftWeekStart = "";
     state.showShiftBulkForm = false;
+    state.showShiftMonthPlanner = false;
     if (state.shiftViewMode === "week") {
       state.weekStart = getWeekStartForDate(state.selectedShift.date || state.weekStart);
       shiftWeekStartInput.value = state.weekStart;
@@ -702,6 +716,7 @@ function selectShiftCell(cell) {
   };
   state.selectedShiftCourseKey = "";
   state.showShiftBulkForm = false;
+  state.showShiftMonthPlanner = false;
   renderShiftView();
 }
 
@@ -754,12 +769,14 @@ function openShiftWeekOverlay(weekStart) {
   };
   state.selectedShiftCourseKey = "";
   state.showShiftBulkForm = false;
+  state.showShiftMonthPlanner = false;
   renderShiftView();
 }
 
 function closeShiftWeekOverlay() {
   state.activeShiftWeekStart = "";
   state.showShiftBulkForm = false;
+  state.showShiftMonthPlanner = false;
   state.selectedShiftCourseKey = "";
   renderShiftView();
 }
@@ -801,6 +818,29 @@ shiftBulkFormNode.addEventListener("submit", (event) => {
   }
 
   openBulkShiftConfirm(payload, targets.length);
+});
+
+openMonthShiftPlannerButton.addEventListener("click", () => {
+  openShiftMonthPlanner();
+});
+
+shiftMonthPlannerNode.addEventListener("click", (event) => {
+  if (event.target.closest("[data-shift-month-planner-close]")) {
+    closeShiftMonthPlanner();
+  }
+});
+
+shiftMonthPlannerNode.addEventListener("input", () => {
+  refreshBulkShiftFormState(shiftMonthPlannerNode.querySelector("form"));
+});
+
+shiftMonthPlannerNode.addEventListener("change", () => {
+  refreshBulkShiftFormState(shiftMonthPlannerNode.querySelector("form"));
+});
+
+shiftMonthPlannerNode.addEventListener("submit", (event) => {
+  event.preventDefault();
+  handleShiftMonthPlannerSubmit(event.target.closest("form"));
 });
 
 shiftEditorNode.addEventListener("click", (event) => {
@@ -1987,6 +2027,7 @@ function renderShiftView() {
     renderShiftBulkForm([]);
     renderShiftCourseDetail(null);
     renderShiftEditor();
+    renderShiftMonthPlanner();
     return;
   }
 
@@ -1994,6 +2035,7 @@ function renderShiftView() {
   renderShiftBulkForm(activeWeekDates || shiftDates);
   renderShiftCourseDetail(selectedShiftCard);
   renderShiftEditor();
+  renderShiftMonthPlanner();
 }
 
 function renderShiftWeekGrid(shiftDates, shiftLessonIndex, selectedShiftLessonIds, options = {}) {
@@ -2327,6 +2369,125 @@ function renderShiftBulkForm(weekDates = getWeekDates(state.weekStart)) {
   `;
 }
 
+function renderShiftMonthPlanner() {
+  if (!state.showShiftMonthPlanner) {
+    shiftMonthPlannerNode.classList.add("hidden");
+    shiftMonthPlannerNode.innerHTML = "";
+    return;
+  }
+
+  const roster = getShiftRoster();
+  const selectedTeacherId = roster.some((teacher) => teacher.id === state.selectedShift.teacherId)
+    ? state.selectedShift.teacherId
+    : "__all";
+  const { startDate, endDate } = getMonthShiftPlannerDates();
+  const defaultPayload = {
+    teacherId: selectedTeacherId,
+    startDate,
+    endDate,
+    weekdays: WEEKDAYS.map((day) => day.value),
+    type: "work",
+    campus: "八佰伴",
+    startTime: "09:00",
+    endTime: "18:00",
+    note: "",
+    mode: "overwrite",
+  };
+  const targetCount = buildBulkShiftTargets(roster, defaultPayload, state.shiftOverrides).length;
+
+  shiftMonthPlannerNode.classList.remove("hidden");
+  shiftMonthPlannerNode.innerHTML = `
+    <div class="shift-month-planner-backdrop" data-shift-month-planner-close></div>
+    <section class="shift-month-planner-card" role="dialog" aria-modal="true" aria-label="月排班设置小纸条">
+      <button
+        class="lesson-detail-close shift-month-planner-close"
+        data-shift-month-planner-close
+        type="button"
+        aria-label="关闭月排班设置小纸条"
+      >
+        ×
+      </button>
+      <div class="shift-bulk-title shift-month-planner-title">
+        <span>月排班设置小纸条</span>
+        <strong>给未来 1 个月铺好班表</strong>
+      </div>
+      <p class="shift-month-planner-note">选老师、日期和星期后点应用，会按确认后的设置写入排班，并同步给大家。</p>
+      <form id="month-shift-planner-form" class="shift-bulk-form month-shift-planner-form">
+        <label>
+          <span>老师</span>
+          <select data-bulk-shift-field name="bulkTeacherId">
+            <option value="__all" ${selectedTeacherId === "__all" ? "selected" : ""}>全部老师</option>
+            ${roster
+              .map(
+                (teacher) =>
+                  `<option value="${escapeAttribute(teacher.id)}" ${
+                    teacher.id === selectedTeacherId ? "selected" : ""
+                  }>${escapeHtml(teacher.name)}</option>`,
+              )
+              .join("")}
+          </select>
+        </label>
+        <div class="editor-time-grid">
+          <label>
+            <span>开始日期</span>
+            <input data-bulk-shift-field name="bulkStartDate" type="date" value="${startDate}" />
+          </label>
+          <label>
+            <span>结束日期</span>
+            <input data-bulk-shift-field name="bulkEndDate" type="date" value="${endDate}" />
+          </label>
+        </div>
+        <fieldset class="shift-bulk-weekdays">
+          <legend>应用星期</legend>
+          ${WEEKDAYS.map(
+            (day) => `
+              <label>
+                <input data-bulk-shift-weekday name="bulkWeekdays" type="checkbox" value="${day.value}" checked />
+                <span>${escapeHtml(day.label)}</span>
+              </label>
+            `,
+          ).join("")}
+        </fieldset>
+        <div class="editor-time-grid">
+          <label>
+            <span>状态</span>
+            <select data-bulk-shift-field name="bulkType">
+              <option value="work" selected>上班</option>
+              <option value="off">休息</option>
+              <option value="holiday">法定假</option>
+            </select>
+          </label>
+          <label>
+            <span>校区</span>
+            <select data-bulk-shift-field name="bulkCampus">
+              ${CAMPUS_OPTIONS.map((option) => `<option value="${escapeAttribute(option)}">${escapeHtml(option)}</option>`).join("")}
+            </select>
+          </label>
+        </div>
+        <div class="editor-time-grid">
+          <label>
+            <span>开始</span>
+            <input data-bulk-shift-field name="bulkStartTime" type="time" value="09:00" step="900" />
+          </label>
+          <label>
+            <span>结束</span>
+            <input data-bulk-shift-field name="bulkEndTime" type="time" value="18:00" step="900" />
+          </label>
+        </div>
+        <label>
+          <span>备注</span>
+          <input data-bulk-shift-field name="bulkNote" placeholder="例如：暑期集中排班" />
+        </label>
+        <div class="shift-bulk-actions">
+          <button class="primary-button" data-bulk-shift-action="apply" type="submit" ${targetCount ? "" : "disabled"}>
+            应用到月排班
+          </button>
+        </div>
+      </form>
+    </section>
+  `;
+}
+
 function renderShiftEditor() {
   const teacher = getShiftRoster().find((item) => item.id === state.selectedShift.teacherId);
   if (!teacher) {
@@ -2408,6 +2569,40 @@ function renderShiftEditor() {
 function toggleShiftBulkForm() {
   state.showShiftBulkForm = !state.showShiftBulkForm;
   renderShiftView();
+}
+
+function openShiftMonthPlanner() {
+  state.showShiftMonthPlanner = true;
+  state.showShiftBulkForm = false;
+  renderShiftView();
+}
+
+function closeShiftMonthPlanner() {
+  state.showShiftMonthPlanner = false;
+  renderShiftView();
+}
+
+function handleShiftMonthPlannerSubmit(formNode) {
+  if (!formNode) {
+    return;
+  }
+
+  const payload = readBulkShiftPayload(formNode);
+  if (payload.type === "work" && parseTimeToMinutes(payload.startTime) >= parseTimeToMinutes(payload.endTime)) {
+    showSaveFeedback("结束时间要晚于开始时间，先帮小纸条改一下哦。", "error");
+    return;
+  }
+
+  const targets = buildBulkShiftTargets(getShiftRoster(), payload, state.shiftOverrides);
+  if (!targets.length) {
+    showSaveFeedback("没有找到需要更新的排班格子，先检查日期和星期哦。", "local");
+    refreshBulkShiftFormState(formNode);
+    return;
+  }
+
+  state.showShiftMonthPlanner = false;
+  renderShiftMonthPlanner();
+  openBulkShiftConfirm(payload, targets.length);
 }
 
 function renderCoursePermissions() {
@@ -2617,6 +2812,7 @@ function applyBulkShift(payload) {
   };
   state.selectedShiftCourseKey = "";
   state.showShiftBulkForm = false;
+  state.showShiftMonthPlanner = false;
   saveShiftOverrides(state.shiftOverrides);
   render();
 }
@@ -3381,6 +3577,14 @@ function getShiftViewDates() {
 
 function getShiftDateInputValue() {
   return state.shiftViewMode === "month" ? state.shiftMonthAnchor || state.selectedShift.date || state.weekStart : state.weekStart;
+}
+
+function getMonthShiftPlannerDates() {
+  const anchorDate = state.activeShiftWeekStart || getShiftDateInputValue() || state.selectedShift.date || getTodayIsoDate();
+  return {
+    startDate: anchorDate,
+    endDate: addDays(anchorDate, 30),
+  };
 }
 
 function getMonthDates(anchorDate) {

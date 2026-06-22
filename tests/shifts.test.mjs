@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 
 import {
+  candidateTeachers,
   defaultShiftOverrides,
   shiftRoster,
 } from "../src/data.js";
@@ -254,16 +255,25 @@ test("converts rest and statutory holiday shifts into unavailable calendar lesso
 test("syncs teacher roster and default shifts from the latest duty workbook", () => {
   assert.deepEqual(
     shiftRoster.map((person) => person.name),
-    ["Claire", "Phebe", "Sophie", "Lynn", "Tiana", "Catherine"],
+    ["Claire", "Phebe", "Sophie", "Lynn", "Tiana", "Catherine", "Lency", "Vicky"],
   );
   assert.equal(shiftRoster.some((person) => person.id === "claire"), true);
-  assert.equal(shiftRoster.some((person) => person.id === "lency"), false);
-  assert.equal(shiftRoster.some((person) => person.id === "vicky"), false);
+  assert.equal(shiftRoster.some((person) => person.id === "lency"), true);
+  assert.equal(shiftRoster.some((person) => person.id === "vicky"), true);
   assert.equal(shiftRoster.some((person) => person.id === "reece"), false);
   assert.equal(shiftRoster.some((person) => person.id === "charlotte"), false);
   assert.equal(shiftRoster.some((person) => person.id === "gioia"), false);
   assert.equal(shiftRoster.some((person) => person.id === "karen"), false);
   assert.equal(shiftRoster.some((person) => person.id === "hanna"), false);
+});
+
+test("keeps non-teaching team members out of candidate matching", () => {
+  assert.deepEqual(
+    candidateTeachers.map((person) => person.name),
+    ["Claire", "Phebe", "Sophie", "Lynn", "Tiana", "Catherine"],
+  );
+  assert.equal(candidateTeachers.some((person) => person.id === "lency"), false);
+  assert.equal(candidateTeachers.some((person) => person.id === "vicky"), false);
 });
 
 test("includes workbook imported roster shifts through July 2026", () => {

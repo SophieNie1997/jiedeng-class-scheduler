@@ -1653,6 +1653,32 @@ fieldset {
   box-shadow: 0 8px 18px rgba(215, 125, 151, 0.18);
 }
 
+.month-shift-planner-button {
+  height: 42px;
+  border: 1px solid rgba(215, 125, 151, 0.44);
+  border-radius: 999px;
+  background:
+    linear-gradient(180deg, rgba(255, 248, 251, 0.98), rgba(255, 225, 238, 0.84)),
+    rgba(255, 255, 255, 0.72);
+  color: #9c4569;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 900;
+  padding: 0 18px;
+  box-shadow:
+    0 12px 24px rgba(215, 125, 151, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.78);
+}
+
+.month-shift-planner-button:hover,
+.month-shift-planner-button:focus-visible {
+  background:
+    linear-gradient(180deg, rgba(255, 241, 248, 1), rgba(255, 210, 229, 0.9)),
+    rgba(255, 255, 255, 0.78);
+  outline: 0;
+  transform: translateY(-1px);
+}
+
 .shift-layout {
   display: grid;
   grid-template-columns: minmax(720px, 1fr) 300px;
@@ -2284,6 +2310,91 @@ fieldset {
   background:
     linear-gradient(135deg, rgba(255, 246, 250, 0.86), rgba(239, 250, 246, 0.72)),
     rgba(255, 255, 255, 0.64);
+}
+
+.shift-month-planner {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: 28px;
+}
+
+.shift-month-planner.hidden {
+  display: none;
+}
+
+.shift-month-planner-backdrop {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 16% 18%, rgba(255, 214, 229, 0.34), transparent 28%),
+    radial-gradient(circle at 82% 72%, rgba(215, 239, 231, 0.34), transparent 32%),
+    rgba(255, 247, 251, 0.62);
+  backdrop-filter: blur(12px);
+}
+
+.shift-month-planner-card {
+  position: relative;
+  z-index: 1;
+  width: min(860px, 100%);
+  max-height: min(86vh, 820px);
+  overflow: auto;
+  border: 1px solid rgba(239, 189, 203, 0.82);
+  border-radius: 28px;
+  background:
+    linear-gradient(135deg, rgba(255, 249, 252, 0.96), rgba(240, 251, 247, 0.9)),
+    rgba(255, 255, 255, 0.88);
+  padding: 26px;
+  box-shadow:
+    0 24px 70px rgba(176, 116, 136, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.86);
+}
+
+.shift-month-planner-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+}
+
+.shift-month-planner-title {
+  padding-right: 54px;
+}
+
+.shift-month-planner-title span {
+  color: #2d7b68;
+}
+
+.shift-month-planner-title strong {
+  font-size: 24px;
+}
+
+.shift-month-planner-note {
+  margin: 8px 54px 16px 0;
+  color: var(--muted);
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.month-shift-planner-form {
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgba(255, 240, 247, 0.72), rgba(255, 255, 255, 0.68)),
+    rgba(255, 255, 255, 0.58);
+}
+
+.month-shift-planner-form .editor-time-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.month-shift-planner-form .shift-bulk-weekdays {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.month-shift-planner-form [data-bulk-shift-action="apply"] {
+  min-width: 160px;
+  height: 42px;
 }
 
 .shift-bulk-title {
@@ -3707,6 +3818,23 @@ fieldset {
   .shift-bulk-form,
   .shift-editor {
     margin-top: 14px;
+  }
+
+  .shift-month-planner {
+    padding: 14px;
+  }
+
+  .shift-month-planner-card {
+    padding: 20px;
+  }
+
+  .shift-month-planner-title strong {
+    font-size: 20px;
+  }
+
+  .month-shift-planner-form .editor-time-grid,
+  .month-shift-planner-form .shift-bulk-weekdays {
+    grid-template-columns: 1fr;
   }
 
   .shift-grid {

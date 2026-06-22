@@ -374,6 +374,24 @@ test("shift view offers a compact bulk scheduling sticker with in-app confirmati
   assert.ok(css.includes(".shift-bulk-actions"));
 });
 
+test("shift view opens a dedicated monthly roster planner", () => {
+  assert.equal(appSource.includes('id="open-month-shift-planner"'), true);
+  assert.equal(appSource.includes('data-shift-action="month-plan"'), true);
+  assert.equal(appSource.includes("设置月排班"), true);
+  assert.equal(appSource.includes('id="shift-month-planner"'), true);
+  assert.equal(appSource.includes("showShiftMonthPlanner"), true);
+  assert.equal(appSource.includes("renderShiftMonthPlanner"), true);
+  assert.equal(appSource.includes("handleShiftMonthPlannerSubmit"), true);
+  assert.equal(appSource.includes("getMonthShiftPlannerDates"), true);
+  assert.equal(appSource.includes("月排班设置小纸条"), true);
+  assert.equal(appSource.includes("应用到月排班"), true);
+  assert.ok(css.includes(".month-shift-planner-button"));
+  assert.ok(css.includes(".shift-month-planner"));
+  assert.ok(css.includes(".shift-month-planner-backdrop"));
+  assert.ok(css.includes(".shift-month-planner-card"));
+  assert.equal(getRuleValue(".shift-month-planner", "position"), "fixed");
+});
+
 test("shift view supports week and month modes", () => {
   assert.equal(appSource.includes('shiftViewMode: "month"'), true);
   assert.equal(appSource.includes("shiftMonthAnchor"), true);

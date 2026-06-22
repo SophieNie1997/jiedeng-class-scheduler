@@ -12,18 +12,19 @@ import {
 
 const allGrades = ["G2", "Y3", "Y6", "Y8", "Y9", "大班"];
 const allDeliveryTypes = ["线上", "线下", "上门", "校区", "樱桃"];
-const hiddenTeacherIds = new Set(["lency", "vicky"]);
-const activeShiftRoster = importedShiftRoster.filter((teacher) => !hiddenTeacherIds.has(teacher.id));
-const activeTeacherIds = new Set(activeShiftRoster.map((teacher) => teacher.id));
+const nonTeachingShiftIds = new Set(["lency", "vicky"]);
+const activeTeachingRoster = importedShiftRoster.filter((teacher) => !nonTeachingShiftIds.has(teacher.id));
+const activeTeacherIds = new Set(activeTeachingRoster.map((teacher) => teacher.id));
+const shiftRosterIds = new Set(importedShiftRoster.map((teacher) => teacher.id));
 
-export const teachers = activeShiftRoster;
+export const teachers = activeTeachingRoster;
 
 export const candidateTeachers = teachers;
 
-export const shiftRoster = activeShiftRoster;
+export const shiftRoster = importedShiftRoster;
 
 export const defaultShiftOverrides = Object.fromEntries(
-  Object.entries(importedDefaultShiftOverrides).filter(([key]) => !hiddenTeacherIds.has(String(key).split("__")[0])),
+  Object.entries(importedDefaultShiftOverrides).filter(([key]) => shiftRosterIds.has(String(key).split("__")[0])),
 );
 
 export const existingLessons = dedupeLessons(
