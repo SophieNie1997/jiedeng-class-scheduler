@@ -240,6 +240,22 @@ h2 {
   -webkit-backdrop-filter: blur(14px) saturate(140%);
 }
 
+html[data-remote-sync="auth-required"] .workspace-tabs {
+  display: none;
+}
+
+html[data-remote-sync="auth-required"] main {
+  display: none;
+}
+
+html[data-remote-sync="auth-required"] .sync-panel {
+  margin-bottom: 24px;
+  border-color: rgba(215, 125, 151, 0.42);
+  background:
+    linear-gradient(135deg, rgba(255, 240, 246, 0.94), rgba(239, 251, 247, 0.9)),
+    rgba(255, 255, 255, 0.84);
+}
+
 .sync-copy {
   display: flex;
   flex-direction: column;

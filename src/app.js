@@ -3373,11 +3373,12 @@ async function initializeRemoteSync() {
 
     const session = await remoteStore.getSession();
     if (!session && config.requireAuth !== false) {
+      document.documentElement.dataset.remoteSync = "auth-required";
       remoteSyncReady = false;
       state.sync = {
         status: "auth",
         email: "",
-        message: "输入工作邮箱后，用邮件链接登录即可同步编辑。",
+        message: "请先登录云端同步，再查看最新排课数据。这样不会看到本机旧版本。",
       };
       renderSyncPanel();
       await remoteStore.onAuthStateChange((_event, nextSession) => {
@@ -3401,6 +3402,7 @@ async function initializeRemoteSync() {
     }
 
     remoteSyncReady = true;
+    document.documentElement.dataset.remoteSync = "enabled";
     state.sync = {
       status: "synced",
       email: session?.user?.email || "",

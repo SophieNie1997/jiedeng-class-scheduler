@@ -714,6 +714,14 @@ test("app exposes a Supabase sync sign-in panel for shared editing", () => {
   assert.equal(appSource.includes('name="syncEmail"'), true);
 });
 
+test("unauthenticated shared mode hides stale local schedule data", () => {
+  assert.equal(appSource.includes('document.documentElement.dataset.remoteSync = "auth-required"'), true);
+  assert.equal(appSource.includes("请先登录云端同步，再查看最新排课数据。"), true);
+  assert.equal(getRuleValue('html[data-remote-sync="auth-required"] .workspace-tabs', "display"), "none");
+  assert.equal(getRuleValue('html[data-remote-sync="auth-required"] main', "display"), "none");
+  assert.equal(getRuleValue('html[data-remote-sync="auth-required"] .sync-panel', "margin-bottom"), "24px");
+});
+
 test("app shows a clear synced edit confirmation after saving", () => {
   assert.equal(appSource.includes("数据已编辑成功，并同步到网站上"), true);
   assert.equal(appSource.includes("showSaveFeedback"), true);
