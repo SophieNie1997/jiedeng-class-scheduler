@@ -881,8 +881,8 @@ fieldset {
 
 .calendar-month-overview-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
   align-items: start;
   padding: 4px 2px 10px;
 }
@@ -944,13 +944,13 @@ fieldset {
 .calendar-month-week-grid {
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
-  gap: 7px;
+  gap: 9px;
 }
 
 .calendar-month-day {
   display: grid;
   grid-template-rows: auto 1fr;
-  min-height: 138px;
+  min-height: 166px;
   border: 1px solid rgba(239, 189, 203, 0.58);
   border-radius: 16px;
   background:
@@ -997,27 +997,56 @@ fieldset {
   min-width: 0;
 }
 
-.calendar-month-lesson {
+.lesson-row.calendar-month-lesson {
   grid-template-columns: minmax(0, 1fr);
-  gap: 0;
+  gap: 4px;
   min-height: 0;
   border-left-width: 4px;
   border-radius: 12px;
-  padding: 5px 6px;
-  font-size: 10px;
+  padding: 7px 8px;
+  font-size: 11px;
   line-height: 1.25;
 }
 
-.calendar-month-lesson strong {
+.lesson-row.calendar-month-lesson .calendar-month-lesson-time {
+  align-self: start;
+  justify-self: start;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.68);
+  color: #31424a;
+  padding: 3px 7px;
   font-size: 10px;
-  line-height: 1.18;
+  font-weight: 950;
+  line-height: 1.1;
+  text-align: center;
+  white-space: nowrap;
 }
 
-.calendar-month-lesson span span {
-  margin-top: 2px;
+.lesson-row.calendar-month-lesson .calendar-month-lesson-copy {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.lesson-row.calendar-month-lesson .calendar-month-lesson-teacher {
+  color: #1f2933;
+  font-size: 12px;
+  font-weight: 950;
+  line-height: 1.12;
+  margin-top: 0;
+}
+
+.lesson-row.calendar-month-lesson .calendar-month-lesson-course {
+  display: -webkit-box;
+  color: #3c4a52;
+  font-size: 11px;
+  font-weight: 850;
+  line-height: 1.18;
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin-top: 0;
+  white-space: normal;
 }
 
 .calendar-month-empty {

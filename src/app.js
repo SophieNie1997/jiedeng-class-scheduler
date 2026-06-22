@@ -1241,9 +1241,10 @@ function renderCalendarMonthLessonChip(lesson) {
       type="button"
       aria-label="打开 ${escapeAttribute(lesson.date)} ${escapeAttribute(lesson.teacherName)} ${escapeAttribute(lesson.course)}"
     >
-      <span class="lesson-row-main">
-        <strong>${escapeHtml(lesson.startTime)}-${escapeHtml(lesson.endTime)}</strong>
-        <span>${escapeHtml(lesson.teacherName)} · ${escapeHtml(lesson.course)}</span>
+      <strong class="calendar-month-lesson-time">${escapeHtml(lesson.startTime)}-${escapeHtml(lesson.endTime)}</strong>
+      <span class="calendar-month-lesson-copy">
+        <span class="calendar-month-lesson-teacher">${escapeHtml(lesson.teacherName)}</span>
+        <span class="calendar-month-lesson-course">${escapeHtml(lesson.course)}</span>
       </span>
     </button>
   `;

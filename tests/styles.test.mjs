@@ -93,6 +93,18 @@ test("calendar defaults to a month overview and drills into a week from lessons"
   assert.ok(css.includes(".calendar-month-lesson"));
 });
 
+test("calendar month overview keeps teacher and course names readable", () => {
+  assert.equal(getRuleValue(".calendar-month-overview-grid", "grid-template-columns"), "minmax(0, 1fr)");
+  assert.equal(appSource.includes('class="calendar-month-lesson-time"'), true);
+  assert.equal(appSource.includes('class="calendar-month-lesson-teacher"'), true);
+  assert.equal(appSource.includes('class="calendar-month-lesson-course"'), true);
+  assert.equal(getRuleValue(".lesson-row.calendar-month-lesson", "grid-template-columns"), "minmax(0, 1fr)");
+  assert.equal(getRuleValue(".lesson-row.calendar-month-lesson .calendar-month-lesson-time", "white-space"), "nowrap");
+  assert.equal(getRuleValue(".lesson-row.calendar-month-lesson .calendar-month-lesson-copy", "min-width"), "0");
+  assert.equal(getRuleValue(".lesson-row.calendar-month-lesson .calendar-month-lesson-course", "-webkit-line-clamp"), "2");
+  assert.equal(css.includes(".calendar-month-lesson span span"), false);
+});
+
 test("candidate preview lessons look visibly different from synced lessons", () => {
   assert.equal(getRuleValue(".lesson-row.preview", "border-left-color"), "#d65f91");
   assert.equal(getRuleValue(".lesson-row.preview", "outline"), "3px dashed rgba(214, 95, 145, 0.82)");
