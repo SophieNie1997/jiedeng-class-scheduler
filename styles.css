@@ -1275,40 +1275,41 @@ fieldset {
 .lesson-row.pattern-stripe {
   background-image: repeating-linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.44) 0 5px,
-    rgba(255, 255, 255, 0) 5px 10px
+    rgba(143, 84, 103, 0.28) 0 4px,
+    rgba(255, 255, 255, 0.16) 4px 8px,
+    rgba(255, 255, 255, 0) 8px 12px
   );
 }
 
 .lesson-row.pattern-dot {
-  background-image: radial-gradient(rgba(143, 84, 103, 0.18) 1px, transparent 1.5px);
-  background-size: 9px 9px;
+  background-image: radial-gradient(rgba(143, 84, 103, 0.34) 1.4px, transparent 1.8px);
+  background-size: 8px 8px;
 }
 
 .lesson-row.pattern-grid {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.48) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.48) 1px, transparent 1px);
-  background-size: 12px 12px;
+    linear-gradient(rgba(143, 84, 103, 0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(143, 84, 103, 0.2) 1px, transparent 1px);
+  background-size: 10px 10px;
 }
 
 .lesson-row.pattern-line {
   background-image: repeating-linear-gradient(
     0deg,
-    rgba(255, 255, 255, 0) 0 8px,
-    rgba(143, 84, 103, 0.12) 8px 9px
+    rgba(255, 255, 255, 0) 0 7px,
+    rgba(143, 84, 103, 0.28) 7px 9px
   );
 }
 
 .lesson-row.pattern-ribbon {
   background-image:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0) 36%),
-    repeating-linear-gradient(90deg, rgba(143, 84, 103, 0.1) 0 1px, transparent 1px 11px);
+    linear-gradient(135deg, rgba(143, 84, 103, 0.24), rgba(255, 255, 255, 0) 42%),
+    repeating-linear-gradient(90deg, rgba(143, 84, 103, 0.18) 0 2px, transparent 2px 10px);
 }
 
 .lesson-row.pattern-corner {
   background-image:
-    radial-gradient(circle at 100% 0, rgba(255, 255, 255, 0.68) 0 13px, transparent 13px),
+    radial-gradient(circle at 100% 0, rgba(143, 84, 103, 0.28) 0 14px, transparent 14px),
     linear-gradient(135deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0));
 }
 

@@ -54,9 +54,15 @@ test("calendar lesson color chips use the soft planner palette", () => {
   assert.equal(getRuleValue(".lesson-row.lilac", "background"), "#f4edff");
   assert.equal(getRuleValue(".lesson-row.orange", "background"), "#fff1e7");
   assert.equal(getRuleValue(".lesson-row.pattern-stripe", "background-image").includes("repeating-linear-gradient"), true);
+  assert.equal(getRuleValue(".lesson-row.pattern-stripe", "background-image").includes("rgba(143, 84, 103, 0.28)"), true);
   assert.equal(getRuleValue(".lesson-row.pattern-dot", "background-image").includes("radial-gradient"), true);
+  assert.equal(getRuleValue(".lesson-row.pattern-dot", "background-image").includes("rgba(143, 84, 103, 0.34)"), true);
   assert.equal(getRuleValue(".lesson-row.pattern-grid", "background-image").includes("linear-gradient"), true);
+  assert.equal(getRuleValue(".lesson-row.pattern-grid", "background-image").includes("rgba(143, 84, 103, 0.2)"), true);
   assert.equal(getRuleValue(".lesson-row.pattern-line", "background-image").includes("repeating-linear-gradient"), true);
+  assert.equal(getRuleValue(".lesson-row.pattern-line", "background-image").includes("rgba(143, 84, 103, 0.28)"), true);
+  assert.equal(getRuleValue(".lesson-row.pattern-ribbon", "background-image").includes("rgba(143, 84, 103, 0.24)"), true);
+  assert.equal(getRuleValue(".lesson-row.pattern-corner", "background-image").includes("rgba(143, 84, 103, 0.28)"), true);
   assert.equal(getRuleValue(".lesson-detail-panel.blue", "--lesson-accent"), "#6f9fcf");
   assert.equal(getRuleValue(".lesson-detail-panel.peach", "--lesson-accent"), "#df8f70");
   assert.equal(getRuleValue(".lesson-detail-panel.lilac", "--lesson-accent"), "#b487d8");
