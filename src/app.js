@@ -1112,7 +1112,8 @@ function getTeachingSiteLabel(lesson) {
 function renderLessonDetail(detail) {
   const color = teacherColors[detail.teacherId] || "gray";
   const avatar = getTeacherAvatar(detail.teacherId);
-  const saveButtonLabel = detail.isPreview ? "确认排课并同步" : "保存并同步";
+  const isPreviewDetail = Boolean(detail.isPreview);
+  const saveButtonLabel = isPreviewDetail ? "确认排课并同步到网站" : "保存并同步";
 
   return `
     <aside class="lesson-detail-panel ${color}${avatar.image ? " has-avatar-bg" : ""}"${renderLessonAvatarStyle(
@@ -1166,8 +1167,13 @@ function renderLessonDetail(detail) {
           <span>课程内容/备注</span>
           <textarea name="notes" rows="3">${escapeHtml(detail.notes)}</textarea>
         </label>
-        <div class="lesson-detail-actions">
+        <div class="lesson-detail-actions ${isPreviewDetail ? "preview-confirm" : ""}">
           <button class="lesson-save-button" data-lesson-action="save" type="button">${saveButtonLabel}</button>
+          ${
+            isPreviewDetail
+              ? `<span class="lesson-confirm-hint">确认后会写入所有老师总课表，并同步给同事。</span>`
+              : ""
+          }
           <button class="lesson-delete-button" data-lesson-action="delete" type="button" aria-label="删除课程">
             <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
               <path d="M4 7h16"></path>

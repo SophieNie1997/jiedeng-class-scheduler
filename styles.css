@@ -1528,6 +1528,51 @@ fieldset {
   background: rgba(255, 255, 255, 0.56);
 }
 
+.lesson-detail-actions.preview-confirm {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 48px;
+  gap: 8px 12px;
+  justify-content: stretch;
+  padding: 12px;
+  border: 2px dashed rgba(214, 95, 145, 0.48);
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(255, 236, 245, 0.96) 0%, rgba(238, 255, 249, 0.9) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.78),
+    0 18px 36px rgba(214, 95, 145, 0.16);
+}
+
+.lesson-detail-actions.preview-confirm .lesson-save-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 58px;
+  min-width: 0;
+  border-color: rgba(176, 65, 116, 0.34);
+  background: linear-gradient(180deg, #f7b7cf 0%, #e985ad 100%);
+  color: #742844;
+  font-size: 18px;
+  letter-spacing: 0;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.68),
+    0 14px 26px rgba(176, 65, 116, 0.18);
+}
+
+.lesson-detail-actions.preview-confirm .lesson-save-button:hover {
+  border-color: rgba(176, 65, 116, 0.48);
+  background: linear-gradient(180deg, #ffc3d8 0%, #ed91b6 100%);
+}
+
+.lesson-confirm-hint {
+  grid-column: 1 / -1;
+  color: #8a5369;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.45;
+  text-align: center;
+}
+
 .lesson-delete-button {
   display: grid;
   place-items: center;
@@ -1548,6 +1593,10 @@ fieldset {
 .lesson-delete-button:hover {
   border-color: rgba(159, 61, 61, 0.36);
   background: rgba(255, 255, 255, 0.5);
+}
+
+.lesson-detail-actions.preview-confirm .lesson-delete-button {
+  align-self: center;
 }
 
 .lesson-delete-button svg {

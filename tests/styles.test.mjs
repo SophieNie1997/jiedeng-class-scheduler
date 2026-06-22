@@ -71,7 +71,7 @@ test("candidate preview lessons look visibly different from synced lessons", () 
 });
 
 test("candidate preview lessons can be confirmed into synced manual lessons", () => {
-  assert.equal(appSource.includes("确认排课并同步"), true);
+  assert.equal(appSource.includes("确认排课并同步到网站"), true);
   assert.equal(appSource.includes("isPreviewLessonId"), true);
   assert.match(
     appSource,
@@ -89,6 +89,24 @@ test("candidate preview lessons can be confirmed into synced manual lessons", ()
     appSource,
     /function readLessonChangesFromDetailForm[\s\S]*isPreviewLessonId\(state\.selectedLessonId\)[\s\S]*"手动新增"/,
   );
+});
+
+test("preview lesson detail uses an obvious confirmation call to action", () => {
+  assert.equal(appSource.includes("preview-confirm"), true);
+  assert.equal(appSource.includes("lesson-confirm-hint"), true);
+  assert.equal(appSource.includes("确认后会写入所有老师总课表"), true);
+  assert.equal(getRuleValue(".lesson-detail-actions.preview-confirm", "display"), "grid");
+  assert.equal(getRuleValue(".lesson-detail-actions.preview-confirm", "grid-template-columns"), "minmax(0, 1fr) 48px");
+  assert.ok(getRuleText(".lesson-detail-actions.preview-confirm").includes("linear-gradient"));
+  assert.equal(getRuleValue(".lesson-detail-actions.preview-confirm .lesson-save-button", "width"), "100%");
+  assert.equal(getRuleValue(".lesson-detail-actions.preview-confirm .lesson-save-button", "height"), "58px");
+  assert.equal(getRuleValue(".lesson-detail-actions.preview-confirm .lesson-save-button", "font-size"), "18px");
+  assert.ok(
+    getRuleText(".lesson-detail-actions.preview-confirm .lesson-save-button").includes(
+      "background: linear-gradient",
+    ),
+  );
+  assert.ok(css.includes(".lesson-confirm-hint"));
 });
 
 test("calendar page only renders the week overview without single-day detail", () => {
