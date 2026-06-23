@@ -102,8 +102,8 @@ test("lesson colors are keyed by teacher and course", () => {
 });
 
 test("calendar assets use cache-busted style and app URLs for teacher hours", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260623-toolbar-focus"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260623-toolbar-focus"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260623-toolbar-date-fit"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260623-toolbar-date-fit"), true);
 });
 
 test("calendar defaults to a month overview and drills into a week from lessons", () => {
@@ -164,6 +164,8 @@ test("calendar exposes a teacher duration summary entry and panel", () => {
   assert.equal(getRuleValue(".calendar-actions", "display"), "grid");
   assert.equal(getRuleValue(".calendar-primary-actions", "display"), "flex");
   assert.equal(getRuleValue(".calendar-utility-bar", "display"), "flex");
+  assert.equal(getRuleValue(".calendar-date-control", "display"), "flex");
+  assert.equal(getRuleValue(".calendar-date-control input", "width"), "150px");
   assert.equal(getRuleValue(".teacher-hours-button", "height"), "34px");
   assert.equal(getRuleValue(".calendar-teacher-hours-panel", "display"), "grid");
   assert.equal(getRuleValue(".calendar-teacher-hours-scroll", "overflow-x"), "auto");
@@ -439,8 +441,8 @@ test("course permission view can delete courses with confirmation", () => {
 
 test("course permission course deletion is cache-busted in app imports", () => {
   assert.equal(appSource.includes("./customCatalog.js?v=20260623-permission-course-delete"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260623-toolbar-focus"), true);
-  assert.equal(indexSource.includes("./styles.css?v=20260623-toolbar-focus"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260623-toolbar-date-fit"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260623-toolbar-date-fit"), true);
 });
 
 test("course permission teacher column leaves room for full teacher names", () => {
@@ -451,7 +453,7 @@ test("course permission teacher column leaves room for full teacher names", () =
 });
 
 test("course permission width update is cache-busted in the stylesheet URL", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260623-toolbar-focus"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260623-toolbar-date-fit"), true);
 });
 
 test("candidate teachers render as compact avatar groups with expandable detail", () => {

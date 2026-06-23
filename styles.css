@@ -540,14 +540,15 @@ html[data-remote-sync="viewer-unavailable"] .sync-panel {
 }
 
 .calendar-date-control {
-  display: grid;
-  grid-template-columns: auto minmax(132px, 1fr);
+  display: flex;
   align-items: center;
-  gap: 7px;
-  width: 178px;
+  flex: 0 0 auto;
+  gap: 8px;
+  width: auto;
   margin-left: 4px;
   border-left: 1px solid rgba(239, 189, 203, 0.5);
   padding-left: 10px;
+  white-space: nowrap;
 }
 
 .calendar-date-control span {
@@ -559,6 +560,8 @@ html[data-remote-sync="viewer-unavailable"] .sync-panel {
 }
 
 .calendar-date-control input {
+  flex: 0 0 150px;
+  width: 150px;
   height: 34px;
   border-radius: 999px;
   border-color: rgba(220, 185, 192, 0.62);
@@ -5079,7 +5082,12 @@ fieldset {
   }
 
   .calendar-date-control {
-    width: min(100%, 210px);
+    width: min(100%, 240px);
+  }
+
+  .calendar-date-control input {
+    flex: 1 1 132px;
+    min-width: 0;
   }
 
   .calendar-view-toggle {
