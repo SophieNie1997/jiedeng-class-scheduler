@@ -93,7 +93,7 @@ export function buildTeacherDurationSummary(lessons, { startDate, endDate, teach
     );
 }
 
-export function buildTeacherWeeklyDurationTable(lessons, { weeks = [], teachers = [] } = {}) {
+export function buildTeacherWeeklyDurationTable(lessons, { weeks = [], teachers = [], includeUnlistedTeachers = true } = {}) {
   const normalizedWeeks = Array.isArray(weeks)
     ? weeks
         .map((week, index) => ({
@@ -134,7 +134,12 @@ export function buildTeacherWeeklyDurationTable(lessons, { weeks = [], teachers 
 
     const teacherId = String(lesson.teacherId || lesson.teacherName || "未填写");
     const teacherName = lesson.teacherName || lesson.teacherId || "未填写";
-    const row = rowsByTeacher.get(teacherId) || createTeacherWeeklyDurationRow(teacherId, teacherName, normalizedWeeks);
+    const existingRow = rowsByTeacher.get(teacherId);
+    if (!existingRow && !includeUnlistedTeachers) {
+      continue;
+    }
+
+    const row = existingRow || createTeacherWeeklyDurationRow(teacherId, teacherName, normalizedWeeks);
     row.weeks[weekIndex].lessonCount += 1;
     row.weeks[weekIndex].totalMinutes += durationMinutes;
     row.totalLessonCount += 1;

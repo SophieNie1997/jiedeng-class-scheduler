@@ -103,7 +103,7 @@ test("lesson colors are keyed by teacher and course", () => {
 
 test("calendar assets use cache-busted style and app URLs for teacher hours", () => {
   assert.equal(indexSource.includes("./styles.css?v=20260623-teacher-hours-stickers"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260623-teacher-hours-stickers"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260623-hours-active-teachers"), true);
 });
 
 test("calendar defaults to a month overview and drills into a week from lessons", () => {
@@ -133,6 +133,8 @@ test("calendar defaults to a month overview and drills into a week from lessons"
 
 test("calendar exposes a teacher duration summary entry and panel", () => {
   assert.equal(appSource.includes("buildTeacherWeeklyDurationTable"), true);
+  assert.equal(appSource.includes("./calendar.js?v=20260623-hours-active-teachers"), true);
+  assert.equal(appSource.includes("includeUnlistedTeachers: false"), true);
   assert.equal(appSource.includes('id="toggle-teacher-hours"'), true);
   assert.equal(appSource.includes('id="teacher-hours-panel"'), true);
   assert.equal(appSource.includes("课时统计"), true);
@@ -402,7 +404,7 @@ test("course permission view can delete courses with confirmation", () => {
 
 test("course permission course deletion is cache-busted in app imports", () => {
   assert.equal(appSource.includes("./customCatalog.js?v=20260623-permission-course-delete"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260623-teacher-hours-stickers"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260623-hours-active-teachers"), true);
   assert.equal(indexSource.includes("./styles.css?v=20260623-teacher-hours-stickers"), true);
 });
 

@@ -19,7 +19,7 @@ import {
   buildTeacherWeeklyDurationTable,
   buildWeekOverview,
   filterCalendarLessons,
-} from "./calendar.js?v=20260623-teacher-hours-table";
+} from "./calendar.js?v=20260623-hours-active-teachers";
 import {
   buildLessonsForTeacher,
   expandRecurringLessons,
@@ -1237,9 +1237,11 @@ function renderTeacherHoursPanel(lessons) {
 
   const range = getCalendarTeacherHoursRange();
   const weeks = getCalendarTeacherHoursWeeks();
+  const teachers = getCandidateTeachers();
   const summary = buildTeacherWeeklyDurationTable(lessons, {
     weeks,
-    teachers: getCandidateTeachers(),
+    teachers,
+    includeUnlistedTeachers: false,
   });
   const totalMinutes = summary.reduce((sum, item) => sum + item.totalMinutes, 0);
   const totalLessons = summary.reduce((sum, item) => sum + item.totalLessonCount, 0);

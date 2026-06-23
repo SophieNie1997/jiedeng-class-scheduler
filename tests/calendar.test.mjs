@@ -259,6 +259,36 @@ test("builds teacher weekly duration table for a month", () => {
   );
 });
 
+test("teacher weekly duration table can ignore lessons for unlisted teachers", () => {
+  const lessons = [
+    {
+      ...makeCalendarLesson("lynn-week-1", "2026-07-01", "09:00", "10:30"),
+      teacherId: "lynn",
+      teacherName: "Lynn",
+    },
+    {
+      ...makeCalendarLesson("removed-catherine", "2026-07-02", "09:00", "11:00"),
+      teacherId: "catherine",
+      teacherName: "Catherine",
+    },
+  ];
+
+  const table = calendar.buildTeacherWeeklyDurationTable(lessons, {
+    weeks: [
+      { label: "第1周", startDate: "2026-07-01", endDate: "2026-07-05" },
+    ],
+    teachers: [{ id: "lynn", name: "Lynn" }],
+    includeUnlistedTeachers: false,
+  });
+
+  assert.deepEqual(table.map((item) => item.teacherName), ["Lynn"]);
+  assert.equal(table.some((item) => item.teacherName === "Catherine"), false);
+  assert.deepEqual(
+    table[0].weeks.map((week) => [week.lessonCount, week.totalMinutes, week.totalHoursLabel]),
+    [[1, 90, "1.5 小时"]],
+  );
+});
+
 test("builds lesson detail with inferred recurring schedule", () => {
   const lessons = [
     makeLesson("a", "2026-07-07"),
