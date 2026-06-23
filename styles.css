@@ -2642,6 +2642,13 @@ fieldset {
   background: rgba(226, 239, 255, 0.78);
 }
 
+.lesson-absence-button:disabled,
+.lesson-absence-button[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.64;
+  box-shadow: none;
+}
+
 .lesson-absence-button.primary {
   border-color: rgba(22, 107, 91, 0.28);
   background: rgba(222, 245, 237, 0.72);

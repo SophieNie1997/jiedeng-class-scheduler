@@ -20,7 +20,7 @@ import {
   buildWeekOverview,
   filterCalendarLessons,
   isCalendarVisibleLesson,
-} from "./calendar.js?v=20260623-absence-teacher-name";
+} from "./calendar.js?v=20260623-absence-status-label";
 import {
   buildLessonsForTeacher,
   expandRecurringLessons,
@@ -54,6 +54,8 @@ import {
   removeCustomTeacher,
 } from "./customCatalog.js?v=20260623-permission-course-delete";
 import {
+  ABSENCE_MAKEUP_DONE,
+  ABSENCE_MAKEUP_PENDING,
   applyLessonEdits,
   completeAbsenceMakeupEdit,
   deleteLessonEdit,
@@ -64,7 +66,7 @@ import {
   restoreDeletedLessonEdits,
   restoreAbsenceLessonEdit,
   setLessonEdit,
-} from "./lessonEdits.js?v=20260623-absence-teacher-name";
+} from "./lessonEdits.js?v=20260623-absence-status-label";
 import {
   alignExplicitSeriesDates,
   deleteLessonsInScope,
@@ -1637,13 +1639,17 @@ function renderAbsenceMarkers(markers) {
           type="button"
           aria-label="查看 ${escapeAttribute(lesson.studentName || "学员")} ${escapeAttribute(lesson.course || "课程")} 请假记录"
         >
-          <strong>请假</strong>
+          <strong>请假（${escapeHtml(formatAbsenceStatusLabel(lesson))}）</strong>
           <span>${escapeHtml(lesson.startTime)}-${escapeHtml(lesson.endTime)}</span>
           <small>${escapeHtml(formatAbsenceMarkerText(lesson))}</small>
         </button>
       `).join("")}
     </span>
   `;
+}
+
+function formatAbsenceStatusLabel(lesson) {
+  return lesson.absenceStatus === ABSENCE_MAKEUP_DONE ? ABSENCE_MAKEUP_DONE : ABSENCE_MAKEUP_PENDING;
 }
 
 function formatAbsenceMarkerText(lesson) {
@@ -1757,7 +1763,7 @@ function renderLessonDetail(detail) {
               ? `<span class="lesson-confirm-hint">确认后会写入所有老师总课表，并同步给同事。</span>`
               : ""
           }
-          ${renderLessonAbsenceActions(isPreviewDetail, isAbsenceDetail)}
+          ${renderLessonAbsenceActions(isPreviewDetail, detail)}
           <button class="lesson-delete-button" data-lesson-action="delete" type="button" aria-label="删除课程">
             <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
               <path d="M4 7h16"></path>
@@ -1775,7 +1781,7 @@ function renderLessonDetail(detail) {
 
 function renderAbsenceDetailNotice(detail) {
   const reasonText = [detail.absenceReason, detail.absenceNote].filter(Boolean).join(" · ") || "请假";
-  const statusText = detail.absenceStatus || "待补课";
+  const statusText = formatAbsenceStatusLabel(detail);
   return `
     <div class="lesson-absence-note">
       <strong>请假 · ${escapeHtml(statusText)}</strong>
@@ -1784,15 +1790,21 @@ function renderAbsenceDetailNotice(detail) {
   `;
 }
 
-function renderLessonAbsenceActions(isPreviewDetail, isAbsenceDetail) {
+function renderLessonAbsenceActions(isPreviewDetail, detail) {
   if (isPreviewDetail) {
     return "";
   }
 
+  const isAbsenceDetail = isAbsenceLesson(detail);
   if (isAbsenceDetail) {
+    const isMakeupDone = detail.absenceStatus === ABSENCE_MAKEUP_DONE;
     return `
       <button class="lesson-absence-button" data-lesson-action="restore-absence" type="button">恢复为正常课程</button>
-      <button class="lesson-absence-button primary" data-lesson-action="makeup-done" type="button">标记已补课</button>
+      ${
+        isMakeupDone
+          ? `<button class="lesson-absence-button primary" type="button" disabled aria-disabled="true">已标记为已补课</button>`
+          : `<button class="lesson-absence-button primary" data-lesson-action="makeup-done" type="button">标记为已补课</button>`
+      }
     `;
   }
 
