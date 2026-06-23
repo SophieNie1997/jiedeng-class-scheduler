@@ -468,7 +468,7 @@ app.innerHTML = `
             <h2>老师排班</h2>
             <p id="shift-sync-line">修改后会立即同步到候选老师和总课表。</p>
           </div>
-          <label>
+          <label class="shift-date-control">
             <span id="shift-date-label">周起始</span>
             <input id="shift-week-start" type="date" value="${state.weekStart}" />
           </label>

@@ -102,8 +102,8 @@ test("lesson colors are keyed by teacher and course", () => {
 });
 
 test("calendar assets use cache-busted style and app URLs for teacher hours", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260623-readonly-login"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260623-readonly-login"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260623-shift-date-align"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260623-shift-date-align"), true);
 });
 
 test("calendar defaults to a month overview and drills into a week from lessons", () => {
@@ -480,8 +480,8 @@ test("course permission view can delete courses with confirmation", () => {
 
 test("course permission course deletion is cache-busted in app imports", () => {
   assert.equal(appSource.includes("./customCatalog.js?v=20260623-permission-course-delete"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260623-readonly-login"), true);
-  assert.equal(indexSource.includes("./styles.css?v=20260623-readonly-login"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260623-shift-date-align"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260623-shift-date-align"), true);
 });
 
 test("course permission teacher column leaves room for full teacher names", () => {
@@ -492,7 +492,7 @@ test("course permission teacher column leaves room for full teacher names", () =
 });
 
 test("course permission width update is cache-busted in the stylesheet URL", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260623-readonly-login"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260623-shift-date-align"), true);
 });
 
 test("candidate teachers render as compact avatar groups with expandable detail", () => {
@@ -668,6 +668,16 @@ test("shift view opens a dedicated monthly roster planner", () => {
   assert.ok(css.includes(".shift-month-planner-backdrop"));
   assert.ok(css.includes(".shift-month-planner-card"));
   assert.equal(getRuleValue(".shift-month-planner", "position"), "fixed");
+});
+
+test("shift toolbar date control aligns label and input on one row", () => {
+  assert.equal(appSource.includes('class="shift-date-control"'), true);
+  assert.equal(getRuleValue(".shift-date-control", "display"), "grid");
+  assert.equal(getRuleValue(".shift-date-control", "grid-template-columns"), "auto minmax(170px, 1fr)");
+  assert.equal(getRuleValue(".shift-date-control", "align-items"), "center");
+  assert.equal(getRuleValue(".shift-date-control", "width"), "260px");
+  assert.equal(getRuleValue(".shift-date-control span", "margin"), "0");
+  assert.equal(getRuleValue(".shift-date-control input", "height"), "42px");
 });
 
 test("shift view supports week and month modes", () => {

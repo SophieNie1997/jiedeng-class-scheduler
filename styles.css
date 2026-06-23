@@ -2820,6 +2820,35 @@ fieldset {
   margin-bottom: 18px;
 }
 
+.shift-date-control {
+  display: grid;
+  grid-template-columns: auto minmax(170px, 1fr);
+  align-items: center;
+  gap: 10px;
+  width: 260px;
+  min-width: 260px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.shift-date-control span {
+  margin: 0;
+  color: #5d6870;
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.shift-date-control input {
+  width: 100%;
+  min-width: 0;
+  height: 42px;
+  border-radius: 999px;
+  border-color: rgba(220, 185, 192, 0.68);
+  background: rgba(255, 255, 255, 0.72);
+  padding: 0 12px;
+}
+
 .shift-view-toggle {
   display: inline-flex;
   gap: 6px;
@@ -5121,6 +5150,12 @@ fieldset {
 
   .calendar-date-control input {
     min-width: 0;
+  }
+
+  .shift-date-control {
+    width: 100%;
+    min-width: 0;
+    margin-top: 12px;
   }
 
   .calendar-view-toggle {
