@@ -9,6 +9,7 @@ import {
 import {
   buildBulkShiftOverride,
   buildBulkShiftTargets,
+  buildShiftRoster,
   buildShiftLabel,
   buildAvailabilityOverrides,
   buildUnavailableLessonsFromShifts,
@@ -28,6 +29,33 @@ const teachers = [
     weeklyAvailability: [],
   },
 ];
+
+test("shift roster follows active course permission teachers with Lency and Vicky exceptions", () => {
+  assert.equal(typeof buildShiftRoster, "function");
+
+  const baseRoster = [
+    { id: "claire", name: "Claire" },
+    { id: "lynn", name: "Lynn" },
+    { id: "catherine", name: "Catherine" },
+    { id: "lency", name: "Lency" },
+    { id: "vicky", name: "Vicky" },
+  ];
+  const activePermissionTeachers = [
+    { id: "claire", name: "Claire" },
+    { id: "lynn", name: "Lynn" },
+    { id: "manual-teacher", name: "Manual Teacher" },
+  ];
+
+  const roster = buildShiftRoster(baseRoster, activePermissionTeachers, {
+    extraTeacherIds: ["lency", "vicky"],
+  });
+
+  assert.deepEqual(
+    roster.map((teacher) => teacher.name),
+    ["Claire", "Lynn", "Manual Teacher", "Lency", "Vicky"],
+  );
+  assert.equal(roster.some((teacher) => teacher.name === "Catherine"), false);
+});
 
 test("builds bulk shift targets across a date range and overwrites existing shift records by default", () => {
   const shifts = {

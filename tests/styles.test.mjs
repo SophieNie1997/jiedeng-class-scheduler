@@ -103,7 +103,7 @@ test("lesson colors are keyed by teacher and course", () => {
 
 test("calendar assets use cache-busted style and app URLs for teacher hours", () => {
   assert.equal(indexSource.includes("./styles.css?v=20260623-teacher-hours-table"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260623-teacher-hours-table"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260623-shift-roster-sync"), true);
 });
 
 test("calendar defaults to a month overview and drills into a week from lessons", () => {
@@ -396,7 +396,7 @@ test("course permission view can delete courses with confirmation", () => {
 
 test("course permission course deletion is cache-busted in app imports", () => {
   assert.equal(appSource.includes("./customCatalog.js?v=20260623-permission-course-delete"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260623-teacher-hours-table"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260623-shift-roster-sync"), true);
   assert.equal(indexSource.includes("./styles.css?v=20260623-teacher-hours-table"), true);
 });
 
@@ -462,6 +462,20 @@ test("shift editor shows the selected teacher avatar", () => {
   assert.equal(appSource.includes('class="shift-editor-avatar"'), true);
   assert.ok(css.includes(".shift-editor-avatar"));
   assert.ok(getRuleText(".shift-editor-avatar .teacher-avatar").includes("width"));
+});
+
+test("shift roster follows course permission teachers with non-teaching exceptions", () => {
+  assert.equal(appSource.includes("buildShiftRoster"), true);
+  assert.equal(appSource.includes("./shifts.js?v=20260623-shift-roster-sync"), true);
+  assert.equal(appSource.includes('const SHIFT_ROSTER_EXTRA_TEACHER_IDS = ["lency", "vicky"]'), true);
+  assert.match(
+    appSource,
+    /function getShiftRoster\(\) \{[\s\S]*buildShiftRoster\(baseShiftRoster, getCandidateTeachers\(\), \{[\s\S]*extraTeacherIds: SHIFT_ROSTER_EXTRA_TEACHER_IDS/,
+  );
+  assert.match(
+    appSource,
+    /const selectedTeacherInRoster = getShiftRoster\(\)\.some\(\(teacher\) => teacher\.id === state\.selectedShift\.teacherId\)/,
+  );
 });
 
 test("shift editor auto-saves field changes and offers compact restore plus bulk actions", () => {

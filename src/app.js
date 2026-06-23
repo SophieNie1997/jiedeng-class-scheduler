@@ -32,11 +32,12 @@ import {
   buildBulkShiftOverride,
   buildBulkShiftTargets,
   buildShiftLabel,
+  buildShiftRoster,
   buildUnavailableLessonsFromShifts,
   getTeacherShiftForDate,
   makeShiftKey,
   mergeTeacherShiftOverrides,
-} from "./shifts.js?v=20260618-shift-month-weeks";
+} from "./shifts.js?v=20260623-shift-roster-sync";
 import {
   deriveDeliveryTypeFromCampus,
   teachingSites,
@@ -88,6 +89,7 @@ import {
 } from "./lessonColors.js?v=20260623-month-cards";
 
 const SHIFT_STORAGE_KEY = "jiedeng-teacher-shifts-folder-20260617-shift";
+const SHIFT_ROSTER_EXTRA_TEACHER_IDS = ["lency", "vicky"];
 const COURSE_PERMISSION_STORAGE_KEY = "jiedeng-course-permissions-folder-20260617-shift";
 const LESSON_EDIT_STORAGE_KEY = "jiedeng-lesson-edits-folder-20260617-shift";
 const LESSON_EDIT_RESTORE_RESULT_KEY = "jiedeng-lesson-edits-last-restore";
@@ -2419,7 +2421,8 @@ function renderShiftView() {
   const activeWeekDates = isMonthView && state.activeShiftWeekStart ? getWeekDates(state.activeShiftWeekStart) : null;
   const shiftDates = activeWeekDates || getShiftViewDates();
   const selectedDateInView = shiftDates.some((date) => date.iso === state.selectedShift.date);
-  if ((!isMonthView || state.activeShiftWeekStart) && (!state.selectedShift.teacherId || !selectedDateInView)) {
+  const selectedTeacherInRoster = getShiftRoster().some((teacher) => teacher.id === state.selectedShift.teacherId);
+  if ((!isMonthView || state.activeShiftWeekStart) && (!state.selectedShift.teacherId || !selectedDateInView || !selectedTeacherInRoster)) {
     state.selectedShift = {
       teacherId: getShiftRoster()[0]?.id || "",
       date: shiftDates[0]?.iso || state.weekStart,
@@ -4241,7 +4244,9 @@ function getCourses() {
 }
 
 function getShiftRoster() {
-  return mergeCatalog(baseShiftRoster, baseCourses, state.customCatalog).teachers;
+  return buildShiftRoster(baseShiftRoster, getCandidateTeachers(), {
+    extraTeacherIds: SHIFT_ROSTER_EXTRA_TEACHER_IDS,
+  });
 }
 
 function getCandidateTeacherIds() {

@@ -9,6 +9,29 @@ export function makeShiftKey(teacherId, date) {
   return `${teacherId}__${date}`;
 }
 
+export function buildShiftRoster(baseRoster, activeTeachers, { extraTeacherIds = [] } = {}) {
+  const extras = new Set(extraTeacherIds.map((teacherId) => String(teacherId || "").trim()).filter(Boolean));
+  const rosterById = new Map();
+
+  for (const teacher of Array.isArray(activeTeachers) ? activeTeachers : []) {
+    const id = String(teacher?.id || "").trim();
+    if (!id || rosterById.has(id)) {
+      continue;
+    }
+    rosterById.set(id, teacher);
+  }
+
+  for (const teacher of Array.isArray(baseRoster) ? baseRoster : []) {
+    const id = String(teacher?.id || "").trim();
+    if (!extras.has(id) || rosterById.has(id)) {
+      continue;
+    }
+    rosterById.set(id, teacher);
+  }
+
+  return Array.from(rosterById.values());
+}
+
 export function getTeacherShiftForDate(teacher, date, shifts) {
   const override = shifts[makeShiftKey(teacher.id, date)];
   if (override) {
