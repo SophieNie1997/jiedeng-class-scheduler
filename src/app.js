@@ -305,17 +305,21 @@ app.innerHTML = `
               <p>默认查看本月课程总览，点开某节课后进入对应周视图细看。</p>
             </div>
             <div class="calendar-actions">
-              <div class="calendar-view-toggle" aria-label="总课表视图切换">
-                <button class="calendar-view-button active" data-calendar-view-mode="month" type="button">月视图</button>
-                <button class="calendar-view-button" data-calendar-view-mode="week" type="button">周视图</button>
+              <div class="calendar-primary-actions">
+                <div class="calendar-view-toggle" aria-label="总课表视图切换">
+                  <button class="calendar-view-button active" data-calendar-view-mode="month" type="button">月视图</button>
+                  <button class="calendar-view-button" data-calendar-view-mode="week" type="button">周视图</button>
+                </div>
+                <button id="add-calendar-lesson" class="add-lesson-button" type="button">新增课程</button>
               </div>
-              <button id="toggle-teacher-hours" class="teacher-hours-button" type="button">课时统计</button>
-              <button id="toggle-makeup-panel" class="teacher-hours-button makeup-panel-button" type="button">待补课</button>
-              <button id="add-calendar-lesson" class="add-lesson-button" type="button">新增课程</button>
-              <label>
-                <span id="calendar-date-label">月份定位</span>
-                <input id="week-start" type="date" value="${state.weekStart}" />
-              </label>
+              <div class="calendar-utility-bar" aria-label="总课表辅助工具">
+                <button id="toggle-teacher-hours" class="teacher-hours-button calendar-utility-button" type="button">课时统计</button>
+                <button id="toggle-makeup-panel" class="teacher-hours-button calendar-utility-button makeup-panel-button" type="button">待补课</button>
+                <label class="calendar-date-control">
+                  <span id="calendar-date-label">月份定位</span>
+                  <input id="week-start" type="date" value="${state.weekStart}" />
+                </label>
+              </div>
             </div>
         </div>
         <div id="calendar" class="calendar"></div>

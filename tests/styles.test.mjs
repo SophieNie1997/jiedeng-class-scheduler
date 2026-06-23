@@ -102,8 +102,8 @@ test("lesson colors are keyed by teacher and course", () => {
 });
 
 test("calendar assets use cache-busted style and app URLs for teacher hours", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260623-start-date-weekday"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260623-start-date-weekday"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260623-toolbar-focus"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260623-toolbar-focus"), true);
 });
 
 test("calendar defaults to a month overview and drills into a week from lessons", () => {
@@ -148,14 +148,23 @@ test("calendar exposes a teacher duration summary entry and panel", () => {
   assert.equal(appSource.includes("teacher-hours-week-label"), true);
   assert.equal(appSource.includes("teacher-hours-month-total"), true);
   assert.equal(appSource.includes("teacher-hours-range"), true);
+  assert.equal(appSource.includes('class="calendar-primary-actions"'), true);
+  assert.equal(appSource.includes('class="calendar-utility-bar"'), true);
+  assert.equal(appSource.includes('class="calendar-date-control"'), true);
   assert.ok(css.includes(".teacher-hours-button"));
+  assert.ok(css.includes(".calendar-primary-actions"));
+  assert.ok(css.includes(".calendar-utility-bar"));
+  assert.ok(css.includes(".calendar-date-control"));
   assert.ok(css.includes(".calendar-teacher-hours-panel"));
   assert.ok(css.includes(".calendar-teacher-hours-scroll"));
   assert.ok(css.includes(".calendar-teacher-hours-table"));
   assert.ok(css.includes(".calendar-teacher-hours-cell"));
   assert.ok(css.includes(".teacher-hours-teacher-card"));
   assert.ok(css.includes(".teacher-hours-sticker"));
-  assert.equal(getRuleValue(".teacher-hours-button", "height"), "42px");
+  assert.equal(getRuleValue(".calendar-actions", "display"), "grid");
+  assert.equal(getRuleValue(".calendar-primary-actions", "display"), "flex");
+  assert.equal(getRuleValue(".calendar-utility-bar", "display"), "flex");
+  assert.equal(getRuleValue(".teacher-hours-button", "height"), "34px");
   assert.equal(getRuleValue(".calendar-teacher-hours-panel", "display"), "grid");
   assert.equal(getRuleValue(".calendar-teacher-hours-scroll", "overflow-x"), "auto");
   assert.equal(getRuleValue(".calendar-teacher-hours-table", "width"), "100%");
@@ -430,8 +439,8 @@ test("course permission view can delete courses with confirmation", () => {
 
 test("course permission course deletion is cache-busted in app imports", () => {
   assert.equal(appSource.includes("./customCatalog.js?v=20260623-permission-course-delete"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260623-start-date-weekday"), true);
-  assert.equal(indexSource.includes("./styles.css?v=20260623-start-date-weekday"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260623-toolbar-focus"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260623-toolbar-focus"), true);
 });
 
 test("course permission teacher column leaves room for full teacher names", () => {
@@ -442,7 +451,7 @@ test("course permission teacher column leaves room for full teacher names", () =
 });
 
 test("course permission width update is cache-busted in the stylesheet URL", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260623-start-date-weekday"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260623-toolbar-focus"), true);
 });
 
 test("candidate teachers render as compact avatar groups with expandable detail", () => {

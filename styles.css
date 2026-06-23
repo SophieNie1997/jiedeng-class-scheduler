@@ -442,15 +442,33 @@ html[data-remote-sync="viewer-unavailable"] .sync-panel {
 }
 
 .calendar-actions {
+  display: grid;
+  justify-items: end;
+  gap: 8px;
+}
+
+.calendar-primary-actions {
   display: flex;
-  align-items: end;
-  gap: 12px;
+  align-items: center;
+  justify-content: end;
+  gap: 10px;
+}
+
+.calendar-utility-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  border: 1px solid rgba(239, 189, 203, 0.46);
+  border-radius: 18px;
+  background: rgba(255, 250, 253, 0.58);
+  padding: 5px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.74);
 }
 
 .calendar-view-toggle {
   display: inline-flex;
   gap: 6px;
-  align-self: end;
   border: 1px solid rgba(239, 189, 203, 0.82);
   border-radius: 999px;
   background: rgba(255, 250, 253, 0.78);
@@ -492,28 +510,26 @@ html[data-remote-sync="viewer-unavailable"] .sync-panel {
 }
 
 .teacher-hours-button {
-  height: 42px;
-  border: 1px solid rgba(239, 189, 203, 0.72);
+  height: 34px;
+  border: 1px solid transparent;
   border-radius: 999px;
-  background: rgba(255, 246, 250, 0.78);
-  color: #8c4760;
-  padding: 0 15px;
+  background: transparent;
+  color: #7c6670;
+  padding: 0 12px;
   font-weight: 900;
   cursor: pointer;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.82);
+  box-shadow: none;
 }
 
 .teacher-hours-button:hover,
 .teacher-hours-button.active {
-  border-color: rgba(222, 111, 151, 0.42);
-  background: var(--selected-fill);
+  border-color: rgba(222, 111, 151, 0.28);
+  background: rgba(255, 232, 240, 0.82);
   color: #7b3d56;
 }
 
 .makeup-panel-button {
-  border-color: rgba(130, 170, 210, 0.46);
-  background: rgba(244, 250, 255, 0.78);
-  color: #3f6f9d;
+  color: #58728c;
 }
 
 .makeup-panel-button:hover,
@@ -521,6 +537,33 @@ html[data-remote-sync="viewer-unavailable"] .sync-panel {
   border-color: rgba(79, 136, 215, 0.44);
   background: rgba(226, 239, 255, 0.82);
   color: #315d8c;
+}
+
+.calendar-date-control {
+  display: grid;
+  grid-template-columns: auto minmax(132px, 1fr);
+  align-items: center;
+  gap: 7px;
+  width: 178px;
+  margin-left: 4px;
+  border-left: 1px solid rgba(239, 189, 203, 0.5);
+  padding-left: 10px;
+}
+
+.calendar-date-control span {
+  margin: 0;
+  color: #8a747d;
+  font-size: 12px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.calendar-date-control input {
+  height: 34px;
+  border-radius: 999px;
+  border-color: rgba(220, 185, 192, 0.62);
+  background: rgba(255, 255, 255, 0.72);
+  padding: 0 10px;
 }
 
 .tag {
@@ -5024,6 +5067,19 @@ fieldset {
   .student-add-form {
     display: grid;
     margin-top: 12px;
+  }
+
+  .calendar-actions {
+    justify-items: stretch;
+  }
+
+  .calendar-primary-actions,
+  .calendar-utility-bar {
+    justify-content: start;
+  }
+
+  .calendar-date-control {
+    width: min(100%, 210px);
   }
 
   .calendar-view-toggle {
