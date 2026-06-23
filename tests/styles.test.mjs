@@ -102,8 +102,8 @@ test("lesson colors are keyed by teacher and course", () => {
 });
 
 test("calendar assets use cache-busted style and app URLs for teacher hours", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260623-month-picker"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260623-month-picker"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260623-week-locator"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260623-week-locator"), true);
 });
 
 test("calendar defaults to a month overview and drills into a week from lessons", () => {
@@ -122,7 +122,7 @@ test("calendar defaults to a month overview and drills into a week from lessons"
   assert.equal(appSource.includes("renderCalendarMonthLessonChip"), true);
   assert.match(
     appSource,
-    /const monthSummaryButton = event\.target\.closest\("\[data-calendar-week-date\]"\)[\s\S]*state\.calendarViewMode = "week"[\s\S]*getWeekStartForDate\(monthSummaryButton\.dataset\.calendarWeekDate/,
+    /const monthSummaryButton = event\.target\.closest\("\[data-calendar-week-date\]"\)[\s\S]*const anchorDate = monthSummaryButton\.dataset\.calendarWeekDate \|\| state\.weekStart[\s\S]*state\.calendarWeekAnchor = anchorDate[\s\S]*state\.weekStart = getWeekStartForDate\(anchorDate\)/,
   );
   assert.ok(css.includes(".calendar-view-toggle"));
   assert.ok(css.includes(".calendar-month-overview-grid"));
@@ -187,7 +187,7 @@ test("calendar month locator uses a month picker instead of a full date field", 
   assert.equal(appSource.includes("function formatMonthInputValue"), true);
   assert.equal(appSource.includes('weekStartInput.type = isMonthView ? "month" : "date"'), true);
   assert.equal(appSource.includes("return `${normalized}-01`;"), true);
-  assert.equal(appSource.includes('weekStartInput.setAttribute("aria-label", isMonthView ? "选择月份" : "选择周起始日期")'), true);
+  assert.equal(appSource.includes('weekStartInput.setAttribute("aria-label", isMonthView ? "选择月份" : "选择周定位日期")'), true);
   assert.match(
     appSource,
     /function renderCalendar\(\)[\s\S]*syncCalendarDateControl\(\);[\s\S]*calendarViewModeButtons/,
@@ -196,6 +196,20 @@ test("calendar month locator uses a month picker instead of a full date field", 
     appSource,
     /weekStartInput\.addEventListener\("input"[\s\S]*getCalendarDateFromControlValue\(weekStartInput\.value\)[\s\S]*state\.calendarMonthAnchor = inputDate/,
   );
+});
+
+test("calendar week locator keeps the selected date while rendering its natural week", () => {
+  assert.equal(appSource.includes("calendarWeekAnchor: getTodayIsoDate()"), true);
+  assert.match(
+    appSource,
+    /weekStartInput\.addEventListener\("input"[\s\S]*state\.calendarWeekAnchor = inputDate;[\s\S]*state\.weekStart = getWeekStartForDate\(inputDate\);/,
+  );
+  assert.match(
+    appSource,
+    /function getCalendarDateInputValue\(\)[\s\S]*: state\.calendarWeekAnchor \|\| state\.weekStart \|\| getWeekStartForDate\(getTodayIsoDate\(\)\)/,
+  );
+  assert.equal(appSource.includes('calendarDateLabel.textContent = isMonthView ? "月份定位" : "周定位"'), true);
+  assert.equal(appSource.includes('weekStartInput.setAttribute("aria-label", isMonthView ? "选择月份" : "选择周定位日期")'), true);
 });
 
 test("calendar exposes student absence and pending makeup UI", () => {
@@ -466,8 +480,8 @@ test("course permission view can delete courses with confirmation", () => {
 
 test("course permission course deletion is cache-busted in app imports", () => {
   assert.equal(appSource.includes("./customCatalog.js?v=20260623-permission-course-delete"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260623-month-picker"), true);
-  assert.equal(indexSource.includes("./styles.css?v=20260623-month-picker"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260623-week-locator"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260623-week-locator"), true);
 });
 
 test("course permission teacher column leaves room for full teacher names", () => {
@@ -478,7 +492,7 @@ test("course permission teacher column leaves room for full teacher names", () =
 });
 
 test("course permission width update is cache-busted in the stylesheet URL", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260623-month-picker"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260623-week-locator"), true);
 });
 
 test("candidate teachers render as compact avatar groups with expandable detail", () => {

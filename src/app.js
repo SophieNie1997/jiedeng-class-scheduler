@@ -157,6 +157,7 @@ const state = {
   weekStart: getWeekStartForDate(getTodayIsoDate()),
   calendarViewMode: "month",
   calendarMonthAnchor: getTodayIsoDate(),
+  calendarWeekAnchor: getTodayIsoDate(),
   showTeacherHoursPanel: false,
   showPendingMakeupPanel: false,
 };
@@ -484,7 +485,8 @@ weekStartInput.addEventListener("input", () => {
     state.calendarMonthAnchor = inputDate;
     state.weekStart = getWeekStartForDate(inputDate);
   } else {
-    state.weekStart = inputDate;
+    state.calendarWeekAnchor = inputDate;
+    state.weekStart = getWeekStartForDate(inputDate);
     state.calendarMonthAnchor = inputDate;
   }
   shiftWeekStartInput.value = state.weekStart;
@@ -507,6 +509,7 @@ calendarViewModeButtons.forEach((button) => {
       state.selectedLessonId = null;
       state.draftLesson = null;
     } else {
+      state.calendarWeekAnchor = anchorDate;
       state.weekStart = getWeekStartForDate(anchorDate);
     }
     syncCalendarDateControl();
@@ -703,11 +706,13 @@ calendarNode.addEventListener("click", (event) => {
 
   const monthSummaryButton = event.target.closest("[data-calendar-week-date]");
   if (monthSummaryButton) {
+    const anchorDate = monthSummaryButton.dataset.calendarWeekDate || state.weekStart;
     state.selectedLessonId = null;
     state.draftLesson = null;
     state.calendarViewMode = "week";
-    state.weekStart = getWeekStartForDate(monthSummaryButton.dataset.calendarWeekDate || state.weekStart);
-    weekStartInput.value = state.weekStart;
+    state.calendarWeekAnchor = anchorDate;
+    state.weekStart = getWeekStartForDate(anchorDate);
+    syncCalendarDateControl();
     shiftWeekStartInput.value = state.weekStart;
     renderCalendar();
     return;
@@ -721,8 +726,9 @@ calendarNode.addEventListener("click", (event) => {
   state.selectedLessonId = lessonButton.dataset.lessonId;
   state.draftLesson = null;
   state.calendarViewMode = "week";
-  state.weekStart = getWeekStartForDate(lessonButton.dataset.lessonDate || state.weekStart);
-  weekStartInput.value = state.weekStart;
+  state.calendarWeekAnchor = lessonButton.dataset.lessonDate || state.weekStart;
+  state.weekStart = getWeekStartForDate(state.calendarWeekAnchor);
+  syncCalendarDateControl();
   shiftWeekStartInput.value = state.weekStart;
   renderCalendar();
 });
@@ -1187,7 +1193,7 @@ function getTeacherAvatar(teacherId) {
 function getCalendarDateInputValue() {
   return state.calendarViewMode === "month"
     ? state.calendarMonthAnchor || getTodayIsoDate()
-    : state.weekStart || getWeekStartForDate(getTodayIsoDate());
+    : state.calendarWeekAnchor || state.weekStart || getWeekStartForDate(getTodayIsoDate());
 }
 
 function getCalendarDateControlValue() {
@@ -1306,10 +1312,10 @@ function renderCalendar() {
 
 function syncCalendarDateControl() {
   const isMonthView = state.calendarViewMode === "month";
-  calendarDateLabel.textContent = isMonthView ? "月份定位" : "周起始";
+  calendarDateLabel.textContent = isMonthView ? "月份定位" : "周定位";
   weekStartInput.type = isMonthView ? "month" : "date";
   weekStartInput.value = getCalendarDateControlValue();
-  weekStartInput.setAttribute("aria-label", isMonthView ? "选择月份" : "选择周起始日期");
+  weekStartInput.setAttribute("aria-label", isMonthView ? "选择月份" : "选择周定位日期");
 }
 
 function renderTeacherHoursPanel(lessons) {
@@ -3421,9 +3427,12 @@ function renderPermissionToggle(teacher, course, isChecked) {
 function createDraftCalendarLesson() {
   const teacher = getCandidateTeachers()[0] || { id: "", name: "" };
   const course = getCourses()[0] || "未填写";
-  const date = state.calendarViewMode === "month" ? state.calendarMonthAnchor || state.weekStart : state.weekStart;
+  const date = state.calendarViewMode === "month"
+    ? state.calendarMonthAnchor || state.weekStart
+    : state.calendarWeekAnchor || state.weekStart;
   const id = `manual-${Date.now()}`;
   state.calendarViewMode = "week";
+  state.calendarWeekAnchor = date;
   state.weekStart = getWeekStartForDate(date);
   state.selectedLessonId = id;
   state.draftLesson = {
@@ -3930,8 +3939,9 @@ function openCourseInLessonEditor(courseKey) {
   state.calendarViewMode = "week";
   state.selectedLessonId = lesson.id;
   state.draftLesson = null;
+  state.calendarWeekAnchor = lesson.date;
   state.weekStart = getWeekStartForDate(lesson.date);
-  weekStartInput.value = state.weekStart;
+  syncCalendarDateControl();
   shiftWeekStartInput.value = state.weekStart;
   render();
 }
@@ -4002,8 +4012,9 @@ function openLessonDetailById(lessonId) {
   state.selectedLessonId = lesson.id;
   state.draftLesson = null;
   state.calendarViewMode = "week";
+  state.calendarWeekAnchor = lesson.date;
   state.weekStart = getWeekStartForDate(lesson.date);
-  weekStartInput.value = state.weekStart;
+  syncCalendarDateControl();
   shiftWeekStartInput.value = state.weekStart;
   renderCalendar();
 }
