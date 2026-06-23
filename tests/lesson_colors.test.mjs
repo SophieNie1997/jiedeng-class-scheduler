@@ -38,6 +38,7 @@ test("course color resolver spreads one teacher's course tones apart", () => {
   const resolveColor = createCourseColorResolver(lessonColorPalette);
 
   assert.equal(resolveColor({ teacherId: "lynn", teacherName: "Lynn", course: "Ziyi上门" }), "teal");
+  assert.equal(resolveColor({ teacherId: "lynn", teacherName: "Lynn", course: "语文课程" }), "periwinkle");
   assert.equal(resolveColor({ teacherId: "lynn", teacherName: "Lynn", course: "Orion 复习" }), "blue");
   assert.equal(resolveColor({ teacherId: "tiana", teacherName: "Tiana", course: "Patrick+Valerie" }), "orange");
   assert.equal(resolveColor({ teacherId: "tiana", teacherName: "Tiana", course: "Kason" }), "butter");
@@ -55,6 +56,7 @@ test("course color resolver avoids repeats while the palette has room", () => {
     { teacherId: "lynn", course: "Kason" },
     { teacherId: "tiana", course: "Kason" },
     { teacherId: "tiana", course: "George的复习课" },
+    { teacherId: "lynn", course: "语文课程" },
     { teacherId: "lynn", course: "Orion 复习" },
     { teacherId: "lynn", course: "Ziyi上门" },
     { teacherId: "lynn", course: "Eddie上门" },

@@ -56,6 +56,8 @@ test("calendar lesson color chips use the soft planner palette", () => {
   assert.equal(getRuleValue(".lesson-row.orange", "background"), "#fff0df");
   assert.equal(getRuleValue(".lesson-row.butter", "border-left-color"), "#c8b247");
   assert.equal(getRuleValue(".lesson-row.butter", "background"), "#fff9cc");
+  assert.equal(getRuleValue(".lesson-row.periwinkle", "border-left-color"), "#6f7fd4");
+  assert.equal(getRuleValue(".lesson-row.periwinkle", "background"), "#eceeff");
   assert.equal(getRuleValue(".lesson-row.violet", "border-left-color"), "#a28cc7");
   assert.equal(getRuleValue(".lesson-row.peach", "border-left-color"), "#df8f70");
   assert.equal(getRuleValue(".lesson-row.peach", "background"), "#fff0e8");
@@ -71,9 +73,10 @@ test("calendar lesson color chips use the soft planner palette", () => {
   assert.equal(getRuleValue(".lesson-detail-panel.teal", "--lesson-accent"), "#2faaa2");
   assert.equal(getRuleValue(".lesson-detail-panel.orange", "--lesson-accent"), "#e18449");
   assert.equal(getRuleValue(".lesson-detail-panel.butter", "--lesson-accent"), "#c8b247");
+  assert.equal(getRuleValue(".lesson-detail-panel.periwinkle", "--lesson-accent"), "#6f7fd4");
   assert.equal(getRuleValue(".lesson-detail-panel.peach", "--lesson-accent"), "#df8f70");
   assert.equal(getRuleValue(".lesson-detail-panel.lilac", "--lesson-accent"), "#b487d8");
-  assert.equal(appSource.includes('from "./lessonColors.js?v=20260623-teacher-color-families"'), true);
+  assert.equal(appSource.includes('from "./lessonColors.js?v=20260623-lynn-course-contrast"'), true);
   assert.equal(appSource.includes("getLessonColor,"), true);
   assert.equal(appSource.includes("getLessonColorKey,"), true);
   assert.match(
@@ -98,9 +101,9 @@ test("lesson colors are keyed by teacher and course", () => {
   assert.match(colorKeyFunction, /getLessonCourseKey\(lesson\)/);
 });
 
-test("calendar assets use cache-busted style and app URLs for teacher color families", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260623-teacher-color-families"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260623-teacher-color-families"), true);
+test("calendar assets use cache-busted style and app URLs for Lynn course contrast", () => {
+  assert.equal(indexSource.includes("./styles.css?v=20260623-lynn-course-contrast"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260623-lynn-course-contrast"), true);
 });
 
 test("calendar defaults to a month overview and drills into a week from lessons", () => {
@@ -320,7 +323,7 @@ test("course permission teacher column leaves room for full teacher names", () =
 });
 
 test("course permission width update is cache-busted in the stylesheet URL", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260623-teacher-color-families"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260623-lynn-course-contrast"), true);
 });
 
 test("candidate teachers render as compact avatar groups with expandable detail", () => {

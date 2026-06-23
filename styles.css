@@ -1345,8 +1345,8 @@ fieldset {
 }
 
 .lesson-row.periwinkle {
-  border-left-color: #879bd2;
-  background: #eef2ff;
+  border-left-color: #6f7fd4;
+  background: #eceeff;
 }
 
 .lesson-row.sage {
@@ -1615,10 +1615,10 @@ fieldset {
 }
 
 .lesson-detail-panel.periwinkle {
-  --lesson-accent: #879bd2;
-  --lesson-tint: #eef2ff;
-  --lesson-field: rgba(135, 155, 210, 0.17);
-  --lesson-control: rgba(238, 242, 255, 0.64);
+  --lesson-accent: #6f7fd4;
+  --lesson-tint: #eceeff;
+  --lesson-field: rgba(111, 127, 212, 0.18);
+  --lesson-control: rgba(236, 238, 255, 0.66);
 }
 
 .lesson-detail-panel.sage {

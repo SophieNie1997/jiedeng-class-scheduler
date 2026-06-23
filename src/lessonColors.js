@@ -29,7 +29,7 @@ export const teacherColorFamilies = {
   claire: ["rose", "plum", "berry", "mauve"],
   phebe: ["violet", "periwinkle", "lilac", "lavender"],
   sophie: ["green", "olive", "mint", "sage"],
-  lynn: ["teal", "blue", "seafoam", "steel", "cyan", "aqua"],
+  lynn: ["teal", "blue", "periwinkle", "seafoam", "steel", "cyan", "aqua"],
   tiana: ["orange", "butter", "coral", "amber", "peach", "sand"],
   catherine: ["sand", "peach", "steel", "aqua"],
 };
@@ -37,6 +37,7 @@ export const teacherColorFamilies = {
 export const lessonColorOverrides = new Map([
   ["lynn|orion 复习", "blue"],
   ["lynn|ziyi上门", "teal"],
+  ["lynn|语文课程", "periwinkle"],
   ["tiana|patrick+val", "orange"],
   ["tiana|patrick+valerie", "orange"],
   ["tiana|kason", "butter"],
