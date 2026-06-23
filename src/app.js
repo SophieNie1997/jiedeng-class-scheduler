@@ -20,7 +20,7 @@ import {
   buildWeekOverview,
   filterCalendarLessons,
   isCalendarVisibleLesson,
-} from "./calendar.js?v=20260623-absence-status-label";
+} from "./calendar.js?v=20260623-absence-detail-status";
 import {
   buildLessonsForTeacher,
   expandRecurringLessons,
@@ -66,7 +66,7 @@ import {
   restoreDeletedLessonEdits,
   restoreAbsenceLessonEdit,
   setLessonEdit,
-} from "./lessonEdits.js?v=20260623-absence-status-label";
+} from "./lessonEdits.js?v=20260623-absence-detail-status";
 import {
   alignExplicitSeriesDates,
   deleteLessonsInScope,

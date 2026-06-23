@@ -444,6 +444,35 @@ test("lesson detail marks preview lessons for confirmation", () => {
   assert.equal(detail.status, "预排");
 });
 
+test("lesson detail preserves absence metadata for makeup button state", () => {
+  const detail = buildLessonDetail(
+    {
+      ...makeLesson("absence-phebe-1", "2026-07-07"),
+      status: "请假",
+      absenceStatus: "已补课",
+      absenceReason: "生病",
+      absenceNote: "已另约时间补完",
+      absenceMarkedAt: "2026-06-23T08:00:00.000Z",
+    },
+    [
+      {
+        ...makeLesson("absence-phebe-1", "2026-07-07"),
+        status: "请假",
+        absenceStatus: "已补课",
+        absenceReason: "生病",
+        absenceNote: "已另约时间补完",
+        absenceMarkedAt: "2026-06-23T08:00:00.000Z",
+      },
+    ],
+  );
+
+  assert.equal(detail.status, "请假");
+  assert.equal(detail.absenceStatus, "已补课");
+  assert.equal(detail.absenceReason, "生病");
+  assert.equal(detail.absenceNote, "已另约时间补完");
+  assert.equal(detail.absenceMarkedAt, "2026-06-23T08:00:00.000Z");
+});
+
 function makeCalendarLesson(id, date, startTime, endTime) {
   return {
     id,

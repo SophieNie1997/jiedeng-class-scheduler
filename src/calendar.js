@@ -1,4 +1,4 @@
-import { isAbsenceLesson } from "./lessonEdits.js?v=20260623-absence-status-label";
+import { isAbsenceLesson } from "./lessonEdits.js?v=20260623-absence-detail-status";
 
 export function isCalendarVisibleLesson(lesson) {
   return lesson.status !== "不可用";
@@ -259,6 +259,10 @@ export function buildLessonDetail(lesson, lessons) {
     durationMinutes,
     durationLabel: formatDuration(lesson.startTime, lesson.endTime),
     status: lesson.status || "未填写",
+    absenceStatus: lesson.absenceStatus || "",
+    absenceReason: lesson.absenceReason || "",
+    absenceNote: lesson.absenceNote || "",
+    absenceMarkedAt: lesson.absenceMarkedAt || "",
     isPreview: lesson.status === "预排",
     notes: lesson.notes || lesson.note || "",
     source: lesson.source || "",
