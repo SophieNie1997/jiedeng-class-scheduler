@@ -1011,26 +1011,38 @@ fieldset {
 
 .calendar-month-daypart {
   display: grid;
-  gap: 4px;
+  gap: 5px;
   min-width: 0;
-  border: 1px solid var(--daypart-border);
+  border: 0;
+  border-top: 4px solid var(--daypart-accent);
   border-radius: 10px;
-  background: var(--daypart-bg);
-  padding: 4px;
+  background: transparent;
+  padding: 4px 0 0;
 }
 
 .calendar-month-daypart.empty {
-  min-height: 25px;
-  opacity: 0.74;
+  min-height: 22px;
+  opacity: 0.66;
 }
 
 .calendar-month-daypart-head {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  justify-self: start;
   gap: 4px;
+  max-width: 100%;
   min-width: 0;
+  margin: -10px 0 0 5px;
+  border: 1px solid rgba(255, 255, 255, 0.68);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.54);
+  backdrop-filter: blur(10px) saturate(138%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.92),
+    0 4px 10px rgba(143, 84, 103, 0.08);
   color: var(--daypart-accent);
+  padding: 2px 4px 2px 6px;
   font-size: 10px;
   font-weight: 950;
   line-height: 1;
@@ -1044,7 +1056,7 @@ fieldset {
 .calendar-month-daypart-head em {
   flex: 0 0 auto;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.62);
+  background: rgba(255, 255, 255, 0.74);
   color: #6f6870;
   padding: 2px 5px;
   font-size: 9px;
@@ -1200,46 +1212,56 @@ fieldset {
 .calendar-daypart,
 .calendar-month-daypart {
   --daypart-accent: #8f5d21;
-  --daypart-bg: rgba(255, 247, 226, 0.74);
+  --daypart-bg: transparent;
   --daypart-border: rgba(214, 169, 59, 0.28);
 }
 
 .calendar-daypart-morning {
   --daypart-accent: #8f5d21;
-  --daypart-bg: rgba(255, 247, 226, 0.74);
+  --daypart-bg: transparent;
   --daypart-border: rgba(214, 169, 59, 0.28);
 }
 
 .calendar-daypart-afternoon {
   --daypart-accent: #3f76a8;
-  --daypart-bg: rgba(232, 245, 255, 0.76);
+  --daypart-bg: transparent;
   --daypart-border: rgba(79, 136, 215, 0.24);
 }
 
 .calendar-daypart-evening {
   --daypart-accent: #7258a8;
-  --daypart-bg: rgba(243, 239, 255, 0.78);
+  --daypart-bg: transparent;
   --daypart-border: rgba(154, 147, 209, 0.28);
 }
 
 .calendar-daypart {
-  border: 1px solid var(--daypart-border);
+  border: 0;
+  border-top: 5px solid var(--daypart-accent);
   border-radius: 14px;
-  background: var(--daypart-bg);
-  padding: 8px;
+  background: transparent;
+  padding: 5px 0 0;
 }
 
 .calendar-daypart.empty {
-  opacity: 0.72;
+  opacity: 0.62;
 }
 
 .calendar-daypart-head {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 8px;
-  margin-bottom: 7px;
+  max-width: calc(100% - 12px);
+  margin: -13px 0 8px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.58);
+  backdrop-filter: blur(12px) saturate(140%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.92),
+    0 6px 14px rgba(143, 84, 103, 0.08);
   color: var(--daypart-accent);
+  padding: 4px 6px 4px 9px;
 }
 
 .calendar-daypart-head strong,
@@ -1266,7 +1288,7 @@ fieldset {
   flex: 0 0 auto;
   border: 1px solid var(--daypart-border);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.78);
   color: var(--daypart-accent);
   padding: 3px 7px;
   font-size: 11px;
@@ -1275,9 +1297,9 @@ fieldset {
 
 .calendar-daypart-empty {
   display: block;
-  border: 1px dashed var(--daypart-border);
+  border: 1px dashed rgba(149, 138, 144, 0.26);
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.42);
+  background: rgba(255, 255, 255, 0.28);
   color: #958a90;
   padding: 8px;
   font-size: 12px;

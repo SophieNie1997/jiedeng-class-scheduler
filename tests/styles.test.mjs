@@ -76,7 +76,7 @@ test("calendar lesson color chips use the soft planner palette", () => {
   assert.equal(getRuleValue(".lesson-detail-panel.periwinkle", "--lesson-accent"), "#6f7fd4");
   assert.equal(getRuleValue(".lesson-detail-panel.peach", "--lesson-accent"), "#df8f70");
   assert.equal(getRuleValue(".lesson-detail-panel.lilac", "--lesson-accent"), "#b487d8");
-  assert.equal(appSource.includes('from "./lessonColors.js?v=20260623-daypart-calendar"'), true);
+  assert.equal(appSource.includes('from "./lessonColors.js?v=20260623-daypart-lines"'), true);
   assert.equal(appSource.includes("getLessonColor,"), true);
   assert.equal(appSource.includes("getLessonColorKey,"), true);
   assert.match(
@@ -101,9 +101,9 @@ test("lesson colors are keyed by teacher and course", () => {
   assert.match(colorKeyFunction, /getLessonCourseKey\(lesson\)/);
 });
 
-test("calendar assets use cache-busted style and app URLs for daypart calendar", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260623-daypart-calendar"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260623-daypart-calendar"), true);
+test("calendar assets use cache-busted style and app URLs for daypart line markers", () => {
+  assert.equal(indexSource.includes("./styles.css?v=20260623-daypart-lines"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260623-daypart-lines"), true);
 });
 
 test("calendar defaults to a month overview and drills into a week from lessons", () => {
@@ -139,6 +139,14 @@ test("calendar day cards expose morning afternoon evening sections", () => {
   assert.ok(css.includes(".calendar-daypart-evening"));
   assert.equal(getRuleValue(".calendar-daypart", "border-radius"), "14px");
   assert.equal(getRuleValue(".calendar-month-daypart", "border-radius"), "10px");
+  assert.equal(getRuleValue(".calendar-daypart", "border-top"), "5px solid var(--daypart-accent)");
+  assert.equal(getRuleValue(".calendar-month-daypart", "border-top"), "4px solid var(--daypart-accent)");
+  assert.equal(getRuleValue(".calendar-daypart", "background"), "transparent");
+  assert.equal(getRuleValue(".calendar-month-daypart", "background"), "transparent");
+  assert.equal(getRuleValue(".calendar-daypart-head", "background"), "rgba(255, 255, 255, 0.58)");
+  assert.equal(getRuleValue(".calendar-daypart-head", "backdrop-filter"), "blur(12px) saturate(140%)");
+  assert.equal(getRuleValue(".calendar-month-daypart-head", "background"), "rgba(255, 255, 255, 0.54)");
+  assert.equal(getRuleValue(".calendar-month-daypart-head", "backdrop-filter"), "blur(10px) saturate(138%)");
   assert.equal(getRuleValue(".calendar-daypart.empty .calendar-time-group", "display"), "none");
 });
 
@@ -339,7 +347,7 @@ test("course permission teacher column leaves room for full teacher names", () =
 });
 
 test("course permission width update is cache-busted in the stylesheet URL", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260623-daypart-calendar"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260623-daypart-lines"), true);
 });
 
 test("candidate teachers render as compact avatar groups with expandable detail", () => {
