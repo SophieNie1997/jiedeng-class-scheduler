@@ -82,7 +82,7 @@ import {
 import {
   getLessonColor,
   getLessonColorKey,
-} from "./lessonColors.js?v=20260623-separated-course-colors";
+} from "./lessonColors.js?v=20260623-teacher-color-families";
 
 const SHIFT_STORAGE_KEY = "jiedeng-teacher-shifts-folder-20260617-shift";
 const COURSE_PERMISSION_STORAGE_KEY = "jiedeng-course-permissions-folder-20260617-shift";
