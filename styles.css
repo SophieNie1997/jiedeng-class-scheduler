@@ -900,15 +900,15 @@ fieldset {
 }
 
 .calendar-month-week-card {
-  border: 1px solid rgba(239, 189, 203, 0.76);
-  border-radius: 22px;
+  border: 1px solid rgba(239, 189, 203, 0.42);
+  border-radius: 18px;
   background:
-    linear-gradient(135deg, rgba(255, 248, 252, 0.9), rgba(242, 253, 248, 0.72)),
-    rgba(255, 255, 255, 0.66);
+    linear-gradient(135deg, rgba(255, 252, 254, 0.88), rgba(248, 253, 251, 0.62)),
+    rgba(255, 255, 255, 0.58);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.86),
-    0 12px 24px rgba(180, 108, 133, 0.08);
-  padding: 10px;
+    inset 0 1px 0 rgba(255, 255, 255, 0.72),
+    0 8px 18px rgba(180, 108, 133, 0.05);
+  padding: 11px;
   overflow-x: auto;
   overflow-y: hidden;
 }
@@ -918,11 +918,9 @@ fieldset {
   align-items: start;
   justify-content: space-between;
   gap: 10px;
-  margin-bottom: 8px;
-  border: 1px dashed rgba(239, 189, 203, 0.82);
-  border-radius: 17px;
-  background: rgba(255, 250, 253, 0.76);
-  padding: 7px 9px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(239, 189, 203, 0.34);
+  padding: 0 2px 8px;
 }
 
 .calendar-month-week-head span,
@@ -1022,14 +1020,13 @@ fieldset {
 .calendar-month-daypart-cell {
   display: grid;
   align-content: start;
-  gap: 3px;
-  min-height: 76px;
+  gap: 0;
+  min-height: 34px;
   min-width: 0;
-  border: 1px solid rgba(239, 189, 203, 0.4);
-  border-left: 3px solid var(--daypart-accent);
-  border-radius: 13px;
-  background: rgba(255, 255, 255, 0.44);
-  padding: 4px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  padding: 2px;
 }
 
 .calendar-month-daypart-cell.outside-month {
@@ -1039,71 +1036,155 @@ fieldset {
 .calendar-month-daypart-cell.empty {
   align-content: center;
   justify-items: center;
-  border-style: dashed;
-  border-left-style: solid;
-  background: rgba(255, 255, 255, 0.2);
+  border: 0;
+  background: transparent;
 }
 
-.calendar-month-daypart-lessons {
+.calendar-month-distribution {
   display: grid;
-  gap: 3px;
+  gap: 4px;
+  width: 100%;
   min-width: 0;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  padding: 2px 1px;
+  text-align: left;
+  cursor: pointer;
 }
 
-.lesson-row.calendar-month-lesson {
-  grid-template-columns: minmax(0, 1fr);
-  gap: 3px;
-  min-height: 0;
-  border-left-width: 4px;
-  border-radius: 12px;
-  padding: 6px 7px;
-  font-size: 11px;
-  line-height: 1.25;
+.calendar-month-distribution:hover {
+  background: rgba(255, 255, 255, 0.48);
 }
 
-.lesson-row.calendar-month-lesson .calendar-month-lesson-time {
-  align-self: start;
-  justify-self: start;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.68);
-  color: #31424a;
-  padding: 2px 6px;
+.calendar-month-daypart-count {
+  display: block;
+  color: #5d6670;
   font-size: 10px;
-  font-weight: 950;
-  line-height: 1.1;
-  text-align: center;
-  white-space: nowrap;
+  font-weight: 900;
+  line-height: 1;
 }
 
-.lesson-row.calendar-month-lesson .calendar-month-lesson-copy {
+.calendar-month-course-strips {
   display: grid;
   gap: 2px;
   min-width: 0;
 }
 
-.lesson-row.calendar-month-lesson .calendar-month-lesson-teacher {
-  color: #1f2933;
-  font-size: 12px;
-  font-weight: 950;
-  line-height: 1.12;
-  margin-top: 0;
-  overflow-wrap: normal;
-  word-break: normal;
+.calendar-month-course-strip {
+  display: block;
+  width: 100%;
+  height: 5px;
+  border-radius: 999px;
+  background: #9aa8b4;
 }
 
-.lesson-row.calendar-month-lesson .calendar-month-lesson-course {
-  display: -webkit-box;
-  color: #3c4a52;
-  font-size: 11px;
-  font-weight: 850;
-  line-height: 1.18;
-  overflow: hidden;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  margin-top: 0;
-  overflow-wrap: normal;
-  white-space: normal;
-  word-break: normal;
+.calendar-month-course-more {
+  display: block;
+  color: #8e7f87;
+  font-size: 9px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.calendar-month-course-strip.blue {
+  background: #4f88d7;
+}
+
+.calendar-month-course-strip.green {
+  background: #7bb79e;
+}
+
+.calendar-month-course-strip.orange {
+  background: #e18449;
+}
+
+.calendar-month-course-strip.rose {
+  background: #d982a6;
+}
+
+.calendar-month-course-strip.violet {
+  background: #a28cc7;
+}
+
+.calendar-month-course-strip.peach {
+  background: #df8f70;
+}
+
+.calendar-month-course-strip.lilac {
+  background: #b487d8;
+}
+
+.calendar-month-course-strip.teal {
+  background: #2faaa2;
+}
+
+.calendar-month-course-strip.amber {
+  background: #d6a93b;
+}
+
+.calendar-month-course-strip.cyan {
+  background: #43a6cf;
+}
+
+.calendar-month-course-strip.mint {
+  background: #72bfa8;
+}
+
+.calendar-month-course-strip.coral {
+  background: #dc6f62;
+}
+
+.calendar-month-course-strip.lavender {
+  background: #9a93d1;
+}
+
+.calendar-month-course-strip.butter {
+  background: #c8b247;
+}
+
+.calendar-month-course-strip.aqua {
+  background: #32aeb9;
+}
+
+.calendar-month-course-strip.mauve {
+  background: #c484b8;
+}
+
+.calendar-month-course-strip.olive {
+  background: #9caf73;
+}
+
+.calendar-month-course-strip.steel {
+  background: #718ab8;
+}
+
+.calendar-month-course-strip.plum {
+  background: #aa83bf;
+}
+
+.calendar-month-course-strip.sand {
+  background: #c7aa6d;
+}
+
+.calendar-month-course-strip.seafoam {
+  background: #44ad84;
+}
+
+.calendar-month-course-strip.berry {
+  background: #c8789b;
+}
+
+.calendar-month-course-strip.periwinkle {
+  background: #6f7fd4;
+}
+
+.calendar-month-course-strip.sage {
+  background: #8fb18b;
+}
+
+.calendar-month-course-strip.preview {
+  background: #d65f91;
 }
 
 .calendar-month-empty {
@@ -1190,22 +1271,18 @@ fieldset {
   align-content: center;
   gap: 3px;
   min-width: 0;
-  border: 1px solid var(--daypart-border);
-  border-top: 5px solid var(--daypart-accent);
-  border-radius: 15px;
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(12px) saturate(140%);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.92),
-    0 6px 14px rgba(143, 84, 103, 0.08);
+  border: 0;
+  border-right: 4px solid var(--daypart-accent);
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: none;
   color: var(--daypart-accent);
-  padding: 8px 9px;
+  padding: 8px 10px 8px 0;
 }
 
 .calendar-month-daypart-row .calendar-daypart-axis {
-  border-top-width: 4px;
-  border-radius: 13px;
-  padding: 6px 7px;
+  border-right-width: 3px;
+  padding: 5px 7px 5px 0;
 }
 
 .calendar-daypart-axis strong,
@@ -1231,7 +1308,7 @@ fieldset {
 .calendar-daypart-axis b {
   justify-self: start;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.76);
+  background: rgba(255, 255, 255, 0.58);
   color: var(--daypart-accent);
   padding: 3px 7px;
   font-size: 11px;
@@ -1269,9 +1346,10 @@ fieldset {
 .calendar-week-daypart-cell.empty {
   align-content: center;
   justify-items: center;
-  border-style: dashed;
-  border-left-style: solid;
-  background: rgba(255, 255, 255, 0.16);
+  border-style: solid;
+  border-color: rgba(239, 189, 203, 0.16);
+  border-left-color: transparent;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .calendar-daypart-empty-label {
