@@ -40,6 +40,59 @@ export function buildWeekOverview(weekDates, lessons) {
   });
 }
 
+export function buildTeacherDurationSummary(lessons, { startDate, endDate, teachers = [] } = {}) {
+  const visibleLessons = filterCalendarLessons(lessons)
+    .filter((lesson) => isDateInRange(lesson.date, startDate, endDate));
+  const rowsByTeacher = new Map();
+  const teacherRoster = Array.isArray(teachers) ? teachers : [];
+
+  for (const teacher of teacherRoster) {
+    const teacherId = String(teacher.id || teacher.name || "").trim();
+    const teacherName = String(teacher.name || teacher.id || "").trim();
+    if (!teacherId && !teacherName) {
+      continue;
+    }
+
+    rowsByTeacher.set(teacherId || teacherName, {
+      teacherId: teacherId || teacherName,
+      teacherName: teacherName || teacherId,
+      lessonCount: 0,
+      totalMinutes: 0,
+    });
+  }
+
+  for (const lesson of visibleLessons) {
+    const durationMinutes = getLessonDurationMinutes(lesson);
+    if (durationMinutes <= 0) {
+      continue;
+    }
+
+    const teacherId = String(lesson.teacherId || lesson.teacherName || "未填写");
+    const teacherName = lesson.teacherName || lesson.teacherId || "未填写";
+    const existing = rowsByTeacher.get(teacherId) || {
+      teacherId,
+      teacherName,
+      lessonCount: 0,
+      totalMinutes: 0,
+    };
+    existing.lessonCount += 1;
+    existing.totalMinutes += durationMinutes;
+    rowsByTeacher.set(teacherId, existing);
+  }
+
+  return Array.from(rowsByTeacher.values())
+    .map((row) => ({
+      ...row,
+      totalHoursLabel: formatTotalHours(row.totalMinutes),
+    }))
+    .sort(
+      (left, right) =>
+        right.totalMinutes - left.totalMinutes ||
+        right.lessonCount - left.lessonCount ||
+        left.teacherName.localeCompare(right.teacherName, "zh-Hans-CN"),
+    );
+}
+
 const DAYPARTS = [
   { id: "morning", label: "上午", rangeLabel: "12:00 前" },
   { id: "afternoon", label: "下午", rangeLabel: "12:00-18:00" },
@@ -205,6 +258,29 @@ function formatDuration(startTime, endTime) {
   }
 
   return `${minutes} 分钟`;
+}
+
+function formatTotalHours(totalMinutes) {
+  if (totalMinutes <= 0) {
+    return "0 小时";
+  }
+
+  const hours = totalMinutes / 60;
+  return `${Number.isInteger(hours) ? hours : Number(hours.toFixed(1))} 小时`;
+}
+
+function getLessonDurationMinutes(lesson) {
+  const explicitDuration = Number(lesson.durationMinutes || 0);
+  if (explicitDuration > 0) {
+    return explicitDuration;
+  }
+
+  return parseTimeToMinutes(lesson.endTime) - parseTimeToMinutes(lesson.startTime);
+}
+
+function isDateInRange(dateString, startDate, endDate) {
+  const date = String(dateString || "");
+  return /^\d{4}-\d{2}-\d{2}$/.test(date) && (!startDate || date >= startDate) && (!endDate || date <= endDate);
 }
 
 function formatWeeksBetween(startDate, endDate) {

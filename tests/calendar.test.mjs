@@ -1,12 +1,14 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
-import {
+import * as calendar from "../src/calendar.js";
+
+const {
   buildLessonDetail,
   buildWeekOverview,
   filterCalendarLessons,
   isCalendarVisibleLesson,
-} from "../src/calendar.js";
+} = calendar;
 
 test("calendar view hides unavailable blocks and keeps course cards", () => {
   const lessons = [
@@ -131,6 +133,55 @@ test("keeps empty daypart segments visible for sparse days", () => {
       ["evening", 0, 0],
     ],
   );
+});
+
+test("builds teacher duration summary for a date range", () => {
+  assert.equal(typeof calendar.buildTeacherDurationSummary, "function");
+
+  const lessons = [
+    {
+      ...makeCalendarLesson("lynn-a", "2026-07-01", "09:00", "10:30"),
+      teacherId: "lynn",
+      teacherName: "Lynn",
+    },
+    {
+      ...makeCalendarLesson("lynn-b", "2026-07-03", "18:00", "20:00"),
+      teacherId: "lynn",
+      teacherName: "Lynn",
+    },
+    {
+      ...makeCalendarLesson("tiana-a", "2026-07-02", "13:00", "15:00"),
+      teacherId: "tiana",
+      teacherName: "Tiana",
+    },
+    {
+      ...makeCalendarLesson("hidden", "2026-07-02", "08:00", "21:00"),
+      teacherId: "gioia",
+      teacherName: "Gioia",
+      status: "不可用",
+    },
+    {
+      ...makeCalendarLesson("outside", "2026-08-01", "09:00", "12:00"),
+      teacherId: "lynn",
+      teacherName: "Lynn",
+    },
+  ];
+
+  const summary = calendar.buildTeacherDurationSummary(lessons, {
+    startDate: "2026-07-01",
+    endDate: "2026-07-31",
+    teachers: [
+      { id: "lynn", name: "Lynn" },
+      { id: "tiana", name: "Tiana" },
+      { id: "catherine", name: "Catherine" },
+    ],
+  });
+
+  assert.deepEqual(summary.map((item) => [item.teacherName, item.lessonCount, item.totalMinutes, item.totalHoursLabel]), [
+    ["Lynn", 2, 210, "3.5 小时"],
+    ["Tiana", 1, 120, "2 小时"],
+    ["Catherine", 0, 0, "0 小时"],
+  ]);
 });
 
 test("builds lesson detail with inferred recurring schedule", () => {

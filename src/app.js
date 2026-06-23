@@ -16,9 +16,10 @@ import {
 } from "./coursePermissions.js?v=20260616-course-catalog";
 import {
   buildLessonDetail,
+  buildTeacherDurationSummary,
   buildWeekOverview,
   filterCalendarLessons,
-} from "./calendar.js?v=20260622-confirm-preview-lessons";
+} from "./calendar.js?v=20260623-teacher-hours";
 import {
   buildLessonsForTeacher,
   expandRecurringLessons,
@@ -146,6 +147,7 @@ const state = {
   weekStart: getWeekStartForDate(getTodayIsoDate()),
   calendarViewMode: "month",
   calendarMonthAnchor: getTodayIsoDate(),
+  showTeacherHoursPanel: false,
 };
 
 state.coursePermissions = loadCoursePermissions();
@@ -296,6 +298,7 @@ app.innerHTML = `
                 <button class="calendar-view-button active" data-calendar-view-mode="month" type="button">月视图</button>
                 <button class="calendar-view-button" data-calendar-view-mode="week" type="button">周视图</button>
               </div>
+              <button id="toggle-teacher-hours" class="teacher-hours-button" type="button">课时统计</button>
               <button id="add-calendar-lesson" class="add-lesson-button" type="button">新增课程</button>
               <label>
                 <span id="calendar-date-label">月份定位</span>
@@ -429,6 +432,7 @@ const permissionSyncLine = document.querySelector("#permission-sync-line");
 const resetPermissionsButton = document.querySelector("#reset-permissions");
 const permissionAddForm = document.querySelector("#permission-add-form");
 const addCalendarLessonButton = document.querySelector("#add-calendar-lesson");
+const toggleTeacherHoursButton = document.querySelector("#toggle-teacher-hours");
 const tabButtons = document.querySelectorAll("[data-view-target]");
 const syncPanelNode = document.querySelector("#sync-panel");
 const studentDeleteDialogNode = document.querySelector("#student-delete-dialog");
@@ -491,6 +495,11 @@ calendarViewModeButtons.forEach((button) => {
     shiftWeekStartInput.value = state.weekStart;
     renderCalendar();
   });
+});
+
+toggleTeacherHoursButton.addEventListener("click", () => {
+  state.showTeacherHoursPanel = !state.showTeacherHoursPanel;
+  renderCalendar();
 });
 
 shiftWeekStartInput.addEventListener("input", () => {
@@ -1138,6 +1147,30 @@ function getCalendarSelectionDate() {
   return selectedLesson?.date || state.calendarMonthAnchor || state.weekStart || getTodayIsoDate();
 }
 
+function getCalendarTeacherHoursRange() {
+  if (state.calendarViewMode === "month") {
+    const monthDates = getMonthDates(getCalendarDateInputValue());
+    const startDate = monthDates[0]?.iso || getCalendarDateInputValue();
+    const endDate = monthDates[monthDates.length - 1]?.iso || startDate;
+    return {
+      label: "本月",
+      startDate,
+      endDate,
+      rangeLabel: `${formatDateForDisplay(startDate)} - ${formatDateForDisplay(endDate)}`,
+    };
+  }
+
+  const weekDates = getWeekDates(state.weekStart);
+  const startDate = weekDates[0]?.iso || state.weekStart;
+  const endDate = weekDates[weekDates.length - 1]?.iso || startDate;
+  return {
+    label: "本周",
+    startDate,
+    endDate,
+    rangeLabel: `${formatDateForDisplay(startDate)} - ${formatDateForDisplay(endDate)}`,
+  };
+}
+
 function renderCalendar() {
   const request = readRequest();
   const effectiveTeachers = getEffectiveTeachers();
@@ -1154,9 +1187,14 @@ function renderCalendar() {
   calendarViewModeButtons.forEach((button) => {
     button.classList.toggle("active", button.dataset.calendarViewMode === state.calendarViewMode);
   });
+  toggleTeacherHoursButton.classList.toggle("active", state.showTeacherHoursPanel);
+  toggleTeacherHoursButton.setAttribute("aria-expanded", state.showTeacherHoursPanel ? "true" : "false");
 
   if (state.calendarViewMode === "month") {
-    calendarNode.innerHTML = renderCalendarMonthGrid(visibleLessons);
+    calendarNode.innerHTML = `
+      ${renderTeacherHoursPanel(effectiveLessons)}
+      ${renderCalendarMonthGrid(visibleLessons)}
+    `;
     return;
   }
 
@@ -1173,9 +1211,50 @@ function renderCalendar() {
       : null;
 
   calendarNode.innerHTML = `
+    ${renderTeacherHoursPanel(effectiveLessons)}
     ${selectedDetail ? renderLessonDetail(selectedDetail) : ""}
     <div class="calendar-overview">
       ${renderCalendarWeekMatrix(overview)}
+    </div>
+  `;
+}
+
+function renderTeacherHoursPanel(lessons) {
+  if (!state.showTeacherHoursPanel) {
+    return "";
+  }
+
+  const range = getCalendarTeacherHoursRange();
+  const summary = buildTeacherDurationSummary(lessons, {
+    startDate: range.startDate,
+    endDate: range.endDate,
+    teachers: getCandidateTeachers(),
+  });
+  const totalMinutes = summary.reduce((sum, item) => sum + item.totalMinutes, 0);
+  const totalLessons = summary.reduce((sum, item) => sum + item.lessonCount, 0);
+
+  return `
+    <section id="teacher-hours-panel" class="calendar-teacher-hours-panel" aria-label="老师课时统计">
+      <div class="calendar-teacher-hours-head">
+        <span>
+          <strong>课时统计</strong>
+          <em class="teacher-hours-range">${escapeHtml(range.label)} · ${escapeHtml(range.rangeLabel)}</em>
+        </span>
+        <b>${escapeHtml(formatTeacherHours(totalMinutes))} / ${totalLessons} 节</b>
+      </div>
+      <div class="calendar-teacher-hours-list">
+        ${summary.map((item) => renderTeacherHoursRow(item)).join("")}
+      </div>
+    </section>
+  `;
+}
+
+function renderTeacherHoursRow(item) {
+  return `
+    <div class="calendar-teacher-hours-row">
+      <span>${escapeHtml(item.teacherName)}</span>
+      <strong>${escapeHtml(item.totalHoursLabel)}</strong>
+      <em>${item.lessonCount} 节</em>
     </div>
   `;
 }
@@ -4098,6 +4177,15 @@ function getTodayIsoDate() {
 
 function formatDateForDisplay(dateString) {
   return String(dateString || "").replaceAll("-", "/");
+}
+
+function formatTeacherHours(totalMinutes) {
+  if (totalMinutes <= 0) {
+    return "0 小时";
+  }
+
+  const hours = totalMinutes / 60;
+  return `${Number.isInteger(hours) ? hours : Number(hours.toFixed(1))} 小时`;
 }
 
 function getWeekdayValue(dateString) {
