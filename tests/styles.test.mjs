@@ -65,7 +65,7 @@ test("calendar lesson color chips use the soft planner palette", () => {
   assert.equal(getRuleValue(".lesson-detail-panel.blue", "--lesson-accent"), "#6f9fcf");
   assert.equal(getRuleValue(".lesson-detail-panel.peach", "--lesson-accent"), "#df8f70");
   assert.equal(getRuleValue(".lesson-detail-panel.lilac", "--lesson-accent"), "#b487d8");
-  assert.equal(appSource.includes('from "./lessonColors.js?v=20260623-pure-course-colors"'), true);
+  assert.equal(appSource.includes('from "./lessonColors.js?v=20260623-separated-course-colors"'), true);
   assert.equal(appSource.includes("getLessonColor,"), true);
   assert.equal(appSource.includes("getLessonColorKey,"), true);
   assert.match(
@@ -90,9 +90,9 @@ test("lesson colors are keyed by course, not by teacher", () => {
   assert.equal(courseKeyFunction.includes("teacherName"), false);
 });
 
-test("calendar assets use cache-busted style and app URLs for pure course colors", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260623-pure-course-colors"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260623-pure-course-colors"), true);
+test("calendar assets use cache-busted style and app URLs for separated course colors", () => {
+  assert.equal(indexSource.includes("./styles.css?v=20260623-separated-course-colors"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260623-separated-course-colors"), true);
 });
 
 test("calendar defaults to a month overview and drills into a week from lessons", () => {
@@ -312,7 +312,7 @@ test("course permission teacher column leaves room for full teacher names", () =
 });
 
 test("course permission width update is cache-busted in the stylesheet URL", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260623-pure-course-colors"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260623-separated-course-colors"), true);
 });
 
 test("candidate teachers render as compact avatar groups with expandable detail", () => {

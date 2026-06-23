@@ -13,10 +13,32 @@ test("lesson course keys ignore teacher identity", () => {
 });
 
 test("course color resolver reuses a color for the same course", () => {
-  const resolveColor = createCourseColorResolver(["green", "blue", "rose"]);
+  const resolveColor = createCourseColorResolver(["green", "blue", "rose"], new Map());
 
   assert.equal(resolveColor({ teacherId: "lynn", course: "Orion 复习" }), "green");
   assert.equal(resolveColor({ teacherId: "tiana", course: "Orion 复习" }), "green");
+});
+
+test("course color resolver keeps visually similar frequent courses separated", () => {
+  const resolveColor = createCourseColorResolver(lessonColorPalette);
+
+  assert.equal(resolveColor({ course: "Orion 复习" }), "blue");
+  assert.equal(resolveColor({ course: "Ziyi上门" }), "peach");
+});
+
+test("course color resolver reserves explicit course colors for their courses", () => {
+  const resolveColor = createCourseColorResolver(
+    ["green", "blue", "peach", "rose"],
+    new Map([
+      ["orion 复习", "blue"],
+      ["ziyi上门", "peach"],
+    ]),
+  );
+
+  assert.equal(resolveColor({ course: "Kason" }), "green");
+  assert.equal(resolveColor({ course: "Patrick+Val" }), "rose");
+  assert.equal(resolveColor({ course: "Orion 复习" }), "blue");
+  assert.equal(resolveColor({ course: "Ziyi上门" }), "peach");
 });
 
 test("course color resolver avoids repeats while the palette has room", () => {
