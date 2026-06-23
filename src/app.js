@@ -16,10 +16,10 @@ import {
 } from "./coursePermissions.js?v=20260616-course-catalog";
 import {
   buildLessonDetail,
-  buildTeacherDurationSummary,
+  buildTeacherWeeklyDurationTable,
   buildWeekOverview,
   filterCalendarLessons,
-} from "./calendar.js?v=20260623-teacher-hours";
+} from "./calendar.js?v=20260623-teacher-hours-table";
 import {
   buildLessonsForTeacher,
   expandRecurringLessons,
@@ -1148,27 +1148,36 @@ function getCalendarSelectionDate() {
 }
 
 function getCalendarTeacherHoursRange() {
-  if (state.calendarViewMode === "month") {
-    const monthDates = getMonthDates(getCalendarDateInputValue());
-    const startDate = monthDates[0]?.iso || getCalendarDateInputValue();
-    const endDate = monthDates[monthDates.length - 1]?.iso || startDate;
-    return {
-      label: "本月",
-      startDate,
-      endDate,
-      rangeLabel: `${formatDateForDisplay(startDate)} - ${formatDateForDisplay(endDate)}`,
-    };
-  }
-
-  const weekDates = getWeekDates(state.weekStart);
-  const startDate = weekDates[0]?.iso || state.weekStart;
-  const endDate = weekDates[weekDates.length - 1]?.iso || startDate;
+  const monthDates = getMonthDates(getCalendarDateInputValue());
+  const startDate = monthDates[0]?.iso || getCalendarDateInputValue();
+  const endDate = monthDates[monthDates.length - 1]?.iso || startDate;
   return {
-    label: "本周",
+    label: "本月",
     startDate,
     endDate,
     rangeLabel: `${formatDateForDisplay(startDate)} - ${formatDateForDisplay(endDate)}`,
   };
+}
+
+function getCalendarTeacherHoursWeeks() {
+  const anchorDate = getCalendarDateInputValue();
+  const monthDates = getMonthDates(anchorDate);
+  const monthStart = monthDates[0]?.iso || anchorDate;
+  const monthEnd = monthDates[monthDates.length - 1]?.iso || monthStart;
+
+  return getMonthWeeks(anchorDate)
+    .map((week, index) => {
+      const daysInMonth = week.filter((day) => day.iso >= monthStart && day.iso <= monthEnd);
+      const startDate = daysInMonth[0]?.iso || "";
+      const endDate = daysInMonth[daysInMonth.length - 1]?.iso || "";
+      return {
+        label: `第${index + 1}周`,
+        rangeLabel: `${startDate.slice(5).replace("-", "/")}-${endDate.slice(5).replace("-", "/")}`,
+        startDate,
+        endDate,
+      };
+    })
+    .filter((week) => week.startDate && week.endDate);
 }
 
 function renderCalendar() {
@@ -1225,13 +1234,13 @@ function renderTeacherHoursPanel(lessons) {
   }
 
   const range = getCalendarTeacherHoursRange();
-  const summary = buildTeacherDurationSummary(lessons, {
-    startDate: range.startDate,
-    endDate: range.endDate,
+  const weeks = getCalendarTeacherHoursWeeks();
+  const summary = buildTeacherWeeklyDurationTable(lessons, {
+    weeks,
     teachers: getCandidateTeachers(),
   });
   const totalMinutes = summary.reduce((sum, item) => sum + item.totalMinutes, 0);
-  const totalLessons = summary.reduce((sum, item) => sum + item.lessonCount, 0);
+  const totalLessons = summary.reduce((sum, item) => sum + item.totalLessonCount, 0);
 
   return `
     <section id="teacher-hours-panel" class="calendar-teacher-hours-panel" aria-label="老师课时统计">
@@ -1242,8 +1251,26 @@ function renderTeacherHoursPanel(lessons) {
         </span>
         <b>${escapeHtml(formatTeacherHours(totalMinutes))} / ${totalLessons} 节</b>
       </div>
-      <div class="calendar-teacher-hours-list">
-        ${summary.map((item) => renderTeacherHoursRow(item)).join("")}
+      <div class="calendar-teacher-hours-scroll">
+        <table class="calendar-teacher-hours-table">
+          <thead>
+            <tr>
+              <th scope="col">老师</th>
+              ${weeks.map((week) => `
+                <th scope="col">
+                  <span class="teacher-hours-week-label">
+                    ${escapeHtml(week.label)}
+                    <em>${escapeHtml(week.rangeLabel)}</em>
+                  </span>
+                </th>
+              `).join("")}
+              <th scope="col" class="teacher-hours-month-total">本月总课时</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${summary.map((item) => renderTeacherHoursRow(item)).join("")}
+          </tbody>
+        </table>
       </div>
     </section>
   `;
@@ -1251,11 +1278,23 @@ function renderTeacherHoursPanel(lessons) {
 
 function renderTeacherHoursRow(item) {
   return `
-    <div class="calendar-teacher-hours-row">
-      <span>${escapeHtml(item.teacherName)}</span>
+    <tr>
+      <th scope="row" class="calendar-teacher-hours-teacher">${escapeHtml(item.teacherName)}</th>
+      ${item.weeks.map((week) => renderTeacherHoursCell(week)).join("")}
+      ${renderTeacherHoursCell({
+        totalHoursLabel: item.totalHoursLabel,
+        lessonCount: item.totalLessonCount,
+      }, true)}
+    </tr>
+  `;
+}
+
+function renderTeacherHoursCell(item, isTotal = false) {
+  return `
+    <td class="calendar-teacher-hours-cell${isTotal ? " is-total" : ""}">
       <strong>${escapeHtml(item.totalHoursLabel)}</strong>
       <em>${item.lessonCount} 节</em>
-    </div>
+    </td>
   `;
 }
 

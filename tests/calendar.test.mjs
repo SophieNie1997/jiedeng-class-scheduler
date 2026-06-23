@@ -184,6 +184,81 @@ test("builds teacher duration summary for a date range", () => {
   ]);
 });
 
+test("builds teacher weekly duration table for a month", () => {
+  assert.equal(typeof calendar.buildTeacherWeeklyDurationTable, "function");
+
+  const lessons = [
+    {
+      ...makeCalendarLesson("lynn-week-1", "2026-07-01", "09:00", "10:30"),
+      teacherId: "lynn",
+      teacherName: "Lynn",
+    },
+    {
+      ...makeCalendarLesson("lynn-week-2", "2026-07-08", "18:00", "20:00"),
+      teacherId: "lynn",
+      teacherName: "Lynn",
+    },
+    {
+      ...makeCalendarLesson("tiana-week-2", "2026-07-09", "13:00", "15:00"),
+      teacherId: "tiana",
+      teacherName: "Tiana",
+    },
+    {
+      ...makeCalendarLesson("hidden", "2026-07-02", "08:00", "21:00"),
+      teacherId: "gioia",
+      teacherName: "Gioia",
+      status: "不可用",
+    },
+    {
+      ...makeCalendarLesson("outside", "2026-08-01", "09:00", "12:00"),
+      teacherId: "lynn",
+      teacherName: "Lynn",
+    },
+  ];
+
+  const table = calendar.buildTeacherWeeklyDurationTable(lessons, {
+    weeks: [
+      { label: "第1周", startDate: "2026-07-01", endDate: "2026-07-05" },
+      { label: "第2周", startDate: "2026-07-06", endDate: "2026-07-12" },
+    ],
+    teachers: [
+      { id: "lynn", name: "Lynn" },
+      { id: "tiana", name: "Tiana" },
+      { id: "catherine", name: "Catherine" },
+    ],
+  });
+
+  assert.deepEqual(table.map((item) => [item.teacherName, item.totalLessonCount, item.totalMinutes, item.totalHoursLabel]), [
+    ["Lynn", 2, 210, "3.5 小时"],
+    ["Tiana", 1, 120, "2 小时"],
+    ["Catherine", 0, 0, "0 小时"],
+  ]);
+  assert.deepEqual(
+    table.find((item) => item.teacherName === "Lynn").weeks.map((week) => [
+      week.label,
+      week.lessonCount,
+      week.totalMinutes,
+      week.totalHoursLabel,
+    ]),
+    [
+      ["第1周", 1, 90, "1.5 小时"],
+      ["第2周", 1, 120, "2 小时"],
+    ],
+  );
+  assert.deepEqual(
+    table.find((item) => item.teacherName === "Catherine").weeks.map((week) => [
+      week.label,
+      week.lessonCount,
+      week.totalMinutes,
+      week.totalHoursLabel,
+    ]),
+    [
+      ["第1周", 0, 0, "0 小时"],
+      ["第2周", 0, 0, "0 小时"],
+    ],
+  );
+});
+
 test("builds lesson detail with inferred recurring schedule", () => {
   const lessons = [
     makeLesson("a", "2026-07-07"),

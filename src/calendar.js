@@ -93,11 +93,91 @@ export function buildTeacherDurationSummary(lessons, { startDate, endDate, teach
     );
 }
 
+export function buildTeacherWeeklyDurationTable(lessons, { weeks = [], teachers = [] } = {}) {
+  const normalizedWeeks = Array.isArray(weeks)
+    ? weeks
+        .map((week, index) => ({
+          label: week.label || `第${index + 1}周`,
+          rangeLabel: week.rangeLabel || "",
+          startDate: week.startDate || "",
+          endDate: week.endDate || week.startDate || "",
+        }))
+        .filter((week) => week.startDate && week.endDate)
+    : [];
+  const rowsByTeacher = new Map();
+  const teacherRoster = Array.isArray(teachers) ? teachers : [];
+
+  for (const teacher of teacherRoster) {
+    const teacherId = String(teacher.id || teacher.name || "").trim();
+    const teacherName = String(teacher.name || teacher.id || "").trim();
+    if (!teacherId && !teacherName) {
+      continue;
+    }
+
+    rowsByTeacher.set(teacherId || teacherName, createTeacherWeeklyDurationRow(
+      teacherId || teacherName,
+      teacherName || teacherId,
+      normalizedWeeks,
+    ));
+  }
+
+  for (const lesson of filterCalendarLessons(lessons)) {
+    const durationMinutes = getLessonDurationMinutes(lesson);
+    if (durationMinutes <= 0) {
+      continue;
+    }
+
+    const weekIndex = normalizedWeeks.findIndex((week) => isDateInRange(lesson.date, week.startDate, week.endDate));
+    if (weekIndex < 0) {
+      continue;
+    }
+
+    const teacherId = String(lesson.teacherId || lesson.teacherName || "未填写");
+    const teacherName = lesson.teacherName || lesson.teacherId || "未填写";
+    const row = rowsByTeacher.get(teacherId) || createTeacherWeeklyDurationRow(teacherId, teacherName, normalizedWeeks);
+    row.weeks[weekIndex].lessonCount += 1;
+    row.weeks[weekIndex].totalMinutes += durationMinutes;
+    row.totalLessonCount += 1;
+    row.totalMinutes += durationMinutes;
+    rowsByTeacher.set(teacherId, row);
+  }
+
+  return Array.from(rowsByTeacher.values())
+    .map((row) => ({
+      ...row,
+      totalHoursLabel: formatTotalHours(row.totalMinutes),
+      weeks: row.weeks.map((week) => ({
+        ...week,
+        totalHoursLabel: formatTotalHours(week.totalMinutes),
+      })),
+    }))
+    .sort(
+      (left, right) =>
+        right.totalMinutes - left.totalMinutes ||
+        right.totalLessonCount - left.totalLessonCount ||
+        left.teacherName.localeCompare(right.teacherName, "zh-Hans-CN"),
+    );
+}
+
 const DAYPARTS = [
   { id: "morning", label: "上午", rangeLabel: "12:00 前" },
   { id: "afternoon", label: "下午", rangeLabel: "12:00-18:00" },
   { id: "evening", label: "晚上", rangeLabel: "18:00 后" },
 ];
+
+function createTeacherWeeklyDurationRow(teacherId, teacherName, weeks) {
+  return {
+    teacherId,
+    teacherName,
+    totalLessonCount: 0,
+    totalMinutes: 0,
+    weeks: weeks.map((week) => ({
+      ...week,
+      lessonCount: 0,
+      totalMinutes: 0,
+    })),
+  };
+}
 
 function getCalendarDaypartSegment(segments, startTime) {
   const minutes = parseTimeToMinutes(startTime);

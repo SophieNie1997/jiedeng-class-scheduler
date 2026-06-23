@@ -1579,10 +1579,9 @@ fieldset {
     inset 0 1px 0 rgba(255, 255, 255, 0.72);
 }
 
-.calendar-teacher-hours-head,
-.calendar-teacher-hours-row {
+.calendar-teacher-hours-head {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: 10px;
   align-items: center;
 }
@@ -1616,39 +1615,105 @@ fieldset {
   font-weight: 950;
 }
 
-.calendar-teacher-hours-list {
-  display: grid;
-  gap: 7px;
+.calendar-teacher-hours-scroll {
+  overflow-x: auto;
+  padding-bottom: 2px;
 }
 
-.calendar-teacher-hours-row {
-  border: 1px solid rgba(239, 189, 203, 0.34);
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.58);
-  padding: 9px 10px;
+.calendar-teacher-hours-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: separate;
+  border-spacing: 0 7px;
 }
 
-.calendar-teacher-hours-row span {
-  min-width: 0;
-  overflow: hidden;
-  color: var(--ink);
-  font-size: 14px;
+.calendar-teacher-hours-table th,
+.calendar-teacher-hours-table td {
+  border: 0;
+}
+
+.calendar-teacher-hours-table thead th {
+  padding: 0 10px 5px;
+  color: #7b6571;
+  font-size: 12px;
   font-weight: 950;
-  text-overflow: ellipsis;
+  text-align: center;
   white-space: nowrap;
 }
 
-.calendar-teacher-hours-row strong {
+.calendar-teacher-hours-table thead th:first-child,
+.calendar-teacher-hours-table tbody th {
+  text-align: left;
+}
+
+.teacher-hours-week-label {
+  display: grid;
+  gap: 2px;
+}
+
+.teacher-hours-week-label em {
+  color: var(--muted);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 850;
+}
+
+.teacher-hours-month-total {
+  color: var(--accent) !important;
+}
+
+.calendar-teacher-hours-teacher,
+.calendar-teacher-hours-cell {
+  border-top: 1px solid rgba(239, 189, 203, 0.34) !important;
+  border-bottom: 1px solid rgba(239, 189, 203, 0.34) !important;
+  background: rgba(255, 255, 255, 0.62);
+  padding: 10px 11px;
+}
+
+.calendar-teacher-hours-teacher {
+  border-left: 1px solid rgba(239, 189, 203, 0.34) !important;
+  border-radius: 13px 0 0 13px;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 950;
+  min-width: 124px;
+  position: sticky;
+  left: 0;
+  z-index: 1;
+}
+
+.calendar-teacher-hours-cell {
+  min-width: 104px;
   color: #7b3d56;
+  text-align: center;
+}
+
+.calendar-teacher-hours-cell:last-child {
+  border-right: 1px solid rgba(239, 189, 203, 0.34) !important;
+  border-radius: 0 13px 13px 0;
+}
+
+.calendar-teacher-hours-cell strong,
+.calendar-teacher-hours-cell em {
+  display: block;
+}
+
+.calendar-teacher-hours-cell strong {
   font-size: 14px;
   font-weight: 950;
 }
 
-.calendar-teacher-hours-row em {
+.calendar-teacher-hours-cell em {
+  margin-top: 3px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 11px;
   font-style: normal;
   font-weight: 850;
+}
+
+.calendar-teacher-hours-cell.is-total {
+  background: rgba(222, 245, 237, 0.72);
+  color: var(--accent);
 }
 
 .lesson-row.blue {
