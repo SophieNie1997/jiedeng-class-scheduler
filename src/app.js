@@ -4410,6 +4410,7 @@ function readRequest() {
   const formData = new FormData(form);
   const weekdays = formData.getAll("weekdays").map(Number);
   const campus = String(formData.get("campus"));
+  const startDate = String(formData.get("startDate"));
 
   return {
     studentName: String(formData.get("studentName") || "新学员"),
@@ -4417,11 +4418,11 @@ function readRequest() {
     grade: String(formData.get("grade")),
     deliveryType: deriveDeliveryTypeFromCampus(campus),
     campus,
-    startDate: String(formData.get("startDate")),
+    startDate,
     startTime: String(formData.get("startTime")),
     durationMinutes: Number(formData.get("durationMinutes") || 180),
     sessionCount: Math.max(1, Number(formData.get("sessionCount") || 1)),
-    weekdays: weekdays.length ? weekdays : [1],
+    weekdays: weekdays.length ? weekdays : [getWeekdayValue(startDate)],
   };
 }
 

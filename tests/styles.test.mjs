@@ -102,8 +102,8 @@ test("lesson colors are keyed by teacher and course", () => {
 });
 
 test("calendar assets use cache-busted style and app URLs for teacher hours", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260623-absence-detail-status"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260623-absence-detail-status"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260623-start-date-weekday"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260623-start-date-weekday"), true);
 });
 
 test("calendar defaults to a month overview and drills into a week from lessons", () => {
@@ -430,8 +430,8 @@ test("course permission view can delete courses with confirmation", () => {
 
 test("course permission course deletion is cache-busted in app imports", () => {
   assert.equal(appSource.includes("./customCatalog.js?v=20260623-permission-course-delete"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260623-absence-detail-status"), true);
-  assert.equal(indexSource.includes("./styles.css?v=20260623-absence-detail-status"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260623-start-date-weekday"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260623-start-date-weekday"), true);
 });
 
 test("course permission teacher column leaves room for full teacher names", () => {
@@ -442,7 +442,7 @@ test("course permission teacher column leaves room for full teacher names", () =
 });
 
 test("course permission width update is cache-busted in the stylesheet URL", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260623-absence-detail-status"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260623-start-date-weekday"), true);
 });
 
 test("candidate teachers render as compact avatar groups with expandable detail", () => {
@@ -871,6 +871,14 @@ test("recurring lesson fields use editable session count controls", () => {
   assert.equal(appSource.includes('name="durationMinutes"'), true);
   assert.equal(appSource.includes('name="weekdays"'), true);
   assert.equal(appSource.includes("renderWeekdayCheckboxField"), true);
+});
+
+test("new lesson request defaults empty weekdays to the start date weekday", () => {
+  assert.equal(appSource.includes("weekdays.length ? weekdays : [1]"), false);
+  assert.match(
+    appSource,
+    /function readRequest\(\)[\s\S]*const startDate = String\(formData\.get\("startDate"\)\)[\s\S]*weekdays: weekdays\.length \? weekdays : \[getWeekdayValue\(startDate\)\]/,
+  );
 });
 
 test("app exposes a Supabase sync sign-in panel for shared editing", () => {
