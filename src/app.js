@@ -82,7 +82,7 @@ import {
 import {
   getLessonColor,
   getLessonColorKey,
-} from "./lessonColors.js?v=20260623-daypart-lines";
+} from "./lessonColors.js?v=20260623-daypart-matrix";
 
 const SHIFT_STORAGE_KEY = "jiedeng-teacher-shifts-folder-20260617-shift";
 const COURSE_PERMISSION_STORAGE_KEY = "jiedeng-course-permissions-folder-20260617-shift";
@@ -1155,7 +1155,7 @@ function renderCalendar() {
   calendarNode.innerHTML = `
     ${selectedDetail ? renderLessonDetail(selectedDetail) : ""}
     <div class="calendar-overview">
-      ${overview.map((day) => renderCalendarDayCard(day)).join("")}
+      ${renderCalendarWeekMatrix(overview)}
     </div>
   `;
 }
@@ -1187,39 +1187,72 @@ function renderCalendarMonthWeek(week, visibleLessons, index) {
         <b>${lessonCount} 节</b>
       </div>
       <div class="calendar-month-week-grid">
-        ${overview.map((day) => renderCalendarMonthDay(day)).join("")}
+        ${renderCalendarMonthDayHeads(overview)}
+        ${getCalendarDaypartBlueprints(overview)
+          .map((daypart) => renderCalendarMonthDaypartRow(daypart, overview))
+          .join("")}
       </div>
     </section>
   `;
 }
 
-function renderCalendarMonthDay(day) {
+function getCalendarDaypartBlueprints(overview) {
+  return overview[0]?.segments || [];
+}
+
+function getCalendarDaypartSegment(day, daypart) {
+  return day.segments.find((segment) => segment.id === daypart.id) || {
+    ...daypart,
+    lessonCount: 0,
+    groups: [],
+  };
+}
+
+function renderCalendarMonthDayHeads(days) {
   return `
-    <div class="calendar-month-day ${day.inMonth === false ? "outside-month" : ""}">
-      <span class="calendar-month-day-head">
-        <strong>${escapeHtml(day.label.replace("周", ""))}</strong>
-        <em>${escapeHtml(day.iso.slice(5))}</em>
-      </span>
-      <span class="calendar-month-lesson-list">
-        ${day.segments.map((segment) => renderCalendarMonthDaypart(segment)).join("")}
-      </span>
+    <div class="calendar-month-week-days">
+      <span class="calendar-daypart-axis-spacer" aria-hidden="true"></span>
+      ${days.map((day) => renderCalendarMonthDayHead(day)).join("")}
     </div>
   `;
 }
 
-function renderCalendarMonthDaypart(segment) {
+function renderCalendarMonthDayHead(day) {
+  return `
+    <span class="calendar-month-day-head ${day.inMonth === false ? "outside-month" : ""}">
+      <span>
+        <strong>${escapeHtml(day.label.replace("周", ""))}</strong>
+        <em>${escapeHtml(day.iso.slice(5))}</em>
+      </span>
+      <b>${day.lessonCount} 节</b>
+    </span>
+  `;
+}
+
+function renderCalendarMonthDaypartRow(daypart, days) {
+  const rowLessonCount = days.reduce(
+    (sum, day) => sum + getCalendarDaypartSegment(day, daypart).lessonCount,
+    0,
+  );
+
+  return `
+    <div class="calendar-month-daypart-row calendar-daypart-${daypart.id}">
+      ${renderCalendarDaypartAxis(daypart, rowLessonCount)}
+      ${days.map((day) => renderCalendarMonthDaypartCell(day, daypart)).join("")}
+    </div>
+  `;
+}
+
+function renderCalendarMonthDaypartCell(day, daypart) {
+  const segment = getCalendarDaypartSegment(day, daypart);
   const lessons = segment.groups.flatMap((group) => group.lessons);
   const isEmpty = lessons.length === 0;
 
   return `
-    <span class="calendar-month-daypart calendar-daypart-${segment.id} ${isEmpty ? "empty" : ""}">
-      <span class="calendar-month-daypart-head">
-        <strong>${escapeHtml(segment.label)}</strong>
-        <em>${isEmpty ? "空" : `${lessons.length} 节`}</em>
-      </span>
+    <span class="calendar-month-daypart-cell ${day.inMonth === false ? "outside-month" : ""} ${isEmpty ? "empty" : ""}">
       ${
         isEmpty
-          ? ""
+          ? `<span class="calendar-daypart-empty-label">空</span>`
           : `<span class="calendar-month-daypart-lessons">${lessons.map((lesson) => renderCalendarMonthLessonChip(lesson)).join("")}</span>`
       }
     </span>
@@ -1246,36 +1279,65 @@ function renderCalendarMonthLessonChip(lesson) {
   `;
 }
 
-function renderCalendarDayCard(day) {
+function renderCalendarWeekMatrix(days) {
   return `
-    <article class="calendar-day-card">
-      <span class="calendar-day-top">
-        <span>
-          <strong>${escapeHtml(day.label)}</strong>
-          <em>${escapeHtml(day.iso.slice(5))}</em>
-        </span>
-        <b>${day.lessonCount} 节</b>
-      </span>
-      <span class="calendar-day-content">${day.segments.map((segment) => renderCalendarDaypart(segment)).join("")}</span>
-    </article>
+    <div class="calendar-week-matrix">
+      <div class="calendar-week-days">
+        <span class="calendar-daypart-axis-spacer" aria-hidden="true"></span>
+        ${days.map((day) => renderCalendarWeekDayHead(day)).join("")}
+      </div>
+      ${getCalendarDaypartBlueprints(days)
+        .map((daypart) => renderCalendarWeekDaypartRow(daypart, days))
+        .join("")}
+    </div>
   `;
 }
 
-function renderCalendarDaypart(segment) {
+function renderCalendarWeekDayHead(day) {
+  return `
+    <span class="calendar-week-day-head">
+      <span>
+        <strong>${escapeHtml(day.label)}</strong>
+        <em>${escapeHtml(day.iso.slice(5))}</em>
+      </span>
+      <b>${day.lessonCount} 节</b>
+    </span>
+  `;
+}
+
+function renderCalendarWeekDaypartRow(daypart, days) {
+  const rowLessonCount = days.reduce(
+    (sum, day) => sum + getCalendarDaypartSegment(day, daypart).lessonCount,
+    0,
+  );
+
+  return `
+    <div class="calendar-week-daypart-row calendar-daypart-${daypart.id}">
+      ${renderCalendarDaypartAxis(daypart, rowLessonCount)}
+      ${days.map((day) => renderCalendarWeekDaypartCell(day, daypart)).join("")}
+    </div>
+  `;
+}
+
+function renderCalendarDaypartAxis(daypart, lessonCount) {
+  return `
+    <span class="calendar-daypart-axis">
+      <strong>${escapeHtml(daypart.label)}</strong>
+      <em>${escapeHtml(daypart.rangeLabel)}</em>
+      <b>${lessonCount === 0 ? "空" : `${lessonCount} 节`}</b>
+    </span>
+  `;
+}
+
+function renderCalendarWeekDaypartCell(day, daypart) {
+  const segment = getCalendarDaypartSegment(day, daypart);
   const isEmpty = segment.lessonCount === 0;
 
   return `
-    <span class="calendar-daypart calendar-daypart-${segment.id} ${isEmpty ? "empty" : ""}">
-      <span class="calendar-daypart-head">
-        <span>
-          <strong>${escapeHtml(segment.label)}</strong>
-          <em>${escapeHtml(segment.rangeLabel)}</em>
-        </span>
-        <b>${isEmpty ? "空" : `${segment.lessonCount} 节`}</b>
-      </span>
+    <span class="calendar-week-daypart-cell ${isEmpty ? "empty" : ""}">
       ${
         isEmpty
-          ? `<span class="calendar-daypart-empty">这段暂无课程</span>`
+          ? `<span class="calendar-daypart-empty-label">空</span>`
           : segment.groups.map((group) => renderCalendarTimeGroup(group)).join("")
       }
     </span>
