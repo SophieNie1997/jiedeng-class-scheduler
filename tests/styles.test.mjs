@@ -101,9 +101,9 @@ test("lesson colors are keyed by teacher and course", () => {
   assert.match(colorKeyFunction, /getLessonCourseKey\(lesson\)/);
 });
 
-test("calendar assets use cache-busted style and app URLs for month cards", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260623-month-cards"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260623-month-cards"), true);
+test("calendar assets use cache-busted style and app URLs for course permission delete", () => {
+  assert.equal(indexSource.includes("./styles.css?v=20260623-permission-course-delete"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260623-permission-course-delete"), true);
 });
 
 test("calendar defaults to a month overview and drills into a week from lessons", () => {
@@ -357,6 +357,26 @@ test("course permission view can delete any teacher with the heart confirmation"
   assert.ok(css.includes(".permission-toggle"));
 });
 
+test("course permission view can delete courses with confirmation", () => {
+  assert.equal(appSource.includes("openPermissionCourseDeleteConfirm"), true);
+  assert.equal(appSource.includes("deletePermissionCourse"), true);
+  assert.equal(appSource.includes("data-permission-delete-course"), true);
+  assert.equal(appSource.includes("permission-course-head-cell"), true);
+  assert.equal(appSource.includes("hideBaseCourse"), true);
+  assert.equal(appSource.includes("removeCustomCourse"), true);
+  assert.equal(appSource.includes("确认删除课程"), true);
+  assert.equal(appSource.includes("历史课程和已排课程不会被自动删除"), true);
+  assert.ok(css.includes(".permission-course-head-cell"));
+  assert.ok(css.includes(".permission-delete-course-button"));
+  assert.equal(getRuleValue(".permission-delete-course-button", "width"), "26px");
+});
+
+test("course permission course deletion is cache-busted in app imports", () => {
+  assert.equal(appSource.includes("./customCatalog.js?v=20260623-permission-course-delete"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260623-permission-course-delete"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260623-permission-course-delete"), true);
+});
+
 test("course permission teacher column leaves room for full teacher names", () => {
   assert.equal(getRuleValue(".permission-table", "min-width"), "1260px");
   assert.equal(getRuleValue(".permission-table th:first-child,\n.permission-table td:first-child", "width"), "168px");
@@ -365,7 +385,7 @@ test("course permission teacher column leaves room for full teacher names", () =
 });
 
 test("course permission width update is cache-busted in the stylesheet URL", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260623-month-cards"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260623-permission-course-delete"), true);
 });
 
 test("candidate teachers render as compact avatar groups with expandable detail", () => {

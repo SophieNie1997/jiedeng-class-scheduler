@@ -1,14 +1,16 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
-import {
+import * as customCatalog from "../src/customCatalog.js";
+
+const {
   addCustomCourse,
   addCustomTeacher,
   hideBaseTeacher,
   mergeCatalog,
   normalizeCustomCatalog,
   removeCustomTeacher,
-} from "../src/customCatalog.js";
+} = customCatalog;
 
 const baseTeachers = [
   {
@@ -67,6 +69,7 @@ test("custom catalog keeps hidden imported teacher ids without removing shift ro
 
   assert.deepEqual(catalog.removedTeacherIds, ["hanna"]);
   assert.equal("removedCourses" in catalog, false);
+  assert.deepEqual(catalog.removedCourseNames, []);
   assert.deepEqual(
     defaultMerged.teachers.map((teacher) => teacher.name),
     ["Hanna", "Mia"],
@@ -76,6 +79,32 @@ test("custom catalog keeps hidden imported teacher ids without removing shift ro
     ["Mia"],
   );
   assert.deepEqual(defaultMerged.courses, ["英语陪伴", "AI 财商"]);
+});
+
+test("custom catalog can hide imported courses from permission-facing merged catalogs", () => {
+  assert.equal(typeof customCatalog.hideBaseCourse, "function");
+
+  const catalog = customCatalog.hideBaseCourse({ courses: ["AI 财商"] }, "英语陪伴");
+  const defaultMerged = mergeCatalog(baseTeachers, ["英语陪伴"], catalog);
+  const permissionMerged = mergeCatalog(baseTeachers, ["英语陪伴"], catalog, { excludeRemovedCourses: true });
+
+  assert.deepEqual(catalog.removedCourseNames, ["英语陪伴"]);
+  assert.deepEqual(defaultMerged.courses, ["英语陪伴", "AI 财商"]);
+  assert.deepEqual(permissionMerged.courses, ["AI 财商"]);
+});
+
+test("custom catalog removes a manually added course and clears matching hidden course names", () => {
+  assert.equal(typeof customCatalog.removeCustomCourse, "function");
+
+  const catalog = normalizeCustomCatalog({
+    courses: ["AI 财商", "写作工作坊"],
+    removedCourseNames: ["AI 财商", "英语陪伴"],
+  });
+
+  const nextCatalog = customCatalog.removeCustomCourse(catalog, "AI 财商");
+
+  assert.deepEqual(nextCatalog.courses, ["写作工作坊"]);
+  assert.deepEqual(nextCatalog.removedCourseNames, ["英语陪伴"]);
 });
 
 test("custom catalog removes a manually added teacher by id", () => {

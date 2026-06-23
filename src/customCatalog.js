@@ -8,11 +8,13 @@ export function normalizeCustomCatalog(rawCatalog) {
     : [];
   const courses = normalizeCourseList(Array.isArray(rawCatalog?.courses) ? rawCatalog.courses : []);
   const removedTeacherIds = normalizeIdList(rawCatalog?.removedTeacherIds);
+  const removedCourseNames = normalizeCourseNameList(rawCatalog?.removedCourseNames);
 
   return {
     teachers: dedupeTeachers(teachers),
     courses,
     removedTeacherIds,
+    removedCourseNames,
   };
 }
 
@@ -76,13 +78,43 @@ export function addCustomCourse(rawCatalog, courseName) {
 
   return {
     ...catalog,
+    removedCourseNames: catalog.removedCourseNames.filter((course) => !normalizedCourses.includes(course)),
     courses: normalizeCourseList([...catalog.courses, ...normalizedCourses]),
+  };
+}
+
+export function removeCustomCourse(rawCatalog, courseName) {
+  const catalog = normalizeCustomCatalog(rawCatalog);
+  const normalizedCourses = normalizeCourseList([String(courseName || "").trim()]);
+  if (!normalizedCourses.length) {
+    return catalog;
+  }
+
+  const course = normalizedCourses[0];
+  return {
+    ...catalog,
+    courses: catalog.courses.filter((item) => item !== course),
+    removedCourseNames: catalog.removedCourseNames.filter((item) => item !== course),
+  };
+}
+
+export function hideBaseCourse(rawCatalog, courseName) {
+  const catalog = normalizeCustomCatalog(rawCatalog);
+  const normalizedCourses = normalizeCourseList([String(courseName || "").trim()]);
+  if (!normalizedCourses.length) {
+    return catalog;
+  }
+
+  return {
+    ...catalog,
+    removedCourseNames: normalizeCourseList([...catalog.removedCourseNames, ...normalizedCourses]),
   };
 }
 
 export function mergeCatalog(baseTeachers, baseCourses, rawCatalog, options = {}) {
   const catalog = normalizeCustomCatalog(rawCatalog);
   const removedTeacherIds = options.excludeRemovedTeachers ? new Set(catalog.removedTeacherIds) : new Set();
+  const removedCourseNames = options.excludeRemovedCourses ? new Set(catalog.removedCourseNames) : new Set();
   const baseTeacherIds = new Set(baseTeachers.map((teacher) => teacher.id));
   const baseTeacherNames = new Set(baseTeachers.map((teacher) => teacher.name.toLowerCase()));
   const activeBaseTeachers = baseTeachers.filter((teacher) => !removedTeacherIds.has(teacher.id));
@@ -95,7 +127,7 @@ export function mergeCatalog(baseTeachers, baseCourses, rawCatalog, options = {}
 
   return {
     teachers: [...activeBaseTeachers, ...customTeachers],
-    courses: normalizeCourseList([...baseCourses, ...catalog.courses]),
+    courses: normalizeCourseList([...baseCourses, ...catalog.courses]).filter((course) => !removedCourseNames.has(course)),
   };
 }
 
@@ -161,6 +193,10 @@ function dedupeTeachers(teachers) {
 
 function normalizeIdList(rawIds) {
   return dedupeIds(Array.isArray(rawIds) ? rawIds : []);
+}
+
+function normalizeCourseNameList(rawCourses) {
+  return normalizeCourseList(Array.isArray(rawCourses) ? rawCourses : []);
 }
 
 function dedupeIds(ids) {

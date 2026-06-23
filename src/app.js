@@ -43,11 +43,13 @@ import {
 import {
   addCustomCourse,
   addCustomTeacher,
+  hideBaseCourse,
   hideBaseTeacher,
   mergeCatalog,
   normalizeCustomCatalog,
+  removeCustomCourse,
   removeCustomTeacher,
-} from "./customCatalog.js?v=20260623-permission-any-teacher-delete";
+} from "./customCatalog.js?v=20260623-permission-course-delete";
 import {
   applyLessonEdits,
   deleteLessonEdit,
@@ -910,6 +912,12 @@ shiftEditorNode.addEventListener("change", (event) => {
 });
 
 permissionGridNode.addEventListener("click", (event) => {
+  const courseDeleteButton = event.target.closest("[data-permission-delete-course]");
+  if (courseDeleteButton) {
+    openPermissionCourseDeleteConfirm(courseDeleteButton.dataset.permissionDeleteCourse);
+    return;
+  }
+
   const deleteButton = event.target.closest("[data-permission-delete-teacher]");
   if (!deleteButton) {
     return;
@@ -2058,6 +2066,14 @@ function openPermissionTeacherDeleteConfirm(teacherId) {
   renderStudentDeleteDialog();
 }
 
+function openPermissionCourseDeleteConfirm(courseName) {
+  state.pendingConfirm = {
+    type: "permission-course-delete",
+    courseName: courseName || "",
+  };
+  renderStudentDeleteDialog();
+}
+
 function closeStudentDeleteConfirm() {
   state.pendingConfirm = null;
   renderStudentDeleteDialog();
@@ -2211,6 +2227,21 @@ function buildPendingConfirmDialog() {
     };
   }
 
+  if (pending.type === "permission-course-delete") {
+    const course = getCourses().find((item) => item === pending.courseName);
+    if (!course) {
+      return null;
+    }
+
+    return {
+      kicker: "小心心提醒",
+      title: `确定要删除 ${course} 吗？`,
+      message:
+        "确认后会把这门课从课程权限和候选匹配里删除，并同步到网站上。历史课程和已排课程不会被自动删除，请确认不是手滑哦。",
+      actions: [{ label: "确认删除课程", action: "permission-course-delete", className: "student-delete-confirm" }],
+    };
+  }
+
   return null;
 }
 
@@ -2242,6 +2273,10 @@ function runPendingConfirmAction(action, scope) {
 
   if (action === "permission-teacher-delete") {
     deletePermissionTeacher(pending.teacherId);
+  }
+
+  if (action === "permission-course-delete") {
+    deletePermissionCourse(pending.courseName);
   }
 }
 
@@ -2895,7 +2930,7 @@ function renderCoursePermissions() {
         <thead>
           <tr>
             <th scope="col">老师</th>
-            ${courseList.map((course) => `<th scope="col">${escapeHtml(course)}</th>`).join("")}
+            ${courseList.map((course) => renderPermissionCourseHead(course)).join("")}
             <th scope="col">当前可上</th>
           </tr>
         </thead>
@@ -2904,6 +2939,25 @@ function renderCoursePermissions() {
         </tbody>
       </table>
     </div>
+  `;
+}
+
+function renderPermissionCourseHead(course) {
+  return `
+    <th scope="col">
+      <span class="permission-course-head-cell">
+        <span>${escapeHtml(course)}</span>
+        <button
+          class="permission-delete-course-button"
+          data-permission-delete-course="${escapeAttribute(course)}"
+          type="button"
+          aria-label="删除 ${escapeAttribute(course)}"
+          title="删除这门课程"
+        >
+          ${renderTrashIcon()}
+        </button>
+      </span>
+    </th>
   `;
 }
 
@@ -3021,6 +3075,41 @@ function deletePermissionTeacher(teacherId) {
 
 function isCustomCatalogTeacher(teacherId) {
   return normalizeCustomCatalog(state.customCatalog).teachers.some((teacher) => teacher.id === teacherId);
+}
+
+function deletePermissionCourse(courseName) {
+  const course = String(courseName || "").trim();
+  if (!course) {
+    return;
+  }
+
+  if (rejectReadOnlySave()) {
+    return;
+  }
+
+  let nextCatalog = state.customCatalog;
+  if (isCustomCatalogCourse(course)) {
+    nextCatalog = removeCustomCourse(nextCatalog, course);
+  }
+
+  if (isBaseCatalogCourse(course)) {
+    nextCatalog = hideBaseCourse(nextCatalog, course);
+  }
+
+  state.customCatalog = nextCatalog;
+  saveCustomCatalog(state.customCatalog);
+  refreshPlannerCourseOptions();
+  state.coursePermissions = normalizeCoursePermissions(state.coursePermissions, getCandidateTeacherIds(), getCourses());
+  saveCoursePermissions(state.coursePermissions);
+  render();
+}
+
+function isCustomCatalogCourse(courseName) {
+  return normalizeCustomCatalog(state.customCatalog).courses.includes(courseName);
+}
+
+function isBaseCatalogCourse(courseName) {
+  return mergeCatalog(baseCandidateTeachers, baseCourses, {}).courses.includes(courseName);
 }
 
 function addCourseFromPermissionForm() {
@@ -4021,7 +4110,7 @@ function getCandidateTeachers() {
 }
 
 function getCourses() {
-  return mergeCatalog(baseCandidateTeachers, baseCourses, state.customCatalog).courses;
+  return mergeCatalog(baseCandidateTeachers, baseCourses, state.customCatalog, { excludeRemovedCourses: true }).courses;
 }
 
 function getShiftRoster() {

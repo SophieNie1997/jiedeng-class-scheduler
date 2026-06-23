@@ -3348,6 +3348,19 @@ fieldset {
   white-space: nowrap;
 }
 
+.permission-course-head-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.permission-course-head-cell > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .permission-delete-teacher-button {
   display: inline-grid;
   flex: 0 0 auto;
@@ -3366,7 +3379,26 @@ fieldset {
     inset 0 1px 0 rgba(255, 255, 255, 0.82);
 }
 
-.permission-delete-teacher-button:hover {
+.permission-delete-course-button {
+  display: inline-grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border: 1px solid rgba(193, 66, 72, 0.18);
+  border-radius: 999px;
+  background:
+    linear-gradient(180deg, rgba(255, 250, 252, 0.98), rgba(255, 238, 245, 0.72)),
+    rgba(255, 255, 255, 0.72);
+  color: #bd4d62;
+  cursor: pointer;
+  box-shadow:
+    0 8px 18px rgba(215, 125, 151, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.82);
+}
+
+.permission-delete-teacher-button:hover,
+.permission-delete-course-button:hover {
   transform: translateY(-1px);
   border-color: rgba(193, 66, 72, 0.28);
   background:
@@ -3374,7 +3406,8 @@ fieldset {
     rgba(255, 255, 255, 0.78);
 }
 
-.permission-delete-teacher-button svg {
+.permission-delete-teacher-button svg,
+.permission-delete-course-button svg {
   width: 15px;
   height: 15px;
   stroke: currentColor;
