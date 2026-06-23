@@ -20,7 +20,7 @@ import {
   buildWeekOverview,
   filterCalendarLessons,
   isCalendarVisibleLesson,
-} from "./calendar.js?v=20260623-student-absence";
+} from "./calendar.js?v=20260623-absence-teacher-name";
 import {
   buildLessonsForTeacher,
   expandRecurringLessons,
@@ -64,7 +64,7 @@ import {
   restoreDeletedLessonEdits,
   restoreAbsenceLessonEdit,
   setLessonEdit,
-} from "./lessonEdits.js?v=20260623-student-absence";
+} from "./lessonEdits.js?v=20260623-absence-teacher-name";
 import {
   alignExplicitSeriesDates,
   deleteLessonsInScope,
@@ -1647,7 +1647,7 @@ function renderAbsenceMarkers(markers) {
 }
 
 function formatAbsenceMarkerText(lesson) {
-  return [lesson.studentName, lesson.course].filter(Boolean).join(" · ") || lesson.absenceReason || "待补课";
+  return [lesson.teacherName, lesson.studentName, lesson.course].filter(Boolean).join(" · ") || lesson.absenceReason || "待补课";
 }
 
 function renderCalendarTimeGroup(group) {

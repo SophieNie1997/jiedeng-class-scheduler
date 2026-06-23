@@ -1,4 +1,4 @@
-import { isAbsenceLesson } from "./lessonEdits.js?v=20260623-student-absence";
+import { isAbsenceLesson } from "./lessonEdits.js?v=20260623-absence-teacher-name";
 
 export function isCalendarVisibleLesson(lesson) {
   return lesson.status !== "不可用";
