@@ -4,6 +4,7 @@ import assert from "node:assert/strict";
 import {
   addCustomCourse,
   addCustomTeacher,
+  hideBaseTeacher,
   mergeCatalog,
   normalizeCustomCatalog,
   removeCustomTeacher,
@@ -53,7 +54,7 @@ test("custom catalog merges teachers and courses without duplicating base entrie
   assert.deepEqual(merged.courses, ["英语陪伴", "AI 财商"]);
 });
 
-test("custom catalog ignores retired removal metadata from older local storage", () => {
+test("custom catalog keeps hidden imported teacher ids without removing shift roster by default", () => {
   const catalog = normalizeCustomCatalog({
     removedTeacherIds: ["hanna"],
     removedCourses: ["英语陪伴"],
@@ -61,15 +62,20 @@ test("custom catalog ignores retired removal metadata from older local storage",
     courses: ["AI 财商"],
   });
 
-  const merged = mergeCatalog(baseTeachers, ["英语陪伴"], catalog);
+  const defaultMerged = mergeCatalog(baseTeachers, ["英语陪伴"], catalog);
+  const permissionMerged = mergeCatalog(baseTeachers, ["英语陪伴"], catalog, { excludeRemovedTeachers: true });
 
-  assert.equal("removedTeacherIds" in catalog, false);
+  assert.deepEqual(catalog.removedTeacherIds, ["hanna"]);
   assert.equal("removedCourses" in catalog, false);
   assert.deepEqual(
-    merged.teachers.map((teacher) => teacher.name),
+    defaultMerged.teachers.map((teacher) => teacher.name),
     ["Hanna", "Mia"],
   );
-  assert.deepEqual(merged.courses, ["英语陪伴", "AI 财商"]);
+  assert.deepEqual(
+    permissionMerged.teachers.map((teacher) => teacher.name),
+    ["Mia"],
+  );
+  assert.deepEqual(defaultMerged.courses, ["英语陪伴", "AI 财商"]);
 });
 
 test("custom catalog removes a manually added teacher by id", () => {
@@ -86,4 +92,12 @@ test("custom catalog removes a manually added teacher by id", () => {
     nextCatalog.teachers.map((teacher) => teacher.name),
     ["Nina"],
   );
+});
+
+test("custom catalog can hide an imported teacher by id", () => {
+  const catalog = hideBaseTeacher({}, "hanna");
+  const merged = mergeCatalog(baseTeachers, ["英语陪伴"], catalog, { excludeRemovedTeachers: true });
+
+  assert.deepEqual(catalog.removedTeacherIds, ["hanna"]);
+  assert.deepEqual(merged.teachers, []);
 });

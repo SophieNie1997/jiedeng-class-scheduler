@@ -43,10 +43,11 @@ import {
 import {
   addCustomCourse,
   addCustomTeacher,
+  hideBaseTeacher,
   mergeCatalog,
   normalizeCustomCatalog,
   removeCustomTeacher,
-} from "./customCatalog.js?v=20260623-permission-teacher-delete";
+} from "./customCatalog.js?v=20260623-permission-any-teacher-delete";
 import {
   applyLessonEdits,
   deleteLessonEdit,
@@ -2130,7 +2131,7 @@ function buildPendingConfirmDialog() {
 
   if (pending.type === "permission-teacher-delete") {
     const teacher = getCandidateTeachers().find((item) => item.id === pending.teacherId);
-    if (!teacher || !isCustomPermissionTeacher(teacher.id)) {
+    if (!teacher) {
       return null;
     }
 
@@ -2138,7 +2139,7 @@ function buildPendingConfirmDialog() {
       kicker: "小心心提醒",
       title: `确定要删除 ${teacher.name} 吗？`,
       message:
-        "确认后会把这位新增老师从课程权限表里删除，并同步到网站上。历史课程不会被自动删除，请确认不是手滑哦。",
+        "确认后会把这位老师从课程权限和候选匹配里删除，并同步到网站上。历史课程和老师排班不会被自动删除，请确认不是手滑哦。",
       actions: [{ label: "确认删除老师", action: "permission-teacher-delete", className: "student-delete-confirm" }],
     };
   }
@@ -2842,38 +2843,27 @@ function renderCoursePermissions() {
 function renderPermissionRow(teacher, permissions) {
   const allowedCourses = permissions[teacher.id] || [];
   const allowedSet = new Set(allowedCourses);
-  const canDeleteTeacher = isCustomPermissionTeacher(teacher.id);
 
   return `
     <tr>
       <th scope="row">
         <span class="permission-teacher-name-cell">
           <span>${escapeHtml(teacher.name)}</span>
-          ${
-            canDeleteTeacher
-              ? `
-                <button
-                  class="permission-delete-teacher-button"
-                  data-permission-delete-teacher="${escapeAttribute(teacher.id)}"
-                  type="button"
-                  aria-label="删除 ${escapeAttribute(teacher.name)}"
-                  title="删除这位新增老师"
-                >
-                  ${renderTrashIcon()}
-                </button>
-              `
-              : ""
-          }
+          <button
+            class="permission-delete-teacher-button"
+            data-permission-delete-teacher="${escapeAttribute(teacher.id)}"
+            type="button"
+            aria-label="删除 ${escapeAttribute(teacher.name)}"
+            title="删除这位老师"
+          >
+            ${renderTrashIcon()}
+          </button>
         </span>
       </th>
       ${getCourses().map((course) => renderPermissionToggle(teacher, course, allowedSet.has(course))).join("")}
       <td class="permission-summary">${escapeHtml(allowedCourses.join("、") || "未开放")}</td>
     </tr>
   `;
-}
-
-function isCustomPermissionTeacher(teacherId) {
-  return normalizeCustomCatalog(state.customCatalog).teachers.some((teacher) => teacher.id === teacherId);
 }
 
 function renderPermissionToggle(teacher, course, isChecked) {
@@ -2942,7 +2932,7 @@ function addTeacherFromPermissionForm() {
 
 function deletePermissionTeacher(teacherId) {
   const id = String(teacherId || "").trim();
-  if (!id || !isCustomPermissionTeacher(id)) {
+  if (!id) {
     return;
   }
 
@@ -2950,7 +2940,9 @@ function deletePermissionTeacher(teacherId) {
     return;
   }
 
-  state.customCatalog = removeCustomTeacher(state.customCatalog, id);
+  state.customCatalog = isCustomCatalogTeacher(id)
+    ? removeCustomTeacher(state.customCatalog, id)
+    : hideBaseTeacher(state.customCatalog, id);
   const nextPermissions = { ...state.coursePermissions };
   delete nextPermissions[id];
   state.coursePermissions = normalizeCoursePermissions(nextPermissions, getCandidateTeacherIds(), getCourses());
@@ -2958,6 +2950,10 @@ function deletePermissionTeacher(teacherId) {
   saveCoursePermissions(state.coursePermissions);
   refreshPlannerCourseOptions();
   render();
+}
+
+function isCustomCatalogTeacher(teacherId) {
+  return normalizeCustomCatalog(state.customCatalog).teachers.some((teacher) => teacher.id === teacherId);
 }
 
 function addCourseFromPermissionForm() {
@@ -3954,7 +3950,7 @@ function getWeekdayValue(dateString) {
 }
 
 function getCandidateTeachers() {
-  return mergeCatalog(baseCandidateTeachers, baseCourses, state.customCatalog).teachers;
+  return mergeCatalog(baseCandidateTeachers, baseCourses, state.customCatalog, { excludeRemovedTeachers: true }).teachers;
 }
 
 function getCourses() {
