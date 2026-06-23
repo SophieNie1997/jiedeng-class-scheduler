@@ -1,22 +1,37 @@
+import { isAbsenceLesson } from "./lessonEdits.js?v=20260623-student-absence";
+
 export function isCalendarVisibleLesson(lesson) {
   return lesson.status !== "不可用";
 }
 
+export function isNormalCalendarLesson(lesson) {
+  return isCalendarVisibleLesson(lesson) && !isAbsenceLesson(lesson);
+}
+
 export function filterCalendarLessons(lessons) {
-  return lessons.filter(isCalendarVisibleLesson);
+  return lessons.filter(isNormalCalendarLesson);
+}
+
+export function filterCalendarAbsenceLessons(lessons) {
+  return lessons.filter((lesson) => isCalendarVisibleLesson(lesson) && isAbsenceLesson(lesson));
 }
 
 export function buildWeekOverview(weekDates, lessons) {
   const visibleLessons = filterCalendarLessons(lessons);
+  const absenceLessons = filterCalendarAbsenceLessons(lessons);
 
   return weekDates.map((day) => {
     const dayLessons = visibleLessons
+      .filter((lesson) => lesson.date === day.iso)
+      .sort(compareCalendarLessons);
+    const dayAbsenceLessons = absenceLessons
       .filter((lesson) => lesson.date === day.iso)
       .sort(compareCalendarLessons);
     const segments = DAYPARTS.map((daypart) => ({
       ...daypart,
       lessonCount: 0,
       groups: [],
+      absenceMarkers: [],
     }));
 
     for (const lesson of dayLessons) {
@@ -31,9 +46,15 @@ export function buildWeekOverview(weekDates, lessons) {
       segment.lessonCount += 1;
     }
 
+    for (const lesson of dayAbsenceLessons) {
+      const segment = getCalendarDaypartSegment(segments, lesson.startTime);
+      segment.absenceMarkers.push(lesson);
+    }
+
     return {
       ...day,
       lessonCount: dayLessons.length,
+      absenceCount: dayAbsenceLessons.length,
       groups: segments.flatMap((segment) => segment.groups),
       segments,
     };

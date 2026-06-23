@@ -1,3 +1,7 @@
+export const ABSENCE_STATUS = "请假";
+export const ABSENCE_MAKEUP_PENDING = "待补课";
+export const ABSENCE_MAKEUP_DONE = "已补课";
+
 export function normalizeLessonEdits(rawEdits) {
   const updates = rawEdits?.updates && typeof rawEdits.updates === "object" && !Array.isArray(rawEdits.updates)
     ? { ...rawEdits.updates }
@@ -74,6 +78,63 @@ export function restoreDeletedLessonEdits(rawEdits) {
     updates: edits.updates,
     deletedIds: [],
   };
+}
+
+export function isAbsenceLesson(lesson) {
+  return lesson?.status === ABSENCE_STATUS;
+}
+
+export function isPendingMakeupLesson(lesson) {
+  return isAbsenceLesson(lesson) && (lesson.absenceStatus || ABSENCE_MAKEUP_PENDING) === ABSENCE_MAKEUP_PENDING;
+}
+
+export function markLessonAbsenceEdit(rawEdits, lessonId, {
+  reason = "生病",
+  note = "",
+  markedAt = new Date().toISOString(),
+} = {}) {
+  const edits = normalizeLessonEdits(rawEdits);
+  const id = String(lessonId);
+  const current = edits.updates[id] || {};
+
+  return setLessonEdit(edits, id, {
+    ...current,
+    status: ABSENCE_STATUS,
+    absenceStatus: ABSENCE_MAKEUP_PENDING,
+    absenceReason: reason || "生病",
+    absenceNote: note || "",
+    absenceMarkedAt: markedAt,
+  });
+}
+
+export function restoreAbsenceLessonEdit(rawEdits, lessonId) {
+  const edits = normalizeLessonEdits(rawEdits);
+  const id = String(lessonId);
+  const current = edits.updates[id] || {};
+  const {
+    absenceStatus,
+    absenceReason,
+    absenceNote,
+    absenceMarkedAt,
+    ...rest
+  } = current;
+
+  return setLessonEdit(edits, id, {
+    ...rest,
+    status: "已编辑",
+  });
+}
+
+export function completeAbsenceMakeupEdit(rawEdits, lessonId) {
+  const edits = normalizeLessonEdits(rawEdits);
+  const id = String(lessonId);
+  const current = edits.updates[id] || {};
+
+  return setLessonEdit(edits, id, {
+    ...current,
+    status: ABSENCE_STATUS,
+    absenceStatus: ABSENCE_MAKEUP_DONE,
+  });
 }
 
 function compactChanges(changes) {

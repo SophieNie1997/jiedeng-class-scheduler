@@ -19,7 +19,8 @@ import {
   buildTeacherWeeklyDurationTable,
   buildWeekOverview,
   filterCalendarLessons,
-} from "./calendar.js?v=20260623-hours-active-teachers";
+  isCalendarVisibleLesson,
+} from "./calendar.js?v=20260623-student-absence";
 import {
   buildLessonsForTeacher,
   expandRecurringLessons,
@@ -54,11 +55,16 @@ import {
 } from "./customCatalog.js?v=20260623-permission-course-delete";
 import {
   applyLessonEdits,
+  completeAbsenceMakeupEdit,
   deleteLessonEdit,
+  isAbsenceLesson,
+  isPendingMakeupLesson,
+  markLessonAbsenceEdit,
   normalizeLessonEdits,
   restoreDeletedLessonEdits,
+  restoreAbsenceLessonEdit,
   setLessonEdit,
-} from "./lessonEdits.js?v=20260616-restore-deleted";
+} from "./lessonEdits.js?v=20260623-student-absence";
 import {
   alignExplicitSeriesDates,
   deleteLessonsInScope,
@@ -150,6 +156,7 @@ const state = {
   calendarViewMode: "month",
   calendarMonthAnchor: getTodayIsoDate(),
   showTeacherHoursPanel: false,
+  showPendingMakeupPanel: false,
 };
 
 state.coursePermissions = loadCoursePermissions();
@@ -301,6 +308,7 @@ app.innerHTML = `
                 <button class="calendar-view-button" data-calendar-view-mode="week" type="button">周视图</button>
               </div>
               <button id="toggle-teacher-hours" class="teacher-hours-button" type="button">课时统计</button>
+              <button id="toggle-makeup-panel" class="teacher-hours-button makeup-panel-button" type="button">待补课</button>
               <button id="add-calendar-lesson" class="add-lesson-button" type="button">新增课程</button>
               <label>
                 <span id="calendar-date-label">月份定位</span>
@@ -435,6 +443,7 @@ const resetPermissionsButton = document.querySelector("#reset-permissions");
 const permissionAddForm = document.querySelector("#permission-add-form");
 const addCalendarLessonButton = document.querySelector("#add-calendar-lesson");
 const toggleTeacherHoursButton = document.querySelector("#toggle-teacher-hours");
+const toggleMakeupPanelButton = document.querySelector("#toggle-makeup-panel");
 const tabButtons = document.querySelectorAll("[data-view-target]");
 const syncPanelNode = document.querySelector("#sync-panel");
 const studentDeleteDialogNode = document.querySelector("#student-delete-dialog");
@@ -501,6 +510,11 @@ calendarViewModeButtons.forEach((button) => {
 
 toggleTeacherHoursButton.addEventListener("click", () => {
   state.showTeacherHoursPanel = !state.showTeacherHoursPanel;
+  renderCalendar();
+});
+
+toggleMakeupPanelButton.addEventListener("click", () => {
+  state.showPendingMakeupPanel = !state.showPendingMakeupPanel;
   renderCalendar();
 });
 
@@ -610,6 +624,22 @@ studentOverviewNode.addEventListener("focusout", (event) => {
 });
 
 calendarNode.addEventListener("click", (event) => {
+  const makeupButton = event.target.closest("[data-makeup-action]");
+  if (makeupButton) {
+    const lessonId = makeupButton.dataset.makeupLessonId || "";
+    const action = makeupButton.dataset.makeupAction || "";
+    if (action === "view") {
+      openLessonDetailById(lessonId);
+    }
+    if (action === "restore") {
+      restoreAbsenceForLesson(lessonId);
+    }
+    if (action === "done") {
+      completeMakeupForLesson(lessonId);
+    }
+    return;
+  }
+
   const addStudentButton = event.target.closest("[data-lesson-student-add]");
   if (addStudentButton) {
     const detailForm = addStudentButton.closest("#lesson-detail-form");
@@ -632,12 +662,25 @@ calendarNode.addEventListener("click", (event) => {
 
   const lessonActionButton = event.target.closest("[data-lesson-action]");
   if (lessonActionButton) {
-    if (lessonActionButton.dataset.lessonAction === "save") {
+    const action = lessonActionButton.dataset.lessonAction;
+    if (action === "save") {
       requestSelectedLessonSave();
     }
 
-    if (lessonActionButton.dataset.lessonAction === "delete") {
+    if (action === "delete") {
       requestSelectedLessonDelete();
+    }
+
+    if (action === "absence") {
+      openAbsenceConfirm(state.selectedLessonId);
+    }
+
+    if (action === "restore-absence") {
+      restoreAbsenceForLesson(state.selectedLessonId);
+    }
+
+    if (action === "makeup-done") {
+      completeMakeupForLesson(state.selectedLessonId);
     }
 
     return;
@@ -1191,7 +1234,7 @@ function renderCalendar() {
   const editedPreviewLessons = applyLessonEdits(previewLessons, state.lessonEdits, {
     includeAddedLessons: false,
   });
-  const visibleLessons = filterCalendarLessons([...effectiveLessons, ...editedPreviewLessons]);
+  const visibleLessons = [...effectiveLessons, ...editedPreviewLessons].filter(isCalendarVisibleLesson);
 
   calendarDateLabel.textContent = state.calendarViewMode === "month" ? "月份定位" : "周起始";
   weekStartInput.value = getCalendarDateInputValue();
@@ -1200,10 +1243,13 @@ function renderCalendar() {
   });
   toggleTeacherHoursButton.classList.toggle("active", state.showTeacherHoursPanel);
   toggleTeacherHoursButton.setAttribute("aria-expanded", state.showTeacherHoursPanel ? "true" : "false");
+  toggleMakeupPanelButton.classList.toggle("active", state.showPendingMakeupPanel);
+  toggleMakeupPanelButton.setAttribute("aria-expanded", state.showPendingMakeupPanel ? "true" : "false");
 
   if (state.calendarViewMode === "month") {
     calendarNode.innerHTML = `
       ${renderTeacherHoursPanel(effectiveLessons)}
+      ${renderPendingMakeupPanel(effectiveLessons)}
       ${renderCalendarMonthGrid(visibleLessons)}
     `;
     return;
@@ -1223,6 +1269,7 @@ function renderCalendar() {
 
   calendarNode.innerHTML = `
     ${renderTeacherHoursPanel(effectiveLessons)}
+    ${renderPendingMakeupPanel(effectiveLessons)}
     ${selectedDetail ? renderLessonDetail(selectedDetail) : ""}
     <div class="calendar-overview">
       ${renderCalendarWeekMatrix(overview)}
@@ -1309,6 +1356,79 @@ function renderTeacherHoursCell(item, isTotal = false) {
   `;
 }
 
+function renderPendingMakeupPanel(lessons) {
+  if (!state.showPendingMakeupPanel) {
+    return "";
+  }
+
+  const pendingLessons = getPendingMakeupLessons(lessons);
+  const rows = pendingLessons.length
+    ? pendingLessons.map((lesson) => renderPendingMakeupRow(lesson)).join("")
+    : `
+      <tr>
+        <td colspan="7" class="pending-makeup-empty">目前没有待补课，小表格干干净净。</td>
+      </tr>
+    `;
+
+  return `
+    <section id="pending-makeup-panel" class="pending-makeup-panel" aria-label="待补课列表">
+      <div class="pending-makeup-head">
+        <span>
+          <strong>待补课</strong>
+          <em>${pendingLessons.length ? `${pendingLessons.length} 节课需要跟进` : "暂无待补课"}</em>
+        </span>
+      </div>
+      <div class="pending-makeup-scroll">
+        <table class="pending-makeup-table">
+          <thead>
+            <tr>
+              <th scope="col">原日期</th>
+              <th scope="col">时间</th>
+              <th scope="col">老师</th>
+              <th scope="col">学员</th>
+              <th scope="col">课程</th>
+              <th scope="col">原因/备注</th>
+              <th scope="col">操作</th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+    </section>
+  `;
+}
+
+function getPendingMakeupLessons(lessons) {
+  return lessons
+    .filter(isPendingMakeupLesson)
+    .sort((left, right) =>
+      String(left.date || "").localeCompare(String(right.date || "")) ||
+      String(left.startTime || "").localeCompare(String(right.startTime || "")) ||
+      String(left.teacherName || "").localeCompare(String(right.teacherName || ""), "zh-Hans-CN"),
+    );
+}
+
+function renderPendingMakeupRow(lesson) {
+  const reasonText = [lesson.absenceReason, lesson.absenceNote].filter(Boolean).join(" · ") || "请假";
+  return `
+    <tr>
+      <td>${escapeHtml(formatDateForDisplay(lesson.date))}</td>
+      <td>${escapeHtml(lesson.startTime)}-${escapeHtml(lesson.endTime)}</td>
+      <td>${escapeHtml(lesson.teacherName || lesson.teacherId || "未填写")}</td>
+      <td>${escapeHtml(lesson.studentName || "未填写")}</td>
+      <td>${escapeHtml(lesson.course || "未填写")}</td>
+      <td>${escapeHtml(reasonText)}</td>
+      <td>
+        <span class="pending-makeup-actions">
+          <button data-makeup-action="view" data-makeup-lesson-id="${escapeAttribute(lesson.id)}" type="button">查看详情</button>
+          <button data-makeup-action="restore" data-makeup-lesson-id="${escapeAttribute(lesson.id)}" type="button">恢复正常</button>
+          <button data-makeup-action="done" data-makeup-lesson-id="${escapeAttribute(lesson.id)}" type="button">标记已补课</button>
+        </span>
+      </td>
+    </tr>
+  `;
+}
+
 function renderCalendarMonthGrid(visibleLessons) {
   const weeks = getMonthWeeks(getCalendarDateInputValue());
   const cards = weeks.map((week, index) => renderCalendarMonthWeek(week, visibleLessons, index)).join("");
@@ -1354,6 +1474,7 @@ function getCalendarDaypartSegment(day, daypart) {
     ...daypart,
     lessonCount: 0,
     groups: [],
+    absenceMarkers: [],
   };
 }
 
@@ -1395,16 +1516,18 @@ function renderCalendarMonthDaypartRow(daypart, days) {
 function renderCalendarMonthDaypartCell(day, daypart) {
   const segment = getCalendarDaypartSegment(day, daypart);
   const lessons = segment.groups.flatMap((group) => group.lessons);
-  const isEmpty = lessons.length === 0;
+  const absenceMarkers = segment.absenceMarkers || [];
+  const isEmpty = lessons.length === 0 && absenceMarkers.length === 0;
 
   if (isEmpty) {
     return `<span class="calendar-month-daypart-cell ${day.inMonth === false ? "outside-month" : ""} empty"></span>`;
   }
 
   return `
-    <span class="calendar-month-daypart-cell ${day.inMonth === false ? "outside-month" : ""}">
+    <span class="calendar-month-daypart-cell ${day.inMonth === false ? "outside-month" : ""} ${lessons.length ? "" : "absence-only"}">
       <span class="calendar-month-daypart-lessons">
         ${lessons.map((lesson) => renderCalendarMonthLessonChip(lesson)).join("")}
+        ${renderAbsenceMarkers(absenceMarkers)}
       </span>
     </span>
   `;
@@ -1482,17 +1605,49 @@ function renderCalendarDaypartAxis(daypart, lessonCount) {
 
 function renderCalendarWeekDaypartCell(day, daypart) {
   const segment = getCalendarDaypartSegment(day, daypart);
-  const isEmpty = segment.lessonCount === 0;
+  const absenceMarkers = segment.absenceMarkers || [];
+  const isEmpty = segment.lessonCount === 0 && absenceMarkers.length === 0;
 
   return `
     <span class="calendar-week-daypart-cell ${isEmpty ? "empty" : ""}">
       ${
         isEmpty
           ? ""
-          : segment.groups.map((group) => renderCalendarTimeGroup(group)).join("")
+          : `
+            ${segment.groups.map((group) => renderCalendarTimeGroup(group)).join("")}
+            ${renderAbsenceMarkers(absenceMarkers)}
+          `
       }
     </span>
   `;
+}
+
+function renderAbsenceMarkers(markers) {
+  if (!markers.length) {
+    return "";
+  }
+
+  return `
+    <span class="absence-marker-list">
+      ${markers.map((lesson) => `
+        <button
+          class="absence-marker"
+          data-lesson-id="${escapeAttribute(lesson.id)}"
+          data-lesson-date="${escapeAttribute(lesson.date)}"
+          type="button"
+          aria-label="查看 ${escapeAttribute(lesson.studentName || "学员")} ${escapeAttribute(lesson.course || "课程")} 请假记录"
+        >
+          <strong>请假</strong>
+          <span>${escapeHtml(lesson.startTime)}-${escapeHtml(lesson.endTime)}</span>
+          <small>${escapeHtml(formatAbsenceMarkerText(lesson))}</small>
+        </button>
+      `).join("")}
+    </span>
+  `;
+}
+
+function formatAbsenceMarkerText(lesson) {
+  return [lesson.studentName, lesson.course].filter(Boolean).join(" · ") || lesson.absenceReason || "待补课";
 }
 
 function renderCalendarTimeGroup(group) {
@@ -1539,6 +1694,7 @@ function renderLessonDetail(detail) {
   const color = getLessonColor(detail);
   const avatar = getTeacherAvatar(detail.teacherId);
   const isPreviewDetail = Boolean(detail.isPreview);
+  const isAbsenceDetail = isAbsenceLesson(detail);
   const saveButtonLabel = isPreviewDetail ? "确认排课并同步到网站" : "保存并同步";
 
   return `
@@ -1589,6 +1745,7 @@ function renderLessonDetail(detail) {
           ${renderWeekdayCheckboxField(detail.recurrence.weekdayValues)}
           ${renderSelectField("上课老师", "teacherId", getCandidateTeachers().map((teacher) => teacher.id), detail.teacherId, formatTeacherOption)}
         </div>
+        ${isAbsenceDetail ? renderAbsenceDetailNotice(detail) : ""}
         <label class="lesson-detail-wide">
           <span>课程内容/备注</span>
           <textarea name="notes" rows="3">${escapeHtml(detail.notes)}</textarea>
@@ -1600,6 +1757,7 @@ function renderLessonDetail(detail) {
               ? `<span class="lesson-confirm-hint">确认后会写入所有老师总课表，并同步给同事。</span>`
               : ""
           }
+          ${renderLessonAbsenceActions(isPreviewDetail, isAbsenceDetail)}
           <button class="lesson-delete-button" data-lesson-action="delete" type="button" aria-label="删除课程">
             <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
               <path d="M4 7h16"></path>
@@ -1613,6 +1771,32 @@ function renderLessonDetail(detail) {
       </form>
     </aside>
   `;
+}
+
+function renderAbsenceDetailNotice(detail) {
+  const reasonText = [detail.absenceReason, detail.absenceNote].filter(Boolean).join(" · ") || "请假";
+  const statusText = detail.absenceStatus || "待补课";
+  return `
+    <div class="lesson-absence-note">
+      <strong>请假 · ${escapeHtml(statusText)}</strong>
+      <span>${escapeHtml(reasonText)}</span>
+    </div>
+  `;
+}
+
+function renderLessonAbsenceActions(isPreviewDetail, isAbsenceDetail) {
+  if (isPreviewDetail) {
+    return "";
+  }
+
+  if (isAbsenceDetail) {
+    return `
+      <button class="lesson-absence-button" data-lesson-action="restore-absence" type="button">恢复为正常课程</button>
+      <button class="lesson-absence-button primary" data-lesson-action="makeup-done" type="button">标记已补课</button>
+    `;
+  }
+
+  return `<button class="lesson-absence-button" data-lesson-action="absence" type="button">标记请假</button>`;
 }
 
 function renderStudentNameField(value) {
@@ -2178,6 +2362,18 @@ function openLessonScopeConfirm(action, lessonChanges = null) {
   renderStudentDeleteDialog();
 }
 
+function openAbsenceConfirm(lessonId) {
+  if (!lessonId) {
+    return;
+  }
+
+  state.pendingConfirm = {
+    type: "lesson-absence",
+    lessonId,
+  };
+  renderStudentDeleteDialog();
+}
+
 function openBulkShiftConfirm(payload, targetCount) {
   state.pendingConfirm = {
     type: "bulk-shift",
@@ -2232,6 +2428,7 @@ function renderStudentDeleteDialog() {
         <p class="student-delete-kicker">${escapeHtml(dialog.kicker)}</p>
         <h3 id="student-delete-title">${escapeHtml(dialog.title)}</h3>
         <p>${escapeHtml(dialog.message)}</p>
+        ${dialog.extraHtml || ""}
         <div class="student-delete-actions">
           <button class="student-delete-cancel" data-student-delete-cancel type="button">${escapeHtml(
             dialog.cancelLabel || "先不删",
@@ -2308,6 +2505,36 @@ function buildPendingConfirmDialog() {
         { label: "仅此节", action: pending.type, scope: "single", className: "student-delete-cancel" },
         { label: "此节及后续", action: pending.type, scope: "following", className: "student-delete-confirm" },
       ],
+    };
+  }
+
+  if (pending.type === "lesson-absence") {
+    const lesson = getEffectiveLessons().find((item) => String(item.id) === String(pending.lessonId));
+    if (!lesson) {
+      return null;
+    }
+    return {
+      kicker: "请假小纸条",
+      title: `标记 ${lesson.studentName} · ${lesson.course} 请假吗？`,
+      message: "这节课会保留在原时间位置，但会变成请假标记，并进入待补课列表；课时统计不会计算它。",
+      cancelLabel: "先不标记",
+      extraHtml: `
+        <div class="absence-confirm-fields">
+          <label>
+            <span>请假原因</span>
+            <select data-absence-reason>
+              <option value="生病">生病</option>
+              <option value="临时有事">临时有事</option>
+              <option value="其他">其他</option>
+            </select>
+          </label>
+          <label>
+            <span>备注</span>
+            <textarea data-absence-note rows="2" placeholder="可选，比如：发烧，等身体好了再约补课"></textarea>
+          </label>
+        </div>
+      `,
+      actions: [{ label: "确认标记请假", action: "lesson-absence", className: "student-delete-confirm" }],
     };
   }
 
@@ -2396,6 +2623,10 @@ function runPendingConfirmAction(action, scope) {
     deleteSelectedLessonFromDetail(scope);
   }
 
+  if (action === "lesson-absence") {
+    markLessonAbsence(pending.lessonId, readAbsenceConfirmPayload());
+  }
+
   if (action === "bulk-shift") {
     applyBulkShift(pending.payload);
   }
@@ -2407,6 +2638,13 @@ function runPendingConfirmAction(action, scope) {
   if (action === "permission-course-delete") {
     deletePermissionCourse(pending.courseName);
   }
+}
+
+function readAbsenceConfirmPayload() {
+  return {
+    reason: studentDeleteDialogNode.querySelector("[data-absence-reason]")?.value || "生病",
+    note: studentDeleteDialogNode.querySelector("[data-absence-note]")?.value.trim() || "",
+  };
 }
 
 function renderOverviewEmpty(message) {
@@ -3710,6 +3948,52 @@ function deleteSelectedLessonFromDetail(scope = "single") {
   render();
 }
 
+function openLessonDetailById(lessonId) {
+  const lesson = getEffectiveLessons().find((item) => String(item.id) === String(lessonId));
+  if (!lesson) {
+    return;
+  }
+
+  state.selectedLessonId = lesson.id;
+  state.draftLesson = null;
+  state.calendarViewMode = "week";
+  state.weekStart = getWeekStartForDate(lesson.date);
+  weekStartInput.value = state.weekStart;
+  shiftWeekStartInput.value = state.weekStart;
+  renderCalendar();
+}
+
+function markLessonAbsence(lessonId, payload = {}) {
+  if (!lessonId) {
+    return;
+  }
+
+  state.lessonEdits = markLessonAbsenceEdit(state.lessonEdits, lessonId, payload);
+  state.selectedLessonId = lessonId;
+  saveLessonEdits(state.lessonEdits);
+  render();
+}
+
+function restoreAbsenceForLesson(lessonId) {
+  if (!lessonId) {
+    return;
+  }
+
+  state.lessonEdits = restoreAbsenceLessonEdit(state.lessonEdits, lessonId);
+  saveLessonEdits(state.lessonEdits);
+  render();
+}
+
+function completeMakeupForLesson(lessonId) {
+  if (!lessonId) {
+    return;
+  }
+
+  state.lessonEdits = completeAbsenceMakeupEdit(state.lessonEdits, lessonId);
+  saveLessonEdits(state.lessonEdits);
+  render();
+}
+
 function clearSelectedShift() {
   const key = makeShiftKey(state.selectedShift.teacherId, state.selectedShift.date);
   const nextOverrides = { ...state.shiftOverrides };
@@ -4048,7 +4332,7 @@ function getEffectiveLessons() {
 }
 
 function getCalendarActionLessons() {
-  const lessons = filterCalendarLessons(getEffectiveLessons());
+  const lessons = getEffectiveLessons().filter(isCalendarVisibleLesson);
   if (!state.draftLesson) {
     return lessons;
   }

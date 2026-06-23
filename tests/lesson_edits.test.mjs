@@ -2,10 +2,18 @@ import test from "node:test";
 import assert from "node:assert/strict";
 
 import {
+  ABSENCE_MAKEUP_DONE,
+  ABSENCE_MAKEUP_PENDING,
+  ABSENCE_STATUS,
   applyLessonEdits,
+  completeAbsenceMakeupEdit,
   deleteLessonEdit,
+  isAbsenceLesson,
+  isPendingMakeupLesson,
+  markLessonAbsenceEdit,
   normalizeLessonEdits,
   restoreDeletedLessonEdits,
+  restoreAbsenceLessonEdit,
   setLessonEdit,
 } from "../src/lessonEdits.js";
 
@@ -122,4 +130,68 @@ test("normalization keeps only supported lesson edit buckets", () => {
     updates: { a: { course: "英语陪伴" } },
     deletedIds: ["b"],
   });
+});
+
+test("absence edit marks a lesson without deleting it", () => {
+  const lessons = [{ id: "l1", status: "已确认", studentName: "Kason" }];
+  const edits = markLessonAbsenceEdit({}, "l1", {
+    reason: "生病",
+    note: "发烧请假",
+    markedAt: "2026-06-23T08:00:00.000Z",
+  });
+  const [lesson] = applyLessonEdits(lessons, edits);
+
+  assert.equal(edits.deletedIds.includes("l1"), false);
+  assert.equal(lesson.status, ABSENCE_STATUS);
+  assert.equal(lesson.absenceStatus, ABSENCE_MAKEUP_PENDING);
+  assert.equal(lesson.absenceReason, "生病");
+  assert.equal(lesson.absenceNote, "发烧请假");
+  assert.equal(lesson.absenceMarkedAt, "2026-06-23T08:00:00.000Z");
+  assert.equal(isAbsenceLesson(lesson), true);
+  assert.equal(isPendingMakeupLesson(lesson), true);
+});
+
+test("absence edit preserves existing lesson updates", () => {
+  const edits = setLessonEdit({}, "l1", {
+    teacherId: "lynn",
+    teacherName: "Lynn",
+    notes: "先改到 Lynn",
+  });
+  const marked = markLessonAbsenceEdit(edits, "l1", {
+    reason: "其他",
+    markedAt: "2026-06-23T08:00:00.000Z",
+  });
+
+  assert.equal(marked.updates.l1.teacherId, "lynn");
+  assert.equal(marked.updates.l1.teacherName, "Lynn");
+  assert.equal(marked.updates.l1.notes, "先改到 Lynn");
+  assert.equal(marked.updates.l1.status, ABSENCE_STATUS);
+  assert.equal(marked.updates.l1.absenceReason, "其他");
+});
+
+test("absence edit can be restored or marked as makeup done", () => {
+  const marked = markLessonAbsenceEdit({}, "l1", {
+    reason: "临时有事",
+    markedAt: "2026-06-23T08:00:00.000Z",
+  });
+  const done = completeAbsenceMakeupEdit(marked, "l1");
+  const restored = restoreAbsenceLessonEdit(marked, "l1");
+
+  assert.equal(done.updates.l1.status, ABSENCE_STATUS);
+  assert.equal(done.updates.l1.absenceStatus, ABSENCE_MAKEUP_DONE);
+  assert.equal(isPendingMakeupLesson(done.updates.l1), false);
+  assert.equal(restored.updates.l1.status, "已编辑");
+  assert.equal("absenceStatus" in restored.updates.l1, false);
+  assert.equal("absenceReason" in restored.updates.l1, false);
+});
+
+test("deleting a lesson still removes absence updates", () => {
+  const marked = markLessonAbsenceEdit({}, "l1", {
+    reason: "生病",
+    markedAt: "2026-06-23T08:00:00.000Z",
+  });
+  const deleted = deleteLessonEdit(marked, "l1");
+
+  assert.deepEqual(deleted.deletedIds, ["l1"]);
+  assert.equal(deleted.updates.l1, undefined);
 });

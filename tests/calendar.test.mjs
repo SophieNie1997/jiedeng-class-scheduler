@@ -135,6 +135,26 @@ test("keeps empty daypart segments visible for sparse days", () => {
   );
 });
 
+test("calendar week overview keeps absence markers separate from normal lessons", () => {
+  const lessons = [
+    makeCalendarLesson("normal", "2026-07-01", "09:00", "10:30"),
+    {
+      ...makeCalendarLesson("absence", "2026-07-01", "13:00", "15:00"),
+      status: "请假",
+      absenceStatus: "待补课",
+      absenceReason: "生病",
+    },
+  ];
+
+  const [day] = buildWeekOverview([{ iso: "2026-07-01", label: "周三" }], lessons);
+  const afternoon = day.segments.find((segment) => segment.id === "afternoon");
+
+  assert.equal(day.lessonCount, 1);
+  assert.equal(day.absenceCount, 1);
+  assert.equal(afternoon.absenceMarkers.length, 1);
+  assert.equal(afternoon.absenceMarkers[0].id, "absence");
+});
+
 test("builds teacher duration summary for a date range", () => {
   assert.equal(typeof calendar.buildTeacherDurationSummary, "function");
 
@@ -286,6 +306,31 @@ test("teacher weekly duration table can ignore lessons for unlisted teachers", (
   assert.deepEqual(
     table[0].weeks.map((week) => [week.lessonCount, week.totalMinutes, week.totalHoursLabel]),
     [[1, 90, "1.5 小时"]],
+  );
+});
+
+test("teacher weekly duration table excludes absence lessons", () => {
+  const table = calendar.buildTeacherWeeklyDurationTable([
+    {
+      ...makeCalendarLesson("normal", "2026-07-01", "09:00", "10:30"),
+      teacherId: "lynn",
+      teacherName: "Lynn",
+    },
+    {
+      ...makeCalendarLesson("absence", "2026-07-02", "09:00", "11:00"),
+      teacherId: "lynn",
+      teacherName: "Lynn",
+      status: "请假",
+      absenceStatus: "待补课",
+    },
+  ], {
+    weeks: [{ label: "第1周", startDate: "2026-07-01", endDate: "2026-07-05" }],
+    teachers: [{ id: "lynn", name: "Lynn" }],
+  });
+
+  assert.deepEqual(
+    table.map((item) => [item.teacherName, item.totalLessonCount, item.totalMinutes]),
+    [["Lynn", 1, 90]],
   );
 });
 

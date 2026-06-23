@@ -510,6 +510,19 @@ html[data-remote-sync="viewer-unavailable"] .sync-panel {
   color: #7b3d56;
 }
 
+.makeup-panel-button {
+  border-color: rgba(130, 170, 210, 0.46);
+  background: rgba(244, 250, 255, 0.78);
+  color: #3f6f9d;
+}
+
+.makeup-panel-button:hover,
+.makeup-panel-button.active {
+  border-color: rgba(79, 136, 215, 0.44);
+  background: rgba(226, 239, 255, 0.82);
+  color: #315d8c;
+}
+
 .tag {
   border: 1px solid rgba(244, 167, 190, 0.62);
   border-radius: 999px;
@@ -1063,6 +1076,51 @@ fieldset {
   display: grid;
   gap: 3px;
   min-width: 0;
+}
+
+.absence-marker-list {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.absence-marker {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+  border: 1px dashed rgba(132, 145, 158, 0.42);
+  border-left: 4px solid rgba(132, 145, 158, 0.72);
+  border-radius: 10px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(246, 248, 251, 0.62)),
+    rgba(246, 248, 251, 0.76);
+  color: #56616b;
+  padding: 5px 6px;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: left;
+  cursor: pointer;
+}
+
+.absence-marker strong {
+  color: #8a5369;
+  font-size: 11px;
+}
+
+.absence-marker span,
+.absence-marker small {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.absence-marker small {
+  color: #66737d;
+  font-size: 10px;
+  font-weight: 850;
 }
 
 .lesson-row.calendar-month-lesson {
@@ -1750,6 +1808,111 @@ fieldset {
   color: var(--accent);
 }
 
+.pending-makeup-panel {
+  display: grid;
+  gap: 12px;
+  border: 1px solid rgba(130, 170, 210, 0.42);
+  border-radius: 20px;
+  background:
+    linear-gradient(180deg, rgba(249, 252, 255, 0.84), rgba(255, 248, 252, 0.54)),
+    rgba(255, 255, 255, 0.56);
+  padding: 14px;
+  box-shadow:
+    0 16px 36px rgba(79, 136, 215, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.72);
+}
+
+.pending-makeup-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pending-makeup-head strong,
+.pending-makeup-head em {
+  display: block;
+}
+
+.pending-makeup-head strong {
+  color: var(--ink);
+  font-size: 17px;
+  font-weight: 950;
+}
+
+.pending-makeup-head em {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 850;
+}
+
+.pending-makeup-scroll {
+  overflow-x: auto;
+}
+
+.pending-makeup-table {
+  width: 100%;
+  min-width: 860px;
+  border-collapse: separate;
+  border-spacing: 0 7px;
+}
+
+.pending-makeup-table th,
+.pending-makeup-table td {
+  border: 0;
+  padding: 10px;
+  text-align: left;
+}
+
+.pending-makeup-table thead th {
+  color: #6c7783;
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.pending-makeup-table tbody td {
+  background: rgba(255, 255, 255, 0.66);
+  border-top: 1px solid rgba(130, 170, 210, 0.24);
+  border-bottom: 1px solid rgba(130, 170, 210, 0.24);
+  color: #293640;
+  font-size: 13px;
+  font-weight: 820;
+}
+
+.pending-makeup-table tbody td:first-child {
+  border-left: 1px solid rgba(130, 170, 210, 0.24);
+  border-radius: 13px 0 0 13px;
+}
+
+.pending-makeup-table tbody td:last-child {
+  border-right: 1px solid rgba(130, 170, 210, 0.24);
+  border-radius: 0 13px 13px 0;
+}
+
+.pending-makeup-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pending-makeup-actions button {
+  border: 1px solid rgba(130, 170, 210, 0.38);
+  border-radius: 999px;
+  background: rgba(244, 250, 255, 0.72);
+  color: #3f6f9d;
+  padding: 7px 10px;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.pending-makeup-empty {
+  color: var(--muted) !important;
+  text-align: center !important;
+}
+
 .lesson-row.blue {
   border-left-color: #4f88d7;
   background: #e4efff;
@@ -2409,6 +2572,7 @@ fieldset {
 
 .lesson-detail-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   justify-content: flex-end;
   align-items: center;
@@ -2435,6 +2599,53 @@ fieldset {
 .lesson-save-button:hover {
   border-color: rgba(22, 107, 91, 0.34);
   background: rgba(255, 255, 255, 0.56);
+}
+
+.lesson-absence-note {
+  display: grid;
+  gap: 4px;
+  grid-column: 1 / -1;
+  border: 1px dashed rgba(132, 145, 158, 0.42);
+  border-radius: 18px;
+  background: rgba(246, 248, 251, 0.58);
+  padding: 12px 14px;
+}
+
+.lesson-absence-note strong {
+  color: #8a5369;
+  font-size: 14px;
+  font-weight: 950;
+}
+
+.lesson-absence-note span {
+  color: #66737d;
+  font-size: 13px;
+  font-weight: 820;
+}
+
+.lesson-absence-button {
+  height: 44px;
+  border: 1px solid rgba(130, 170, 210, 0.34);
+  border-radius: 999px;
+  background: rgba(244, 250, 255, 0.58);
+  color: #3f6f9d;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.62),
+    0 10px 22px rgba(79, 136, 215, 0.08);
+  padding: 0 16px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.lesson-absence-button:hover {
+  border-color: rgba(79, 136, 215, 0.44);
+  background: rgba(226, 239, 255, 0.78);
+}
+
+.lesson-absence-button.primary {
+  border-color: rgba(22, 107, 91, 0.28);
+  background: rgba(222, 245, 237, 0.72);
+  color: var(--accent);
 }
 
 .lesson-detail-actions.preview-confirm {
@@ -4239,6 +4450,34 @@ fieldset {
   font-size: 14px;
   font-weight: 700;
   line-height: 1.65;
+}
+
+.absence-confirm-fields {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.absence-confirm-fields label {
+  display: grid;
+  gap: 6px;
+  color: #6c7783;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.absence-confirm-fields select,
+.absence-confirm-fields textarea {
+  width: 100%;
+  border: 1px solid rgba(130, 170, 210, 0.34);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.76);
+  color: var(--ink);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  padding: 10px 12px;
+  resize: vertical;
 }
 
 .student-delete-actions {
