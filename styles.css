@@ -1284,45 +1284,74 @@ fieldset {
   background: #eff8fc;
 }
 
-.lesson-row.pattern-stripe {
-  background-image: repeating-linear-gradient(
-    135deg,
-    rgba(143, 84, 103, 0.28) 0 4px,
-    rgba(255, 255, 255, 0.16) 4px 8px,
-    rgba(255, 255, 255, 0) 8px 12px
-  );
+.lesson-row.mint {
+  border-left-color: #72bfa8;
+  background: #e8f8f3;
 }
 
-.lesson-row.pattern-dot {
-  background-image: radial-gradient(rgba(143, 84, 103, 0.34) 1.4px, transparent 1.8px);
-  background-size: 8px 8px;
+.lesson-row.coral {
+  border-left-color: #dd8d85;
+  background: #fff0ee;
 }
 
-.lesson-row.pattern-grid {
-  background-image:
-    linear-gradient(rgba(143, 84, 103, 0.2) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(143, 84, 103, 0.2) 1px, transparent 1px);
-  background-size: 10px 10px;
+.lesson-row.lavender {
+  border-left-color: #9a93d1;
+  background: #f1efff;
 }
 
-.lesson-row.pattern-line {
-  background-image: repeating-linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 0) 0 7px,
-    rgba(143, 84, 103, 0.28) 7px 9px
-  );
+.lesson-row.butter {
+  border-left-color: #d7c66d;
+  background: #fffadf;
 }
 
-.lesson-row.pattern-ribbon {
-  background-image:
-    linear-gradient(135deg, rgba(143, 84, 103, 0.24), rgba(255, 255, 255, 0) 42%),
-    repeating-linear-gradient(90deg, rgba(143, 84, 103, 0.18) 0 2px, transparent 2px 10px);
+.lesson-row.aqua {
+  border-left-color: #6fb8d2;
+  background: #e9f8fb;
 }
 
-.lesson-row.pattern-corner {
-  background-image:
-    radial-gradient(circle at 100% 0, rgba(143, 84, 103, 0.28) 0 14px, transparent 14px),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0));
+.lesson-row.mauve {
+  border-left-color: #c484b8;
+  background: #fbedf8;
+}
+
+.lesson-row.olive {
+  border-left-color: #9caf73;
+  background: #f2f8e8;
+}
+
+.lesson-row.steel {
+  border-left-color: #88a6bd;
+  background: #eef6fb;
+}
+
+.lesson-row.plum {
+  border-left-color: #aa83bf;
+  background: #f6eefb;
+}
+
+.lesson-row.sand {
+  border-left-color: #c7aa6d;
+  background: #fbf5e7;
+}
+
+.lesson-row.seafoam {
+  border-left-color: #70bdaa;
+  background: #e8f8f1;
+}
+
+.lesson-row.berry {
+  border-left-color: #c8789b;
+  background: #faeef4;
+}
+
+.lesson-row.periwinkle {
+  border-left-color: #879bd2;
+  background: #eef2ff;
+}
+
+.lesson-row.sage {
+  border-left-color: #8fb18b;
+  background: #eef8eb;
 }
 
 .lesson-row.preview {
@@ -1499,6 +1528,104 @@ fieldset {
   --lesson-tint: #eff8fc;
   --lesson-field: rgba(127, 183, 214, 0.17);
   --lesson-control: rgba(239, 248, 252, 0.64);
+}
+
+.lesson-detail-panel.mint {
+  --lesson-accent: #72bfa8;
+  --lesson-tint: #e8f8f3;
+  --lesson-field: rgba(114, 191, 168, 0.17);
+  --lesson-control: rgba(232, 248, 243, 0.64);
+}
+
+.lesson-detail-panel.coral {
+  --lesson-accent: #dd8d85;
+  --lesson-tint: #fff0ee;
+  --lesson-field: rgba(221, 141, 133, 0.17);
+  --lesson-control: rgba(255, 240, 238, 0.64);
+}
+
+.lesson-detail-panel.lavender {
+  --lesson-accent: #9a93d1;
+  --lesson-tint: #f1efff;
+  --lesson-field: rgba(154, 147, 209, 0.17);
+  --lesson-control: rgba(241, 239, 255, 0.64);
+}
+
+.lesson-detail-panel.butter {
+  --lesson-accent: #d7c66d;
+  --lesson-tint: #fffadf;
+  --lesson-field: rgba(215, 198, 109, 0.18);
+  --lesson-control: rgba(255, 250, 223, 0.64);
+}
+
+.lesson-detail-panel.aqua {
+  --lesson-accent: #6fb8d2;
+  --lesson-tint: #e9f8fb;
+  --lesson-field: rgba(111, 184, 210, 0.17);
+  --lesson-control: rgba(233, 248, 251, 0.64);
+}
+
+.lesson-detail-panel.mauve {
+  --lesson-accent: #c484b8;
+  --lesson-tint: #fbedf8;
+  --lesson-field: rgba(196, 132, 184, 0.17);
+  --lesson-control: rgba(251, 237, 248, 0.64);
+}
+
+.lesson-detail-panel.olive {
+  --lesson-accent: #9caf73;
+  --lesson-tint: #f2f8e8;
+  --lesson-field: rgba(156, 175, 115, 0.18);
+  --lesson-control: rgba(242, 248, 232, 0.64);
+}
+
+.lesson-detail-panel.steel {
+  --lesson-accent: #88a6bd;
+  --lesson-tint: #eef6fb;
+  --lesson-field: rgba(136, 166, 189, 0.17);
+  --lesson-control: rgba(238, 246, 251, 0.64);
+}
+
+.lesson-detail-panel.plum {
+  --lesson-accent: #aa83bf;
+  --lesson-tint: #f6eefb;
+  --lesson-field: rgba(170, 131, 191, 0.17);
+  --lesson-control: rgba(246, 238, 251, 0.64);
+}
+
+.lesson-detail-panel.sand {
+  --lesson-accent: #c7aa6d;
+  --lesson-tint: #fbf5e7;
+  --lesson-field: rgba(199, 170, 109, 0.18);
+  --lesson-control: rgba(251, 245, 231, 0.64);
+}
+
+.lesson-detail-panel.seafoam {
+  --lesson-accent: #70bdaa;
+  --lesson-tint: #e8f8f1;
+  --lesson-field: rgba(112, 189, 170, 0.17);
+  --lesson-control: rgba(232, 248, 241, 0.64);
+}
+
+.lesson-detail-panel.berry {
+  --lesson-accent: #c8789b;
+  --lesson-tint: #faeef4;
+  --lesson-field: rgba(200, 120, 155, 0.17);
+  --lesson-control: rgba(250, 238, 244, 0.64);
+}
+
+.lesson-detail-panel.periwinkle {
+  --lesson-accent: #879bd2;
+  --lesson-tint: #eef2ff;
+  --lesson-field: rgba(135, 155, 210, 0.17);
+  --lesson-control: rgba(238, 242, 255, 0.64);
+}
+
+.lesson-detail-panel.sage {
+  --lesson-accent: #8fb18b;
+  --lesson-tint: #eef8eb;
+  --lesson-field: rgba(143, 177, 139, 0.18);
+  --lesson-control: rgba(238, 248, 235, 0.64);
 }
 
 .lesson-detail-head {

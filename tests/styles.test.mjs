@@ -3,6 +3,8 @@ import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 
+import { lessonColorPalette } from "../src/lessonColors.js";
+
 const css = readFileSync(new URL("../styles.css", import.meta.url), "utf8");
 const appSource = readFileSync(new URL("../src/app.js", import.meta.url), "utf8");
 const indexSource = readFileSync(new URL("../index.html", import.meta.url), "utf8");
@@ -54,28 +56,18 @@ test("calendar lesson color chips use the soft planner palette", () => {
   assert.equal(getRuleValue(".lesson-row.lilac", "border-left-color"), "#b487d8");
   assert.equal(getRuleValue(".lesson-row.lilac", "background"), "#f4edff");
   assert.equal(getRuleValue(".lesson-row.orange", "background"), "#fff1e7");
-  assert.equal(getRuleValue(".lesson-row.pattern-stripe", "background-image").includes("repeating-linear-gradient"), true);
-  assert.equal(getRuleValue(".lesson-row.pattern-stripe", "background-image").includes("rgba(143, 84, 103, 0.28)"), true);
-  assert.equal(getRuleValue(".lesson-row.pattern-dot", "background-image").includes("radial-gradient"), true);
-  assert.equal(getRuleValue(".lesson-row.pattern-dot", "background-image").includes("rgba(143, 84, 103, 0.34)"), true);
-  assert.equal(getRuleValue(".lesson-row.pattern-grid", "background-image").includes("linear-gradient"), true);
-  assert.equal(getRuleValue(".lesson-row.pattern-grid", "background-image").includes("rgba(143, 84, 103, 0.2)"), true);
-  assert.equal(getRuleValue(".lesson-row.pattern-line", "background-image").includes("repeating-linear-gradient"), true);
-  assert.equal(getRuleValue(".lesson-row.pattern-line", "background-image").includes("rgba(143, 84, 103, 0.28)"), true);
-  assert.equal(getRuleValue(".lesson-row.pattern-ribbon", "background-image").includes("rgba(143, 84, 103, 0.24)"), true);
-  assert.equal(getRuleValue(".lesson-row.pattern-corner", "background-image").includes("rgba(143, 84, 103, 0.28)"), true);
+  assert.equal(css.includes(".lesson-row.pattern-"), false);
+  assert.equal(appSource.includes("lessonPatternPalette"), false);
+  for (const color of lessonColorPalette) {
+    assert.ok(css.includes(`.lesson-row.${color}`), `${color} row style should exist`);
+    assert.ok(css.includes(`.lesson-detail-panel.${color}`), `${color} detail style should exist`);
+  }
   assert.equal(getRuleValue(".lesson-detail-panel.blue", "--lesson-accent"), "#6f9fcf");
   assert.equal(getRuleValue(".lesson-detail-panel.peach", "--lesson-accent"), "#df8f70");
   assert.equal(getRuleValue(".lesson-detail-panel.lilac", "--lesson-accent"), "#b487d8");
-  assert.equal(appSource.includes("const lessonColorPalette"), true);
-  assert.equal(appSource.includes("const lessonPatternPalette"), true);
-  assert.equal(appSource.includes("function getLessonCourseKey"), true);
-  assert.equal(appSource.includes("function getLessonColor"), true);
-  assert.equal(appSource.includes("function getLessonColorKey"), true);
-  assert.match(
-    appSource,
-    /return `\$\{baseColor\} \$\{lessonPatternPalette\[getStableColorIndex\(`\$\{courseKey\}\|pattern`, lessonPatternPalette\.length\)\]\}`/,
-  );
+  assert.equal(appSource.includes('from "./lessonColors.js?v=20260623-pure-course-colors"'), true);
+  assert.equal(appSource.includes("getLessonColor,"), true);
+  assert.equal(appSource.includes("getLessonColorKey,"), true);
   assert.match(
     appSource,
     /function renderLessonRow[\s\S]*const color = getLessonColor\(lesson\)/,
@@ -88,6 +80,19 @@ test("calendar lesson color chips use the soft planner palette", () => {
   for (const oldColor of ["#2563eb", "#d66a24", "#7058d8", "#0f766e", "#0884a8"]) {
     assert.equal(css.includes(oldColor), false, `${oldColor} should not remain in lesson color tokens`);
   }
+});
+
+test("lesson colors are keyed by course, not by teacher", () => {
+  const lessonColorSource = readFileSync(new URL("../src/lessonColors.js", import.meta.url), "utf8");
+  const courseKeyFunction = /function getLessonCourseKey\(lesson\) \{([\s\S]*?)\n\}/.exec(lessonColorSource)?.[1] || "";
+  assert.match(courseKeyFunction, /lesson\?\.course \|\| lesson\?\.title/);
+  assert.equal(courseKeyFunction.includes("teacherId"), false);
+  assert.equal(courseKeyFunction.includes("teacherName"), false);
+});
+
+test("calendar assets use cache-busted style and app URLs for pure course colors", () => {
+  assert.equal(indexSource.includes("./styles.css?v=20260623-pure-course-colors"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260623-pure-course-colors"), true);
 });
 
 test("calendar defaults to a month overview and drills into a week from lessons", () => {
@@ -307,7 +312,7 @@ test("course permission teacher column leaves room for full teacher names", () =
 });
 
 test("course permission width update is cache-busted in the stylesheet URL", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260623-permission-teacher-name-width"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260623-pure-course-colors"), true);
 });
 
 test("candidate teachers render as compact avatar groups with expandable detail", () => {

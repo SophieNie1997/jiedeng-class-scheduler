@@ -79,6 +79,10 @@ import {
   createRemoteStore,
   loadRemoteStoreConfig,
 } from "./remoteStore.js?v=20260616-supabase-sync";
+import {
+  getLessonColor,
+  getLessonColorKey,
+} from "./lessonColors.js?v=20260623-pure-course-colors";
 
 const SHIFT_STORAGE_KEY = "jiedeng-teacher-shifts-folder-20260617-shift";
 const COURSE_PERMISSION_STORAGE_KEY = "jiedeng-course-permissions-folder-20260617-shift";
@@ -148,16 +152,6 @@ let remoteStore = createRemoteStore({ config: {} });
 let remoteSyncReady = false;
 let remoteSyncCanWrite = false;
 let saveFeedbackToken = 0;
-
-const lessonColorPalette = ["green", "blue", "rose", "orange", "violet", "peach", "lilac", "teal", "amber", "cyan"];
-const lessonPatternPalette = [
-  "pattern-stripe",
-  "pattern-dot",
-  "pattern-grid",
-  "pattern-line",
-  "pattern-ribbon",
-  "pattern-corner",
-];
 
 const teacherAvatars = {
   claire: { character: "小恶魔", mark: "C", tone: "kuromi", image: "photo/1133570168691764439.jpeg" },
@@ -1107,40 +1101,6 @@ function isTeacherAvailable(match) {
 
 function getTeacherAvatar(teacherId) {
   return teacherAvatars[teacherId] || { character: "随机角色", mark: "师", tone: "default" };
-}
-
-function getLessonColor(lesson) {
-  const courseKey = getLessonCourseKey(lesson);
-  if (!courseKey) {
-    return "gray";
-  }
-
-  const baseColor = lessonColorPalette[getStableColorIndex(courseKey, lessonColorPalette.length)] || "gray";
-
-  return `${baseColor} ${lessonPatternPalette[getStableColorIndex(`${courseKey}|pattern`, lessonPatternPalette.length)]}`;
-}
-
-function getLessonColorKey(lesson) {
-  return getLessonCourseKey(lesson);
-}
-
-function getLessonCourseKey(lesson) {
-  return [
-    lesson?.teacherId || lesson?.teacherName || "",
-    lesson?.course || lesson?.title || "",
-  ]
-    .join("|")
-    .toLowerCase()
-    .trim();
-}
-
-function getStableColorIndex(key, size) {
-  let hash = 0;
-  for (const char of String(key)) {
-    hash = (hash * 31 + char.charCodeAt(0)) >>> 0;
-  }
-
-  return size ? hash % size : 0;
 }
 
 function getCalendarDateInputValue() {
