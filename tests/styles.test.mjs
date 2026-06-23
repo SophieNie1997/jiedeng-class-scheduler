@@ -102,8 +102,8 @@ test("lesson colors are keyed by teacher and course", () => {
 });
 
 test("calendar assets use cache-busted style and app URLs for teacher hours", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260623-week-locator"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260623-week-locator"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260623-readonly-login"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260623-readonly-login"), true);
 });
 
 test("calendar defaults to a month overview and drills into a week from lessons", () => {
@@ -480,8 +480,8 @@ test("course permission view can delete courses with confirmation", () => {
 
 test("course permission course deletion is cache-busted in app imports", () => {
   assert.equal(appSource.includes("./customCatalog.js?v=20260623-permission-course-delete"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260623-week-locator"), true);
-  assert.equal(indexSource.includes("./styles.css?v=20260623-week-locator"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260623-readonly-login"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260623-readonly-login"), true);
 });
 
 test("course permission teacher column leaves room for full teacher names", () => {
@@ -492,7 +492,7 @@ test("course permission teacher column leaves room for full teacher names", () =
 });
 
 test("course permission width update is cache-busted in the stylesheet URL", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260623-week-locator"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260623-readonly-login"), true);
 });
 
 test("candidate teachers render as compact avatar groups with expandable detail", () => {
@@ -954,6 +954,43 @@ test("unauthenticated shared mode shows a cloud read-only view", () => {
   assert.match(supabaseSql, /for select\s+to anon, authenticated\s+using \(true\);/);
   assert.equal(supabaseSql.includes("for insert\nto anon"), false);
   assert.equal(supabaseSql.includes("for update\nto anon"), false);
+});
+
+test("unauthenticated shared mode disables write controls", () => {
+  assert.equal(appSource.includes("const READ_ONLY_WRITE_SELECTORS = ["), true);
+  assert.equal(appSource.includes("function isWriteLocked()"), true);
+  assert.equal(appSource.includes("function applyReadOnlyMode()"), true);
+  const writeLockBody = /function isWriteLocked\(\) \{([\s\S]*?)\n\}/.exec(appSource)?.[1] || "";
+  assert.equal(writeLockBody.includes('state.sync.status !== "error"'), false);
+  assert.equal(appSource.includes('document.documentElement.dataset.writeLocked = isWriteLocked() ? "true" : "false"'), true);
+  for (const selector of [
+    "#request-form input",
+    "#request-form select",
+    "#add-calendar-lesson",
+    "#clear-preview",
+    "[data-course-delete]",
+    "[data-course-edit]",
+    "[data-student-delete]",
+    "[data-lesson-action]",
+    "[data-lesson-student-add]",
+    "[data-course-title-edit]",
+    "#shift-editor input",
+    "#shift-editor select",
+    "#shift-editor button",
+    "#shift-bulk-form input",
+    "#shift-month-planner input",
+    "#reset-permissions",
+    "#permission-add-form input",
+    ".permission-toggle input",
+    "[data-permission-delete-teacher]",
+    "[data-permission-delete-course]",
+  ]) {
+    assert.ok(appSource.includes(`"${selector}"`), `${selector} should be included in the read-only lock selectors`);
+  }
+  assert.match(appSource, /addCalendarLessonButton\.addEventListener\("click", \(\) => \{\s+if \(rejectReadOnlyAction\("新增课程"\)\)/);
+  assert.match(appSource, /permissionGridNode\.addEventListener\("change", \(event\) => \{\s+if \(rejectReadOnlyAction\("调整课程权限"\)\)/);
+  assert.match(appSource, /studentOverviewNode\.addEventListener\("submit"[\s\S]*rejectReadOnlyAction\("新增学员"\)/);
+  assert.equal(getRuleValue('html[data-write-locked="true"] [data-readonly-action="true"]', "cursor"), "not-allowed");
 });
 
 test("app shows a clear synced edit confirmation after saving", () => {

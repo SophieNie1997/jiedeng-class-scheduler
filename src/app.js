@@ -169,6 +169,116 @@ let remoteSyncReady = false;
 let remoteSyncCanWrite = false;
 let saveFeedbackToken = 0;
 
+const READ_ONLY_WRITE_SELECTORS = [
+  "#request-form input",
+  "#request-form select",
+  "#clear-preview",
+  "#add-calendar-lesson",
+  "[data-course-delete]",
+  "[data-course-edit]",
+  "#student-add-form input",
+  "#student-add-form button",
+  "[data-student-delete]",
+  "#lesson-detail-form input",
+  "#lesson-detail-form select",
+  "#lesson-detail-form textarea",
+  ".lesson-title-input",
+  "[data-lesson-action]",
+  "[data-lesson-student-add-input]",
+  "[data-lesson-student-add]",
+  "[data-course-title-edit]",
+  '[data-makeup-action="restore"]',
+  '[data-makeup-action="done"]',
+  "#open-month-shift-planner",
+  "#shift-editor input",
+  "#shift-editor select",
+  "#shift-editor button",
+  "#shift-bulk-form input",
+  "#shift-bulk-form select",
+  "#shift-bulk-form button",
+  "#shift-month-planner input",
+  "#shift-month-planner select",
+  "#shift-month-planner button:not([data-shift-month-planner-close])",
+  "#reset-permissions",
+  "#permission-add-form input",
+  "#permission-add-form button",
+  ".permission-toggle input",
+  "[data-permission-delete-teacher]",
+  "[data-permission-delete-course]",
+  "[data-confirm-action]",
+];
+const READ_ONLY_EDITABLE_SELECTORS = [
+  "[data-student-edit-field]",
+];
+
+function isWriteLocked() {
+  return remoteStore.isConfigured && (!remoteSyncReady || !remoteSyncCanWrite);
+}
+
+function rejectReadOnlyAction(actionLabel = "操作") {
+  if (!isWriteLocked()) {
+    return false;
+  }
+
+  showSaveFeedback(`当前是只读浏览模式。请先用邮箱登录，登录后才能${actionLabel}。`, "viewer");
+  applyReadOnlyMode();
+  return true;
+}
+
+function applyReadOnlyMode() {
+  document.documentElement.dataset.writeLocked = isWriteLocked() ? "true" : "false";
+  const locked = document.documentElement.dataset.writeLocked === "true";
+
+  document.querySelectorAll(READ_ONLY_WRITE_SELECTORS.join(", ")).forEach((element) => {
+    element.dataset.readonlyAction = "true";
+    element.setAttribute("aria-disabled", locked ? "true" : "false");
+
+    if (!("disabled" in element)) {
+      return;
+    }
+
+    if (locked) {
+      if (!element.dataset.readonlyLocked) {
+        element.dataset.readonlyOriginalDisabled = element.disabled ? "true" : "false";
+        element.dataset.readonlyLocked = "true";
+      }
+      element.disabled = true;
+      return;
+    }
+
+    if (element.dataset.readonlyLocked) {
+      element.disabled = element.dataset.readonlyOriginalDisabled === "true";
+      delete element.dataset.readonlyLocked;
+      delete element.dataset.readonlyOriginalDisabled;
+    }
+  });
+
+  document.querySelectorAll(READ_ONLY_EDITABLE_SELECTORS.join(", ")).forEach((element) => {
+    element.dataset.readonlyAction = "true";
+    element.setAttribute("aria-readonly", locked ? "true" : "false");
+
+    if (locked) {
+      if (!element.dataset.readonlyEditableLocked) {
+        element.dataset.readonlyOriginalContenteditable = element.getAttribute("contenteditable") || "";
+        element.dataset.readonlyEditableLocked = "true";
+      }
+      element.setAttribute("contenteditable", "false");
+      return;
+    }
+
+    if (element.dataset.readonlyEditableLocked) {
+      const original = element.dataset.readonlyOriginalContenteditable;
+      if (original) {
+        element.setAttribute("contenteditable", original);
+      } else {
+        element.removeAttribute("contenteditable");
+      }
+      delete element.dataset.readonlyEditableLocked;
+      delete element.dataset.readonlyOriginalContenteditable;
+    }
+  });
+}
+
 const teacherAvatars = {
   claire: { character: "小恶魔", mark: "C", tone: "kuromi", image: "photo/1133570168691764439.jpeg" },
   sophie: { character: "美乐蒂", mark: "美", tone: "melody", image: "photo/9992430418961551.jpeg" },
@@ -475,6 +585,11 @@ syncPanelNode.addEventListener("click", (event) => {
 });
 
 form.addEventListener("input", () => {
+  if (rejectReadOnlyAction("调整排课条件")) {
+    render();
+    return;
+  }
+
   state.selectedTeacherId = null;
   render();
 });
@@ -547,18 +662,30 @@ shiftWeekStartInput.addEventListener("input", () => {
 });
 
 addCalendarLessonButton.addEventListener("click", () => {
+  if (rejectReadOnlyAction("新增课程")) {
+    return;
+  }
+
   createDraftCalendarLesson();
 });
 
 courseOverviewNode.addEventListener("click", (event) => {
   const deleteButton = event.target.closest("[data-course-delete]");
   if (deleteButton) {
+    if (rejectReadOnlyAction("删除课程")) {
+      return;
+    }
+
     openCourseDeleteConfirm(deleteButton.dataset.courseDelete);
     return;
   }
 
   const editButton = event.target.closest("[data-course-edit]");
   if (editButton) {
+    if (rejectReadOnlyAction("编辑课程")) {
+      return;
+    }
+
     openCourseInLessonEditor(editButton.dataset.courseEdit);
     return;
   }
@@ -575,6 +702,10 @@ courseOverviewNode.addEventListener("click", (event) => {
 studentOverviewNode.addEventListener("click", (event) => {
   const deleteButton = event.target.closest("[data-student-delete]");
   if (!deleteButton) {
+    return;
+  }
+
+  if (rejectReadOnlyAction("删除学员课程")) {
     return;
   }
 
@@ -608,6 +739,11 @@ studentDeleteDialogNode.addEventListener("click", (event) => {
     return;
   }
 
+  if (rejectReadOnlyAction("确认操作")) {
+    closeStudentDeleteConfirm();
+    return;
+  }
+
   const action = confirmButton.dataset.confirmAction || "";
   const scope = confirmButton.dataset.lessonScope || "single";
   runPendingConfirmAction(action, scope);
@@ -621,12 +757,21 @@ studentOverviewNode.addEventListener("submit", (event) => {
   }
 
   event.preventDefault();
+  if (rejectReadOnlyAction("新增学员")) {
+    return;
+  }
+
   addStudentDirectoryRecordFromForm(studentForm);
 });
 
 studentOverviewNode.addEventListener("focusout", (event) => {
   const editableCell = event.target.closest("[data-student-edit-field]");
   if (!editableCell) {
+    return;
+  }
+
+  if (rejectReadOnlyAction("编辑学员信息")) {
+    refreshStudentSearchResults();
     return;
   }
 
@@ -642,9 +787,15 @@ calendarNode.addEventListener("click", (event) => {
       openLessonDetailById(lessonId);
     }
     if (action === "restore") {
+      if (rejectReadOnlyAction("恢复课程")) {
+        return;
+      }
       restoreAbsenceForLesson(lessonId);
     }
     if (action === "done") {
+      if (rejectReadOnlyAction("标记补课")) {
+        return;
+      }
       completeMakeupForLesson(lessonId);
     }
     return;
@@ -652,6 +803,10 @@ calendarNode.addEventListener("click", (event) => {
 
   const addStudentButton = event.target.closest("[data-lesson-student-add]");
   if (addStudentButton) {
+    if (rejectReadOnlyAction("新增学员")) {
+      return;
+    }
+
     const detailForm = addStudentButton.closest("#lesson-detail-form");
     appendLessonStudentName(detailForm);
     return;
@@ -659,6 +814,10 @@ calendarNode.addEventListener("click", (event) => {
 
   const titleEditButton = event.target.closest("[data-course-title-edit]");
   if (titleEditButton) {
+    if (rejectReadOnlyAction("编辑课程名字")) {
+      return;
+    }
+
     const titleEditor = titleEditButton.closest(".lesson-title-editor");
     const titleInput = titleEditor?.querySelector("[name='course']");
     if (titleInput) {
@@ -672,6 +831,10 @@ calendarNode.addEventListener("click", (event) => {
 
   const lessonActionButton = event.target.closest("[data-lesson-action]");
   if (lessonActionButton) {
+    if (rejectReadOnlyAction("编辑课程")) {
+      return;
+    }
+
     const action = lessonActionButton.dataset.lessonAction;
     if (action === "save") {
       requestSelectedLessonSave();
@@ -736,6 +899,11 @@ calendarNode.addEventListener("click", (event) => {
 calendarNode.addEventListener("input", (event) => {
   const detailForm = event.target.closest("#lesson-detail-form");
   if (detailForm) {
+    if (rejectReadOnlyAction("编辑课程")) {
+      renderCalendar();
+      return;
+    }
+
     updateLessonEndDatePreview(detailForm);
   }
 });
@@ -743,6 +911,11 @@ calendarNode.addEventListener("input", (event) => {
 calendarNode.addEventListener("change", (event) => {
   const detailForm = event.target.closest("#lesson-detail-form");
   if (detailForm) {
+    if (rejectReadOnlyAction("编辑课程")) {
+      renderCalendar();
+      return;
+    }
+
     updateLessonEndDatePreview(detailForm);
   }
 });
@@ -898,12 +1071,20 @@ function closeShiftWeekOverlay() {
 shiftCourseDetailNode.addEventListener("click", (event) => {
   const deleteButton = event.target.closest("[data-course-delete]");
   if (deleteButton) {
+    if (rejectReadOnlyAction("删除课程")) {
+      return;
+    }
+
     openCourseDeleteConfirm(deleteButton.dataset.courseDelete);
     return;
   }
 
   const editButton = event.target.closest("[data-course-edit]");
   if (editButton) {
+    if (rejectReadOnlyAction("编辑课程")) {
+      return;
+    }
+
     openCourseInLessonEditor(editButton.dataset.courseEdit);
   }
 });
@@ -918,6 +1099,10 @@ shiftBulkFormNode.addEventListener("change", () => {
 
 shiftBulkFormNode.addEventListener("submit", (event) => {
   event.preventDefault();
+  if (rejectReadOnlyAction("批量修改排班")) {
+    return;
+  }
+
   const payload = readBulkShiftPayload(shiftBulkFormNode);
   if (payload.type === "work" && parseTimeToMinutes(payload.startTime) >= parseTimeToMinutes(payload.endTime)) {
     showSaveFeedback("结束时间要晚于开始时间，先帮小纸条改一下哦。", "error");
@@ -935,6 +1120,10 @@ shiftBulkFormNode.addEventListener("submit", (event) => {
 });
 
 openMonthShiftPlannerButton.addEventListener("click", () => {
+  if (rejectReadOnlyAction("设置月排班")) {
+    return;
+  }
+
   openShiftMonthPlanner();
 });
 
@@ -954,12 +1143,20 @@ shiftMonthPlannerNode.addEventListener("change", () => {
 
 shiftMonthPlannerNode.addEventListener("submit", (event) => {
   event.preventDefault();
+  if (rejectReadOnlyAction("设置月排班")) {
+    return;
+  }
+
   handleShiftMonthPlannerSubmit(event.target.closest("form"));
 });
 
 shiftEditorNode.addEventListener("click", (event) => {
   const actionButton = event.target.closest("[data-shift-action]");
   if (!actionButton) {
+    return;
+  }
+
+  if (rejectReadOnlyAction("编辑排班")) {
     return;
   }
 
@@ -974,6 +1171,11 @@ shiftEditorNode.addEventListener("click", (event) => {
 
 shiftEditorNode.addEventListener("change", (event) => {
   if (event.target.matches("[data-shift-field]")) {
+    if (rejectReadOnlyAction("编辑排班")) {
+      renderShiftView();
+      return;
+    }
+
     saveSelectedShiftFromEditor();
   }
 });
@@ -981,6 +1183,10 @@ shiftEditorNode.addEventListener("change", (event) => {
 permissionGridNode.addEventListener("click", (event) => {
   const courseDeleteButton = event.target.closest("[data-permission-delete-course]");
   if (courseDeleteButton) {
+    if (rejectReadOnlyAction("删除课程权限")) {
+      return;
+    }
+
     openPermissionCourseDeleteConfirm(courseDeleteButton.dataset.permissionDeleteCourse);
     return;
   }
@@ -990,10 +1196,19 @@ permissionGridNode.addEventListener("click", (event) => {
     return;
   }
 
+  if (rejectReadOnlyAction("删除老师权限")) {
+    return;
+  }
+
   openPermissionTeacherDeleteConfirm(deleteButton.dataset.permissionDeleteTeacher);
 });
 
 permissionGridNode.addEventListener("change", (event) => {
+  if (rejectReadOnlyAction("调整课程权限")) {
+    renderCoursePermissions();
+    return;
+  }
+
   const checkbox = event.target.closest("[data-permission-teacher-id]");
   if (!checkbox) {
     return;
@@ -1013,6 +1228,10 @@ permissionGridNode.addEventListener("change", (event) => {
 });
 
 resetPermissionsButton.addEventListener("click", () => {
+  if (rejectReadOnlyAction("恢复课程权限")) {
+    return;
+  }
+
   state.coursePermissions = buildDefaultCoursePermissions(getCandidateTeacherIds(), getCourses());
   saveCoursePermissions(state.coursePermissions);
   refreshPlannerCourseOptions();
@@ -1022,6 +1241,10 @@ resetPermissionsButton.addEventListener("click", () => {
 permissionAddForm.addEventListener("click", (event) => {
   const addButton = event.target.closest("[data-permission-add]");
   if (!addButton) {
+    return;
+  }
+
+  if (rejectReadOnlyAction("新增课程权限")) {
     return;
   }
 
@@ -1035,6 +1258,10 @@ permissionAddForm.addEventListener("click", (event) => {
 });
 
 document.querySelector("#clear-preview").addEventListener("click", () => {
+  if (rejectReadOnlyAction("清空预排")) {
+    return;
+  }
+
   state.selectedTeacherId = null;
   render();
 });
@@ -1066,6 +1293,7 @@ function render() {
   renderStudentDeleteDialog();
   renderShiftView();
   renderCoursePermissions();
+  applyReadOnlyMode();
 }
 
 function renderMatchGroups(matches) {
@@ -1285,6 +1513,7 @@ function renderCalendar() {
       ${renderPendingMakeupPanel(effectiveLessons)}
       ${renderCalendarMonthGrid(visibleLessons)}
     `;
+    applyReadOnlyMode();
     return;
   }
 
@@ -1308,6 +1537,7 @@ function renderCalendar() {
       ${renderCalendarWeekMatrix(overview)}
     </div>
   `;
+  applyReadOnlyMode();
 }
 
 function syncCalendarDateControl() {
@@ -2033,6 +2263,7 @@ function renderCourseOverviewView() {
         : renderOverviewEmpty("目前没有未来课程")
     }
   `;
+  applyReadOnlyMode();
 }
 
 function renderCourseSummaryPill(label, value, caption) {
@@ -2156,6 +2387,7 @@ function renderStudentOverviewView() {
       ${renderStudentResults(filteredStudents)}
     </div>
   `;
+  applyReadOnlyMode();
 }
 
 function renderStudentAddForm() {
@@ -2230,6 +2462,7 @@ function refreshStudentSearchResults() {
   if (resultsNode) {
     resultsNode.innerHTML = renderStudentResults(filteredStudents);
   }
+  applyReadOnlyMode();
 }
 
 function renderStudentLedgerTable(students) {
@@ -2464,6 +2697,7 @@ function renderStudentDeleteDialog() {
   if (!dialog) {
     state.pendingConfirm = null;
     studentDeleteDialogNode.innerHTML = "";
+    applyReadOnlyMode();
     return;
   }
 
@@ -2501,6 +2735,7 @@ function renderStudentDeleteDialog() {
       </section>
     </div>
   `;
+  applyReadOnlyMode();
 }
 
 function buildPendingConfirmDialog() {
@@ -2758,6 +2993,7 @@ function renderShiftView() {
     renderShiftCourseDetail(null);
     renderShiftEditor();
     renderShiftMonthPlanner();
+    applyReadOnlyMode();
     return;
   }
 
@@ -2766,6 +3002,7 @@ function renderShiftView() {
   renderShiftCourseDetail(selectedShiftCard);
   renderShiftEditor();
   renderShiftMonthPlanner();
+  applyReadOnlyMode();
 }
 
 function renderShiftWeekGrid(shiftDates, shiftLessonIndex, selectedShiftLessonIds, options = {}) {
@@ -2887,6 +3124,7 @@ function renderShiftWeekOverlay(weekDates, shiftLessonIndex, selectedShiftLesson
     }
     shiftWeekOverlayNode.classList.add("hidden");
     shiftWeekOverlayNode.innerHTML = "";
+    applyReadOnlyMode();
     return;
   }
 
@@ -2913,6 +3151,7 @@ function renderShiftWeekOverlay(weekDates, shiftLessonIndex, selectedShiftLesson
     </section>
   `;
   document.querySelector("#shift-week-side-slot")?.appendChild(shiftSideStackNode);
+  applyReadOnlyMode();
 }
 
 function renderShiftCell(teacher, date, shiftLessonIndex, selectedLessonIds = new Set(), shiftViewMode = "week", day = {}) {
@@ -3359,6 +3598,7 @@ function renderCoursePermissions() {
       </table>
     </div>
   `;
+  applyReadOnlyMode();
 }
 
 function renderPermissionCourseHead(course) {
@@ -3620,6 +3860,7 @@ function refreshBulkShiftFormState(formNode) {
     const targetCount = buildBulkShiftTargets(getShiftRoster(), payload, state.shiftOverrides).length;
     submitButton.disabled = targetCount === 0;
   }
+  applyReadOnlyMode();
 }
 
 function applyBulkShift(payload) {
@@ -4139,7 +4380,7 @@ async function initializeRemoteSync() {
     state.sync = {
       status: "error",
       email: state.sync.email,
-      message: "云端同步暂不可用，当前仍会保存到本机浏览器。",
+      message: "云端同步暂不可用。为避免访客误改，请先登录或稍后刷新后再编辑。",
     };
     renderSyncPanel();
     console.warn("Supabase sync is unavailable; using local storage only.", error);
@@ -4227,6 +4468,7 @@ function renderSyncPanel() {
         <button type="submit">${state.sync.status === "viewer" ? "登录后编辑" : "发送登录链接"}</button>
       </form>
     `;
+    applyReadOnlyMode();
     return;
   }
 
@@ -4248,6 +4490,7 @@ function renderSyncPanel() {
         : ""
     }
   `;
+  applyReadOnlyMode();
 }
 
 function applyRemoteBuckets(buckets) {
@@ -4323,12 +4566,14 @@ function saveRemoteBucket(bucket, payload) {
 }
 
 function rejectReadOnlySave() {
-  if (!remoteStore.isConfigured || !remoteSyncReady || remoteSyncCanWrite) {
+  if (!isWriteLocked()) {
     return false;
   }
 
   showSaveFeedback("当前是只读浏览模式。请先用邮箱登录，登录后才能保存并同步。", "viewer");
-  initializeRemoteSync();
+  if (state.sync.status !== "error") {
+    initializeRemoteSync();
+  }
   return true;
 }
 
