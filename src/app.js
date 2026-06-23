@@ -1281,7 +1281,14 @@ function renderTeacherHoursPanel(lessons) {
 function renderTeacherHoursRow(item) {
   return `
     <tr>
-      <th scope="row" class="calendar-teacher-hours-teacher">${escapeHtml(item.teacherName)}</th>
+      <th scope="row" class="calendar-teacher-hours-teacher">
+        <span class="teacher-hours-teacher-card">
+          <span class="teacher-hours-teacher-name">${escapeHtml(item.teacherName)}</span>
+          <span class="teacher-hours-sticker" aria-hidden="true">
+            ${renderTeacherAvatarImage(getTeacherAvatar(item.teacherId))}
+          </span>
+        </span>
+      </th>
       ${item.weeks.map((week) => renderTeacherHoursCell(week)).join("")}
       ${renderTeacherHoursCell({
         totalHoursLabel: item.totalHoursLabel,

@@ -1676,10 +1676,44 @@ fieldset {
   color: var(--ink);
   font-size: 14px;
   font-weight: 950;
-  min-width: 124px;
+  min-width: 156px;
   position: sticky;
   left: 0;
   z-index: 1;
+}
+
+.teacher-hours-teacher-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.teacher-hours-teacher-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.teacher-hours-sticker {
+  display: inline-grid;
+  flex: 0 0 auto;
+  place-items: center;
+  transform: rotate(-5deg);
+}
+
+.teacher-hours-sticker .teacher-avatar {
+  width: 38px;
+  height: 38px;
+  border-width: 3px;
+  box-shadow:
+    0 7px 14px rgba(188, 116, 141, 0.16),
+    0 0 0 5px rgba(255, 248, 251, 0.72);
+}
+
+.calendar-teacher-hours-table tbody tr:nth-child(even) .teacher-hours-sticker {
+  transform: rotate(5deg);
 }
 
 .calendar-teacher-hours-cell {
