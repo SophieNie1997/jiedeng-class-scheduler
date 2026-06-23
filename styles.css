@@ -2856,7 +2856,7 @@ fieldset {
 
 .permission-table {
   width: 100%;
-  min-width: 1180px;
+  min-width: 1260px;
   border-collapse: collapse;
   table-layout: fixed;
 }
@@ -2884,7 +2884,7 @@ fieldset {
 
 .permission-table th:first-child,
 .permission-table td:first-child {
-  width: 96px;
+  width: 168px;
 }
 
 .permission-table tbody th {
