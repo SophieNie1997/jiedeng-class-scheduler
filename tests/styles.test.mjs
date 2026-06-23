@@ -76,7 +76,7 @@ test("calendar lesson color chips use the soft planner palette", () => {
   assert.equal(getRuleValue(".lesson-detail-panel.periwinkle", "--lesson-accent"), "#6f7fd4");
   assert.equal(getRuleValue(".lesson-detail-panel.peach", "--lesson-accent"), "#df8f70");
   assert.equal(getRuleValue(".lesson-detail-panel.lilac", "--lesson-accent"), "#b487d8");
-  assert.equal(appSource.includes('from "./lessonColors.js?v=20260623-month-heatmap"'), true);
+  assert.equal(appSource.includes('from "./lessonColors.js?v=20260623-month-cards"'), true);
   assert.equal(appSource.includes("getLessonColor,"), true);
   assert.equal(appSource.includes("getLessonColorKey,"), true);
   assert.match(
@@ -101,9 +101,9 @@ test("lesson colors are keyed by teacher and course", () => {
   assert.match(colorKeyFunction, /getLessonCourseKey\(lesson\)/);
 });
 
-test("calendar assets use cache-busted style and app URLs for month heatmap", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260623-month-heatmap"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260623-month-heatmap"), true);
+test("calendar assets use cache-busted style and app URLs for month cards", () => {
+  assert.equal(indexSource.includes("./styles.css?v=20260623-month-cards"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260623-month-cards"), true);
 });
 
 test("calendar defaults to a month overview and drills into a week from lessons", () => {
@@ -115,11 +115,11 @@ test("calendar defaults to a month overview and drills into a week from lessons"
   assert.equal(appSource.includes("renderCalendarMonthGrid"), true);
   assert.equal(appSource.includes("renderCalendarMonthWeek"), true);
   assert.equal(appSource.includes("renderCalendarMonthDaypartRow"), true);
-  assert.equal(appSource.includes("renderCalendarMonthDistributionCell"), true);
-  assert.equal(appSource.includes("renderCalendarMonthCourseStrip"), true);
+  assert.equal(appSource.includes("renderCalendarMonthDistributionCell"), false);
+  assert.equal(appSource.includes("renderCalendarMonthCourseStrip"), false);
   assert.equal(appSource.includes("renderCalendarWeekMatrix"), true);
   assert.equal(appSource.includes("renderCalendarWeekDaypartRow"), true);
-  assert.equal(appSource.includes("renderCalendarMonthLessonChip"), false);
+  assert.equal(appSource.includes("renderCalendarMonthLessonChip"), true);
   assert.match(
     appSource,
     /const monthSummaryButton = event\.target\.closest\("\[data-calendar-week-date\]"\)[\s\S]*state\.calendarViewMode = "week"[\s\S]*getWeekStartForDate\(monthSummaryButton\.dataset\.calendarWeekDate/,
@@ -128,7 +128,7 @@ test("calendar defaults to a month overview and drills into a week from lessons"
   assert.ok(css.includes(".calendar-month-overview-grid"));
   assert.ok(css.includes(".calendar-month-week-card"));
   assert.ok(css.includes(".calendar-month-week-grid"));
-  assert.ok(css.includes(".calendar-month-distribution"));
+  assert.ok(css.includes(".lesson-row.calendar-month-lesson"));
 });
 
 test("calendar views align morning afternoon evening rows across date columns", () => {
@@ -144,8 +144,8 @@ test("calendar views align morning afternoon evening rows across date columns", 
   assert.ok(css.includes(".calendar-daypart-axis"));
   assert.ok(css.includes(".calendar-month-daypart-row"));
   assert.ok(css.includes(".calendar-month-daypart-cell"));
-  assert.ok(css.includes(".calendar-month-distribution"));
-  assert.ok(css.includes(".calendar-month-course-strip"));
+  assert.ok(css.includes(".lesson-row.calendar-month-lesson"));
+  assert.ok(css.includes(".calendar-month-lesson-teacher"));
   assert.ok(css.includes(".calendar-week-daypart-row"));
   assert.ok(css.includes(".calendar-week-daypart-cell"));
   assert.ok(css.includes(".calendar-daypart-morning"));
@@ -156,29 +156,33 @@ test("calendar views align morning afternoon evening rows across date columns", 
   assert.equal(getRuleValue(".calendar-week-days", "grid-template-columns"), "96px repeat(7, minmax(0, 1fr))");
   assert.equal(getRuleValue(".calendar-week-daypart-row", "grid-template-columns"), "96px repeat(7, minmax(0, 1fr))");
   assert.equal(getRuleValue(".calendar-daypart-axis", "position"), "sticky");
+  assert.equal(getRuleValue(".calendar-daypart-axis", "border-right"), "4px solid var(--daypart-accent)");
+  assert.equal(getRuleValue(".calendar-week-daypart-cell", "border-left"), "0");
   assert.equal(getRuleValue(".calendar-week-daypart-cell.empty", "border-style"), "solid");
   assert.equal(getRuleValue(".calendar-month-daypart-cell.empty", "border"), "0");
 });
 
-test("calendar month overview summarizes distribution instead of rendering full lesson cards", () => {
+test("calendar month overview uses compact lesson cards with teacher and course", () => {
   assert.equal(getRuleValue(".calendar-month-overview-grid", "grid-template-columns"), "repeat(2, minmax(0, 1fr))");
-  assert.equal(appSource.includes('class="calendar-month-lesson-time"'), false);
-  assert.equal(appSource.includes('class="calendar-month-lesson-teacher"'), false);
-  assert.equal(appSource.includes('class="calendar-month-lesson-course"'), false);
-  assert.equal(appSource.includes("calendar-month-daypart-count"), true);
-  assert.equal(appSource.includes("calendar-month-course-strips"), true);
-  assert.equal(appSource.includes("data-calendar-week-date"), true);
+  assert.equal(appSource.includes('class="calendar-month-lesson-time"'), true);
+  assert.equal(appSource.includes('class="calendar-month-lesson-teacher"'), true);
+  assert.equal(appSource.includes('class="calendar-month-lesson-course"'), true);
+  assert.equal(appSource.includes("calendar-month-daypart-count"), false);
+  assert.equal(appSource.includes("calendar-month-course-strips"), false);
   assert.equal(
     getRuleValue(".calendar-month-week-days", "grid-template-columns"),
     "74px repeat(7, minmax(0, 1fr))",
   );
-  assert.equal(getRuleValue(".calendar-month-distribution", "display"), "grid");
-  assert.equal(getRuleValue(".calendar-month-distribution", "border"), "0");
-  assert.equal(getRuleValue(".calendar-month-distribution", "background"), "transparent");
-  assert.equal(getRuleValue(".calendar-month-course-strips", "display"), "grid");
-  assert.equal(getRuleValue(".calendar-month-course-strip", "height"), "5px");
+  assert.equal(getRuleValue(".calendar-month-daypart-cell", "min-height"), "76px");
+  assert.equal(getRuleValue(".calendar-month-daypart-lessons", "display"), "grid");
+  assert.equal(getRuleValue(".lesson-row.calendar-month-lesson", "grid-template-columns"), "minmax(0, 1fr)");
+  assert.equal(getRuleValue(".lesson-row.calendar-month-lesson", "border-left-width"), "4px");
+  assert.equal(getRuleValue(".lesson-row.calendar-month-lesson .calendar-month-lesson-time", "white-space"), "nowrap");
+  assert.equal(getRuleValue(".lesson-row.calendar-month-lesson .calendar-month-lesson-copy", "min-width"), "0");
+  assert.equal(getRuleValue(".lesson-row.calendar-month-lesson .calendar-month-lesson-course", "-webkit-line-clamp"), "2");
   assert.equal(getRuleValue(".calendar-month-daypart-cell.empty", "background"), "transparent");
   assert.equal(css.includes(".calendar-month-lesson span span"), false);
+  assert.equal(css.includes(".calendar-month-course-strip"), false);
 });
 
 test("candidate preview lessons look visibly different from synced lessons", () => {
@@ -361,7 +365,7 @@ test("course permission teacher column leaves room for full teacher names", () =
 });
 
 test("course permission width update is cache-busted in the stylesheet URL", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260623-month-heatmap"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260623-month-cards"), true);
 });
 
 test("candidate teachers render as compact avatar groups with expandable detail", () => {

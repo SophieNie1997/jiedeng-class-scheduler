@@ -82,7 +82,7 @@ import {
 import {
   getLessonColor,
   getLessonColorKey,
-} from "./lessonColors.js?v=20260623-month-heatmap";
+} from "./lessonColors.js?v=20260623-month-cards";
 
 const SHIFT_STORAGE_KEY = "jiedeng-teacher-shifts-folder-20260617-shift";
 const COURSE_PERMISSION_STORAGE_KEY = "jiedeng-course-permissions-folder-20260617-shift";
@@ -1264,39 +1264,32 @@ function renderCalendarMonthDaypartCell(day, daypart) {
     return `<span class="calendar-month-daypart-cell ${day.inMonth === false ? "outside-month" : ""} empty"></span>`;
   }
 
-  return renderCalendarMonthDistributionCell(day, segment, lessons);
-}
-
-function renderCalendarMonthDistributionCell(day, segment, lessons) {
-  const visibleLessons = lessons.slice(0, 5);
-  const extraCount = Math.max(0, lessons.length - visibleLessons.length);
-  const intensity = Math.min(lessons.length, 4);
-
   return `
-    <button
-      class="calendar-month-daypart-cell calendar-month-distribution ${day.inMonth === false ? "outside-month" : ""} intensity-${intensity}"
-      data-calendar-week-date="${escapeAttribute(day.iso)}"
-      type="button"
-      aria-label="查看 ${escapeAttribute(day.iso)} ${escapeAttribute(segment.label)} ${lessons.length} 节课"
-    >
-      <span class="calendar-month-daypart-count">${lessons.length} 节</span>
-      <span class="calendar-month-course-strips">
-        ${visibleLessons.map((lesson) => renderCalendarMonthCourseStrip(lesson)).join("")}
-        ${extraCount > 0 ? `<span class="calendar-month-course-more">+${extraCount}</span>` : ""}
+    <span class="calendar-month-daypart-cell ${day.inMonth === false ? "outside-month" : ""}">
+      <span class="calendar-month-daypart-lessons">
+        ${lessons.map((lesson) => renderCalendarMonthLessonChip(lesson)).join("")}
       </span>
-    </button>
+    </span>
   `;
 }
 
-function renderCalendarMonthCourseStrip(lesson) {
+function renderCalendarMonthLessonChip(lesson) {
   const color = getLessonColor(lesson);
   const isPreview = lesson.status === "预排";
   return `
-    <span
-      class="calendar-month-course-strip ${color} ${isPreview ? "preview" : ""}"
-      title="${escapeAttribute(lesson.startTime)}-${escapeAttribute(lesson.endTime)} ${escapeAttribute(lesson.teacherName)} ${escapeAttribute(lesson.course)}"
-      aria-hidden="true"
-    ></span>
+    <button
+      class="calendar-month-lesson lesson-row ${color} ${isPreview ? "preview" : ""}"
+      data-lesson-id="${escapeAttribute(lesson.id)}"
+      data-lesson-date="${escapeAttribute(lesson.date)}"
+      type="button"
+      aria-label="打开 ${escapeAttribute(lesson.date)} ${escapeAttribute(lesson.teacherName)} ${escapeAttribute(lesson.course)}"
+    >
+      <strong class="calendar-month-lesson-time">${escapeHtml(lesson.startTime)}-${escapeHtml(lesson.endTime)}</strong>
+      <span class="calendar-month-lesson-copy">
+        <span class="calendar-month-lesson-teacher">${escapeHtml(lesson.teacherName)}</span>
+        <span class="calendar-month-lesson-course">${escapeHtml(lesson.course)}</span>
+      </span>
+    </button>
   `;
 }
 

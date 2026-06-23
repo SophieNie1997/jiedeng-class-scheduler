@@ -1020,8 +1020,8 @@ fieldset {
 .calendar-month-daypart-cell {
   display: grid;
   align-content: start;
-  gap: 0;
-  min-height: 34px;
+  gap: 3px;
+  min-height: 76px;
   min-width: 0;
   border: 0;
   border-radius: 9px;
@@ -1040,151 +1040,69 @@ fieldset {
   background: transparent;
 }
 
-.calendar-month-distribution {
+.calendar-month-daypart-lessons {
   display: grid;
-  gap: 4px;
-  width: 100%;
+  gap: 3px;
   min-width: 0;
-  border: 0;
-  border-radius: 8px;
-  background: transparent;
-  padding: 2px 1px;
+}
+
+.lesson-row.calendar-month-lesson {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 3px;
+  min-height: 0;
+  min-width: 0;
+  border-left-width: 4px;
+  border-radius: 10px;
+  padding: 5px 6px;
+  font-size: 11px;
+  line-height: 1.2;
   text-align: left;
-  cursor: pointer;
 }
 
-.calendar-month-distribution:hover {
-  background: rgba(255, 255, 255, 0.48);
-}
-
-.calendar-month-daypart-count {
-  display: block;
-  color: #5d6670;
+.lesson-row.calendar-month-lesson .calendar-month-lesson-time {
+  align-self: start;
+  justify-self: start;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.68);
+  color: #31424a;
+  padding: 2px 6px;
   font-size: 10px;
-  font-weight: 900;
-  line-height: 1;
+  font-weight: 950;
+  line-height: 1.1;
+  text-align: center;
+  white-space: nowrap;
 }
 
-.calendar-month-course-strips {
+.lesson-row.calendar-month-lesson .calendar-month-lesson-copy {
   display: grid;
   gap: 2px;
   min-width: 0;
 }
 
-.calendar-month-course-strip {
-  display: block;
-  width: 100%;
-  height: 5px;
-  border-radius: 999px;
-  background: #9aa8b4;
+.lesson-row.calendar-month-lesson .calendar-month-lesson-teacher {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 950;
+  line-height: 1.1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.calendar-month-course-more {
-  display: block;
-  color: #8e7f87;
-  font-size: 9px;
-  font-weight: 900;
-  line-height: 1;
-}
-
-.calendar-month-course-strip.blue {
-  background: #4f88d7;
-}
-
-.calendar-month-course-strip.green {
-  background: #7bb79e;
-}
-
-.calendar-month-course-strip.orange {
-  background: #e18449;
-}
-
-.calendar-month-course-strip.rose {
-  background: #d982a6;
-}
-
-.calendar-month-course-strip.violet {
-  background: #a28cc7;
-}
-
-.calendar-month-course-strip.peach {
-  background: #df8f70;
-}
-
-.calendar-month-course-strip.lilac {
-  background: #b487d8;
-}
-
-.calendar-month-course-strip.teal {
-  background: #2faaa2;
-}
-
-.calendar-month-course-strip.amber {
-  background: #d6a93b;
-}
-
-.calendar-month-course-strip.cyan {
-  background: #43a6cf;
-}
-
-.calendar-month-course-strip.mint {
-  background: #72bfa8;
-}
-
-.calendar-month-course-strip.coral {
-  background: #dc6f62;
-}
-
-.calendar-month-course-strip.lavender {
-  background: #9a93d1;
-}
-
-.calendar-month-course-strip.butter {
-  background: #c8b247;
-}
-
-.calendar-month-course-strip.aqua {
-  background: #32aeb9;
-}
-
-.calendar-month-course-strip.mauve {
-  background: #c484b8;
-}
-
-.calendar-month-course-strip.olive {
-  background: #9caf73;
-}
-
-.calendar-month-course-strip.steel {
-  background: #718ab8;
-}
-
-.calendar-month-course-strip.plum {
-  background: #aa83bf;
-}
-
-.calendar-month-course-strip.sand {
-  background: #c7aa6d;
-}
-
-.calendar-month-course-strip.seafoam {
-  background: #44ad84;
-}
-
-.calendar-month-course-strip.berry {
-  background: #c8789b;
-}
-
-.calendar-month-course-strip.periwinkle {
-  background: #6f7fd4;
-}
-
-.calendar-month-course-strip.sage {
-  background: #8fb18b;
-}
-
-.calendar-month-course-strip.preview {
-  background: #d65f91;
+.lesson-row.calendar-month-lesson .calendar-month-lesson-course {
+  display: -webkit-box;
+  min-width: 0;
+  overflow: hidden;
+  color: #3f5159;
+  font-size: 11px;
+  font-weight: 850;
+  line-height: 1.15;
+  overflow-wrap: normal;
+  word-break: keep-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .calendar-month-empty {
@@ -1335,7 +1253,7 @@ fieldset {
   min-height: 128px;
   min-width: 0;
   border: 1px solid rgba(239, 189, 203, 0.46);
-  border-left: 4px solid var(--daypart-accent);
+  border-left: 0;
   border-radius: 18px;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.56), rgba(255, 248, 252, 0.36)),
@@ -1348,7 +1266,6 @@ fieldset {
   justify-items: center;
   border-style: solid;
   border-color: rgba(239, 189, 203, 0.16);
-  border-left-color: transparent;
   background: rgba(255, 255, 255, 0.08);
 }
 
