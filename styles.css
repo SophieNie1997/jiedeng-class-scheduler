@@ -1005,7 +1005,56 @@ fieldset {
 .calendar-month-lesson-list {
   display: grid;
   align-content: start;
+  gap: 5px;
+  min-width: 0;
+}
+
+.calendar-month-daypart {
+  display: grid;
   gap: 4px;
+  min-width: 0;
+  border: 1px solid var(--daypart-border);
+  border-radius: 10px;
+  background: var(--daypart-bg);
+  padding: 4px;
+}
+
+.calendar-month-daypart.empty {
+  min-height: 25px;
+  opacity: 0.74;
+}
+
+.calendar-month-daypart-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  min-width: 0;
+  color: var(--daypart-accent);
+  font-size: 10px;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.calendar-month-daypart-head strong,
+.calendar-month-daypart-head em {
+  display: block;
+}
+
+.calendar-month-daypart-head em {
+  flex: 0 0 auto;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+  color: #6f6870;
+  padding: 2px 5px;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.calendar-month-daypart-lessons {
+  display: grid;
+  gap: 3px;
   min-width: 0;
 }
 
@@ -1094,10 +1143,17 @@ fieldset {
 
 .calendar-day-top,
 .calendar-day-content,
+.calendar-daypart,
+.calendar-daypart-head,
 .calendar-time-group,
 .lesson-list,
 .lesson-row-main {
   display: block;
+}
+
+.calendar-day-content {
+  display: grid;
+  gap: 9px;
 }
 
 .calendar-day-top {
@@ -1139,6 +1195,98 @@ fieldset {
   padding: 4px 7px;
   font-size: 12px;
   font-weight: 900;
+}
+
+.calendar-daypart,
+.calendar-month-daypart {
+  --daypart-accent: #8f5d21;
+  --daypart-bg: rgba(255, 247, 226, 0.74);
+  --daypart-border: rgba(214, 169, 59, 0.28);
+}
+
+.calendar-daypart-morning {
+  --daypart-accent: #8f5d21;
+  --daypart-bg: rgba(255, 247, 226, 0.74);
+  --daypart-border: rgba(214, 169, 59, 0.28);
+}
+
+.calendar-daypart-afternoon {
+  --daypart-accent: #3f76a8;
+  --daypart-bg: rgba(232, 245, 255, 0.76);
+  --daypart-border: rgba(79, 136, 215, 0.24);
+}
+
+.calendar-daypart-evening {
+  --daypart-accent: #7258a8;
+  --daypart-bg: rgba(243, 239, 255, 0.78);
+  --daypart-border: rgba(154, 147, 209, 0.28);
+}
+
+.calendar-daypart {
+  border: 1px solid var(--daypart-border);
+  border-radius: 14px;
+  background: var(--daypart-bg);
+  padding: 8px;
+}
+
+.calendar-daypart.empty {
+  opacity: 0.72;
+}
+
+.calendar-daypart-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 7px;
+  color: var(--daypart-accent);
+}
+
+.calendar-daypart-head strong,
+.calendar-daypart-head em,
+.calendar-daypart-head b {
+  display: block;
+}
+
+.calendar-daypart-head strong {
+  font-size: 13px;
+  font-weight: 950;
+  line-height: 1.1;
+}
+
+.calendar-daypart-head em {
+  margin-top: 2px;
+  color: #7d7178;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.calendar-daypart-head b {
+  flex: 0 0 auto;
+  border: 1px solid var(--daypart-border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--daypart-accent);
+  padding: 3px 7px;
+  font-size: 11px;
+  font-weight: 950;
+}
+
+.calendar-daypart-empty {
+  display: block;
+  border: 1px dashed var(--daypart-border);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.42);
+  color: #958a90;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.calendar-daypart.empty .calendar-time-group {
+  display: none;
 }
 
 .calendar-time-group + .calendar-time-group {

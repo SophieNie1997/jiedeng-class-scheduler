@@ -76,7 +76,7 @@ test("calendar lesson color chips use the soft planner palette", () => {
   assert.equal(getRuleValue(".lesson-detail-panel.periwinkle", "--lesson-accent"), "#6f7fd4");
   assert.equal(getRuleValue(".lesson-detail-panel.peach", "--lesson-accent"), "#df8f70");
   assert.equal(getRuleValue(".lesson-detail-panel.lilac", "--lesson-accent"), "#b487d8");
-  assert.equal(appSource.includes('from "./lessonColors.js?v=20260623-lynn-course-contrast"'), true);
+  assert.equal(appSource.includes('from "./lessonColors.js?v=20260623-daypart-calendar"'), true);
   assert.equal(appSource.includes("getLessonColor,"), true);
   assert.equal(appSource.includes("getLessonColorKey,"), true);
   assert.match(
@@ -101,9 +101,9 @@ test("lesson colors are keyed by teacher and course", () => {
   assert.match(colorKeyFunction, /getLessonCourseKey\(lesson\)/);
 });
 
-test("calendar assets use cache-busted style and app URLs for Lynn course contrast", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260623-lynn-course-contrast"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260623-lynn-course-contrast"), true);
+test("calendar assets use cache-busted style and app URLs for daypart calendar", () => {
+  assert.equal(indexSource.includes("./styles.css?v=20260623-daypart-calendar"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260623-daypart-calendar"), true);
 });
 
 test("calendar defaults to a month overview and drills into a week from lessons", () => {
@@ -114,6 +114,8 @@ test("calendar defaults to a month overview and drills into a week from lessons"
   assert.equal(appSource.includes("calendarViewModeButtons"), true);
   assert.equal(appSource.includes("renderCalendarMonthGrid"), true);
   assert.equal(appSource.includes("renderCalendarMonthWeek"), true);
+  assert.equal(appSource.includes("renderCalendarMonthDaypart"), true);
+  assert.equal(appSource.includes("renderCalendarDaypart"), true);
   assert.equal(appSource.includes("renderCalendarMonthLessonChip"), true);
   assert.match(
     appSource,
@@ -124,6 +126,20 @@ test("calendar defaults to a month overview and drills into a week from lessons"
   assert.ok(css.includes(".calendar-month-week-card"));
   assert.ok(css.includes(".calendar-month-week-grid"));
   assert.ok(css.includes(".calendar-month-lesson"));
+});
+
+test("calendar day cards expose morning afternoon evening sections", () => {
+  assert.equal(appSource.includes("calendar-month-daypart"), true);
+  assert.equal(appSource.includes("calendar-daypart-head"), true);
+  assert.equal(appSource.includes("这段暂无课程"), true);
+  assert.ok(css.includes(".calendar-month-daypart"));
+  assert.ok(css.includes(".calendar-daypart"));
+  assert.ok(css.includes(".calendar-daypart-morning"));
+  assert.ok(css.includes(".calendar-daypart-afternoon"));
+  assert.ok(css.includes(".calendar-daypart-evening"));
+  assert.equal(getRuleValue(".calendar-daypart", "border-radius"), "14px");
+  assert.equal(getRuleValue(".calendar-month-daypart", "border-radius"), "10px");
+  assert.equal(getRuleValue(".calendar-daypart.empty .calendar-time-group", "display"), "none");
 });
 
 test("calendar month overview keeps teacher and course names readable", () => {
@@ -323,7 +339,7 @@ test("course permission teacher column leaves room for full teacher names", () =
 });
 
 test("course permission width update is cache-busted in the stylesheet URL", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260623-lynn-course-contrast"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260623-daypart-calendar"), true);
 });
 
 test("candidate teachers render as compact avatar groups with expandable detail", () => {

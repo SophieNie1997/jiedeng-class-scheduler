@@ -87,6 +87,52 @@ test("builds a week overview grouped by day and time range", () => {
   assert.equal(overview[1].lessonCount, 0);
 });
 
+test("builds fixed morning afternoon evening daypart segments", () => {
+  const weekDates = [
+    { iso: "2026-07-01", label: "周三" },
+  ];
+  const lessons = [
+    makeCalendarLesson("morning", "2026-07-01", "09:00", "11:00"),
+    makeCalendarLesson("afternoon", "2026-07-01", "13:00", "15:00"),
+    makeCalendarLesson("evening", "2026-07-01", "18:30", "20:30"),
+  ];
+
+  const [day] = buildWeekOverview(weekDates, lessons);
+
+  assert.deepEqual(
+    day.segments.map((segment) => [segment.id, segment.label, segment.lessonCount]),
+    [
+      ["morning", "上午", 1],
+      ["afternoon", "下午", 1],
+      ["evening", "晚上", 1],
+    ],
+  );
+  assert.deepEqual(
+    day.segments.map((segment) => segment.groups.flatMap((group) => group.lessons.map((lesson) => lesson.id))),
+    [["morning"], ["afternoon"], ["evening"]],
+  );
+});
+
+test("keeps empty daypart segments visible for sparse days", () => {
+  const weekDates = [
+    { iso: "2026-07-01", label: "周三" },
+  ];
+  const lessons = [
+    makeCalendarLesson("afternoon", "2026-07-01", "13:00", "15:00"),
+  ];
+
+  const [day] = buildWeekOverview(weekDates, lessons);
+
+  assert.deepEqual(
+    day.segments.map((segment) => [segment.id, segment.lessonCount, segment.groups.length]),
+    [
+      ["morning", 0, 0],
+      ["afternoon", 1, 1],
+      ["evening", 0, 0],
+    ],
+  );
+});
+
 test("builds lesson detail with inferred recurring schedule", () => {
   const lessons = [
     makeLesson("a", "2026-07-07"),
@@ -196,6 +242,19 @@ test("lesson detail marks preview lessons for confirmation", () => {
   assert.equal(detail.isPreview, true);
   assert.equal(detail.status, "预排");
 });
+
+function makeCalendarLesson(id, date, startTime, endTime) {
+  return {
+    id,
+    date,
+    startTime,
+    endTime,
+    teacherName: "Lynn",
+    studentName: "Ziyi",
+    course: "Ziyi上门",
+    status: "已确认",
+  };
+}
 
 function makeLesson(id, date) {
   return {

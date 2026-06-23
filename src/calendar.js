@@ -13,24 +13,53 @@ export function buildWeekOverview(weekDates, lessons) {
     const dayLessons = visibleLessons
       .filter((lesson) => lesson.date === day.iso)
       .sort(compareCalendarLessons);
-    const groups = [];
+    const segments = DAYPARTS.map((daypart) => ({
+      ...daypart,
+      lessonCount: 0,
+      groups: [],
+    }));
 
     for (const lesson of dayLessons) {
       const timeRange = `${lesson.startTime}-${lesson.endTime}`;
-      let group = groups.find((item) => item.timeRange === timeRange);
+      const segment = getCalendarDaypartSegment(segments, lesson.startTime);
+      let group = segment.groups.find((item) => item.timeRange === timeRange);
       if (!group) {
         group = { timeRange, lessons: [] };
-        groups.push(group);
+        segment.groups.push(group);
       }
       group.lessons.push(lesson);
+      segment.lessonCount += 1;
     }
 
     return {
       ...day,
       lessonCount: dayLessons.length,
-      groups,
+      groups: segments.flatMap((segment) => segment.groups),
+      segments,
     };
   });
+}
+
+const DAYPARTS = [
+  { id: "morning", label: "上午", rangeLabel: "12:00 前" },
+  { id: "afternoon", label: "下午", rangeLabel: "12:00-18:00" },
+  { id: "evening", label: "晚上", rangeLabel: "18:00 后" },
+];
+
+function getCalendarDaypartSegment(segments, startTime) {
+  const minutes = parseTimeToMinutes(startTime);
+  const segmentId = getCalendarDaypartId(minutes);
+  return segments.find((segment) => segment.id === segmentId) || segments[1] || segments[0];
+}
+
+function getCalendarDaypartId(startMinutes) {
+  if (startMinutes < 12 * 60) {
+    return "morning";
+  }
+  if (startMinutes < 18 * 60) {
+    return "afternoon";
+  }
+  return "evening";
 }
 
 export function buildLessonDetail(lesson, lessons) {
