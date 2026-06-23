@@ -6,6 +6,7 @@ import {
   addCustomTeacher,
   mergeCatalog,
   normalizeCustomCatalog,
+  removeCustomTeacher,
 } from "../src/customCatalog.js";
 
 const baseTeachers = [
@@ -69,4 +70,20 @@ test("custom catalog ignores retired removal metadata from older local storage",
     ["Hanna", "Mia"],
   );
   assert.deepEqual(merged.courses, ["英语陪伴", "AI 财商"]);
+});
+
+test("custom catalog removes a manually added teacher by id", () => {
+  const catalog = normalizeCustomCatalog({
+    teachers: [
+      { id: "mia", name: "Mia" },
+      { id: "nina", name: "Nina" },
+    ],
+  });
+
+  const nextCatalog = removeCustomTeacher(catalog, "mia");
+
+  assert.deepEqual(
+    nextCatalog.teachers.map((teacher) => teacher.name),
+    ["Nina"],
+  );
 });

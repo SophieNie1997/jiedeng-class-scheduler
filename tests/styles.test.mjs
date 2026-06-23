@@ -285,13 +285,16 @@ test("calendar and permission views expose manual creation actions", () => {
   assert.ok(css.includes(".permission-add-form"));
 });
 
-test("course permission view uses only checkbox toggles without delete controls", () => {
-  assert.equal(appSource.includes("removeTeacherFromPermissionGrid"), false);
-  assert.equal(appSource.includes("removeCourseFromPermissionGrid"), false);
-  assert.equal(appSource.includes("data-permission-remove-teacher"), false);
+test("course permission view can delete manually added teachers with the heart confirmation", () => {
+  assert.equal(appSource.includes("openPermissionTeacherDeleteConfirm"), true);
+  assert.equal(appSource.includes("deletePermissionTeacher"), true);
+  assert.equal(appSource.includes("data-permission-delete-teacher"), true);
+  assert.equal(appSource.includes("permission-teacher-name-cell"), true);
+  assert.equal(appSource.includes("确认删除老师"), true);
+  assert.equal(appSource.includes("小心心提醒"), true);
   assert.equal(appSource.includes("data-permission-remove-course"), false);
-  assert.equal(css.includes(".permission-remove-button"), false);
-  assert.equal(css.includes(".permission-name-cell"), false);
+  assert.ok(css.includes(".permission-delete-teacher-button"));
+  assert.ok(css.includes(".permission-teacher-name-cell"));
   assert.ok(css.includes(".permission-toggle"));
 });
 

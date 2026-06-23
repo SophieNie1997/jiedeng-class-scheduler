@@ -2893,6 +2893,56 @@ fieldset {
   text-align: left;
 }
 
+.permission-teacher-name-cell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 0;
+}
+
+.permission-teacher-name-cell > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.permission-delete-teacher-button {
+  display: inline-grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(193, 66, 72, 0.18);
+  border-radius: 999px;
+  background:
+    linear-gradient(180deg, rgba(255, 250, 252, 0.98), rgba(255, 238, 245, 0.72)),
+    rgba(255, 255, 255, 0.72);
+  color: #bd4d62;
+  cursor: pointer;
+  box-shadow:
+    0 8px 18px rgba(215, 125, 151, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.82);
+}
+
+.permission-delete-teacher-button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(193, 66, 72, 0.28);
+  background:
+    linear-gradient(180deg, rgba(255, 245, 250, 1), rgba(255, 225, 236, 0.82)),
+    rgba(255, 255, 255, 0.78);
+}
+
+.permission-delete-teacher-button svg {
+  width: 15px;
+  height: 15px;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .permission-table th:last-child,
 .permission-table td:last-child {
   width: 240px;

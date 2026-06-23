@@ -38,6 +38,19 @@ export function addCustomTeacher(rawCatalog, teacherName) {
   };
 }
 
+export function removeCustomTeacher(rawCatalog, teacherId) {
+  const catalog = normalizeCustomCatalog(rawCatalog);
+  const id = String(teacherId || "").trim();
+  if (!id) {
+    return catalog;
+  }
+
+  return {
+    ...catalog,
+    teachers: catalog.teachers.filter((teacher) => teacher.id !== id),
+  };
+}
+
 export function addCustomCourse(rawCatalog, courseName) {
   const catalog = normalizeCustomCatalog(rawCatalog);
   const normalizedCourses = normalizeCourseList([String(courseName || "").trim()]);

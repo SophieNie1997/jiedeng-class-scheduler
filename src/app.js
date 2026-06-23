@@ -45,7 +45,8 @@ import {
   addCustomTeacher,
   mergeCatalog,
   normalizeCustomCatalog,
-} from "./customCatalog.js?v=20260616-permission-clean";
+  removeCustomTeacher,
+} from "./customCatalog.js?v=20260623-permission-teacher-delete";
 import {
   applyLessonEdits,
   deleteLessonEdit,
@@ -899,6 +900,15 @@ shiftEditorNode.addEventListener("change", (event) => {
   if (event.target.matches("[data-shift-field]")) {
     saveSelectedShiftFromEditor();
   }
+});
+
+permissionGridNode.addEventListener("click", (event) => {
+  const deleteButton = event.target.closest("[data-permission-delete-teacher]");
+  if (!deleteButton) {
+    return;
+  }
+
+  openPermissionTeacherDeleteConfirm(deleteButton.dataset.permissionDeleteTeacher);
 });
 
 permissionGridNode.addEventListener("change", (event) => {
@@ -1972,6 +1982,14 @@ function openBulkShiftConfirm(payload, targetCount) {
   renderStudentDeleteDialog();
 }
 
+function openPermissionTeacherDeleteConfirm(teacherId) {
+  state.pendingConfirm = {
+    type: "permission-teacher-delete",
+    teacherId: teacherId || "",
+  };
+  renderStudentDeleteDialog();
+}
+
 function closeStudentDeleteConfirm() {
   state.pendingConfirm = null;
   renderStudentDeleteDialog();
@@ -2110,6 +2128,21 @@ function buildPendingConfirmDialog() {
     };
   }
 
+  if (pending.type === "permission-teacher-delete") {
+    const teacher = getCandidateTeachers().find((item) => item.id === pending.teacherId);
+    if (!teacher || !isCustomPermissionTeacher(teacher.id)) {
+      return null;
+    }
+
+    return {
+      kicker: "小心心提醒",
+      title: `确定要删除 ${teacher.name} 吗？`,
+      message:
+        "确认后会把这位新增老师从课程权限表里删除，并同步到网站上。历史课程不会被自动删除，请确认不是手滑哦。",
+      actions: [{ label: "确认删除老师", action: "permission-teacher-delete", className: "student-delete-confirm" }],
+    };
+  }
+
   return null;
 }
 
@@ -2137,6 +2170,10 @@ function runPendingConfirmAction(action, scope) {
 
   if (action === "bulk-shift") {
     applyBulkShift(pending.payload);
+  }
+
+  if (action === "permission-teacher-delete") {
+    deletePermissionTeacher(pending.teacherId);
   }
 }
 
@@ -2805,14 +2842,38 @@ function renderCoursePermissions() {
 function renderPermissionRow(teacher, permissions) {
   const allowedCourses = permissions[teacher.id] || [];
   const allowedSet = new Set(allowedCourses);
+  const canDeleteTeacher = isCustomPermissionTeacher(teacher.id);
 
   return `
     <tr>
-      <th scope="row">${escapeHtml(teacher.name)}</th>
+      <th scope="row">
+        <span class="permission-teacher-name-cell">
+          <span>${escapeHtml(teacher.name)}</span>
+          ${
+            canDeleteTeacher
+              ? `
+                <button
+                  class="permission-delete-teacher-button"
+                  data-permission-delete-teacher="${escapeAttribute(teacher.id)}"
+                  type="button"
+                  aria-label="删除 ${escapeAttribute(teacher.name)}"
+                  title="删除这位新增老师"
+                >
+                  ${renderTrashIcon()}
+                </button>
+              `
+              : ""
+          }
+        </span>
+      </th>
       ${getCourses().map((course) => renderPermissionToggle(teacher, course, allowedSet.has(course))).join("")}
       <td class="permission-summary">${escapeHtml(allowedCourses.join("、") || "未开放")}</td>
     </tr>
   `;
+}
+
+function isCustomPermissionTeacher(teacherId) {
+  return normalizeCustomCatalog(state.customCatalog).teachers.some((teacher) => teacher.id === teacherId);
 }
 
 function renderPermissionToggle(teacher, course, isChecked) {
@@ -2876,6 +2937,26 @@ function addTeacherFromPermissionForm() {
   if (input) {
     input.value = "";
   }
+  render();
+}
+
+function deletePermissionTeacher(teacherId) {
+  const id = String(teacherId || "").trim();
+  if (!id || !isCustomPermissionTeacher(id)) {
+    return;
+  }
+
+  if (rejectReadOnlySave()) {
+    return;
+  }
+
+  state.customCatalog = removeCustomTeacher(state.customCatalog, id);
+  const nextPermissions = { ...state.coursePermissions };
+  delete nextPermissions[id];
+  state.coursePermissions = normalizeCoursePermissions(nextPermissions, getCandidateTeacherIds(), getCourses());
+  saveCustomCatalog(state.customCatalog);
+  saveCoursePermissions(state.coursePermissions);
+  refreshPlannerCourseOptions();
   render();
 }
 
