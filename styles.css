@@ -445,6 +445,9 @@ html[data-remote-sync="viewer-unavailable"] .sync-panel {
   display: grid;
   justify-items: end;
   gap: 8px;
+  width: min(100%, 456px);
+  min-width: 0;
+  max-width: 100%;
 }
 
 .calendar-primary-actions {
@@ -457,8 +460,12 @@ html[data-remote-sync="viewer-unavailable"] .sync-panel {
 .calendar-utility-bar {
   display: flex;
   align-items: center;
+  justify-content: end;
   flex-wrap: wrap;
   gap: 6px;
+  width: min(100%, 456px);
+  min-width: 0;
+  max-width: 100%;
   border: 1px solid rgba(239, 189, 203, 0.46);
   border-radius: 18px;
   background: rgba(255, 250, 253, 0.58);
@@ -540,11 +547,14 @@ html[data-remote-sync="viewer-unavailable"] .sync-panel {
 }
 
 .calendar-date-control {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto minmax(132px, 1fr);
   align-items: center;
-  flex: 0 0 auto;
+  flex: 1 1 236px;
   gap: 8px;
   width: auto;
+  min-width: 220px;
+  max-width: 268px;
   margin-left: 4px;
   border-left: 1px solid rgba(239, 189, 203, 0.5);
   padding-left: 10px;
@@ -560,8 +570,8 @@ html[data-remote-sync="viewer-unavailable"] .sync-panel {
 }
 
 .calendar-date-control input {
-  flex: 0 0 150px;
-  width: 150px;
+  width: 100%;
+  min-width: 0;
   height: 34px;
   border-radius: 999px;
   border-color: rgba(220, 185, 192, 0.62);
@@ -5074,6 +5084,7 @@ fieldset {
 
   .calendar-actions {
     justify-items: stretch;
+    width: 100%;
   }
 
   .calendar-primary-actions,
@@ -5081,12 +5092,24 @@ fieldset {
     justify-content: start;
   }
 
+  .calendar-utility-bar {
+    align-items: start;
+    width: 100%;
+  }
+
   .calendar-date-control {
-    width: min(100%, 240px);
+    flex: 0 0 100%;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    margin-left: 0;
+    border-top: 1px solid rgba(239, 189, 203, 0.4);
+    border-left: 0;
+    padding-top: 6px;
+    padding-left: 0;
   }
 
   .calendar-date-control input {
-    flex: 1 1 132px;
     min-width: 0;
   }
 

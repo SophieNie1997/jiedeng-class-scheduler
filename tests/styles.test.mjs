@@ -102,8 +102,8 @@ test("lesson colors are keyed by teacher and course", () => {
 });
 
 test("calendar assets use cache-busted style and app URLs for teacher hours", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260623-toolbar-date-fit"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260623-toolbar-date-fit"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260623-month-picker"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260623-month-picker"), true);
 });
 
 test("calendar defaults to a month overview and drills into a week from lessons", () => {
@@ -162,15 +162,40 @@ test("calendar exposes a teacher duration summary entry and panel", () => {
   assert.ok(css.includes(".teacher-hours-teacher-card"));
   assert.ok(css.includes(".teacher-hours-sticker"));
   assert.equal(getRuleValue(".calendar-actions", "display"), "grid");
+  assert.equal(getRuleValue(".calendar-actions", "width"), "min(100%, 456px)");
+  assert.equal(getRuleValue(".calendar-actions", "min-width"), "0");
+  assert.equal(getRuleValue(".calendar-actions", "max-width"), "100%");
   assert.equal(getRuleValue(".calendar-primary-actions", "display"), "flex");
   assert.equal(getRuleValue(".calendar-utility-bar", "display"), "flex");
-  assert.equal(getRuleValue(".calendar-date-control", "display"), "flex");
-  assert.equal(getRuleValue(".calendar-date-control input", "width"), "150px");
+  assert.equal(getRuleValue(".calendar-utility-bar", "justify-content"), "end");
+  assert.equal(getRuleValue(".calendar-utility-bar", "width"), "min(100%, 456px)");
+  assert.equal(getRuleValue(".calendar-utility-bar", "max-width"), "100%");
+  assert.equal(getRuleValue(".calendar-date-control", "display"), "grid");
+  assert.equal(getRuleValue(".calendar-date-control", "grid-template-columns"), "auto minmax(132px, 1fr)");
+  assert.equal(getRuleValue(".calendar-date-control", "min-width"), "220px");
+  assert.equal(getRuleValue(".calendar-date-control input", "width"), "100%");
   assert.equal(getRuleValue(".teacher-hours-button", "height"), "34px");
   assert.equal(getRuleValue(".calendar-teacher-hours-panel", "display"), "grid");
   assert.equal(getRuleValue(".calendar-teacher-hours-scroll", "overflow-x"), "auto");
   assert.equal(getRuleValue(".calendar-teacher-hours-table", "width"), "100%");
   assert.equal(getRuleValue(".teacher-hours-sticker .teacher-avatar", "width"), "38px");
+});
+
+test("calendar month locator uses a month picker instead of a full date field", () => {
+  assert.equal(appSource.includes("function getCalendarDateControlValue"), true);
+  assert.equal(appSource.includes("function getCalendarDateFromControlValue"), true);
+  assert.equal(appSource.includes("function formatMonthInputValue"), true);
+  assert.equal(appSource.includes('weekStartInput.type = isMonthView ? "month" : "date"'), true);
+  assert.equal(appSource.includes("return `${normalized}-01`;"), true);
+  assert.equal(appSource.includes('weekStartInput.setAttribute("aria-label", isMonthView ? "选择月份" : "选择周起始日期")'), true);
+  assert.match(
+    appSource,
+    /function renderCalendar\(\)[\s\S]*syncCalendarDateControl\(\);[\s\S]*calendarViewModeButtons/,
+  );
+  assert.match(
+    appSource,
+    /weekStartInput\.addEventListener\("input"[\s\S]*getCalendarDateFromControlValue\(weekStartInput\.value\)[\s\S]*state\.calendarMonthAnchor = inputDate/,
+  );
 });
 
 test("calendar exposes student absence and pending makeup UI", () => {
@@ -441,8 +466,8 @@ test("course permission view can delete courses with confirmation", () => {
 
 test("course permission course deletion is cache-busted in app imports", () => {
   assert.equal(appSource.includes("./customCatalog.js?v=20260623-permission-course-delete"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260623-toolbar-date-fit"), true);
-  assert.equal(indexSource.includes("./styles.css?v=20260623-toolbar-date-fit"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260623-month-picker"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260623-month-picker"), true);
 });
 
 test("course permission teacher column leaves room for full teacher names", () => {
@@ -453,7 +478,7 @@ test("course permission teacher column leaves room for full teacher names", () =
 });
 
 test("course permission width update is cache-busted in the stylesheet URL", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260623-toolbar-date-fit"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260623-month-picker"), true);
 });
 
 test("candidate teachers render as compact avatar groups with expandable detail", () => {

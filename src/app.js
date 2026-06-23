@@ -479,12 +479,13 @@ form.addEventListener("input", () => {
 });
 
 weekStartInput.addEventListener("input", () => {
+  const inputDate = getCalendarDateFromControlValue(weekStartInput.value);
   if (state.calendarViewMode === "month") {
-    state.calendarMonthAnchor = weekStartInput.value;
-    state.weekStart = getWeekStartForDate(weekStartInput.value);
+    state.calendarMonthAnchor = inputDate;
+    state.weekStart = getWeekStartForDate(inputDate);
   } else {
-    state.weekStart = weekStartInput.value;
-    state.calendarMonthAnchor = weekStartInput.value;
+    state.weekStart = inputDate;
+    state.calendarMonthAnchor = inputDate;
   }
   shiftWeekStartInput.value = state.weekStart;
   state.selectedLessonId = null;
@@ -508,7 +509,7 @@ calendarViewModeButtons.forEach((button) => {
     } else {
       state.weekStart = getWeekStartForDate(anchorDate);
     }
-    weekStartInput.value = getCalendarDateInputValue();
+    syncCalendarDateControl();
     shiftWeekStartInput.value = state.weekStart;
     renderCalendar();
   });
@@ -1189,6 +1190,27 @@ function getCalendarDateInputValue() {
     : state.weekStart || getWeekStartForDate(getTodayIsoDate());
 }
 
+function getCalendarDateControlValue() {
+  const inputDate = getCalendarDateInputValue();
+  return state.calendarViewMode === "month" ? formatMonthInputValue(inputDate) : inputDate;
+}
+
+function getCalendarDateFromControlValue(value) {
+  const normalized = String(value || "").trim();
+  if (/^\d{4}-\d{2}$/.test(normalized)) {
+    return `${normalized}-01`;
+  }
+  if (/^\d{4}-\d{2}-\d{2}$/.test(normalized)) {
+    return normalized;
+  }
+  return getCalendarDateInputValue();
+}
+
+function formatMonthInputValue(dateString) {
+  const normalized = String(dateString || getTodayIsoDate());
+  return /^\d{4}-\d{2}/.test(normalized) ? normalized.slice(0, 7) : getTodayIsoDate().slice(0, 7);
+}
+
 function getCalendarSelectionDate() {
   if (state.draftLesson?.date) {
     return state.draftLesson.date;
@@ -1242,8 +1264,7 @@ function renderCalendar() {
   });
   const visibleLessons = [...effectiveLessons, ...editedPreviewLessons].filter(isCalendarVisibleLesson);
 
-  calendarDateLabel.textContent = state.calendarViewMode === "month" ? "月份定位" : "周起始";
-  weekStartInput.value = getCalendarDateInputValue();
+  syncCalendarDateControl();
   calendarViewModeButtons.forEach((button) => {
     button.classList.toggle("active", button.dataset.calendarViewMode === state.calendarViewMode);
   });
@@ -1281,6 +1302,14 @@ function renderCalendar() {
       ${renderCalendarWeekMatrix(overview)}
     </div>
   `;
+}
+
+function syncCalendarDateControl() {
+  const isMonthView = state.calendarViewMode === "month";
+  calendarDateLabel.textContent = isMonthView ? "月份定位" : "周起始";
+  weekStartInput.type = isMonthView ? "month" : "date";
+  weekStartInput.value = getCalendarDateControlValue();
+  weekStartInput.setAttribute("aria-label", isMonthView ? "选择月份" : "选择周起始日期");
 }
 
 function renderTeacherHoursPanel(lessons) {
