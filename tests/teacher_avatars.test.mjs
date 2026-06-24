@@ -27,3 +27,14 @@ test("custom teachers receive stable local avatar images", () => {
   assert.equal(existsSync(new URL(`../${libby.image}`, import.meta.url)), true);
   assert.equal(existsSync(new URL(`../${igTeacher.image}`, import.meta.url)), true);
 });
+
+test("custom teachers get a stable accent overlay when they reuse an image", () => {
+  const lynn = getTeacherAvatar("lynn");
+  const igTeacher = getTeacherAvatar("ig");
+  const igTeacherAgain = getTeacherAvatar("ig");
+
+  assert.equal(igTeacher.image, lynn.image);
+  assert.match(igTeacher.accent, /^rgba\(\d+, \d+, \d+, 0\.\d+\)$/);
+  assert.equal(igTeacher.accent, igTeacherAgain.accent);
+  assert.notEqual(igTeacher.accent, lynn.accent || "");
+});

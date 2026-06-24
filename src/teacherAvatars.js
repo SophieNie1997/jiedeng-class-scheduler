@@ -26,6 +26,15 @@ export const defaultTeacherAvatars = [
   { character: "Keroppi", tone: "keroppi", image: "photo/344595809001891606.jpeg" },
 ];
 
+export const defaultTeacherAccentOverlays = [
+  "rgba(255, 232, 143, 0.34)",
+  "rgba(178, 222, 255, 0.32)",
+  "rgba(191, 241, 214, 0.32)",
+  "rgba(255, 204, 226, 0.31)",
+  "rgba(221, 205, 255, 0.32)",
+  "rgba(255, 215, 175, 0.31)",
+];
+
 export function getTeacherAvatar(teacherId, teacherName = "") {
   const key = normalizeTeacherKey(teacherId);
   if (teacherAvatars[key]) {
@@ -36,6 +45,7 @@ export function getTeacherAvatar(teacherId, teacherName = "") {
   const avatar = defaultTeacherAvatars[hashAvatarKey(fallbackKey) % defaultTeacherAvatars.length];
   return {
     ...avatar,
+    accent: defaultTeacherAccentOverlays[hashAvatarKey(`${fallbackKey}:accent`) % defaultTeacherAccentOverlays.length],
     mark: makeAvatarMark(teacherName || teacherId),
   };
 }

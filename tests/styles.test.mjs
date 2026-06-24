@@ -105,8 +105,8 @@ test("lesson colors are keyed by teacher and course", () => {
 });
 
 test("calendar assets use cache-busted style and app URLs for teacher hours", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260624-public-guest-sync"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260624-custom-teacher-avatars"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260624-avatar-accent-overlays"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260624-avatar-accent-overlays"), true);
 });
 
 test("calendar defaults to a month overview and drills into a week from lessons", () => {
@@ -491,8 +491,8 @@ test("course permission view can delete courses with confirmation", () => {
 
 test("custom teacher delivery defaults are cache-busted in app imports", () => {
   assert.equal(appSource.includes("./customCatalog.js?v=20260624-custom-teacher-delivery"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260624-custom-teacher-avatars"), true);
-  assert.equal(indexSource.includes("./styles.css?v=20260624-public-guest-sync"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260624-avatar-accent-overlays"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260624-avatar-accent-overlays"), true);
 });
 
 test("course permission teacher column leaves room for full teacher names", () => {
@@ -503,7 +503,7 @@ test("course permission teacher column leaves room for full teacher names", () =
 });
 
 test("course permission width update is cache-busted in the stylesheet URL", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260624-public-guest-sync"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260624-avatar-accent-overlays"), true);
 });
 
 test("candidate teachers render as compact avatar groups with expandable detail", () => {
@@ -522,7 +522,7 @@ test("candidate teacher avatars use local image files from the photo folder", ()
   const avatarImagePaths = Array.from(teacherAvatarSource.matchAll(/image: "([^"]+)"/g), (match) => match[1]);
 
   assert.ok(avatarImagePaths.length >= 10);
-  assert.equal(appSource.includes("./teacherAvatars.js?v=20260624-custom-teacher-avatars"), true);
+  assert.equal(appSource.includes("./teacherAvatars.js?v=20260624-avatar-accent-overlays"), true);
   assert.equal(appSource.includes("renderTeacherAvatarImage"), true);
   assert.equal(appSource.includes("teacher-avatar-fallback"), true);
   assert.equal(teacherAvatarSource.includes("claire: {"), true);
@@ -534,6 +534,19 @@ test("candidate teacher avatars use local image files from the photo folder", ()
   for (const imagePath of avatarImagePaths) {
     assert.equal(existsSync(new URL(`../${imagePath}`, import.meta.url)), true, `${imagePath} should exist`);
   }
+});
+
+test("custom teacher avatars add a pastel overlay for duplicate images", () => {
+  assert.equal(teacherAvatarSource.includes("defaultTeacherAccentOverlays"), true);
+  assert.equal(appSource.includes("--teacher-avatar-accent"), true);
+  assert.equal(appSource.includes("has-accent"), true);
+  assert.ok(css.includes(".teacher-avatar.has-accent::after"));
+  assert.equal(
+    getRuleValue(".teacher-avatar.has-accent::after", "background"),
+    "var(--teacher-avatar-accent, rgba(255, 232, 143, 0.28))",
+  );
+  assert.equal(getRuleValue(".teacher-avatar img", "z-index"), "1");
+  assert.equal(getRuleValue(".teacher-avatar.has-accent::after", "z-index"), "2");
 });
 
 test("workspace uses planner-style decorative image assets", () => {

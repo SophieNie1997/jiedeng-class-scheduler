@@ -82,7 +82,7 @@ import {
 } from "./overview.js?v=20260618-shift-month-weeks";
 import {
   getTeacherAvatar,
-} from "./teacherAvatars.js?v=20260624-custom-teacher-avatars";
+} from "./teacherAvatars.js?v=20260624-avatar-accent-overlays";
 import {
   buildStudentDirectoryRows,
   filterStudentDirectoryRows,
@@ -1376,9 +1376,13 @@ function renderTeacherAvatarImage(avatar) {
   const image = avatar.image
     ? `<img src="${escapeAttribute(avatar.image)}" alt="" loading="lazy" aria-hidden="true" onerror="this.remove()" />`
     : "";
+  const accentClass = avatar.accent ? " has-accent" : "";
+  const accentStyle = avatar.accent
+    ? ` style="--teacher-avatar-accent: ${escapeAttribute(avatar.accent)};"`
+    : "";
 
   return `
-    <span class="teacher-avatar ${escapeAttribute(avatar.tone)}">
+    <span class="teacher-avatar ${escapeAttribute(avatar.tone)}${accentClass}"${accentStyle}>
       <span class="teacher-avatar-fallback">${escapeHtml(avatar.mark)}</span>
       ${image}
     </span>
