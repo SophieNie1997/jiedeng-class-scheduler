@@ -4694,11 +4694,19 @@ function getEffectiveTeachers() {
 }
 
 function getEffectiveLessons() {
-  const activeTeacherIds = new Set(baseCandidateTeachers.map((teacher) => teacher.id));
+  const activeTeacherIds = getEffectiveLessonTeacherIds();
   return alignExplicitSeriesDates(applyLessonEdits(
     [...existingLessons, ...buildUnavailableLessonsFromShifts(getShiftRoster(), state.shiftOverrides)],
     state.lessonEdits,
   ), { deletedIds: state.lessonEdits.deletedIds }).filter((lesson) => activeTeacherIds.has(lesson.teacherId));
+}
+
+function getEffectiveLessonTeacherIds() {
+  const teacherIds = new Set(baseCandidateTeachers.map((teacher) => teacher.id));
+  getCandidateTeachers().forEach((teacher) => {
+    teacherIds.add(teacher.id);
+  });
+  return teacherIds;
 }
 
 function getCalendarActionLessons() {
