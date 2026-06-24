@@ -37,11 +37,11 @@ For the first shared MVP, each bucket uses last-write-wins. Each remote row incl
 
 ## Security
 
-The frontend uses a Supabase publishable anon key, which is safe to include in static frontend code only when Row Level Security is configured. The recommended MVP policy is:
+The frontend uses a Supabase publishable anon key, which is safe to include in static frontend code only when Row Level Security is configured. The current convenience-first policy is:
 
-- authenticated users can read all rows
-- authenticated users can insert/update the four known bucket rows
-- anonymous users cannot read or write production state
+- anonymous and authenticated users can read all rows
+- anonymous and authenticated users can insert/update the known bucket rows
+- anyone with the public link can edit shared state while `requireAuth: false`
 
 The first code step supports remote sync, but actual shared editing requires the Supabase project URL/key and RLS policies from `docs/deployment/supabase.sql`.
 
@@ -52,4 +52,3 @@ Remote sync failures do not block local editing. The app logs a warning, keeps l
 ## Testing
 
 Unit tests cover the remote store without contacting Supabase by using a fake client. Existing scheduler, calendar, style, and Excel extraction tests remain the regression suite.
-

@@ -90,7 +90,7 @@ import {
 import {
   createRemoteStore,
   loadRemoteStoreConfig,
-} from "./remoteStore.js?v=20260616-supabase-sync";
+} from "./remoteStore.js?v=20260624-public-guest-sync";
 import {
   getLessonColor,
   getLessonColorKey,
@@ -104,7 +104,6 @@ const LESSON_EDIT_RESTORE_RESULT_KEY = "jiedeng-lesson-edits-last-restore";
 const LESSON_EDIT_RESTORE_BACKUP_PREFIX = "jiedeng-lesson-edits-backup-before-restore";
 const CUSTOM_CATALOG_STORAGE_KEY = "jiedeng-custom-catalog-folder-20260617-shift";
 const STUDENT_DIRECTORY_STORAGE_KEY = "jiedeng-student-directory-20260617";
-const TEMPORARY_GUEST_EDIT_MODE = true;
 const REMOTE_BUCKETS = {
   shiftOverrides: "shiftOverrides",
   coursePermissions: "coursePermissions",
@@ -169,6 +168,7 @@ let remoteStore = createRemoteStore({ config: {} });
 let remoteSyncAuthenticated = false;
 let remoteSyncReady = false;
 let remoteSyncCanWrite = false;
+let remoteSyncGuestWriteEnabled = false;
 let saveFeedbackToken = 0;
 
 const READ_ONLY_WRITE_SELECTORS = [
@@ -214,10 +214,7 @@ const READ_ONLY_EDITABLE_SELECTORS = [
 ];
 
 function isWriteLocked() {
-  if (TEMPORARY_GUEST_EDIT_MODE) {
-    return false;
-  }
-  return remoteStore.isConfigured && !remoteSyncAuthenticated;
+  return remoteStore.isConfigured && !remoteSyncCanWrite;
 }
 
 function rejectReadOnlyAction(actionLabel = "操作") {
@@ -4308,12 +4305,15 @@ function clearSelectedShift() {
 async function initializeRemoteSync() {
   try {
     const config = await loadRemoteStoreConfig();
+    const publicGuestWriteEnabled = config.requireAuth === false;
+    remoteSyncGuestWriteEnabled = publicGuestWriteEnabled;
     remoteStore = createRemoteStore({ config });
     document.documentElement.dataset.remoteSync = remoteStore.isConfigured ? "loading" : "local";
     if (!remoteStore.isConfigured) {
       remoteSyncAuthenticated = false;
       remoteSyncReady = false;
       remoteSyncCanWrite = false;
+      remoteSyncGuestWriteEnabled = false;
       state.sync = {
         status: "local",
         email: "",
@@ -4324,8 +4324,10 @@ async function initializeRemoteSync() {
     }
 
     const session = await remoteStore.getSession();
-    const canWrite = Boolean(session);
-    remoteSyncAuthenticated = canWrite;
+    const isAuthenticated = Boolean(session);
+    const canWrite = isAuthenticated || publicGuestWriteEnabled;
+    remoteSyncAuthenticated = isAuthenticated;
+    remoteSyncCanWrite = canWrite;
 
     state.sync = {
       status: "syncing",
@@ -4335,7 +4337,7 @@ async function initializeRemoteSync() {
     renderSyncPanel();
 
     const remoteBuckets = await remoteStore.loadAll();
-    if (!canWrite && Object.keys(remoteBuckets).length === 0 && !TEMPORARY_GUEST_EDIT_MODE) {
+    if (!canWrite && Object.keys(remoteBuckets).length === 0) {
       document.documentElement.dataset.remoteSync = "viewer-unavailable";
       remoteSyncAuthenticated = false;
       remoteSyncReady = false;
@@ -4358,7 +4360,7 @@ async function initializeRemoteSync() {
       render();
     }
 
-    remoteSyncAuthenticated = canWrite;
+    remoteSyncAuthenticated = isAuthenticated;
     remoteSyncReady = true;
     remoteSyncCanWrite = canWrite;
     document.documentElement.dataset.remoteSync = canWrite ? "enabled" : "viewer";
@@ -4366,10 +4368,10 @@ async function initializeRemoteSync() {
       status: canWrite ? "synced" : "viewer",
       email: session?.user?.email || "",
       message: canWrite
-        ? "云端同步已开启，保存后同事会看到更新。"
-        : TEMPORARY_GUEST_EDIT_MODE
-          ? "临时访客编辑模式已开启，可以先编辑并保存在本机；登录恢复后才能同步给同事。"
-          : "云端只读模式已开启，可以查看最新排课；登录后才能编辑同步。",
+        ? isAuthenticated
+          ? "云端同步已开启，保存后同事会看到更新。"
+          : "公开同步模式已开启，无需登录，保存后同事会看到更新。"
+        : "云端只读模式已开启，可以查看最新排课；登录后才能编辑同步。",
     };
     renderSyncPanel();
 
@@ -4387,14 +4389,14 @@ async function initializeRemoteSync() {
   } catch (error) {
     document.documentElement.dataset.remoteSync = "error";
     remoteSyncReady = false;
-    remoteSyncCanWrite = remoteSyncAuthenticated;
+    remoteSyncCanWrite = remoteSyncAuthenticated || remoteSyncGuestWriteEnabled;
     state.sync = {
       status: "error",
       email: state.sync.email,
       message: remoteSyncAuthenticated
         ? "云端同步暂不可用。你已登录，可以先编辑；保存时会先留在本机，稍后刷新可重试同步。"
-        : TEMPORARY_GUEST_EDIT_MODE
-          ? "云端同步暂不可用；临时访客编辑模式已开启，可以先编辑并保存到本机。"
+        : remoteSyncGuestWriteEnabled
+          ? "云端同步暂不可用。公开同步模式已开启，但当前连接失败；保存会先留在本机，稍后刷新可重试同步。"
           : "云端同步暂不可用。请先登录或稍后刷新后再编辑。",
     };
     renderSyncPanel();
@@ -4489,13 +4491,13 @@ async function signOutFromRemoteSync() {
   }
 
   remoteSyncAuthenticated = false;
-  remoteSyncReady = false;
-  remoteSyncCanWrite = false;
+  remoteSyncReady = remoteStore.isConfigured && remoteSyncGuestWriteEnabled;
+  remoteSyncCanWrite = remoteSyncGuestWriteEnabled;
   state.sync = {
-    status: "auth",
+    status: remoteSyncGuestWriteEnabled ? "synced" : "auth",
     email: "",
-    message: TEMPORARY_GUEST_EDIT_MODE
-      ? "已退出云端同步。当前仍可临时编辑并保存在本机，重新登录后才能同步给同事。"
+    message: remoteSyncGuestWriteEnabled
+      ? "已退出账号。公开同步模式仍可无需登录保存到云端。"
       : "已退出云端同步。重新输入邮箱可继续共享编辑。",
   };
   renderSyncPanel();
@@ -4511,7 +4513,7 @@ function renderSyncPanel() {
 
   if (shouldShowAuthForm) {
     const title = state.sync.status === "viewer"
-      ? TEMPORARY_GUEST_EDIT_MODE ? "临时访客编辑模式" : "云端只读模式"
+      ? "云端只读模式"
       : state.sync.status === "error"
         ? "云端同步需要检查"
         : "云端同步登录";
@@ -4522,7 +4524,7 @@ function renderSyncPanel() {
       </div>
       <form id="sync-form" class="sync-form">
         <input name="syncEmail" type="email" placeholder="同事邮箱" value="${escapeAttribute(state.sync.email)}" />
-        <button type="submit">${state.sync.status === "viewer" ? "登录后同步" : "发送登录链接"}</button>
+        <button type="submit">${state.sync.status === "viewer" ? "登录后编辑" : "发送登录链接"}</button>
       </form>
     `;
     applyReadOnlyMode();
@@ -4533,7 +4535,7 @@ function renderSyncPanel() {
     local: "本地保存模式",
     syncing: "正在同步",
     synced: "云端同步已开启",
-    viewer: TEMPORARY_GUEST_EDIT_MODE ? "临时访客编辑模式" : "云端只读模式",
+    viewer: "云端只读模式",
     error: "云端同步需要检查",
   };
   syncPanelNode.innerHTML = `
@@ -4599,8 +4601,8 @@ function saveRemoteBucket(bucket, payload) {
     showSaveFeedback(
       remoteSyncAuthenticated
         ? "数据已保存到本机浏览器；云端同步暂不可用，稍后刷新后会继续尝试。"
-        : TEMPORARY_GUEST_EDIT_MODE
-          ? "数据已保存到本机浏览器。当前临时允许未登录编辑；登录恢复后再同步给同事。"
+        : remoteSyncGuestWriteEnabled
+          ? "数据已保存到本机浏览器；云端同步暂不可用，稍后刷新后会继续尝试。"
           : "数据已保存到本机浏览器。登录云端同步后，同事可看到更新。",
       remoteSyncAuthenticated ? "error" : "local",
     );
@@ -4609,10 +4611,8 @@ function saveRemoteBucket(bucket, payload) {
 
   if (!remoteSyncCanWrite) {
     showSaveFeedback(
-      TEMPORARY_GUEST_EDIT_MODE
-        ? "数据已保存到本机浏览器。当前临时允许未登录编辑；登录恢复后再同步给同事。"
-        : "当前是只读浏览模式。请先用邮箱登录，登录后才能保存并同步。",
-      TEMPORARY_GUEST_EDIT_MODE ? "local" : "viewer",
+      "当前是只读浏览模式。请先用邮箱登录，登录后才能保存并同步。",
+      "viewer",
     );
     return;
   }

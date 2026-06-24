@@ -4,6 +4,6 @@ export const supabaseConfig = {
   appId: "jiedeng-class-scheduler-shift-20260617",
   tableName: "class_system_state",
   updatedBy: "Jiedeng scheduler user",
-  requireAuth: true,
+  requireAuth: false,
   redirectTo: "https://sophienie1997.github.io/jiedeng-class-scheduler/",
 };

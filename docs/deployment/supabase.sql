@@ -37,6 +37,9 @@ execute function public.set_class_system_state_updated_at();
 
 alter table public.class_system_state enable row level security;
 
+grant usage on schema public to anon, authenticated;
+grant select, insert, update on public.class_system_state to anon, authenticated;
+
 drop policy if exists "class system authenticated read" on public.class_system_state;
 drop policy if exists "class system shared read" on public.class_system_state;
 create policy "class system shared read"
@@ -46,19 +49,21 @@ to anon, authenticated
 using (true);
 
 drop policy if exists "class system authenticated insert" on public.class_system_state;
-create policy "class system authenticated insert"
+drop policy if exists "class system shared insert" on public.class_system_state;
+create policy "class system shared insert"
 on public.class_system_state
 for insert
-to authenticated
+to anon, authenticated
 with check (
   bucket in ('shiftOverrides', 'coursePermissions', 'customCatalog', 'lessonEdits', 'studentDirectory')
 );
 
 drop policy if exists "class system authenticated update" on public.class_system_state;
-create policy "class system authenticated update"
+drop policy if exists "class system shared update" on public.class_system_state;
+create policy "class system shared update"
 on public.class_system_state
 for update
-to authenticated
+to anon, authenticated
 using (true)
 with check (
   bucket in ('shiftOverrides', 'coursePermissions', 'customCatalog', 'lessonEdits', 'studentDirectory')

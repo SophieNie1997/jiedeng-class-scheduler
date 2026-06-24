@@ -1,6 +1,7 @@
 const DEFAULT_TABLE_NAME = "class_system_state";
 const DEFAULT_APP_ID = "jiedeng-class-system";
 const DEFAULT_SUPABASE_MODULE_URL = "https://esm.sh/@supabase/supabase-js@2";
+const SUPABASE_CONFIG_IMPORT_VERSION = "20260624-public-guest-sync";
 
 export function createRemoteStore({ config = {}, clientFactory } = {}) {
   const normalizedConfig = normalizeConfig(config);
@@ -166,7 +167,7 @@ export function createRemoteStore({ config = {}, clientFactory } = {}) {
 
 export async function loadRemoteStoreConfig() {
   try {
-    const module = await import("./supabaseConfig.js");
+    const module = await import(`./supabaseConfig.js?v=${SUPABASE_CONFIG_IMPORT_VERSION}`);
     return module.supabaseConfig || module.default || {};
   } catch (error) {
     if (isMissingConfigModule(error)) {

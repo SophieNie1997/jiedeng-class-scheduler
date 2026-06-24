@@ -4,7 +4,6 @@ export const supabaseConfig = {
   appId: "jiedeng-class-system-prod",
   tableName: "class_system_state",
   updatedBy: "ClassSystem user",
-  requireAuth: true,
+  requireAuth: false,
   redirectTo: "https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPOSITORY_NAME/",
 };
-
