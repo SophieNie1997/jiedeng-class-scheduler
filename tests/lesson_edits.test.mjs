@@ -8,6 +8,7 @@ import {
   applyLessonEdits,
   completeAbsenceMakeupEdit,
   deleteLessonEdit,
+  findMatchingManualLessonSeriesBaseId,
   isAbsenceLesson,
   isPendingMakeupLesson,
   markLessonAbsenceEdit,
@@ -117,6 +118,121 @@ test("lesson edits can skip appended lessons for temporary preview schedules", (
   });
 
   assert.deepEqual(applyLessonEdits([], edits, { includeAddedLessons: false }), []);
+});
+
+test("matching manual lesson series reuses an existing base id", () => {
+  const seriesLesson = {
+    teacherId: "ig",
+    teacherName: "IG类课程老师",
+    studentName: "Mona",
+    course: "IG预科班",
+    grade: "Y8",
+    deliveryType: "校区",
+    campus: "碧云",
+    startDate: "2026-06-24",
+    date: "2026-06-24",
+    startTime: "09:00",
+    endTime: "12:00",
+    durationMinutes: 180,
+    sessionCount: 12,
+    recurrenceWeekdays: [1, 3],
+    status: "手动新增",
+  };
+  const edits = setLessonEdit(
+    setLessonEdit({}, "manual-1782279412769", seriesLesson),
+    "manual-1782279412769-2",
+    {
+      ...seriesLesson,
+      date: "2026-06-29",
+    },
+  );
+
+  const match = findMatchingManualLessonSeriesBaseId(edits, {
+    ...seriesLesson,
+    regenerateSeriesDates: true,
+  });
+
+  assert.equal(match, "manual-1782279412769");
+});
+
+test("matching manual lesson series ignores different course groups", () => {
+  const edits = setLessonEdit({}, "manual-2000", {
+    teacherId: "ig",
+    teacherName: "IG类课程老师",
+    studentName: "Mona",
+    course: "测试",
+    grade: "Y8",
+    deliveryType: "校区",
+    campus: "碧云",
+    startDate: "2026-06-24",
+    date: "2026-06-24",
+    startTime: "09:00",
+    endTime: "12:00",
+    durationMinutes: 180,
+    sessionCount: 12,
+    recurrenceWeekdays: [1, 3],
+    status: "手动新增",
+  });
+
+  const match = findMatchingManualLessonSeriesBaseId(edits, {
+    teacherId: "ig",
+    teacherName: "IG类课程老师",
+    studentName: "Mona",
+    course: "IG预科班",
+    grade: "Y8",
+    deliveryType: "校区",
+    campus: "碧云",
+    startDate: "2026-06-24",
+    date: "2026-06-24",
+    startTime: "09:00",
+    endTime: "12:00",
+    durationMinutes: 180,
+    sessionCount: 12,
+    recurrenceWeekdays: [1, 3],
+    status: "手动新增",
+  });
+
+  assert.equal(match, "");
+});
+
+test("matching manual lesson series treats the campus as the delivery identity", () => {
+  const edits = setLessonEdit({}, "manual-3000", {
+    teacherId: "ig",
+    teacherName: "IG类课程老师",
+    studentName: "Mona",
+    course: "IG预科班",
+    grade: "Y8",
+    deliveryType: "校区",
+    campus: "碧云",
+    startDate: "2026-06-24",
+    date: "2026-06-24",
+    startTime: "09:00",
+    endTime: "12:00",
+    durationMinutes: 180,
+    sessionCount: 12,
+    recurrenceWeekdays: [1, 3],
+    status: "手动新增",
+  });
+
+  const match = findMatchingManualLessonSeriesBaseId(edits, {
+    teacherId: "ig",
+    teacherName: "IG类课程老师",
+    studentName: "Mona",
+    course: "IG预科班",
+    grade: "Y8",
+    deliveryType: "线下",
+    campus: "碧云",
+    startDate: "2026-06-24",
+    date: "2026-06-24",
+    startTime: "09:00",
+    endTime: "12:00",
+    durationMinutes: 180,
+    sessionCount: 12,
+    recurrenceWeekdays: [1, 3],
+    status: "手动新增",
+  });
+
+  assert.equal(match, "manual-3000");
 });
 
 test("normalization keeps only supported lesson edit buckets", () => {

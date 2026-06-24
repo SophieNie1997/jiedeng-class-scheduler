@@ -56,6 +56,21 @@ export function setLessonEdit(rawEdits, lessonId, changes) {
   };
 }
 
+export function findMatchingManualLessonSeriesBaseId(rawEdits, lessonChanges) {
+  const edits = normalizeLessonEdits(rawEdits);
+  const targetKey = getManualLessonSeriesKey(lessonChanges);
+  if (!targetKey) {
+    return "";
+  }
+
+  const matchingBaseIds = Object.entries(edits.updates)
+    .filter(([, lesson]) => lesson?.status === "手动新增")
+    .filter(([, lesson]) => getManualLessonSeriesKey(lesson) === targetKey)
+    .map(([id]) => getManualLessonSeriesBaseId(id));
+
+  return Array.from(new Set(matchingBaseIds)).sort(compareManualLessonBaseIds).at(-1) || "";
+}
+
 export function deleteLessonEdit(rawEdits, lessonId) {
   const edits = normalizeLessonEdits(rawEdits);
   const id = String(lessonId);
@@ -148,4 +163,78 @@ function compactChanges(changes) {
   }
 
   return compacted;
+}
+
+function getManualLessonSeriesBaseId(lessonId) {
+  const match = String(lessonId || "").match(/^(manual-\d+)-\d+$/);
+  return match ? match[1] : String(lessonId || "");
+}
+
+function compareManualLessonBaseIds(left, right) {
+  const leftTime = getManualLessonBaseTime(left);
+  const rightTime = getManualLessonBaseTime(right);
+  if (leftTime !== rightTime) {
+    return leftTime - rightTime;
+  }
+  return String(left).localeCompare(String(right));
+}
+
+function getManualLessonBaseTime(lessonId) {
+  const match = String(lessonId || "").match(/^manual-(\d+)/);
+  return match ? Number(match[1]) : 0;
+}
+
+function getManualLessonSeriesKey(lesson) {
+  if (!lesson || typeof lesson !== "object") {
+    return "";
+  }
+  const startDate = normalizeSeriesDate(lesson.startDate || lesson.date);
+  if (!lesson.teacherId || !lesson.studentName || !lesson.course || !startDate || !lesson.startTime) {
+    return "";
+  }
+
+  return [
+    normalizeSeriesText(lesson.teacherId),
+    normalizeSeriesText(lesson.studentName),
+    normalizeSeriesText(lesson.course),
+    normalizeSeriesText(lesson.grade),
+    normalizeSeriesText(lesson.campus),
+    startDate,
+    normalizeSeriesText(lesson.startTime),
+    normalizeSeriesText(lesson.endTime),
+    normalizeSeriesNumber(lesson.durationMinutes),
+    normalizeSeriesNumber(lesson.sessionCount),
+    normalizeSeriesWeekdays(lesson.recurrenceWeekdays, startDate),
+  ].join("|");
+}
+
+function normalizeSeriesText(value) {
+  return String(value || "").trim();
+}
+
+function normalizeSeriesNumber(value) {
+  const number = Number(value);
+  return Number.isFinite(number) ? String(number) : "";
+}
+
+function normalizeSeriesDate(value) {
+  const normalized = normalizeSeriesText(value);
+  return /^\d{4}-\d{2}-\d{2}$/.test(normalized) ? normalized : "";
+}
+
+function normalizeSeriesWeekdays(value, fallbackDate) {
+  const weekdays = Array.isArray(value)
+    ? value.map(Number).filter((day) => Number.isInteger(day) && day >= 1 && day <= 7)
+    : [];
+  const normalizedWeekdays = weekdays.length ? weekdays : [getWeekdayValueFromDateString(fallbackDate)].filter(Boolean);
+  return Array.from(new Set(normalizedWeekdays)).sort((left, right) => left - right).join(",");
+}
+
+function getWeekdayValueFromDateString(dateString) {
+  const normalized = normalizeSeriesDate(dateString);
+  if (!normalized) {
+    return 0;
+  }
+  const day = new Date(`${normalized}T00:00:00Z`).getUTCDay();
+  return day === 0 ? 7 : day || 0;
 }

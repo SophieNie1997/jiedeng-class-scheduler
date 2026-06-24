@@ -59,6 +59,7 @@ import {
   applyLessonEdits,
   completeAbsenceMakeupEdit,
   deleteLessonEdit,
+  findMatchingManualLessonSeriesBaseId,
   isAbsenceLesson,
   isPendingMakeupLesson,
   markLessonAbsenceEdit,
@@ -66,7 +67,7 @@ import {
   restoreDeletedLessonEdits,
   restoreAbsenceLessonEdit,
   setLessonEdit,
-} from "./lessonEdits.js?v=20260623-absence-detail-status";
+} from "./lessonEdits.js?v=20260624-preview-dedupe";
 import {
   alignExplicitSeriesDates,
   deleteLessonsInScope,
@@ -3953,7 +3954,10 @@ function saveSelectedLessonFromDetail(scope = "single", lessonChanges = null) {
   const selectedLessonIsDraft = state.draftLesson?.id === state.selectedLessonId;
   const selectedLessonIsPreview = isPreviewLessonId(state.selectedLessonId);
   if (selectedLessonIsDraft || selectedLessonIsPreview) {
-    const manualLessonId = selectedLessonIsPreview ? `manual-${Date.now()}` : state.selectedLessonId;
+    const matchingManualLessonId = selectedLessonIsPreview
+      ? findMatchingManualLessonSeriesBaseId(state.lessonEdits, changes)
+      : "";
+    const manualLessonId = selectedLessonIsPreview ? matchingManualLessonId || `manual-${Date.now()}` : state.selectedLessonId;
     state.lessonEdits = setManualLessonSeries(state.lessonEdits, manualLessonId, changes);
     state.draftLesson = null;
     if (selectedLessonIsPreview) {

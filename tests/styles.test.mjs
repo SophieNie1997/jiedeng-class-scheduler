@@ -105,7 +105,7 @@ test("lesson colors are keyed by teacher and course", () => {
 
 test("calendar assets use cache-busted style and app URLs for teacher hours", () => {
   assert.equal(indexSource.includes("./styles.css?v=20260624-public-guest-sync"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260624-custom-teacher-schedule"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260624-preview-dedupe"), true);
 });
 
 test("calendar defaults to a month overview and drills into a week from lessons", () => {
@@ -310,7 +310,7 @@ test("candidate preview lessons can be confirmed into synced manual lessons", ()
   );
   assert.match(
     appSource,
-    /function saveSelectedLessonFromDetail[\s\S]*manual-\$\{Date\.now\(\)\}[\s\S]*setManualLessonSeries/,
+    /function saveSelectedLessonFromDetail[\s\S]*findMatchingManualLessonSeriesBaseId\(state\.lessonEdits, changes\)[\s\S]*manual-\$\{Date\.now\(\)\}[\s\S]*setManualLessonSeries/,
   );
   assert.match(
     appSource,
@@ -490,7 +490,7 @@ test("course permission view can delete courses with confirmation", () => {
 
 test("custom teacher delivery defaults are cache-busted in app imports", () => {
   assert.equal(appSource.includes("./customCatalog.js?v=20260624-custom-teacher-delivery"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260624-custom-teacher-schedule"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260624-preview-dedupe"), true);
   assert.equal(indexSource.includes("./styles.css?v=20260624-public-guest-sync"), true);
 });
 
