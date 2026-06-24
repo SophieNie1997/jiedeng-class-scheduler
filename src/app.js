@@ -4427,11 +4427,46 @@ async function requestSyncSignIn(form) {
       ...state.sync,
       status: "error",
       email,
-      message: "登录邮件发送失败，请检查邮箱或 Supabase 配置。",
+      message: getSyncSignInErrorMessage(error),
     };
     renderSyncPanel();
     console.warn("Could not send Supabase magic link.", error);
   }
+}
+
+function getSyncSignInErrorMessage(error) {
+  const code = String(error?.code || "").trim();
+  const message = String(error?.message || "").trim();
+  const status = Number(error?.status || 0);
+  const detail = `${code} ${message} ${error?.name || ""}`.toLowerCase();
+
+  if (detail.includes("invalid") && detail.includes("email")) {
+    return "邮箱格式不对，请检查有没有多打空格、漏掉 @ 或域名。";
+  }
+
+  if (status === 429 || detail.includes("rate") || detail.includes("too many")) {
+    return "登录邮件发送太频繁了。Supabase 默认每个邮箱 60 秒内只能发一次登录邮件，请等 1 分钟后再试。";
+  }
+
+  if (detail.includes("redirect") || detail.includes("not allowed")) {
+    return "登录跳转地址没有被 Supabase 允许。请在 Supabase Auth 的 Redirect URLs 中加入当前 GitHub Pages 地址。";
+  }
+
+  if (
+    (detail.includes("otp") && detail.includes("disabled")) ||
+    (detail.includes("magic") && detail.includes("disabled")) ||
+    (detail.includes("email") && detail.includes("disabled"))
+  ) {
+    return "Supabase 的邮箱 Magic Link 登录没有开启，请检查 Auth 邮件登录设置。";
+  }
+
+  if (detail.includes("smtp") || detail.includes("mail")) {
+    return "Supabase 没能发出登录邮件，请检查 Auth 邮件服务或 SMTP 配置。";
+  }
+
+  return message
+    ? `登录邮件发送失败：${message}`
+    : "登录邮件发送失败，请检查邮箱或 Supabase 配置。";
 }
 
 async function signOutFromRemoteSync() {
