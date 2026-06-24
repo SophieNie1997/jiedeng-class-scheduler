@@ -52,7 +52,7 @@ import {
   normalizeCustomCatalog,
   removeCustomCourse,
   removeCustomTeacher,
-} from "./customCatalog.js?v=20260623-permission-course-delete";
+} from "./customCatalog.js?v=20260624-custom-teacher-delivery";
 import {
   ABSENCE_MAKEUP_DONE,
   ABSENCE_MAKEUP_PENDING,

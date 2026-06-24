@@ -1,6 +1,7 @@
-import { normalizeCourseList, teachingSites } from "./courseCatalog.js";
+import { normalizeCourseList } from "./courseCatalog.js";
 
 const DEFAULT_GRADES = ["G2", "Y3", "Y6", "Y8", "Y9", "大班"];
+const DEFAULT_DELIVERY_TYPES = ["线上", "线下", "上门", "校区", "樱桃"];
 
 export function normalizeCustomCatalog(rawCatalog) {
   const teachers = Array.isArray(rawCatalog?.teachers)
@@ -149,7 +150,7 @@ function buildCustomTeacher({ id, name }) {
     name,
     courses: [],
     grades: DEFAULT_GRADES,
-    deliveryTypes: teachingSites,
+    deliveryTypes: DEFAULT_DELIVERY_TYPES,
     maxWeeklyHours: 24,
     weeklyAvailability: [],
     unavailable: [],

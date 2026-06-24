@@ -105,7 +105,7 @@ test("lesson colors are keyed by teacher and course", () => {
 
 test("calendar assets use cache-busted style and app URLs for teacher hours", () => {
   assert.equal(indexSource.includes("./styles.css?v=20260624-public-guest-sync"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260624-public-guest-sync"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260624-custom-teacher-delivery"), true);
 });
 
 test("calendar defaults to a month overview and drills into a week from lessons", () => {
@@ -480,9 +480,9 @@ test("course permission view can delete courses with confirmation", () => {
   assert.equal(getRuleValue(".permission-delete-course-button", "width"), "26px");
 });
 
-test("course permission course deletion is cache-busted in app imports", () => {
-  assert.equal(appSource.includes("./customCatalog.js?v=20260623-permission-course-delete"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260624-public-guest-sync"), true);
+test("custom teacher delivery defaults are cache-busted in app imports", () => {
+  assert.equal(appSource.includes("./customCatalog.js?v=20260624-custom-teacher-delivery"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260624-custom-teacher-delivery"), true);
   assert.equal(indexSource.includes("./styles.css?v=20260624-public-guest-sync"), true);
 });
 

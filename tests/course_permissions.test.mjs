@@ -7,6 +7,8 @@ import {
   normalizeCoursePermissions,
   setTeacherCoursePermission,
 } from "../src/coursePermissions.js";
+import { deriveDeliveryTypeFromCampus } from "../src/courseCatalog.js";
+import { addCustomTeacher, mergeCatalog } from "../src/customCatalog.js";
 import { matchTeachers } from "../src/scheduler.js";
 
 const courseList = [
@@ -71,6 +73,41 @@ test("editing one permission immediately changes the matching model", () => {
   const matches = matchTeachers(restrictedTeachers, [], requestFor("WAICY 集训"));
 
   assert.deepEqual(matches.map((match) => match.fitIssues), [[], []]);
+});
+
+test("new permission teachers can match offline campus requests after a course is enabled", () => {
+  const courses = [...courseList, "IG预科班"];
+  const catalog = addCustomTeacher({}, "IG类课程老师");
+  const mergedCatalog = mergeCatalog([], courses, catalog);
+  const teacher = {
+    ...mergedCatalog.teachers[0],
+    grades: ["Y8"],
+    weeklyAvailability: [{ weekday: 3, startTime: "09:00", endTime: "12:00" }],
+  };
+  const permissions = setTeacherCoursePermission(
+    {},
+    teacher.id,
+    "IG预科班",
+    true,
+    [teacher.id],
+    courses,
+  );
+  const restrictedTeachers = applyCoursePermissions([teacher], permissions, courses);
+  const matches = matchTeachers(restrictedTeachers, [], {
+    startDate: "2026-06-24",
+    weekdays: [3],
+    startTime: "09:00",
+    durationMinutes: 180,
+    sessionCount: 1,
+    studentName: "Mona",
+    course: "IG预科班",
+    grade: "Y8",
+    deliveryType: deriveDeliveryTypeFromCampus("碧云"),
+    campus: "碧云",
+  });
+
+  assert.deepEqual(matches[0].fitIssues, []);
+  assert.equal(matches[0].availableSessions, 1);
 });
 
 test("normalization keeps saved permissions inside current teacher and course lists", () => {
