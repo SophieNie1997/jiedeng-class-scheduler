@@ -7,6 +7,7 @@ import { lessonColorPalette } from "../src/lessonColors.js";
 
 const css = readFileSync(new URL("../styles.css", import.meta.url), "utf8");
 const appSource = readFileSync(new URL("../src/app.js", import.meta.url), "utf8");
+const teacherAvatarSource = readFileSync(new URL("../src/teacherAvatars.js", import.meta.url), "utf8");
 const remoteStoreSource = readFileSync(new URL("../src/remoteStore.js", import.meta.url), "utf8");
 const indexSource = readFileSync(new URL("../index.html", import.meta.url), "utf8");
 const supabaseSql = readFileSync(new URL("../docs/deployment/supabase.sql", import.meta.url), "utf8");
@@ -105,7 +106,7 @@ test("lesson colors are keyed by teacher and course", () => {
 
 test("calendar assets use cache-busted style and app URLs for teacher hours", () => {
   assert.equal(indexSource.includes("./styles.css?v=20260624-public-guest-sync"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260624-preview-dedupe"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260624-custom-teacher-avatars"), true);
 });
 
 test("calendar defaults to a month overview and drills into a week from lessons", () => {
@@ -490,7 +491,7 @@ test("course permission view can delete courses with confirmation", () => {
 
 test("custom teacher delivery defaults are cache-busted in app imports", () => {
   assert.equal(appSource.includes("./customCatalog.js?v=20260624-custom-teacher-delivery"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260624-preview-dedupe"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260624-custom-teacher-avatars"), true);
   assert.equal(indexSource.includes("./styles.css?v=20260624-public-guest-sync"), true);
 });
 
@@ -510,20 +511,23 @@ test("candidate teachers render as compact avatar groups with expandable detail"
   assert.equal(appSource.includes('class="match-groups"'), true);
   assert.equal(appSource.includes('class="teacher-avatar-button'), true);
   assert.equal(appSource.includes('class="match-detail-card'), true);
-  assert.equal(appSource.includes("美乐蒂"), true);
-  assert.equal(appSource.includes("库洛米"), true);
+  assert.equal(teacherAvatarSource.includes("美乐蒂"), true);
+  assert.equal(teacherAvatarSource.includes("库洛米"), true);
   assert.equal(appSource.includes("weeklyLoadHours"), false);
   assert.ok(css.includes(".teacher-avatar-button"));
   assert.ok(css.includes(".match-detail-card"));
 });
 
 test("candidate teacher avatars use local image files from the photo folder", () => {
-  const avatarImagePaths = Array.from(appSource.matchAll(/image: "([^"]+)"/g), (match) => match[1]);
+  const avatarImagePaths = Array.from(teacherAvatarSource.matchAll(/image: "([^"]+)"/g), (match) => match[1]);
 
   assert.ok(avatarImagePaths.length >= 10);
+  assert.equal(appSource.includes("./teacherAvatars.js?v=20260624-custom-teacher-avatars"), true);
   assert.equal(appSource.includes("renderTeacherAvatarImage"), true);
   assert.equal(appSource.includes("teacher-avatar-fallback"), true);
-  assert.equal(appSource.includes("claire: {"), true);
+  assert.equal(teacherAvatarSource.includes("claire: {"), true);
+  assert.equal(teacherAvatarSource.includes("defaultTeacherAvatars"), true);
+  assert.equal(teacherAvatarSource.includes("hashAvatarKey"), true);
   assert.ok(css.includes(".teacher-avatar img"));
   assert.ok(css.includes(".teacher-avatar-fallback"));
 

@@ -81,6 +81,9 @@ import {
   splitStudentNames,
 } from "./overview.js?v=20260618-shift-month-weeks";
 import {
+  getTeacherAvatar,
+} from "./teacherAvatars.js?v=20260624-custom-teacher-avatars";
+import {
   buildStudentDirectoryRows,
   filterStudentDirectoryRows,
   hideStudentDirectoryRecord,
@@ -281,20 +284,6 @@ function applyReadOnlyMode() {
     }
   });
 }
-
-const teacherAvatars = {
-  claire: { character: "小恶魔", mark: "C", tone: "kuromi", image: "photo/1133570168691764439.jpeg" },
-  sophie: { character: "美乐蒂", mark: "美", tone: "melody", image: "photo/9992430418961551.jpeg" },
-  phebe: { character: "库洛米", mark: "库", tone: "kuromi", image: "photo/551268810646516216.jpeg" },
-  lynn: { character: "玉桂狗", mark: "玉", tone: "cinnamon", image: "photo/2251868558517832.jpeg" },
-  tiana: { character: "布丁狗", mark: "布", tone: "pompom", image: "photo/2885187258130354.jpeg" },
-  catherine: { character: "Hello Kitty", mark: "Kitty", tone: "kitty", image: "photo/657807089360599950.jpeg" },
-  charlotte: { character: "双子星", mark: "星", tone: "kiki", image: "photo/2251868558517840.jpeg" },
-  gioia: { character: "帕恰狗", mark: "帕", tone: "pochacco", image: "photo/2251868558517826.jpeg" },
-  karen: { character: "大耳狗", mark: "耳", tone: "mint", image: "photo/2885187258130352.jpeg" },
-  hanna: { character: "巧克猫", mark: "巧", tone: "chococat", image: "photo/45599014979890058.jpeg" },
-  reece: { character: "Keroppi", mark: "Ker", tone: "keroppi", image: "photo/344595809001891606.jpeg" },
-};
 
 const SHIFT_MONTH_STICKERS = [
   "photo/551268810646516216.jpeg",
@@ -1415,10 +1404,6 @@ function renderConflictLine(conflict) {
 
 function isTeacherAvailable(match) {
   return match.availableSessions === match.totalSessions && match.fitIssues.length === 0;
-}
-
-function getTeacherAvatar(teacherId) {
-  return teacherAvatars[teacherId] || { character: "随机角色", mark: "师", tone: "default" };
 }
 
 function getCalendarDateInputValue() {
