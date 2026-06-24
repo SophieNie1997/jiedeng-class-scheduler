@@ -4445,7 +4445,11 @@ function getSyncSignInErrorMessage(error) {
   }
 
   if (status === 429 || detail.includes("rate") || detail.includes("too many")) {
-    return "登录邮件发送太频繁了。Supabase 默认每个邮箱 60 秒内只能发一次登录邮件，请等 1 分钟后再试。";
+    const retrySeconds = /(?:after|in)\s+(\d+)\s+seconds?/.exec(detail)?.[1];
+    if (retrySeconds) {
+      return `登录邮件发送太频繁了。Supabase 提示还需要等待约 ${retrySeconds} 秒，等窗口结束后再点发送。`;
+    }
+    return "登录邮件被 Supabase 限流了：可能是同邮箱 60 秒窗口还没过，也可能是项目每小时登录邮件额度用完了。请稍后再试；如果一直这样，需要到 Supabase Auth > Rate Limits 或 SMTP 配置里处理。";
   }
 
   if (detail.includes("redirect") || detail.includes("not allowed")) {

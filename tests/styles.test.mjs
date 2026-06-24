@@ -102,8 +102,8 @@ test("lesson colors are keyed by teacher and course", () => {
 });
 
 test("calendar assets use cache-busted style and app URLs for teacher hours", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260624-sync-error-help"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260624-sync-error-help"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260624-rate-limit-help"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260624-rate-limit-help"), true);
 });
 
 test("calendar defaults to a month overview and drills into a week from lessons", () => {
@@ -480,8 +480,8 @@ test("course permission view can delete courses with confirmation", () => {
 
 test("course permission course deletion is cache-busted in app imports", () => {
   assert.equal(appSource.includes("./customCatalog.js?v=20260623-permission-course-delete"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260624-sync-error-help"), true);
-  assert.equal(indexSource.includes("./styles.css?v=20260624-sync-error-help"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260624-rate-limit-help"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260624-rate-limit-help"), true);
 });
 
 test("course permission teacher column leaves room for full teacher names", () => {
@@ -492,7 +492,7 @@ test("course permission teacher column leaves room for full teacher names", () =
 });
 
 test("course permission width update is cache-busted in the stylesheet URL", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260624-sync-error-help"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260624-rate-limit-help"), true);
 });
 
 test("candidate teachers render as compact avatar groups with expandable detail", () => {
@@ -947,7 +947,9 @@ test("app exposes a Supabase sync sign-in panel for shared editing", () => {
   assert.equal(appSource.includes('name="syncEmail"'), true);
   assert.equal(appSource.includes("function getSyncSignInErrorMessage"), true);
   assert.equal(appSource.includes("getSyncSignInErrorMessage(error)"), true);
-  assert.equal(appSource.includes("每个邮箱 60 秒内只能发一次登录邮件"), true);
+  assert.equal(appSource.includes("项目每小时登录邮件额度"), true);
+  assert.equal(appSource.includes("60 秒窗口还没过"), true);
+  assert.equal(appSource.includes("请等 1 分钟后再试"), false);
   assert.equal(appSource.includes("Redirect URLs"), true);
 });
 
