@@ -165,6 +165,7 @@ const state = {
 state.coursePermissions = loadCoursePermissions();
 
 let remoteStore = createRemoteStore({ config: {} });
+let remoteSyncAuthenticated = false;
 let remoteSyncReady = false;
 let remoteSyncCanWrite = false;
 let saveFeedbackToken = 0;
@@ -212,7 +213,7 @@ const READ_ONLY_EDITABLE_SELECTORS = [
 ];
 
 function isWriteLocked() {
-  return remoteStore.isConfigured && (!remoteSyncReady || !remoteSyncCanWrite);
+  return remoteStore.isConfigured && !remoteSyncAuthenticated;
 }
 
 function rejectReadOnlyAction(actionLabel = "操作") {
@@ -4306,6 +4307,7 @@ async function initializeRemoteSync() {
     remoteStore = createRemoteStore({ config });
     document.documentElement.dataset.remoteSync = remoteStore.isConfigured ? "loading" : "local";
     if (!remoteStore.isConfigured) {
+      remoteSyncAuthenticated = false;
       remoteSyncReady = false;
       remoteSyncCanWrite = false;
       state.sync = {
@@ -4318,7 +4320,8 @@ async function initializeRemoteSync() {
     }
 
     const session = await remoteStore.getSession();
-    const canWrite = Boolean(session) || config.requireAuth === false;
+    const canWrite = Boolean(session);
+    remoteSyncAuthenticated = canWrite;
 
     state.sync = {
       status: "syncing",
@@ -4330,6 +4333,7 @@ async function initializeRemoteSync() {
     const remoteBuckets = await remoteStore.loadAll();
     if (!canWrite && Object.keys(remoteBuckets).length === 0) {
       document.documentElement.dataset.remoteSync = "viewer-unavailable";
+      remoteSyncAuthenticated = false;
       remoteSyncReady = false;
       remoteSyncCanWrite = false;
       state.sync = {
@@ -4350,6 +4354,7 @@ async function initializeRemoteSync() {
       render();
     }
 
+    remoteSyncAuthenticated = canWrite;
     remoteSyncReady = true;
     remoteSyncCanWrite = canWrite;
     document.documentElement.dataset.remoteSync = canWrite ? "enabled" : "viewer";
@@ -4376,11 +4381,13 @@ async function initializeRemoteSync() {
   } catch (error) {
     document.documentElement.dataset.remoteSync = "error";
     remoteSyncReady = false;
-    remoteSyncCanWrite = false;
+    remoteSyncCanWrite = remoteSyncAuthenticated;
     state.sync = {
       status: "error",
       email: state.sync.email,
-      message: "云端同步暂不可用。为避免访客误改，请先登录或稍后刷新后再编辑。",
+      message: remoteSyncAuthenticated
+        ? "云端同步暂不可用。你已登录，可以先编辑；保存时会先留在本机，稍后刷新可重试同步。"
+        : "云端同步暂不可用。请先登录或稍后刷新后再编辑。",
     };
     renderSyncPanel();
     console.warn("Supabase sync is unavailable; using local storage only.", error);
@@ -4434,6 +4441,7 @@ async function signOutFromRemoteSync() {
     console.warn("Could not sign out from Supabase.", error);
   }
 
+  remoteSyncAuthenticated = false;
   remoteSyncReady = false;
   remoteSyncCanWrite = false;
   state.sync = {
@@ -4450,7 +4458,7 @@ function renderSyncPanel() {
   }
 
   const shouldShowAuthForm =
-    state.sync.status === "auth" || state.sync.status === "viewer" || (state.sync.status === "error" && !state.sync.email);
+    state.sync.status === "auth" || state.sync.status === "viewer" || (state.sync.status === "error" && !remoteSyncAuthenticated);
 
   if (shouldShowAuthForm) {
     const title = state.sync.status === "viewer"
@@ -4539,7 +4547,12 @@ function applyRemoteBuckets(buckets) {
 
 function saveRemoteBucket(bucket, payload) {
   if (!remoteStore.isConfigured || !remoteSyncReady) {
-    showSaveFeedback("数据已保存到本机浏览器。登录云端同步后，同事可看到更新。", "local");
+    showSaveFeedback(
+      remoteSyncAuthenticated
+        ? "数据已保存到本机浏览器；云端同步暂不可用，稍后刷新后会继续尝试。"
+        : "数据已保存到本机浏览器。登录云端同步后，同事可看到更新。",
+      remoteSyncAuthenticated ? "error" : "local",
+    );
     return;
   }
 
