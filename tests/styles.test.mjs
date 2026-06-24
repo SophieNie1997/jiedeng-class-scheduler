@@ -102,8 +102,8 @@ test("lesson colors are keyed by teacher and course", () => {
 });
 
 test("calendar assets use cache-busted style and app URLs for teacher hours", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260624-rate-limit-help"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260624-rate-limit-help"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260624-guest-edit-mode"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260624-guest-edit-mode"), true);
 });
 
 test("calendar defaults to a month overview and drills into a week from lessons", () => {
@@ -480,8 +480,8 @@ test("course permission view can delete courses with confirmation", () => {
 
 test("course permission course deletion is cache-busted in app imports", () => {
   assert.equal(appSource.includes("./customCatalog.js?v=20260623-permission-course-delete"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260624-rate-limit-help"), true);
-  assert.equal(indexSource.includes("./styles.css?v=20260624-rate-limit-help"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260624-guest-edit-mode"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260624-guest-edit-mode"), true);
 });
 
 test("course permission teacher column leaves room for full teacher names", () => {
@@ -492,7 +492,7 @@ test("course permission teacher column leaves room for full teacher names", () =
 });
 
 test("course permission width update is cache-busted in the stylesheet URL", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260624-rate-limit-help"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260624-guest-edit-mode"), true);
 });
 
 test("candidate teachers render as compact avatar groups with expandable detail", () => {
@@ -953,11 +953,11 @@ test("app exposes a Supabase sync sign-in panel for shared editing", () => {
   assert.equal(appSource.includes("Redirect URLs"), true);
 });
 
-test("unauthenticated shared mode shows a cloud read-only view", () => {
+test("unauthenticated shared mode shows temporary guest editing guidance", () => {
   assert.equal(appSource.includes('document.documentElement.dataset.remoteSync = canWrite ? "enabled" : "viewer"'), true);
   assert.equal(appSource.includes('status: canWrite ? "synced" : "viewer"'), true);
-  assert.equal(appSource.includes("云端只读模式已开启，可以查看最新排课；登录后才能编辑同步。"), true);
-  assert.equal(appSource.includes("当前是只读浏览模式。请先用邮箱登录，登录后才能保存并同步。"), true);
+  assert.equal(appSource.includes("临时访客编辑模式已开启，可以先编辑并保存在本机；登录恢复后才能同步给同事。"), true);
+  assert.equal(appSource.includes("登录后同步"), true);
   assert.equal(appSource.includes("function rejectReadOnlySave()"), true);
   assert.match(appSource, /function saveLessonEdits\(edits\) \{\s+if \(rejectReadOnlySave\(\)\)/);
   assert.equal(appSource.includes('document.documentElement.dataset.remoteSync = "viewer-unavailable"'), true);
@@ -972,7 +972,8 @@ test("unauthenticated shared mode shows a cloud read-only view", () => {
   assert.equal(supabaseSql.includes("for update\nto anon"), false);
 });
 
-test("unauthenticated shared mode disables write controls", () => {
+test("temporary guest edit mode leaves write controls enabled", () => {
+  assert.equal(appSource.includes("const TEMPORARY_GUEST_EDIT_MODE = true"), true);
   assert.equal(appSource.includes("const READ_ONLY_WRITE_SELECTORS = ["), true);
   assert.equal(appSource.includes("function isWriteLocked()"), true);
   assert.equal(appSource.includes("remoteSyncAuthenticated"), true);
@@ -980,9 +981,12 @@ test("unauthenticated shared mode disables write controls", () => {
   assert.equal(appSource.includes("const canWrite = Boolean(session);"), true);
   assert.equal(appSource.includes("const canWrite = Boolean(session) || config.requireAuth === false;"), false);
   const writeLockBody = /function isWriteLocked\(\) \{([\s\S]*?)\n\}/.exec(appSource)?.[1] || "";
+  assert.equal(writeLockBody.includes("TEMPORARY_GUEST_EDIT_MODE"), true);
+  assert.equal(writeLockBody.includes("return false"), true);
   assert.equal(writeLockBody.includes("!remoteSyncAuthenticated"), true);
   assert.equal(writeLockBody.includes("remoteSyncReady"), false);
   assert.equal(writeLockBody.includes('state.sync.status !== "error"'), false);
+  assert.equal(appSource.includes("当前临时允许未登录编辑"), true);
   assert.equal(appSource.includes("云端同步暂不可用。你已登录，可以先编辑"), true);
   assert.equal(appSource.includes("数据已保存到本机浏览器；云端同步暂不可用"), true);
   assert.equal(appSource.includes('document.documentElement.dataset.writeLocked = isWriteLocked() ? "true" : "false"'), true);
