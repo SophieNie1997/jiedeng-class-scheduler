@@ -4,6 +4,7 @@ import assert from "node:assert/strict";
 import * as calendar from "../src/calendar.js";
 
 const {
+  buildWeekTimeline,
   buildLessonDetail,
   buildWeekOverview,
   filterCalendarLessons,
@@ -133,6 +134,55 @@ test("keeps empty daypart segments visible for sparse days", () => {
       ["evening", 0, 0],
     ],
   );
+});
+
+test("builds a fixed weekly time axis with overlapping lessons in separate lanes", () => {
+  const weekDates = [
+    { iso: "2026-07-14", label: "周二" },
+  ];
+  const lessons = [
+    makeCalendarLesson("libby", "2026-07-14", "09:00", "12:00"),
+    makeCalendarLesson("lynn", "2026-07-14", "11:00", "11:30"),
+    makeCalendarLesson("tiana", "2026-07-14", "13:30", "16:30"),
+    makeCalendarLesson("ziyi", "2026-07-14", "15:00", "18:00"),
+    makeCalendarLesson("phebe", "2026-07-14", "15:30", "18:30"),
+  ];
+  const [day] = buildWeekTimeline(buildWeekOverview(weekDates, lessons)).days;
+
+  assert.equal(day.timedItems.length, 5);
+  assert.deepEqual(
+    day.timedItems.map((item) => [item.timeRange, item.laneIndex, item.laneCount]),
+    [
+      ["09:00-12:00", 0, 2],
+      ["11:00-11:30", 1, 2],
+      ["13:30-16:30", 0, 3],
+      ["15:00-18:00", 1, 3],
+      ["15:30-18:30", 2, 3],
+    ],
+  );
+  assert.deepEqual(
+    day.timedItems.map((item) => [item.timeRange, Math.round(item.topPercent * 10) / 10, Math.round(item.heightPercent * 10) / 10]),
+    [
+      ["09:00-12:00", 0, 25],
+      ["11:00-11:30", 16.7, 4.2],
+      ["13:30-16:30", 37.5, 25],
+      ["15:00-18:00", 50, 25],
+      ["15:30-18:30", 54.2, 25],
+    ],
+  );
+});
+
+test("weekly time axis starts at 09:00 and keeps hourly tick marks through the evening", () => {
+  const timeline = buildWeekTimeline(buildWeekOverview(
+    [{ iso: "2026-07-15", label: "周三" }],
+    [makeCalendarLesson("evening", "2026-07-15", "19:00", "21:00")],
+  ));
+
+  assert.equal(timeline.startMinutes, 9 * 60);
+  assert.equal(timeline.endMinutes, 21 * 60);
+  assert.equal(timeline.hourSpan, 12);
+  assert.deepEqual(timeline.hourSlots.map((slot) => slot.label).slice(0, 4), ["09:00", "10:00", "11:00", "12:00"]);
+  assert.equal(timeline.hourSlots.at(-1).label, "21:00");
 });
 
 test("calendar week overview keeps absence markers separate from normal lessons", () => {

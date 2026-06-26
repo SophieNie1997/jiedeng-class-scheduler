@@ -61,6 +61,35 @@ export function buildWeekOverview(weekDates, lessons) {
   });
 }
 
+export function buildWeekTimeline(days, options = {}) {
+  const startMinutes = getTimelineBoundaryMinutes(options.startMinutes, 9 * 60);
+  const minEndMinutes = Math.max(
+    startMinutes + 60,
+    getTimelineBoundaryMinutes(options.minEndMinutes, 21 * 60),
+  );
+  const rawDays = days.map((day) => ({
+    ...day,
+    timedItems: getCalendarWeekTimedItems(day),
+  }));
+  const latestItemEnd = rawDays.reduce(
+    (latest, day) => Math.max(latest, ...day.timedItems.map((item) => item.endMinutes)),
+    minEndMinutes,
+  );
+  const endMinutes = Math.max(minEndMinutes, roundMinutesUpToHour(latestItemEnd));
+  const totalMinutes = Math.max(60, endMinutes - startMinutes);
+
+  return {
+    startMinutes,
+    endMinutes,
+    hourSpan: totalMinutes / 60,
+    hourSlots: buildTimelineHourSlots(startMinutes, endMinutes),
+    days: rawDays.map((day) => ({
+      ...day,
+      timedItems: layoutCalendarTimedItems(day.timedItems, startMinutes, endMinutes),
+    })),
+  };
+}
+
 export function buildTeacherDurationSummary(lessons, { startDate, endDate, teachers = [] } = {}) {
   const visibleLessons = filterCalendarLessons(lessons)
     .filter((lesson) => isDateInRange(lesson.date, startDate, endDate));
@@ -190,6 +219,167 @@ const DAYPARTS = [
   { id: "afternoon", label: "下午", rangeLabel: "12:00-18:00" },
   { id: "evening", label: "晚上", rangeLabel: "18:00 后" },
 ];
+
+function getCalendarWeekTimedItems(day) {
+  const items = [];
+
+  for (const segment of day.segments || []) {
+    for (const group of segment.groups || []) {
+      const [startTime, endTime] = String(group.timeRange || "").split("-");
+      const startMinutes = parseTimeToMinutes(startTime);
+      const endMinutes = normalizeTimelineEndMinutes(startMinutes, parseTimeToMinutes(endTime));
+      if (!Number.isFinite(startMinutes) || !Number.isFinite(endMinutes)) {
+        continue;
+      }
+
+      items.push({
+        type: "lesson-group",
+        id: `${day.iso || ""}-${group.timeRange}`,
+        timeRange: group.timeRange,
+        startTime,
+        endTime,
+        startMinutes,
+        endMinutes,
+        durationMinutes: endMinutes - startMinutes,
+        lessons: group.lessons || [],
+      });
+    }
+
+    for (const lesson of segment.absenceMarkers || []) {
+      const startMinutes = parseTimeToMinutes(lesson.startTime);
+      const endMinutes = normalizeTimelineEndMinutes(startMinutes, parseTimeToMinutes(lesson.endTime));
+      if (!Number.isFinite(startMinutes) || !Number.isFinite(endMinutes)) {
+        continue;
+      }
+
+      items.push({
+        type: "absence",
+        id: `${day.iso || ""}-${lesson.id || lesson.startTime}`,
+        timeRange: `${lesson.startTime}-${lesson.endTime}`,
+        startTime: lesson.startTime,
+        endTime: lesson.endTime,
+        startMinutes,
+        endMinutes,
+        durationMinutes: endMinutes - startMinutes,
+        lesson,
+      });
+    }
+  }
+
+  return items.sort(compareCalendarTimedItems);
+}
+
+function layoutCalendarTimedItems(items, timelineStartMinutes, timelineEndMinutes) {
+  const totalMinutes = Math.max(60, timelineEndMinutes - timelineStartMinutes);
+  return assignCalendarTimedItemLanes(items).map((item) => {
+    const visibleStart = Math.min(Math.max(item.startMinutes, timelineStartMinutes), timelineEndMinutes);
+    const visibleEnd = Math.min(Math.max(item.endMinutes, visibleStart), timelineEndMinutes);
+
+    return {
+      ...item,
+      topPercent: ((visibleStart - timelineStartMinutes) / totalMinutes) * 100,
+      heightPercent: ((visibleEnd - visibleStart) / totalMinutes) * 100,
+      leftPercent: (item.laneIndex / item.laneCount) * 100,
+      widthPercent: 100 / item.laneCount,
+    };
+  });
+}
+
+function assignCalendarTimedItemLanes(items) {
+  const sortedItems = [...items].sort(compareCalendarTimedItems);
+  const clusters = [];
+  let currentCluster = [];
+  let currentClusterEnd = -Infinity;
+
+  for (const item of sortedItems) {
+    if (!currentCluster.length || item.startMinutes < currentClusterEnd) {
+      currentCluster.push(item);
+      currentClusterEnd = Math.max(currentClusterEnd, item.endMinutes);
+      continue;
+    }
+
+    clusters.push(currentCluster);
+    currentCluster = [item];
+    currentClusterEnd = item.endMinutes;
+  }
+
+  if (currentCluster.length) {
+    clusters.push(currentCluster);
+  }
+
+  return clusters.flatMap(assignCalendarTimedClusterLanes);
+}
+
+function assignCalendarTimedClusterLanes(cluster) {
+  const laneEndMinutes = [];
+  const withLanes = cluster.map((item) => {
+    let laneIndex = laneEndMinutes.findIndex((endMinutes) => endMinutes <= item.startMinutes);
+    if (laneIndex < 0) {
+      laneIndex = laneEndMinutes.length;
+      laneEndMinutes.push(item.endMinutes);
+    } else {
+      laneEndMinutes[laneIndex] = item.endMinutes;
+    }
+
+    return {
+      ...item,
+      laneIndex,
+    };
+  });
+  const laneCount = Math.max(1, laneEndMinutes.length);
+
+  return withLanes.map((item) => ({
+    ...item,
+    laneCount,
+  }));
+}
+
+function compareCalendarTimedItems(left, right) {
+  return (
+    left.startMinutes - right.startMinutes ||
+    right.endMinutes - left.endMinutes ||
+    String(left.timeRange || "").localeCompare(String(right.timeRange || "")) ||
+    String(left.id || "").localeCompare(String(right.id || ""))
+  );
+}
+
+function buildTimelineHourSlots(startMinutes, endMinutes) {
+  const totalMinutes = Math.max(60, endMinutes - startMinutes);
+  const slots = [];
+
+  for (let minute = startMinutes; minute <= endMinutes; minute += 60) {
+    slots.push({
+      minutes: minute,
+      label: formatTimelineClock(minute),
+      offsetPercent: ((minute - startMinutes) / totalMinutes) * 100,
+    });
+  }
+
+  return slots;
+}
+
+function getTimelineBoundaryMinutes(value, fallback) {
+  const minutes = Number(value);
+  return Number.isFinite(minutes) ? minutes : fallback;
+}
+
+function normalizeTimelineEndMinutes(startMinutes, endMinutes) {
+  if (!Number.isFinite(startMinutes) || !Number.isFinite(endMinutes)) {
+    return endMinutes;
+  }
+
+  return endMinutes > startMinutes ? endMinutes : startMinutes + 60;
+}
+
+function roundMinutesUpToHour(minutes) {
+  return Math.ceil(minutes / 60) * 60;
+}
+
+function formatTimelineClock(minutes) {
+  const hour = Math.floor(minutes / 60);
+  const minute = minutes % 60;
+  return `${String(hour).padStart(2, "0")}:${String(minute).padStart(2, "0")}`;
+}
 
 function createTeacherWeeklyDurationRow(teacherId, teacherName, weeks) {
   return {
