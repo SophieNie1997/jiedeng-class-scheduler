@@ -1268,6 +1268,13 @@ fieldset {
   -webkit-line-clamp: 2;
 }
 
+.lesson-row.calendar-month-lesson .calendar-month-lesson-site {
+  justify-self: start;
+  max-width: 100%;
+  padding: 2px 5px;
+  font-size: 9px;
+}
+
 .calendar-month-empty {
   display: block;
   border: 1px dashed rgba(239, 189, 203, 0.46);
@@ -1797,6 +1804,17 @@ fieldset {
 }
 
 .lesson-row-main {
+  display: grid;
+  grid-column: 1 / -1;
+  gap: 2px;
+  min-width: 0;
+}
+
+.lesson-row-topline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  align-items: flex-start;
   min-width: 0;
 }
 
@@ -1819,6 +1837,24 @@ fieldset {
   white-space: nowrap;
 }
 
+.lesson-row-site {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(64, 135, 145, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.72);
+  color: #2c6570;
+  padding: 2px 6px;
+  font-size: 10px;
+  font-weight: 950;
+  line-height: 1.08;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .calendar-week-timed-group .lesson-row {
   height: 100%;
   min-height: 0;
@@ -1837,6 +1873,12 @@ fieldset {
   font-size: 10px;
 }
 
+.calendar-week-timed-group .lesson-row-topline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
 .calendar-week-timed-group .lesson-row-time {
   display: inline-block;
   max-width: 100%;
@@ -1852,6 +1894,11 @@ fieldset {
   text-overflow: clip;
   white-space: normal;
   word-break: normal;
+}
+
+.calendar-week-timed-group .lesson-row-site {
+  color: #1f5f6b;
+  font-size: 10px;
 }
 
 .calendar-week-timed-group .lesson-row-copy {
@@ -1883,6 +1930,12 @@ fieldset {
 .calendar-week-timed-group.overlap .lesson-row-time {
   padding: 2px 5px;
   font-size: 10px;
+}
+
+.calendar-week-timed-group.overlap .lesson-row-site {
+  max-width: 100%;
+  padding: 2px 5px;
+  font-size: 9px;
 }
 
 .calendar-week-timed-group.overlap .lesson-row-copy {

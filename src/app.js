@@ -1801,6 +1801,11 @@ function renderCalendarMonthDaypartCell(day, daypart) {
 function renderCalendarMonthLessonChip(lesson) {
   const color = getLessonColor(lesson);
   const isPreview = lesson.status === "预排";
+  const siteLabel = getTeachingSiteLabel(lesson);
+  const siteMarkup = siteLabel
+    ? `<span class="calendar-month-lesson-site lesson-row-site" title="${escapeAttribute(siteLabel)}">${escapeHtml(siteLabel)}</span>`
+    : "";
+
   return `
     <button
       class="calendar-month-lesson lesson-row ${color} ${isPreview ? "preview" : ""}"
@@ -1814,6 +1819,7 @@ function renderCalendarMonthLessonChip(lesson) {
         <span class="calendar-month-lesson-teacher">${escapeHtml(lesson.teacherName)}</span>
         <span class="calendar-month-lesson-course">${escapeHtml(lesson.course)}</span>
       </span>
+      ${siteMarkup}
     </button>
   `;
 }
@@ -1972,6 +1978,12 @@ function renderLessonRow(lesson, options = {}) {
   const timeMarkup = options.timeRange
     ? `<span class="lesson-row-time">${escapeHtml(options.timeRange)}</span>`
     : "";
+  const siteMarkup = detail
+    ? `<span class="lesson-row-site" title="${escapeAttribute(detail)}">${escapeHtml(detail)}</span>`
+    : "";
+  const topLineMarkup = timeMarkup || siteMarkup
+    ? `<span class="lesson-row-topline">${timeMarkup}${siteMarkup}</span>`
+    : "";
 
   return `
     <button
@@ -1982,21 +1994,48 @@ function renderLessonRow(lesson, options = {}) {
       aria-label="查看 ${escapeAttribute(lesson.teacherName)} ${escapeAttribute(lesson.course)} 课程详情"
     >
       <span class="lesson-row-main">
-        ${timeMarkup}
+        ${topLineMarkup}
         <strong>${escapeHtml(lesson.teacherName)}</strong>
         <span class="lesson-row-copy">${escapeHtml(lesson.studentName)} · ${escapeHtml(lesson.course)}</span>
       </span>
-      <small>${escapeHtml(detail || lesson.status || "")}</small>
     </button>
   `;
 }
 
 function getTeachingSiteLabel(lesson) {
+  const location = String(lesson.location || "").trim();
+  if (location) {
+    return location;
+  }
+
   if (lesson.campus) {
     return normalizeCampusForDisplay(lesson.campus);
   }
 
-  return lesson.deliveryType || lesson.status || "";
+  const inferredSite = inferTeachingSiteFromLessonText(lesson);
+  if (inferredSite) {
+    return inferredSite;
+  }
+
+  const deliveryType = String(lesson.deliveryType || "").trim();
+  if (deliveryType) {
+    return deliveryType;
+  }
+
+  return "地点未填";
+}
+
+function inferTeachingSiteFromLessonText(lesson) {
+  const text = [lesson.studentName, lesson.course].filter(Boolean).join(" ");
+  if (text.includes("上门")) {
+    return "上门";
+  }
+
+  if (text.includes("线上")) {
+    return "线上";
+  }
+
+  return "";
 }
 
 function renderLessonDetail(detail) {
