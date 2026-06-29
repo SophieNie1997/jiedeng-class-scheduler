@@ -8,12 +8,14 @@ export function normalizeCustomCatalog(rawCatalog) {
     ? rawCatalog.teachers.map(normalizeCustomTeacher).filter(Boolean)
     : [];
   const courses = normalizeCourseList(Array.isArray(rawCatalog?.courses) ? rawCatalog.courses : []);
+  const grades = normalizeGradeList(rawCatalog?.grades);
   const removedTeacherIds = normalizeIdList(rawCatalog?.removedTeacherIds);
   const removedCourseNames = normalizeCourseNameList(rawCatalog?.removedCourseNames);
 
   return {
     teachers: dedupeTeachers(teachers),
     courses,
+    grades,
     removedTeacherIds,
     removedCourseNames,
   };
@@ -84,6 +86,19 @@ export function addCustomCourse(rawCatalog, courseName) {
   };
 }
 
+export function addCustomGrade(rawCatalog, gradeName) {
+  const catalog = normalizeCustomCatalog(rawCatalog);
+  const normalizedGrades = normalizeGradeList([String(gradeName || "").trim()]);
+  if (!normalizedGrades.length) {
+    return catalog;
+  }
+
+  return {
+    ...catalog,
+    grades: normalizeGradeList([...catalog.grades, ...normalizedGrades]),
+  };
+}
+
 export function removeCustomCourse(rawCatalog, courseName) {
   const catalog = normalizeCustomCatalog(rawCatalog);
   const normalizedCourses = normalizeCourseList([String(courseName || "").trim()]);
@@ -116,6 +131,9 @@ export function mergeCatalog(baseTeachers, baseCourses, rawCatalog, options = {}
   const catalog = normalizeCustomCatalog(rawCatalog);
   const removedTeacherIds = options.excludeRemovedTeachers ? new Set(catalog.removedTeacherIds) : new Set();
   const removedCourseNames = options.excludeRemovedCourses ? new Set(catalog.removedCourseNames) : new Set();
+  const extraGrades = normalizeGradeList(options.extraGrades);
+  const grades = normalizeGradeList([...(options.baseGrades || DEFAULT_GRADES), ...catalog.grades, ...extraGrades]);
+  const teacherExtraGrades = normalizeGradeList([...catalog.grades, ...extraGrades]);
   const baseTeacherIds = new Set(baseTeachers.map((teacher) => teacher.id));
   const baseTeacherNames = new Set(baseTeachers.map((teacher) => teacher.name.toLowerCase()));
   const activeBaseTeachers = baseTeachers.filter((teacher) => !removedTeacherIds.has(teacher.id));
@@ -127,8 +145,11 @@ export function mergeCatalog(baseTeachers, baseCourses, rawCatalog, options = {}
   );
 
   return {
-    teachers: [...activeBaseTeachers, ...customTeachers],
+    teachers: [...activeBaseTeachers, ...customTeachers].map((teacher) =>
+      withExtraTeacherGrades(teacher, teacherExtraGrades),
+    ),
     courses: normalizeCourseList([...baseCourses, ...catalog.courses]).filter((course) => !removedCourseNames.has(course)),
+    grades,
   };
 }
 
@@ -154,6 +175,17 @@ function buildCustomTeacher({ id, name }) {
     maxWeeklyHours: 24,
     weeklyAvailability: [],
     unavailable: [],
+  };
+}
+
+function withExtraTeacherGrades(teacher, extraGrades) {
+  if (!extraGrades.length) {
+    return teacher;
+  }
+
+  return {
+    ...teacher,
+    grades: normalizeGradeList([...(Array.isArray(teacher.grades) ? teacher.grades : []), ...extraGrades]),
   };
 }
 
@@ -198,6 +230,24 @@ function normalizeIdList(rawIds) {
 
 function normalizeCourseNameList(rawCourses) {
   return normalizeCourseList(Array.isArray(rawCourses) ? rawCourses : []);
+}
+
+function normalizeGradeList(rawGrades) {
+  const grades = Array.isArray(rawGrades) ? rawGrades : [];
+  const seen = new Set();
+  const normalized = [];
+
+  for (const rawGrade of grades) {
+    const grade = String(rawGrade || "").trim();
+    if (!grade || seen.has(grade)) {
+      continue;
+    }
+
+    seen.add(grade);
+    normalized.push(grade);
+  }
+
+  return normalized;
 }
 
 function dedupeIds(ids) {

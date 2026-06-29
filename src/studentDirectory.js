@@ -139,6 +139,24 @@ export function filterStudentDirectoryRows(rows, query) {
   return (rows || []).filter((row) => buildStudentSearchText(row).includes(normalizedQuery));
 }
 
+export function getStudentDirectoryGrades(directory) {
+  const normalizedDirectory = normalizeStudentDirectory(directory);
+  const hiddenIds = new Set(normalizedDirectory.hiddenIds);
+  const grades = new Set();
+
+  for (const record of Object.values(normalizedDirectory.records)) {
+    if (!record?.id || hiddenIds.has(record.id)) {
+      continue;
+    }
+    const grade = normalizeText(record.grade);
+    if (grade) {
+      grades.add(grade);
+    }
+  }
+
+  return Array.from(grades).sort(localeSort);
+}
+
 function normalizeStudentDirectoryRecord(record, fallbackId = "") {
   if (!record || typeof record !== "object") {
     return null;

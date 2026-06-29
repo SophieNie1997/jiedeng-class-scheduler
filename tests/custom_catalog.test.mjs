@@ -4,6 +4,7 @@ import assert from "node:assert/strict";
 import * as customCatalog from "../src/customCatalog.js";
 
 const {
+  addCustomGrade,
   addCustomCourse,
   addCustomTeacher,
   hideBaseTeacher,
@@ -129,4 +130,15 @@ test("custom catalog can hide an imported teacher by id", () => {
 
   assert.deepEqual(catalog.removedTeacherIds, ["hanna"]);
   assert.deepEqual(merged.teachers, []);
+});
+
+test("custom catalog adds custom grades to planner options and teacher matching", () => {
+  assert.equal(typeof addCustomGrade, "function");
+
+  const catalog = addCustomGrade({ grades: ["Y10"] }, " 小班 ");
+  const merged = mergeCatalog(baseTeachers, ["英语陪伴"], catalog, { baseGrades: ["G2", "Y6"] });
+
+  assert.deepEqual(catalog.grades, ["Y10", "小班"]);
+  assert.deepEqual(merged.grades, ["G2", "Y6", "Y10", "小班"]);
+  assert.deepEqual(merged.teachers[0].grades, ["Y6", "Y10", "小班"]);
 });

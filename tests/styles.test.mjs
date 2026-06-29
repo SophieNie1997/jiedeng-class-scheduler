@@ -106,7 +106,7 @@ test("lesson colors are keyed by teacher and course", () => {
 
 test("calendar assets use cache-busted style and app URLs for teacher hours", () => {
   assert.equal(indexSource.includes("./styles.css?v=20260626-site-badge"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260626-site-badge"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260629-custom-grades"), true);
 });
 
 test("calendar defaults to a month overview and drills into a week from lessons", () => {
@@ -572,8 +572,9 @@ test("course permission view can delete courses with confirmation", () => {
 });
 
 test("custom teacher delivery defaults are cache-busted in app imports", () => {
-  assert.equal(appSource.includes("./customCatalog.js?v=20260624-custom-teacher-delivery"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260626-site-badge"), true);
+  assert.equal(appSource.includes("./customCatalog.js?v=20260629-custom-grades"), true);
+  assert.equal(appSource.includes("./studentDirectory.js?v=20260629-custom-grades"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260629-custom-grades"), true);
   assert.equal(indexSource.includes("./styles.css?v=20260626-site-badge"), true);
 });
 

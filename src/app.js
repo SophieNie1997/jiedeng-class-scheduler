@@ -45,6 +45,7 @@ import {
   teachingSites,
 } from "./courseCatalog.js?v=20260618-shift-month-weeks";
 import {
+  addCustomGrade,
   addCustomCourse,
   addCustomTeacher,
   hideBaseCourse,
@@ -53,7 +54,7 @@ import {
   normalizeCustomCatalog,
   removeCustomCourse,
   removeCustomTeacher,
-} from "./customCatalog.js?v=20260624-custom-teacher-delivery";
+} from "./customCatalog.js?v=20260629-custom-grades";
 import {
   ABSENCE_MAKEUP_DONE,
   ABSENCE_MAKEUP_PENDING,
@@ -87,11 +88,12 @@ import {
 import {
   buildStudentDirectoryRows,
   filterStudentDirectoryRows,
+  getStudentDirectoryGrades,
   hideStudentDirectoryRecord,
   makeStudentDirectoryId,
   normalizeStudentDirectory,
   setStudentDirectoryRecord,
-} from "./studentDirectory.js?v=20260617-student-search";
+} from "./studentDirectory.js?v=20260629-custom-grades";
 import {
   createRemoteStore,
   loadRemoteStoreConfig,
@@ -346,10 +348,7 @@ app.innerHTML = `
               <span>课程需求</span>
               <select name="course">${renderOptions(getCourses(), "WAICY 集训")}</select>
             </label>
-            <label>
-              <span>年级</span>
-              <select name="grade">${renderOptions(grades, "Y6")}</select>
-            </label>
+            ${renderGradeInputField("年级", "grade", "Y6", "planner-grade-options")}
             <label>
               <span>授课校区</span>
               <select name="campus">${renderOptions(teachingSites, "徐汇")}</select>
@@ -578,12 +577,33 @@ syncPanelNode.addEventListener("click", (event) => {
   signOutFromRemoteSync();
 });
 
-form.addEventListener("input", () => {
+form.addEventListener("input", (event) => {
   if (rejectReadOnlyAction("调整排课条件")) {
     render();
     return;
   }
 
+  const gradeInput = event.target.closest("[name='grade']");
+  if (gradeInput) {
+    refreshPlannerGradeOptions(gradeInput.value);
+  }
+  state.selectedTeacherId = null;
+  render();
+});
+
+form.addEventListener("change", (event) => {
+  const gradeInput = event.target.closest("[name='grade']");
+  if (!gradeInput) {
+    return;
+  }
+
+  if (rejectReadOnlyAction("调整排课年级")) {
+    render();
+    return;
+  }
+
+  rememberCustomGrade(gradeInput.value);
+  refreshPlannerGradeOptions(gradeInput.value);
   state.selectedTeacherId = null;
   render();
 });
@@ -1266,10 +1286,11 @@ initializeRemoteSync();
 function render() {
   const request = readRequest();
   const desiredLessons = expandRecurringLessons(request);
-  const effectiveTeachers = getEffectiveTeachers();
+  const effectiveTeachers = getEffectiveTeachers([request.grade]);
   const effectiveLessons = getEffectiveLessons();
   const matches = matchTeachers(effectiveTeachers, effectiveLessons, request);
 
+  refreshPlannerGradeOptions(request.grade);
   summaryLine.textContent = `${desiredLessons.length} 节课需要匹配，优先看老师时间是否完整覆盖。`;
   matchesNode.innerHTML = renderMatchGroups(matches);
 
@@ -2081,7 +2102,7 @@ function renderLessonDetail(detail) {
       >
         <div class="lesson-detail-grid">
           ${renderStudentNameField(detail.studentName)}
-          ${renderSelectField("年级", "grade", ["", ...grades], detail.grade === "未填写" ? "" : detail.grade)}
+          ${renderGradeInputField("年级", "grade", detail.grade === "未填写" ? "" : detail.grade, "lesson-grade-options")}
           ${renderSelectField("授课校区", "campus", ["", ...teachingSites], getEditableCampusValue(detail.campus))}
           ${renderDetailField("开始日期", "startDate", detail.recurrence.startDate, "date")}
           ${renderReadOnlyField("结束日期", detail.recurrence.endDate, 'data-lesson-end-date-preview="true"')}
@@ -2657,6 +2678,7 @@ function addStudentDirectoryRecordFromForm(studentForm) {
 
   state.studentDirectory = setStudentDirectoryRecord(state.studentDirectory, record);
   saveStudentDirectory(state.studentDirectory);
+  rememberCustomGrade(record.grade);
   studentForm.reset();
   render();
 }
@@ -2688,6 +2710,9 @@ function saveStudentDirectoryField(editableCell) {
 
   state.studentDirectory = setStudentDirectoryRecord(state.studentDirectory, nextRecord);
   saveStudentDirectory(state.studentDirectory);
+  if (field === "grade") {
+    rememberCustomGrade(normalizedValue);
+  }
   render();
 }
 
@@ -4023,6 +4048,7 @@ function saveSelectedLessonFromDetail(scope = "single", lessonChanges = null) {
 
   const selectedLessonIsDraft = state.draftLesson?.id === state.selectedLessonId;
   const selectedLessonIsPreview = isPreviewLessonId(state.selectedLessonId);
+  rememberCustomGrade(changes.grade);
   if (selectedLessonIsDraft || selectedLessonIsPreview) {
     const matchingManualLessonId = selectedLessonIsPreview
       ? findMatchingManualLessonSeriesBaseId(state.lessonEdits, changes)
@@ -4094,7 +4120,7 @@ function readLessonChangesFromDetailForm(detailForm) {
     teacherName: teacher?.name || teacherId,
     studentName: String(formData.get("studentName") || "未填写"),
     course: String(formData.get("course") || "未填写"),
-    grade: String(formData.get("grade") || ""),
+    grade: String(formData.get("grade") || "").trim(),
     deliveryType: campus ? deriveDeliveryTypeFromCampus(campus) : "",
     campus,
     startDate: normalizedStartDate,
@@ -4762,8 +4788,8 @@ function getDefaultShiftLabel(type, campus, startTime, endTime) {
   return buildShiftLabel({ type, campus, startTime, endTime });
 }
 
-function getEffectiveTeachers() {
-  const permissionedTeachers = applyCoursePermissions(getCandidateTeachers(), state.coursePermissions, getCourses());
+function getEffectiveTeachers(extraGrades = []) {
+  const permissionedTeachers = applyCoursePermissions(getCandidateTeachers(extraGrades), state.coursePermissions, getCourses());
   return mergeTeacherShiftOverrides(permissionedTeachers, state.shiftOverrides);
 }
 
@@ -4855,7 +4881,7 @@ function readRequest() {
   return {
     studentName: String(formData.get("studentName") || "新学员"),
     course: String(formData.get("course")),
-    grade: String(formData.get("grade")),
+    grade: String(formData.get("grade") || "").trim(),
     deliveryType: deriveDeliveryTypeFromCampus(campus),
     campus,
     startDate,
@@ -4868,7 +4894,34 @@ function readRequest() {
 
 function renderOptions(values, selectedValue) {
   return values
-    .map((value) => `<option value="${value}" ${value === selectedValue ? "selected" : ""}>${value}</option>`)
+    .map(
+      (value) =>
+        `<option value="${escapeAttribute(value)}" ${value === selectedValue ? "selected" : ""}>${escapeHtml(value)}</option>`,
+    )
+    .join("");
+}
+
+function renderGradeInputField(label, name, value, datalistId) {
+  return `
+    <label>
+      <span>${escapeHtml(label)}</span>
+      <input
+        name="${escapeAttribute(name)}"
+        list="${escapeAttribute(datalistId)}"
+        value="${escapeAttribute(value)}"
+        autocomplete="off"
+        placeholder="选择或输入年级"
+      />
+      <datalist id="${escapeAttribute(datalistId)}">
+        ${renderDatalistOptions(getGradeOptions([value]))}
+      </datalist>
+    </label>
+  `;
+}
+
+function renderDatalistOptions(values) {
+  return values
+    .map((value) => `<option value="${escapeAttribute(value)}">${escapeHtml(value)}</option>`)
     .join("");
 }
 
@@ -4981,12 +5034,27 @@ function getWeekdayValue(dateString) {
   return day === 0 ? 7 : day || 1;
 }
 
-function getCandidateTeachers() {
-  return mergeCatalog(baseCandidateTeachers, baseCourses, state.customCatalog, { excludeRemovedTeachers: true }).teachers;
+function getCandidateTeachers(extraGrades = []) {
+  return mergeCatalog(baseCandidateTeachers, baseCourses, state.customCatalog, {
+    excludeRemovedTeachers: true,
+    baseGrades: grades,
+    extraGrades: getExtraGradeOptions(extraGrades),
+  }).teachers;
 }
 
 function getCourses() {
   return mergeCatalog(baseCandidateTeachers, baseCourses, state.customCatalog, { excludeRemovedCourses: true }).courses;
+}
+
+function getGradeOptions(extraGrades = []) {
+  return mergeCatalog(baseCandidateTeachers, baseCourses, state.customCatalog, {
+    baseGrades: grades,
+    extraGrades: getExtraGradeOptions(extraGrades),
+  }).grades;
+}
+
+function getExtraGradeOptions(extraGrades = []) {
+  return [...getStudentDirectoryGrades(state.studentDirectory), ...extraGrades];
 }
 
 function getShiftRoster() {
@@ -5010,6 +5078,36 @@ function refreshPlannerCourseOptions() {
   if (!getCourses().includes(selectedValue)) {
     courseSelect.value = getCourses()[0] || "";
   }
+}
+
+function refreshPlannerGradeOptions(selectedValue = "") {
+  const gradeInput = form.querySelector('[name="grade"]');
+  const gradeOptions = form.querySelector("#planner-grade-options");
+  if (!gradeInput || !gradeOptions) {
+    return;
+  }
+
+  const currentValue = selectedValue || gradeInput.value;
+  gradeOptions.innerHTML = renderDatalistOptions(getGradeOptions([currentValue]));
+}
+
+function rememberCustomGrade(value) {
+  const grade = String(value || "").trim();
+  const currentCatalog = normalizeCustomCatalog(state.customCatalog);
+  if (!grade || grades.includes(grade) || currentCatalog.grades.includes(grade)) {
+    return false;
+  }
+
+  const nextCatalog = addCustomGrade(state.customCatalog, grade);
+  const nextGrades = normalizeCustomCatalog(nextCatalog).grades;
+  const currentGrades = currentCatalog.grades;
+  if (nextGrades.join("\u0000") === currentGrades.join("\u0000")) {
+    return false;
+  }
+
+  state.customCatalog = nextCatalog;
+  saveCustomCatalog(state.customCatalog);
+  return true;
 }
 
 function loadCustomCatalog() {

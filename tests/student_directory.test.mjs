@@ -4,6 +4,7 @@ import assert from "node:assert/strict";
 import {
   buildStudentDirectoryRows,
   filterStudentDirectoryRows,
+  getStudentDirectoryGrades,
   hideStudentDirectoryRecord,
   makeStudentDirectoryId,
   normalizeStudentDirectory,
@@ -137,4 +138,28 @@ test("student directory search matches names, contact details, and course fields
     ["Ivan"],
   );
   assert.deepEqual(filterStudentDirectoryRows(rows, "不存在的小纸条"), []);
+});
+
+test("student directory exposes grades from manually edited student records", () => {
+  const directory = normalizeStudentDirectory({
+    records: {
+      [makeStudentDirectoryId("新同学")]: {
+        id: makeStudentDirectoryId("新同学"),
+        name: "新同学",
+        grade: "小班",
+      },
+      [makeStudentDirectoryId("Noah")]: {
+        id: makeStudentDirectoryId("Noah"),
+        name: "Noah",
+        grade: "Y10",
+      },
+      [makeStudentDirectoryId("Blank")]: {
+        id: makeStudentDirectoryId("Blank"),
+        name: "Blank",
+        grade: " ",
+      },
+    },
+  });
+
+  assert.deepEqual(getStudentDirectoryGrades(directory), ["小班", "Y10"]);
 });
