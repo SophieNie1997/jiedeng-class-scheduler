@@ -262,6 +262,26 @@ test("builds week card sections with vertical conflict hints and absence cards",
   );
 });
 
+test("builds shared daypart time slots so later starts do not align with earlier starts", () => {
+  const weekDates = [
+    { iso: "2026-07-01", label: "周三" },
+    { iso: "2026-07-02", label: "周四" },
+  ];
+  const lessons = [
+    makeCalendarLesson("nine", "2026-07-01", "09:00", "12:00"),
+    makeCalendarLesson("nine-thirty", "2026-07-02", "09:30", "11:30"),
+  ];
+
+  const [wednesday, thursday] = calendar.buildWeekCardSections(weekDates, lessons);
+  const wednesdayMorning = wednesday.segments.find((segment) => segment.id === "morning");
+  const thursdayMorning = thursday.segments.find((segment) => segment.id === "morning");
+
+  assert.deepEqual(wednesdayMorning.slotStarts, ["09:00", "09:30"]);
+  assert.deepEqual(thursdayMorning.slotStarts, ["09:00", "09:30"]);
+  assert.deepEqual(wednesdayMorning.cards.map((card) => [card.lesson.id, card.slotStart]), [["nine", "09:00"]]);
+  assert.deepEqual(thursdayMorning.cards.map((card) => [card.lesson.id, card.slotStart]), [["nine-thirty", "09:30"]]);
+});
+
 test("builds teacher duration summary for a date range", () => {
   assert.equal(typeof calendar.buildTeacherDurationSummary, "function");
 

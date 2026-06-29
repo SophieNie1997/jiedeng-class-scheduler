@@ -21,7 +21,7 @@ import {
   buildWeekOverview,
   filterCalendarLessons,
   isCalendarVisibleLesson,
-} from "./calendar.js?v=20260629-week-cards";
+} from "./calendar.js?v=20260629-slot-align";
 import {
   buildLessonsForTeacher,
   expandRecurringLessons,
@@ -1870,9 +1870,9 @@ function renderCalendarWeekDayHead(day) {
   `;
 }
 
-function renderCalendarDaypartAxis(daypart, lessonCount) {
+function renderCalendarDaypartAxis(daypart, lessonCount, rowSpan = 1) {
   return `
-    <span class="calendar-daypart-axis">
+    <span class="calendar-daypart-axis" style="grid-row: span ${escapeAttribute(String(rowSpan))};">
       <strong>${escapeHtml(daypart.label)}</strong>
       <em>${escapeHtml(daypart.rangeLabel)}</em>
       <b>${lessonCount === 0 ? "空" : `${lessonCount} 节`}</b>
@@ -1885,24 +1885,37 @@ function renderCalendarWeekSectionRow(daypart, days) {
     (sum, day) => sum + getCalendarDaypartSegment(day, daypart).lessonCount,
     0,
   );
+  const slotStarts = getCalendarWeekSectionSlotStarts(daypart, days);
+  const slotCount = Math.max(1, slotStarts.length);
 
   return `
     <div class="calendar-week-section-row calendar-daypart-${daypart.id}">
-      ${renderCalendarDaypartAxis(daypart, rowLessonCount)}
-      ${days.map((day) => renderCalendarWeekSectionCell(day, daypart)).join("")}
+      ${renderCalendarDaypartAxis(daypart, rowLessonCount, slotCount)}
+      ${slotStarts.length
+        ? slotStarts.map((slotStart) => days.map((day) => renderCalendarWeekSectionCell(day, daypart, slotStart)).join("")).join("")
+        : days.map((day) => renderCalendarWeekSectionCell(day, daypart, "")).join("")}
     </div>
   `;
 }
 
-function renderCalendarWeekSectionCell(day, daypart) {
+function getCalendarWeekSectionSlotStarts(daypart, days) {
+  const slotStarts = getCalendarDaypartSegment(days[0] || {}, daypart).slotStarts || [];
+  return slotStarts.length ? slotStarts : [];
+}
+
+function renderCalendarWeekSectionCell(day, daypart, slotStart) {
   const segment = getCalendarDaypartSegment(day, daypart);
-  const cards = segment.cards || [];
+  const cards = slotStart
+    ? (segment.cards || []).filter((card) => card.slotStart === slotStart)
+    : [];
+  const slotLabel = slotStart ? `${slotStart} 开始` : "无课";
 
   if (!cards.length) {
     return `
       <div
         class="calendar-week-section-cell empty"
-        aria-label="${escapeAttribute(`${day.label} ${daypart.label}无课`)}"
+        aria-label="${escapeAttribute(`${day.label} ${daypart.label}${slotLabel}无课`)}"
+        data-week-slot-start="${escapeAttribute(slotStart)}"
       ></div>
     `;
   }
@@ -1910,7 +1923,8 @@ function renderCalendarWeekSectionCell(day, daypart) {
   return `
     <div
       class="calendar-week-section-cell"
-      aria-label="${escapeAttribute(`${day.label} ${daypart.label}${cards.length}张课程卡片`)}"
+      aria-label="${escapeAttribute(`${day.label} ${daypart.label}${slotLabel}${cards.length}张课程卡片`)}"
+      data-week-slot-start="${escapeAttribute(slotStart)}"
     >
       <span class="calendar-week-card-stack">
         ${cards.map((card) => renderCalendarWeekCard(card)).join("")}

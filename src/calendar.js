@@ -91,10 +91,14 @@ export function buildWeekTimeline(days, options = {}) {
 }
 
 export function buildWeekCardSections(weekDates, lessons) {
-  return buildWeekOverview(weekDates, lessons).map((day) => ({
+  const days = buildWeekOverview(weekDates, lessons);
+  const slotStartsByDaypart = buildCalendarWeekSlotStarts(days);
+
+  return days.map((day) => ({
     ...day,
     segments: day.segments.map((segment) => ({
       ...segment,
+      slotStarts: slotStartsByDaypart.get(segment.id) || [],
       cards: buildCalendarSegmentCards(segment),
     })),
   }));
@@ -230,6 +234,40 @@ const DAYPARTS = [
   { id: "evening", label: "晚上", rangeLabel: "18:00 后" },
 ];
 
+function buildCalendarWeekSlotStarts(days) {
+  const slotsByDaypart = new Map(DAYPARTS.map((daypart) => [daypart.id, new Set()]));
+
+  for (const day of days) {
+    for (const segment of day.segments || []) {
+      const slotSet = slotsByDaypart.get(segment.id);
+      if (!slotSet) {
+        continue;
+      }
+
+      for (const group of segment.groups || []) {
+        for (const lesson of group.lessons || []) {
+          if (lesson.startTime) {
+            slotSet.add(lesson.startTime);
+          }
+        }
+      }
+
+      for (const lesson of segment.absenceMarkers || []) {
+        if (lesson.startTime) {
+          slotSet.add(lesson.startTime);
+        }
+      }
+    }
+  }
+
+  return new Map(
+    Array.from(slotsByDaypart.entries()).map(([daypartId, slotSet]) => [
+      daypartId,
+      Array.from(slotSet).sort(compareCalendarTimeStrings),
+    ]),
+  );
+}
+
 function buildCalendarSegmentCards(segment) {
   const lessonCards = (segment.groups || []).flatMap((group) =>
     (group.lessons || []).map((lesson) => createCalendarLessonCard(lesson, "lesson")),
@@ -267,9 +305,14 @@ function createCalendarLessonCard(lesson, type) {
     endTime: lesson.endTime,
     startMinutes,
     endMinutes,
+    slotStart: lesson.startTime,
     timeRange: formatCardTimeRange(lesson.startTime, lesson.endTime),
     title: statusLabel,
   };
+}
+
+function compareCalendarTimeStrings(left, right) {
+  return parseTimeToMinutes(left) - parseTimeToMinutes(right) || String(left).localeCompare(String(right));
 }
 
 function findPreviousOverlappingLesson(card, previousLessonCards) {
