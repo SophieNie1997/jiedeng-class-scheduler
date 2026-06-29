@@ -1755,17 +1755,6 @@ fieldset {
   color: #a32d2d;
 }
 
-.calendar-overlap-hint {
-  display: block;
-  border-radius: 5px;
-  background: #fcebeb;
-  color: #a32d2d;
-  padding: 3px 5px;
-  font-size: 9px;
-  font-weight: 850;
-  line-height: 1.25;
-}
-
 .lesson-row {
   position: relative;
   display: grid;

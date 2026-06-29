@@ -21,7 +21,7 @@ import {
   buildWeekOverview,
   filterCalendarLessons,
   isCalendarVisibleLesson,
-} from "./calendar.js?v=20260629-slot-align";
+} from "./calendar.js?v=20260629-no-overlap-hints";
 import {
   buildLessonsForTeacher,
   expandRecurringLessons,
@@ -1953,7 +1953,6 @@ function renderCalendarWeekCard(card) {
   return `
     <span class="calendar-week-card-shell">
       ${cardMarkup}
-      ${card.overlapHint ? renderCalendarOverlapHint(card.overlapHint) : ""}
     </span>
   `;
 }
@@ -2005,10 +2004,6 @@ function renderCalendarWeekAbsenceCard(card) {
       ${siteMarkup}
     </button>
   `;
-}
-
-function renderCalendarOverlapHint(hint) {
-  return `<span class="calendar-overlap-hint">${escapeHtml(hint.text)}</span>`;
 }
 
 function renderAbsenceMarkerButton(lesson, options = {}) {

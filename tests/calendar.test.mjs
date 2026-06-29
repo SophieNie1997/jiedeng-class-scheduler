@@ -205,7 +205,7 @@ test("calendar week overview keeps absence markers separate from normal lessons"
   assert.equal(afternoon.absenceMarkers[0].id, "absence");
 });
 
-test("builds week card sections with vertical conflict hints and absence cards", () => {
+test("builds week card sections without overlap hints and keeps absence cards", () => {
   assert.equal(typeof calendar.buildWeekCardSections, "function");
 
   const weekDates = [
@@ -240,10 +240,10 @@ test("builds week card sections with vertical conflict hints and absence cards",
   const evening = wednesday.segments.find((segment) => segment.id === "evening");
 
   assert.deepEqual(
-    afternoon.cards.map((card) => [card.type, card.lesson.id, card.timeRange, card.overlapHint?.text || ""]),
+    afternoon.cards.map((card) => [card.type, card.lesson.id, card.timeRange, "overlapHint" in card]),
     [
-      ["lesson", "tiana", "13:30–16:30", ""],
-      ["lesson", "ziyi", "15:00–18:00", "⚠ 15:00–16:30 与 Tiana 重叠"],
+      ["lesson", "tiana", "13:30–16:30", false],
+      ["lesson", "ziyi", "15:00–18:00", false],
     ],
   );
   assert.equal("topPercent" in afternoon.cards[0], false);

@@ -105,8 +105,8 @@ test("lesson colors are keyed by teacher and course", () => {
 });
 
 test("calendar assets use cache-busted style and app URLs for teacher hours", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260629-week-cards"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260629-slot-align"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260629-no-overlap-hints"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260629-no-overlap-hints"), true);
 });
 
 test("calendar defaults to a month overview and drills into a week from lessons", () => {
@@ -138,7 +138,7 @@ test("calendar defaults to a month overview and drills into a week from lessons"
 test("calendar exposes a teacher duration summary entry and panel", () => {
   assert.equal(appSource.includes("buildTeacherWeeklyDurationTable"), true);
   assert.equal(appSource.includes("buildWeekCardSections"), true);
-  assert.equal(appSource.includes("./calendar.js?v=20260629-slot-align"), true);
+  assert.equal(appSource.includes("./calendar.js?v=20260629-no-overlap-hints"), true);
   assert.equal(appSource.includes("includeUnlistedTeachers: false"), true);
   assert.equal(appSource.includes('id="toggle-teacher-hours"'), true);
   assert.equal(appSource.includes('id="teacher-hours-panel"'), true);
@@ -258,7 +258,8 @@ test("calendar views align month and week daypart card rows across date columns"
   assert.equal(appSource.includes("calendar-week-section-row"), true);
   assert.equal(appSource.includes("calendar-week-section-cell"), true);
   assert.equal(appSource.includes("renderCalendarWeekLessonCard"), true);
-  assert.equal(appSource.includes("renderCalendarOverlapHint"), true);
+  assert.equal(appSource.includes("renderCalendarOverlapHint"), false);
+  assert.equal(appSource.includes("calendar-overlap-hint"), false);
   assert.equal(appSource.includes("getCalendarWeekSectionSlotStarts"), true);
   assert.equal(appSource.includes("data-week-slot-start"), true);
   assert.equal(appSource.includes("renderCalendarWeekSectionCell(day, daypart, slotStart)"), true);
@@ -304,7 +305,7 @@ test("calendar views align month and week daypart card rows across date columns"
   assert.ok(css.includes(".calendar-week-section-row"));
   assert.ok(css.includes(".calendar-week-section-cell"));
   assert.ok(css.includes(".calendar-week-lesson-card"));
-  assert.ok(css.includes(".calendar-overlap-hint"));
+  assert.equal(css.includes(".calendar-overlap-hint"), false);
   assert.ok(css.includes(".calendar-daypart-morning"));
   assert.ok(css.includes(".calendar-daypart-afternoon"));
   assert.ok(css.includes(".calendar-daypart-evening"));
@@ -324,10 +325,6 @@ test("calendar views align month and week daypart card rows across date columns"
   assert.equal(getRuleValue(".lesson-row-site", "display"), "inline-flex");
   assert.equal(getRuleValue(".lesson-row-site", "font-weight"), "950");
   assert.equal(getRuleValue(".lesson-row-site", "background"), "rgba(255, 255, 255, 0.86)");
-  assert.equal(getRuleValue(".calendar-overlap-hint", "background"), "#fcebeb");
-  assert.equal(getRuleValue(".calendar-overlap-hint", "color"), "#a32d2d");
-  assert.equal(getRuleValue(".calendar-overlap-hint", "font-size"), "9px");
-  assert.equal(getRuleValue(".calendar-overlap-hint", "border-radius"), "5px");
   assert.equal(getRuleValue(".calendar-week-absence-card", "border-style"), "dashed");
   assert.equal(getRuleValue(".calendar-week-absence-card strong", "color"), "#a32d2d");
   assert.equal(getRuleValue(".calendar-daypart-morning", "--daypart-bg"), "#fff9f8");
@@ -569,8 +566,8 @@ test("course permission view can delete courses with confirmation", () => {
 test("custom teacher delivery defaults are cache-busted in app imports", () => {
   assert.equal(appSource.includes("./customCatalog.js?v=20260629-custom-grades"), true);
   assert.equal(appSource.includes("./studentDirectory.js?v=20260629-custom-grades"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260629-slot-align"), true);
-  assert.equal(indexSource.includes("./styles.css?v=20260629-week-cards"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260629-no-overlap-hints"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260629-no-overlap-hints"), true);
 });
 
 test("course permission teacher column leaves room for full teacher names", () => {
@@ -581,7 +578,7 @@ test("course permission teacher column leaves room for full teacher names", () =
 });
 
 test("course permission width update is cache-busted in the stylesheet URL", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260629-week-cards"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260629-no-overlap-hints"), true);
 });
 
 test("candidate teachers render as compact avatar groups with expandable detail", () => {

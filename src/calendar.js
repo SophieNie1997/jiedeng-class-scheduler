@@ -273,24 +273,7 @@ function buildCalendarSegmentCards(segment) {
     (group.lessons || []).map((lesson) => createCalendarLessonCard(lesson, "lesson")),
   );
   const absenceCards = (segment.absenceMarkers || []).map((lesson) => createCalendarLessonCard(lesson, "absence"));
-  const sortedCards = [...lessonCards, ...absenceCards].sort(compareCalendarCards);
-  const previousLessonCards = [];
-
-  return sortedCards.map((card) => {
-    if (card.type !== "lesson") {
-      return card;
-    }
-
-    const overlapSource = findPreviousOverlappingLesson(card, previousLessonCards);
-    const cardWithHint = overlapSource
-      ? {
-          ...card,
-          overlapHint: createCalendarOverlapHint(card, overlapSource),
-        }
-      : card;
-    previousLessonCards.push(cardWithHint);
-    return cardWithHint;
-  });
+  return [...lessonCards, ...absenceCards].sort(compareCalendarCards);
 }
 
 function createCalendarLessonCard(lesson, type) {
@@ -315,34 +298,6 @@ function compareCalendarTimeStrings(left, right) {
   return parseTimeToMinutes(left) - parseTimeToMinutes(right) || String(left).localeCompare(String(right));
 }
 
-function findPreviousOverlappingLesson(card, previousLessonCards) {
-  if (!Number.isFinite(card.startMinutes) || !Number.isFinite(card.endMinutes)) {
-    return null;
-  }
-
-  return [...previousLessonCards]
-    .reverse()
-    .find((previousCard) =>
-      Number.isFinite(previousCard.startMinutes) &&
-      Number.isFinite(previousCard.endMinutes) &&
-      previousCard.startMinutes < card.endMinutes &&
-      previousCard.endMinutes > card.startMinutes,
-    ) || null;
-}
-
-function createCalendarOverlapHint(card, overlapSource) {
-  const overlapStart = Math.max(card.startMinutes, overlapSource.startMinutes);
-  const overlapEnd = Math.min(card.endMinutes, overlapSource.endMinutes);
-  const timeRange = formatCardMinutesRange(overlapStart, overlapEnd);
-  const teacherName = overlapSource.lesson.teacherName || overlapSource.lesson.teacherId || "前一节课";
-
-  return {
-    timeRange,
-    teacherName,
-    text: `⚠ ${timeRange} 与 ${teacherName} 重叠`,
-  };
-}
-
 function compareCalendarCards(left, right) {
   return (
     left.startMinutes - right.startMinutes ||
@@ -359,10 +314,6 @@ function formatCardAbsenceTitle(lesson) {
 
 function formatCardTimeRange(startTime, endTime) {
   return `${startTime || ""}–${endTime || ""}`;
-}
-
-function formatCardMinutesRange(startMinutes, endMinutes) {
-  return `${formatTimelineClock(startMinutes)}–${formatTimelineClock(endMinutes)}`;
 }
 
 function getCalendarWeekTimedItems(day) {
