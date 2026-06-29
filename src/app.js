@@ -17,11 +17,11 @@ import {
 import {
   buildLessonDetail,
   buildTeacherWeeklyDurationTable,
+  buildWeekCardSections,
   buildWeekOverview,
-  buildWeekTimeline,
   filterCalendarLessons,
   isCalendarVisibleLesson,
-} from "./calendar.js?v=20260626-week-timeline";
+} from "./calendar.js?v=20260629-week-cards";
 import {
   buildLessonsForTeacher,
   expandRecurringLessons,
@@ -127,7 +127,6 @@ const WEEKDAYS = [
   { value: 6, label: "周六" },
   { value: 7, label: "周日" },
 ];
-const CALENDAR_WEEK_TIMELINE_HOUR_HEIGHT = 64;
 const DURATION_OPTIONS = [
   { value: 45, label: "45 分钟" },
   { value: 60, label: "1 小时" },
@@ -1536,7 +1535,7 @@ function renderCalendar() {
   const allLessons = visibleLessons.filter((lesson) =>
     weekDates.some((date) => date.iso === lesson.date),
   );
-  const overview = buildWeekOverview(weekDates, allLessons);
+  const overview = buildWeekCardSections(weekDates, allLessons);
   const selectedLesson = allLessons.find((lesson) => lesson.id === state.selectedLessonId);
   const selectedDetail = selectedLesson
     ? buildLessonDetail(selectedLesson, visibleLessons)
@@ -1846,23 +1845,15 @@ function renderCalendarMonthLessonChip(lesson) {
 }
 
 function renderCalendarWeekMatrix(days) {
-  const timeline = buildWeekTimeline(days);
-
   return `
-    <div
-      class="calendar-week-matrix calendar-week-timeline"
-      style="--calendar-timeline-hours: ${escapeAttribute(String(timeline.hourSpan))}; --calendar-hour-height: ${CALENDAR_WEEK_TIMELINE_HOUR_HEIGHT}px; --calendar-timeline-height: ${escapeAttribute(
-        `${timeline.hourSpan * CALENDAR_WEEK_TIMELINE_HOUR_HEIGHT}px`,
-      )};"
-    >
+    <div class="calendar-week-matrix">
       <div class="calendar-week-days">
         <span class="calendar-daypart-axis-spacer" aria-hidden="true"></span>
-        ${timeline.days.map((day) => renderCalendarWeekDayHead(day)).join("")}
+        ${days.map((day) => renderCalendarWeekDayHead(day)).join("")}
       </div>
-      <div class="calendar-week-timeline-body">
-        ${renderCalendarWeekTimeAxis(timeline)}
-        ${timeline.days.map((day) => renderCalendarWeekTimelineColumn(day)).join("")}
-      </div>
+      ${getCalendarDaypartBlueprints(days)
+        .map((daypart) => renderCalendarWeekSectionRow(daypart, days))
+        .join("")}
     </div>
   `;
 }
@@ -1879,16 +1870,6 @@ function renderCalendarWeekDayHead(day) {
   `;
 }
 
-function renderCalendarWeekTimeAxis(timeline) {
-  return `
-    <div class="calendar-week-time-axis" aria-hidden="true">
-      ${timeline.hourSlots.map((slot) => `
-        <span style="top: ${formatTimelinePercent(slot.offsetPercent)}%;">${escapeHtml(slot.label)}</span>
-      `).join("")}
-    </div>
-  `;
-}
-
 function renderCalendarDaypartAxis(daypart, lessonCount) {
   return `
     <span class="calendar-daypart-axis">
@@ -1899,13 +1880,41 @@ function renderCalendarDaypartAxis(daypart, lessonCount) {
   `;
 }
 
-function renderCalendarWeekTimelineColumn(day) {
+function renderCalendarWeekSectionRow(daypart, days) {
+  const rowLessonCount = days.reduce(
+    (sum, day) => sum + getCalendarDaypartSegment(day, daypart).lessonCount,
+    0,
+  );
+
+  return `
+    <div class="calendar-week-section-row calendar-daypart-${daypart.id}">
+      ${renderCalendarDaypartAxis(daypart, rowLessonCount)}
+      ${days.map((day) => renderCalendarWeekSectionCell(day, daypart)).join("")}
+    </div>
+  `;
+}
+
+function renderCalendarWeekSectionCell(day, daypart) {
+  const segment = getCalendarDaypartSegment(day, daypart);
+  const cards = segment.cards || [];
+
+  if (!cards.length) {
+    return `
+      <div
+        class="calendar-week-section-cell empty"
+        aria-label="${escapeAttribute(`${day.label} ${daypart.label}无课`)}"
+      ></div>
+    `;
+  }
+
   return `
     <div
-      class="calendar-week-timeline-column ${day.timedItems.length ? "" : "empty"}"
-      aria-label="${escapeAttribute(`${day.label} ${day.iso} 课程时间轴`)}"
+      class="calendar-week-section-cell"
+      aria-label="${escapeAttribute(`${day.label} ${daypart.label}${cards.length}张课程卡片`)}"
     >
-      ${day.timedItems.map((item) => renderCalendarWeekTimedItem(item)).join("")}
+      <span class="calendar-week-card-stack">
+        ${cards.map((card) => renderCalendarWeekCard(card)).join("")}
+      </span>
     </div>
   `;
 }
@@ -1922,45 +1931,70 @@ function renderAbsenceMarkers(markers) {
   `;
 }
 
-function renderCalendarWeekTimedItem(item) {
-  const compactClass = item.durationMinutes <= 45 && item.type !== "absence" ? " compact" : "";
-  const absenceClass = item.type === "absence" ? " absence-only" : "";
-  const overlapClass = item.laneCount > 1 ? " overlap" : "";
+function renderCalendarWeekCard(card) {
+  const cardMarkup = card.type === "absence"
+    ? renderCalendarWeekAbsenceCard(card)
+    : renderCalendarWeekLessonCard(card);
 
   return `
-    <div
-      class="calendar-time-group calendar-week-timed-group${compactClass}${absenceClass}${overlapClass}"
-      style="${renderCalendarWeekTimedItemStyle(item)}"
+    <span class="calendar-week-card-shell">
+      ${cardMarkup}
+      ${card.overlapHint ? renderCalendarOverlapHint(card.overlapHint) : ""}
+    </span>
+  `;
+}
+
+function renderCalendarWeekLessonCard(card) {
+  const lesson = card.lesson;
+  const color = getLessonColor(lesson);
+  const isPreview = lesson.status === "预排";
+  const selected = state.selectedLessonId === lesson.id;
+  const siteLabel = getTeachingSiteLabel(lesson);
+  const siteMarkup = siteLabel
+    ? `<span class="lesson-row-site" title="${escapeAttribute(siteLabel)}">${escapeHtml(siteLabel)}</span>`
+    : "";
+
+  return `
+    <button
+      class="calendar-week-lesson-card lesson-row ${color} ${isPreview ? "preview" : ""} ${selected ? "selected" : ""}"
+      data-lesson-id="${escapeAttribute(lesson.id)}"
+      data-lesson-date="${escapeAttribute(lesson.date)}"
+      type="button"
+      aria-label="查看 ${escapeAttribute(lesson.teacherName)} ${escapeAttribute(lesson.course)} 课程详情"
     >
-      ${
-        item.type === "absence"
-          ? renderCalendarWeekAbsenceItem(item)
-          : `
-            <span class="lesson-list">${item.lessons.map((lesson) => renderLessonRow(lesson, { timeRange: item.timeRange })).join("")}</span>
-          `
-      }
-    </div>
+      <span class="calendar-week-card-time">${escapeHtml(card.timeRange)}</span>
+      <strong class="calendar-week-card-teacher">${escapeHtml(lesson.teacherName || "未填写")}</strong>
+      <span class="calendar-week-card-copy">${escapeHtml(lesson.studentName || "未填写")} · ${escapeHtml(lesson.course || "未填写")}</span>
+      ${siteMarkup}
+    </button>
   `;
 }
 
-function renderCalendarWeekAbsenceItem(item) {
+function renderCalendarWeekAbsenceCard(card) {
+  const lesson = card.lesson;
+  const siteLabel = getTeachingSiteLabel(lesson);
+  const siteMarkup = siteLabel
+    ? `<span class="lesson-row-site" title="${escapeAttribute(siteLabel)}">${escapeHtml(siteLabel)}</span>`
+    : "";
+
   return `
-    <span class="lesson-list calendar-week-absence-list">${renderAbsenceMarkerButton(item.lesson)}</span>
+    <button
+      class="calendar-week-absence-card"
+      data-lesson-id="${escapeAttribute(lesson.id)}"
+      data-lesson-date="${escapeAttribute(lesson.date)}"
+      type="button"
+      aria-label="查看 ${escapeAttribute(lesson.studentName || "学员")} ${escapeAttribute(lesson.course || "课程")} 请假记录"
+    >
+      <span class="calendar-week-card-time">${escapeHtml(card.timeRange)}</span>
+      <strong>${escapeHtml(card.title)}</strong>
+      <span class="calendar-week-card-copy">${escapeHtml(formatAbsenceMarkerText(lesson))}</span>
+      ${siteMarkup}
+    </button>
   `;
 }
 
-function renderCalendarWeekTimedItemStyle(item) {
-  return [
-    `top: ${formatTimelinePercent(item.topPercent)}%;`,
-    `height: ${formatTimelinePercent(item.heightPercent)}%;`,
-    `left: ${formatTimelinePercent(item.leftPercent)}%;`,
-    `width: ${formatTimelinePercent(item.widthPercent)}%;`,
-    `z-index: ${item.laneIndex + 1};`,
-  ].join(" ");
-}
-
-function formatTimelinePercent(value) {
-  return Number(value || 0).toFixed(4).replace(/\.?0+$/, "");
+function renderCalendarOverlapHint(hint) {
+  return `<span class="calendar-overlap-hint">${escapeHtml(hint.text)}</span>`;
 }
 
 function renderAbsenceMarkerButton(lesson, options = {}) {

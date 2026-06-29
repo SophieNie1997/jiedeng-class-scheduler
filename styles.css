@@ -990,7 +990,7 @@ fieldset {
 
 .calendar-overview {
   display: grid;
-  grid-template-columns: minmax(1520px, 1fr);
+  grid-template-columns: minmax(1120px, 1fr);
   gap: 10px;
   align-items: start;
   overflow-x: auto;
@@ -1288,7 +1288,7 @@ fieldset {
 .calendar-week-matrix {
   display: grid;
   gap: 9px;
-  min-width: 1520px;
+  min-width: 1120px;
 }
 
 .calendar-week-days {
@@ -1305,11 +1305,15 @@ fieldset {
   align-items: stretch;
 }
 
-.calendar-week-timeline-body {
+.calendar-week-section-row {
   display: grid;
   grid-template-columns: 96px repeat(7, minmax(0, 1fr));
   gap: 8px;
   align-items: stretch;
+  border: 1px solid var(--daypart-border);
+  border-radius: 18px;
+  background: var(--daypart-bg);
+  padding: 8px;
 }
 
 .calendar-week-day-head {
@@ -1380,6 +1384,11 @@ fieldset {
   padding: 5px 7px 5px 0;
 }
 
+.calendar-week-section-row .calendar-daypart-axis {
+  justify-items: center;
+  padding: 8px 9px 8px 0;
+}
+
 .calendar-daypart-axis strong,
 .calendar-daypart-axis em,
 .calendar-daypart-axis b {
@@ -1414,6 +1423,12 @@ fieldset {
   font-size: 12px;
 }
 
+.calendar-week-section-row .calendar-daypart-axis strong {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 0;
+}
+
 .calendar-month-daypart-row .calendar-daypart-axis em {
   display: none;
 }
@@ -1423,27 +1438,24 @@ fieldset {
   font-size: 9px;
 }
 
-.calendar-week-daypart-cell {
+.calendar-week-section-cell {
   display: grid;
   align-content: start;
-  gap: 9px;
-  min-height: 128px;
+  gap: 7px;
+  min-height: 118px;
   min-width: 0;
-  border: 1px solid rgba(239, 189, 203, 0.46);
-  border-left: 0;
-  border-radius: 18px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.56), rgba(255, 248, 252, 0.36)),
-    rgba(255, 255, 255, 0.38);
+  border: 1px solid rgba(255, 255, 255, 0.54);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.48);
   padding: 8px;
 }
 
-.calendar-week-daypart-cell.empty {
+.calendar-week-section-cell.empty {
   align-content: center;
   justify-items: center;
-  border-style: solid;
-  border-color: rgba(239, 189, 203, 0.16);
-  background: rgba(255, 255, 255, 0.08);
+  border-style: dashed;
+  border-color: rgba(118, 107, 116, 0.28);
+  background: transparent;
 }
 
 .calendar-daypart-empty-label {
@@ -1532,27 +1544,27 @@ fieldset {
 
 .calendar-daypart,
 .calendar-month-daypart {
-  --daypart-accent: #8f5d21;
-  --daypart-bg: transparent;
-  --daypart-border: rgba(214, 169, 59, 0.28);
+  --daypart-accent: #b76532;
+  --daypart-bg: #fff9f8;
+  --daypart-border: #f5c4b3;
 }
 
 .calendar-daypart-morning {
-  --daypart-accent: #8f5d21;
-  --daypart-bg: transparent;
-  --daypart-border: rgba(214, 169, 59, 0.28);
+  --daypart-accent: #b76532;
+  --daypart-bg: #fff9f8;
+  --daypart-border: #f5c4b3;
 }
 
 .calendar-daypart-afternoon {
   --daypart-accent: #3f76a8;
-  --daypart-bg: transparent;
-  --daypart-border: rgba(79, 136, 215, 0.24);
+  --daypart-bg: #f5f8ff;
+  --daypart-border: #b5d4f4;
 }
 
 .calendar-daypart-evening {
   --daypart-accent: #7258a8;
-  --daypart-bg: transparent;
-  --daypart-border: rgba(154, 147, 209, 0.28);
+  --daypart-bg: #f9f5ff;
+  --daypart-border: #cecbf6;
 }
 
 .calendar-daypart {
@@ -1658,118 +1670,100 @@ fieldset {
   gap: 6px;
 }
 
-.calendar-week-time-axis {
-  position: sticky;
-  left: 0;
-  z-index: 2;
-  min-height: var(--calendar-timeline-height, 768px);
-  min-width: 0;
-  border-right: 4px solid rgba(143, 93, 33, 0.76);
-  background: rgba(255, 255, 255, 0.5);
-}
-
-.calendar-week-time-axis span {
-  position: absolute;
-  right: 10px;
-  transform: translateY(-50%);
-  color: #6f626a;
-  font-size: 11px;
-  font-weight: 900;
-  font-variant-numeric: tabular-nums;
-  line-height: 1;
-}
-
-.calendar-week-time-axis span:first-child {
-  transform: translateY(0);
-}
-
-.calendar-week-time-axis span:last-child {
-  transform: translateY(-100%);
-}
-
-.calendar-week-timeline-column {
-  position: relative;
-  min-height: var(--calendar-timeline-height, 768px);
-  min-width: 0;
-  overflow: hidden;
-  border: 1px solid rgba(239, 189, 203, 0.46);
-  border-left: 0;
-  border-radius: 18px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.58), rgba(255, 248, 252, 0.34)),
-    rgba(255, 255, 255, 0.36);
-}
-
-.calendar-week-timeline-column.empty {
-  border-color: rgba(239, 189, 203, 0.16);
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.calendar-week-timed-group {
-  position: absolute;
-  z-index: 1;
+.calendar-week-card-stack {
   display: grid;
-  grid-template-rows: minmax(0, 1fr);
-  align-content: stretch;
-  gap: 0;
-  min-height: 42px;
-  overflow: hidden;
-  border: 0;
-  border-radius: 14px;
-  background: transparent;
-  padding: 0 2px;
-  box-shadow: none;
+  gap: 7px;
 }
 
-.calendar-week-timed-group + .calendar-week-timed-group {
-  margin-top: 0;
-  border-top: 0;
-  padding-top: 0;
+.calendar-week-card-shell {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
 }
 
-.calendar-week-timed-group .lesson-list {
-  gap: 5px;
-  grid-auto-rows: minmax(0, 1fr);
-  height: 100%;
-  min-height: 0;
-  overflow: hidden;
-}
-
-.calendar-week-timed-group.compact {
-  grid-template-rows: minmax(0, 1fr);
-  min-height: 32px;
-  gap: 0;
-}
-
-.calendar-week-timed-group.compact small {
-  display: none;
-}
-
-.calendar-week-timed-group.compact .lesson-list {
-  height: 100%;
-}
-
-.calendar-week-timed-group.absence-only {
-  grid-template-rows: minmax(0, 1fr);
-  gap: 0;
-  background: transparent;
-}
-
-.calendar-week-timed-group.absence-only .absence-marker {
+.calendar-week-lesson-card,
+.calendar-week-absence-card {
+  position: relative;
+  display: grid;
+  gap: 3px;
   width: 100%;
-  height: 100%;
-  align-content: start;
+  min-width: 0;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-style: dashed;
+  border-radius: 9px;
+  padding: 8px;
+  color: #1f2933;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.74);
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    outline-color 160ms ease;
 }
 
-.calendar-week-timed-group.absence-only .absence-marker strong {
+.calendar-week-lesson-card {
+  border-left: 0;
+  border-style: solid;
+  border-radius: 9px;
+}
+
+.calendar-week-lesson-card:hover,
+.calendar-week-absence-card:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.78),
+    0 8px 14px rgba(143, 84, 103, 0.12);
+}
+
+.calendar-week-card-time {
+  color: rgba(37, 48, 58, 0.58);
+  font-size: 10px;
+  font-weight: 850;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.15;
+}
+
+.calendar-week-card-teacher,
+.calendar-week-absence-card strong {
+  color: #a32d2d;
   font-size: 13px;
+  font-weight: 950;
+  line-height: 1.2;
+}
+
+.calendar-week-card-teacher {
+  color: #1f2933;
+}
+
+.calendar-week-card-copy {
+  display: block;
+  overflow-wrap: anywhere;
+  color: #53616b;
+  font-size: 11px;
+  font-weight: 800;
   line-height: 1.25;
 }
 
-.calendar-week-timed-group.absence-only .absence-marker small {
-  font-size: 12px;
-  line-height: 1.3;
-  white-space: normal;
+.calendar-week-absence-card {
+  border-style: dashed;
+  border-color: #c9c7c9;
+  background: #f3f2f3;
+}
+
+.calendar-week-absence-card strong {
+  color: #a32d2d;
+}
+
+.calendar-overlap-hint {
+  display: block;
+  border-radius: 5px;
+  background: #fcebeb;
+  color: #a32d2d;
+  padding: 3px 5px;
+  font-size: 9px;
+  font-weight: 850;
+  line-height: 1.25;
 }
 
 .lesson-row {
@@ -1855,93 +1849,23 @@ fieldset {
   white-space: nowrap;
 }
 
-.calendar-week-timed-group .lesson-row {
-  height: 100%;
-  min-height: 0;
-  overflow: hidden;
-  padding: 8px 9px;
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.72),
-    0 8px 14px rgba(143, 84, 103, 0.08);
-}
-
-.calendar-week-timed-group .lesson-row strong {
-  font-size: 12px;
-}
-
-.calendar-week-timed-group .lesson-row small {
-  font-size: 10px;
-}
-
-.calendar-week-timed-group .lesson-row-topline {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3px;
-}
-
-.calendar-week-timed-group .lesson-row-time {
-  display: inline-block;
-  max-width: 100%;
-  overflow: visible;
-  overflow-wrap: anywhere;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.72);
-  color: #3d4b56;
-  padding: 2px 6px;
-  font-size: 11px;
-  font-weight: 950;
-  line-height: 1.08;
-  text-overflow: clip;
-  white-space: normal;
-  word-break: normal;
-}
-
-.calendar-week-timed-group .lesson-row-site {
-  color: #1f5f6b;
-  font-size: 10px;
-}
-
-.calendar-week-timed-group .lesson-row-copy {
-  display: -webkit-box;
-  overflow: hidden;
-  overflow-wrap: normal;
-  word-break: keep-all;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-}
-
-.calendar-week-timed-group.overlap .lesson-row {
+.calendar-week-lesson-card.lesson-row {
   grid-template-columns: minmax(0, 1fr);
   gap: 3px;
-  padding: 7px 6px;
+  align-items: start;
+  overflow: visible;
+  border-left: 0;
+  border-radius: 9px;
+  padding: 8px;
 }
 
-.calendar-week-timed-group.overlap .lesson-row strong {
-  font-size: 11px;
-  line-height: 1.15;
-}
-
-.calendar-week-timed-group.overlap .lesson-row small {
+.calendar-week-lesson-card .lesson-row-site,
+.calendar-week-absence-card .lesson-row-site {
   justify-self: start;
-  font-size: 9px;
-  line-height: 1.1;
-}
-
-.calendar-week-timed-group.overlap .lesson-row-time {
-  padding: 2px 5px;
-  font-size: 10px;
-}
-
-.calendar-week-timed-group.overlap .lesson-row-site {
+  margin-top: 2px;
   max-width: 100%;
-  padding: 2px 5px;
-  font-size: 9px;
-}
-
-.calendar-week-timed-group.overlap .lesson-row-copy {
-  overflow-wrap: anywhere;
-  word-break: normal;
-  -webkit-line-clamp: 3;
+  color: #1f5f6b;
+  font-size: 10px;
 }
 
 .calendar-empty {

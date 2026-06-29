@@ -205,6 +205,63 @@ test("calendar week overview keeps absence markers separate from normal lessons"
   assert.equal(afternoon.absenceMarkers[0].id, "absence");
 });
 
+test("builds week card sections with vertical conflict hints and absence cards", () => {
+  assert.equal(typeof calendar.buildWeekCardSections, "function");
+
+  const weekDates = [
+    { iso: "2026-07-01", label: "周三" },
+    { iso: "2026-07-02", label: "周四" },
+  ];
+  const lessons = [
+    {
+      ...makeCalendarLesson("tiana", "2026-07-01", "13:30", "16:30"),
+      teacherName: "Tiana",
+      studentName: "Kason",
+      course: "英语陪伴",
+    },
+    {
+      ...makeCalendarLesson("ziyi", "2026-07-01", "15:00", "18:00"),
+      teacherName: "Ziyi",
+      studentName: "Ziyi",
+      course: "写作",
+    },
+    {
+      ...makeCalendarLesson("absence", "2026-07-01", "18:30", "20:00"),
+      teacherName: "Lynn",
+      studentName: "Nina",
+      course: "阅读",
+      status: "请假",
+      absenceStatus: "待补课",
+    },
+  ];
+
+  const [wednesday, thursday] = calendar.buildWeekCardSections(weekDates, lessons);
+  const afternoon = wednesday.segments.find((segment) => segment.id === "afternoon");
+  const evening = wednesday.segments.find((segment) => segment.id === "evening");
+
+  assert.deepEqual(
+    afternoon.cards.map((card) => [card.type, card.lesson.id, card.timeRange, card.overlapHint?.text || ""]),
+    [
+      ["lesson", "tiana", "13:30–16:30", ""],
+      ["lesson", "ziyi", "15:00–18:00", "⚠ 15:00–16:30 与 Tiana 重叠"],
+    ],
+  );
+  assert.equal("topPercent" in afternoon.cards[0], false);
+  assert.equal("laneIndex" in afternoon.cards[1], false);
+  assert.deepEqual(
+    evening.cards.map((card) => [card.type, card.lesson.id, card.title]),
+    [["absence", "absence", "请假（待补课）"]],
+  );
+  assert.deepEqual(
+    thursday.segments.map((segment) => [segment.id, segment.cards.length]),
+    [
+      ["morning", 0],
+      ["afternoon", 0],
+      ["evening", 0],
+    ],
+  );
+});
+
 test("builds teacher duration summary for a date range", () => {
   assert.equal(typeof calendar.buildTeacherDurationSummary, "function");
 

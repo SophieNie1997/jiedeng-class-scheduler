@@ -105,8 +105,8 @@ test("lesson colors are keyed by teacher and course", () => {
 });
 
 test("calendar assets use cache-busted style and app URLs for teacher hours", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260626-site-badge"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260629-custom-grades"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260629-week-cards"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260629-week-cards"), true);
 });
 
 test("calendar defaults to a month overview and drills into a week from lessons", () => {
@@ -121,7 +121,8 @@ test("calendar defaults to a month overview and drills into a week from lessons"
   assert.equal(appSource.includes("renderCalendarMonthDistributionCell"), false);
   assert.equal(appSource.includes("renderCalendarMonthCourseStrip"), false);
   assert.equal(appSource.includes("renderCalendarWeekMatrix"), true);
-  assert.equal(appSource.includes("renderCalendarWeekTimelineColumn"), true);
+  assert.equal(appSource.includes("renderCalendarWeekSectionRow"), true);
+  assert.equal(appSource.includes("renderCalendarWeekTimelineColumn"), false);
   assert.equal(appSource.includes("renderCalendarMonthLessonChip"), true);
   assert.match(
     appSource,
@@ -136,7 +137,8 @@ test("calendar defaults to a month overview and drills into a week from lessons"
 
 test("calendar exposes a teacher duration summary entry and panel", () => {
   assert.equal(appSource.includes("buildTeacherWeeklyDurationTable"), true);
-  assert.equal(appSource.includes("./calendar.js?v=20260626-week-timeline"), true);
+  assert.equal(appSource.includes("buildWeekCardSections"), true);
+  assert.equal(appSource.includes("./calendar.js?v=20260629-week-cards"), true);
   assert.equal(appSource.includes("includeUnlistedTeachers: false"), true);
   assert.equal(appSource.includes('id="toggle-teacher-hours"'), true);
   assert.equal(appSource.includes('id="teacher-hours-panel"'), true);
@@ -241,35 +243,35 @@ test("calendar exposes student absence and pending makeup UI", () => {
   assert.ok(css.includes(".lesson-absence-button:disabled"));
 });
 
-test("calendar views align month dayparts and week hourly timeline across date columns", () => {
+test("calendar views align month and week daypart card rows across date columns", () => {
   assert.equal(appSource.includes("calendar-daypart-axis"), true);
   assert.equal(appSource.includes("calendar-month-daypart-row"), true);
   assert.equal(appSource.includes("calendar-month-daypart-cell"), true);
   assert.match(appSource, /calendar-month-daypart-cell[\s\S]*empty"><\/span>/);
   assert.equal(appSource.includes("calendar-daypart-empty-label\">空"), false);
-  assert.equal(appSource.includes("buildWeekTimeline"), true);
-  assert.equal(appSource.includes("calendar-week-timeline-body"), true);
-  assert.equal(appSource.includes("calendar-week-time-axis"), true);
-  assert.equal(appSource.includes("calendar-week-timeline-column"), true);
-  assert.equal(appSource.includes("calendar-week-timed-group"), true);
+  assert.equal(appSource.includes("buildWeekTimeline"), false);
+  assert.equal(appSource.includes("buildWeekCardSections"), true);
+  assert.equal(appSource.includes("calendar-week-timeline-body"), false);
+  assert.equal(appSource.includes("calendar-week-time-axis"), false);
+  assert.equal(appSource.includes("calendar-week-timeline-column"), false);
+  assert.equal(appSource.includes("calendar-week-timed-group"), false);
+  assert.equal(appSource.includes("calendar-week-section-row"), true);
+  assert.equal(appSource.includes("calendar-week-section-cell"), true);
+  assert.equal(appSource.includes("renderCalendarWeekLessonCard"), true);
+  assert.equal(appSource.includes("renderCalendarOverlapHint"), true);
   assert.equal(appSource.includes("getCalendarWeekOverlapOffset"), false);
   assert.equal(appSource.includes("item.laneIndex * 22"), false);
   assert.equal(appSource.includes("left: 0px;"), false);
   assert.equal(appSource.includes("width: 100%;"), false);
-  assert.equal(appSource.includes("left: ${formatTimelinePercent(item.leftPercent)}%;"), true);
-  assert.equal(appSource.includes("width: ${formatTimelinePercent(item.widthPercent)}%;"), true);
-  assert.equal(appSource.includes('item.laneCount > 1 ? " overlap" : ""'), true);
-  assert.equal(appSource.includes("CALENDAR_WEEK_TIMELINE_HOUR_HEIGHT = 64"), true);
-  assert.equal(appSource.includes("--calendar-hour-height: ${CALENDAR_WEEK_TIMELINE_HOUR_HEIGHT}px"), true);
-  assert.equal(appSource.includes("timeline.hourSpan * CALENDAR_WEEK_TIMELINE_HOUR_HEIGHT"), true);
-  assert.equal(appSource.includes("renderCalendarWeekAbsenceItem(item)"), true);
-  assert.match(
-    appSource,
-    /function renderCalendarWeekAbsenceItem\(item\)[\s\S]*renderAbsenceMarkerButton\(item\.lesson\)/,
-  );
-  assert.equal(appSource.includes('renderLessonRow(lesson, { timeRange: item.timeRange })'), true);
-  assert.equal(appSource.includes('class="lesson-row-time"'), true);
-  assert.equal(appSource.includes('class="lesson-row-topline"'), true);
+  assert.equal(appSource.includes("left: ${formatTimelinePercent(item.leftPercent)}%;"), false);
+  assert.equal(appSource.includes("width: ${formatTimelinePercent(item.widthPercent)}%;"), false);
+  assert.equal(appSource.includes('item.laneCount > 1 ? " overlap" : ""'), false);
+  assert.equal(appSource.includes("CALENDAR_WEEK_TIMELINE_HOUR_HEIGHT"), false);
+  assert.equal(appSource.includes("renderCalendarWeekAbsenceItem(item)"), false);
+  assert.equal(appSource.includes('renderLessonRow(lesson, { timeRange: item.timeRange })'), false);
+  assert.equal(appSource.includes('class="calendar-week-card-time"'), true);
+  assert.equal(appSource.includes('class="calendar-week-card-teacher"'), true);
+  assert.equal(appSource.includes('class="calendar-week-card-copy"'), true);
   assert.equal(appSource.includes('class="lesson-row-site"'), true);
   assert.match(
     appSource,
@@ -282,7 +284,7 @@ test("calendar views align month dayparts and week hourly timeline across date c
     appSource,
     /function renderAbsenceMarkerButton\(lesson, options = \{\}\)[\s\S]*options\.hideTime[\s\S]*lesson\.startTime/,
   );
-  assert.equal(appSource.includes('item.durationMinutes <= 45 && item.type !== "absence"'), true);
+  assert.equal(appSource.includes('item.durationMinutes <= 45 && item.type !== "absence"'), false);
   assert.equal(appSource.includes("width: calc(${formatTimelinePercent(item.widthPercent)}%"), false);
   assert.equal(appSource.includes("overview.map((day) => renderCalendarDayCard(day))"), false);
   assert.equal(appSource.includes("day.segments.map((segment) => renderCalendarMonthDaypart(segment))"), false);
@@ -291,56 +293,45 @@ test("calendar views align month dayparts and week hourly timeline across date c
   assert.ok(css.includes(".calendar-month-daypart-cell"));
   assert.ok(css.includes(".lesson-row.calendar-month-lesson"));
   assert.ok(css.includes(".calendar-month-lesson-teacher"));
-  assert.ok(css.includes(".calendar-week-timeline-body"));
-  assert.ok(css.includes(".calendar-week-time-axis"));
-  assert.ok(css.includes(".calendar-week-timeline-column"));
-  assert.ok(css.includes(".calendar-week-timed-group"));
+  assert.equal(css.includes(".calendar-week-timeline-body"), false);
+  assert.equal(css.includes(".calendar-week-time-axis"), false);
+  assert.equal(css.includes(".calendar-week-timeline-column"), false);
+  assert.equal(css.includes(".calendar-week-timed-group"), false);
+  assert.ok(css.includes(".calendar-week-section-row"));
+  assert.ok(css.includes(".calendar-week-section-cell"));
+  assert.ok(css.includes(".calendar-week-lesson-card"));
+  assert.ok(css.includes(".calendar-overlap-hint"));
   assert.ok(css.includes(".calendar-daypart-morning"));
   assert.ok(css.includes(".calendar-daypart-afternoon"));
   assert.ok(css.includes(".calendar-daypart-evening"));
   assert.equal(getRuleValue(".calendar-month-week-days", "grid-template-columns"), "74px repeat(7, minmax(0, 1fr))");
   assert.equal(getRuleValue(".calendar-month-daypart-row", "grid-template-columns"), "74px repeat(7, minmax(0, 1fr))");
+  assert.equal(getRuleValue(".calendar-overview", "grid-template-columns"), "minmax(1120px, 1fr)");
+  assert.equal(getRuleValue(".calendar-week-matrix", "min-width"), "1120px");
   assert.equal(getRuleValue(".calendar-week-days", "grid-template-columns"), "96px repeat(7, minmax(0, 1fr))");
-  assert.equal(getRuleValue(".calendar-week-timeline-body", "grid-template-columns"), "96px repeat(7, minmax(0, 1fr))");
+  assert.equal(getRuleValue(".calendar-week-section-row", "grid-template-columns"), "96px repeat(7, minmax(0, 1fr))");
   assert.equal(getRuleValue(".calendar-daypart-axis", "position"), "sticky");
   assert.equal(getRuleValue(".calendar-daypart-axis", "border-right"), "4px solid var(--daypart-accent)");
-  assert.equal(getRuleValue(".calendar-week-time-axis", "min-height"), "var(--calendar-timeline-height, 768px)");
-  assert.equal(getRuleValue(".calendar-week-timeline-column", "position"), "relative");
-  assert.equal(getRuleValue(".calendar-week-timeline-column", "min-height"), "var(--calendar-timeline-height, 768px)");
-  assert.equal(getRuleValue(".calendar-week-timed-group", "position"), "absolute");
-  assert.equal(getRuleValue(".calendar-week-timed-group", "background"), "transparent");
-  assert.equal(getRuleValue(".calendar-week-timed-group", "border"), "0");
-  assert.equal(getRuleValue(".calendar-week-timed-group", "box-shadow"), "none");
-  assert.equal(getRuleValue(".calendar-week-timed-group", "align-content"), "stretch");
-  assert.equal(getRuleValue(".calendar-week-timed-group", "grid-template-rows"), "minmax(0, 1fr)");
-  assert.equal(getRuleValue(".calendar-week-timed-group .lesson-list", "height"), "100%");
-  assert.equal(getRuleValue(".calendar-week-timed-group .lesson-list", "grid-auto-rows"), "minmax(0, 1fr)");
-  assert.equal(getRuleValue(".calendar-week-timed-group .lesson-row", "height"), "100%");
-  assert.equal(getRuleValue(".calendar-week-timed-group .lesson-row-topline", "display"), "flex");
-  assert.equal(getRuleValue(".calendar-week-timed-group .lesson-row-topline", "flex-wrap"), "wrap");
-  assert.equal(getRuleValue(".calendar-week-timed-group .lesson-row-time", "white-space"), "normal");
-  assert.equal(getRuleValue(".calendar-week-timed-group .lesson-row-time", "max-width"), "100%");
-  assert.equal(getRuleValue(".calendar-week-timed-group .lesson-row-time", "overflow-wrap"), "anywhere");
-  assert.equal(getRuleValue(".calendar-week-timed-group .lesson-row-time", "text-overflow"), "clip");
+  assert.equal(getRuleValue(".calendar-week-section-cell", "display"), "grid");
+  assert.equal(getRuleValue(".calendar-week-section-cell.empty", "border-style"), "dashed");
+  assert.equal(getRuleValue(".calendar-week-lesson-card", "border-radius"), "9px");
+  assert.equal(getRuleValue(".calendar-week-lesson-card", "border-left"), "0");
+  assert.equal(getRuleValue(".calendar-week-card-time", "font-size"), "10px");
   assert.equal(getRuleValue(".lesson-row-site", "display"), "inline-flex");
   assert.equal(getRuleValue(".lesson-row-site", "font-weight"), "950");
   assert.equal(getRuleValue(".lesson-row-site", "background"), "rgba(255, 255, 255, 0.86)");
-  assert.equal(getRuleValue(".calendar-week-timed-group .lesson-row-site", "color"), "#1f5f6b");
-  assert.equal(getRuleValue(".calendar-week-timed-group.overlap .lesson-row-site", "max-width"), "100%");
-  assert.equal(getRuleValue(".calendar-week-timed-group.overlap .lesson-row", "grid-template-columns"), "minmax(0, 1fr)");
-  assert.equal(getRuleValue(".calendar-week-timed-group.overlap .lesson-row", "padding"), "7px 6px");
-  assert.equal(getRuleValue(".calendar-week-timed-group.overlap .lesson-row-copy", "-webkit-line-clamp"), "3");
-  assert.equal(getRuleValue(".calendar-week-timed-group.overlap .lesson-row small", "justify-self"), "start");
-  assert.equal(getRuleValue(".calendar-week-timed-group.compact", "grid-template-rows"), "minmax(0, 1fr)");
-  assert.equal(getRuleValue(".calendar-week-timed-group.compact", "min-height"), "32px");
-  assert.equal(getRuleValue(".calendar-week-timed-group.absence-only", "grid-template-rows"), "minmax(0, 1fr)");
-  assert.equal(getRuleValue(".calendar-week-timed-group.absence-only", "gap"), "0");
-  assert.equal(getRuleValue(".calendar-week-timed-group.absence-only .absence-marker", "height"), "100%");
-  assert.equal(getRuleValue(".calendar-week-timed-group.absence-only .absence-marker", "width"), "100%");
-  assert.equal(getRuleValue(".calendar-week-timed-group.absence-only .absence-marker strong", "font-size"), "13px");
-  assert.equal(getRuleText(".calendar-week-time-axis").includes("repeating-linear-gradient"), false);
-  assert.equal(getRuleText(".calendar-week-timeline-column").includes("repeating-linear-gradient"), false);
-  assert.equal(getRuleText(".calendar-week-timeline-column.empty").includes("repeating-linear-gradient"), false);
+  assert.equal(getRuleValue(".calendar-overlap-hint", "background"), "#fcebeb");
+  assert.equal(getRuleValue(".calendar-overlap-hint", "color"), "#a32d2d");
+  assert.equal(getRuleValue(".calendar-overlap-hint", "font-size"), "9px");
+  assert.equal(getRuleValue(".calendar-overlap-hint", "border-radius"), "5px");
+  assert.equal(getRuleValue(".calendar-week-absence-card", "border-style"), "dashed");
+  assert.equal(getRuleValue(".calendar-week-absence-card strong", "color"), "#a32d2d");
+  assert.equal(getRuleValue(".calendar-daypart-morning", "--daypart-bg"), "#fff9f8");
+  assert.equal(getRuleValue(".calendar-daypart-morning", "--daypart-border"), "#f5c4b3");
+  assert.equal(getRuleValue(".calendar-daypart-afternoon", "--daypart-bg"), "#f5f8ff");
+  assert.equal(getRuleValue(".calendar-daypart-afternoon", "--daypart-border"), "#b5d4f4");
+  assert.equal(getRuleValue(".calendar-daypart-evening", "--daypart-bg"), "#f9f5ff");
+  assert.equal(getRuleValue(".calendar-daypart-evening", "--daypart-border"), "#cecbf6");
   assert.equal(getRuleValue(".calendar-month-daypart-cell.empty", "border"), "0");
 });
 
@@ -574,8 +565,8 @@ test("course permission view can delete courses with confirmation", () => {
 test("custom teacher delivery defaults are cache-busted in app imports", () => {
   assert.equal(appSource.includes("./customCatalog.js?v=20260629-custom-grades"), true);
   assert.equal(appSource.includes("./studentDirectory.js?v=20260629-custom-grades"), true);
-  assert.equal(indexSource.includes("./src/app.js?v=20260629-custom-grades"), true);
-  assert.equal(indexSource.includes("./styles.css?v=20260626-site-badge"), true);
+  assert.equal(indexSource.includes("./src/app.js?v=20260629-week-cards"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260629-week-cards"), true);
 });
 
 test("course permission teacher column leaves room for full teacher names", () => {
@@ -586,7 +577,7 @@ test("course permission teacher column leaves room for full teacher names", () =
 });
 
 test("course permission width update is cache-busted in the stylesheet URL", () => {
-  assert.equal(indexSource.includes("./styles.css?v=20260626-site-badge"), true);
+  assert.equal(indexSource.includes("./styles.css?v=20260629-week-cards"), true);
 });
 
 test("candidate teachers render as compact avatar groups with expandable detail", () => {
