@@ -587,8 +587,23 @@ const WEEKDAY_LABELS = {
 function findSeriesLessons(lesson, lessons) {
   const seriesKey = getSeriesKey(lesson);
   return lessons
+    .filter((item) => canShareLessonDetailSeries(lesson, item))
     .filter((item) => getSeriesKey(item) === seriesKey)
     .sort(compareCalendarLessons);
+}
+
+function canShareLessonDetailSeries(selectedLesson, candidateLesson) {
+  const selectedIsPreview = isPreviewLesson(selectedLesson);
+  const candidateIsPreview = isPreviewLesson(candidateLesson);
+  if (selectedIsPreview || candidateIsPreview) {
+    return selectedIsPreview && candidateIsPreview;
+  }
+
+  return true;
+}
+
+function isPreviewLesson(lesson) {
+  return lesson?.status === "预排" || String(lesson?.id || "").startsWith("preview-");
 }
 
 function getSeriesKey(lesson) {

@@ -571,6 +571,37 @@ test("lesson detail marks preview lessons for confirmation", () => {
   assert.equal(detail.status, "预排");
 });
 
+test("preview lesson detail keeps the requested start date when older matching lessons exist", () => {
+  const existingSeries = [
+    {
+      ...makeLesson("manual-old", "2026-06-30"),
+      teacherId: "teacher-2",
+      teacherName: "樱桃学科老师",
+      studentName: "George",
+      course: "樱桃1v1 英文课程",
+      campus: "八佰伴",
+      startTime: "09:00",
+      endTime: "12:00",
+      startDate: "2026-06-29",
+      sessionCount: 3,
+      recurrenceWeekdays: [2, 4],
+      status: "手动新增",
+    },
+  ];
+  const previewSeries = [
+    makePreviewLesson("preview-teacher-2-1", "2026-07-07"),
+    makePreviewLesson("preview-teacher-2-2", "2026-07-09"),
+    makePreviewLesson("preview-teacher-2-3", "2026-07-14"),
+  ];
+
+  const detail = buildLessonDetail(previewSeries[0], [...existingSeries, ...previewSeries]);
+
+  assert.equal(detail.recurrence.startDate, "2026-07-07");
+  assert.equal(detail.recurrence.endDate, "2026-07-14");
+  assert.equal(detail.recurrence.sessionCount, 3);
+  assert.deepEqual(detail.recurrence.weekdayValues, [2, 4]);
+});
+
 test("lesson detail preserves absence metadata for makeup button state", () => {
   const detail = buildLessonDetail(
     {
@@ -628,5 +659,21 @@ function makeLesson(id, date) {
     endTime: "16:15",
     status: "待确认",
     notes: "需要名单 8天",
+  };
+}
+
+function makePreviewLesson(id, date) {
+  return {
+    ...makeLesson(id, date),
+    teacherId: "teacher-2",
+    teacherName: "樱桃学科老师",
+    studentName: "George",
+    course: "樱桃1v1 英文课程",
+    campus: "八佰伴",
+    startTime: "09:00",
+    endTime: "12:00",
+    sessionCount: 3,
+    recurrenceWeekdays: [2, 4],
+    status: "预排",
   };
 }

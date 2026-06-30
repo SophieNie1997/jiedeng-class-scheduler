@@ -21,7 +21,7 @@ import {
   buildWeekOverview,
   filterCalendarLessons,
   isCalendarVisibleLesson,
-} from "./calendar.js?v=20260629-no-overlap-hints";
+} from "./calendar.js?v=20260630-preview-series";
 import {
   buildLessonsForTeacher,
   expandRecurringLessons,
